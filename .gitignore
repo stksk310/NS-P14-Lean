@@ -1,0 +1,11 @@
+# Lean / Lake build outputs
+.lake/
+build/
+*.olean
+*.ilean
+*.trace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
