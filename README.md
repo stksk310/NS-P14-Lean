@@ -1,5 +1,8 @@
 # NS-P14-Lean
 
+Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユーザー承認済み。
+[Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
+
 ## Lean implementation — Block 02
 
 [Sidon.lean](NSP14/Combinatorics/Sidon.lean) proves the finite-group difference
