@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "weight_checks": 165,
+  "optimization_checks": {
+    "rank_two": 1624,
+    "rank_three": 1176
+  },
+  "rank_two_branch_checks": {
+    "V_below_3": 574,
+    "V_equal_3": 84,
+    "V_above_3": 966,
+    "zero_deficit": 210
+  },
+  "minimum_sampled_rank_three_margin": "15",
+  "scope": "Supplementary finite rational checks; universal inequalities are proved in Lean.",
+  "sharp_rank_two_profile": {
+    "e": 3,
+    "d": 3,
+    "head": 6,
+    "tail": {},
+    "V": 3,
+    "first_row": 12,
+    "top_row": 6
+  },
+  "counterexamples_when_head_caps_are_omitted": [
+    {
+      "rank": 2,
+      "e": 5,
+      "d": 1,
+      "head": 3,
+      "mass": 4,
+      "budget": 4,
+      "first_row": "11/2",
+      "target": 5,
+      "omitted": "head<=2d"
+    },
+    {
+      "rank": 3,
+      "e": 4,
+      "d": 6,
+      "head": 18,
+      "mass": 24,
+      "budget": 33,
+      "first_row": 48,
+      "target": 39,
+      "omitted": "head<=e+d-7",
+      "linear_head_cap_still_holds": true
+    }
+  ]
+}

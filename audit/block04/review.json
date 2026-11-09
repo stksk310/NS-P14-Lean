@@ -1,0 +1,215 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_FINITE_NUMERICAL_LOW_RANK_ROWS",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "66e92970f9469a73db073dfc7da5b71800e5484e",
+  "source": "NSP14/Ordinary/LowRank.lean",
+  "source_sha256": "23899427efd2b244b8e8fa4325598f2e2c28a9350bd81644d1b31a4b6835eaa0",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block04_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 52,
+    "zip_members_matched": 53,
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_fixed_environment_unchanged_since_block03": true,
+    "preserved_block02_audit_files_byte_identical": 16
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 10.876
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.813
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.736
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.475
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.699
+    },
+    {
+      "name": "block03_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.085
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.827
+    },
+    {
+      "name": "block02_assumption_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.807
+    }
+  ],
+  "axioms": {
+    "block04": 13,
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04_complete_names_checked": true,
+    "all_reports_identical_to_saved_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block04/LowRankChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Exact polynomial expansion of the rank-three margin numerator.",
+      "Universal rational lower bound d(V-1)-4(e+d-7)>=15 for e>=4,d>=6.",
+      "Both rank-two final inequalities have equality at e=3,d=3,H1=6,empty tail.",
+      "The same valid rank-two numerical profile cannot satisfy Resources 2 3 3 triangular head cap.",
+      "Removing the rank-two linear head cap permits a first-row counterexample.",
+      "Removing the rank-three triangular head cap permits a first-row counterexample even when the budget and linear head cap hold."
+    ],
+    "new_theorem_axiom_report_count": 2,
+    "new_theorem_axioms_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_rational_checks": {
+    "status": "PASS",
+    "weight_checks": 165,
+    "optimization_checks": {
+      "rank_two": 1624,
+      "rank_three": 1176
+    },
+    "rank_two_branch_checks": {
+      "V_below_3": 574,
+      "V_equal_3": 84,
+      "V_above_3": 966,
+      "zero_deficit": 210
+    },
+    "minimum_sampled_rank_three_margin": "15",
+    "scope": "Supplementary finite rational checks; universal inequalities are proved in Lean.",
+    "sharp_rank_two_profile": {
+      "e": 3,
+      "d": 3,
+      "head": 6,
+      "tail": {},
+      "V": 3,
+      "first_row": 12,
+      "top_row": 6
+    },
+    "counterexamples_when_head_caps_are_omitted": [
+      {
+        "rank": 2,
+        "e": 5,
+        "d": 1,
+        "head": 3,
+        "mass": 4,
+        "budget": 4,
+        "first_row": "11/2",
+        "target": 5,
+        "omitted": "head<=2d"
+      },
+      {
+        "rank": 3,
+        "e": 4,
+        "d": 6,
+        "head": 18,
+        "mass": 24,
+        "budget": 33,
+        "first_row": 48,
+        "target": 39,
+        "omitted": "head<=e+d-7",
+        "linear_head_cap_still_holds": true
+      }
+    ]
+  },
+  "paper_correspondence": {
+    "paper": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, sections 7 and 9; proof_structure_v3 O_LOW",
+    "status": "MATCH_FOR_EXPLICIT_WEIGHTED_NUMERICAL_SUMS",
+    "weight_domain": "First row k=1; other rows 2<=k<=r. Specialized bounds are proved for r=2,3.",
+    "indices": "tail(j)=H_(j+2); generic denominators j+2+k and j+k; rank-three row-two head coefficient 8/3.",
+    "common_profile": "Budget, head caps, mass, and all weighted rows use the same Layers value; the Resources adapter preserves head, tail and support.",
+    "no_cutoff_on_support": true
+  },
+  "proved_scope": {
+    "rank_two": "d>=0, mass<=d*volume(e,d), head<=2d; both rows bounded, including d=0. No triangular lower bound or triangular head cap.",
+    "rank_three": "e>=4,d>=6,mass<=d*volume(e,d),head<=3d,head<=e+d-7; all three numerical rows bounded.",
+    "adapter": "Block03 Resources to the same Layers, exact first-row equality with scalar; rank-three bounds still require the explicit linear head cap."
+  },
+  "unverified_remaining": [
+    "Construction of one actual common tower and its mass/head caps.",
+    "Derivation of the actual Koszul/Tor row upper bound (7.3).",
+    "Actual target margin (8.4), embedding dimension/multiplicity interpretation and Betti transfer.",
+    "Rank>=9 scalar closure; full O_LOW for actual sources; full M12/P14."
+  ]
+}
