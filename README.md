@@ -4,6 +4,22 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 06
+
+[LargeScalar.lean](NSP14/Ordinary/LargeScalar.lean) extends the large-rank
+base to every `r >= 9` and rational `e >= 10`, `d >= a_r`.
+It composes with Block03 resources to prove the strict scalar bound.
+A continuous floor comparison removes the parity split, and a stronger
+first-difference bound permits rational deficit shifts. Both improvements
+are recorded in the paper alignment ledger.
+
+```sh
+python3 scripts/verify_block06.py
+```
+
+[Scope and paper correspondence](verification/block06/README_JA.md),
+[verification](verification/block06/verification.json).
+
 ## Lean implementation — Block 05
 
 [LargeSeed.lean](NSP14/Ordinary/LargeSeed.lean) proves the harmonic barrier

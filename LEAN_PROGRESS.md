@@ -75,3 +75,14 @@ Block04の有理数多項式評価など既存の対応も同じ台帳にまと�
 基点から任意のe・δへの差分評価と大rank scalarの全閉鎖は次の単位。
 actual tower・Tor/Betti・M12・P14全体の完成ではない。
 今回の検証記録は `verification/block05/`。Block01–04のソースとテストは保持する。
+
+## Block06：2026年11月10日（JST）
+
+Block05の基点から、全r≥9・有理数e≥10・δ≥a_rのgap正値性を証明した。
+Block03の同じ資源列の上界と合成し、`Resources.scalar_lt_large` が大rank scalarを閉じる。
+新規15定理。cutoffの偶奇分岐を一つの式に統合し、b₀>5/4へ強化して有理数シフトを扱う。
+原稿へ移せる代替証明は対応台帳A06に記録した。
+
+一般のr≥4で全行をscalarへ還元する評価、actual資源構成・Tor・target余裕・Betti接続は後続。
+M12・P14全体の完成ではない。検証記録は `verification/block06/`。
+Block01–05のソースとテストは保持する。

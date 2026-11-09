@@ -1,0 +1,5 @@
+tests/LargeScalar.lean:6:5: error: unknown namespace `NSP14.Ordinary.LargeScalar`
+tests/LargeScalar.lean:9:37: error(lean.unknownIdentifier): Unknown identifier `large_gap_pos`
+tests/LargeScalar.lean:13:41: error(lean.invalidField): Invalid field `scalar_lt_large`: The environment does not contain `NSP14.Ordinary.SmallScalar.Resources.scalar_lt_large`, so it is not possible to project the field `scalar_lt_large` from an expression
+  R
+of type `Resources r e d`
