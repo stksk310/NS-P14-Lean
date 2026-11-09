@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "symbolic_polynomial_identities": 5,
+  "ranks_checked": {
+    "min": 9,
+    "max": 128,
+    "count": 120
+  },
+  "shift_values": [
+    "0",
+    "1/100",
+    "1/2",
+    "1",
+    "7/3",
+    "100"
+  ],
+  "positive_gap_cases": 4320,
+  "finite_resource_optimization_cases": 4320,
+  "resource_profiles_with_negative_residual_tail": 4320,
+  "free_cutoff_comparison_cases": 600,
+  "scope": "Polynomial identities are checked by exact multivariate coefficients. Rank and resource checks are supplementary finite tests; the universal result is proved in Lean."
+}

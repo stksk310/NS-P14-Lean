@@ -1,0 +1,210 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_UNIVERSAL_RATIONAL_LARGE_RANK_SCALAR_CLOSURE",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "14ebc6d0085f48541cbd96f6abc09728ecdfbcc0",
+  "source": "NSP14/Ordinary/LargeScalar.lean",
+  "source_sha256": "eb3e3fe808f2882c5b028c4433ceae0aa27a48891dcd27468327241beb998418",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block06_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 61,
+    "zip_members_matched": 62,
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_fixed_environment_unchanged_since_block05": true
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 13.421
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.495
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.79
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.721
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.767
+    },
+    {
+      "name": "block03_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.662
+    },
+    {
+      "name": "block04_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.786
+    },
+    {
+      "name": "block05_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.745
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.171
+    },
+    {
+      "name": "block02_assumption_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.683
+    }
+  ],
+  "axioms": {
+    "block06": 15,
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04": 13,
+    "block05": 22,
+    "block06_complete_names_checked": true,
+    "all_reports_identical_to_saved_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block06/LargeScalarChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Universal post-recentering linear coefficient baseStep-(1-alpha)/2>3/4.",
+      "Odd triangular number at rank 9 attains floorStep, while even triangular number at rank 11 has a strict comparison.",
+      "Exact floorStep(9)=124/9.",
+      "The original t(t-1)/2 term equals -1/8 at t=1/2.",
+      "A universal rank-indexed gap with s=0,t=1/100 is positive."
+    ],
+    "new_theorem_axiom_report_count": 1,
+    "new_theorem_axioms_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_polynomial_and_rational_checks": {
+    "status": "PASS",
+    "symbolic_polynomial_identities": 5,
+    "ranks_checked": {
+      "min": 9,
+      "max": 128,
+      "count": 120
+    },
+    "shift_values": [
+      "0",
+      "1/100",
+      "1/2",
+      "1",
+      "7/3",
+      "100"
+    ],
+    "positive_gap_cases": 4320,
+    "finite_resource_optimization_cases": 4320,
+    "resource_profiles_with_negative_residual_tail": 4320,
+    "free_cutoff_comparison_cases": 600,
+    "scope": "Polynomial identities are checked by exact multivariate coefficients. Rank and resource checks are supplementary finite tests; the universal result is proved in Lean."
+  },
+  "paper_correspondence": {
+    "paper": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md section 11 S21-S31; V03 O_LARGE/O22-O23",
+    "alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md A06",
+    "status": "VALID_PARITY_COMPARISON_REPLACEMENT_AND_RATIONAL_EXTENSION",
+    "base_coordinate": "baseSlope and baseStep are centered at e=10,d=a_r, matching Block05; no mistaken reuse of SmallScalar.seed at e=r+1.",
+    "fixed_cutoff": "largeCutoff(r) is fixed while both e and d vary; it is not recomputed from the shifted deficit.",
+    "rational_extension": "The negative -beta*t/2 is absorbed into a strictly positive linear coefficient; no t(t-1)>=0 assumption is made for rational t.",
+    "resource_composition": "Block03 upper bound is derived from the same Resources value; neither upper-bound nor positive-gap conclusions are assumed.",
+    "remaining_paper_work": "Reflect the local change in the final paper and complete final Lean/paper alignment."
+  },
+  "proved_scope": {
+    "gap": "For every natural r>=9 and rational e>=10,d>=a_r, gap r (largeCutoff r) e d>0.",
+    "resource_scalar": "For any Resources r e d in that domain, R.scalar<d*(volume(e,d)+1), with arbitrary finite tail support."
+  },
+  "unverified_remaining": [
+    "General all-row scalarization for ranks>=4.",
+    "Construction of one actual common tower and its resource bounds/parameters.",
+    "Actual Koszul/Tor row bounds, actual target margins and Betti transfer.",
+    "Full actual O_LARGE, M12/P14 and final paper alignment."
+  ]
+}

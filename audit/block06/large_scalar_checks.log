@@ -1,0 +1,3 @@
+'_private.audit.block06.LargeScalarChecks.0.NSP14.Block06Audit.continuous_linear_margin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

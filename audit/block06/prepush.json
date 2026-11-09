@@ -1,0 +1,131 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 4.498
+  },
+  {
+    "name": "source",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.778
+  },
+  {
+    "name": "block06",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.711
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.539
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.65
+  },
+  {
+    "name": "block03",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.724
+  },
+  {
+    "name": "block04",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.622
+  },
+  {
+    "name": "block05",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.719
+  },
+  {
+    "name": "domain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.667
+  },
+  {
+    "name": "block02_assumptions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.649
+  },
+  {
+    "name": "large_scalar_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block06/LargeScalarChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.637
+  },
+  {
+    "name": "polynomial_rational_checks",
+    "command": [
+      "python3",
+      "audit/block06/check_large_scalar.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.651
+  }
+]

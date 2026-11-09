@@ -1,0 +1,111 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 13.421
+  },
+  {
+    "name": "source_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.495
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.79
+  },
+  {
+    "name": "block01_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.721
+  },
+  {
+    "name": "block02_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.767
+  },
+  {
+    "name": "block03_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.662
+  },
+  {
+    "name": "block04_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.786
+  },
+  {
+    "name": "block05_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.745
+  },
+  {
+    "name": "block01_domain_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.171
+  },
+  {
+    "name": "block02_assumption_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.683
+  }
+]

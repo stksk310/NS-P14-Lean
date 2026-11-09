@@ -1,0 +1,441 @@
+{
+  "tests_and_axioms": {
+    "count": 15,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.Ordinary.LargeScalar.triangular_large": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.alpha_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.seed_slope_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.step_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.correction_neg": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.baseSlope_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.baseSlope_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.floor_comparison_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.floorStep_le_stepLower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.floorStep_gt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.baseStep_gt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.quadrant_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.gap_pos_shift": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeScalar.large_gap_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_large": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "block01_regression": {
+    "count": 10,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.Ordinary.SmallScalar.gap_shift": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.dStep_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row4": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row5": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row6": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row7": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row8": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.cutoff_admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.scalar_lt_of_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "block02_regression": {
+    "count": 14,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.sidon_difference_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.sidon_card_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.apery_min_unique": [
+        "propext"
+      ],
+      "NSP14.AperyPairData.residue_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.residues_card": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.residues_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.multiplicity_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.deficit_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.corner_condition_of_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.corner_condition_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.scalar_lt_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_apery_pairs": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "block03_regression": {
+    "count": 7,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.Ordinary.SmallScalar.residual_weight_nonneg": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.residual_weight_nonpos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.residual_tail_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.scalar_le_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.scalar_lt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_apery_pairs": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "block04_regression": {
+    "count": 13,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.Ordinary.LowRank.Layers.tail_sum_nonneg": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.row_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_two_first_le_mass": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_two_first_le_linear": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_two_top_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_two_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_three_first_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_three_second_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_three_top_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.rank_three_margin_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LowRank.Layers.rank_three_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.row_one_eq_scalar": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.Resources.rank_three_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "block05_regression": {
+    "count": 22,
+    "matches_saved_log": true,
+    "declarations": {
+      "NSP14.Ordinary.LargeSeed.triangularNat_cast": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.triangularNat_succ": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.triangular_nonneg": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.cutoff_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.cutoff_admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.cutoff_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_add": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_add_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_cutoff_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.barrier_step_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.barrier_step_gt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_base": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_lt_barrier": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.threshold_gap_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.barrier_lt_thresholdLower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.thresholdLower_le_threshold": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_lt_threshold": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.harmonic_tail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.tailWeight_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.seed_eq_threshold": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.rank_nine_seed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.LargeSeed.large_seed_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  }
+}
