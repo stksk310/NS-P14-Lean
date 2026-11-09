@@ -1,4 +1,4 @@
-# Lean Block01・02 監査引継ぎ
+# Lean Block01–03 監査引継ぎ
 
 2026年11月9日（JST）。このスナップショットは `work` ブランチで公開する。
 
@@ -9,6 +9,7 @@
 3. [Block02：Sidon・数値Apéry・scalar接続](NSP14/Combinatorics/Sidon.lean)
 4. [Block01の範囲](verification/block01/README_JA.md) と [Block02の範囲](verification/block02/README_JA.md)
 5. [V03骨子](proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md) と [依存表](proof_structure_v3/P14_DEPENDENCY_MAP_V03.md)
+6. [Block03：資源からSO3](NSP14/Ordinary/Resources.lean) と [式の対応・範囲](verification/block03/README_JA.md)
 
 ## 特に確認してほしい境界
 
@@ -20,7 +21,8 @@
 - `AperyPairData` は加法部分モノイドの数値最小元・二項和の最小性・和の一意性を明示した入力。
   actual Q₂の最大性からこのデータを構成する代数的な橋は未実装。
 - 境界版のSidon証拠はr≥6かつs=0だけで要求する。内部点へ不要な仮定を加えない。
-- SO3資源上界、actual接錐・Tor/Bettiへの接続、P14全体のLean証明は未完成。
+- Block03は同じ資源列の条件からSO3を証明する。台をcutoff以下に制限しない。
+- 実際のtowerからその共通資源列を作ること、actual接錐・Tor/Bettiへの接続、P14全体は未完成。
 
 ## 再現
 
@@ -29,12 +31,12 @@ Lean `v4.36.0-rc2` とmathlib revisionはtoolchain・Lake manifestに固定し�
 
 ```sh
 lake build
-python3 scripts/verify_block02.py
+python3 scripts/verify_block03.py
 ```
 
-Block02の検証スクリプトは新ソースの再検査・テスト・14個の公理依存報告と、
-Block01の回帰テスト・10個の公理依存報告を検査する。
-両ブロックのスクリプトは監査の負のシフトの反例 `audit/DomainChecks.lean` も検査する。
+Block03の検証スクリプトは新ソースの再検査・テスト・7個の公理依存報告と、
+Block01・02の回帰テスト・10個および14個の公理依存報告を検査する。
+監査の負のシフトの反例 `audit/DomainChecks.lean` も検査する。
 通常のLean基盤 `propext`, `Classical.choice`, `Quot.sound` 以外の依存を拒否する。
 追加の数学公理や `sorryAx` への依存は認めない。
 
@@ -49,14 +51,15 @@ lake build
 同じ環境なら次で実行できる。
 
 ```sh
-PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block02.py
+PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block03.py
 ```
 
-[保存済みBlock02検証記録](verification/block02/verification.json) とログを同梱する。
+[保存済みBlock03検証記録](verification/block03/verification.json) とログを同梱する。
 ローカルで再検証すると所要秒などは更新されるため、厳密な比較対象には監査するコミットを指定する。
 
 [Block01の独立監査](audit/README_JA.md) と [今回の対応記録](docs/BLOCK01_AUDIT_RESPONSE_JA.md) を保存した。
-`audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` は修正後の現行記録。
+`audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` はBlock01監査修正までの記録。
+今回の公開import追加後の照合対象は `verification/block03/MANIFEST_SHA256.json` とする。
 
 ## 同梱資料
 

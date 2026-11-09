@@ -3,6 +3,21 @@
 Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユーザー承認済み。
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 
+## Lean implementation — Block 03
+
+[Resources.lean](NSP14/Ordinary/Resources.lean) derives SO3 from one finite
+resource profile, with arbitrary support and cutoff `n >= r >= 4`.
+It composes with Blocks 01–02 to prove the small-rank scalar inequality
+from resources and boundary Sidon or numerical Apéry-pair data.
+Constructing those inputs from the actual tangent cone remains a later task.
+
+```sh
+python3 scripts/verify_block03.py
+```
+
+[Scope, paper correspondence and reproduction](verification/block03/README_JA.md),
+[verification](verification/block03/verification.json).
+
 ## Lean implementation — Block 02
 
 [Sidon.lean](NSP14/Combinatorics/Sidon.lean) proves the finite-group difference

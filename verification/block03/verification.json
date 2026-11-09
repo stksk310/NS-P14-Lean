@@ -1,0 +1,93 @@
+{
+  "status": "PASS_COMPILED_BLOCK03",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.12
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.536
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.823
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.603
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.712
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.659
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 7,
+    "block01_regression": 10,
+    "block02_regression": 14
+  },
+  "block03_theorems": [
+    "NSP14.Ordinary.SmallScalar.Resources.scalar_le_upper",
+    "NSP14.Ordinary.SmallScalar.Resources.scalar_lt",
+    "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_apery_pairs",
+    "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_boundary_sidon",
+    "NSP14.Ordinary.SmallScalar.residual_tail_le",
+    "NSP14.Ordinary.SmallScalar.residual_weight_nonneg",
+    "NSP14.Ordinary.SmallScalar.residual_weight_nonpos"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_and_fixed_environment_match_baselines": true,
+  "source": "NSP14/Ordinary/Resources.lean",
+  "paper_source": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md, section 2 SO3 and section 3 SO5",
+  "scope": "SO3 for arbitrary finite resource supports, r >= 4, n >= r; SO5 at ranks 4..8 composed with Block01 and boundary Sidon or numeric Apery data.",
+  "remaining": [
+    "actual tangent-cone construction of the common resource profile",
+    "maximal actual Q2 implies numerical Apery-pair data",
+    "ranks 2,3 and >=9 scalar closure",
+    "Tor/Betti semantics and full P14"
+  ]
+}

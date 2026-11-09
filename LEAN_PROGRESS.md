@@ -7,7 +7,7 @@
 |M00の固定環境・初回build|Lean v4.36.0-rc2、mathlib commit固定。ソースから依存build成功|lean-toolchain、lake-manifest.json|
 |Block01：O_SMALLの数値部分|コンパイル済み。任意の有理数シフトの恒等式、5行、非負整数シフトと明示した角条件の下での正値性|NSP14/Ordinary/SmallScalar.lean|
 |境界・依存監査|全域example、負の3基点、隣接点、10個のaxiom reportが通過|tests/SmallScalar.lean、verification/block01/|
-|actual Apéry–Sidon・SO3資源上界|未接続。明示した仮定として残る|後続ブロック|
+|actual Apéry–Sidon・実対象からの資源構成|未接続。数値資源からSO3への評価はBlock03で実装|後続ブロック、NSP14/Ordinary/Resources.lean|
 |M12全体・P14全体|未完了|今回の数値ブロックから全体完了を推測しない|
 
 主定理はsmall_gap_pos、後続の受入口はscalar_lt_of_upper。
@@ -37,3 +37,14 @@ actual Q₂の最大性からAperyPairDataを構成する橋は未実装。
 非負整数シフトと角条件へ表記を修正した。定理の型・定義・証明本体は変更しない。
 監査の負のシフトの反例を両ブロックの検証に追加した。
 監査原本は `audit/`、修正内容と再検証の範囲は `docs/BLOCK01_AUDIT_RESPONSE_JA.md` に保存する。
+
+## Block03：2026年11月9日（JST）
+
+同じ有限資源列の総量・head cap・tail capから、任意の `n≥r≥4` でSO3を証明した。
+列の台はcutoffを越えてよい。新規7定理は残余重みの符号、有限和評価、SO3、
+Block01のSO5、Block02の境界Sidon・数値Apéryデータとの合成である。
+新しい受入口では `F≤upper` の仮定を要求しない。
+
+実対象のtowerから共通資源を作ること、actual Q₂からApéryデータを作ること、
+r=2,3およびr≥9、Tor/Bettiは未完。M12・P14全体の完成ではない。
+前二ブロックのソースと固定環境を保持し、今回の検証記録は `verification/block03/` に置く。

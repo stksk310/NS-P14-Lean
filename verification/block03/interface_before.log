@@ -1,0 +1,19 @@
+tests/Resources.lean:9:33: error: Function expected at
+  Resources
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  r
+
+Hint: The identifier `Resources` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/Resources.lean:14:9: error: Function expected at
+  Resources
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  r
+
+Hint: The identifier `Resources` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/Resources.lean:25:8: error(lean.unknownIdentifier): Unknown identifier `residual_tail_le`
