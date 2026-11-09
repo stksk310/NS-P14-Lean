@@ -7,7 +7,7 @@
         "build"
       ],
       "exit_code": 0,
-      "seconds": 1.378
+      "seconds": 1.048
     },
     {
       "command": [
@@ -17,7 +17,7 @@
         "NSP14/Combinatorics/Sidon.lean"
       ],
       "exit_code": 0,
-      "seconds": 2.132
+      "seconds": 1.897
     },
     {
       "command": [
@@ -27,7 +27,7 @@
         "tests/Sidon.lean"
       ],
       "exit_code": 0,
-      "seconds": 1.869
+      "seconds": 1.653
     },
     {
       "command": [
@@ -37,7 +37,17 @@
         "tests/SmallScalar.lean"
       ],
       "exit_code": 0,
-      "seconds": 1.832
+      "seconds": 1.464
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.639
     }
   ],
   "block02_axiom_reports": 14,
@@ -48,8 +58,7 @@
     "propext"
   ],
   "new_mathematical_axioms": [],
-  "block01_proof_source_unchanged": true,
-  "scope": "Finite Sidon counting, numerical Apéry-pair witness bridge, scalar integration. No construction from maximal algebraic Q2 yet.",
+  "scope": "Finite Sidon counting, numerical Ap\u00e9ry-pair witness bridge, scalar integration. No construction from maximal algebraic Q2 yet.",
   "date_jst": "2026-11-09",
   "lean_version": "4.36.0-rc2",
   "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
@@ -78,7 +87,9 @@
     "universal impossibility at (m,e)=(28,7),(36,8),(45,9)",
     "interior scalar without Sidon witness"
   ],
-  "umbrella_change": "NSP14.lean adds a public import; Block01 proof source remains unchanged.",
+  "umbrella_change": "NSP14.lean publicly imports both blocks. Block01 audit correction changes only its domain comment.",
   "full_actual_apery_sidon_claimed": false,
-  "full_P14_claimed": false
+  "full_P14_claimed": false,
+  "block01_source_matches_current_manifest": true,
+  "block01_negative_integer_shift_counterexample_checked": true
 }

@@ -13,6 +13,7 @@ commands = [
     ('build', ['lake', 'build']),
     ('source_recheck', ['lake', 'env', 'lean', 'NSP14/Ordinary/SmallScalar.lean']),
     ('tests_and_axioms', ['lake', 'env', 'lean', 'tests/SmallScalar.lean']),
+    ('domain_checks', ['lake', 'env', 'lean', 'audit/DomainChecks.lean']),
 ]
 records = []
 for name, cmd in commands:
@@ -35,9 +36,14 @@ for group in sets:
     actual = {v.strip() for v in group.split(',') if v.strip()}
     if not actual <= allowed:
         raise RuntimeError(('Unexpected axiom', actual - allowed))
-record = {'status': 'PASS_COMPILED_BLOCK01', 'checks': records,
+record_path = out / 'verification.json'
+record = json.loads(record_path.read_text()) if record_path.exists() else {}
+record.update({'status': 'PASS_COMPILED_BLOCK01', 'checks': records,
           'axiom_reports': len(sets), 'allowed_axioms': sorted(allowed),
           'new_mathematical_axioms': [], 'scope':
-          'Five-row rational scalar block only; corner feasibility and SO3 resource bound remain explicit premises.'}
+          'Five-row rational scalar block only; corner feasibility and SO3 resource bound remain explicit premises.',
+          'shift_domains': {'gap_shift': 'arbitrary s,t : Q',
+                           'small_gap_pos': 's,t : N; 4 <= r <= 8; r <= 5 or s+t != 0'},
+          'negative_integer_shift_counterexample_checked': True})
 (out / 'verification.json').write_text(json.dumps(record, indent=2) + '\n')
 print(json.dumps(record, indent=2))

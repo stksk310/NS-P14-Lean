@@ -12,7 +12,9 @@
 
 ## 特に確認してほしい境界
 
-- 全整数シフトに対する恒等式・正値性であり、数値サンプルからの外挿ではない。
+- `gap_shift` は任意の有理数シフト `s,t : ℚ` の恒等式。
+  `small_gap_pos` の正値性は `4 ≤ r ≤ 8`、非負整数シフト `s,t : ℕ`、
+  および `r ≤ 5 ∨ s+t ≠ 0` の下で成立する。
 - rank6–8の悪い角ではgapが負になることもテストしている。
 - Sidon性は同じ項の反復を含む二項和の一意性。差の単射は合成数・偶数のmodulusを許す。
 - `AperyPairData` は加法部分モノイドの数値最小元・二項和の最小性・和の一意性を明示した入力。
@@ -32,6 +34,7 @@ python3 scripts/verify_block02.py
 
 Block02の検証スクリプトは新ソースの再検査・テスト・14個の公理依存報告と、
 Block01の回帰テスト・10個の公理依存報告を検査する。
+両ブロックのスクリプトは監査の負のシフトの反例 `audit/DomainChecks.lean` も検査する。
 通常のLean基盤 `propext`, `Classical.choice`, `Quot.sound` 以外の依存を拒否する。
 追加の数学公理や `sorryAx` への依存は認めない。
 
@@ -51,6 +54,9 @@ PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block02.py
 
 [保存済みBlock02検証記録](verification/block02/verification.json) とログを同梱する。
 ローカルで再検証すると所要秒などは更新されるため、厳密な比較対象には監査するコミットを指定する。
+
+[Block01の独立監査](audit/README_JA.md) と [今回の対応記録](docs/BLOCK01_AUDIT_RESPONSE_JA.md) を保存した。
+`audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` は修正後の現行記録。
 
 ## 同梱資料
 

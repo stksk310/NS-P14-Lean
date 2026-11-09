@@ -51,4 +51,8 @@ lake build、新ソースの再検査、テストと14個のaxiom report、Block
 3つの悪い角の全Sidon集合に対する不可能性、内側で証拠を要求しない接続を含む。
 有限例は普遍定理の代わりではない。普遍定理はソース中の単射・濃度・不等式の証明による。
 
-Block01のSmallScalar.leanは変更せず、rootのNSP14.leanを新モジュールの公開importで拡張した。
+Block02初回実装時はBlock01のSmallScalar.leanを変更せず、rootの公開importを拡張した。
+その後のBlock01監査対応では正値性の定義域のコメントのみを修正した。
+現行の検証ではBlock01の現行manifestとのソース一致と、監査の負のシフトの反例も確認する。
+定義・定理の型・証明本体は変わらない。現行manifestは修正後の記録に更新し、
+既存のBlock02 ZIPおよび初回の `root_build.log` は当時の記録として保持する。

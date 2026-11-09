@@ -5,7 +5,7 @@
 | 範囲 | 状態 | 証拠 |
 |---|---|---|
 |M00の固定環境・初回build|Lean v4.36.0-rc2、mathlib commit固定。ソースから依存build成功|lean-toolchain、lake-manifest.json|
-|Block01：O_SMALLの数値部分|コンパイル済み。全有理数シフトの恒等式、5行、全自然数シフトの正値性|NSP14/Ordinary/SmallScalar.lean|
+|Block01：O_SMALLの数値部分|コンパイル済み。任意の有理数シフトの恒等式、5行、非負整数シフトと明示した角条件の下での正値性|NSP14/Ordinary/SmallScalar.lean|
 |境界・依存監査|全域example、負の3基点、隣接点、10個のaxiom reportが通過|tests/SmallScalar.lean、verification/block01/|
 |actual Apéry–Sidon・SO3資源上界|未接続。明示した仮定として残る|後続ブロック|
 |M12全体・P14全体|未完了|今回の数値ブロックから全体完了を推測しない|
@@ -30,3 +30,10 @@ Block01の証明ソースは変更していない。rootの公開importは拡張
 actual Q₂の最大性からAperyPairDataを構成する橋は未実装。
 数値データを実際の半群の最小生成系と一致させること、SO3、Betti接続も残る。
 従って「数値・組合せのBlock02とその接続」が完成であり、actual Apéry–Sidon全体の完成ではない。
+
+## Block01監査対応：2026年11月9日（JST）
+
+独立監査は数値ブロックを合格とし、正値性の「全整数シフト」という表記を指摘した。
+非負整数シフトと角条件へ表記を修正した。定理の型・定義・証明本体は変更しない。
+監査の負のシフトの反例を両ブロックの検証に追加した。
+監査原本は `audit/`、修正内容と再検証の範囲は `docs/BLOCK01_AUDIT_RESPONSE_JA.md` に保存する。

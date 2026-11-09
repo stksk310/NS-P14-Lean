@@ -7,7 +7,7 @@
         "build"
       ],
       "exit_code": 0,
-      "seconds": 3.647
+      "seconds": 3.929
     },
     {
       "command": [
@@ -17,7 +17,7 @@
         "NSP14/Ordinary/SmallScalar.lean"
       ],
       "exit_code": 0,
-      "seconds": 2.731
+      "seconds": 3.067
     },
     {
       "command": [
@@ -27,7 +27,17 @@
         "tests/SmallScalar.lean"
       ],
       "exit_code": 0,
-      "seconds": 1.329
+      "seconds": 1.689
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.631
     }
   ],
   "axiom_reports": 10,
@@ -43,7 +53,7 @@
   "lean_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
   "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
   "source": "NSP14/Ordinary/SmallScalar.lean",
-  "paper_source": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md SO3–SO5",
+  "paper_source": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md SO3\u2013SO5",
   "main_theorems": [
     "gap_shift",
     "dStep_eq",
@@ -58,12 +68,17 @@
   ],
   "completed_scope": "Universal pure-rational numerical block with explicit corner and upper-bound hypotheses.",
   "not_completed": [
-    "actual Apéry–Sidon",
+    "actual Ap\u00e9ry\u2013Sidon",
     "resource-to-SO3 bound",
     "Betti transfer",
     "full M12",
     "full P14"
   ],
   "network_setup": "Official GitHub Lean release; mathlib source build. Blocked release/cache hosts were not bypassed.",
-  "fresh_recheck_seconds_excludes_initial_dependency_build": true
+  "fresh_recheck_seconds_excludes_initial_dependency_build": true,
+  "shift_domains": {
+    "gap_shift": "arbitrary s,t : Q",
+    "small_gap_pos": "s,t : N; 4 <= r <= 8; r <= 5 or s+t != 0"
+  },
+  "negative_integer_shift_counterexample_checked": true
 }

@@ -15,6 +15,7 @@ commands = [
     ('source_recheck', ['lake', 'env', 'lean', 'NSP14/Combinatorics/Sidon.lean']),
     ('tests_and_axioms', ['lake', 'env', 'lean', 'tests/Sidon.lean']),
     ('block01_regression', ['lake', 'env', 'lean', 'tests/SmallScalar.lean']),
+    ('block01_domain_checks', ['lake', 'env', 'lean', 'audit/DomainChecks.lean']),
 ]
 records = []
 for name, cmd in commands:
@@ -41,11 +42,16 @@ for name, count in [('tests_and_axioms', 14), ('block01_regression', 10)]:
 old = json.loads((root / 'verification/block01/MANIFEST_SHA256.json').read_text())
 p = 'NSP14/Ordinary/SmallScalar.lean'
 if hashlib.sha256((root / p).read_bytes()).hexdigest() != old[p]:
-    raise RuntimeError('Block01 proof source changed')
-record = {'status': 'PASS_COMPILED_BLOCK02', 'checks': records,
+    raise RuntimeError('Block01 source does not match its current manifest')
+record_path = out / 'verification.json'
+record = json.loads(record_path.read_text()) if record_path.exists() else {}
+record.pop('block01_proof_source_unchanged', None)
+record.update({'status': 'PASS_COMPILED_BLOCK02', 'checks': records,
           'block02_axiom_reports': 14, 'block01_regression_axiom_reports': 10,
           'allowed_axioms': sorted(allowed), 'new_mathematical_axioms': [],
-          'block01_proof_source_unchanged': True,
-          'scope': 'Finite Sidon counting, numerical Apéry-pair witness bridge, scalar integration. No construction from maximal algebraic Q2 yet.'}
+          'block01_source_matches_current_manifest': True,
+          'block01_negative_integer_shift_counterexample_checked': True,
+          'umbrella_change': 'NSP14.lean publicly imports both blocks. Block01 audit correction changes only its domain comment.',
+          'scope': 'Finite Sidon counting, numerical Apéry-pair witness bridge, scalar integration. No construction from maximal algebraic Q2 yet.'})
 (out / 'verification.json').write_text(json.dumps(record, indent=2) + '\n')
 print(json.dumps(record, indent=2))

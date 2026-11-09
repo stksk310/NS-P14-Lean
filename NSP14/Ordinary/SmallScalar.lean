@@ -152,7 +152,9 @@ theorem cutoff_admissible (r : ℕ) (hr : 4 ≤ r ∧ r ≤ 8) :
   obtain ⟨hlo, hhi⟩ := hr
   interval_cases r <;> norm_num [cutoff, alpha]
 
-/-- The complete five-row numerical block for all integer shifts.
+/-- The five-row numerical block for nonnegative integer shifts `s,t : ℕ`,
+with `4 ≤ r ≤ 8` and `r ≤ 5 ∨ s + t ≠ 0`.
+Unlike `gap_shift`, this positivity statement does not allow arbitrary rational shifts.
 Actual source feasibility at the three exceptional corners is a later module. -/
 theorem small_gap_pos (r s t : ℕ) (hr : 4 ≤ r ∧ r ≤ 8)
     (hcorner : r ≤ 5 ∨ s + t ≠ 0) :

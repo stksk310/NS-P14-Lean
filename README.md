@@ -46,6 +46,11 @@ For a fresh checkout with cache access blocked, use
 [compiled verification](verification/block01/verification.json), and
 [progress](LEAN_PROGRESS.md).
 
+[Independent Block01 audit](audit/README_JA.md) and
+[audit correction and verification](docs/BLOCK01_AUDIT_RESPONSE_JA.md).
+The identity permits arbitrary rational shifts; positivity requires natural
+shifts, ranks 4–8, and the stated corner condition.
+
 
 Lean formalization project for NS-P14.
 
