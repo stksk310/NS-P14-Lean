@@ -1,0 +1,188 @@
+{
+  "audited_commit": "ff69aecb56433881f72f926883ab1701a732d5cd",
+  "manifest": [
+    {
+      "file": "AUDIT_HANDOFF.md",
+      "expected": "36ea3da963e5515888068a04d107829e17b1cf7b07920d52cd12be3798180125",
+      "actual": "36ea3da963e5515888068a04d107829e17b1cf7b07920d52cd12be3798180125",
+      "match": true
+    },
+    {
+      "file": "LEAN_PROGRESS.md",
+      "expected": "02006fbf4ea1b4e54723ec32133546558717e56d9c7d29c920ae22f3b8e1fa7c",
+      "actual": "02006fbf4ea1b4e54723ec32133546558717e56d9c7d29c920ae22f3b8e1fa7c",
+      "match": true
+    },
+    {
+      "file": "NSP14.lean",
+      "expected": "ee7c2f53fc07dbe84d7d3cbb8cd4112efce878f1b22405f9534dbba018535e35",
+      "actual": "ee7c2f53fc07dbe84d7d3cbb8cd4112efce878f1b22405f9534dbba018535e35",
+      "match": true
+    },
+    {
+      "file": "NSP14/Combinatorics/Sidon.lean",
+      "expected": "eae445dfa155dbab58ccbbd066d40851214f3faf90c5383df408b129937c334e",
+      "actual": "eae445dfa155dbab58ccbbd066d40851214f3faf90c5383df408b129937c334e",
+      "match": true
+    },
+    {
+      "file": "NSP14/Ordinary/Resources.lean",
+      "expected": "f21df969ca488b913c3fde630d48b77786919d1153e9cac11400ddc26f843ea3",
+      "actual": "f21df969ca488b913c3fde630d48b77786919d1153e9cac11400ddc26f843ea3",
+      "match": true
+    },
+    {
+      "file": "NSP14/Ordinary/SmallScalar.lean",
+      "expected": "9c933c354d0bac4797aae1b1305c6f2adfde574451a488b081bdabbe60152f06",
+      "actual": "9c933c354d0bac4797aae1b1305c6f2adfde574451a488b081bdabbe60152f06",
+      "match": true
+    },
+    {
+      "file": "README.md",
+      "expected": "7827e1dced1a33cd74a7e59b3ec22622332fdd1108294c106f65236366bdb78c",
+      "actual": "7827e1dced1a33cd74a7e59b3ec22622332fdd1108294c106f65236366bdb78c",
+      "match": true
+    },
+    {
+      "file": "audit/DomainChecks.lean",
+      "expected": "fade20421430ae7172369309e4dd9def4b016f4f745c99563ddc2b076dd7df36",
+      "actual": "fade20421430ae7172369309e4dd9def4b016f4f745c99563ddc2b076dd7df36",
+      "match": true
+    },
+    {
+      "file": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md",
+      "expected": "97f6b39cec112aab8d2e94b0c7feb5f2654ada898f61130796bd05fb4871931f",
+      "actual": "97f6b39cec112aab8d2e94b0c7feb5f2654ada898f61130796bd05fb4871931f",
+      "match": true
+    },
+    {
+      "file": "docs/LEAN_WORKFLOW.md",
+      "expected": "c16d1210ea944ee1f7c1d4a14f43783d67cc2543d22b6af29bc302a9bb4c0869",
+      "actual": "c16d1210ea944ee1f7c1d4a14f43783d67cc2543d22b6af29bc302a9bb4c0869",
+      "match": true
+    },
+    {
+      "file": "docs/superpowers/plans/2026-11-09-block03-resources.md",
+      "expected": "37400644a7c6d82decdf8cc1520a66cc84b51563c6241b104954100ae3d9a025",
+      "actual": "37400644a7c6d82decdf8cc1520a66cc84b51563c6241b104954100ae3d9a025",
+      "match": true
+    },
+    {
+      "file": "lake-manifest.json",
+      "expected": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766",
+      "actual": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766",
+      "match": true
+    },
+    {
+      "file": "lakefile.toml",
+      "expected": "d299bae852fc9a3b5cc9fe04742b35037654d195b34c2a91464aa5615b72f4cb",
+      "actual": "d299bae852fc9a3b5cc9fe04742b35037654d195b34c2a91464aa5615b72f4cb",
+      "match": true
+    },
+    {
+      "file": "lean-toolchain",
+      "expected": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "actual": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "match": true
+    },
+    {
+      "file": "scripts/verify_block03.py",
+      "expected": "27d684fb74c1f8104baf2d8354a801c65b04b1f96436db2b6772a7cdf078d558",
+      "actual": "27d684fb74c1f8104baf2d8354a801c65b04b1f96436db2b6772a7cdf078d558",
+      "match": true
+    },
+    {
+      "file": "tests/Resources.lean",
+      "expected": "07d102beb2d1a6885a64047792157268cc8612bfe5eaf7e5db2c83860e443bc4",
+      "actual": "07d102beb2d1a6885a64047792157268cc8612bfe5eaf7e5db2c83860e443bc4",
+      "match": true
+    },
+    {
+      "file": "tests/Sidon.lean",
+      "expected": "123cf217c938a04daab6dbbc5682e8939280be28557d771a0616f5c0905c3732",
+      "actual": "123cf217c938a04daab6dbbc5682e8939280be28557d771a0616f5c0905c3732",
+      "match": true
+    },
+    {
+      "file": "tests/SmallScalar.lean",
+      "expected": "0c356868eaf685976c3999cc8d34dfe147aca31485b703c619a4329790173209",
+      "actual": "0c356868eaf685976c3999cc8d34dfe147aca31485b703c619a4329790173209",
+      "match": true
+    },
+    {
+      "file": "verification/block01/MANIFEST_SHA256.json",
+      "expected": "9810427b6cb452a11b09009d3711ae54235277bc3678cb9fc6d713063a7533a0",
+      "actual": "9810427b6cb452a11b09009d3711ae54235277bc3678cb9fc6d713063a7533a0",
+      "match": true
+    },
+    {
+      "file": "verification/block02/MANIFEST_SHA256.json",
+      "expected": "74a39880a3ec34a4d4d59003be64e8726b9476fd88eff4e7bb1337b99f143165",
+      "actual": "74a39880a3ec34a4d4d59003be64e8726b9476fd88eff4e7bb1337b99f143165",
+      "match": true
+    },
+    {
+      "file": "verification/block03/README_JA.md",
+      "expected": "f8752e8ed4e3a07d451e04afb97587b1205b1a7549c5d986c46cce756a4af4ea",
+      "actual": "f8752e8ed4e3a07d451e04afb97587b1205b1a7549c5d986c46cce756a4af4ea",
+      "match": true
+    },
+    {
+      "file": "verification/block03/REVIEW_JA.md",
+      "expected": "115be57f54c539f69cc2e0d3ce68fe2861486a0ca2ee775af2891d89e756393f",
+      "actual": "115be57f54c539f69cc2e0d3ce68fe2861486a0ca2ee775af2891d89e756393f",
+      "match": true
+    },
+    {
+      "file": "verification/block03/block01_domain_checks.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "file": "verification/block03/block01_regression.log",
+      "expected": "865fb55e37c13458871e6258bd382285a5e811396e43c7b7d02d82e8b6fe8953",
+      "actual": "865fb55e37c13458871e6258bd382285a5e811396e43c7b7d02d82e8b6fe8953",
+      "match": true
+    },
+    {
+      "file": "verification/block03/block02_regression.log",
+      "expected": "4cae8ee1b890ad8a8cd57f9baca838e5c51f198289795bb0f21e9437260c4e3c",
+      "actual": "4cae8ee1b890ad8a8cd57f9baca838e5c51f198289795bb0f21e9437260c4e3c",
+      "match": true
+    },
+    {
+      "file": "verification/block03/build.log",
+      "expected": "f337f4bf67809fc1d4f93ee537491a6f4b53f0147c07d1bb08ee29fb836e021b",
+      "actual": "f337f4bf67809fc1d4f93ee537491a6f4b53f0147c07d1bb08ee29fb836e021b",
+      "match": true
+    },
+    {
+      "file": "verification/block03/interface_before.log",
+      "expected": "4f5aa7017354b0be1753824acf039bbb8956fa216a16b215804aa9ef58108c6e",
+      "actual": "4f5aa7017354b0be1753824acf039bbb8956fa216a16b215804aa9ef58108c6e",
+      "match": true
+    },
+    {
+      "file": "verification/block03/source_recheck.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "file": "verification/block03/tests_and_axioms.log",
+      "expected": "fe79c1375edc330dce537ad3481670a30635a8b9afb78bc85493caa42f1170a1",
+      "actual": "fe79c1375edc330dce537ad3481670a30635a8b9afb78bc85493caa42f1170a1",
+      "match": true
+    },
+    {
+      "file": "verification/block03/verification.json",
+      "expected": "ecaac15b1e33f681ce8491c4c1c24d90333460c83b82ada70ff1899472d281f0",
+      "actual": "ecaac15b1e33f681ce8491c4c1c24d90333460c83b82ada70ff1899472d281f0",
+      "match": true
+    }
+  ],
+  "zip_sha256": "2925fbc03de6ebaa2f8c5f30f33e2da6822f1512894ebe239eced52c06469806",
+  "zip_member_count": 31,
+  "zip_members_match_commit": true
+}

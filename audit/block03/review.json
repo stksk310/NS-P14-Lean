@@ -1,0 +1,221 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_RESOURCE_CONDITIONAL_SO3_AND_SMALL_RANK_SO5",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "ff69aecb56433881f72f926883ab1701a732d5cd",
+  "source": "NSP14/Ordinary/Resources.lean",
+  "source_sha256": "f21df969ca488b913c3fde630d48b77786919d1153e9cac11400ddc26f843ea3",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block03_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 30,
+    "zip_members_matched": 31,
+    "pinned_dependencies_matched": 9,
+    "original_submitted_files_unchanged": true,
+    "prior_sidon_source_tests_and_environment_unchanged": true,
+    "small_scalar_change_since_block02_audit": "Documentation of shift domains only; proof statements and proof terms were not edited."
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 10.651
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.775
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.541
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.619
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.643
+    }
+  ],
+  "axioms": {
+    "block03": 7,
+    "block01": 10,
+    "block02": 14,
+    "block03_complete_names_checked": true,
+    "all_reports_match_submitted_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block03/ResourceChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Scalar is invariant under arbitrary finite supports covering the same tail profile.",
+      "A nontrivial resource profile saturates SO3 at rank 4, e=5, d=10, cutoff 7.",
+      "The sharp scalar and upper equal 3451/40; the remaining strict gap is the previously proved seed 349/40."
+    ],
+    "support_invariance_theorem_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_rational_checks": {
+    "status": "PASS",
+    "optimization_cases": 7104,
+    "ranks": [
+      4,
+      12
+    ],
+    "shift_values": [
+      "0",
+      "1/2",
+      "1",
+      "2"
+    ],
+    "scope": "Supplementary exact finite optimization checks; the Lean theorem is the universal proof.",
+    "sharp_profile_scalar_and_upper": "3451/40",
+    "counterexamples_when_a_condition_is_omitted": [
+      {
+        "omitted_condition": "budget",
+        "rank": 4,
+        "cutoff": 7,
+        "e": 5,
+        "d": 10,
+        "head": "4",
+        "tail": {
+          "0": "14",
+          "1": "14",
+          "2": "14",
+          "3": "14",
+          "4": "14",
+          "5": "14"
+        },
+        "scalar": "1823/20",
+        "upper": "3451/40",
+        "all_other_listed_conditions_hold": true
+      },
+      {
+        "omitted_condition": "head_cap",
+        "rank": 4,
+        "cutoff": 7,
+        "e": 5,
+        "d": 10,
+        "head": "75",
+        "tail": {},
+        "scalar": "435/2",
+        "upper": "3451/40",
+        "all_other_listed_conditions_hold": true
+      },
+      {
+        "omitted_condition": "tail_cap",
+        "rank": 4,
+        "cutoff": 7,
+        "e": 5,
+        "d": 10,
+        "head": "4",
+        "tail": {
+          "0": "71"
+        },
+        "scalar": "111",
+        "upper": "3451/40",
+        "all_other_listed_conditions_hold": true
+      },
+      {
+        "omitted_condition": "tail_nonneg",
+        "rank": 4,
+        "cutoff": 7,
+        "e": 5,
+        "d": 10,
+        "head": "4",
+        "tail": {
+          "0": "14",
+          "1": "14",
+          "2": "14",
+          "3": "14",
+          "4": "14",
+          "5": "14",
+          "1000": "-13"
+        },
+        "scalar": "1827689/20060",
+        "upper": "3451/40",
+        "all_other_listed_conditions_hold": true
+      }
+    ]
+  },
+  "paper_correspondence": {
+    "paper": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md sections 2 SO3 and 3 SO5",
+    "status": "MATCH_WITH_EXPLICIT_RESOURCE_AND_BOUNDARY_PREMISES",
+    "indexing": "head=H_1; tail(j)=H_(j+2); weight=(r-1)/(j+3); zero residual at j=n-2.",
+    "same_profile": "One Resources value supplies the scalar, total budget, head cap, and all tail caps.",
+    "support": "Arbitrary finite support with tail_vanish; no bound by cutoff, no dropped nonzero layers.",
+    "upper_bound": "Not assumed; derived from the resource constraints."
+  },
+  "proved_scope": {
+    "SO3": "r,n natural; 4<=r<=n; e,d rational; R:Resources r e d implies R.scalar<=upper r n e d.",
+    "SO5": "r in 4..8; s,t natural; explicit corner condition or boundary Sidon/Apery witness; composed with resource-derived SO3."
+  },
+  "unverified_remaining": [
+    "Construction of one common Resources value from the actual semigroup, tangent cone, cut, and tower.",
+    "Identification of the formal scalar with the actual resource/Betti scalar.",
+    "Construction of AperyPairData from maximal actual Q2.",
+    "Actual parameters, natural-shift representation, and modulus identity.",
+    "Ranks 2,3 and >=9 scalar closure; Tor/Betti semantics; full M12/P14."
+  ]
+}

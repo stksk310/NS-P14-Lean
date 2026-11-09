@@ -1,0 +1,3 @@
+'_private.audit.block03.ResourceChecks.0.NSP14.Block03Audit.scalar_support_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

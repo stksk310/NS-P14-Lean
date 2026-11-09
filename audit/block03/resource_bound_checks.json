@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "optimization_cases": 7104,
+  "ranks": [
+    4,
+    12
+  ],
+  "shift_values": [
+    "0",
+    "1/2",
+    "1",
+    "2"
+  ],
+  "scope": "Supplementary exact finite optimization checks; the Lean theorem is the universal proof.",
+  "sharp_profile_scalar_and_upper": "3451/40",
+  "counterexamples_when_a_condition_is_omitted": [
+    {
+      "omitted_condition": "budget",
+      "rank": 4,
+      "cutoff": 7,
+      "e": 5,
+      "d": 10,
+      "head": "4",
+      "tail": {
+        "0": "14",
+        "1": "14",
+        "2": "14",
+        "3": "14",
+        "4": "14",
+        "5": "14"
+      },
+      "scalar": "1823/20",
+      "upper": "3451/40",
+      "all_other_listed_conditions_hold": true
+    },
+    {
+      "omitted_condition": "head_cap",
+      "rank": 4,
+      "cutoff": 7,
+      "e": 5,
+      "d": 10,
+      "head": "75",
+      "tail": {},
+      "scalar": "435/2",
+      "upper": "3451/40",
+      "all_other_listed_conditions_hold": true
+    },
+    {
+      "omitted_condition": "tail_cap",
+      "rank": 4,
+      "cutoff": 7,
+      "e": 5,
+      "d": 10,
+      "head": "4",
+      "tail": {
+        "0": "71"
+      },
+      "scalar": "111",
+      "upper": "3451/40",
+      "all_other_listed_conditions_hold": true
+    },
+    {
+      "omitted_condition": "tail_nonneg",
+      "rank": 4,
+      "cutoff": 7,
+      "e": 5,
+      "d": 10,
+      "head": "4",
+      "tail": {
+        "0": "14",
+        "1": "14",
+        "2": "14",
+        "3": "14",
+        "4": "14",
+        "5": "14",
+        "1000": "-13"
+      },
+      "scalar": "1827689/20060",
+      "upper": "3451/40",
+      "all_other_listed_conditions_hold": true
+    }
+  ]
+}

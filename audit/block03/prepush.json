@@ -1,0 +1,87 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 6.97
+  },
+  {
+    "name": "source",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.356
+  },
+  {
+    "name": "block03",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.779
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.715
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.659
+  },
+  {
+    "name": "domain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.538
+  },
+  {
+    "name": "resource_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block03/ResourceChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.2
+  },
+  {
+    "name": "rational_checks",
+    "command": [
+      "python3",
+      "audit/block03/check_resource_bounds.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.458
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 10.651
+  },
+  {
+    "name": "source_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.5
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.775
+  },
+  {
+    "name": "block01_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.541
+  },
+  {
+    "name": "block02_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.619
+  },
+  {
+    "name": "block01_domain_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.643
+  }
+]

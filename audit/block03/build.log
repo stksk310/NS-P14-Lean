@@ -1,0 +1,10 @@
+✔ [2520/2538] Built Mathlib.Algebra.BigOperators.Group.Finset.Pi (1.4s)
+✔ [2522/2538] Built Mathlib.Data.Multiset.Sections (1.4s)
+✔ [2524/2538] Built Mathlib.Data.Multiset.Antidiagonal (1.5s)
+✔ [2526/2538] Built Mathlib.Algebra.BigOperators.Ring.Multiset (1.3s)
+✔ [2528/2538] Built NSP14.Ordinary.SmallScalar (3.2s)
+✔ [2530/2538] Built NSP14.Combinatorics.Sidon (1.8s)
+✔ [2532/2538] Built Mathlib.Algebra.BigOperators.Ring.Finset (2.4s)
+✔ [2534/2538] Built NSP14.Ordinary.Resources (1.8s)
+✔ [2536/2538] Built NSP14 (805ms)
+Build completed successfully (2538 jobs).
