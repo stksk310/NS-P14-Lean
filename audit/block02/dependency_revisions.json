@@ -1,0 +1,47 @@
+[
+  {
+    "package": "mathlib",
+    "commit": "139105d28c7685a154cb3093f79edb2e16708099",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "plausible",
+    "commit": "129d1ba9a16bc0660f46c79e9fb041ef5d5d80de",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "LeanSearchClient",
+    "commit": "c61286b7b63cbfd563b28e11e81d0a18233a044a",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "importGraph",
+    "commit": "e5d5639bedc7feecfbcb98e30b3bf26463d9f722",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "proofwidgets",
+    "commit": "16259c0d07d61ee37d999d05b5cf96338b8daa11",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "aesop",
+    "commit": "7d11bfa88558f8d3d90afdf6bd877ed70001498d",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "Qq",
+    "commit": "b0256621cb88178e9ad932a53633077b3029e621",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "batteries",
+    "commit": "4af7237d146261353907b06a01b6f3fc06cfa067",
+    "tracked_tree_clean": true
+  },
+  {
+    "package": "Cli",
+    "commit": "c09cb1e4f1e6e1c231a1175a12b681b075054a1b",
+    "tracked_tree_clean": true
+  }
+]

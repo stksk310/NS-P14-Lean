@@ -3,6 +3,22 @@
 Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユーザー承認済み。
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 
+## Lean implementation — Block 04
+
+[LowRank.lean](NSP14/Ordinary/LowRank.lean) proves the finite weighted-row
+bounds for all rows at ranks 2 and 3. Rank 2 includes zero deficit and
+does not require a triangular lower bound or triangular head cap.
+The first row agrees with the existing scalar; rank 3 also receives a
+direct adapter from Block03 resources. Actual Koszul/Tor and target
+margin constructions remain later tasks.
+
+```sh
+python3 scripts/verify_block04.py
+```
+
+[Scope, weight table and reproduction](verification/block04/README_JA.md),
+[verification](verification/block04/verification.json).
+
 ## Lean implementation — Block 03
 
 [Resources.lean](NSP14/Ordinary/Resources.lean) derives SO3 from one finite

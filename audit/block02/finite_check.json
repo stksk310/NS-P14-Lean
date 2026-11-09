@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "moduli": {
+    "min": 1,
+    "max": 14
+  },
+  "subsets_checked": 32766,
+  "checks": [
+    "Strong Sidon, including doubles, agrees with off-diagonal difference injectivity.",
+    "All Sidon subsets satisfy e(e-1)<=m-1."
+  ],
+  "scope": "Supplementary finite checks only; the Lean theorems provide the universal proof.",
+  "results": [
+    {
+      "modulus": 1,
+      "sidon_subsets": 2,
+      "max_cardinality": 1,
+      "example": [
+        0
+      ]
+    },
+    {
+      "modulus": 2,
+      "sidon_subsets": 3,
+      "max_cardinality": 1,
+      "example": [
+        0
+      ]
+    },
+    {
+      "modulus": 3,
+      "sidon_subsets": 7,
+      "max_cardinality": 2,
+      "example": [
+        0,
+        1
+      ]
+    },
+    {
+      "modulus": 4,
+      "sidon_subsets": 9,
+      "max_cardinality": 2,
+      "example": [
+        0,
+        1
+      ]
+    },
+    {
+      "modulus": 5,
+      "sidon_subsets": 16,
+      "max_cardinality": 2,
+      "example": [
+        0,
+        1
+      ]
+    },
+    {
+      "modulus": 6,
+      "sidon_subsets": 19,
+      "max_cardinality": 2,
+      "example": [
+        0,
+        1
+      ]
+    },
+    {
+      "modulus": 7,
+      "sidon_subsets": 43,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 8,
+      "sidon_subsets": 49,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 9,
+      "sidon_subsets": 100,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 10,
+      "sidon_subsets": 91,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 11,
+      "sidon_subsets": 177,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 12,
+      "sidon_subsets": 193,
+      "max_cardinality": 3,
+      "example": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "modulus": 13,
+      "sidon_subsets": 352,
+      "max_cardinality": 4,
+      "example": [
+        0,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "modulus": 14,
+      "sidon_subsets": 323,
+      "max_cardinality": 4,
+      "example": [
+        0,
+        1,
+        4,
+        6
+      ]
+    }
+  ]
+}

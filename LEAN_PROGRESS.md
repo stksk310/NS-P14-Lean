@@ -48,3 +48,17 @@ Block01のSO5、Block02の境界Sidon・数値Apéryデータとの合成であ�
 実対象のtowerから共通資源を作ること、actual Q₂からApéryデータを作ること、
 r=2,3およびr≥9、Tor/Bettiは未完。M12・P14全体の完成ではない。
 前二ブロックのソースと固定環境を保持し、今回の検証記録は `verification/block03/` に置く。
+
+## Block04：2026年11月10日（JST）
+
+V02 (7.3) の重みを定義し、O_LOWの数値部分としてrank 2の第一・top行と
+rank 3の第一・第二・top行を証明した。rank 2はδ=0を許し、三角数head capを課さない。
+総量と線形head cap、rank 3では追加head capから同じ列の全行を評価する。
+新規13定理。Block03から列をそのまま搬送し、第一行が既存scalarと等しいことも証明した。
+
+actual tower・Torから重み付き和への移行・actual target余裕・Bettiの接続、r≥9は残る。
+検証記録は `verification/block04/`。Block01–03の証明ソース・テストを保持する。
+
+ユーザーからBlock02独立監査の通過報告を受け、リモート監査原本も取得した。
+`audit/block02/README_JA.md` の判定は「条件付きの組合せ・数値ブロックとして合格」。
+原本の仮定検査をBlock04の回帰に加える。Block03の外部監査は進行中。

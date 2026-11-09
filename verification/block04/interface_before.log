@@ -1,0 +1,100 @@
+tests/LowRank.lean:5:32: error: unknown namespace `NSP14.Ordinary.LowRank`
+tests/LowRank.lean:9:10: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:9:43: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:10:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:11:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:9:25: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:10:23: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:11:23: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:12:2: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:15:10: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:15:43: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:16:10: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:17:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:18:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:19:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
+tests/LowRank.lean:15:25: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:17:23: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:18:27: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:19:23: error: Function expected at
+  volume
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e
+
+Hint: The identifier `volume` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LowRank.lean:20:2: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  P
+has type `Layers` which does not have the necessary form.
