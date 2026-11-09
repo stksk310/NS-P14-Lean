@@ -1,0 +1,2 @@
+tests/OrdinaryNumerical.lean:6:5: error: unknown namespace `NSP14.Ordinary.Scalarization`
+tests/OrdinaryNumerical.lean:11:2: error(lean.unknownIdentifier): Unknown identifier `row_le_scalar`

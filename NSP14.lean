@@ -6,3 +6,6 @@ public import NSP14.Ordinary.Resources
 public import NSP14.Ordinary.LowRank
 public import NSP14.Ordinary.LargeSeed
 public import NSP14.Ordinary.LargeScalar
+public import NSP14.Ordinary.Scalarization
+public import NSP14.Ordinary.TargetMargin
+public import NSP14.Ordinary.NumericalClosure

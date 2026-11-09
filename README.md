@@ -4,6 +4,23 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 07
+
+Three proof units now form one numerical ordinary comparison:
+all-row scalarization, the explicit target margin, and closure for every
+cut rank `r >= 2` and every row `1 <= k <= r`.
+The target margin uses a short first-difference argument, recorded for the paper.
+`NumericalClosure.Data.all_rows` consumes one common finite resource profile
+and the small maximal-cut boundary witness.
+Actual tower, Tor and Betti constructions remain separate work.
+
+```sh
+python3 scripts/verify_block07.py
+```
+
+[Scope, inputs and reproduction](verification/block07/README_JA.md),
+[verification](verification/block07/verification.json).
+
 ## Lean implementation — Block 06
 
 [LargeScalar.lean](NSP14/Ordinary/LargeScalar.lean) extends the large-rank

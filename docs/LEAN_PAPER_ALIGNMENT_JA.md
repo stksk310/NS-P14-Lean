@@ -120,6 +120,61 @@ Block03の同じ資源列のSO3上界と合わせてF_r<δ(V+1)を得る。
 - 最終原稿：大rank枝では(S24)のF₀/F₁分岐を上の一式にし、(S30)の整数二項係数の評価を
   上の正二次式へ置換できる。actual資源列・Tor・Bettiへの橋は引き続き別に証明する。
 
+## A07：全行scalar化の係数を明示（Block07内部単位1）
+
+- 原稿：V02 (7.3), (10.1)、V03 O_SCALAR。
+- Lean：`Scalarization.choose_balance`、`head_weight_eq`、`normalized_tail_le`、`row_le_scalar`。
+- 結論：r≥4、1≤k≤rで、同じ非負有限層の第k行はC=choose(r−1,k−1)倍の第一行scalar以下。
+  top行を含む。
+- 対応：k choose(r−1,k)=(r−k)Cから重みを正規化する。
+  headではW_k(1)=C(r+1)/(k+1)を直接示す。k≥2なら第一行のhead重み以下となる。
+  tailではk≥3を分母比較、k=2を原稿の差の恒等式で処理する。
+- 仮定への影響：数値的な有限層とH₀=δ≥0があればよく、actual Torの意味はまだ入力されていない。
+- 最終原稿：正規化の二項係数関係とheadの上式を一行ずつ加えると、例外処理とtop行の監査が容易になる。
+
+## A08：target余裕をδ方向の差分で短縮（Block07内部単位2）
+
+- 原稿：V02 (8.2)–(8.4)、V03 (O15)–(O16)。
+- Lean：`TargetMargin.target_zero`、`target_step`、`capacity_step`、`target_margin`。
+- 変更：余裕の完全なVandermonde展開(8.3)を経ず、明示したR_kの差分から必要な(8.4)を直接得る。
+
+### 最終原稿へ移せる代替証明
+
+e,δは非負整数、r≥1、k≥1とする。原稿の式を
+
+R_k(δ)=(e−r+k) choose(δ+r−1,k)+k choose(δ+r−1,k+1)、
+L_k=(e−1) choose(r−1,k)−choose(r−1,k+1)
+
+と書く（係数は整数/有理数の減算。実際の適用ではe≥r+1）。
+隣接二項係数の関係とPascalから
+
+R_k(0)=L_k、
+R_k(δ+1)−R_k(δ)=(e+δ) choose(δ+r−1,k−1)
+≥(e+δ) choose(r−1,k−1)。
+
+δ回足し合わせると
+
+R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
+=δ(V+1) choose(r−1,k−1)。
+
+- 仮定・結論への影響：(8.4)と同じ結論。形式的な二項式評価としてはk≤rを要求せず、δ=0も含む。
+  任意のprofileからtargetのBetti公式を導いたという意味ではない。
+- 最終原稿：(8.3)の正確な余剰Γ_kを別用途に使わないなら、その展開と直後の評価を上の短い証明に置換できる。
+  actual targetの公式とTorからの移行は残す。
+
+## A09：ordinary数値部分の全域を一本に統合（Block07内部単位3）
+
+- 原稿：V03 O_LOW/O_SCALAR/O_SMALL/O_LARGEの数値部分とO_TARGETの余裕。
+- Lean：`NumericalClosure.Data`、`Data.all_rows`、`all_rows_of_apery_pairs`。
+- 入力：同じ有限層、2≤r≤e−1、総量、H₁≤rδ、tail cap。
+  三角数下限とhead capはr≥3のときだけ要求し、rank2のδ=0を許す。
+  r=6..8かつe=r+1の境界でだけSidon証拠または数値Apéry-pairデータを要求する。
+- 出力：1≤k≤rのすべてで L_k+Σ_t W_k(t)H_t≤R_k。
+  rank2/3の直接評価、4..8の自然数シフト、9以上の大rank評価を実際に合成する。
+- 最終原稿：別々に証明した数値評価を一つの「共通資源の数値閉鎖」補題としてまとめられる。
+  actual towerから全入力を同時に作る証明と、c_k≤L_k+ΣWHを与えるTorの証明は別途必要。
+  `Data.relative_rows` は後者を明示した入力として受け取る入口であり、それ自体をactual Tor証明とは数えない。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

@@ -86,3 +86,15 @@ Block03の同じ資源列の上界と合成し、`Resources.scalar_lt_large` が
 一般のr≥4で全行をscalarへ還元する評価、actual資源構成・Tor・target余裕・Betti接続は後続。
 M12・P14全体の完成ではない。検証記録は `verification/block06/`。
 Block01–05のソースとテストは保持する。
+
+## Block07：2026年11月10日（JST）
+
+操作頻度を減らすユーザー指定に従い、全行scalar化・target余裕・数値全域統合を一括実装した。
+新規3ファイル・25定理。`NumericalClosure.Data.all_rows` は共通有限資源と境界証拠から
+全r≥2、1≤k≤rのL_k+重み付き和≤具体的R_kを返す。
+rank2のδ=0、top行、三つの悪い角、非自明な数値Apéry境界証拠まで接続した。
+
+target余裕はVandermondeの完全展開を介さず、δ方向の正確な差分と二項係数の単調性で証明した。
+原稿に移せる証明と全域統合の仮定は対応台帳A07–A09に保存する。
+ordinary側の有限資源を入力とする数値部分の統合であり、actual資源・Tor・BettiやP14全体は未完。
+検証記録は `verification/block07/`。Block01–06のソース・テストを保持する。
