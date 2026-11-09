@@ -1,0 +1,120 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 4.248
+  },
+  {
+    "name": "source",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.571
+  },
+  {
+    "name": "block05",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.95
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.548
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.757
+  },
+  {
+    "name": "block03",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.637
+  },
+  {
+    "name": "block04",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.803
+  },
+  {
+    "name": "domain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.566
+  },
+  {
+    "name": "block02_assumptions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.761
+  },
+  {
+    "name": "large_seed_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block05/LargeSeedChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.388
+  },
+  {
+    "name": "polynomial_rational_checks",
+    "command": [
+      "python3",
+      "audit/block05/check_large_seed.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.544
+  }
+]

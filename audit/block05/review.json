@@ -1,0 +1,221 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_UNIVERSAL_LARGE_RANK_BASE_GAPS",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "542b19ec5ce3f4728ccd314b3598ce09d0b51cb6",
+  "source": "NSP14/Ordinary/LargeSeed.lean",
+  "source_sha256": "7374fa5a96f06d3dcb2abea600bf90e2849ee20766228421be2cb206c54231a4",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block05_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 57,
+    "zip_members_matched": 58,
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_fixed_environment_unchanged_since_block04": true
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 15.777
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.464
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.725
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.403
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.552
+    },
+    {
+      "name": "block03_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.74
+    },
+    {
+      "name": "block04_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.709
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.495
+    },
+    {
+      "name": "block02_assumption_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.59
+    }
+  ],
+  "axioms": {
+    "block05": 22,
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04": 13,
+    "block05_complete_names_checked": true,
+    "all_reports_identical_to_saved_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block05/LargeSeedChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Exact integer rounding 2D=a+2-(a mod 2), for every natural rank.",
+      "At r=9 the coarse increment/barrier comparison has defect -7/240.",
+      "At r=9 thresholdLower-barrier=-1/72, so the rank-nine direct anchor must remain in this proof.",
+      "At r=10 the coarse increment exceeds 2/r by 1/145; the replacement proof must compare directly with the barrier."
+    ],
+    "new_theorem_axiom_report_count": 1,
+    "new_theorem_axioms_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_polynomial_and_rational_checks": {
+    "status": "PASS",
+    "symbolic_polynomial_identities": 2,
+    "barrier_increment_numerator_coefficients_ascending": [
+      -108,
+      -28,
+      -35,
+      -6,
+      1
+    ],
+    "threshold_gap_numerator_coefficients_ascending": [
+      972,
+      -900,
+      111,
+      -148,
+      -5,
+      2
+    ],
+    "floor_and_step_ranks_checked": {
+      "min": 0,
+      "max": 10000,
+      "count": 10001
+    },
+    "positive_seed_ranks_checked": {
+      "min": 9,
+      "max": 128,
+      "count": 120
+    },
+    "barrier_chain_ranks_checked": {
+      "min": 10,
+      "max": 128,
+      "count": 119
+    },
+    "free_cutoff_seed_identity_cases": 30,
+    "anchor_values": {
+      "H23": "444316699/118982864",
+      "B10_minus_H28": "1833472237/80313433200",
+      "rank9_seed": "5845533/7436429",
+      "rank9_coarse_step_defect": "-7/240",
+      "rank9_lower_minus_barrier": "-1/72",
+      "rank10_coarse_increment_minus_2_over_r": "1/145"
+    },
+    "scope": "Polynomial identities are checked by coefficient arithmetic. Rank sweeps are supplementary finite checks; the universal rank proof is Lean induction."
+  },
+  "paper_correspondence": {
+    "paper": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md section 11 S2,S6-S20; V03 O_LARGE/O21",
+    "alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md A05",
+    "status": "VALID_REPLACEMENT_FOR_THE_HARMONIC_BARRIER_PROOF",
+    "replacement": "H(D_next)-H(D) <= (r+2)/(a+3) < B(r+1)-B(r), followed by genuine induction from r=10.",
+    "not_claimed": "The original sharper intermediate harmonic increment <2/r is not obtained from this coarse estimate.",
+    "same_definitions": "Integer cutoff, harmonic indexing, barrier B, thresholds T and T1, and existing SmallScalar.gap are preserved.",
+    "remaining_paper_work": "Reflect the accepted local replacement in the final paper and complete final Lean/paper alignment; historical snapshots are unchanged."
+  },
+  "proved_scope": {
+    "harmonic_barrier": "For every natural r>=10, H_(largeCutoff r)<barrier r, by induction.",
+    "base_gap": "For every natural r>=9, gap r (largeCutoff r) 10 (triangular r)>0.",
+    "base_coordinate": "e=10 is a rational-function evaluation coordinate; no actual source of embedding dimension 10 at r>9 is asserted.",
+    "small_scalar_seed_coordinate": "SmallScalar.seed uses e=r+1; Block05 uses e=10. The subsequent extension must keep these base coordinates distinct."
+  },
+  "unverified_remaining": [
+    "Positive e-direction coefficients and deficit-direction differences.",
+    "Extension from e=10,d=a_r to arbitrary e>=10,d>=a_r and large-rank composition with Block03 resources.",
+    "Actual common tower, its resource bounds and actual parameters.",
+    "Actual Koszul/Tor row bounds, target margins and Betti transfer.",
+    "Full O_LARGE, M12/P14 and final paper alignment."
+  ]
+}

@@ -1,0 +1,12 @@
+✔ [2530/2552] Built Mathlib.Tactic.FieldSimp.Attr (564ms)
+✔ [2532/2552] Built Mathlib.Util.DischargerAsTactic (616ms)
+✔ [2534/2552] Built Mathlib.Tactic.FieldSimp.Discharger (2.3s)
+✔ [2536/2552] Built Mathlib.Tactic.FieldSimp.Lemmas (3.1s)
+✔ [2538/2552] Built NSP14.Ordinary.SmallScalar (3.3s)
+✔ [2540/2552] Built NSP14.Combinatorics.Sidon (1.7s)
+✔ [2542/2552] Built NSP14.Ordinary.Resources (2.0s)
+✔ [2544/2552] Built NSP14.Ordinary.LowRank (2.5s)
+✔ [2546/2552] Built Mathlib.Tactic.FieldSimp (7.5s)
+✔ [2548/2552] Built NSP14.Ordinary.LargeSeed (1.0s)
+✔ [2550/2552] Built NSP14 (850ms)
+Build completed successfully (2552 jobs).

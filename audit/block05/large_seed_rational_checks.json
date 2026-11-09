@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "symbolic_polynomial_identities": 2,
+  "barrier_increment_numerator_coefficients_ascending": [
+    -108,
+    -28,
+    -35,
+    -6,
+    1
+  ],
+  "threshold_gap_numerator_coefficients_ascending": [
+    972,
+    -900,
+    111,
+    -148,
+    -5,
+    2
+  ],
+  "floor_and_step_ranks_checked": {
+    "min": 0,
+    "max": 10000,
+    "count": 10001
+  },
+  "positive_seed_ranks_checked": {
+    "min": 9,
+    "max": 128,
+    "count": 120
+  },
+  "barrier_chain_ranks_checked": {
+    "min": 10,
+    "max": 128,
+    "count": 119
+  },
+  "free_cutoff_seed_identity_cases": 30,
+  "anchor_values": {
+    "H23": "444316699/118982864",
+    "B10_minus_H28": "1833472237/80313433200",
+    "rank9_seed": "5845533/7436429",
+    "rank9_coarse_step_defect": "-7/240",
+    "rank9_lower_minus_barrier": "-1/72",
+    "rank10_coarse_increment_minus_2_over_r": "1/145"
+  },
+  "scope": "Polynomial identities are checked by coefficient arithmetic. Rank sweeps are supplementary finite checks; the universal rank proof is Lean induction."
+}
