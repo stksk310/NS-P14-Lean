@@ -1,0 +1,45 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 192.053
+  },
+  {
+    "name": "source_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Combinatorics/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.906
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.611
+  },
+  {
+    "name": "block01_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.47
+  }
+]

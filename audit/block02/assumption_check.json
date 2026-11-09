@@ -1,0 +1,19 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "audit/block02/AssumptionChecks.lean"
+  ],
+  "exit_code": 0,
+  "seconds": 1.717,
+  "warning_count": 0,
+  "checks": [
+    "Explicit nontrivial AperyPairData for S=<3,4>, modulus 3, values 0 and 4; all repeated pair sums are minima.",
+    "The datum produces a two-point Sidon set and sharp multiplicity/deficit bounds.",
+    "Singleton Sidon set at modulus 1.",
+    "Nat triangular division agrees with rational triangular for ranks 4..8.",
+    "Dropping pair_min permits a mod-2 counterexample.",
+    "Dropping pair_unique permits a mod-5 counterexample."
+  ]
+}

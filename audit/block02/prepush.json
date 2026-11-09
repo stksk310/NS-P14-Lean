@@ -1,0 +1,56 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 3.009
+  },
+  {
+    "name": "source",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Combinatorics/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.831
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.536
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.392
+  },
+  {
+    "name": "assumptions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.68
+  }
+]
