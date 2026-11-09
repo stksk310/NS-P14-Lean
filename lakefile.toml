@@ -1,0 +1,11 @@
+name = "ns-p14"
+version = "0.1.0"
+defaultTargets = ["NSP14"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "139105d28c7685a154cb3093f79edb2e16708099"
+
+[[lean_lib]]
+name = "NSP14"

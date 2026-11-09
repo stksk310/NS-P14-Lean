@@ -1,0 +1,84 @@
+{
+  "status": "PASS_COMPILED_BLOCK02",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.378
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Combinatorics/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.132
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.869
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.832
+    }
+  ],
+  "block02_axiom_reports": 14,
+  "block01_regression_axiom_reports": 10,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "block01_proof_source_unchanged": true,
+  "scope": "Finite Sidon counting, numerical Apéry-pair witness bridge, scalar integration. No construction from maximal algebraic Q2 yet.",
+  "date_jst": "2026-11-09",
+  "lean_version": "4.36.0-rc2",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "source": "NSP14/Combinatorics/Sidon.lean",
+  "universal_theorems": 14,
+  "completed": [
+    "Sidon ordered-difference injection in additive commutative groups",
+    "e(e-1)<=m-1 for ZMod m, m positive, with no primality assumption",
+    "actual numeric residue-minimum uniqueness",
+    "AperyPairData to injective Sidon residue set",
+    "multiplicity and deficit lower bounds",
+    "all three bad corners excluded from Sidon data",
+    "boundary-only Sidon requirement and Block01 integration"
+  ],
+  "remaining": [
+    "construction of actual tangent cone and Q=A/N",
+    "maximal Q2 implies AperyPairData with e equal to embedding dimension",
+    "SO3 resource upper bound",
+    "Tor/Betti semantics and full P14"
+  ],
+  "corner_witness_scope": "Only r>=6 and s=0; no witness for interior s!=0 or low ranks4/5.",
+  "example_checks": [
+    "sharp ZMod7 set",
+    "composite ZMod8 set",
+    "ZMod2 repeated-summand counterexample",
+    "universal impossibility at (m,e)=(28,7),(36,8),(45,9)",
+    "interior scalar without Sidon witness"
+  ],
+  "umbrella_change": "NSP14.lean adds a public import; Block01 proof source remains unchanged.",
+  "full_actual_apery_sidon_claimed": false,
+  "full_P14_claimed": false
+}
