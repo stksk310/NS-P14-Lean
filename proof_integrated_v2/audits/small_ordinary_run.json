@@ -1,0 +1,82 @@
+{
+  "status": "EXACT_83_MAXIMAL_FIRST_HIT_PROFILES_AND_FIVE_TAIL_ANCHORS_PAID",
+  "scope": "e=5,...,9 and m>=e+10, ordinary target; final first-hit maximum is proved on paper.",
+  "profile_count": 83,
+  "scalar_comparisons": 665,
+  "profiles_by_e": {
+    "5": 1,
+    "6": 8,
+    "7": 15,
+    "8": 24,
+    "9": 35
+  },
+  "raw_shortfalls": 0,
+  "minimum_scalar_margin": {
+    "e": 5,
+    "m": 15,
+    "rho": 14,
+    "row": 1,
+    "raw": 38,
+    "capacity": 105,
+    "margin": 67
+  },
+  "profile_sha256": "e10afc786ae3d55a1d35e65533696792ebf4ff4daea18c61806594623d09c65a",
+  "tail_anchors": [
+    {
+      "e": 5,
+      "start_m": 16,
+      "first_row_gap": "28529/45045",
+      "first_row_forward_difference": "986861/180180",
+      "first_row_second_difference_at_start": "13/17",
+      "second_row_gap": "114",
+      "second_row_forward_difference": "94",
+      "second_row_second_difference": "22",
+      "second_row_third_difference": "2"
+    },
+    {
+      "e": 6,
+      "start_m": 24,
+      "first_row_gap": "87527047/14872858",
+      "first_row_forward_difference": "3076971505/356948592",
+      "first_row_second_difference_at_start": "4/5",
+      "second_row_gap": "343",
+      "second_row_forward_difference": "212",
+      "second_row_second_difference": "33",
+      "second_row_third_difference": "2"
+    },
+    {
+      "e": 7,
+      "start_m": 32,
+      "first_row_gap": "13190245423022/1504203675975",
+      "first_row_forward_difference": "280360191738961/24067258815600",
+      "first_row_second_difference_at_start": "9/11",
+      "second_row_gap": "305",
+      "second_row_forward_difference": "347",
+      "second_row_second_difference": "43",
+      "second_row_third_difference": "2"
+    },
+    {
+      "e": 8,
+      "start_m": 42,
+      "first_row_gap": "17040044863244869/474156254847600",
+      "first_row_forward_difference": "46124404177135267/2844937529085600",
+      "first_row_second_difference_at_start": "36/43",
+      "second_row_gap": "238",
+      "second_row_forward_difference": "581",
+      "second_row_second_difference": "56",
+      "second_row_third_difference": "2"
+    },
+    {
+      "e": 9,
+      "start_m": 54,
+      "first_row_gap": "42360392440805889237573/380206848900550521850",
+      "first_row_forward_difference": "153275837511203454076291/6843723280209909393300",
+      "first_row_second_difference_at_start": "47/55",
+      "second_row_gap": "360",
+      "second_row_forward_difference": "962",
+      "second_row_second_difference": "72",
+      "second_row_third_difference": "2"
+    }
+  ],
+  "scope_note": "No MED, D1, D2, legacy graph, or historical approval is used. This is exact arithmetic, not Lean verification."
+}

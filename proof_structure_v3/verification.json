@@ -1,0 +1,113 @@
+{
+  "date_utc": "2026-11-09",
+  "status": "CANONICAL_PROOF_ARCHITECTURE_V03_FROZEN",
+  "required_outputs": [
+    "P14_PROOF_SKELETON_V03_JA.md",
+    "P14_DEPENDENCY_MAP_V03.md",
+    "P14_PROOF_REPLACEMENT_LEDGER_V03.md",
+    "P14_REFEREE_READINESS_V03.md"
+  ],
+  "architecture": {
+    "parts": 6,
+    "lemma_and_input_nodes": 50,
+    "direct_edges": 128,
+    "acyclic": true,
+    "all_nodes_reachable_from_main": true,
+    "ordinary_route": "same-cut Apéry tower -> harmonic/Tor -> ranks2/3, small scalar+actual Sidon, large ranks>=9",
+    "narrow_route": "actual-kernel endpoint transfer -> e>=5 width structure, N4 paper first row+retained high rows+all-m width4"
+  },
+  "excluded_main_dependencies": {
+    "old_section15": true,
+    "n4_196_offset_certificate": true,
+    "ordinary_83_profiles_665_comparisons": true,
+    "five_old_ordinary_tails": true,
+    "Navi_lex_alternative": true
+  },
+  "retained_inputs": [
+    "Green",
+    "BHP/EK in dense narrow range",
+    "Kneser",
+    "arithmetic-sequence Betti formula",
+    "arithmetic-sequence tangent-cone Betti agreement",
+    "Lan–Tu–Vu",
+    "Savchev–Chen",
+    "standard Koszul/Tor/Gröbner algebra",
+    "small rational arithmetic and paper case splits"
+  ],
+  "fresh_targeted_checks": [
+    {
+      "command": "python3 -B auditability_search/ordinary/verify_ordinary_reduction.py",
+      "runs_this_task": 1,
+      "exit_code": 0,
+      "record": "audits/SMALL_SCALAR_RUN.json"
+    },
+    {
+      "command": "python3 -B proof_integrated_v2/checks/verify_scalar.py",
+      "runs_this_task": 1,
+      "exit_code": 0,
+      "record": "audits/LARGE_SCALAR_RUN.json",
+      "note": "Oldr4..8 seeds and351diagnostics remain optional checker outputs, not main proof premises."
+    },
+    {
+      "command": "python3 -B proof_integrated_v2/checks/verify_width.py",
+      "runs_this_task": 1,
+      "exit_code": 0,
+      "record": "audits/WIDTH_ARITHMETIC_RUN.json"
+    },
+    {
+      "command": "python3 -B proof_structure_v3/checks/build_and_check_structure.py",
+      "exit_code": 0,
+      "record": "audits/STRUCTURE_CHECK.json",
+      "note": "Rerun only after architecture edits; no mathematical searches."
+    }
+  ],
+  "source_identity": {
+    "preserved_packages": 4,
+    "preserved_members": 48,
+    "hash_mismatches": []
+  },
+  "reference_checks": {
+    "explicit_source_equation_labels": 164,
+    "descriptive_source_pointers_requiring_human_reading": 57,
+    "required_output_local_links": 144,
+    "duplicate_skeleton_tags": [],
+    "all17_V02_sections_mapped_exactly_once": true,
+    "five_row_table_in_skeleton_matches_fresh_arithmetic": true
+  },
+  "independent_architecture_review": {
+    "file": "audits/INDEPENDENT_ARCHITECTURE_REVIEW.md",
+    "verdict": "PASS_FOR_ARCHITECTURE_FREEZE",
+    "findings_resolved": 5,
+    "open_findings": 0,
+    "scope": "Internal independent architecture audit; retained proofs and public inputs are not newly re-proven."
+  },
+  "metrics": {
+    "P14_PROOF_SKELETON_V03_JA.md": {
+      "lines": 1243,
+      "bytes": 74602,
+      "sha256": "2179a2a674e9b66d66a27089552e8efb1306650fbee07abfc62f5cdd78ef4ad5"
+    },
+    "P14_DEPENDENCY_MAP_V03.md": {
+      "lines": 886,
+      "bytes": 108061,
+      "sha256": "e8997b2916ca927206b5aaebfe0c745f74472dbd8d1ada5f662a35c39d3e89d6"
+    },
+    "P14_PROOF_REPLACEMENT_LEDGER_V03.md": {
+      "lines": 103,
+      "bytes": 12887,
+      "sha256": "4d78e78079863132ac091662b2343ba802b5a418019e90200d7e484f299428d3"
+    },
+    "P14_REFEREE_READINESS_V03.md": {
+      "lines": 221,
+      "bytes": 20121,
+      "sha256": "186e5e5c09c01efc01602ebded23ce331353d165a72c56bd1bec36b577e1ed6b"
+    }
+  },
+  "scope_limits": {
+    "full_new_manuscript": "NOT_CREATED",
+    "external_mathematical_peer_review": "NOT_CLAIMED",
+    "Lean_kernel_verification": "NOT_PERFORMED",
+    "source_proof_files_modified": false,
+    "remaining_work": "External specialist review of public inputs/common foundations; later full manuscript integration; substantive Lean formalization."
+  }
+}

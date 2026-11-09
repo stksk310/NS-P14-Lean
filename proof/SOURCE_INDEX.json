@@ -1,0 +1,146 @@
+{
+  "uploaded_archive": "NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109.zip",
+  "files": [
+    {
+      "file": "sources/R39/R39_MAIN_THEOREM.md",
+      "role": "R39",
+      "original_member": "R39_MAIN_THEOREM.md",
+      "sha256": "81b3bc9b1befe8cda111bfe00e3542b7c5c13b0aba805f4d52574d14f813d3d9",
+      "archive_sha256": "801f9fecee068f9b32d20295f6eea476076d9ab402a79bd5be37b70aaac61af8"
+    },
+    {
+      "file": "sources/R39/R39_ELEVEN_GENERATOR_PROOF.md",
+      "role": "R39",
+      "original_member": "R39_ELEVEN_GENERATOR_PROOF.md",
+      "sha256": "f22e55be0d4ef60dcad6f64638fa5b0e1c38dd8cc9661dc8fb4e5724b9435458",
+      "archive_sha256": "801f9fecee068f9b32d20295f6eea476076d9ab402a79bd5be37b70aaac61af8"
+    },
+    {
+      "file": "sources/R39/R39_TWELVE_VARIABLE_LEX_PROOF.md",
+      "role": "R39",
+      "original_member": "lanes/lex/twelve/R39_TWELVE_VARIABLE_LEX_PROOF.md",
+      "sha256": "11fb7724c642b12997eac3f6de87c92a46be047b5c563cc2de25cdc6bccfb8bb",
+      "archive_sha256": "801f9fecee068f9b32d20295f6eea476076d9ab402a79bd5be37b70aaac61af8"
+    },
+    {
+      "file": "sources/R39/R39_ACTUAL_SOURCE_CORE_TRANSFER.md",
+      "role": "R39",
+      "original_member": "lanes/core/R39_ACTUAL_SOURCE_CORE_TRANSFER.md",
+      "sha256": "6c441989966c18472fbfba8dee2f1736db2f3b27dc355cc317804738c6124a55",
+      "archive_sha256": "801f9fecee068f9b32d20295f6eea476076d9ab402a79bd5be37b70aaac61af8"
+    },
+    {
+      "file": "sources/R39/R39_UNIVERSAL_WIDTH_TAIL.md",
+      "role": "R39",
+      "original_member": "lanes/core/R39_UNIVERSAL_WIDTH_TAIL.md",
+      "sha256": "fd49ed71885d5d7b3a19fea9c0605e3d0bd98b6b7b3255b1aedaf1d79dc97230",
+      "archive_sha256": "801f9fecee068f9b32d20295f6eea476076d9ab402a79bd5be37b70aaac61af8"
+    },
+    {
+      "file": "sources/R40/R40_UNIVERSAL_WIDTH_ALL.md",
+      "role": "R40",
+      "original_member": "lanes/width/R40_UNIVERSAL_WIDTH_ALL.md",
+      "sha256": "5f02080d6e03fe28b5ee1528e4bbf7578d02bbc5df5e8c78ba6ab37092654c54",
+      "archive_sha256": "b4c8bd623ffe0f5d01c281c6823723a6a7a9a9560dede21d3d96be3e250d4a30"
+    },
+    {
+      "file": "sources/R40/R40_UNIVERSAL_ONE_GAP.md",
+      "role": "R40",
+      "original_member": "lanes/width/R40_UNIVERSAL_ONE_GAP.md",
+      "sha256": "b58b53fadbfed24d4ae163b3731957fec7c6f9556cae45f6b6c412fe241ccdd0",
+      "archive_sha256": "b4c8bd623ffe0f5d01c281c6823723a6a7a9a9560dede21d3d96be3e250d4a30"
+    },
+    {
+      "file": "sources/R55/MICROINVARIANT_DENSE_TORSION_THEOREM.md",
+      "role": "R55",
+      "original_member": "R55_ORIGINAL_PROOFS/global_alternative/MICROINVARIANT_DENSE_TORSION_THEOREM.md",
+      "sha256": "014abe7e7de4ddee499d6b5249e7bdbc98370559752a07b2d7a689a23d6be11a",
+      "archive_sha256": "9081b2a8a7f5d8da791ef329a8cad3e43271a72f6e87b1b992e0420b9248e055"
+    },
+    {
+      "file": "sources/core/14_R54_RELATIVE_SQUARE_ZERO_KOSZUL_RANK_GATE.md",
+      "handoff_member": "03_CANONICAL_PROOF/14_R54_RELATIVE_SQUARE_ZERO_KOSZUL_RANK_GATE.md",
+      "sha256": "943725d550b9176fbf6bb98575bd247ac503a1da3db6ec8fb706f9d79babde9d",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/15_R55_APERY_QUOTIENT_SOCLE_TORSION_FUSION.md",
+      "handoff_member": "03_CANONICAL_PROOF/15_R55_APERY_QUOTIENT_SOCLE_TORSION_FUSION.md",
+      "sha256": "3b632d516135a20a5b3763b9e6d89267ad6aa542b664422e4e896bfb1f594b85",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/16_R55_OPPOSITE_JUMP_FILTRATIONS_AND_COMMON_STRATA.md",
+      "handoff_member": "03_CANONICAL_PROOF/16_R55_OPPOSITE_JUMP_FILTRATIONS_AND_COMMON_STRATA.md",
+      "sha256": "de9a979865156e1092e0fc92d329db0073732d2f5db745914632b829366b1a26",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/17_R55_APERY_REGULARITY_BOUNDS_EVERY_TERMINAL_JUMP.md",
+      "handoff_member": "03_CANONICAL_PROOF/17_R55_APERY_REGULARITY_BOUNDS_EVERY_TERMINAL_JUMP.md",
+      "sha256": "91182e5e445620d64e6b6ced111b98d3d0861340392b64dce75ddf8d537baa2d",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/18_R55_ARBITRARY_JUMP_TOWER_TELESCOPING_R2_PAYMENT.md",
+      "handoff_member": "03_CANONICAL_PROOF/18_R55_ARBITRARY_JUMP_TOWER_TELESCOPING_R2_PAYMENT.md",
+      "sha256": "54e277920df29aaa6712dcf8a01051f8fc915d1dc422522917638aa14ca3946f",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/19_R55_ARBITRARY_STEERING_TOWER_RANK_TRANSFER.md",
+      "handoff_member": "03_CANONICAL_PROOF/19_R55_ARBITRARY_STEERING_TOWER_RANK_TRANSFER.md",
+      "sha256": "e660408f92413c075235574683d7529224f40b24a399be90977e40353a81d689",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/21_R56_WEIGHTED_JUMP_VOLUME_AND_R3_FIRST_RANK.md",
+      "handoff_member": "03_CANONICAL_PROOF/21_R56_WEIGHTED_JUMP_VOLUME_AND_R3_FIRST_RANK.md",
+      "sha256": "ea4f37b61e829f6a6e44a2c235bf809afb8dcb8947a5d3e68fc5389343163392",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/22_R56_HIGHER_HARMONIC_MODULES_AND_GATE_REVIEW.md",
+      "handoff_member": "03_CANONICAL_PROOF/22_R56_HIGHER_HARMONIC_MODULES_AND_GATE_REVIEW.md",
+      "sha256": "94d8deb1cc50c221ce34adcec51ab28c8676246974e13f0b8f665669cbbbf1a0",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/24_R56_GENERIC_LINEAR_STEERING_AND_DEFECT20_CLOSURE.md",
+      "handoff_member": "03_CANONICAL_PROOF/24_R56_GENERIC_LINEAR_STEERING_AND_DEFECT20_CLOSURE.md",
+      "sha256": "80046bb971b107ac831bd9c491c023cc4d69551059c65274d003df2b9137a426",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/26_R56_HARMONIC_FIRST_GATE_PAYS_ALL_RELATIVE_RANKS.md",
+      "handoff_member": "03_CANONICAL_PROOF/26_R56_HARMONIC_FIRST_GATE_PAYS_ALL_RELATIVE_RANKS.md",
+      "sha256": "19622554efcd15803a64fe20fc32600f18afdc26d2a8b7960f4dd8fe99fa53a7",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/RESIDUE_DISJOINT_TOWER_OCCUPANCY.md",
+      "handoff_member": "07_REPRODUCIBLE_CHECKERS/R57/birth/RESIDUE_DISJOINT_TOWER_OCCUPANCY.md",
+      "sha256": "bbbfa56501ce609f548aa412e2629be7a8fc7f02d3f01f51144b2a77242321b2",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/FIXED_DELTA_SCALAR_GLOBAL_PAYMENT.md",
+      "handoff_member": "07_REPRODUCIBLE_CHECKERS/R57/adaptive/FIXED_DELTA_SCALAR_GLOBAL_PAYMENT.md",
+      "sha256": "59fa9358cf338e8acd3be3e6f59bc4f744e294de97f3911a44bb3fefd1be737c",
+      "original_object_in_index": true
+    },
+    {
+      "file": "sources/core/ERRATA_AND_SCOPE_NOTES.md",
+      "handoff_member": "03_CANONICAL_PROOF/ERRATA_AND_SCOPE_NOTES.md",
+      "sha256": "b615148b15fb0d1163fe7783877a785efc15773dcf7087d7289bb99ea61acd03",
+      "original_object_in_index": false
+    },
+    {
+      "file": "sources/core/EXTERNAL_STANDARD_INPUTS.md",
+      "handoff_member": "09_AUDIT_AND_PROVENANCE/EXTERNAL_STANDARD_INPUTS.md",
+      "sha256": "95025dd0cc1dffb9ac4120695f8609fa00eabf5adfe9c1befdd006bb76e4da15",
+      "original_object_in_index": false
+    }
+  ],
+  "scope": "Selected literal sources only. Transitive boundary dependencies remain in the uploaded archive; selection is not a complete independent verification."
+}

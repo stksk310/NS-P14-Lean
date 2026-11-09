@@ -1,0 +1,40 @@
+{
+  "date_jst": "2026-11-09",
+  "status": "LEAN_FORMALIZATION_PLAN_R01_COMPLETE",
+  "main": "P14_LEAN_FORMALIZATION_PLAN_JA.md",
+  "detailed_modules": "P14_LEAN_MODULE_CATALOGUE_JA.md",
+  "library_audit": "P14_LEAN_LIBRARY_AUDIT.md",
+  "module_count": 18,
+  "paper_items_covered": 50,
+  "published_inputs": 7,
+  "dependency_graph_acyclic": true,
+  "effort_person_days_including_setup": [
+    920,
+    2625
+  ],
+  "unit": "One experienced Lean mathematician + AI, about six focused hours per person-day. Pre-pilot judgments; not AI wall-clock time or committed delivery dates.",
+  "initial_calibration_person_days": [
+    10,
+    20
+  ],
+  "pilot_budget_counted_inside_modules": true,
+  "library_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "inspected_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "compile_or_application_verified": false,
+  "diagram_visually_inspected": true,
+  "fresh_root_check": {
+    "command": "python3 -B lean_planning/checks/check_plan.py",
+    "exit_code": 0,
+    "result": "PASS_PLAN_COVERAGE_AND_ACCOUNTING",
+    "counts": {
+      "registry_quotient_edges": 33,
+      "combined_interface_edges": 65
+    }
+  },
+  "independent_review": "audits/PLAN_REVIEW.md",
+  "review_scope": "Plan coverage, semantic obligations, accounting, references and explicit uncertainty. Does not certify effort forecasts or any Lean proof.",
+  "Lean_installed": false,
+  "Lean_implementation_created": false,
+  "Lean_compilation_attempted": false,
+  "mathematical_proof_sources_modified": false
+}

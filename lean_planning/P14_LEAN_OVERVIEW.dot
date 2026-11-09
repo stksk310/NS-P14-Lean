@@ -1,0 +1,60 @@
+digraph P14Lean {
+  graph [
+    rankdir=TB, bgcolor="#f8fafc", pad=0.35, nodesep=0.35, ranksep=0.55,
+    fontname="Noto Sans CJK JP", fontsize=21,
+    labelloc=t, label="P14 Lean化：全体図\n18モジュール／50項目を、共通基盤＋並行トラックへ"
+  ];
+  node [
+    shape=box, style="rounded,filled", color="#cbd5e1", penwidth=1.2,
+    fontname="Noto Sans CJK JP", fontsize=14, margin="0.23,0.17",
+    fillcolor="white", fontcolor="#0f172a"
+  ];
+  edge [color="#64748b", penwidth=1.5, arrowsize=0.7];
+
+  core [
+    label="共通基盤  M01–M04\n数値半群・actual接錐・最小表示\nKoszul／Betti・Gröbner",
+    fillcolor="#dbeafe", color="#60a5fa"
+  ];
+  early [
+    label="先行できる局所補題\n5行の有理算術・Sidonの差単射\n整数不等式・downset計数",
+    fillcolor="#fef3c7", color="#fbbf24"
+  ];
+  published [
+    label="公刊入力  M05–M09\n算術列・三生成元・Kneser／SC\nGreen・BHP／EK",
+    fillcolor="#ede9fe", color="#a78bfa"
+  ];
+  ordinary [
+    label="ordinary  M10–M12\n同じcutの塔 → Tor接続\nscalar／Sidon → 全行",
+    fillcolor="#ccfbf1", color="#2dd4bf"
+  ];
+  endpoint [
+    label="端点  M13–M14\n全競合 → actual核\ncarry相殺 → Betti移行",
+    fillcolor="#ccfbf1", color="#2dd4bf"
+  ];
+  narrow [
+    label="幅側・N4  M15–M17\n全幅・全高次行\n幅4の全multiplicity",
+    fillcolor="#dcfce7", color="#4ade80"
+  ];
+  main [
+    label="M18：完全なP14\n全数値半群 × 任意体 × 全Betti行\n意味の接続・公刊入力を含めて依存を閉じる",
+    fillcolor="#0f172a", color="#0f172a", fontcolor="white", fontsize=15
+  ];
+  note [
+    label="矢印＝前提の供給。破線＝先行可能な局所補題。\n計画段階：Lean実装・コンパイルは未実施。\n外部定理を仮定する中間成果と、完全P14を区別する。",
+    shape=plaintext, fillcolor="#f8fafc", fontsize=11, fontcolor="#475569"
+  ];
+  {rank=same; early; core;}
+  {rank=same; published; ordinary; endpoint;}
+  early -> ordinary [style=dashed, color="#d97706"];
+  early -> narrow [style=dashed, color="#d97706"];
+  core -> published;
+  core -> ordinary;
+  core -> endpoint;
+  published -> ordinary [constraint=false, color="#8b5cf6"];
+  published -> narrow [color="#8b5cf6"];
+  endpoint -> narrow;
+  published -> main [color="#8b5cf6"];
+  ordinary -> main;
+  narrow -> main;
+  main -> note [style=invis];
+}

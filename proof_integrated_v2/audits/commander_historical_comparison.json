@@ -1,0 +1,18 @@
+{
+  "historical_pairs_checked": 13921,
+  "exact_new_old_overlap_checked": 196,
+  "maximum_core_length": 288,
+  "coarse_first_row_exceptions": [
+    [
+      3,
+      1,
+      2
+    ],
+    [
+      4,
+      1,
+      3
+    ]
+  ],
+  "result": "PASS"
+}

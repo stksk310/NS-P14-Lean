@@ -1,0 +1,851 @@
+{
+  "schema_version": 1,
+  "audit_date_utc": "2026-11-09T12:33:47.904462+00:00",
+  "repository": "https://github.com/leanprover-community/mathlib4",
+  "commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "commit_date_utc": "2026-11-09T10:33:51Z",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "source_lean_file_count": 8691,
+  "source_checkout": "/tmp/ns-p14-mathlib-audit",
+  "method": "Pinned public source checkout; global filename/keyword searches plus reading representative definitions, statements and proof bodies. Source-level audit only.",
+  "compilation": {
+    "attempted": false,
+    "reason": "lean, lake, elan unavailable; PLANONLY: no installation or project implementation authorized"
+  },
+  "limitations": [
+    "Not a full semantic audit of mathlib.",
+    "Verified means declaration and representative source body inspected, not locally elaborated.",
+    "No topic is labelled definitely absent based on keyword search.",
+    "No inferred project theorem is claimed imported or proved."
+  ],
+  "topics": [
+    {
+      "id": "NS",
+      "topic": "Numerical semigroups, finite generation, cofiniteness, Apéry",
+      "status": "foundations_verified_exact_apery_api_not_found",
+      "evidence": [
+        {
+          "path": "Mathlib/NumberTheory/FrobeniusNumber.lean",
+          "declaration": "FrobeniusNumber",
+          "line": 48,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/NumberTheory/FrobeniusNumber.lean#L48",
+          "source_excerpt": "def FrobeniusNumber (n : ℕ) (s : Set ℕ) : Prop :=\n  IsGreatest { k | k ∉ AddSubmonoid.closure s } n\n\ntheorem frobeniusNumber_iff {n : ℕ} {s : Set ℕ} :\n    FrobeniusNumber n s ↔ n ∉ AddSubmonoid.closure s ∧ ∀ k > n, k ∈ AddSubmonoid.closure s := by",
+          "file_sha256": "c5b7c4739be1e48b673cfb38b946165941cfa83a91f3f4dc6dff72978c11e74b"
+        },
+        {
+          "path": "Mathlib/NumberTheory/FrobeniusNumber.lean",
+          "declaration": "Nat.exists_mem_closure_of_ge",
+          "line": 171,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/NumberTheory/FrobeniusNumber.lean#L171",
+          "source_excerpt": "theorem exists_mem_closure_of_ge : ∃ n, ∀ m ≥ n, setGcd s ∣ m → m ∈ AddSubmonoid.closure s :=\n  have ⟨_t, n, hts, hn⟩ := exists_mem_span_nat_finset_of_ge s\n  ⟨n, fun m ge dvd ↦ (Submodule.span_nat_eq_addSubmonoidClosure s).le\n    (Submodule.span_mono hts (hn m ge dvd))⟩\n",
+          "file_sha256": "c5b7c4739be1e48b673cfb38b946165941cfa83a91f3f4dc6dff72978c11e74b"
+        },
+        {
+          "path": "Mathlib/NumberTheory/FrobeniusNumber.lean",
+          "declaration": "Nat.addSubmonoid_fg",
+          "line": 196,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/NumberTheory/FrobeniusNumber.lean#L196",
+          "source_excerpt": "theorem addSubmonoid_fg (s : AddSubmonoid ℕ) : s.FG := by\n  rw [← s.toNatSubmodule_toAddSubmonoid, ← Submodule.fg_iff_addSubmonoid_fg]\n  apply IsNoetherian.noetherian\n\nend Nat",
+          "file_sha256": "c5b7c4739be1e48b673cfb38b946165941cfa83a91f3f4dc6dff72978c11e74b"
+        },
+        {
+          "path": "Mathlib/NumberTheory/FrobeniusNumber.lean",
+          "declaration": "exists_frobeniusNumber_iff",
+          "line": 208,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/NumberTheory/FrobeniusNumber.lean#L208",
+          "source_excerpt": "theorem exists_frobeniusNumber_iff {s : Set ℕ} :\n    (∃ n, FrobeniusNumber n s) ↔ setGcd s = 1 ∧ 1 ∉ s where\n  mp := fun ⟨n, hn⟩ ↦ by\n    rw [frobeniusNumber_iff] at hn\n    exact ⟨dvd_one.mp <| Nat.dvd_add_iff_right (setGcd_dvd_of_mem_closure (hn.2 (n + 1)",
+          "file_sha256": "c5b7c4739be1e48b673cfb38b946165941cfa83a91f3f4dc6dff72978c11e74b"
+        }
+      ],
+      "verified_reuse": "AddSubmonoid.closure is already used for nonnegative generated semigroups. Eventual membership of gcd multiples and finite generation of every additive submonoid of N are proved. The two-generator Frobenius formula is also in this file.",
+      "unverified_or_new_work": "No exact NumericalSemigroup or Apéry API found by the recorded targeted scans. Need project definitions of multiplicity, atoms/minimal generators, Apéry representatives, longest representation order, and their interface to actual tangent cone.",
+      "planning_implication": "Do not budget gcd/cofiniteness foundations as wholly new; do budget the Apéry/order/atom and actual-quotient bridge as new substantial domain work."
+    },
+    {
+      "id": "SEMIRING",
+      "topic": "Semigroup algebra and power-series/completion foundations",
+      "status": "foundations_verified",
+      "evidence": [
+        {
+          "path": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+          "declaration": "AddMonoidAlgebra",
+          "line": 64,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/MonoidAlgebra/Defs.lean#L64",
+          "source_excerpt": "structure AddMonoidAlgebra (R M : Type*) [Semiring R] where\n  /-- Construct an element of the additive monoid algebra `R[M]`\n  from its coefficients `M →₀ R`. -/\n  ofCoeff ::\n  /-- The coefficients `M →₀ R` of an element of the additive monoid algebra `R[M]`. -/",
+          "file_sha256": "7355b179617e8fd508d6cc2c0018fba08078e36223e7c42c63a9acbfb44a8a80"
+        },
+        {
+          "path": "Mathlib/RingTheory/AdicCompletion/Basic.lean",
+          "declaration": "AdicCompletion",
+          "line": 172,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/AdicCompletion/Basic.lean#L172",
+          "source_excerpt": "def AdicCompletion : Type _ :=\n  { f : ∀ n : ℕ, M ⧸ (I ^ n • ⊤ : Submodule R M) //\n    ∀ {m n} (hmn : m ≤ n), AdicCompletion.transitionMap I M hmn (f n) = f m }\n\nnamespace IsHausdorff",
+          "file_sha256": "1c6a4067c534571fade469b703293536fee018a32a1156fa60a51b5a20d6d03b"
+        }
+      ],
+      "verified_reuse": "Finite-support additive monoid algebras and general ideal-adic completion exist; power-series and Hahn-series directories are present.",
+      "unverified_or_new_work": "No verified ready-made k[[t^Gamma]] construction or identification of its associated graded ring with the paper finite monomial model. Algebraic semigroup ring plus adic completion may be a route, but equivalence has to be proved.",
+      "planning_implication": "Prefer proving the finite monomial tangent model interface once. Replacing the actual ring by a convenient model without an equivalence theorem would weaken the target."
+    },
+    {
+      "id": "FILT",
+      "topic": "Adic filtrations",
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "Mathlib/RingTheory/Filtration.lean",
+          "declaration": "Ideal.Filtration",
+          "line": 52,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Filtration.lean#L52",
+          "source_excerpt": "structure Ideal.Filtration (M : Type*) [AddCommGroup M] [Module R M] where\n  N : ℕ → Submodule R M\n  mono : ∀ i, N (i + 1) ≤ N i\n  smul_le : ∀ i, I • N i ≤ N (i + 1)\n",
+          "file_sha256": "f0ad8e0e7a54028408888370bdcfda812272b090077be753d4872f0bd697641d"
+        },
+        {
+          "path": "Mathlib/RingTheory/Filtration.lean",
+          "declaration": "Ideal.stableFiltration",
+          "line": 178,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Filtration.lean#L178",
+          "source_excerpt": "def _root_.Ideal.stableFiltration (I : Ideal R) (N : Submodule R M) : I.Filtration M where\n  N i := I ^ i • N\n  mono i := by rw [add_comm, pow_add, mul_smul]; exact Submodule.smul_le_right\n  smul_le i := by rw [add_comm, pow_add, mul_smul, pow_one]\n",
+          "file_sha256": "f0ad8e0e7a54028408888370bdcfda812272b090077be753d4872f0bd697641d"
+        },
+        {
+          "path": "Mathlib/RingTheory/Filtration.lean",
+          "declaration": "Ideal.Filtration.submodule_fg_iff_stable",
+          "line": 336,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Filtration.lean#L336",
+          "source_excerpt": "theorem submodule_fg_iff_stable (hF' : ∀ i, (F.N i).FG) : F.submodule.FG ↔ F.Stable := by\n  classical\n  delta Ideal.Filtration.Stable\n  simp_rw [← F.submodule_eq_span_le_iff_stable_ge]\n  constructor",
+          "file_sha256": "f0ad8e0e7a54028408888370bdcfda812272b090077be753d4872f0bd697641d"
+        },
+        {
+          "path": "Mathlib/RingTheory/Filtration.lean",
+          "declaration": "Ideal.exists_pow_inf_eq_pow_smul",
+          "line": 388,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Filtration.lean#L388",
+          "source_excerpt": "theorem Ideal.exists_pow_inf_eq_pow_smul [IsNoetherianRing R] [Module.Finite R M]\n    (N : Submodule R M) : ∃ k : ℕ, ∀ n ≥ k, I ^ n • ⊤ ⊓ N = I ^ (n - k) • (I ^ k • ⊤ ⊓ N) :=\n  ((I.stableFiltration_stable ⊤).inter_right (I.trivialFiltration N)).exists_pow_smul_eq_of_ge\n\ntheorem Ideal.mem_iInf_smul_pow_eq_bot_iff [IsNoetherianRing R] [Module.Finite R M] (x : M) :",
+          "file_sha256": "f0ad8e0e7a54028408888370bdcfda812272b090077be753d4872f0bd697641d"
+        }
+      ],
+      "verified_reuse": "Descending I-filtrations, stable I-filtrations, Rees module finite-generation criterion, and Artin-Rees are implemented.",
+      "unverified_or_new_work": "F.submodule in this file is the direct sum of the N_i embedded in M[X], not the quotient direct sum N_i/N_(i+1). It must not be advertised as an associated graded module implementation.",
+      "planning_implication": "Large reuse for filtration and finite-generation lemmas; the project still needs the successive-quotient construction/interface."
+    },
+    {
+      "id": "REES",
+      "topic": "Rees algebra and associated-graded route",
+      "status": "rees_verified_associated_graded_bridge_unverified",
+      "evidence": [
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "reesAlgebra",
+          "line": 39,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L39",
+          "source_excerpt": "def reesAlgebra : Subalgebra R R[X] where\n  carrier := { f | ∀ i, f.coeff i ∈ I ^ i }\n  mul_mem' hf hg i := by\n    rw [coeff_mul]\n    apply Ideal.sum_mem",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "adjoin_monomial_eq_reesAlgebra",
+          "line": 101,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L101",
+          "source_excerpt": "theorem adjoin_monomial_eq_reesAlgebra :\n    Algebra.adjoin R (Submodule.map (monomial 1 : R →ₗ[R] R[X]) I : Set R[X]) = reesAlgebra I := by\n  apply le_antisymm\n  · apply Algebra.adjoin_le _\n    rintro _ ⟨r, hr, rfl⟩",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "reesAlgebra.fg",
+          "line": 115,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L115",
+          "source_excerpt": "theorem reesAlgebra.fg (hI : I.FG) : (reesAlgebra I).FG := by\n  classical\n    obtain ⟨s, hs⟩ := hI\n    rw [← adjoin_monomial_eq_reesAlgebra, ← hs]\n    use s.image (monomial 1)",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "anonymous Algebra.FiniteType instance",
+          "line": 127,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L127",
+          "source_excerpt": "instance [IsNoetherianRing R] : Algebra.FiniteType R (reesAlgebra I) :=\n  ⟨(reesAlgebra I).fg_top.mpr (reesAlgebra.fg <| IsNoetherian.noetherian I)⟩\n\ninstance [IsNoetherianRing R] : IsNoetherianRing (reesAlgebra I) :=\n  Algebra.FiniteType.isNoetherianRing R _",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "anonymous IsNoetherianRing instance",
+          "line": 130,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L130",
+          "source_excerpt": "instance [IsNoetherianRing R] : IsNoetherianRing (reesAlgebra I) :=\n  Algebra.FiniteType.isNoetherianRing R _\n\nopen TensorProduct in\nlemma tensorProduct_reesAlgebra_isNoetherian_of_fg [IsNoetherianRing (R ⧸ I)] (fg : I.FG) :",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "tensorProduct_reesAlgebra_isNoetherian_of_fg",
+          "line": 134,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L134",
+          "source_excerpt": "lemma tensorProduct_reesAlgebra_isNoetherian_of_fg [IsNoetherianRing (R ⧸ I)] (fg : I.FG) :\n    IsNoetherianRing ((R ⧸ I) ⊗[R] (reesAlgebra I)) := by\n  have : Algebra.FiniteType R (reesAlgebra I) := ⟨(reesAlgebra I).fg_top.mpr (reesAlgebra.fg fg)⟩\n  have := this.baseChange (R ⧸ I)\n  exact Algebra.FiniteType.isNoetherianRing (R ⧸ I) _",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "isNoetherianRing_reesAlgebra_quotient",
+          "line": 140,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L140",
+          "source_excerpt": "lemma isNoetherianRing_reesAlgebra_quotient [IsNoetherianRing (R ⧸ I)] (fg : I.FG) :\n    IsNoetherianRing ((reesAlgebra I) ⧸ I.map (algebraMap R (reesAlgebra I))) := by\n  have := tensorProduct_reesAlgebra_isNoetherian_of_fg fg\n  exact isNoetherianRing_of_ringEquiv _\n     (Algebra.TensorProduct.quotIdealMapEquivQuotTensor (reesAlgebra I) I).symm.toRingEquiv",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        },
+        {
+          "path": "Mathlib/RingTheory/ReesAlgebra.lean",
+          "declaration": "mem_map_algebraMap_reesAlgebra_iff",
+          "line": 146,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/ReesAlgebra.lean#L146",
+          "source_excerpt": "lemma mem_map_algebraMap_reesAlgebra_iff (f : reesAlgebra I) :\n    f ∈ I.map (algebraMap R (reesAlgebra I)) ↔ ∀ n, f.1.coeff n ∈ I ^ (n + 1) := by\n  refine ⟨fun h n ↦ ?_, fun h ↦ ?_⟩\n  · rw [← Submodule.restrictScalars_mem R, ← Ideal.smul_top_eq_map] at h\n    induction h using Submodule.smul_induction_on' with",
+          "file_sha256": "bb4ee4a5d5934f614b4c561798f87b99c8a486cbf75ffebccebfe7a43a023222"
+        }
+      ],
+      "verified_reuse": "Rees algebra is coefficientwise I^n in R[X]; generated in degree one; FG of I gives FG of Rees. Noetherian R gives finite type then Noetherian Rees. More generally Noetherian R/I and FG I give a Noetherian Rees quotient. Its extended-I ideal is characterized by coefficient n belonging to I^(n+1).",
+      "unverified_or_new_work": "No named associated-graded ring/filtration construction found in targeted searches. The existing quotient of Rees by extended I is a credible definition candidate; the graded-piece identification with I^n/I^(n+1) and paper tangent-cone equivalence are not verified reusable theorems.",
+      "planning_implication": "This is a significant reuse opportunity, reducing construction and Noetherian overhead without eliminating graded-piece and actual-semigroup model proofs."
+    },
+    {
+      "id": "GRADED",
+      "topic": "Graded rings and modules",
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "Mathlib/RingTheory/GradedAlgebra/Basic.lean",
+          "declaration": "GradedRing",
+          "line": 65,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/GradedAlgebra/Basic.lean#L65",
+          "source_excerpt": "class GradedRing (𝒜 : ι → σ) extends SetLike.GradedMonoid 𝒜, DirectSum.Decomposition 𝒜\n\nvariable [GradedRing 𝒜]\n\nnamespace DirectSum",
+          "file_sha256": "e8f936ee308c81bb3c834c90ac7a28045e305f933365393de68afa84a6311102"
+        },
+        {
+          "path": "Mathlib/RingTheory/GradedAlgebra/Basic.lean",
+          "declaration": "DirectSum.decomposeAlgEquiv",
+          "line": 198,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/GradedAlgebra/Basic.lean#L198",
+          "source_excerpt": "def decomposeAlgEquiv : A ≃ₐ[R] ⨁ i, 𝒜 i :=\n  AlgEquiv.symm\n    { (decomposeAddEquiv 𝒜).symm with\n      map_mul' := map_mul (coeAlgHom 𝒜)\n      commutes' := (coeAlgHom 𝒜).commutes }",
+          "file_sha256": "e8f936ee308c81bb3c834c90ac7a28045e305f933365393de68afa84a6311102"
+        },
+        {
+          "path": "Mathlib/Algebra/Module/GradedModule.lean",
+          "declaration": "DirectSum.Gmodule",
+          "line": 44,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Module/GradedModule.lean#L44",
+          "source_excerpt": "class Gmodule [AddMonoid ιA] [VAdd ιA ιB] [∀ i, AddMonoid (A i)] [∀ i, AddMonoid (M i)] [GMonoid A]\n    extends GdistribMulAction A M where\n  add_smul {i j} (a a' : A i) (b : M j) : smul (a + a') b = smul a b + smul a' b\n  zero_smul {i j} (b : M j) : smul (0 : A i) b = 0\n",
+          "file_sha256": "44452d4b9808337879f319306689ed994dc06bcb66b3ff7c1867f90607dc854e"
+        },
+        {
+          "path": "Mathlib/Algebra/Module/GradedModule.lean",
+          "declaration": "DirectSum.Gmodule.module",
+          "line": 138,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Module/GradedModule.lean#L138",
+          "source_excerpt": "instance module [DecidableEq ιA] [DecidableEq ιB] [GSemiring A] [Gmodule A M] :\n    Module (⨁ i, A i) (⨁ i, M i) where\n  one_smul := by exact one_smul' _ _\n  mul_smul := by exact mul_smul' _ _\n  smul_add r := (smulAddMonoidHom A M r).map_add",
+          "file_sha256": "44452d4b9808337879f319306689ed994dc06bcb66b3ff7c1867f90607dc854e"
+        }
+      ],
+      "verified_reuse": "Internal direct-sum decompositions, graded scalar action, external graded module and induced module structures exist.",
+      "unverified_or_new_work": "No exact graded minimal free resolution / graded Betti API found. Graded module basics do not imply such an API.",
+      "planning_implication": "Use existing grading structures where useful. For total Betti inequalities, a concrete finite Koszul model could avoid developing a full category of graded minimal resolutions."
+    },
+    {
+      "id": "RES",
+      "topic": "Free/projective resolutions and polynomial finite-resolution bound",
+      "status": "abstract_foundations_verified_exact_minimal_or_hilbert_syzygy_not_found",
+      "evidence": [
+        {
+          "path": "Mathlib/Algebra/Category/ModuleCat/LeftResolution.lean",
+          "declaration": "ModuleCat.projectiveResolution",
+          "line": 42,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Category/ModuleCat/LeftResolution.lean#L42",
+          "source_excerpt": "noncomputable def projectiveResolution :\n    LeftResolution (ObjectProperty.ι (isProjective (ModuleCat.{u} R))) where\n  F := ObjectProperty.lift _ (forget _ ⋙ free R) (by dsimp; infer_instance)\n  π := (adj R).counit\n",
+          "file_sha256": "a33a461a61870139abf5a15e159e5312695c17757bec5ee52deaaa7496a20d71"
+        },
+        {
+          "path": "Mathlib/CategoryTheory/Abelian/Projective/Resolution.lean",
+          "declaration": "CategoryTheory.ProjectiveResolution.lift",
+          "line": 92,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Abelian/Projective/Resolution.lean#L92",
+          "source_excerpt": "def lift {Y Z : C} (f : Y ⟶ Z) (P : ProjectiveResolution Y) (Q : ProjectiveResolution Z) :\n    P.complex ⟶ Q.complex :=\n  ChainComplex.mkHom _ _ (liftFZero f _ _) (liftFOne f _ _) (liftFOne_zero_comm f P Q)\n    fun n ⟨g, g', w⟩ => ⟨(liftFSucc P Q n g g' w).1, (liftFSucc P Q n g g' w).2⟩\n",
+          "file_sha256": "173ce5ae7d780caeae771f6a6803c3fb00824ea69000a1c68de1b6d82819a624"
+        },
+        {
+          "path": "Mathlib/CategoryTheory/Abelian/Projective/Resolution.lean",
+          "declaration": "CategoryTheory.ProjectiveResolution.homotopyEquiv",
+          "line": 180,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Abelian/Projective/Resolution.lean#L180",
+          "source_excerpt": "def homotopyEquiv {X : C} (P Q : ProjectiveResolution X) :\n    HomotopyEquiv P.complex Q.complex where\n  hom := lift (𝟙 X) P Q\n  inv := lift (𝟙 X) Q P\n  homotopyHomInvId := (liftCompHomotopy (𝟙 X) (𝟙 X) P Q P).symm.trans <| by",
+          "file_sha256": "173ce5ae7d780caeae771f6a6803c3fb00824ea69000a1c68de1b6d82819a624"
+        },
+        {
+          "path": "Mathlib/CategoryTheory/Abelian/LeftDerived.lean",
+          "declaration": "CategoryTheory.Functor.leftDerivedToHomotopyCategory",
+          "line": 64,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Abelian/LeftDerived.lean#L64",
+          "source_excerpt": "noncomputable def Functor.leftDerivedToHomotopyCategory (F : C ⥤ D) [F.Additive] :\n    C ⥤ HomotopyCategory D (ComplexShape.down ℕ) :=\n  projectiveResolutions C ⋙ F.mapHomotopyCategory _\n\n/-- If `P : ProjectiveResolution Z` and `F : C ⥤ D` is an additive functor, this is",
+          "file_sha256": "070c4339dd834771e8b6c58851305cb3f50dde299b5f0d078b1a3d3ba7616fec"
+        }
+      ],
+      "verified_reuse": "ModuleCat has a functorial projective cover built from free modules; generic projective-resolution comparison and left-derived functors are available.",
+      "unverified_or_new_work": "Finite ranks, minimality, grading, finite polynomial-ring resolution length (Hilbert syzygy), and rank=Betti characterizations were not found as exact reusable results in the recorded scans. These functorial free covers can be infinitely generated.",
+      "planning_implication": "Do not label all resolutions absent; equally do not assume generic projective resolutions deliver the paper finite minimal free resolutions. Concrete Koszul Betti definitions avoid some, but not all, comparison obligations."
+    },
+    {
+      "id": "TOR",
+      "topic": "Tor and its paper-facing API",
+      "status": "definition_and_projective_vanishing_verified",
+      "evidence": [
+        {
+          "path": "Mathlib/CategoryTheory/Monoidal/Tor.lean",
+          "declaration": "CategoryTheory.Tor",
+          "line": 44,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Monoidal/Tor.lean#L44",
+          "source_excerpt": "def Tor (n : ℕ) : C ⥤ C ⥤ C where\n  obj X := Functor.leftDerived ((tensoringLeft C).obj X) n\n  map f := NatTrans.leftDerived ((tensoringLeft C).map f) n\n\n/-- An alternative definition of `Tor`, where we left-derive in the first factor instead. -/",
+          "file_sha256": "63aeefddef4fdbf5f74cade1c13f0d63b742247c2ff2c69a9546454c57d34860"
+        },
+        {
+          "path": "Mathlib/CategoryTheory/Monoidal/Tor.lean",
+          "declaration": "CategoryTheory.Tor'",
+          "line": 50,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Monoidal/Tor.lean#L50",
+          "source_excerpt": "def Tor' (n : ℕ) : C ⥤ C ⥤ C :=\n  Functor.flip\n    { obj := fun X => Functor.leftDerived ((tensoringRight C).obj X) n\n      map := fun f => NatTrans.leftDerived ((tensoringRight C).map f) n }\n",
+          "file_sha256": "63aeefddef4fdbf5f74cade1c13f0d63b742247c2ff2c69a9546454c57d34860"
+        },
+        {
+          "path": "Mathlib/CategoryTheory/Monoidal/Tor.lean",
+          "declaration": "CategoryTheory.isZero_Tor_succ_of_projective",
+          "line": 56,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/CategoryTheory/Monoidal/Tor.lean#L56",
+          "source_excerpt": "lemma isZero_Tor_succ_of_projective (X Y : C) [Projective Y] (n : ℕ) :\n    IsZero (((Tor C (n + 1)).obj X).obj Y) := by\n  apply Functor.isZero_leftDerived_obj_projective_succ\n\n/-- The higher `Tor'` groups for `X` and `Y` are zero if `X` is projective. -/",
+          "file_sha256": "63aeefddef4fdbf5f74cade1c13f0d63b742247c2ff2c69a9546454c57d34860"
+        },
+        {
+          "path": "Mathlib/RingTheory/Flat/CategoryTheory.lean",
+          "declaration": "Module.Flat.lTensor_shortComplex_exact",
+          "line": 41,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Flat/CategoryTheory.lean#L41",
+          "source_excerpt": "lemma lTensor_shortComplex_exact [Flat R M] (C : ShortComplex <| ModuleCat R) (hC : C.Exact) :\n    C.map (tensorLeft M) |>.Exact := by\n  rw [moduleCat_exact_iff_function_exact] at hC ⊢\n  exact lTensor_exact M hC\n",
+          "file_sha256": "a3fa73b85497446bba50fd6adc581383194a67e9f73e9fa66d47d0a0e7a18c6f"
+        }
+      ],
+      "verified_reuse": "Tor is a categorical left-derived tensor functor; projective higher vanishing is proved. Flat tensoring preserves exactness in ModuleCat.",
+      "unverified_or_new_work": "Tor.lean documentation says the Tor/Tor' comparison remains future work. Flat/CategoryTheory.lean TODO says relate flatness with Tor. A concrete polynomial Koszul computation, balancedness, finite-dimensionality, long exact Tor sequence and flat base-change Betti equality are not verified ready-made in this audit.",
+      "planning_implication": "Use concrete Koszul homology for project-facing Betti estimates if approved in the design; still prove its agreement with the intended mathematical Betti numbers. General Tor APIs may require more infrastructure than the project needs."
+    },
+    {
+      "id": "EXT",
+      "topic": "Ext foundations and finite generation",
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "Mathlib/Algebra/Category/ModuleCat/Ext/Finite.lean",
+          "declaration": "ModuleCat.finite_ext",
+          "line": 25,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Category/ModuleCat/Ext/Finite.lean#L25",
+          "source_excerpt": "instance ModuleCat.finite_ext [Small.{v} R] [IsNoetherianRing R] (N M : ModuleCat.{v} R)\n    [Module.Finite R N] [Module.Finite R M] (i : ℕ) : Module.Finite R (Ext N M i) := by\n  induction i generalizing N with\n  | zero => exact Module.Finite.equiv (Ext.linearEquiv₀.trans ModuleCat.homLinearEquiv).symm\n  | succ n ih =>",
+          "file_sha256": "3f66c6e21c006db8ce8b825236667337574982b078b77aede5a25822427e4ed7"
+        },
+        {
+          "path": "Mathlib/Algebra/Category/ModuleCat/Ext/DimensionShifting.lean",
+          "declaration": "ModuleCat.projectiveShortComplex",
+          "line": 33,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Category/ModuleCat/Ext/DimensionShifting.lean#L33",
+          "source_excerpt": "noncomputable abbrev ModuleCat.projectiveShortComplex [Small.{v} R] (M : ModuleCat.{v} R) :\n    ShortComplex (ModuleCat.{v} R) :=\n  let e : Module.Basis M R (M →₀ Shrink.{v} R) :=\n    ⟨Finsupp.mapRange.linearEquiv (Shrink.linearEquiv.{v} R R)⟩\n  (e.constr ℕ id).shortComplexKer",
+          "file_sha256": "8c10cb442a8800e596bcf46fca661acc5c8acef11bf4d10c9983260973957116"
+        },
+        {
+          "path": "Mathlib/Algebra/Category/ModuleCat/Ext/DimensionShifting.lean",
+          "declaration": "precomp_extClass_surjective_of_projective_X₂",
+          "line": 50,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Category/ModuleCat/Ext/DimensionShifting.lean#L50",
+          "source_excerpt": "theorem precomp_extClass_surjective_of_projective_X₂ [Small.{v} R]\n    (M : ModuleCat.{v} R) {S : ShortComplex (ModuleCat.{v} R)} (h : S.ShortExact) (n : ℕ)\n    [Projective S.X₂] : Function.Surjective (h.extClass.precomp M (add_comm 1 n)) :=\n  fun x ↦ Ext.contravariant_sequence_exact₃ h M x (Ext.eq_zero_of_projective _) (add_comm 1 n)\n",
+          "file_sha256": "8c10cb442a8800e596bcf46fca661acc5c8acef11bf4d10c9983260973957116"
+        }
+      ],
+      "verified_reuse": "Ext over ModuleCat, dimension shifting, and finite generation of Ext between finite modules over a Noetherian ring are implemented.",
+      "unverified_or_new_work": "These are not automatically Tor finite-dimensionality or Betti formulas. No exact project bridge was checked.",
+      "planning_implication": "Substantial abstract homological library exists, but its cost savings should be assigned only to statements actually matching project obligations."
+    },
+    {
+      "id": "KOSZUL",
+      "topic": "Algebraic Koszul complex and its computation of Tor",
+      "status": "exact_implementation_not_found",
+      "evidence": [
+        {
+          "path": "Mathlib/LinearAlgebra/ExteriorPower/Basis.lean",
+          "declaration": "Module.Basis.exteriorPower",
+          "line": 95,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/LinearAlgebra/ExteriorPower/Basis.lean#L95",
+          "source_excerpt": "noncomputable def _root_.Module.Basis.exteriorPower :\n    Basis (powersetCard I n) R (⋀[R]^n M) :=\n  Basis.mk (ιMulti_family_linearIndependent_ofBasis _ _ _)\n    (eq_top_iff.mp <| ιMulti_family_span_of_span R b.span_eq)\n",
+          "file_sha256": "33515146d2295c52e52bf491ed4d36ed95252e8822f1846df1321b5bf925f3de"
+        },
+        {
+          "path": "Mathlib/RingTheory/Regular/RegularSequence.lean",
+          "declaration": "documentation: Koszul regular-sequence TODO",
+          "line": 22,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/Regular/RegularSequence.lean#L22",
+          "source_excerpt": "TODO: Koszul regular sequences, `H_1`-regular sequences, quasi-regular sequences, depth.\n\n## Tags\n\nmodule, regular element, regular sequence, commutative algebra",
+          "file_sha256": "9bf3a24a097f7bec66c22f4b9c863e6fa0092e9e5af7245be0f3a1ca33567f83"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/LocalCohomology.lean",
+          "declaration": "documentation: Koszul-homology characterization future work",
+          "line": 43,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/LocalCohomology.lean#L43",
+          "source_excerpt": "    * the characterization as the limit of Koszul homology\n    * the characterization as the cohomology of a Cech-like complex\n* Establish long exact sequence(s) in local cohomology\n-/\n",
+          "file_sha256": "9986fcd8a903059bca754d5d79170df67ee5b073184b0dbc78e339ef283042e4"
+        }
+      ],
+      "verified_reuse": "Exterior powers and their bases indexed by n-element subsets exist, alongside regular sequences and general chain-complex/homology foundations.",
+      "unverified_or_new_work": "Global Koszul scan gave only future-work algebraic mentions and differential-geometric Koszul formulas. No algebraic Koszul complex, its differential square-zero proof, regular-sequence acyclicity, or computation-of-Tor theorem was found.",
+      "planning_implication": "Treat concrete Koszul construction, exactness/regular-sequence bridge, naturality, tensor/change-of-variable behavior, and Betti identification as substantial new work. Existing exterior bases help with binomial dimensions and explicit coordinate arguments."
+    },
+    {
+      "id": "CHAIN",
+      "topic": "Concrete homology, exact sequence and rank foundations",
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean",
+          "declaration": "CategoryTheory.ShortComplex.moduleCatLeftHomologyData",
+          "line": 101,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean#L101",
+          "source_excerpt": "def moduleCatLeftHomologyData : S.LeftHomologyData where\n  K := ↧S.g.hom.ker\n  H := ↧(S.g.hom.ker ⧸ S.moduleCatToCycles.range)\n  i := ModuleCat.ofHom (LinearMap.ker S.g.hom).subtype\n  π := ModuleCat.ofHom (LinearMap.range S.moduleCatToCycles).mkQ",
+          "file_sha256": "47cb5c8f4ff386d683c3525cfc377036b0cf9968ab3aa4761c75fa344022e361"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean",
+          "declaration": "CategoryTheory.ShortComplex.moduleCatHomologyIso",
+          "line": 172,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean#L172",
+          "source_excerpt": "noncomputable def moduleCatHomologyIso :\n    S.homology ≅ S.moduleCatLeftHomologyData.H :=\n  S.moduleCatLeftHomologyData.homologyIso\n\n@[reassoc (attr := simp), elementwise (attr := simp)]",
+          "file_sha256": "47cb5c8f4ff386d683c3525cfc377036b0cf9968ab3aa4761c75fa344022e361"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/HomologySequence.lean",
+          "declaration": "CategoryTheory.ShortComplex.ShortExact.δ",
+          "line": 282,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/HomologySequence.lean#L282",
+          "source_excerpt": "noncomputable def δ : S.X₃.homology i ⟶ S.X₁.homology j := (snakeInput hS i j hij).δ\n\n@[reassoc (attr := simp)]\nlemma δ_comp : hS.δ i j hij ≫ HomologicalComplex.homologyMap S.f j = 0 :=\n  (snakeInput hS i j hij).δ_L₃_f",
+          "file_sha256": "99f87a23f6d45ba86841b40696f0783662ecbe76eb0c00ab84ed76915da34580"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/HomologySequence.lean",
+          "declaration": "CategoryTheory.ShortComplex.ShortExact.homology_exact₁",
+          "line": 293,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/HomologySequence.lean#L293",
+          "source_excerpt": "lemma homology_exact₁ : (ShortComplex.mk _ _ (δ_comp hS i j hij)).Exact :=\n  (snakeInput hS i j hij).L₂'_exact\n\nset_option backward.isDefEq.respectTransparency false in\ninclude hS in",
+          "file_sha256": "99f87a23f6d45ba86841b40696f0783662ecbe76eb0c00ab84ed76915da34580"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/HomologySequence.lean",
+          "declaration": "CategoryTheory.ShortComplex.ShortExact.homology_exact₂",
+          "line": 299,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/HomologySequence.lean#L299",
+          "source_excerpt": "lemma homology_exact₂ : (ShortComplex.mk (HomologicalComplex.homologyMap S.f i)\n    (HomologicalComplex.homologyMap S.g i) (by rw [← HomologicalComplex.homologyMap_comp,\n      S.zero, HomologicalComplex.homologyMap_zero])).Exact := by\n  by_cases h : c.Rel i (c.next i)\n  · exact (snakeInput hS i _ h).L₀_exact",
+          "file_sha256": "99f87a23f6d45ba86841b40696f0783662ecbe76eb0c00ab84ed76915da34580"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/HomologySequence.lean",
+          "declaration": "CategoryTheory.ShortComplex.ShortExact.homology_exact₃",
+          "line": 314,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/HomologySequence.lean#L314",
+          "source_excerpt": "lemma homology_exact₃ : (ShortComplex.mk _ _ (comp_δ hS i j hij)).Exact :=\n  (snakeInput hS i j hij).L₁'_exact\n\nlemma δ_eq' {A : C} (x₃ : A ⟶ S.X₃.homology i) (x₂ : A ⟶ S.X₂.opcycles i)\n    (x₁ : A ⟶ S.X₁.cycles j)",
+          "file_sha256": "99f87a23f6d45ba86841b40696f0783662ecbe76eb0c00ab84ed76915da34580"
+        },
+        {
+          "path": "Mathlib/LinearAlgebra/Dimension/RankNullity.lean",
+          "declaration": "Submodule.finrank_quotient_add_finrank",
+          "line": 244,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/LinearAlgebra/Dimension/RankNullity.lean#L244",
+          "source_excerpt": "lemma Submodule.finrank_quotient_add_finrank [Module.Finite R M] (N : Submodule R M) :\n    finrank R (M ⧸ N) + finrank R N = finrank R M := by\n  rw [← Nat.cast_inj (R := Cardinal), Module.finrank_eq_rank, Nat.cast_add, Module.finrank_eq_rank,\n    Submodule.finrank_eq_rank]\n  exact HasRankNullity.rank_quotient_add_rank _",
+          "file_sha256": "9b9aaf0e8cda73f5cdb2a8ea590ce8756c655bd8fd5ed17b5fe04eb855498b21"
+        },
+        {
+          "path": "Mathlib/LinearAlgebra/FiniteDimensional/Lemmas.lean",
+          "declaration": "LinearMap.finrank_range_add_finrank_ker",
+          "line": 173,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/LinearAlgebra/FiniteDimensional/Lemmas.lean#L173",
+          "source_excerpt": "theorem finrank_range_add_finrank_ker [Module.Finite K V] (f : V →ₗ[K] V₂) :\n    finrank K (LinearMap.range f) + finrank K (LinearMap.ker f) = finrank K V := by\n  rw [← f.quotKerEquivRange.finrank_eq]\n  exact Submodule.finrank_quotient_add_finrank _\n",
+          "file_sha256": "2b8605db6e6ab3af905c1eeef5e66b3cffe59218ec0a0b7d7569e802d2271b54"
+        }
+      ],
+      "verified_reuse": "ModuleCat homology identifies with ker/outgoing modulo range/incoming; long exact homology of short exact complexes exists. Rank-nullity and quotient dimension are proved.",
+      "unverified_or_new_work": "Need instantiate to the chosen finite Koszul complexes, show finite-dimensionality before using finrank, and derive project-specific rank inequalities. finrank has a zero junk value outside finite rank; a bare definition is insufficient.",
+      "planning_implication": "Concrete chain-level Betti route can reuse robust homology/exactness/dimension machinery. It is not necessary to rebuild long exact homology or linear-algebra rank-nullity."
+    },
+    {
+      "id": "SPECTRAL",
+      "topic": "Bicomplex, total complex, and spectral sequences",
+      "status": "abstract_foundations_verified_application_unverified",
+      "evidence": [
+        {
+          "path": "Mathlib/Algebra/Homology/HomologicalBicomplex.lean",
+          "declaration": "HomologicalComplex₂",
+          "line": 38,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/HomologicalBicomplex.lean#L38",
+          "source_excerpt": "abbrev HomologicalComplex₂ :=\n  HomologicalComplex (HomologicalComplex C c₂) c₁\n\nnamespace HomologicalComplex₂\n",
+          "file_sha256": "83edbc9736cf8e0bd595d6a0b3ac074275c19a38b71472288682bc1c5e8d12ba"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/TotalComplex.lean",
+          "declaration": "HomologicalComplex₂.total",
+          "line": 266,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/TotalComplex.lean#L266",
+          "source_excerpt": "noncomputable def total : HomologicalComplex C c₁₂ where\n  X := K.toGradedObject.mapObj (ComplexShape.π c₁ c₂ c₁₂)\n  d i₁₂ i₁₂' := K.D₁ c₁₂ i₁₂ i₁₂' + K.D₂ c₁₂ i₁₂ i₁₂'\n  shape i₁₂ i₁₂' h₁₂ := by\n    rw [K.D₁_shape c₁₂ _ _ h₁₂, K.D₂_shape c₁₂ _ _ h₁₂, zero_add]",
+          "file_sha256": "285e968c80113467864e0dcfcff3ad0b3e80de215218ced95e98f9466978e829"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/SpectralSequence/Basic.lean",
+          "declaration": "CategoryTheory.SpectralSequence",
+          "line": 36,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/SpectralSequence/Basic.lean#L36",
+          "source_excerpt": "structure SpectralSequence where\n  /-- the `r`th page of a spectral sequence is an homological complex -/\n  page (r : ℤ) (hr : r₀ ≤ r := by lia) : HomologicalComplex C (c r)\n  /-- the isomorphism between the homology of the `r`-th page at an object `pq : κ`\n  and the corresponding object on the next page -/",
+          "file_sha256": "ea239f032fb0a57191274ea263b81060233248db0295da7a668cfdc5bfef3d36"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/SpectralObject/SpectralSequence.lean",
+          "declaration": "CategoryTheory.Abelian.SpectralObject.spectralSequence",
+          "line": 479,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/SpectralObject/SpectralSequence.lean#L479",
+          "source_excerpt": "noncomputable def spectralSequence : SpectralSequence C c r₀ where\n  page := SpectralSequence.page X data\n  iso r r' pq hrr' hr := SpectralSequence.homologyIso X data r r' hrr' hr pq\n\nvariable [X.HasSpectralSequence data]",
+          "file_sha256": "6d731cc991fc8eaf7e83ec187045ed61ba3cf7128b309f009252dd667949db8b"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/SpectralObject/SpectralSequence.lean",
+          "declaration": "CategoryTheory.Abelian.SpectralObject.E₂HomologicalSpectralSequenceNat",
+          "line": 696,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/SpectralObject/SpectralSequence.lean#L696",
+          "source_excerpt": "noncomputable abbrev E₂HomologicalSpectralSequenceNat := Y.spectralSequence coreE₂HomologicalNat\n\nend\n\nend",
+          "file_sha256": "6d731cc991fc8eaf7e83ec187045ed61ba3cf7128b309f009252dd667949db8b"
+        }
+      ],
+      "verified_reuse": "Bicomplexes, signed total complexes, spectral-sequence pages, and construction from spectral objects including first-quadrant homological variants exist.",
+      "unverified_or_new_work": "No ready-to-apply finite Koszul double-complex spectral comparison/rank inequality or convergence package matching O_TOR/E_TRANSFER was verified. Presence of abstract spectral sequences does not prove a project degeneration claim.",
+      "planning_implication": "Do not estimate generic spectral-sequence theory from zero. Consider finite-chain or filtration rank arguments to avoid the substantial application/abutment bridge; an equivalence to the paper use still needs proof."
+    },
+    {
+      "id": "EULER",
+      "topic": "Euler characteristic and finite Betti ranks",
+      "status": "definitions_verified_euler_poincare_identity_unverified",
+      "evidence": [
+        {
+          "path": "Mathlib/LinearAlgebra/Dimension/Finrank.lean",
+          "declaration": "Module.finrank",
+          "line": 61,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/LinearAlgebra/Dimension/Finrank.lean#L61",
+          "source_excerpt": "noncomputable def finrank (R M : Type*) [Semiring R] [AddCommMonoid M] [Module R M] : ℕ :=\n  Cardinal.toNat (Module.rank R M)\n\n@[simp] theorem finrank_subsingleton [Subsingleton R] : finrank R M = 1 := by\n  rw [finrank, rank_subsingleton, map_one]",
+          "file_sha256": "64aee88f08c6b8f5ff078a7d29f197297f04a29ad25ccb877697f2bdef2bd7cb"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/EulerCharacteristic.lean",
+          "declaration": "HomologicalComplex.eulerChar",
+          "line": 148,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/EulerCharacteristic.lean#L148",
+          "source_excerpt": "noncomputable abbrev eulerChar (C : HomologicalComplex (ModuleCat R) c) : ℤ :=\n  GradedObject.eulerChar c C.X\n\n/-- The homological Euler characteristic as a sum over all indices using `finsum`.\nThis is the Euler characteristic computed from the homology groups rather than",
+          "file_sha256": "910fe609459e2ceb38f28909fe9145dcba783638be227a30091ab42386ef5b23"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/EulerCharacteristic.lean",
+          "declaration": "HomologicalComplex.homologyEulerChar",
+          "line": 154,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/EulerCharacteristic.lean#L154",
+          "source_excerpt": "noncomputable abbrev homologyEulerChar (C : HomologicalComplex (ModuleCat R) c)\n    [∀ i : ι, C.HasHomology i] : ℤ :=\n  GradedObject.eulerChar c (fun i => C.homology i)\n\n/-- If a complex has finite rank support contained in a finite set,",
+          "file_sha256": "910fe609459e2ceb38f28909fe9145dcba783638be227a30091ab42386ef5b23"
+        },
+        {
+          "path": "Mathlib/Algebra/Homology/EulerCharacteristic.lean",
+          "declaration": "HomologicalComplex.eulerChar_eq_sum_finSet_of_finrankSupport_subset",
+          "line": 160,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Algebra/Homology/EulerCharacteristic.lean#L160",
+          "source_excerpt": "theorem eulerChar_eq_sum_finSet_of_finrankSupport_subset (C : HomologicalComplex (ModuleCat R) c)\n    (indices : Finset ι)\n    (h_support : GradedObject.finrankSupport C.X ⊆ indices) :\n    eulerChar C = ∑ i ∈ indices, (c.χ i : ℤ) * Module.finrank R (C.X i) :=\n  GradedObject.eulerChar_eq_sum_finSet_of_finrankSupport_subset c C.X indices h_support",
+          "file_sha256": "910fe609459e2ceb38f28909fe9145dcba783638be227a30091ab42386ef5b23"
+        }
+      ],
+      "verified_reuse": "Euler characteristics of complex terms and homology are defined and converted to finite sums under support hypotheses; all 175 lines of this file were inspected.",
+      "unverified_or_new_work": "This file does not itself assert equality of the two Euler characteristics. An exact Euler-Poincare equality elsewhere was not verified by this bounded audit. Betti definition, finiteness and comparison to minimal free ranks remain project obligations.",
+      "planning_implication": "Finite-dimensional rank-nullity gives a plausible short proof of the needed bounded Euler identity, but it should be scheduled as a lemma to prove, not checked off as imported."
+    },
+    {
+      "id": "GROEBNER",
+      "topic": "Multivariate division and Gröbner tools",
+      "status": "division_verified_full_groebner_basis_api_not_found",
+      "evidence": [
+        {
+          "path": "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+          "declaration": "MonomialOrder.reduce",
+          "line": 83,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/MvPolynomial/Groebner.lean#L83",
+          "source_excerpt": "def reduce {b : MvPolynomial σ R} (hb : IsUnit (m.leadingCoeff b)) (f : MvPolynomial σ R) :\n    MvPolynomial σ R :=\n  f - monomial (m.degree f - m.degree b) (hb.unit⁻¹ * m.leadingCoeff f) * b\n\ntheorem degree_reduce_lt {f b : MvPolynomial σ R} (hb : IsUnit (m.leadingCoeff b))",
+          "file_sha256": "7432fc15a04a97ff1ee732caa32eafe612d0a3ddc6428c444489e34f4b730e65"
+        },
+        {
+          "path": "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+          "declaration": "MonomialOrder.div",
+          "line": 123,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/MvPolynomial/Groebner.lean#L123",
+          "source_excerpt": "theorem div {ι : Type*} {b : ι → MvPolynomial σ R}\n    (hb : ∀ i, IsUnit (m.leadingCoeff (b i))) (f : MvPolynomial σ R) :\n    ∃ (g : ι →₀ (MvPolynomial σ R)) (r : MvPolynomial σ R),\n      f = Finsupp.linearCombination _ b g + r ∧\n        (∀ i, m.degree (b i * (g i)) ≼[m] m.degree f) ∧",
+          "file_sha256": "7432fc15a04a97ff1ee732caa32eafe612d0a3ddc6428c444489e34f4b730e65"
+        },
+        {
+          "path": "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+          "declaration": "MonomialOrder.div_set",
+          "line": 226,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/RingTheory/MvPolynomial/Groebner.lean#L226",
+          "source_excerpt": "theorem div_set {B : Set (MvPolynomial σ R)}\n    (hB : ∀ b ∈ B, IsUnit (m.leadingCoeff b)) (f : MvPolynomial σ R) :\n    ∃ (g : B →₀ (MvPolynomial σ R)) (r : MvPolynomial σ R),\n      f = Finsupp.linearCombination _ (fun (b : B) ↦ (b : MvPolynomial σ R)) g + r ∧\n        (∀ (b : B), m.degree ((b : MvPolynomial σ R) * (g b)) ≼[m] m.degree f) ∧",
+          "file_sha256": "7432fc15a04a97ff1ee732caa32eafe612d0a3ddc6428c444489e34f4b730e65"
+        }
+      ],
+      "verified_reuse": "Monomial orders, leading terms, reduction, and division by a family with invertible leading coefficients exist; remainder monomials avoid divisibility by the leading monomials.",
+      "unverified_or_new_work": "Despite its filename, the audited file provides division, not a verified Buchberger algorithm or full Gröbner-basis/initial-ideal/standard-monomial quotient API. Homogeneous division and the specific semigroup initial ideal identifications need proofs/adapters.",
+      "planning_implication": "Ordinary division machinery is reusable. Do not treat all X_BASIC Gröbner obligations or BHP/EK as solved by importing this file."
+    },
+    {
+      "id": "ADD",
+      "topic": "Finite-additive combinatorics: Kneser and Savchev-Chen",
+      "status": "nearby_foundations_verified_exact_named_inputs_not_found",
+      "evidence": [
+        {
+          "path": "Mathlib/Combinatorics/Additive/CauchyDavenport.lean",
+          "declaration": "Finset.cauchy_davenport_minOrder_mul",
+          "line": 116,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Combinatorics/Additive/CauchyDavenport.lean#L116",
+          "source_excerpt": "lemma cauchy_davenport_minOrder_mul (hs : s.Nonempty) (ht : t.Nonempty) :\n    min (minOrder α) ↑(#s + #t - 1) ≤ #(s * t) := by\n  -- Set up the induction on `x := (s, t)` along the `DevosMulRel` relation.\n  set x := (s, t) with hx\n  clear_value x",
+          "file_sha256": "90b0337c578a512f034a234d2210daae72ca294ae4cd6dc91d2847c6835a2d78"
+        },
+        {
+          "path": "Mathlib/Combinatorics/Additive/CauchyDavenport.lean",
+          "declaration": "ZMod.cauchy_davenport",
+          "line": 198,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Combinatorics/Additive/CauchyDavenport.lean#L198",
+          "source_excerpt": "lemma ZMod.cauchy_davenport {p : ℕ} (hp : p.Prime) {s t : Finset (ZMod p)} (hs : s.Nonempty)\n    (ht : t.Nonempty) : min p (#s + #t - 1) ≤ #(s + t) := by\n  simpa only [ZMod.minOrder_of_prime hp, min_le_iff, Nat.cast_le]\n    using cauchy_davenport_minOrder_add hs ht\n",
+          "file_sha256": "90b0337c578a512f034a234d2210daae72ca294ae4cd6dc91d2847c6835a2d78"
+        },
+        {
+          "path": "Mathlib/Combinatorics/Additive/VerySmallDoubling.lean",
+          "declaration": "Finset.doubling_lt_three_halves",
+          "line": 324,
+          "url": "https://github.com/leanprover-community/mathlib4/blob/139105d28c7685a154cb3093f79edb2e16708099/Mathlib/Combinatorics/Additive/VerySmallDoubling.lean#L324",
+          "source_excerpt": "theorem doubling_lt_three_halves (h : #(A * A) < (3 / 2 : ℚ) * #A) :\n    ∃ (H : Subgroup G) (_ : Fintype H), Fintype.card H < (3 / 2 : ℚ) * #A ∧ ∀ a ∈ A,\n      (A : Set G) ⊆ a • H ∧ a •> (H : Set G) = H <• a := by\n  let H := invMulSubgroup A h\n  refine ⟨H, inferInstance, ?_, fun a ha ↦ ⟨?_, ?_⟩⟩",
+          "file_sha256": "c1ace01c6ef542b12d754268a09cb100678496c1f3bb52659e1f9275ae2244c7"
+        }
+      ],
+      "verified_reuse": "General-group min-order Cauchy-Davenport, prime-modulus Cauchy-Davenport, pointwise finite-set operations and stabilizer/small-doubling foundations are available. to_additive also generates an additive min-order version used in the ZMod proof.",
+      "unverified_or_new_work": "The exact stabilizer-sensitive Kneser theorem for composite cyclic groups and Savchev-Chen long zero-sum-free sequence classification were not found in the recorded source scans. Prime-modulus Cauchy-Davenport is insufficient for composite m; the general min-order bound also does not supply the full Kneser stabilizer correction.",
+      "planning_implication": "Budget exact Kneser and SC separately as new theorem work unless a later targeted semantic audit identifies substitutes. Existing finsets, ZMod and pointwise sumsets reduce setup cost."
+    },
+    {
+      "id": "PUBLISHED",
+      "topic": "Green, BHP/EK, arithmetic-progression Betti/cone, LTV",
+      "status": "exact_published_inputs_not_found",
+      "evidence": [],
+      "verified_reuse": "General polynomial, module, dimension, grading and finite-set foundations above can support future proofs.",
+      "unverified_or_new_work": "Targeted global scans did not find Green hyperplane restriction in the needed form; Bigatti-Hulett-Pardue Betti comparison; Eliahou-Kervaire formula; Gimenez-Sengupta-Srinivasan arithmetic-progression Betti formula; Herzog-Stamate cone equality; or Lan-Tu-Vu three-generator comparison. This is a qualified search result, not a formal absence proof or exhaustive semantic audit.",
+      "planning_implication": "For axiom-free completion these are separate substantial library projects or must be replaced by fully proved sufficient special cases. Explicit theorem hypotheses are valid for a conditional milestone, but such a milestone must not be called unconditional P14 formalization."
+    }
+  ],
+  "searches": [
+    {
+      "id": "numerical_semigroup_apery",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "numerical.?semigroup|numericalSemigroup|apéry|apery",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "associated_graded",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "associated.?graded|associatedGraded",
+        "Mathlib"
+      ],
+      "matching_lines": 1,
+      "hits": [
+        "Mathlib/Algebra/Homology/HomologicalBicomplex.lean:62:/-- The functor which sends a bicomplex to its associated graded object. -/"
+      ],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "koszul",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "koszul",
+        "Mathlib"
+      ],
+      "matching_lines": 8,
+      "hits": [
+        "Mathlib/Algebra/Homology/LocalCohomology.lean:43:    * the characterization as the limit of Koszul homology",
+        "Mathlib/RingTheory/Regular/RegularSequence.lean:22:TODO: Koszul regular sequences, `H_1`-regular sequences, quasi-regular sequences, depth.",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/LeviCivita.lean:31:* `CovariantDerivative.IsLeviCivitaConnection.apply_eq`: the **Koszul formula**, expressing the term",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/LeviCivita.lean:47:* The starting observation to the construction of the Levi-Civita is the Koszul formula, expressing",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/LeviCivita.lean:59:Levi-Civita connection, metric, torsion-free, Koszul formula, musical isomorphism",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/LeviCivita.lean:212:/-- The **Koszul formula**, expressing the term `⟨∇ X Y, Z⟩` for all differentiable vector fields",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/LeviCivita.lean:235:/-- The **Koszul formula**, expressing the term `⟨∇ X Y, Z⟩` for all differentiable vector fields",
+        "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean:17:This file defines covariant derivatives (aka Koszul connections) on vector bundles over manifolds."
+      ],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "betti",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "betti",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "minimal_graded_resolution",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "minimal.{0,25}(resolution|free)|graded.{0,25}resolution|free.{0,15}resolution",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "hilbert_syzygy",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "hilbert.?syzygy|syzygy|global.?dimension",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "groebner_basis",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "buchberger|groebner.?basis|gröbner.?basis|initial.?ideal",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "kneser",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "kneser",
+        "Mathlib"
+      ],
+      "matching_lines": 1,
+      "hits": [
+        "Mathlib/Combinatorics/Additive/VerySmallDoubling.lean:31:  https://terrytao.wordpress.com/2011/03/12/hamidounes-freiman-kneser-theorem-for-nonabelian-groups."
+      ],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "savchev_chen",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "savchev|zero.?sum.?free|davenport.?constant|savchev.{0,10}chen",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "green_hyperplane",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "green.{0,30}hyperplane|hyperplane.{0,30}restriction",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "bhp_ek",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "bigatti|hulett|pardue|eliahou|kervaire",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    },
+    {
+      "id": "ap_betti_cone_ltv",
+      "scope": "all 8691 Mathlib/**/*.lean files at pinned commit",
+      "command_argv": [
+        "rg",
+        "-n",
+        "-i",
+        "--glob",
+        "*.lean",
+        "gimenez|giménez|sengupta|srinivasan|stamate|lan.{0,8}tu.{0,8}vu|arithmetic.{0,25}(betti|semigroup)",
+        "Mathlib"
+      ],
+      "matching_lines": 0,
+      "hits": [],
+      "interpretation": "Lexical search only; no-hit is not proof of semantic absence."
+    }
+  ]
+}

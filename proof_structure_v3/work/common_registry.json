@@ -1,0 +1,462 @@
+[
+  {
+    "id": "X_BASIC",
+    "part": "基礎",
+    "title": "通常の同調代数・Gröbner道具",
+    "statement": "Koszul複体は多項式環上のTorを計算する。短完全列のTor長完全列、有界二重複体のスペクトル系列、Hilbert syzygy、分数体上のEuler式、同次Gröbner除法を使う。",
+    "quantifiers": "本稿で指定する各体k、有限生成次数付き加群、有界Koszul二重複体。",
+    "assumptions": "各箇所の有限生成性、収束、有限次元Torを個別に確認する。",
+    "depends_on": [],
+    "proof_core": "標準的な基礎代数を入力として固定し、スペクトル系列の退化や任意の商のBetti単調性は含めない。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2、§6–8、§12、§14.6",
+        "equations": []
+      }
+    ],
+    "kind": "standard_algebra",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "X_GREEN",
+    "part": "公刊入力",
+    "title": "Green次数2制限",
+    "statement": "標準次数付き代数の一般超平面切断の次数2 Hilbert関数をMacaulay下降で上から評価できる。反復によりr=max(2,p(a))本で二次以上を消せる。",
+    "quantifiers": "無限体k上の標準次数付き代数、一般一次形式、a=dim A2。",
+    "assumptions": "有限体では先に同標数の無限純超越拡大へ移る。",
+    "depends_on": [],
+    "proof_core": "Caviglia §1 (1.1) に再掲された原Green定理の次数2部分。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(1)、§4",
+        "equations": []
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Caviglia, A hyperplane restriction theorem and applications to reductions of ideals",
+      "url": "https://www.math.purdue.edu/~gcavigli/Articles-PDF/%5BS4%5D.pdf",
+      "locator": "§1 (1.1)、原Green定理の任意標数版"
+    }
+  },
+  {
+    "id": "X_BHP_EK",
+    "part": "公刊入力",
+    "title": "BHP/EK任意標数版",
+    "statement": "同じHilbert関数を持つlex商のgraded Betti数が一般商を支配する。lex理想の生成元vは商のi行へC(max(v)-1,i-1)を寄与する。",
+    "quantifiers": "任意体k、同じ標準次数付き多項式環上の斉次商、全graded Betti行i≥1。",
+    "assumptions": "lex理想、同じHilbert関数。",
+    "depends_on": [],
+    "proof_core": "Juhnke-Kubitzke–Venturello §2.2 Lemmas2–3。正標数版Pardueを含む。ordinaryの旧§15を経由せず、幅側dense評価だけに必要。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(2)、§13.3",
+        "equations": []
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Juhnke-Kubitzke–Venturello, Graded Betti Numbers of Balanced Simplicial Complexes",
+      "url": "https://link.springer.com/article/10.1007/s40306-021-00449-8",
+      "locator": "§2.2 Lemmas2–3、BHP/EKの任意体版再掲"
+    }
+  },
+  {
+    "id": "X_KNESER",
+    "part": "公刊入力",
+    "title": "Kneser和集合定理",
+    "statement": "有限非空A,BとH=stab(A+B)に対し|A+B|≥|A+H|+|B+H|-|H|。反復版も用いる。",
+    "quantifiers": "有限巡回群。素数位数に限定しない。",
+    "assumptions": "有限非空集合。反復時の商群stabilizer条件を確認する。",
+    "depends_on": [],
+    "proof_core": "DeVos Theorem1。商群の部分和stabilizerが全和に含まれることを使い反復する。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(3)、§13.4、§14.2",
+        "equations": []
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "DeVos, A short proof of Kneser’s addition theorem for abelian groups",
+      "url": "https://www.sfu.ca/~mdevos/papers/kneser.pdf",
+      "locator": "Theorem1"
+    }
+  },
+  {
+    "id": "X_AP_BETTI",
+    "part": "公刊入力",
+    "title": "算術列半群環のBetti公式",
+    "statement": "真正な最小算術列生成系の半群環に対し、Gimenez–Sengupta–Srinivasan Theorem4.1のBetti公式を使用する。",
+    "quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系である算術列数値半群。",
+    "assumptions": "Gimenez–Sengupta–Srinivasan Theorem4.1の仮定と上記最小性。targetではd=1,1≤v≤m−1、W_EDGEのsourceではd≥1,u<mの仮定から最小性を得る。",
+    "depends_on": [],
+    "proof_core": "一般の算術列の原公式m=av+b (1≤b≤v)を使用する。actual interval targetはd=1の特殊例で、D=v−b+1へ換算。W_EDGEの完全算術列sourceでも同じ公刊入力を使用する。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(4)、§1.3",
+        "equations": [
+          "TAR"
+        ]
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Gimenez–Sengupta–Srinivasan, arXiv:1108.3203",
+      "url": "https://arxiv.org/pdf/1108.3203",
+      "locator": "Theorem4.1"
+    }
+  },
+  {
+    "id": "X_AP_CONE",
+    "part": "公刊入力",
+    "title": "算術列半群環と接錐のBetti一致",
+    "statement": "算術列生成系では定義理想とその接錐理想のBetti数が一致する。",
+    "quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系。",
+    "assumptions": "Herzog–Stamate Proposition2.5の算術列最小生成系。targetのd=1およびW_EDGEのsourceのd≥1を含む。",
+    "depends_on": [],
+    "proof_core": "算術列半群環公式をactual completionの接錐へ移す。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(4)、§1.3",
+        "equations": [
+          "TAR"
+        ]
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Herzog–Stamate, arXiv:1308.4644v3",
+      "url": "https://arxiv.org/pdf/1308.4644v3",
+      "locator": "Proposition2.5"
+    }
+  },
+  {
+    "id": "X_LTV",
+    "part": "公刊入力",
+    "title": "三生成元のP14比較",
+    "statement": "三生成元数値半群の接錐Betti数はactual interval completionの対応Betti数以下。",
+    "quantifiers": "真正な三生成元数値半群、任意体、全total Betti行。",
+    "assumptions": "Lan–Tu–Vu arXiv:2307.05589v1 Theorem1.1の仮定。",
+    "depends_on": [],
+    "proof_core": "理想のBettiから商へ正行の添字を1ずらし、第0行1を補う。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(5)、§16",
+        "equations": []
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Lan–Tu–Vu, Betti numbers of the tangent cones of monomial space curves",
+      "url": "https://arxiv.org/html/2307.05589v1#S1",
+      "locator": "Theorem1.1"
+    }
+  },
+  {
+    "id": "X_SC",
+    "part": "公刊入力",
+    "title": "Savchev–Chen長零和自由列",
+    "statement": "位数uの巡回群の零和自由列の長さがu/2を超えるなら、あるunitで移した正の代表値の総和をu未満にできる。",
+    "quantifiers": "有限巡回群Z/u、長さ>u/2の零和自由列。",
+    "assumptions": "Savchev–Chen math/0602568v1 §4 Theorem8の仮定。",
+    "depends_on": [],
+    "proof_core": "N4の混合標準語にのみ使い、その短い零和置換を端点関係へ戻す。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(6)、§14.3",
+        "equations": []
+      }
+    ],
+    "kind": "published",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "published_reference": {
+      "title": "Savchev–Chen, Long zero-free sequences in finite cyclic groups",
+      "url": "https://arxiv.org/html/math/0602568v1",
+      "locator": "§4 Theorem8"
+    }
+  },
+  {
+    "id": "I_FIELD",
+    "part": "I",
+    "title": "同標数の体拡大",
+    "statement": "多項式環上のgraded/total Betti数は体拡大で不変。有限体から無限な純超越拡大へ移り、一般cutを選んだ後に元の体へ戻せる。",
+    "quantifiers": "任意体k、体拡大K/k、本稿の有限生成次数付き代数G。",
+    "assumptions": "同じ標数、flatな体拡大。",
+    "depends_on": [
+      "X_BASIC"
+    ],
+    "proof_core": "極小自由解消の体拡大、またはTorとflat base change。異なる標数のrank一致は主張しない。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§4、§16",
+        "equations": []
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "I_TARGET",
+    "part": "I",
+    "title": "actual interval容量",
+    "statement": "v=min(w,m−1)のactual completionのBetti数はTAR。剰余別最小値TMINはvについて非減少。ordinaryではFi=iC(m,i+1)。",
+    "quantifiers": "m≥2、w≥1、全i≥1。第0行1、i>vは0。",
+    "assumptions": "各環をそれぞれの最小生成系の多項式環で表示する。",
+    "depends_on": [
+      "X_AP_BETTI",
+      "X_AP_CONE"
+    ],
+    "proof_core": "mからm+vがちょうどtargetのatom。算術列公式のD=v−((m−1) mod v)を固定し、Dに関する最小値を境界で取る。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.3",
+        "equations": [
+          "TAR",
+          "TMIN",
+          "ORD",
+          "TLOW"
+        ]
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "I_BASE",
+    "part": "VI",
+    "title": "一・二生成元",
+    "statement": "e=1ならΓ=Nでsource=target。e=2ならG=k[x,y]/(y^m)、Betti列(1,1)でactual targetが支払う。",
+    "quantifiers": "真正な数値半群、任意体、e=1又は2、全i≥0。",
+    "assumptions": "e=2ではΓ=<m,n>,m<n,gcd(m,n)=1。",
+    "depends_on": [
+      "X_BASIC"
+    ],
+    "proof_core": "y^m−x^nの最低次数項はy^m。sourceのi≥2行は0で、targetの定義理想は非零。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§16",
+        "equations": []
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "I_THREE",
+    "part": "VI",
+    "title": "三生成元の全行",
+    "statement": "e=3のP14比較。ordinaryはO_CLOSEでも処理できるが、全域合成では公刊三生成元定理を使って一度だけ処理する。",
+    "quantifiers": "真正な三生成元数値半群、任意体、全i≥0。",
+    "assumptions": "actual completion、最小多項式表示。",
+    "depends_on": [
+      "X_LTV"
+    ],
+    "proof_core": "公刊定理の理想/商添字換算。ordinaryへの別証明を主DAGの追加辺にしない。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.2(5)、§16",
+        "equations": []
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "I_NORMALIZE",
+    "part": "I",
+    "title": "狭幅sourceの正規化",
+    "statement": "e≥4かつw≤m−2ならd=gcd(g2−m,...,ge−m),u=w/d,q=e−2として端点模型E1の仮定とm≥du+2を満たす。",
+    "quantifiers": "全真正なe≥4数値半群、整数幅w≤m−2。",
+    "assumptions": "d≥1、g1=m。",
+    "depends_on": [
+      "X_BASIC"
+    ],
+    "proof_core": "正規化offsetは相異なる整数0<a1<...<aq<u、gcd条件はΓのgcd1から従う。q+1≤u、u<m。actual sourceを別の半群へ置換しない。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§1.1、§12.1、§16",
+        "equations": [
+          "E1"
+        ]
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    }
+  },
+  {
+    "id": "I_PARTITION",
+    "part": "VI",
+    "title": "全パラメータの分割",
+    "statement": "e≤3を先に処理し、e≥4では整数幅によりw≤m−2又はw≥m−1。狭幅はe=4とe≥5、ordinaryはr=2,3/4..8/≥9へ分ける。",
+    "quantifiers": "全真正な数値半群、任意体。",
+    "assumptions": "e=1では空集合gcdを定義しない。",
+    "depends_on": [
+      "I_NORMALIZE"
+    ],
+    "proof_core": "w=m−1はordinaryに含める。r≤e−1、r≥9⇒e≥10、δ≥a_rの各成立条件を確認する。",
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§4、§16",
+        "equations": []
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "source_scope": "V02§16の整数幅分割と小生成元数の切分けのみ。旧§11/§15への全域合成は用いない。"
+  },
+  {
+    "id": "I_MAIN",
+    "part": "VI",
+    "title": "P14主定理への全域合成",
+    "statement": "β_i(GΓ;k)≤β_i(G_completion;k) が全i≥0、全真正な数値半群、任意体で成立するという証明経路を組む。",
+    "quantifiers": "任意体k、全真正な数値半群Γ、全total Betti行i≥0。",
+    "assumptions": "各環を独立に最小多項式表示する。",
+    "depends_on": [
+      "I_PARTITION",
+      "I_BASE",
+      "I_THREE",
+      "O_CLOSE",
+      "W_CLOSE",
+      "N_CLOSE"
+    ],
+    "proof_core": "排他的な幅分割、各領域の全行閉鎖、同標数体拡大からの下降を接続する。これは完全証明を参照する骨子であり新しい形式認証ではない。",
+    "sources": [
+      {
+        "path": "proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md",
+        "section": "Part VI.1–VI.3（新しい全域合成）",
+        "equations": [
+          "V3-MAIN"
+        ]
+      }
+    ],
+    "kind": "paper",
+    "characteristic": "任意体。標数間のBetti数・rankの一致を仮定しない。",
+    "audit": {
+      "status": "保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。",
+      "evidence": [
+        "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md"
+      ],
+      "limits": "公刊入力そのものの再証明・新たな形式化は対象外。"
+    },
+    "source_scope": "旧V02§16の§15/196依存を継承せず、本骨子の全域合成を証明所在とする。"
+  }
+]

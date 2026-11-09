@@ -1,0 +1,541 @@
+[
+  {
+    "id": "E_CORE",
+    "part": "IV",
+    "title": "整数コアから actual 接錐への単項式全射",
+    "statement": "表示された生成元は最小で Γ は数値半群。C=k[s,st^{a₁},…,st^{a_q},st^u] から G へ、sⁿtᴮ↦(t^{nm+dB})*（ν(nm+dB)>n なら 0）の次数付き環全射 φ があり、ker φ は C の単項式基底の一部で張られる。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "C の全単項式 sⁿtᴮ、n≥0"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "X_BASIC"
+    ],
+    "proof_core": [
+      "生成元に長さ l≥2 の表示があれば (l−1)m=d(a−B) より l−1=jd、a−B=jm≥m>u で矛盾。",
+      "二つの gcd 条件から全生成元の gcd は 1。",
+      "最大分解長 ν(h) は有限。ν(h)=n の数値指数 h が G_n の基底となり、最大長表示が全射性を与える。",
+      "固定 n の相異なる B は相異なる nm+dB を与えるので、核は単項式核となる。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.1",
+        "equations": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。数値指数で区別される基底を用い、標数を比較しない。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.1 の最小生成性・全射性・単項式核の論証を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。"
+      ]
+    }
+  },
+  {
+    "id": "E_COORD",
+    "part": "IV",
+    "title": "有限端点座標と E-加群直和",
+    "statement": "B=r+uK、n=L+K+ε_r の一意座標で C≅⊕_{r=0}^{u−1}M_r[ε_r,r]。M_r は |α|≤u−1 の内部語からの有限単項式リストで生成され、全 M_r≠0、M₀=E、H_x≤u−2。この分解は E-加群同型である。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "0≤r<u",
+      "α∈ℕ^q、|α|≤u−1"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_CORE"
+    ],
+    "proof_core": [
+      "u 個の内部因子の prefix offset には mod u で重複があり、その間の長さ l・offset cu の語を x^{l−c}v^c に換える。1≤c≤l−1。",
+      "反復で内部因子数を u−1 以下へ下げ、次数・offset を保つ。",
+      "gcd(a₁,…,a_q,u)=1 により全剰余へ内部語で到達し、最短経路は長さ u−1 以下。",
+      "非零剰余の極小点では L+K≤u−2、剰余 0 の極小点は (0,0) のみ。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.2",
+        "equations": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。コアの次数・offset による単項式基底で記述。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.2 の有限 prefix 消去と gcd による到達性を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "環の直積分解ではなく、内部変数は剰余成分を移す。"
+      ]
+    }
+  },
+  {
+    "id": "E_KERNEL",
+    "part": "IV",
+    "title": "全長い表示との競合と actual 核",
+    "statement": "長い表示は (n,B)↦(n+jd,B−jm)、j≥1 に尽くされる。r+jm=s+cu の下で Min M_r の点 (L,K) からの禁止領域の始点は (max{0,L−jd−c+ε_r−ε_s},K+c)。全競合で生成する T_s に対して actual 核は N_s=M_s∩T_s であり、G≅⊕_s M_s/N_s[ε_s,s] は E-加群同型。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "j≥1、0≤r,s<u、(L,K)∈Min M_r"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_COORD"
+    ],
+    "proof_core": [
+      "同じ数値指数の表示の長さ差 δ は δm=d(B−B′) を満たし、互いに素性により δ=jd、B′=B−jm。",
+      "offset と次数の二等式を解いて短い側の座標を得る。第一座標が負の場合は長い側を x 倍して clamp 後の点を実現できる。",
+      "m>u から c≥1 なので第二座標の clamp は不要。",
+      "競合領域だけでなく短い側が C に属する条件が必要であり、これが M_s との共通部分となる。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.3",
+        "equations": [
+          "E6",
+          "E7",
+          "E8"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。actual 核は数値指数と最大分解長により決まる。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.3 の必要十分な競合座標を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "N_s を一般に T_s と同一視しない。"
+      ]
+    }
+  },
+  {
+    "id": "E_STOP",
+    "part": "IV",
+    "title": "有限停止・有限 E-生成性・rank 0",
+    "statement": "c−ε_r+ε_s≥⌊jm/u⌋、競合始点の第一座標≤max{0,H_x−2j}。J₀=⌊(u−2)/2⌋、p=u/gcd(m,u) なら T_s=Σ_{j=1}^{J₀+p}T_{s,j}。G は有限生成 E-加群で、v^m=0、rank_E G=0。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "全 s と全 j≥1"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_KERNEL"
+    ],
+    "proof_core": [
+      "jm=hu+t と書き、剰余の carry と ε を場合分けする。d≥1、⌊jm/u⌋≥j を用いる。",
+      "j>J₀ では全競合始点の第一座標が 0。j を j+p に増すと r は同じで c は m/gcd(m,u) 増え、後の生成元は前の倍数となる。",
+      "J₀ は max{0,⌊(H_x−1)/(d+⌊m/u⌋)⌋} へ短縮できる。",
+      "m(m+du)=(m+du)m の右辺はより長い表示なので v^m=0。C の有限 E-生成性が G へ降りる。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.4",
+        "equations": [
+          "E9",
+          "E10",
+          "E11"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。全 m,d の停止式であり、標数に依存しない。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.4 の尾部周期と rank 0 の論証を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "G 自体の有限 k-次元性は主張しない。gcd(m,u)=1 も不要。"
+      ]
+    }
+  },
+  {
+    "id": "E_HOMOLOGY",
+    "part": "IV",
+    "title": "端点 Koszul homology の正確な三項",
+    "statement": "Q_C=C/(x,v)C は (Q_C)₁≅k^q、(Q_C)_n=0 (n≥u) の Artin T-商。P_C=dim Q_C、P_G=dim G/(x,v)G、R=dim(0:_G(x,v)) とすると、dim H_•(x,v;G)=(P_G,P_G+R,R)。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "端点 homology の次数 0,1,2"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_STOP"
+    ],
+    "proof_core": [
+      "Q_C の基底は全 Min M_s、Q_G の基底はそのうち N_s に属さない点。",
+      "R の基底は M_s∖N_s の点で x,v の双方を掛けると N_s に入る点。N_s の隣接極小点の角を数え、M_s 内の角だけを残す。",
+      "有限生成 E-加群の Koszul homology は (x,v) で殺されるので有限次元。",
+      "Hilbert syzygy による長さ 2 以下の最小 E-自由解消と rank_E G=0 により b₀^E−b₁^E+b₂^E=0。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.5",
+        "equations": [
+          "E12",
+          "E13",
+          "E14",
+          "E15"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。同じ体上の自由解消と rank Euler 等式を使う。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.5 の socle 隣接角と Euler 等式を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "E/N_s の Artin 性や G の有限長性を仮定しない。"
+      ]
+    }
+  },
+  {
+    "id": "E_BOUNDS",
+    "part": "IV",
+    "title": "距離和と height による一様な P_C,R 上界",
+    "statement": "内部ステップの mod u 最短語長を ℓ_r、ℓ₀=0、W=1+Σ_rℓ_r とすると、P_C≤W、R≤R̂=min{W−u,u max(H_x−2,0)}。これは m,d に一様で、gcd(m,u)=1 や Cohen–Macaulay 性を要求しない。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "同じ向きの core の全剰余 r,s"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_STOP"
+    ],
+    "proof_core": [
+      "最短点 (L_r,K_r) は極小で L_r+K_r=ℓ_r−ε_r。antichain を左右に数えると非零剰余の極小点数≤ℓ_r。",
+      "T_s の極小点数 z_s+1、最小第二座標 κ_s に対して z_s≤A+B−κ_s、κ_s≥ceil((m−s)/u)、Σ_sκ_s≥m。",
+      "j=1 の競合では s_r=(r+m) mod u が置換、c_r=(r+m−s_r)/u、Σ_rc_r=m、A_r≤L_r、B_r=K_r+c_r。",
+      "三行鎖：Σ_sz_s≤Σ_r(A_r+B_r−κ_{s_r})≤Σ_r(L_r+K_r)+m−Σ_sκ_s≤W−u。",
+      "M_s/(M_s∩T_s)→E/T_s の socle 単射で R≤Σ_sz_s。別に第一座標の範囲から z_s≤max(H_x−2,0)。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.6",
+        "equations": [
+          "E16",
+          "E17",
+          "E18"
+        ]
+      },
+      {
+        "path": "auditability_search/LATER_READABILITY_AUDIT.md",
+        "section": "§1",
+        "equations": [
+          "carry 三行鎖",
+          "Σ_rc_r=m",
+          "Σ_sκ_s≥m"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。単項式 antichain と carry の整数計数。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.6 を保持。",
+        "LATER_READABILITY_AUDIT §1 が再構成した carry 相殺を IV.15 として完全表示。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "P_C,W,H_x,R は同じ向きの core と同じ actual G の不変量。反射した core の値を無条件に混用しない。"
+      ]
+    }
+  },
+  {
+    "id": "E_TRANSFER",
+    "part": "IV",
+    "title": "actual quotient の核を補償する全行 Betti 移行",
+    "statement": "全 i≥0 に対し β_i^S(G)≤b_i^T(Q_C)+P_C binom(q,i−1)+R binom(q+1,i−1)。R は R̂ に置換できる。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "全 i≥0（範囲外二項係数・負添字 Betti 数は 0）"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_HOMOLOGY",
+      "E_BOUNDS"
+    ],
+    "proof_core": [
+      "actual 完全列 0→K→Q_C→Q_G→0、dim K=P_C−P_G の Tor 長完全列から b_i(Q_G)≤b_i(Q_C)+(P_C−P_G)binom(q,i−1)。",
+      "actual G 上の端点・内部 Koszul 二重複体で端点 homology を先に取る。第 0 行は Tor^T(Q_G,k) を正確に保持し、残る行を鎖群次元で抑える。",
+      "β_i(G)≤b_i(Q_G)+(P_G+R)binom(q,i−1)+R binom(q,i−2)。",
+      "核の長さの補償で P_G が相殺し、Pascal 恒等式から E21 を得る。後の page は部分商であり退化不要。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.7",
+        "equations": [
+          "E19",
+          "E20",
+          "E21"
+        ]
+      },
+      {
+        "path": "auditability_search/LATER_READABILITY_AUDIT.md",
+        "section": "§7",
+        "equations": [
+          "actual Q_C→Q_G の核補償"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。各体での Tor 長完全列と有界二重複体の spectral sequence を用いる。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 E19–E21 を IV.17–IV.18 に展開。",
+        "LATER_READABILITY_AUDIT §7 は actual 核の長さの Tor 補償に gap がないと確認。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "P_C=P_G、商の無条件 Betti 単調性、spectral sequence の退化は仮定しない。内部変数の作用を無視して剰余成分を別々に解消しない。"
+      ]
+    }
+  },
+  {
+    "id": "E_TWO",
+    "part": "IV",
+    "title": "二内部変数の socle 計数と全四行",
+    "statement": "q=2 のとき Q_C は k[y,z] の単項式 Artin 商。σ_C=dim(0:_{Q_C}(y,z)) なら b^T(Q_C)=(1,σ_C+1,σ_C)。β₁≤P_C+σ_C+1+R、β₂≤2P_C+σ_C+3R、β₃≤P_C+3R、β₄≤R、β₀=1、i>4 で β_i=0。",
+    "quantifiers": [
+      "(EH) のうち q=2、a₁=a、a₂=b の全パラメータ",
+      "全 Betti 行 i≥0"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない",
+      "q=2、y₁=y、y₂=z"
+    ],
+    "depends_on": [
+      "E_TRANSFER"
+    ],
+    "proof_core": [
+      "同次数の純内部語 y^{n−j}z^j の offset na+j(b−a) は相異なり、Q_C の生存語には線形関係がない。",
+      "r+a_j=s+cu のとき基底点は (s,L+1+ε_r−c−ε_s,K+c) へ移る。極小点ならその基底へ、非極小なら 0。",
+      "y,z の双方で 0 になる基底点を数えて σ_C を得る。二変数 Koszul の第 0・第 2 homology と有限長 Euler 等式を使う。",
+      "E21 に q=2 と三項の b_i を代入する。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.8",
+        "equations": [
+          "E22",
+          "E23",
+          "E24"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。二変数の生存単項式と socle の計数は標数に依存しない。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.8 の全四行を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "σ_C は内部 socle、R は actual G の端点 socle であり異なる量。"
+      ]
+    }
+  },
+  {
+    "id": "E_ARTIN",
+    "part": "IV",
+    "title": "Artin 商の親子計数・第一行・全高次行",
+    "statement": "I₁=0 の標準次数付き Artin 商 A=T/I、h_n=dim A_n、P=Σh_n に対し、b₁≤q+Σ_{n≥1}(q−1)h_n/(n+1)≤(q−1)P/3+(q+1)(q+2)/6。h₂ を保持した E26 と q=5 の b₁−P≤14 が成立し、全 i≥1 で b_i≤P binom(q,i)−binom(q+1,i+1)。",
+    "quantifiers": [
+      "任意の体 k、任意の整数 q≥2",
+      "すべての標準次数付き Artin 商 A=T/I、I₁=0",
+      "全 i≥1"
+    ],
+    "assumptions": [
+      "T=k[y₁,…,y_q]",
+      "A=T/I は標準次数付き Artin 商",
+      "I₁=0、従って h₀=1,h₁=q"
+    ],
+    "depends_on": [
+      "X_BASIC"
+    ],
+    "proof_core": [
+      "初期イデアルの全親が標準である子の集合 D_n に、親への重み α_j/(n+1) を付ける。子の総重みは 1、親の候補子の総重みは (n+q)/(n+1)。",
+      "極小生成元数 #D_n−h_{n+1} を加え、Gröbner 基底で元の理想の生成元数を抑える。有理重みは整数計数である。",
+      "E26：b₁≤(q−1)P/4+(q+1)²/4+(q−1)h₂/12、および b₁−P≤q−1+Σ_{n≥1}(q−n−2)h_n/(n+1)。q=5 では h₂≤binom(6,2) より 14。",
+      "係数次数 0→1 の Koszul 微分には、各 i 元集合 J に対応する行 (y_minJ,J∖{minJ}) を選ぶことで符号付き単位小行列がある。従って全標数で rank d_i≥binom(q,i)。",
+      "隣接微分も同様に抑え、b_i=P binom(q,i)−rank d_i−rank d_{i+1} と Pascal 恒等式を使う。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.9",
+        "equations": [
+          "E25",
+          "E26",
+          "E27",
+          "E28"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。有理重みは基礎体内の除法ではなく、Koszul rank 下界は整数行列の ±1 小行列に由来。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 §12.9 の親子計数と単位小行列の証明を保持。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "一般の A の Betti rank が異なる標数で一致するとは主張しない。"
+      ]
+    }
+  },
+  {
+    "id": "E_ROW",
+    "part": "IV",
+    "title": "一般 q の幅側全行パッケージ",
+    "statement": "h_n=dim(Q_C)_n とすると β₁(G)≤P_C+floor(q+Σ_{n≥1}(q−1)h_n/(n+1))+R̂。2≤i≤q+2 では β_i(G)≤P_C binom(q+1,i)+R̂ binom(q+1,i−1)−binom(q+1,i+1)。β₀=1、i>q+2 で β_i=0、上端 β_{q+2}≤R̂。",
+    "quantifiers": [
+      "(EH) の全パラメータ",
+      "全行 i≥0、特に 2≤i≤q+2"
+    ],
+    "assumptions": [
+      "k は任意の体",
+      "q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数",
+      "gcd(a₁,…,a_q,u)=gcd(m,d)=1",
+      "Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]",
+      "S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]",
+      "u<m のみを要求し、du<m は仮定しない"
+    ],
+    "depends_on": [
+      "E_ARTIN",
+      "E_TRANSFER"
+    ],
+    "proof_core": [
+      "Q_C は Artin 商で一次関係を持たないので E_ARTIN を適用できる。",
+      "E25–E28 を actual 核を補償済みの E21 に代入し、Pascal 恒等式と R≤R̂ を使う。",
+      "第一行は必要に応じ E26 の h₂ 付き評価または E27 の q=5 評価で強める。",
+      "Part V が同じ actual source の core 資源と actual interval target の容量を比較する。"
+    ],
+    "sources": [
+      {
+        "path": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+        "section": "§12.9",
+        "equations": [
+          "E29"
+        ]
+      },
+      {
+        "path": "auditability_search/LATER_READABILITY_AUDIT.md",
+        "section": "§§1,7",
+        "equations": [
+          "carry 三行鎖",
+          "actual quotient の Tor 補償"
+        ]
+      }
+    ],
+    "kind": "紙上証明（V02 から保持し必要な橋を展開）",
+    "characteristic": "任意体。各体で成立する上界の合成であり、標数間の rank 一致は不要。",
+    "audit": {
+      "status": "source proof retained; targeted readability reconstruction",
+      "evidence": [
+        "V02 E29 の全範囲を保持し、上端・消滅行を明記。",
+        "LATER_READABILITY_AUDIT §§1,7 の actual-kernel・carry の区別を反映。"
+      ],
+      "limits": [
+        "既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。",
+        "有限検算を全称範囲の証明に置き換えない。",
+        "単独では target 比較を主張しない。ordinary 旧 §15、196 組証書、ナヴィ代替ルートへの依存を持たない。"
+      ]
+    }
+  }
+]

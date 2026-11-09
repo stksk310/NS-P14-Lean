@@ -1,0 +1,886 @@
+# P14 証明依存関係 V03
+
+主定理 I_MAIN から逆向きに追う。各補題のstatement・量化・仮定・先行依存・核心・
+完全証明の所在・入力種別・任意標数性・監査状態を記録する。
+この表と lemma_registry.json は同じデータから生成する。
+
+## 選択したルートと除外した依存
+
+- ordinaryはO_LOW/O_SMALL/O_LARGE。actual Apéry–Sidonを使い、旧第15節の全系統を主依存から外す。
+- narrowはE_TRANSFERを共通基礎にW_CLOSE/N_CLOSE。N4の第一行だけ紙上置換し、高次行と幅4は保持する。
+- 旧196組、旧83組・665比較・5tail、Navi別証明はこのグラフの頂点・前提に含まない。
+- BHP/EKは幅側dense評価に残る。旧ordinary lexの除外から公刊入力まで消したとはしない。
+- X_*は公刊入力又は通常の基礎代数。各出典の監査記録は公刊定理の再証明やLean認証ではない。
+
+## 主定理からの逆引き
+
+| 補題ID | 役割 | 直接の数学的入力 |
+|---|---|---|
+| I_MAIN | P14主定理への全域合成 | I_PARTITION, I_BASE, I_THREE, O_CLOSE, W_CLOSE, N_CLOSE |
+| N_CLOSE | 四生成元・真正狭幅の全域閉鎖 | N_HIGH, N_FIRST, N_SMALL, N_WIDTH4 |
+| N_WIDTH4 | 幅4の全m四剰余Gröbner証明 | E_CORE, E_KERNEL, I_TARGET, X_BASIC |
+| N_SMALL | N4幅6–8の紙上場合分けと幅3・4 | N_FIRST, N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC |
+| N_FIRST | N4三関係による一括計数と無限第一行 | N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC |
+| N_HIGH | 四生成元の全幅・第2–4行 | N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC |
+| N_WORDS | 純軸・混合標準語と元の向きのheight | E_CORE, E_BOUNDS, X_SC, X_BASIC, E_TWO |
+| X_SC | Savchev–Chen長零和自由列 | 外部・基礎入力 |
+| N_DISTANCE | 巡回三点集合の距離和とsocle antichain | X_KNESER, E_CORE, E_BOUNDS, X_BASIC, E_TWO |
+| E_TWO | 二内部変数の socle 計数と全四行 | E_TRANSFER |
+| W_CLOSE | 五生成元以上・物理狭幅の全域閉鎖 | W_EDGE, W_DENSE, W_SPARSE, W_FIVE |
+| W_FIVE | 五生成元の幅6・7とantipodalを含む全幅 | W_EDGE, W_DENSE, X_KNESER, E_TRANSFER, E_BOUNDS, E_ARTIN, I_TARGET, X_BASIC |
+| W_SPARSE | 六生成元以上の疎幅と高次行の正規化移行 | X_KNESER, E_BOUNDS, E_TRANSFER, E_ARTIN, I_TARGET, X_BASIC, E_ROW |
+| E_ROW | 一般 q の幅側全行パッケージ | E_ARTIN, E_TRANSFER |
+| E_ARTIN | Artin 商の親子計数・第一行・全高次行 | X_BASIC |
+| X_KNESER | Kneser和集合定理 | 外部・基礎入力 |
+| W_DENSE | 密幅の欠落prefix・lex調和計数と容量差 | E_CORE, E_BOUNDS, E_TRANSFER, X_BHP_EK, I_TARGET, X_BASIC |
+| X_BHP_EK | BHP/EK任意標数版 | 外部・基礎入力 |
+| W_EDGE | 五生成元以上の最小幅・一欠落幅 | I_TARGET, E_CORE, E_BOUNDS, E_TRANSFER, X_BASIC, X_AP_BETTI, X_AP_CONE |
+| E_TRANSFER | actual quotient の核を補償する全行 Betti 移行 | E_HOMOLOGY, E_BOUNDS |
+| E_HOMOLOGY | 端点 Koszul homology の正確な三項 | E_STOP |
+| E_BOUNDS | 距離和と height による一様な P_C,R 上界 | E_STOP |
+| E_STOP | 有限停止・有限 E-生成性・rank 0 | E_KERNEL |
+| E_KERNEL | 全長い表示との競合と actual 核 | E_COORD |
+| E_COORD | 有限端点座標と E-加群直和 | E_CORE |
+| E_CORE | 整数コアから actual 接錐への単項式全射 | X_BASIC |
+| O_CLOSE | ordinary 全域・全 Betti 行・任意体の閉鎖 | O_CUT, O_LOW, O_SMALL, O_LARGE, O_SCALAR, O_TARGET, I_FIELD, I_TARGET |
+| O_LARGE | r≥9 だけに制限した既存 universal scalar | O_TOWER, O_SCALAR |
+| O_SMALL | 五行固定 cutoff scalar の全域閉鎖 | O_TOWER, O_SCALAR, O_SIDON |
+| O_SIDON | actual maximal-quadratic Apéry–Sidon bound | O_COORD, O_CUT |
+| O_SCALAR | 全相対 rank を一つの scalar に還元 | O_TOR, O_TARGET |
+| O_LOW | 二本・三本 cut の直接閉鎖 | O_TOWER, O_TOR, O_TARGET |
+| O_TARGET | zero-homology correction と target coefficient identity | O_CUT, O_TOR, I_TARGET, X_BASIC |
+| I_TARGET | actual interval容量 | X_AP_BETTI, X_AP_CONE |
+| X_AP_CONE | 算術列半群環と接錐のBetti一致 | 外部・基礎入力 |
+| X_AP_BETTI | 算術列半群環のBetti公式 | 外部・基礎入力 |
+| O_TOR | 三段 Tor chain と全相対 rank の重み | O_COORD, O_TOWER, O_HARMONIC, X_BASIC |
+| O_HARMONIC | harmonic Koszul rank bound | X_BASIC |
+| O_TOWER | actual tower と同一資源列 | O_COORD, O_VOLUME, O_CUT |
+| O_VOLUME | least-offset paths と有限総資源 | O_COORD |
+| O_CUT | 一つの square-zero cut | O_COORD, X_GREEN, I_FIELD |
+| I_FIELD | 同標数の体拡大 | X_BASIC |
+| X_GREEN | Green次数2制限 | 外部・基礎入力 |
+| O_COORD | numerical Apéry quotient と同 jump strata | X_BASIC |
+| I_THREE | 三生成元の全行 | X_LTV |
+| X_LTV | 三生成元のP14比較 | 外部・基礎入力 |
+| I_BASE | 一・二生成元 | X_BASIC |
+| I_PARTITION | 全パラメータの分割 | I_NORMALIZE |
+| I_NORMALIZE | 狭幅sourceの正規化 | X_BASIC |
+| X_BASIC | 通常の同調代数・Gröbner道具 | 外部・基礎入力 |
+
+## 全補題の精密な記録
+
+### X_BASIC：通常の同調代数・Gröbner道具
+
+- **配置：** 基礎
+- **正確なstatement：** Koszul複体は多項式環上のTorを計算する。短完全列のTor長完全列、有界二重複体のスペクトル系列、Hilbert syzygy、分数体上のEuler式、同次Gröbner除法を使う。
+- **量化範囲：** 本稿で指定する各体k、有限生成次数付き加群、有界Koszul二重複体。
+- **仮定：** 各箇所の有限生成性、収束、有限次元Torを個別に確認する。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** 標準的な基礎代数を入力として固定し、スペクトル系列の退化や任意の商のBetti単調性は含めない。
+- **通常の基礎代数の使用宣言：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2、§6–8、§12、§14.6；
+- **入力種別：** standard_algebra
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_NORMALIZE：狭幅sourceの正規化
+
+- **配置：** I
+- **正確なstatement：** e≥4かつw≤m−2ならd=gcd(g2−m,...,ge−m),u=w/d,q=e−2として端点模型E1の仮定とm≥du+2を満たす。
+- **量化範囲：** 全真正なe≥4数値半群、整数幅w≤m−2。
+- **仮定：** d≥1、g1=m。
+- **先行依存：** X_BASIC
+- **証明の核心：** 正規化offsetは相異なる整数0<a1<...<aq<u、gcd条件はΓのgcd1から従う。q+1≤u、u<m。actual sourceを別の半群へ置換しない。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.1、§12.1、§16；E1
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_PARTITION：全パラメータの分割
+
+- **配置：** VI
+- **正確なstatement：** e≤3を先に処理し、e≥4では整数幅によりw≤m−2又はw≥m−1。狭幅はe=4とe≥5、ordinaryはr=2,3/4..8/≥9へ分ける。
+- **量化範囲：** 全真正な数値半群、任意体。
+- **仮定：** e=1では空集合gcdを定義しない。
+- **先行依存：** I_NORMALIZE
+- **証明の核心：** w=m−1はordinaryに含める。r≤e−1、r≥9⇒e≥10、δ≥a_rの各成立条件を確認する。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §4、§16；
+- **引用する範囲：** V02§16の整数幅分割と小生成元数の切分けのみ。旧§11/§15への全域合成は用いない。
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_BASE：一・二生成元
+
+- **配置：** VI
+- **正確なstatement：** e=1ならΓ=Nでsource=target。e=2ならG=k[x,y]/(y^m)、Betti列(1,1)でactual targetが支払う。
+- **量化範囲：** 真正な数値半群、任意体、e=1又は2、全i≥0。
+- **仮定：** e=2ではΓ=<m,n>,m<n,gcd(m,n)=1。
+- **先行依存：** X_BASIC
+- **証明の核心：** y^m−x^nの最低次数項はy^m。sourceのi≥2行は0で、targetの定義理想は非零。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §16；
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### X_LTV：三生成元のP14比較
+
+- **配置：** 公刊入力
+- **正確なstatement：** 三生成元数値半群の接錐Betti数はactual interval completionの対応Betti数以下。
+- **量化範囲：** 真正な三生成元数値半群、任意体、全total Betti行。
+- **仮定：** Lan–Tu–Vu arXiv:2307.05589v1 Theorem1.1の仮定。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** 理想のBettiから商へ正行の添字を1ずらし、第0行1を補う。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(5)、§16；
+- **公刊原典：** [Lan–Tu–Vu, Betti numbers of the tangent cones of monomial space curves](https://arxiv.org/html/2307.05589v1#S1) Theorem1.1
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_THREE：三生成元の全行
+
+- **配置：** VI
+- **正確なstatement：** e=3のP14比較。ordinaryはO_CLOSEでも処理できるが、全域合成では公刊三生成元定理を使って一度だけ処理する。
+- **量化範囲：** 真正な三生成元数値半群、任意体、全i≥0。
+- **仮定：** actual completion、最小多項式表示。
+- **先行依存：** X_LTV
+- **証明の核心：** 公刊定理の理想/商添字換算。ordinaryへの別証明を主DAGの追加辺にしない。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(5)、§16；
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### O_COORD：numerical Apéry quotient と同 jump strata
+
+- **配置：** II
+- **正確なstatement：** x=[m], A=G/xG, T=(0:_G x), N⊂A を非 Apéry head の S0-斉次イデアルとする。actual Q=A/N は Apéry 基底を持ち length Q=m, q0=1,q1=e−1,Σ_{s≥2}q_s=δ, A2=Q2, ν≤δ+1。terminal τ↦τ+m は基底全単射。2≤d(τ)≤ν。同 jump のみ gr_s^D(T)≅F_sN/F_{s−1}N（次数差 s）。
+- **量化範囲：** 任意体 k、真正な最小生成系 Γ=<m=g1<…<ge>, e≥2。各 s、全生きた非 x 作用。Part II の cut 以後は e≥3。
+- **仮定：** G は actual tangent cone、ord は最長生成元表示長。；N は abstract profile の代用ではなく actual 非 Apéry 座標から作る。
+- **先行依存：** X_BASIC
+- **証明の核心：** 前駆元の存在は非 x 積で保たれる。T の生きた作用で jump は非減少、N では非増加で、等 jump のとき両作用が一致する。I_Q の生成次数≤ν+1 と terminal 次数≥1 より jump≤ν が全 head に伝播する。T と N 全体の同型は使わない。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §2；(2.1)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §2・§5：逆向きの strata と一つの資源列；D_sT と gr_sT の式
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE の同 stratum 導出は両側の jump 単調性を明示する。；SIDON 独立監査 §1 は Q の actual 座標と代数性を別途確認する。
+- **監査の限界：** 公刊入力の原典の全面再査読はこの再構成の範囲外。；既存監査の記録を形式検証と読み替えない。
+
+### X_GREEN：Green次数2制限
+
+- **配置：** 公刊入力
+- **正確なstatement：** 標準次数付き代数の一般超平面切断の次数2 Hilbert関数をMacaulay下降で上から評価できる。反復によりr=max(2,p(a))本で二次以上を消せる。
+- **量化範囲：** 無限体k上の標準次数付き代数、一般一次形式、a=dim A2。
+- **仮定：** 有限体では先に同標数の無限純超越拡大へ移る。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** Caviglia §1 (1.1) に再掲された原Green定理の次数2部分。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(1)、§4；
+- **公刊原典：** [Caviglia, A hyperplane restriction theorem and applications to reductions of ideals](https://www.math.purdue.edu/~gcavigli/Articles-PDF/%5BS4%5D.pdf) §1 (1.1)、原Green定理の任意標数版
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_FIELD：同標数の体拡大
+
+- **配置：** I
+- **正確なstatement：** 多項式環上のgraded/total Betti数は体拡大で不変。有限体から無限な純超越拡大へ移り、一般cutを選んだ後に元の体へ戻せる。
+- **量化範囲：** 任意体k、体拡大K/k、本稿の有限生成次数付き代数G。
+- **仮定：** 同じ標数、flatな体拡大。
+- **先行依存：** X_BASIC
+- **証明の核心：** 極小自由解消の体拡大、またはTorとflat base change。異なる標数のrank一致は主張しない。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §4、§16；
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### O_CUT：一つの square-zero cut
+
+- **配置：** II
+- **正確なstatement：** a=q2、p(a)=max{p≥0:C(p+1,2)≤a}、r=max(2,p(a)) と置く。2≤r≤e−1 で、独立な非 x 一次形式 E=(λ1,…,λr) を一度固定して (A/EA)_{≥2}=0 とできる。P=k[E] に全 strata と完全列を制限する。
+- **量化範囲：** 任意体 k、e≥3、actual a。有限体は同標数の純超越拡大後に一般形式を選ぶ。
+- **仮定：** O_COORD の A2=Q2、a≤C(e,2)。；以後 cut を変更しない。
+- **先行依存：** O_COORD, X_GREEN, I_FIELD
+- **証明の核心：** a=C(p+1,2)+b,0≤b≤p として Green の次数2 bound を s 回反復し、C(p+1−s,2)+max(b−s,0) を得る。s=p で零。p<2 なら二本へ拡張。標準生成により高次も零。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §4；次数2の反復 Green bound
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §2・§5；P への制限と square-zero cut
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** V02 §4 は有限体を同標数拡大で処理する。；CORE は単一次数生成性への cut の使用箇所を特定する。
+- **監査の限界：** 公刊入力の原典の全面再査読はこの再構成の範囲外。；既存監査の記録を形式検証と読み替えない。
+
+### O_VOLUME：least-offset paths と有限総資源
+
+- **配置：** II
+- **正確なstatement：** bρ は剰余 ρ の最小正 offset 和、lρ はその最短語長、sρ=ord(ωρ), Lρ=(ωρ−bρ)/m。非零剰余では 1≤sρ≤Lρ≤lρ。bρ 昇順 ρ_k について Lρ_k−1≤min(δ,k−1)、Σ_{ρ≠0}(Lρ−1)≤δV。Σ_{τ≡ρ}(d(τ)−1)=Lρ−sρ。order は q≥lρ−Lρ で ord(ωρ+qm)=Lρ+q に安定する。
+- **量化範囲：** 任意真正な Γ、各非零剰余 ρ、1≤k≤m−1、各整数 q≥lρ−Lρ。
+- **仮定：** δ=m−e, V=e+δ/2−3/2。；offset は actual atoms gi−m>0。
+- **先行依存：** O_COORD
+- **証明の核心：** least-offset 語の prefix も最小で剰余重複がない。atom 剰余は e−1 個で L を増やさず、残る δ 個でだけ高々 1 増える。Σ min(δ,k−1)=δV。安定化までの order 増分余剰を望遠和すると terminal jump の和を得る。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §3；(3.1)、(3.2)、(3.3)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §2・§5：区間計数；S≤δV
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE は (3.2) を用いた同一資源列の区間長との接続を確認する。
+- **監査の限界：** 公刊入力の原典の全面再査読はこの再構成の範囲外。；既存監査の記録を形式検証と読み替えない。
+
+### O_TOWER：actual tower と同一資源列
+
+- **配置：** II
+- **正確なstatement：** F_s は jump≤s の head ideal、U_s=A/F_{s−1},X_s=(U_s)_{≥s},M_s=(U_s)_{≥s+1},K_s=F_s/F_{s−1}。0→K_s→M_s→X_{s+1}→0、X_{ν+1}=0。X_s,M_s はそれぞれ次数 s,s+1 のみで生成。H_t=Σ_s dim(X_s)_{s+t} は有限台、H0=δ,0≤H_t≤M,S=ΣH_t=Σ_{ρ≠0}(Lρ−1)≤δV,H1=δ−a+ℓ≤M−a,H1≤rδ。r≥3 なら a≥a_r=C(r+1,2) なので H1≤M−a_r。
+- **量化範囲：** 一つの Γ・体・cut を固定し、2≤s≤ν、全 t≥0。δ=0 は空塔と零資源列。
+- **仮定：** M=m−1、ℓ は actual 次数1 terminal の数。；F1=0,Fν=N。
+- **先行依存：** O_COORD, O_VOLUME, O_CUT
+- **証明の核心：** jump s の head 次数≥s+1 より K_s⊂M_s、商は X_{s+1}。Apéry 座標の t 区間 [0,sρ−2]、次数 p・jump d の terminal head の区間 [p,p+d−2] は同じ剰余で互いに素。各剰余は各 t に高々1。長さ和は Lρ−1。H1 の identity と Σ_s r q_s=rδ を同時に保つ。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §5；(5.1)、(5.2)、(5.3)、(5.4)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §2・§5；区間計数表、H1≤Σ_s r q_s
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE が K_s⊂M_s、商の同定、区間の s 範囲、資源の同一性を確認。
+- **監査の限界：** abstract Hilbert profile へ置換しない。；異なる cut の H1 cap・総資源を混用しない。；形式認証は未実施。
+
+### O_HARMONIC：harmonic Koszul rank bound
+
+- **配置：** II
+- **正確なstatement：** P=k[x1,…,xr]、単一次数 b のみで極小生成される有限長 Z、h_t=dim Z_{b+t} に対し c_j^P(Z)≤C(r−1,j)Σ_{t≥0} j h_t/(t+j) (1≤j<r)。c0=μ_P(Z),c_r=0。
+- **量化範囲：** 任意体、r≥2、全有限長の単一次数生成 P-加群 Z、1≤j<r。
+- **仮定：** 同 shift の表示 P^q→Z を使う。；c_j は rank Euler 交代和。
+- **先行依存：** X_BASIC
+- **証明の核心：** 初項加群商への Koszul 行列を同ラベル block 三角化し R_i(Z)≥R_i(Z*)。単項式商で source (m/x_v,F∪{v}) の対角±1 minor を作り、α_v/(t+j) による整数 rank の数値平均で R_{j+1}≥C(r−1,j)Σ t h_t/(t+j)。c_j=C(r−1,j)length Z−R_{j+1}。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §6；(6.1)、(H)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §6：Harmonic Koszul 評価；block 三角 minor、対角±1 minor、rank と c_j の式
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE は初項 rank 比較と単項式 minor の両段を点検した。
+- **監査の限界：** 有限長かつ単一次数生成が必要。；有理重みは体内の除算ではなく整数 rank の数値評価。；Lean 未認証。
+
+### O_TOR：三段 Tor chain と全相対 rank の重み
+
+- **配置：** II
+- **正確なstatement：** R=k[x,E]。c_j^R(G)=c_j^P(A)+c_{j−1}^P(T)−ρ_{j+1}。B=A/X2、L_j=(e−1)C(r−1,j)−C(r−1,j+1)。c_j(G)≤L_j+Σ_t W_j(t)H_t (1≤j≤r)。W1(0)=r−1,W1(1)=(r+1)/2,W1(t)=(r−1)/(t+1) (t≥2)。j≥2: W_j(0)=C(r−1,j), W_j(t)=jC(r−1,j)/(t+j)+(j−1)C(r−1,j−1)/(t+j−2) (t≥1)。
+- **量化範囲：** 同じ Γ、k、P、全 1≤j≤r（top rank 含む）。
+- **仮定：** ρ_i は d2:Tor_i^P(A,k)→Tor_{i−2}^P(T,k) の実 rank。；jump strata の比較のみを用いる。
+- **先行依存：** O_COORD, O_TOWER, O_HARMONIC, X_BASIC
+- **証明の核心：** 三段を明示する: c_j(G)≤L_j+c_j(X2)+c_{j−1}(T); c_{j−1}(T)≤Σ_s c_{j−1}(K_s); c_{j−1}(K_s)≤c_{j−1}(M_s)+c_j(X_{s+1})。X_{ν+1}=0 で望遠和。j=1 は c0(M_s)=μ(M_s) を正確に保持する。完全列の補正 d_{j+1} および b_{j+1}(L)−d_{j+1} は非負の減算。spectral sequence の退化は不要。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §7；(7.1)、(7.2)、(7.3)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §7：(7.2) は3段の鎖を表示したい；一般完全列の補正、d2 の添字、具体的な3段
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE が省略されていた三段鎖を独立に再構成し、補正項の用語も修正する。
+- **監査の限界：** T と N 全体の同型は不可。；省いた全量を connecting rank 自体と呼ばず、その補数も含む非負減算とする。；形式認証は未実施。
+
+### X_AP_BETTI：算術列半群環のBetti公式
+
+- **配置：** 公刊入力
+- **正確なstatement：** 真正な最小算術列生成系の半群環に対し、Gimenez–Sengupta–Srinivasan Theorem4.1のBetti公式を使用する。
+- **量化範囲：** 任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系である算術列数値半群。
+- **仮定：** Gimenez–Sengupta–Srinivasan Theorem4.1の仮定と上記最小性。targetではd=1,1≤v≤m−1、W_EDGEのsourceではd≥1,u<mの仮定から最小性を得る。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** 一般の算術列の原公式m=av+b (1≤b≤v)を使用する。actual interval targetはd=1の特殊例で、D=v−b+1へ換算。W_EDGEの完全算術列sourceでも同じ公刊入力を使用する。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(4)、§1.3；TAR
+- **公刊原典：** [Gimenez–Sengupta–Srinivasan, arXiv:1108.3203](https://arxiv.org/pdf/1108.3203) Theorem4.1
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### X_AP_CONE：算術列半群環と接錐のBetti一致
+
+- **配置：** 公刊入力
+- **正確なstatement：** 算術列生成系では定義理想とその接錐理想のBetti数が一致する。
+- **量化範囲：** 任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系。
+- **仮定：** Herzog–Stamate Proposition2.5の算術列最小生成系。targetのd=1およびW_EDGEのsourceのd≥1を含む。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** 算術列半群環公式をactual completionの接錐へ移す。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(4)、§1.3；TAR
+- **公刊原典：** [Herzog–Stamate, arXiv:1308.4644v3](https://arxiv.org/pdf/1308.4644v3) Proposition2.5
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### I_TARGET：actual interval容量
+
+- **配置：** I
+- **正確なstatement：** v=min(w,m−1)のactual completionのBetti数はTAR。剰余別最小値TMINはvについて非減少。ordinaryではFi=iC(m,i+1)。
+- **量化範囲：** m≥2、w≥1、全i≥1。第0行1、i>vは0。
+- **仮定：** 各環をそれぞれの最小生成系の多項式環で表示する。
+- **先行依存：** X_AP_BETTI, X_AP_CONE
+- **証明の核心：** mからm+vがちょうどtargetのatom。算術列公式のD=v−((m−1) mod v)を固定し、Dに関する最小値を境界で取る。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.3；TAR、TMIN、ORD、TLOW
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### O_TARGET：zero-homology correction と target coefficient identity
+
+- **配置：** II
+- **正確なstatement：** ordinary target T_m=1+Σ_{i≥1}iC(m,i+1)z^i。f=e−r−1,C(z)=Σ_{j=1}^r c_j(G)z^j に対し B_G≼T_{f+1}+(1+z)^f[B_G^R−(f+1)]=T_{e−r+1}+(1+z)^{e−r}C(z)。q=e−r,N*=δ+r−1 とすると T_m−T_{q+1}=(1+z)^qΣ_{j=1}^{N*}R_j z^j、R_j=(q+j)C(N*,j)+jC(N*,j+1)。全 j≤r の c_j≤R_j が全 Betti 行に十分。また R_j−L_j≥δ(V+1)C(r−1,j−1)。
+- **量化範囲：** actual ordinary completion を持つ source、同体、全1≤j≤r、全 Betti i≥0。δ=0 も含む。
+- **仮定：** w≥m−1。；R=k[x,E]、残る f 本の非 x 形式を Z とする。；範囲外二項係数は零。
+- **先行依存：** O_CUT, O_TOR, I_TARGET, X_BASIC
+- **証明の核心：** B_G^R=(1+z)((f+1)+C)、H0(K_R(G))=k[Z]/(Z)^2 を正確に用いる。0 行のみ T_{f+1}、高次行は鎖群次元で抑え、定数 f+1 を引く。Σ_{a=0}^{N*−1}(q+1+a)C(a,j−1)=(q+j)C(N*,j)+jC(N*,j+1) を hockey-stick で得る。余る j>r の係数は非負。Vandermonde の非負 remainder Γ_j と Pascal 差から target margin を得る。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §8；(8.1)、(8.2)、(8.3)、(8.4)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §8：(8.1) と (8.2) の省略を埋める；(A8.1)、(A8.2)
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE が zero-homology の定数補正と exact target 差を独立導出した。；CORE の 16,767 厳密係数照合は添字検出用の補助であり全称証明ではない。
+- **監査の限界：** 商の Betti 単調性や spectral sequence の退化は仮定しない。；公刊 actual target 公式は I_TARGET の入力。；Lean 未認証。
+
+### O_LOW：二本・三本 cut の直接閉鎖
+
+- **配置：** III
+- **正確なstatement：** r=2,3 の全 actual ordinary source で c_j(G)≤R_j (1≤j≤r)。r=2: c1−L1≤min(3S/2−δ/2,5δ/2+S/2)≤δ(V+1),c2≤S−δ。r=3: c1−L1≤4δ/3+4H1/3+2S/3,c2−L2≤3δ+3S/2,c3≤S−δ。
+- **量化範囲：** 同一資源列の actual cut r∈{2,3}、全e≥r+1、全δ（r=3ではδ≥6）。
+- **仮定：** ordinary target、O_TOWER の同時 bounds。；r=3 ではa≥6,e≥4,V≥11/2。
+- **先行依存：** O_TOWER, O_TOR, O_TARGET
+- **証明の核心：** r=2 は V≤3 と V≥3 に分け、H1≤S−δ と H1≤2δ を同じ列に使う。r=3 の第1 rank は H1≤M−6、z=δ−6 として δ(V−1)−4(M−6)=(z+2)e+C(z,2)+7>0。第2 rank は H1≤3δ と W2 の t≥2 cap 3/2 で導出し、targetとの差 δ(V/2−1)≥0。top rank は S−δ≤δ(V−1)。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §9；r=2 の二評価、r=3 の三評価
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §9：r=3 の追加上界の使用；W2 の値、δ(V−1)−4(M−6) の恒等式
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE が rank 2 の係数 3 と 3/2、二つの H1 cap の使い分けを確認する。
+- **監査の限界：** 公刊入力の原典の全面再査読はこの再構成の範囲外。；既存監査の記録を形式検証と読み替えない。
+
+### O_SCALAR：全相対 rank を一つの scalar に還元
+
+- **配置：** III
+- **正確なstatement：** r≥4 で F_r=(r−1)δ+(r+1)H1/2+Σ_{t≥2}(r−1)H_t/(t+1)。全1≤j≤rで c_j(G)≤L_j+C(r−1,j−1)F_r。従って F_r≤δ(V+1) は全 Betti 行の十分条件。
+- **量化範囲：** 任意 actual cut r≥4、同一H_t、全相対1≤j≤r。
+- **仮定：** O_TOR の重み。；同一資源列の維持。
+- **先行依存：** O_TOR, O_TARGET
+- **証明の核心：** 正規化重みは (r−j)/(t+j)+(j−1)/(t+j−2)。j≥3 は分母を t+1 と比較、j=2 の基準重みとの差は [2−(r−3)t]/[t(t+1)(t+2)]≤0 (t≥2)。例外 t=1,j=2 は (r+1)/3≤(r+1)/2。t=0 と j=r も含める。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §10；(10.1)、(10.2)
+- **内部監査・途中式の補助展開：** [auditability_search/CORE_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/CORE_READABILITY_AUDIT.md) §10 と記号上の最小整理；j=2,t=1 の例外
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** CORE が top rank、t=0 および唯一の低次数例外を確認する。
+- **監査の限界：** 公刊入力の原典の全面再査読はこの再構成の範囲外。；既存監査の記録を形式検証と読み替えない。
+
+### O_SIDON：actual maximal-quadratic Apéry–Sidon bound
+
+- **配置：** III
+- **正確なstatement：** actual Q の q2=C(e,2) なら m≥e(e−1)+1, δ≥(e−1)^2。actual cut が r=e−1 かつ r≥3 の場合は q2=C(e,2) が強制されるので、e=r+1,δ=a_r は不可能。特に r=6,7,8 の負基点 (e,δ)=(7,21),(8,28),(9,36) は actual source を持たない。
+- **量化範囲：** 任意体、真正な最小生成系 e≥2。cut の系は r=e−1 かつ r≥3 のときのみ。
+- **仮定：** Q は O_COORD の actual numerical Apéry quotient。；二次単項式写像が次数2の全射。
+- **先行依存：** O_COORD, O_CUT
+- **証明の核心：** q2 最大なら全二次単項式は別々の次数2の非零 Apéry 座標。B={0,g2 mod m,…,ge mod m} の反復を許す二項和は、異次数の Apéry 元の一意性も用いて全部異なる。b−c=b′−c′→b+c′=b′+c により非対角順序対の差が非零剰余へ単射、e(e−1)≤m−1。
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_PAPER_REDUCTION_JA.md) §1；(SO1)、(SO2)
+- **内部監査・途中式の補助展開：** [auditability_search/SIDON_INDEPENDENT_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/SIDON_INDEPENDENT_AUDIT.md) §§1–4；(1)、(2)、actual-cut の r≥3 条件
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_REDUCTION_REFEREE.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_REDUCTION_REFEREE.md) Actual quotient and characteristic；r=2 の補正
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** SIDON 独立監査は全二項和・cross-degree 排除・difference injection を確認した。；REFEREE が r=2 の過大適用を発見し、r≥3 に修正済みであることを再確認した。
+- **監査の限界：** abstract Artin Hilbert profile への結論ではない。；r=2 には cut の系を適用不可。反例 Γ=<6,7,11>:q2=2,r=e−1=2,δ=3。；標数2・偶数mにも例外なし。Lean 未認証。
+
+### O_SMALL：五行固定 cutoff scalar の全域閉鎖
+
+- **配置：** III
+- **正確なstatement：** 4≤r≤8、actual e≥r+1,δ≥a_r に対し F_r<δ(V+1)。固定整数 n≥r、α=(r−1)/(n+1),c=(r+1)/2−α による U=αδV+(r−1−α)δ+c(M−a)+MΣ_{j=2}^{n−1}((r−1)/(j+1)−α)、G=δ(V+1)−U とする。e=r+1+s,δ=a+t に対し G=g+sA+tb+(1−α)(C(t,2)+st)、A=a−1−(r−1)(H_n−2+(a+2)/(n+1)),b=A+2−α(r−1)。
+- **量化範囲：** r∈{4,5,6,7,8}、整数s,t≥0、actual同一資源列。
+- **仮定：** H0=δ,H_t≥0,ΣH_t≤δV,H_t≤M,H1≤M−a_r。；a=a_r、固定 n は r ごとに表の値を用い δ に依存させない。
+- **先行依存：** O_TOWER, O_SCALAR, O_SIDON
+- **証明の核心：** α を各重みから引き、正の残余係数へ容量、負の残余へ H_t≥0 を用いる。表 (r,a,n,L,Lg,LA,Lb) は (4,10,7,280,2443,762,1007),(5,15,10,6930,39380,28429,32209),(6,21,13,72072,−7479,424147,439591),(7,28,17,2042040,−12196485,17076937,17076937),(8,36,21,739024,−5070732,8418651,8250691)。全行 A,b,1−α>0、r4,5 はg>0、r6..8 はg+A,g+b>0。整数 s+t≥1 で恒等式は正、残る三角は O_SIDON で排除。
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_PAPER_REDUCTION_JA.md) §§2–3；(SO3)、(SO4)、五行表、(SO5)
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_REDUCTION_REFEREE.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_REDUCTION_REFEREE.md) Resource inequality and exact expansion；g+A と g+b の表
+- **厳密算術の検算補助：** [auditability_search/ordinary/verify_ordinary_reduction.py](/workspace/NS-P14-Lean/auditability_search/ordinary/verify_ordinary_reduction.py) 独立 Fraction 検算；SO3 polynomial coefficients、五行と符号
+- **入力種別：** paper+exact_arithmetic
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** REFEREE が独立 symbolic 展開と全表・隣接 gap を再現した。；既存 checker は旧83組証書・checkerを読み込まない。
+- **監査の限界：** 有限検算が無限域を証明するのではなく恒等式と整数符号が証明する。；checker は Sidon、資源構成、Tor 移行を証明しない。；この registry は既存監査の実行記録を引用。新たな大探索はしない。Lean 未認証。
+
+### O_LARGE：r≥9 だけに制限した既存 universal scalar
+
+- **配置：** III
+- **正確なstatement：** actual cut r≥9 はe≥r+1≥10,δ≥a=r(r+1)/2 を満たし F_r<δ(V+1)。D=floor(a/2)+1、α=(r−1)/(D+1) を固定。G_r(e,δ)=G_r(10,δ)+(e−10)A_r(δ)。g0=G_r(10,a)>0,A0=A_r(a)>0,b0=A0+11−r−8α>1/4。整数t=δ−a≥0 で A_r(a+t)=A0+(1−α)t、G_r(10,a+t)=g0+t b0+(1−α)C(t,2)>0。
+- **量化範囲：** r≥9,e≥10,整数δ≥a_r（actual適用はe≥r+1）。同一資源列。
+- **仮定：** O_TOWER の H1≤M−a_r を維持。；D は δ に依存せず固定。；旧 scalar の r4..8 seeds は不要、r9 seed と r≥10 barrier のみ使用。
+- **先行依存：** O_TOWER, O_SCALAR
+- **証明の核心：** O_SMALL と同じ一般重み差し引きを n=D で独立に適用。g0=(r−1)(a+9)(T_r−H_D)。r9 はa45,D23,T9=269/72,H23=444316699/118982864<747/200<T9、gap=1/900。r≥10 はB(r)=r/4+1+9/(2r) と正係数分解によりB<T1≤T_r。H28<B10 と H_{D_{r+1}}−H_{D_r}<2/r<B(r+1)−B(r) の帰納。g0=(a+9)A0+C,C<0 と既存S21–S27から A0>0,b0>1/4。有限差分の恒等式で全δとeを処理。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §11：r≥9 に制限；(S2)–(S10)、(S11)のr=9場合、旧表r=9行のみ、(S12)–(S31)
+- **内部監査・途中式の補助展開：** [proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md](/workspace/NS-P14-Lean/proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md) §2：§11 固定 cutoff scalar；scalar恒等式の監査
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §11 の scalar algebra；S28→S30
+- **厳密算術の検算補助：** [proof_integrated_v2/checks/verify_scalar.py](/workspace/NS-P14-Lean/proof_integrated_v2/checks/verify_scalar.py) 厳密 scalar 検算；symbolic barrier、exact anchors
+- **入力種別：** paper+exact_arithmetic
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** V02 最終数学レビューが e slope、C identity、二つの parity bound を独立再展開。；LATER 監査は固定Dでの正二次式・全差分を確認。；REFEREE が既存 scalar checker の成功を記録。
+- **監査の限界：** 旧checkerが余分にr4..8を診断しても主DAGの必要 seed はr9だけ。；351有限診断等を無限tailの証明としない。；公刊定理原典・Lean認証は別工程。
+
+### O_CLOSE：ordinary 全域・全 Betti 行・任意体の閉鎖
+
+- **配置：** III
+- **正確なstatement：** 任意体 k、真正な e≥3 source、w≥m−1 なら β0(G)=1、全i≥1で β_i(G;k)≤iC(m,i+1)=β_i(G_actual completion;k)。
+- **量化範囲：** 全任意体、全真正な数値半群 e≥3,w≥m−1、全Betti行i≥0。
+- **仮定：** ordinary completion は actual Γ の interval completion。；各sourceで一つのcutとその一つの資源列を固定。
+- **先行依存：** O_CUT, O_LOW, O_SMALL, O_LARGE, O_SCALAR, O_TARGET, I_FIELD, I_TARGET
+- **証明の核心：** 必ず2≤r≤e−1。r2,3はO_LOW、r4..8はO_SMALL、r≥9はO_LARGE（e≥10）で閉じる。O_SCALAR と O_TARGET で top relative rank を含む全 Betti 行へ移す。一般cut用の同標数拡大だけ I_FIELD で戻す。e1,2は全域合成の別枝。
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_PAPER_REDUCTION_JA.md) §4：全ordinaryへの接続と置換範囲；r=2,3／4..8／≥9 の分割
+- **内部監査・途中式の補助展開：** [auditability_search/ORDINARY_REDUCTION_REFEREE.md](/workspace/NS-P14-Lean/auditability_search/ORDINARY_REDUCTION_REFEREE.md) Coverage and checker boundary；全rank・同体への接続
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §§8–11；全Betti行の移行
+- **入力種別：** paper
+- **任意標数性：** 任意標数。同じ体で構成・Tor を評価する。一般 cut が必要な場合のみ I_FIELD の同標数純超越拡大を使い、intrinsic Betti 数を戻す。異標数間の rank 一致は仮定しない。
+- **現在の監査：** 既存独立監査との整合を確認した構造化骨子。Lean 未認証。
+- **監査根拠：** REFEREE は r≥9⇒e≥10、全rank・全Betti行に欠落がないことを確認。；CORE・SIDON・REFEREE・FINAL/LATER の対象範囲を分離して採用。
+- **監査の限界：** e≤2 と narrow-width 側は Part VI の独立枝。；旧§15・first-hit・truncated lex・83profile・665比較・5tail・ナヴィ法は主依存ではない。資料自体は保存。；現担当範囲で真のgapは発見していない。最終査読・形式認証は未実施。
+
+### E_CORE：整数コアから actual 接錐への単項式全射
+
+- **配置：** IV
+- **正確なstatement：** 表示された生成元は最小で Γ は数値半群。C=k[s,st^{a₁},…,st^{a_q},st^u] から G へ、sⁿtᴮ↦(t^{nm+dB})*（ν(nm+dB)>n なら 0）の次数付き環全射 φ があり、ker φ は C の単項式基底の一部で張られる。
+- **量化範囲：** (EH) の全パラメータ；C の全単項式 sⁿtᴮ、n≥0
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** X_BASIC
+- **証明の核心：** 生成元に長さ l≥2 の表示があれば (l−1)m=d(a−B) より l−1=jd、a−B=jm≥m>u で矛盾。；二つの gcd 条件から全生成元の gcd は 1。；最大分解長 ν(h) は有限。ν(h)=n の数値指数 h が G_n の基底となり、最大長表示が全射性を与える。；固定 n の相異なる B は相異なる nm+dB を与えるので、核は単項式核となる。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.1；E1、E2
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。数値指数で区別される基底を用い、標数を比較しない。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.1 の最小生成性・全射性・単項式核の論証を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。
+
+### E_COORD：有限端点座標と E-加群直和
+
+- **配置：** IV
+- **正確なstatement：** B=r+uK、n=L+K+ε_r の一意座標で C≅⊕_{r=0}^{u−1}M_r[ε_r,r]。M_r は |α|≤u−1 の内部語からの有限単項式リストで生成され、全 M_r≠0、M₀=E、H_x≤u−2。この分解は E-加群同型である。
+- **量化範囲：** (EH) の全パラメータ；0≤r<u；α∈ℕ^q、|α|≤u−1
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_CORE
+- **証明の核心：** u 個の内部因子の prefix offset には mod u で重複があり、その間の長さ l・offset cu の語を x^{l−c}v^c に換える。1≤c≤l−1。；反復で内部因子数を u−1 以下へ下げ、次数・offset を保つ。；gcd(a₁,…,a_q,u)=1 により全剰余へ内部語で到達し、最短経路は長さ u−1 以下。；非零剰余の極小点では L+K≤u−2、剰余 0 の極小点は (0,0) のみ。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.2；E3、E4、E5
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。コアの次数・offset による単項式基底で記述。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.2 の有限 prefix 消去と gcd による到達性を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；環の直積分解ではなく、内部変数は剰余成分を移す。
+
+### E_KERNEL：全長い表示との競合と actual 核
+
+- **配置：** IV
+- **正確なstatement：** 長い表示は (n,B)↦(n+jd,B−jm)、j≥1 に尽くされる。r+jm=s+cu の下で Min M_r の点 (L,K) からの禁止領域の始点は (max{0,L−jd−c+ε_r−ε_s},K+c)。全競合で生成する T_s に対して actual 核は N_s=M_s∩T_s であり、G≅⊕_s M_s/N_s[ε_s,s] は E-加群同型。
+- **量化範囲：** (EH) の全パラメータ；j≥1、0≤r,s<u、(L,K)∈Min M_r
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_COORD
+- **証明の核心：** 同じ数値指数の表示の長さ差 δ は δm=d(B−B′) を満たし、互いに素性により δ=jd、B′=B−jm。；offset と次数の二等式を解いて短い側の座標を得る。第一座標が負の場合は長い側を x 倍して clamp 後の点を実現できる。；m>u から c≥1 なので第二座標の clamp は不要。；競合領域だけでなく短い側が C に属する条件が必要であり、これが M_s との共通部分となる。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.3；E6、E7、E8
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。actual 核は数値指数と最大分解長により決まる。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.3 の必要十分な競合座標を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；N_s を一般に T_s と同一視しない。
+
+### E_STOP：有限停止・有限 E-生成性・rank 0
+
+- **配置：** IV
+- **正確なstatement：** c−ε_r+ε_s≥⌊jm/u⌋、競合始点の第一座標≤max{0,H_x−2j}。J₀=⌊(u−2)/2⌋、p=u/gcd(m,u) なら T_s=Σ_{j=1}^{J₀+p}T_{s,j}。G は有限生成 E-加群で、v^m=0、rank_E G=0。
+- **量化範囲：** (EH) の全パラメータ；全 s と全 j≥1
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_KERNEL
+- **証明の核心：** jm=hu+t と書き、剰余の carry と ε を場合分けする。d≥1、⌊jm/u⌋≥j を用いる。；j>J₀ では全競合始点の第一座標が 0。j を j+p に増すと r は同じで c は m/gcd(m,u) 増え、後の生成元は前の倍数となる。；J₀ は max{0,⌊(H_x−1)/(d+⌊m/u⌋)⌋} へ短縮できる。；m(m+du)=(m+du)m の右辺はより長い表示なので v^m=0。C の有限 E-生成性が G へ降りる。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.4；E9、E10、E11
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。全 m,d の停止式であり、標数に依存しない。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.4 の尾部周期と rank 0 の論証を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；G 自体の有限 k-次元性は主張しない。gcd(m,u)=1 も不要。
+
+### E_BOUNDS：距離和と height による一様な P_C,R 上界
+
+- **配置：** IV
+- **正確なstatement：** 内部ステップの mod u 最短語長を ℓ_r、ℓ₀=0、W=1+Σ_rℓ_r とすると、P_C≤W、R≤R̂=min{W−u,u max(H_x−2,0)}。これは m,d に一様で、gcd(m,u)=1 や Cohen–Macaulay 性を要求しない。
+- **量化範囲：** (EH) の全パラメータ；同じ向きの core の全剰余 r,s
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_STOP
+- **証明の核心：** 最短点 (L_r,K_r) は極小で L_r+K_r=ℓ_r−ε_r。antichain を左右に数えると非零剰余の極小点数≤ℓ_r。；T_s の極小点数 z_s+1、最小第二座標 κ_s に対して z_s≤A+B−κ_s、κ_s≥ceil((m−s)/u)、Σ_sκ_s≥m。；j=1 の競合では s_r=(r+m) mod u が置換、c_r=(r+m−s_r)/u、Σ_rc_r=m、A_r≤L_r、B_r=K_r+c_r。；三行鎖：Σ_sz_s≤Σ_r(A_r+B_r−κ_{s_r})≤Σ_r(L_r+K_r)+m−Σ_sκ_s≤W−u。；M_s/(M_s∩T_s)→E/T_s の socle 単射で R≤Σ_sz_s。別に第一座標の範囲から z_s≤max(H_x−2,0)。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.6；E16、E17、E18
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §1；carry 三行鎖、Σ_rc_r=m、Σ_sκ_s≥m
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。単項式 antichain と carry の整数計数。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.6 を保持。；LATER_READABILITY_AUDIT §1 が再構成した carry 相殺を IV.15 として完全表示。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；P_C,W,H_x,R は同じ向きの core と同じ actual G の不変量。反射した core の値を無条件に混用しない。
+
+### E_HOMOLOGY：端点 Koszul homology の正確な三項
+
+- **配置：** IV
+- **正確なstatement：** Q_C=C/(x,v)C は (Q_C)₁≅k^q、(Q_C)_n=0 (n≥u) の Artin T-商。P_C=dim Q_C、P_G=dim G/(x,v)G、R=dim(0:_G(x,v)) とすると、dim H_•(x,v;G)=(P_G,P_G+R,R)。
+- **量化範囲：** (EH) の全パラメータ；端点 homology の次数 0,1,2
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_STOP
+- **証明の核心：** Q_C の基底は全 Min M_s、Q_G の基底はそのうち N_s に属さない点。；R の基底は M_s∖N_s の点で x,v の双方を掛けると N_s に入る点。N_s の隣接極小点の角を数え、M_s 内の角だけを残す。；有限生成 E-加群の Koszul homology は (x,v) で殺されるので有限次元。；Hilbert syzygy による長さ 2 以下の最小 E-自由解消と rank_E G=0 により b₀^E−b₁^E+b₂^E=0。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.5；E12、E13、E14、E15
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。同じ体上の自由解消と rank Euler 等式を使う。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.5 の socle 隣接角と Euler 等式を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；E/N_s の Artin 性や G の有限長性を仮定しない。
+
+### E_TRANSFER：actual quotient の核を補償する全行 Betti 移行
+
+- **配置：** IV
+- **正確なstatement：** 全 i≥0 に対し β_i^S(G)≤b_i^T(Q_C)+P_C binom(q,i−1)+R binom(q+1,i−1)。R は R̂ に置換できる。
+- **量化範囲：** (EH) の全パラメータ；全 i≥0（範囲外二項係数・負添字 Betti 数は 0）
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_HOMOLOGY, E_BOUNDS
+- **証明の核心：** actual 完全列 0→K→Q_C→Q_G→0、dim K=P_C−P_G の Tor 長完全列から b_i(Q_G)≤b_i(Q_C)+(P_C−P_G)binom(q,i−1)。；actual G 上の端点・内部 Koszul 二重複体で端点 homology を先に取る。第 0 行は Tor^T(Q_G,k) を正確に保持し、残る行を鎖群次元で抑える。；β_i(G)≤b_i(Q_G)+(P_G+R)binom(q,i−1)+R binom(q,i−2)。；核の長さの補償で P_G が相殺し、Pascal 恒等式から E21 を得る。後の page は部分商であり退化不要。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.7；E19、E20、E21
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §7；actual Q_C→Q_G の核補償
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。各体での Tor 長完全列と有界二重複体の spectral sequence を用いる。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 E19–E21 を IV.17–IV.18 に展開。；LATER_READABILITY_AUDIT §7 は actual 核の長さの Tor 補償に gap がないと確認。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；P_C=P_G、商の無条件 Betti 単調性、spectral sequence の退化は仮定しない。内部変数の作用を無視して剰余成分を別々に解消しない。
+
+### W_EDGE：五生成元以上の最小幅・一欠落幅
+
+- **配置：** V
+- **正確なstatement：** For e=q+2>=5 and u=q+1 or q+2, beta_i(G;k)<=F_i(m,du) for every i>=0. For u=q+2, internal and edge missing offsets are both included; the edge formula retains the indicators at i=q and i=q+1.
+- **量化範囲：** All k,e,q,d,m and ordered primitive offsets in scopeW, with u in {q+1,q+2}; all i>=0.
+- **仮定：** k is any field；e=q+2>=5; 0<a1<...<aq<u; u>=q+1；d>=1; m>=du+2; gcd(m,d)=gcd(u,a1,...,aq)=1；G is the actual tangent cone; V=du is the actual completion width; R=dim(0:_G(x,v)) in the original orientation
+- **先行依存：** I_TARGET, E_CORE, E_BOUNDS, E_TRANSFER, X_BASIC, X_AP_BETTI, X_AP_CONE
+- **証明の核心：** At u=q+1 the arithmetic-sequence formula bounds each positive row by i*C(u+1,i+1); d=1 gives source=target and d>=2 gives V>=u+1. At u=q+2, the endpoint quotient has Hilbert function (1,q,2) for an internal missing offset and (1,q,1) for an edge missing offset. Original-coordinate H_x<=1 gives R=0. The actual Koszul matrices have unit minors; internal blocks give rho_i=2*C(q,i-1)-C(s,i-1-r)-C(r,i-1-s), with r+s=q, and T_i=C(s+1,i-r)+C(r+1,i-s) bounded by both C(q+2,i-1),C(q+2,i) using the two inclusion injections. Edge missing offsets give beta_i<=i*C(q+2,i+1)+1_(i=q)+1_(i=q+1), with the indicators paid by target corrections.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §13.2；W5、W6、W7、W8、W9、W10、W11、W12
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.1；V.4、V.5、V.6
+- **入力種別：** paper proof retained from V02; published arithmetic-sequence target input through I_TARGET
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** V02 §13.2 gives actual matrix unit minors, injections and the top edge indicator.；The V03 physical narrow restriction makes the V02 m=e endpoint unnecessary; d=1 and d>=2 exhaust the minimum-width branch.
+- **監査の限界：** The two injection collision repairs and unit-minor constructions remain mathematical paper arguments, not Lean proofs.；Reflection is used only to identify a core basis, never the original source's R.
+
+### X_BHP_EK：BHP/EK任意標数版
+
+- **配置：** 公刊入力
+- **正確なstatement：** 同じHilbert関数を持つlex商のgraded Betti数が一般商を支配する。lex理想の生成元vは商のi行へC(max(v)-1,i-1)を寄与する。
+- **量化範囲：** 任意体k、同じ標準次数付き多項式環上の斉次商、全graded Betti行i≥1。
+- **仮定：** lex理想、同じHilbert関数。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** Juhnke-Kubitzke–Venturello §2.2 Lemmas2–3。正標数版Pardueを含む。ordinaryの旧§15を経由せず、幅側dense評価だけに必要。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(2)、§13.3；
+- **公刊原典：** [Juhnke-Kubitzke–Venturello, Graded Betti Numbers of Balanced Simplicial Complexes](https://link.springer.com/article/10.1007/s40306-021-00449-8) §2.2 Lemmas2–3、BHP/EKの任意体版再掲
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### W_DENSE：密幅の欠落prefix・lex調和計数と容量差
+
+- **配置：** V
+- **正確なstatement：** Resource clause: for q>=3 and 0<=t=u-1-q<=q, W=q+1+2t, P_C<=q+1+2t, R<=t, and t<=2 implies R=0. Closure clause: for q>=4 and 2<=t<=q, every positive source row is at most the target's first term i*C(u,i+1), hence actual P14 holds.
+- **量化範囲：** All parameters in scopeW. The resource clause allows q>=3 and 0<=t<=q; the closure clause requires q>=4 and 2<=t<=q; every 1<=i<=q+2, with i>q+2 zero.
+- **仮定：** k is any field；e=q+2>=5; 0<a1<...<aq<u; u>=q+1；d>=1; m>=du+2; gcd(m,d)=gcd(u,a1,...,aq)=1；G is the actual tangent cone; V=du is the actual completion width; R=dim(0:_G(x,v)) in the original orientation；t=u-1-q; the distinct clauses have the separate q,t ranges stated above
+- **先行依存：** E_CORE, E_BOUNDS, E_TRANSFER, X_BHP_EK, I_TARGET, X_BASIC
+- **証明の核心：** Nonzero standard words require distinct missing prefix residues, giving n<=t+1 and original H_x<=t; |A|>u/2 gives distance at most 2 and the resource clause. Apply BHP–EK to one lex ideal with the full Hilbert function, obtaining b_i<=i*C(q+1,i+1)+K*C(q-1,i-1). Parent-child weighted counting on the last r variables gives K<=2t(r-1)/3. For t=2, r=3 gives integral K<=2,R=0; t=3 gives K<=4,R<=3. For t>=4 use r=t. With C_i=C(q,i-1),B_i=C(q+1,i-1),A_i=C(q-1,i-1), define D_i=i[C(q+t+1,i+1)-C(q+1,i+1)]-(q+1+2t)C_i-RB_i-KA_i. Vandermonde yields the t=2,3 bounds and D_i>=[(5t^2-17t-6)/6+(t-1)(q-t)]C_i for t>=4; after t=4+z,q=t+v its bracket times 6 is 5z^2+23z+6+6zv+18v>0.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §13.3；W13、W14、W15、W16
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §3；D_i Vandermonde payment bridge
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.2；V.7、V.8、V.9
+- **入力種別：** paper proof retained from V02, with readability bridge expanded
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** LATER_READABILITY_AUDIT §3 reconstructs one common difference and checks the top i=q+2 convention.；The resource clause explicitly covers q=3 used by W_FIVE; the dense closure clause does not claim q=3.
+- **監査の限界：** The audit's finite 5,138-point transcription check is optional corroboration; the universal proof is the displayed polynomial sign argument.；BHP includes Pardue's arbitrary-characteristic theorem.
+
+### X_KNESER：Kneser和集合定理
+
+- **配置：** 公刊入力
+- **正確なstatement：** 有限非空A,BとH=stab(A+B)に対し|A+B|≥|A+H|+|B+H|-|H|。反復版も用いる。
+- **量化範囲：** 有限巡回群。素数位数に限定しない。
+- **仮定：** 有限非空集合。反復時の商群stabilizer条件を確認する。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** DeVos Theorem1。商群の部分和stabilizerが全和に含まれることを使い反復する。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(3)、§13.4、§14.2；
+- **公刊原典：** [DeVos, A short proof of Kneser’s addition theorem for abelian groups](https://www.sfu.ca/~mdevos/papers/kneser.pdf) Theorem1
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### E_ARTIN：Artin 商の親子計数・第一行・全高次行
+
+- **配置：** IV
+- **正確なstatement：** I₁=0 の標準次数付き Artin 商 A=T/I、h_n=dim A_n、P=Σh_n に対し、b₁≤q+Σ_{n≥1}(q−1)h_n/(n+1)≤(q−1)P/3+(q+1)(q+2)/6。h₂ を保持した E26 と q=5 の b₁−P≤14 が成立し、全 i≥1 で b_i≤P binom(q,i)−binom(q+1,i+1)。
+- **量化範囲：** 任意の体 k、任意の整数 q≥2；すべての標準次数付き Artin 商 A=T/I、I₁=0；全 i≥1
+- **仮定：** T=k[y₁,…,y_q]；A=T/I は標準次数付き Artin 商；I₁=0、従って h₀=1,h₁=q
+- **先行依存：** X_BASIC
+- **証明の核心：** 初期イデアルの全親が標準である子の集合 D_n に、親への重み α_j/(n+1) を付ける。子の総重みは 1、親の候補子の総重みは (n+q)/(n+1)。；極小生成元数 #D_n−h_{n+1} を加え、Gröbner 基底で元の理想の生成元数を抑える。有理重みは整数計数である。；E26：b₁≤(q−1)P/4+(q+1)²/4+(q−1)h₂/12、および b₁−P≤q−1+Σ_{n≥1}(q−n−2)h_n/(n+1)。q=5 では h₂≤binom(6,2) より 14。；係数次数 0→1 の Koszul 微分には、各 i 元集合 J に対応する行 (y_minJ,J∖{minJ}) を選ぶことで符号付き単位小行列がある。従って全標数で rank d_i≥binom(q,i)。；隣接微分も同様に抑え、b_i=P binom(q,i)−rank d_i−rank d_{i+1} と Pascal 恒等式を使う。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.9；E25、E26、E27、E28
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。有理重みは基礎体内の除法ではなく、Koszul rank 下界は整数行列の ±1 小行列に由来。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.9 の親子計数と単位小行列の証明を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；一般の A の Betti rank が異なる標数で一致するとは主張しない。
+
+### E_ROW：一般 q の幅側全行パッケージ
+
+- **配置：** IV
+- **正確なstatement：** h_n=dim(Q_C)_n とすると β₁(G)≤P_C+floor(q+Σ_{n≥1}(q−1)h_n/(n+1))+R̂。2≤i≤q+2 では β_i(G)≤P_C binom(q+1,i)+R̂ binom(q+1,i−1)−binom(q+1,i+1)。β₀=1、i>q+2 で β_i=0、上端 β_{q+2}≤R̂。
+- **量化範囲：** (EH) の全パラメータ；全行 i≥0、特に 2≤i≤q+2
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない
+- **先行依存：** E_ARTIN, E_TRANSFER
+- **証明の核心：** Q_C は Artin 商で一次関係を持たないので E_ARTIN を適用できる。；E25–E28 を actual 核を補償済みの E21 に代入し、Pascal 恒等式と R≤R̂ を使う。；第一行は必要に応じ E26 の h₂ 付き評価または E27 の q=5 評価で強める。；Part V が同じ actual source の core 資源と actual interval target の容量を比較する。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.9；E29
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §§1,7；carry 三行鎖、actual quotient の Tor 補償
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。各体で成立する上界の合成であり、標数間の rank 一致は不要。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 E29 の全範囲を保持し、上端・消滅行を明記。；LATER_READABILITY_AUDIT §§1,7 の actual-kernel・carry の区別を反映。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；単独では target 比較を主張しない。ordinary 旧 §15、196 組証書、ナヴィ代替ルートへの依存を持たない。
+
+### W_SPARSE：六生成元以上の疎幅と高次行の正規化移行
+
+- **配置：** V
+- **正確なstatement：** For e>=6 and u>=2e-2, beta_i(G;k)<=F_i(m,du) for every i>=0. The comparison includes i=e and all first-row subranges e=6,7,8,9 and e>=10.
+- **量化範囲：** All parameters in scopeW with e>=6,u>=2e-2; every i>=0.
+- **仮定：** k is any field；e=q+2>=5; 0<a1<...<aq<u; u>=q+1；d>=1; m>=du+2; gcd(m,d)=gcd(u,a1,...,aq)=1；G is the actual tangent cone; V=du is the actual completion width; R=dim(0:_G(x,v)) in the original orientation；e>=6; u>=2e-2
+- **先行依存：** X_KNESER, E_BOUNDS, E_TRANSFER, E_ARTIN, I_TARGET, X_BASIC, E_ROW
+- **証明の核心：** Set a=e-1,s=floor(e/2),A={0,a1,...,aq}. Kneser with every proper stabilizer yields distance-sum bound B=u+sum_(j>=0)(u-a-sj)_+. For Delta=sk+b, B=u+Delta^2/(2s)+Delta/2+b(s-b)/(2s)<=B_* and B<=u^2/(e-1), the latter by an explicit nonnegative polynomial. Endpoint and Artin estimates give first-row bounds (e+3)B/3-u+e(e-1)/6 and (e+5)B/4-u+(e-1)e(e+1)/24, and U_i=B*C(e,i)-u*C(e-1,i-1)-C(e-1,i+1). Four exact polynomials close e=6..9; a universal positive quadratic closes e>=10. The second row is checked for e=6,e=7,e>=8. For 2<=i<=e, T_i(u)=i*C(u,i+1)/C(e,i)+ui/e+(e-i)(e-i-1)/(e(i+1)); T_i(e)=e-1+i/e and every width increment i*C(u,i)/C(e,i)+i/e increases with i, so T_i>=T_2>=B.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §13.4；W17、W18、W19、W20、W21
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §7；all-higher-row normalization
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.3；V.10、V.11、V.12、V.13、V.14
+- **入力種別：** paper proof retained from V02; exact polynomial identities are arithmetic checks
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** V02 §13.4 proves stabilizer growth for composite u, every first-row range, and the i=e endpoint.；proof_integrated_v2/checks/verify_width.py verifies the coefficient identities rather than sampling an infinite parameter range.
+- **監査の限界：** No offset core enumeration is required.；A rerun of arithmetic identities does not independently prove Kneser or the endpoint transfer.
+
+### W_FIVE：五生成元の幅6・7とantipodalを含む全幅
+
+- **配置：** V
+- **正確なstatement：** For e=5,q=3 and all u>=4, beta_i(G;k)<=F_i(m,du) for every i>=0. At u=7, the integral improvement b1<=9 is asserted only when R>0.
+- **量化範囲：** All parameters in scopeW with e=5,q=3,u>=4; all i>=0. Subbranches u=4,5; u=6; u=7 with R=0 or R>0; u>=8 with antipodal or non-antipodal A.
+- **仮定：** k is any field；e=q+2>=5; 0<a1<...<aq<u; u>=q+1；d>=1; m>=du+2; gcd(m,d)=gcd(u,a1,...,aq)=1；G is the actual tangent cone; V=du is the actual completion width; R=dim(0:_G(x,v)) in the original orientation；e=5; q=3
+- **先行依存：** W_EDGE, W_DENSE, X_KNESER, E_TRANSFER, E_BOUNDS, E_ARTIN, I_TARGET, X_BASIC
+- **証明の核心：** Use b1<=P+2,b3<=P-1 and Euler to get b2<=2P, hence rows 2..5 <=(5P+4R,4P+6R-1,P+4R,R). For u=6, P<=8,R=0 and integrality gives beta1<=16; u=7 has P<=10,R<=3 and R>0 forces Q_C degree 4 nonzero, so b1<=9 and beta1<=22. Explicit target tables pay rows 2..5. For u>=8, Kneser growth is at least 3 unless u=2h and A={0,t,h,t+h},0<t<h,gcd(t,h)=1. The non-antipodal distance polynomial B3 gives the first-row bound and its three residue differences (u=8 handled by the floor). Antipodal core is k[y,z,w]/(yz,z^2,zw,(y,w)^h); P=C(h+1,2)+1,b1=h+4,W=h^2-h+2 give target gap (h^2+h-12)/2. Both structures share P<=u^2/4,R<=u^2/4-u; the second-row difference factors and the last three rows extend from u=8 using monotonic C(u,k)/u^2.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §13.5；W22、W23、W24、W25
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.4；V.15、V.16、V.17、V.18
+- **入力種別：** paper proof retained from V02
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** V02 distinguishes the conditional u=7 improvement and exhausts the Kneser exception.；verify_width.py includes the u=6,7 target tables and u=8 non-antipodal boundary arithmetic.
+- **監査の限界：** The antipodal quotient requires the stated gcd condition and its explicit basis argument.；The four-case width split is retained even though no finite offset certificate is required.
+
+### W_CLOSE：五生成元以上・物理狭幅の全域閉鎖
+
+- **配置：** V
+- **正確なstatement：** For every numerical semigroup in the normalized physical narrow scope with e>=5, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0.
+- **量化範囲：** All fields k; all integers e=q+2>=5,d>=1,u>=q+1,m>=du+2 and all primitive ordered q-tuples of internal offsets; all i>=0.
+- **仮定：** k is any field；e=q+2>=5; 0<a1<...<aq<u; u>=q+1；d>=1; m>=du+2; gcd(m,d)=gcd(u,a1,...,aq)=1；G is the actual tangent cone; V=du is the actual completion width; R=dim(0:_G(x,v)) in the original orientation
+- **先行依存：** W_EDGE, W_DENSE, W_SPARSE, W_FIVE
+- **証明の核心：** For e>=6, u=e-1,e are W_EDGE, e+1<=u<=2e-3 is W_DENSE, and u>=2e-2 is W_SPARSE. For e=5, W_FIVE covers every u>=4, including its W_EDGE endpoints. The intervals are adjacent and exhaustive. Row 0 is 1 on both sides, positive rows through e are established, and source rows above e vanish.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) end of §13；global width coverage
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.4；W_CLOSE coverage
+- **入力種別：** paper synthesis
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** The normalized count u>=q+1 and the physical m>=du+2 restriction are explicit.；Neither a 196-row certificate nor an ordinary-route lemma is used.
+- **監査の限界：** This node covers only physical narrow width; the w>=m-1 boundary belongs to Part VI's ordinary branch.；No Lean kernel verification is claimed.
+
+### E_TWO：二内部変数の socle 計数と全四行
+
+- **配置：** IV
+- **正確なstatement：** q=2 のとき Q_C は k[y,z] の単項式 Artin 商。σ_C=dim(0:_{Q_C}(y,z)) なら b^T(Q_C)=(1,σ_C+1,σ_C)。β₁≤P_C+σ_C+1+R、β₂≤2P_C+σ_C+3R、β₃≤P_C+3R、β₄≤R、β₀=1、i>4 で β_i=0。
+- **量化範囲：** (EH) のうち q=2、a₁=a、a₂=b の全パラメータ；全 Betti 行 i≥0
+- **仮定：** k は任意の体；q≥2、0<a₁<⋯<a_q<u<m、d≥1 は整数；gcd(a₁,…,a_q,u)=gcd(m,d)=1；Γ=⟨m,m+da₁,…,m+da_q,m+du⟩、G=gr_𝔪 k[[t^Γ]]；S=k[x,y₁,…,y_q,v]、E=k[x,v]、T=k[y₁,…,y_q]；u<m のみを要求し、du<m は仮定しない；q=2、y₁=y、y₂=z
+- **先行依存：** E_TRANSFER
+- **証明の核心：** 同次数の純内部語 y^{n−j}z^j の offset na+j(b−a) は相異なり、Q_C の生存語には線形関係がない。；r+a_j=s+cu のとき基底点は (s,L+1+ε_r−c−ε_s,K+c) へ移る。極小点ならその基底へ、非極小なら 0。；y,z の双方で 0 になる基底点を数えて σ_C を得る。二変数 Koszul の第 0・第 2 homology と有限長 Euler 等式を使う。；E21 に q=2 と三項の b_i を代入する。
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §12.8；E22、E23、E24
+- **入力種別：** 紙上証明（V02 から保持し必要な橋を展開）
+- **任意標数性：** 任意体。二変数の生存単項式と socle の計数は標数に依存しない。
+- **現在の監査：** source proof retained; targeted readability reconstruction
+- **監査根拠：** V02 §12.8 の全四行を保持。
+- **監査の限界：** 既存の紙上証明の構造化・照合であり、Lean 形式認証ではない。；有限検算を全称範囲の証明に置き換えない。；σ_C は内部 socle、R は actual G の端点 socle であり異なる量。
+
+### N_DISTANCE：巡回三点集合の距離和とsocle antichain
+
+- **配置：** V
+- **正確なstatement：** For q=2, |n{0,a,b}|>=min(u,2n+1) for n>=0, W<=1+floor(u^2/4), C(sigma+1,2)<=P<=W and sigma<=u-1. Moreover every degree sigma-1 monomial and its divisors are standard in Q_C.
+- **量化範囲：** All parameters in scopeN and every n>=0; the core inequalities themselves are independent of m,d.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** X_KNESER, E_CORE, E_BOUNDS, X_BASIC, E_TWO
+- **証明の核心：** Apply iterated Kneser in the quotient by H=Stab(nA). If H is trivial, |nA|>=2n+1; if nontrivial and proper, gcd(a,b,u)=1 forces |A+H|>=2|H|, giving |nA|>=(n+1)|H|>=2n+2. Use the tail sum W=1+sum_(n>=0)(u-|nA|). Sort socle maximal points by first coordinate: alpha_i>=i,beta_i>=sigma-1-i, so the full triangle of degree <=sigma-1 belongs to the downset.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §14.2；N6、N7、N8、N9
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §1；P1、socle antichain consequence
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.5；V.20
+- **入力種別：** paper proof retained from V02 with a published Kneser input
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** The argument explicitly includes composite u and nontrivial stabilizers.；LATER_READABILITY_AUDIT §5 confirms the antichain use in the paper replacement.
+- **監査の限界：** Kneser itself is an external published theorem, not reproved or Lean formalized here.
+
+### X_SC：Savchev–Chen長零和自由列
+
+- **配置：** 公刊入力
+- **正確なstatement：** 位数uの巡回群の零和自由列の長さがu/2を超えるなら、あるunitで移した正の代表値の総和をu未満にできる。
+- **量化範囲：** 有限巡回群Z/u、長さ>u/2の零和自由列。
+- **仮定：** Savchev–Chen math/0602568v1 §4 Theorem8の仮定。
+- **先行依存：** 外部・通常の基礎入力
+- **証明の核心：** N4の混合標準語にのみ使い、その短い零和置換を端点関係へ戻す。
+- **適用statementの登録（完全証明は公刊原典）：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §1.2(6)、§14.3；
+- **公刊原典：** [Savchev–Chen, Long zero-free sequences in finite cyclic groups](https://arxiv.org/html/math/0602568v1) §4 Theorem8
+- **入力種別：** published
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+### N_WORDS：純軸・混合標準語と元の向きのheight
+
+- **配置：** V
+- **正確なstatement：** For all standard words y^s z^t in Q_C, s+t<=u-2; if st>0 then s+t<=floor(u/2). Hence P<=2u-3+C(floor(u/2),2), H_x<=u-3, and u=3,4 implies the original actual R=0.
+- **量化範囲：** All parameters in scopeN and all (s,t) in the core standard-word downset D.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** E_CORE, E_BOUNDS, X_SC, X_BASIC, E_TWO
+- **証明の核心：** Pure powers stop before u-1 by a gcd-period relation or the unique exponent q with qa congruent to b mod u. A standard mixed word has no zero-sum subsequence, since one would be replaceable by endpoints. If its length exceeds u/2, Savchev–Chen gives unit-scaled values 1,c with multiplicities R0,T0. The same-degree endpoint replacement of Y_alpha^c forces R0<c; total least representatives give R0+cT0<=u-1. Thus 2(R0+T0)<=u, a contradiction. Counting two axes and the mixed triangle gives P and the original-coordinate ceiling formula gives H_x.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §14.3；N10、N11、N12、N13
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §1；standard-word bounds; original orientation
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.5；V.21
+- **入力種別：** paper proof retained from V02 with a published Savchev–Chen input
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** N4 replacement §1 and LATER_READABILITY_AUDIT §5 explicitly retain original H_x,R.；The SC unit acts on a finite-group sequence; it is not a reflection equivalence of actual tangent cones.
+- **監査の限界：** Savchev–Chen remains a necessary external input.；No whole-source R invariance under reflection is asserted.
+
+### N_HIGH：四生成元の全幅・第2–4行
+
+- **配置：** V
+- **正確なstatement：** For every q=2 physical narrow source and all 2<=i<=4, beta_i(G;k)<=F_i(m,du). All widths u=3,4,5 and u>=6 are covered, including top rank i=4.
+- **量化範囲：** All parameters in scopeN; all i=2,3,4.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC
+- **証明の核心：** Use endpoint inequalities to bound rows by U2=5u^2/4-2u+4,U3=u^2-3u+4,U4=u^2/4-u+1. Target lower bounds are L2(V)=2*C(V,3)+V for V>=3, L3(V)=3*C(V,4)+C(V,2) for V>=5, L4(V)=4*C(V,5), monotone in physical V. For u>=6 the second-row gap has positive coefficients in z=u-6; u=5 keeps W<=7,R<=2,sigma<=4 for 24<25. For u>=5, third/fourth gaps have positive coefficients in z=u-5. u=4 uses P<=5,sigma<=2,R=0 and actual V=4 minimum values; u=3 has core k[y,z]/(y,z)^2 and either source=target at d=1 or V>=6 capacity at d>=2.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §14.4；N14、N15、N16、N17、N18
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.6；high-row positive polynomials
+- **入力種別：** paper proof retained unchanged in mathematical content from V02
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** N4 paper replacement opening explicitly retains the high-row proof.；This proof occurs before and does not depend on the historical offset-certificate branch.
+- **監査の限界：** u=4 uses actual target minimum values because the stated L3 formula requires V>=5.；The width-four first-row exception is not needed for these rows.
+
+### N_FIRST：N4三関係による一括計数と無限第一行
+
+- **配置：** V
+- **正確なstatement：** For every q=2 core, with h=floor(u/2),k0=u-b+a and E_h(k0)=C(h-k0+2,2) if k0<=h and 0 otherwise, P<=2u-k0-1+C(h,2)-E_h(k0)<=2u-h-2+C(h,2), sigma<=min(h+1,k0). These bounds close beta1(G)<=F1(m,du) for u=5 and every u>=9.
+- **量化範囲：** Universal core estimates: all parameters in scopeN, 2<=k0<=u-1. First-row closure: u=5 or u>=9 only; all m,d in scopeN.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC
+- **証明の核心：** The three endpoint relations y^b=x^(b-a)z^a, z^(u-a)=y^(u-b)v^(b-a), y^(u-b)z^a=x^(u-b)v^a forbid two pure tails and a mixed rectangle. The axes have 2u-k0-1 possible points. Rectangle multiples are s=u-b+i,t=a+j with i+j<=h-k0, counted exactly by E_h(k0). k0+E_h(k0)>=h+1 gives the improved P bound. Mixed socle first exponents are distinct; if sigma>=k0+1, N_DISTANCE's full degree-k0 triangle contradicts the forbidden mixed word. Combine with R<=1+floor(u^2/4)-u: beta1<=C(h,2)+u+1+floor(u^2/4). Its gap to L1(u) is h(h-5)/2 for u=2h and (h^2-3h-2)/2 for u=2h+1; hence all u>=9. At u=5, P<=7,sigma<=3,H_x<=2 gives R=0 and beta1<=11.
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §§1–2；P1、P2、P3、P4、P5、P6、P7
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §5；axis count and excluded-rectangle count
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.7；V.22、V.23
+- **入力種別：** new adopted paper replacement of historical finite-certificate route
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** n4_further_reduction/ZERO_CERTIFICATE_REFEREE.md independently reviews the paper replacement.；LATER_READABILITY_AUDIT §5 reconstructs the two counts and reports no gap.
+- **監査の限界：** The universal gap is nonnegative only in the stated closure ranges; u=6,7,8 still require N_SMALL.；No exact finite core maximum is used as a proof premise.
+
+### N_SMALL：N4幅6–8の紙上場合分けと幅3・4
+
+- **配置：** V
+- **正確なstatement：** The first-row actual target comparison holds for u=6,7,8, for all u=3, and for u=4 except the family d=1,(a,b)=(1,3). Width 3 or 4 with d>=2 is paid by physical target width, never by replacing it with u.
+- **量化範囲：** All scopeN parameters with u in {3,4,6,7,8}, except u=4,d=1,(a,b)=(1,3). Explicit branches: u=6 H_x<=2 or H_x=3; u=7 k0=2,3,4 or >=5; u=8 k0=2,3,4,5,6 or >=7.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** N_FIRST, N_DISTANCE, N_WORDS, E_TWO, I_TARGET, X_BASIC
+- **証明の核心：** At u=6, H_x<=2 gives beta1<=15; H_x=3 forces (a,b)=(1,5), with P<=9,sigma<=2,R<=4 and bound16. At u=7, the general k0 formula closes all except k0=4; its three pairs (1,4),(2,5),(3,6) have endpoint-square or yz=xv relations giving bounds16,18,16. At u=8, k0=2,3 or >=7 closes generally; k0=4 leaves primitive pairs (1,5),(3,7) with bound28, k0=5 gives four pairs with bound21, k0=6 gives three primitive pairs with bounds27,21,27. Socle strip bounds follow from antichains, not computed core tables. At u=3, d=1 is identity and d>=2 gives V>=6. At u=4, d>=2 gives V>=8; at d=1 pairs (1,2),(2,3) have D subset {1,y,z,yz}, P+sigma<=5 and beta1<=6.
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §§3–6；u6 height dichotomy、u7 exceptional gap3、u8 exceptional gaps4,3,2、u3 and u4 nonboundary cases
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §5；strip antichain principle
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.8；explicit width-case coverage
+- **入力種別：** finite paper case distinctions; no exact offset-core certificate premise
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** N4 paper replacement and ZERO_CERTIFICATE_REFEREE retain and independently review these short cases.；Every primitive pair in the exceptional gap classes is listed in the stated small widths.
+- **監査の限界：** Finite case distinctions remain necessary; removing 196 machine rows does not remove these cases.；The width-four all-m family is passed explicitly to N_WIDTH4.
+
+### N_WIDTH4：幅4の全m四剰余Gröbner証明
+
+- **配置：** V
+- **正確なstatement：** For d=1,u=4,(a,b)=(1,3), every m>=6 and every field, in(I_G)=J0+(b*v^theta_n:b=1,y,y^2,z,z^2), where J0=(y^3,yz,xz^2,z^3), (c,n) is the base degree/offset and theta_n=max(ceil((m-n)/4),0). Consequently beta1(G)<=F1(m,4) for all m>=6.
+- **量化範囲：** All fields k and all integers m>=6, including m=6 and every residue class m=4Q+rho>6, rho=0,1,2,3.
+- **仮定：** q=2,e=4,d=1,u=4,a=1,b=3；m>=6；The monomial order first compares internal weights wt(y)=1,wt(z)=2,wt(x)=wt(v)=0, then ordinary degree, then a fixed lex order
+- **先行依存：** E_CORE, E_KERNEL, I_TARGET, X_BASIC
+- **証明の核心：** The four core relations have initial ideal J0 by independence of free columns 1,y,y^2,z and the x-free z^2 column. For a j>=1 longer representation set r_j=(n-jm) mod4, kappa_j=(jm+r_j-n)/4, lambda=(0,1,2,1), Delta_j=lambda(r_j)-c-kappa_j-j. The exact coordinates are K'=K-kappa_j and L'=L-Delta_j, so nonnegativity is iff K>=kappa_j,L>=Delta_j. 4Delta_j<0 removes the L restriction; restricted z^2 competitors need K>=kappa_j+1 and are covered by free anchors. Monotone kappa_j makes j=1 exact. Forbidden words vanish in actual G, whereas nonforbidden words have maximal order equal to their degree and distinct actual weights in that degree; their independence proves equality in(I_G)=J. Stopping division lifts minimal monomial generators to generators of I_G. At m=6 the count is6 versus9; at m>6 the four residues give counts6,8,8,6 versus actual capacities7,10,9,8.
+- **保存された完全証明：** [proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md](/workspace/NS-P14-Lean/proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md) §14.6；N23、N24、N25、N26、N27、N28
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §6；retained all-m width-four proof
+- **内部監査・途中式の補助展開：** [auditability_search/LATER_READABILITY_AUDIT.md](/workspace/NS-P14-Lean/auditability_search/LATER_READABILITY_AUDIT.md) §2；K',L' coordinate bridge; independence to initial-ideal equality
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.9；V.24、V.25、V.26、four-residue table
+- **引用する範囲：** V02§14.6のN23–N28、m=6およびm>6の四剰余比較という局所証明のみを保持。同節末尾の196組を使う全域結論は継承せず、N_CLOSEで再合成する。
+- **入力種別：** symbolic paper Gröbner proof retained from V02 and expanded for independent reading
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** LATER_READABILITY_AUDIT §2 derives both competitor coordinates and separates vanishing from independence.；The all-m four-residue proof is independent of the 196 offset certificate.
+- **監査の限界：** The equality of initial ideals must retain the nonforbidden-basis independence argument; generator counts alone do not prove it.；This is a paper Gröbner proof, not a finite-m experiment or a Lean certificate.
+
+### N_CLOSE：四生成元・真正狭幅の全域閉鎖
+
+- **配置：** V
+- **正確なstatement：** For every four-generator numerical semigroup in physical narrow scope, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0, without a required finite offset-core certificate.
+- **量化範囲：** All parameters in scopeN; every i>=0.
+- **仮定：** k is any field；0<a<b<u; u>=3; gcd(a,b,u)=1；d>=1; m>=du+2; gcd(m,d)=1；G is the actual four-generator tangent cone; V=du; Q_C is its normalized integer-core endpoint quotient；P=dim Q_C; sigma=dim soc(Q_C); R=dim(0:_G(x,v)) and H_x are in the original orientation
+- **先行依存：** N_HIGH, N_FIRST, N_SMALL, N_WIDTH4
+- **証明の核心：** First row: u=3 is N_SMALL; u=4 is N_SMALL plus N_WIDTH4; u=5 is N_FIRST; u=6,7,8 is N_SMALL; every u>=9 is N_FIRST. Rows2..4 are N_HIGH across every width. Row0 is1 on both sides, rows above4 vanish on the source. All branches retain arbitrary d>=1 and unbounded m>=du+2.
+- **保存された完全証明：** [n4_further_reduction/N4_PAPER_REDUCTION_JA.md](/workspace/NS-P14-Lean/n4_further_reduction/N4_PAPER_REDUCTION_JA.md) §6 conclusion；replacement synthesis
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/work/WIDTH_PART.md](/workspace/NS-P14-Lean/proof_structure_v3/work/WIDTH_PART.md) V.10；N_CLOSE coverage
+- **入力種別：** paper synthesis adopting the N4 paper replacement
+- **任意標数性：** Every field, including characteristic 2. Count inequalities are over integers/rationals, not division inside k; no rank comparison across characteristics.
+- **現在の監査：** SOURCE_RECOVERED_AND_PAPER_AUDITED_NOT_LEAN
+- **監査根拠：** The resulting required premises are Kneser, Savchev–Chen, common endpoint actual-kernel transfer, the small paper cases and the all-m width-four proof.；The historical 196-row certificate is preserved outside the main dependency route.
+- **監査の限界：** The proof still includes finite paper case distinctions at widths6–8.；No ordinary 83-profile,665-comparison,5-tail or Navi increment premise occurs.；No Lean kernel verification is claimed.
+
+### I_MAIN：P14主定理への全域合成
+
+- **配置：** VI
+- **正確なstatement：** β_i(GΓ;k)≤β_i(G_completion;k) が全i≥0、全真正な数値半群、任意体で成立するという証明経路を組む。
+- **量化範囲：** 任意体k、全真正な数値半群Γ、全total Betti行i≥0。
+- **仮定：** 各環を独立に最小多項式表示する。
+- **先行依存：** I_PARTITION, I_BASE, I_THREE, O_CLOSE, W_CLOSE, N_CLOSE
+- **証明の核心：** 排他的な幅分割、各領域の全行閉鎖、同標数体拡大からの下降を接続する。これは完全証明を参照する骨子であり新しい形式認証ではない。
+- **今回の骨子・合成（全文の代替ではない）：** [proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md](/workspace/NS-P14-Lean/proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md) Part VI.1–VI.3（新しい全域合成）；V3-MAIN
+- **引用する範囲：** 旧V02§16の§15/196依存を継承せず、本骨子の全域合成を証明所在とする。
+- **入力種別：** paper
+- **任意標数性：** 任意体。標数間のBetti数・rankの一致を仮定しない。
+- **現在の監査：** 保存済みV02の内部レビューと今回の構造点検。外部査読・Lean認証ではない。
+- **監査根拠：** proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md
+- **監査の限界：** 公刊入力そのものの再証明・新たな形式化は対象外。
+
+## 共通入力と重複の区別
+
+ordinaryとnarrowは数値座標、Koszul/Tor、actual targetを共有するが、塔・端点模型を相互に依存させない。
+X_BASIC等が複数の補題に現れるのは、その局所証明でも使う入力を明示するためである。
+直接依存には推移的に重なる辺がある。これは新しい仮定や循環ではない。
+機械的な推移簡約は可能だが、各局所証明が直接使う仮定を隠さない表記を採用した。
+構造点検は50頂点、128辺の非循環性と主定理からの到達性を確認する。
+その検査は、statementの数学的な正しさを自動認証するものではない。
+
+## 出典の旧結論を継承しない範囲
+
+I_MAINはV03 Part VIで新しく合成する。旧V02§16の旧§15呼出しを前提として継承しない。
+N_WIDTH4はV02§14.6 N23–N28と全multiplicity比較のみを使う。同節末尾の196組を使う全域結論は使わない。
+N_CLOSEは紙上の新第一行と保持したN_HIGH/N_WIDTH4から再合成する。

@@ -1,0 +1,15 @@
+{
+  "manuscript": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+  "sha256": "37489ff37efa3de703a78990b294d956d07581082e70d60bae323901b4accef9",
+  "line_count": 2180,
+  "equation_tags": 156,
+  "explicit_equation_references": 121,
+  "section_headings": 48,
+  "duplicate_tags": {},
+  "missing_equation_references": [],
+  "missing_section_references": [],
+  "missing_package_paths": [],
+  "historical_dependencies": [],
+  "residual_unbound_scalar_dV": [],
+  "note": "Structural references only; universal mathematics and finite certificate contents require separate review."
+}

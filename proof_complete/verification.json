@@ -1,0 +1,297 @@
+{
+  "date_utc": "2026-11-09",
+  "result": "HUMAN_COMPUTER_ASSISTED_PROOF_ASSEMBLED",
+  "N4_status": "INTERNAL_THEOREM_PROVED_AND_INDEPENDENTLY_AUDITED",
+  "global_status": "NO_UNCERTIFIED_INTERNAL_RESEARCH_BOUNDARY_REMAINS_IN_ASSEMBLED_ARGUMENT",
+  "mathematical_inputs": "Named published theorems and explicitly proved exhaustive finite integer lemmas; not historical PASS/CLOSED declarations.",
+  "lean_status": "NOT_STARTED_NOT_KERNEL_VERIFIED",
+  "fresh_root_checks": [
+    {
+      "name": "ordinary_scalar",
+      "command": "python3 -B checks/verify_scalar.py --diagnostic 210",
+      "exit_code": 0,
+      "facts": {
+        "H23": "444316699/118982864",
+        "747/200-H23": "2107451/2974571600",
+        "seed_comparisons": [
+          {
+            "r": 4,
+            "a_r": 10,
+            "D_r": 6,
+            "threshold": "1126/399",
+            "rational_margin": "17587/79800"
+          },
+          {
+            "r": 5,
+            "a_r": 15,
+            "D_r": 8,
+            "threshold": "35/12",
+            "rational_margin": "143/1200"
+          },
+          {
+            "r": 6,
+            "a_r": 21,
+            "D_r": 11,
+            "threshold": "623/200",
+            "rational_margin": "23/350"
+          },
+          {
+            "r": 7,
+            "a_r": 28,
+            "D_r": 15,
+            "threshold": "745/222",
+            "rational_margin": "2993/96200"
+          },
+          {
+            "r": 8,
+            "a_r": 36,
+            "D_r": 19,
+            "threshold": "622/175",
+            "rational_margin": "321/60200"
+          },
+          {
+            "r": 9,
+            "a_r": 45,
+            "D_r": 23,
+            "threshold": "269/72",
+            "rational_margin": "1/900"
+          }
+        ],
+        "r9_step_margin": "293/18560",
+        "rank_polynomial_shift_10_ascending": [
+          37151424,
+          3111610752,
+          2388816952,
+          823740244,
+          167027138,
+          21934307,
+          1934237,
+          114534,
+          4392,
+          99,
+          1
+        ],
+        "number_of_harmonic_anchors": 1,
+        "number_of_elementary_rational_comparisons": 7,
+        "scope": "Arithmetic supplement only. Universal bounds are proved in the manuscript.",
+        "optional_diagnostic": {
+          "delta_range": [
+            10,
+            210
+          ],
+          "checks": 201,
+          "rank_choice": "r=p(delta), maximum rank permitted by a_r<=delta",
+          "minimum_gap": {
+            "value": "5845533/7436429",
+            "delta": 45,
+            "r": 9
+          },
+          "minimum_slope": {
+            "value": "351/140",
+            "delta": 10,
+            "r": 4
+          },
+          "minimum_delta_step": {
+            "value": "851/140",
+            "delta": 10,
+            "r": 4
+          }
+        }
+      }
+    },
+    {
+      "name": "small_ordinary",
+      "command": "python3 -B checks/verify_small_ordinary.py --out /tmp/p14_small_ordinary.json",
+      "exit_code": 0,
+      "profiles": 83,
+      "comparisons": 665,
+      "tail_anchors": 5,
+      "profile_sha256": "e10afc786ae3d55a1d35e65533696792ebf4ff4daea18c61806594623d09c65a"
+    },
+    {
+      "name": "width_identities",
+      "command": "python3 -B checks/check_width.py",
+      "exit_code": 0,
+      "exact_two_variable_identity_grid_points": 24
+    },
+    {
+      "name": "harmonic_regression",
+      "command": "python3 -B checks/check_harmonic.py --out /tmp/p14_harmonic.json",
+      "exit_code": 0,
+      "module_cases": 243,
+      "degreewise_rank_checks": 972,
+      "fields": [
+        2,
+        3,
+        101
+      ],
+      "logical_role": "REGRESSION_ONLY; universal proof is manuscript section 6"
+    },
+    {
+      "name": "n4_primitive_first",
+      "command": "python3 -B checks/n4/independent_offset_audit.py",
+      "exit_code": 0,
+      "offset_count": 13921,
+      "exceptions": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          1,
+          7,
+          8
+        ],
+        [
+          1,
+          8,
+          9
+        ],
+        [
+          1,
+          9,
+          10
+        ]
+      ],
+      "payload_sha256": "43d50ab43a88bee6648312b10e7a8c539edce06ccf938768ba64fa26bcdaf0ef",
+      "logical_role": "REQUIRED_EXHAUSTIVE_FINITE_LEMMA_AFTER_PROVED_ALL_M_REDUCTION"
+    },
+    {
+      "name": "n4_higher_rows",
+      "command": "python3 -B checks/n4/check_higher_rows.py --output /tmp/p14_n4_higher.json",
+      "exit_code": 0,
+      "finite_points": 4824,
+      "true_narrow_finite_points": 4716,
+      "tails": 108,
+      "payload_sha256": "44dae4892039cec415b1edcfba6367d97d655e37f3ae559ad1f5e3842b9c16e5",
+      "summary": [
+        {
+          "finite_points": 9,
+          "max_U2": 12,
+          "min_target_second": 12,
+          "primitive_pairs": 3,
+          "slack": 0,
+          "true_narrow_finite_points": 6,
+          "w": 4
+        },
+        {
+          "finite_points": 54,
+          "max_U2": 16,
+          "min_target_second": 25,
+          "primitive_pairs": 6,
+          "slack": 9,
+          "true_narrow_finite_points": 48,
+          "w": 5
+        },
+        {
+          "finite_points": 153,
+          "max_U2": 20,
+          "min_target_second": 46,
+          "primitive_pairs": 9,
+          "slack": 26,
+          "true_narrow_finite_points": 144,
+          "w": 6
+        },
+        {
+          "finite_points": 405,
+          "max_U2": 24,
+          "min_target_second": 77,
+          "primitive_pairs": 15,
+          "slack": 53,
+          "true_narrow_finite_points": 390,
+          "w": 7
+        },
+        {
+          "finite_points": 702,
+          "max_U2": 30,
+          "min_target_second": 120,
+          "primitive_pairs": 18,
+          "slack": 90,
+          "true_narrow_finite_points": 684,
+          "w": 8
+        },
+        {
+          "finite_points": 1431,
+          "max_U2": 35,
+          "min_target_second": 177,
+          "primitive_pairs": 27,
+          "slack": 142,
+          "true_narrow_finite_points": 1404,
+          "w": 9
+        },
+        {
+          "finite_points": 2070,
+          "max_U2": 41,
+          "min_target_second": 250,
+          "primitive_pairs": 30,
+          "slack": 209,
+          "true_narrow_finite_points": 2040,
+          "w": 10
+        }
+      ],
+      "logical_role": "REQUIRED_EXHAUSTIVE_FINITE_LEMMA_AFTER_PROVED_FINITE_RANGE_AND_STABLE_TAIL"
+    },
+    {
+      "name": "n4_endpoint_regression",
+      "command": "python3 -B checks/n4/check_endpoint_model.py --max-u 10 --max-d 3 --m-excess 5 --degree 12",
+      "exit_code": 0,
+      "sources": 1308,
+      "numeric_basis_coordinates": 730272,
+      "logical_role": "REGRESSION_ONLY; universal proof is manuscript section 12.2"
+    },
+    {
+      "name": "n4_boundary_regression",
+      "command": "python3 -B checks/n4/check_boundary_family.py --regression --out /tmp/p14_n4_boundary.json",
+      "exit_code": 0,
+      "actual_order_regressions": 231,
+      "optional_taylor_cases": 16,
+      "optional_taylor_classes": 10,
+      "required_taylor_cases": 0,
+      "logical_role": "REGRESSION_ONLY; required first-row patch is on paper in section 12.6"
+    }
+  ],
+  "independent_review": "audits/FINAL_REFEREE.md, including section 8 integration review",
+  "repair_summary": [
+    "actual endpoint map and d-step competition rederived",
+    "clamp, intersection and periodic stopping justified",
+    "corner order and pure-v condition clarified",
+    "general Koszul bounds remove graph/TU and transferred-rank dependencies",
+    "boundary first-row proof removes Taylor and mapping-cone dependencies"
+  ],
+  "scope_limits": [
+    "Finite regressions are not used to prove universal source statements.",
+    "Required finite integer lemmas are exact Python computations, not yet checked by Lean.",
+    "Named published results are invoked; their complete proofs are not re-proved in this project.",
+    "The independent final referee reviewed N4 and integration; prior ordinary/width internal audits are retained rather than falsely described as newly repeated."
+  ],
+  "delivery_checks": {
+    "all_python_parsed": true,
+    "all_json_parsed": true,
+    "finite_payload_hashes_verified": true,
+    "copied_checkers_byte_identical_to_executed_sources": true,
+    "latex_delimiters_balanced": true,
+    "no_control_characters": true,
+    "markdown_local_links_resolved": 5
+  }
+}

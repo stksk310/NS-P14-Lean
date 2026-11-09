@@ -1,0 +1,546 @@
+{
+  "status": "PASS_DECLARED_ARCHITECTURE_STRUCTURE",
+  "lemma_nodes": 50,
+  "dependency_edges": 128,
+  "acyclic": true,
+  "all_nodes_reachable_from_main": true,
+  "topological_order": [
+    "X_BASIC",
+    "I_NORMALIZE",
+    "I_PARTITION",
+    "I_BASE",
+    "X_LTV",
+    "I_THREE",
+    "O_COORD",
+    "X_GREEN",
+    "I_FIELD",
+    "O_CUT",
+    "O_VOLUME",
+    "O_TOWER",
+    "O_HARMONIC",
+    "O_TOR",
+    "X_AP_BETTI",
+    "X_AP_CONE",
+    "I_TARGET",
+    "O_TARGET",
+    "O_LOW",
+    "O_SCALAR",
+    "O_SIDON",
+    "O_SMALL",
+    "O_LARGE",
+    "O_CLOSE",
+    "E_CORE",
+    "E_COORD",
+    "E_KERNEL",
+    "E_STOP",
+    "E_BOUNDS",
+    "E_HOMOLOGY",
+    "E_TRANSFER",
+    "W_EDGE",
+    "X_BHP_EK",
+    "W_DENSE",
+    "X_KNESER",
+    "E_ARTIN",
+    "E_ROW",
+    "W_SPARSE",
+    "W_FIVE",
+    "W_CLOSE",
+    "E_TWO",
+    "N_DISTANCE",
+    "X_SC",
+    "N_WORDS",
+    "N_HIGH",
+    "N_FIRST",
+    "N_SMALL",
+    "N_WIDTH4",
+    "N_CLOSE",
+    "I_MAIN"
+  ],
+  "transitively_repeated_local_inputs": [
+    {
+      "lemma": "O_TOWER",
+      "input": "O_COORD",
+      "also_via": [
+        "O_VOLUME",
+        "O_CUT"
+      ]
+    },
+    {
+      "lemma": "O_TOR",
+      "input": "O_COORD",
+      "also_via": [
+        "O_TOWER"
+      ]
+    },
+    {
+      "lemma": "O_TOR",
+      "input": "X_BASIC",
+      "also_via": [
+        "O_COORD",
+        "O_TOWER",
+        "O_HARMONIC"
+      ]
+    },
+    {
+      "lemma": "O_TARGET",
+      "input": "O_CUT",
+      "also_via": [
+        "O_TOR"
+      ]
+    },
+    {
+      "lemma": "O_TARGET",
+      "input": "X_BASIC",
+      "also_via": [
+        "O_CUT",
+        "O_TOR"
+      ]
+    },
+    {
+      "lemma": "O_LOW",
+      "input": "O_TOWER",
+      "also_via": [
+        "O_TOR",
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "O_LOW",
+      "input": "O_TOR",
+      "also_via": [
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "O_SCALAR",
+      "input": "O_TOR",
+      "also_via": [
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "O_SIDON",
+      "input": "O_COORD",
+      "also_via": [
+        "O_CUT"
+      ]
+    },
+    {
+      "lemma": "O_SMALL",
+      "input": "O_TOWER",
+      "also_via": [
+        "O_SCALAR"
+      ]
+    },
+    {
+      "lemma": "O_LARGE",
+      "input": "O_TOWER",
+      "also_via": [
+        "O_SCALAR"
+      ]
+    },
+    {
+      "lemma": "O_CLOSE",
+      "input": "O_CUT",
+      "also_via": [
+        "O_LOW",
+        "O_SMALL",
+        "O_LARGE",
+        "O_SCALAR",
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "O_CLOSE",
+      "input": "O_SCALAR",
+      "also_via": [
+        "O_SMALL",
+        "O_LARGE"
+      ]
+    },
+    {
+      "lemma": "O_CLOSE",
+      "input": "O_TARGET",
+      "also_via": [
+        "O_LOW",
+        "O_SMALL",
+        "O_LARGE",
+        "O_SCALAR"
+      ]
+    },
+    {
+      "lemma": "O_CLOSE",
+      "input": "I_FIELD",
+      "also_via": [
+        "O_CUT",
+        "O_LOW",
+        "O_SMALL",
+        "O_LARGE",
+        "O_SCALAR",
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "O_CLOSE",
+      "input": "I_TARGET",
+      "also_via": [
+        "O_LOW",
+        "O_SMALL",
+        "O_LARGE",
+        "O_SCALAR",
+        "O_TARGET"
+      ]
+    },
+    {
+      "lemma": "W_EDGE",
+      "input": "E_CORE",
+      "also_via": [
+        "E_BOUNDS",
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_EDGE",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_EDGE",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_CORE",
+        "E_BOUNDS",
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_EDGE",
+      "input": "X_AP_BETTI",
+      "also_via": [
+        "I_TARGET"
+      ]
+    },
+    {
+      "lemma": "W_EDGE",
+      "input": "X_AP_CONE",
+      "also_via": [
+        "I_TARGET"
+      ]
+    },
+    {
+      "lemma": "W_DENSE",
+      "input": "E_CORE",
+      "also_via": [
+        "E_BOUNDS",
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_DENSE",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_DENSE",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_CORE",
+        "E_BOUNDS",
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_SPARSE",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "E_TRANSFER",
+        "E_ROW"
+      ]
+    },
+    {
+      "lemma": "W_SPARSE",
+      "input": "E_TRANSFER",
+      "also_via": [
+        "E_ROW"
+      ]
+    },
+    {
+      "lemma": "W_SPARSE",
+      "input": "E_ARTIN",
+      "also_via": [
+        "E_ROW"
+      ]
+    },
+    {
+      "lemma": "W_SPARSE",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_BOUNDS",
+        "E_TRANSFER",
+        "E_ARTIN",
+        "E_ROW"
+      ]
+    },
+    {
+      "lemma": "W_FIVE",
+      "input": "E_TRANSFER",
+      "also_via": [
+        "W_EDGE",
+        "W_DENSE"
+      ]
+    },
+    {
+      "lemma": "W_FIVE",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "W_EDGE",
+        "W_DENSE",
+        "E_TRANSFER"
+      ]
+    },
+    {
+      "lemma": "W_FIVE",
+      "input": "I_TARGET",
+      "also_via": [
+        "W_EDGE",
+        "W_DENSE"
+      ]
+    },
+    {
+      "lemma": "W_FIVE",
+      "input": "X_BASIC",
+      "also_via": [
+        "W_EDGE",
+        "W_DENSE",
+        "E_TRANSFER",
+        "E_BOUNDS",
+        "E_ARTIN"
+      ]
+    },
+    {
+      "lemma": "W_CLOSE",
+      "input": "W_EDGE",
+      "also_via": [
+        "W_FIVE"
+      ]
+    },
+    {
+      "lemma": "W_CLOSE",
+      "input": "W_DENSE",
+      "also_via": [
+        "W_FIVE"
+      ]
+    },
+    {
+      "lemma": "N_DISTANCE",
+      "input": "E_CORE",
+      "also_via": [
+        "E_BOUNDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_DISTANCE",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_DISTANCE",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_CORE",
+        "E_BOUNDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_WORDS",
+      "input": "E_CORE",
+      "also_via": [
+        "E_BOUNDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_WORDS",
+      "input": "E_BOUNDS",
+      "also_via": [
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_WORDS",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_CORE",
+        "E_BOUNDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_HIGH",
+      "input": "E_TWO",
+      "also_via": [
+        "N_DISTANCE",
+        "N_WORDS"
+      ]
+    },
+    {
+      "lemma": "N_HIGH",
+      "input": "X_BASIC",
+      "also_via": [
+        "N_DISTANCE",
+        "N_WORDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_FIRST",
+      "input": "E_TWO",
+      "also_via": [
+        "N_DISTANCE",
+        "N_WORDS"
+      ]
+    },
+    {
+      "lemma": "N_FIRST",
+      "input": "X_BASIC",
+      "also_via": [
+        "N_DISTANCE",
+        "N_WORDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_SMALL",
+      "input": "N_DISTANCE",
+      "also_via": [
+        "N_FIRST"
+      ]
+    },
+    {
+      "lemma": "N_SMALL",
+      "input": "N_WORDS",
+      "also_via": [
+        "N_FIRST"
+      ]
+    },
+    {
+      "lemma": "N_SMALL",
+      "input": "E_TWO",
+      "also_via": [
+        "N_FIRST",
+        "N_DISTANCE",
+        "N_WORDS"
+      ]
+    },
+    {
+      "lemma": "N_SMALL",
+      "input": "I_TARGET",
+      "also_via": [
+        "N_FIRST"
+      ]
+    },
+    {
+      "lemma": "N_SMALL",
+      "input": "X_BASIC",
+      "also_via": [
+        "N_FIRST",
+        "N_DISTANCE",
+        "N_WORDS",
+        "E_TWO"
+      ]
+    },
+    {
+      "lemma": "N_WIDTH4",
+      "input": "E_CORE",
+      "also_via": [
+        "E_KERNEL"
+      ]
+    },
+    {
+      "lemma": "N_WIDTH4",
+      "input": "X_BASIC",
+      "also_via": [
+        "E_CORE",
+        "E_KERNEL"
+      ]
+    },
+    {
+      "lemma": "N_CLOSE",
+      "input": "N_FIRST",
+      "also_via": [
+        "N_SMALL"
+      ]
+    }
+  ],
+  "referenced_source_files": [
+    "auditability_search/CORE_READABILITY_AUDIT.md",
+    "auditability_search/LATER_READABILITY_AUDIT.md",
+    "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md",
+    "auditability_search/ORDINARY_REDUCTION_REFEREE.md",
+    "auditability_search/SIDON_INDEPENDENT_AUDIT.md",
+    "auditability_search/ordinary/verify_ordinary_reduction.py",
+    "n4_further_reduction/N4_PAPER_REDUCTION_JA.md",
+    "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+    "proof_integrated_v2/audits/FINAL_MATHEMATICAL_REVIEW.md",
+    "proof_integrated_v2/checks/verify_scalar.py",
+    "proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md",
+    "proof_structure_v3/work/WIDTH_PART.md"
+  ],
+  "explicit_equation_labels_checked": 164,
+  "descriptive_equation_pointers_for_human_review": 57,
+  "preserved_source_members": {
+    "proof_integrated_v2": 24,
+    "n4_further_reduction": 5,
+    "auditability_search": 9,
+    "navi_cross_review": 10
+  },
+  "four_required_outputs_local_links_checked": 144,
+  "skeleton_equation_tags": 76,
+  "duplicate_tags": [],
+  "coverage": {
+    "small_embedding": {
+      "e=1,2": "I_BASE",
+      "e=3": "I_THREE"
+    },
+    "ordinary": {
+      "scope": "e>=4,w>=m-1",
+      "rank2,3": "O_LOW",
+      "rank4..8": "O_SMALL",
+      "rank>=9": "O_LARGE",
+      "delta=0": "O_LOW (empty tower)",
+      "top_relative_rank": "O_TOR,O_SCALAR,O_TARGET"
+    },
+    "narrow": {
+      "scope": "e>=4,w<=m-2,m>=du+2",
+      "e=4": {
+        "u=3,4": "N_SMALL,N_WIDTH4",
+        "u=5": "N_FIRST",
+        "u=6,7,8": "N_SMALL",
+        "u>=9": "N_FIRST",
+        "rows2..4": "N_HIGH"
+      },
+      "e=5": {
+        "u=4,5": "W_EDGE",
+        "u=6,7,u>=8": "W_FIVE"
+      },
+      "e>=6": {
+        "u=e-1,e": "W_EDGE",
+        "e+1<=u<=2e-3": "W_DENSE",
+        "u>=2e-2": "W_SPARSE"
+      }
+    },
+    "boundary_w=m-1": "ordinary",
+    "all_fields": "I_FIELD for ordinary cut; each narrow lemma over the given field",
+    "all_rows": "row0=1; retained top rows; i>e source0",
+    "verification_scope": "This records the mathematical coverage argument; no finite parameter sweep proves universal coverage."
+  },
+  "scope_limit": "Hashes, references, declared DAG, intervals, delimiters. Not semantic proof checking, external peer review, or Lean kernel verification."
+}

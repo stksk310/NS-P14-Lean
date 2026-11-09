@@ -1,0 +1,57 @@
+{
+  "date_jst": "2026-11-09",
+  "mathematical_status": "ASSEMBLED_WITH_EXPLICIT_INHERITED_BOUNDARY_THEOREMS",
+  "formal_verification": "NOT_STARTED",
+  "uploaded_archive_sha256": "ae7ae9b99f6e2c66551f29deb7e8a7f5a8db054891b04a706bd68c0d5165b385",
+  "fresh_checks": [
+    {
+      "command": "python -B 07_REPRODUCIBLE_CHECKERS/verify_archive.py",
+      "cwd": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109",
+      "exit_code": 0,
+      "status": "PASS_ARCHIVE_BYTE_INTEGRITY",
+      "manifest_files": 302,
+      "original_objects": 5605,
+      "json_files": 53,
+      "R57_direct_anchors": 27,
+      "semantic_records": 164
+    },
+    {
+      "command": "python -B proof/checks/verify_scalar.py",
+      "exit_code": 0,
+      "status": "PASS_EXACT_ARITHMETIC_ONLY",
+      "finite_rays": 200,
+      "rank_envelope_diagnostics": 2040,
+      "target_identity_diagnostics": 19437,
+      "minimum_gap_row": {
+        "delta": 45,
+        "r": 9,
+        "initial_e": 13,
+        "gap": "14727301309701473/2950998796617300",
+        "slope": "2803421164113049973/168206931407186100"
+      },
+      "minimum_slope_row": {
+        "delta": 10,
+        "r": 4,
+        "initial_e": 13,
+        "gap": "12469/420",
+        "slope": "27169/9240"
+      },
+      "canonical_rows_sha256": "60083a2fd64fd414a274105e52d94bb03e7bf9ba4009140a939324b3383df7d6",
+      "H210_lt_6": true
+    },
+    {
+      "command": "python -B proof/checks/recheck_rows.py",
+      "exit_code": 0,
+      "status": "PASS_SECOND_DERIVATION_AND_SOURCE_BYTES",
+      "exact_rays": 200,
+      "literal_source_files": 22,
+      "H210_lt_6": true
+    }
+  ],
+  "not_established": [
+    "Independent re-verification of every transitive proof and finite campaign behind the retained small-embedding boundary.",
+    "Formalization of the width boundary, named classical inputs, module arguments and scalar arithmetic in Lean.",
+    "A self-contained unconditional certification of the full P14 theorem."
+  ],
+  "scope": "Fresh finite arithmetic and saved-byte integrity. Universal claims use the displayed mathematical proofs and the explicit inherited boundary theorems, not JSON status fields."
+}

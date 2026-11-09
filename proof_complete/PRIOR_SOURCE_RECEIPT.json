@@ -1,0 +1,53 @@
+{
+  "input_files": [
+    {
+      "file": "attachments/b3310a8b-85f4-4447-9ce7-50f272a75e89/NS_P14_PROOF_REDUCTION_01_INPUT_20261109.zip",
+      "bytes": 2755473,
+      "sha256": "a0c221347633a3bc1ea6f924846d2914538ae420f0c44c784149b9a8f90a11b0"
+    },
+    {
+      "file": "attachments/770cc0d7-5fd8-4a96-b60c-4fc650fd10fd/貼り付けたテキスト.txt",
+      "bytes": 10701,
+      "sha256": "cb568378ad141445e510834de9af8e05701c9fbd4108942a6b4b88400749ad6c"
+    }
+  ],
+  "used_prior_sources": [
+    {
+      "file": "proof/NS_P14_SINGLE_PROOF_JA.md",
+      "sha256": "a27f35b980bcb48149db3b8d6a51a617d8873a8f380da4729a543512053e6a38"
+    },
+    {
+      "file": "proof/sources/R39/R39_ACTUAL_SOURCE_CORE_TRANSFER.md",
+      "sha256": "6c441989966c18472fbfba8dee2f1736db2f3b27dc355cc317804738c6124a55"
+    },
+    {
+      "file": "proof/sources/R40/R40_UNIVERSAL_WIDTH_ALL.md",
+      "sha256": "5f02080d6e03fe28b5ee1528e4bbf7578d02bbc5df5e8c78ba6ab37092654c54"
+    },
+    {
+      "file": "proof/sources/R40/R40_UNIVERSAL_ONE_GAP.md",
+      "sha256": "b58b53fadbfed24d4ae163b3731957fec7c6f9556cae45f6b6c412fe241ccdd0"
+    },
+    {
+      "file": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109/03_CANONICAL_PROOF/06_R42_R42_UNIVERSAL_FIRST_HIT_MAXIMUM.md",
+      "sha256": "72e39c346aa59052ad7ecd25e4c5359faaed83832bc83b2672b36997794e7c12"
+    },
+    {
+      "file": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109/04_HISTORICAL_THEOREMS/R24_LITERAL_PROOFS.md",
+      "sha256": "4aadbb65e979ee9b756fb5e3bde96a1a67c5464e10d04b7ff8a5e03a479e07d0"
+    },
+    {
+      "file": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109/04_HISTORICAL_THEOREMS/R26_LITERAL_PROOFS.md",
+      "sha256": "40808be29e9b7433ba06856c3a773223ea7728eed2462f8a62c7dd5420338318"
+    },
+    {
+      "file": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109/04_HISTORICAL_THEOREMS/R27_LITERAL_PROOFS.md",
+      "sha256": "e96ff5a058e6339ab8f18839de1d8954898c5ac1196778f9f3baf4581cca0409"
+    },
+    {
+      "file": "source_material/NS_WIDTH_P14_CANONICAL_PROOF_HANDOFF_R01_R57_20261109/04_HISTORICAL_THEOREMS/R33_LITERAL_PROOFS.md",
+      "sha256": "097f00ef216e6e4d337a017289d0377432d0510b9ead3c2070d57a38fa7162da"
+    }
+  ],
+  "policy": "Attached prompts are reference material; user request sets the task. This result is delta-only, not a repackage of the inputs."
+}

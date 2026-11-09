@@ -1,0 +1,250 @@
+{
+  "date": "2026-11-09",
+  "status": "BOUNDED_SIMPLIFICATION_SEARCH_WITH_PROVED_REPLACEMENT_LEMMAS",
+  "canonical_manuscript_edited": false,
+  "canonical_proof_package_manifest_all_hashes_unchanged": true,
+  "canonical_manuscript_sha256": "dbf3ad99073b2d7ccac29b9c1f84c0878c62868e2911c5446bfc84eb947c98c3",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "fresh_root_checks": [
+    {
+      "command": "python3 -B n4/check_shorter_n4.py",
+      "exit_code": 0,
+      "facts": {
+        "schema": "SHORTER_N4_SEARCH_V1",
+        "offset_count": 196,
+        "finite_widths": [
+          3,
+          12
+        ],
+        "multiplicities_enumerated": 0,
+        "higher_row_finite_points": 0,
+        "higher_row_tail_certificates": 0,
+        "exceptions": [
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            4,
+            1,
+            3
+          ]
+        ],
+        "by_width": [
+          {
+            "w": 3,
+            "count": 1,
+            "min_slack": -2,
+            "worst": [
+              1,
+              2
+            ]
+          },
+          {
+            "w": 4,
+            "count": 3,
+            "min_slack": -1,
+            "worst": [
+              1,
+              3
+            ]
+          },
+          {
+            "w": 5,
+            "count": 6,
+            "min_slack": 1,
+            "worst": [
+              1,
+              4
+            ]
+          },
+          {
+            "w": 6,
+            "count": 9,
+            "min_slack": 0,
+            "worst": [
+              1,
+              5
+            ]
+          },
+          {
+            "w": 7,
+            "count": 15,
+            "min_slack": 2,
+            "worst": [
+              1,
+              6
+            ]
+          },
+          {
+            "w": 8,
+            "count": 18,
+            "min_slack": 4,
+            "worst": [
+              1,
+              5
+            ]
+          },
+          {
+            "w": 9,
+            "count": 27,
+            "min_slack": 7,
+            "worst": [
+              1,
+              8
+            ]
+          },
+          {
+            "w": 10,
+            "count": 30,
+            "min_slack": 8,
+            "worst": [
+              1,
+              6
+            ]
+          },
+          {
+            "w": 11,
+            "count": 45,
+            "min_slack": 14,
+            "worst": [
+              1,
+              10
+            ]
+          },
+          {
+            "w": 12,
+            "count": 42,
+            "min_slack": 12,
+            "worst": [
+              1,
+              7
+            ]
+          }
+        ],
+        "polynomial_coefficients": {
+          "12*(F2_lower-U2_upper), w=6+z": [
+            108,
+            152,
+            45,
+            4
+          ],
+          "8*(F3_lower-U3_upper), w=5+z": [
+            88,
+            134,
+            67,
+            14,
+            1
+          ],
+          "60*(F4_lower-U4_upper), w=5+z": [
+            105,
+            458,
+            435,
+            170,
+            30,
+            2
+          ]
+        },
+        "qualification": "Exact finite evaluation of a proved all-m bound; universal arguments are in N4_SEARCH.md."
+      }
+    },
+    {
+      "command": "python3 -B n4/referee_core_audit.py",
+      "exit_code": 0,
+      "independent_algorithms": 2,
+      "offset_pair_counts": [
+        196,
+        493
+      ],
+      "exception_offsets": [
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "command": "python3 -B scalar/check_scalar_simplifications.py",
+      "exit_code": 0,
+      "facts": {
+        "new_barrier_identity": "all polynomial coefficients match",
+        "rank_4_to_9_margins": [
+          {
+            "rank": 4,
+            "rational_margin": "17587/79800"
+          },
+          {
+            "rank": 5,
+            "rational_margin": "143/1200"
+          },
+          {
+            "rank": 6,
+            "rational_margin": "23/350"
+          },
+          {
+            "rank": 7,
+            "rational_margin": "2993/96200"
+          },
+          {
+            "rank": 8,
+            "rational_margin": "321/60200"
+          },
+          {
+            "rank": 9,
+            "rational_margin": "1/900"
+          }
+        ],
+        "new_rank_10_anchor_margin": "181/8400",
+        "frozen_cutoff_diagnostics": 351,
+        "diagnostic_rank_range": [
+          4,
+          30
+        ],
+        "diagnostic_delta_minus_a_range": [
+          0,
+          12
+        ],
+        "minimum_gap": "5845533/7436429",
+        "minimum_forward_gap_difference": "3791/630",
+        "scope": "Universal derivations in SCALAR_SEARCH.md; finite diagnostics are supplementary."
+      }
+    },
+    {
+      "command": "python3 -B width/check_width_candidates.py",
+      "exit_code": 0,
+      "exact_checks": [
+        "general incidence identity",
+        "four sparse first-row identities for e=6,7,8,9",
+        "generic e>=10 positive identity",
+        "e=5,u=6/7 capacity tables"
+      ]
+    }
+  ],
+  "independent_reviews": [
+    "N4_REFEREE.md",
+    "SCALAR_WIDTH_REFEREE.md"
+  ],
+  "logical_qualification": [
+    "N4 high rows use universal inequalities, not sampled multiplicities.",
+    "N4 first row retains 196 exhaustive offset cases with two explicitly paid exceptions.",
+    "Scalar diagnostics supplement universal algebraic arguments.",
+    "Width tables are exact polynomial identities, not source samples.",
+    "Original complete manuscript remains unchanged; the replacements have not yet been integrated into a newly audited full manuscript.",
+    "No Lean kernel verification was performed."
+  ],
+  "delivery_checks": {
+    "all_python_parsed": true,
+    "all_json_parsed": true,
+    "latex_delimiters_balanced": true,
+    "no_control_characters": true,
+    "local_markdown_links_resolved": 6
+  }
+}

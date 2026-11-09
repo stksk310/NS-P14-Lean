@@ -1,0 +1,38 @@
+{
+  "date_utc": "2026-11-09",
+  "status": "ORDINARY_REPLACEMENT_REVIEWED_AND_EXACT_ARITHMETIC_PASSED",
+  "main_report": "SEARCH_AND_HUMAN_AUDIT_JA.md",
+  "replacement_proof_japanese": "ORDINARY_PAPER_REDUCTION_JA.md",
+  "scope": {
+    "new_result": "All 83 ordinary profiles, 665 row comparisons, and five old tails retired from the replacement route.",
+    "new_required_rational_anchor_rows": 5,
+    "parameter_coverage": "Actual ordinary sources: r=2,3 via V02 section9; r=4,...,8 via replacement; r>=9 implies e>=10 via V02 section11.",
+    "retained_foundation": "V02 sections2-10, existing large-rank scalar proof, narrow-width proof, named published inputs.",
+    "integrated_manuscript_updated": false,
+    "lean_kernel_verification": false,
+    "external_publication_peer_review": false,
+    "no_claim_of_eliminating_all_finite_arithmetic_or_case_splits": true
+  },
+  "fresh_root_verification": {
+    "command": "python3 -B auditability_search/ordinary/verify_ordinary_reduction.py",
+    "exit_code": 0,
+    "result": "FIVE_EXACT_SCALAR_ANCHORS_PAID",
+    "checks": "Every coefficient of five rational bivariate polynomials, displayed constants, signs, and adjacent gaps.",
+    "frozen_v02_manifest_members_checked": 24,
+    "frozen_n4_supplement_manifest_members_checked": 5,
+    "hash_mismatches": [],
+    "new_local_markdown_links_checked": 30,
+    "new_python_syntax": "PASS",
+    "new_markdown_math_delimiters": "PASS"
+  },
+  "reviews": {
+    "actual_apery_and_sidon": "SIDON_INDEPENDENT_AUDIT.md",
+    "complete_ordinary_connection": "ORDINARY_REDUCTION_REFEREE.md",
+    "core_human_audit": "CORE_READABILITY_AUDIT.md",
+    "later_human_audit": "LATER_READABILITY_AUDIT.md",
+    "resolved_scope_issue": "Cut corollary requires r>=3 because r=max(2,p(q2)); new proof uses it only for r=6,7,8.",
+    "unresolved_new_replacement_findings": []
+  },
+  "frozen_v02_manuscript_sha256": "37489ff37efa3de703a78990b294d956d07581082e70d60bae323901b4accef9",
+  "frozen_n4_paper_sha256": "467cd0776e09d95e037281c9b40fcaf972b1d0910154b7d5eb87c07c889537a6"
+}
