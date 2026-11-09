@@ -1,4 +1,4 @@
-# Lean Block01–04 監査引継ぎ
+# Lean Block01–05 監査引継ぎ
 
 2026年11月10日（JST）。このスナップショットは `work` ブランチで公開する。
 
@@ -11,6 +11,8 @@
 5. [V03骨子](proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md) と [依存表](proof_structure_v3/P14_DEPENDENCY_MAP_V03.md)
 6. [Block03：資源からSO3](NSP14/Ordinary/Resources.lean) と [式の対応・範囲](verification/block03/README_JA.md)
 7. [Block04：rank 2・3の全行数値評価](NSP14/Ordinary/LowRank.lean) と [重み表・範囲](verification/block04/README_JA.md)
+8. [Block05：調和和障壁・全大rank基点](NSP14/Ordinary/LargeSeed.lean) と [原稿対応・範囲](verification/block05/README_JA.md)
+9. [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
 ## 特に確認してほしい境界
 
@@ -25,6 +27,8 @@
 - Block03は同じ資源列の条件からSO3を証明する。台をcutoff以下に制限しない。
 - Block04はrank 2に三角数下限やhead cap M−3を課さない。δ=0を含む。
   rank 3では線形head cap H₁≤3δを明示して要求し、top行も評価する。
+- Block05は全r≥9の基点正値性。任意のδ・eへの延長を済ませたとは扱わない。
+  原稿から短縮した増分比較は変更台帳A05の証明と照合する。
 - 実際のtowerからその共通資源列を作ること、actual接錐・Tor/Bettiへの接続、P14全体は未完成。
 
 ## 再現
@@ -34,11 +38,11 @@ Lean `v4.36.0-rc2` とmathlib revisionはtoolchain・Lake manifestに固定し�
 
 ```sh
 lake build
-python3 scripts/verify_block04.py
+python3 scripts/verify_block05.py
 ```
 
-Block04の検証スクリプトは新ソースの再検査・テスト・13個の公理依存報告と、
-Block01–03の回帰テスト・10個、14個、7個の公理依存報告を検査する。
+Block05の検証スクリプトは新ソースの再検査・テスト・22個の公理依存報告と、
+Block01–04の回帰テスト・10個、14個、7個、13個の公理依存報告を検査する。
 監査の負のシフトの反例とBlock02の仮定検査も実行する。
 通常のLean基盤 `propext`, `Classical.choice`, `Quot.sound` 以外の依存を拒否する。
 追加の数学公理や `sorryAx` への依存は認めない。
@@ -54,15 +58,15 @@ lake build
 同じ環境なら次で実行できる。
 
 ```sh
-PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block04.py
+PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block05.py
 ```
 
-[保存済みBlock04検証記録](verification/block04/verification.json) とログを同梱する。
+[保存済みBlock05検証記録](verification/block05/verification.json) とログを同梱する。
 ローカルで再検証すると所要秒などは更新されるため、厳密な比較対象には監査するコミットを指定する。
 
 [Block01の独立監査](audit/README_JA.md) と [今回の対応記録](docs/BLOCK01_AUDIT_RESPONSE_JA.md) を保存した。
 `audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` はBlock01監査修正までの記録。
-Block03の記録も保持する。今回の公開import追加後の照合対象は `verification/block04/MANIFEST_SHA256.json` とする。
+Block03・04の記録も保持する。今回の公開import追加後の照合対象は `verification/block05/MANIFEST_SHA256.json` とする。
 
 [Block02独立監査](audit/block02/README_JA.md) は条件付き数値ブロックとして合格。
 Block03の外部監査は進行中で、Block04の実装検証と区別する。

@@ -2,6 +2,24 @@
 
 Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユーザー承認済み。
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
+[Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
+
+## Lean implementation — Block 05
+
+[LargeSeed.lean](NSP14/Ordinary/LargeSeed.lean) proves the harmonic barrier
+by induction for every rank `r >= 10`, then proves the base gap
+`G_r(10,a_r) > 0` for every `r >= 9`. A direct positive quartic replaces
+the paper's convexity-based increment comparison; the paper-ready
+replacement is recorded in the alignment ledger.
+Extending the base to arbitrary deficit and embedding dimension remains
+the next numerical step.
+
+```sh
+python3 scripts/verify_block05.py
+```
+
+[Scope and paper correspondence](verification/block05/README_JA.md),
+[verification](verification/block05/verification.json).
 
 ## Lean implementation — Block 04
 

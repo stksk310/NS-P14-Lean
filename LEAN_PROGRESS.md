@@ -62,3 +62,16 @@ actual tower・Torから重み付き和への移行・actual target余裕・Bett
 ユーザーからBlock02独立監査の通過報告を受け、リモート監査原本も取得した。
 `audit/block02/README_JA.md` の判定は「条件付きの組合せ・数値ブロックとして合格」。
 原本の仮定検査をBlock04の回帰に加える。Block03の外部監査は進行中。
+
+## Block05：2026年11月10日（JST）
+
+調和和の障壁をr≥10の帰納で証明し、固定cutoffの基点G_r(10,a_r)>0を全r≥9で証明した。
+自然数三角数と有理数cast、cutoffの両側評価、調和和と既存tail和の一致、
+閾値との比較、r=9の一行を含む新規22定理。
+凸性の中間評価を正係数の四次式による直接の増分比較へ短縮した。
+
+原稿へ戻せる変更を `docs/LEAN_PAPER_ALIGNMENT_JA.md` A05に記録し、
+Block04の有理数多項式評価など既存の対応も同じ台帳にまとめた。
+基点から任意のe・δへの差分評価と大rank scalarの全閉鎖は次の単位。
+actual tower・Tor/Betti・M12・P14全体の完成ではない。
+今回の検証記録は `verification/block05/`。Block01–04のソースとテストは保持する。
