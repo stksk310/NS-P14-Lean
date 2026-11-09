@@ -1,0 +1,146 @@
+{
+  "date_jst": "2026-11-09",
+  "verdict": "PASS_NUMERICAL_BLOCK_WITH_DOCUMENTATION_CORRECTION",
+  "scope": "Internal correctness and independent compilation of the submitted five-row rational scalar block. Paper correspondence and full NS-P14 are outside the verified scope.",
+  "submitted_zip_sha256": "35a2b807d39e7270f7fe072e12594d00cb3f15ce0a7732f0c9cf2e3e51c9eacf",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "source_checks": {
+    "all_14_manifest_entries_match": true,
+    "submitted_files_unchanged": true,
+    "all_9_dependency_commits_match": true,
+    "source_has_no_sorry_or_added_axiom_declarations": true
+  },
+  "fresh_compilation": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 378.085
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.461
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.258
+    }
+  ],
+  "axioms": {
+    "report_count": 10,
+    "declarations": [
+      "NSP14.Ordinary.SmallScalar.gap_shift",
+      "NSP14.Ordinary.SmallScalar.dStep_eq",
+      "NSP14.Ordinary.SmallScalar.row4",
+      "NSP14.Ordinary.SmallScalar.row5",
+      "NSP14.Ordinary.SmallScalar.row6",
+      "NSP14.Ordinary.SmallScalar.row7",
+      "NSP14.Ordinary.SmallScalar.row8",
+      "NSP14.Ordinary.SmallScalar.cutoff_admissible",
+      "NSP14.Ordinary.SmallScalar.small_gap_pos",
+      "NSP14.Ordinary.SmallScalar.scalar_lt_of_upper"
+    ],
+    "allowed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "matches_submitted_axiom_log": true,
+    "sorryAx_found": false
+  },
+  "independent_arithmetic": [
+    {
+      "rank": 4,
+      "cutoff": 7,
+      "seed": "349/40",
+      "eSlope": "381/140",
+      "dStep": "1007/280",
+      "seed_plus_eSlope": "641/56",
+      "seed_plus_dStep": "345/28",
+      "beta": "5/8",
+      "exact_match": true
+    },
+    {
+      "rank": 5,
+      "cutoff": 10,
+      "seed": "358/63",
+      "eSlope": "28429/6930",
+      "dStep": "32209/6930",
+      "seed_plus_eSlope": "3229/330",
+      "seed_plus_dStep": "3409/330",
+      "beta": "7/11",
+      "exact_match": true
+    },
+    {
+      "rank": 6,
+      "cutoff": 13,
+      "seed": "-831/8008",
+      "eSlope": "424147/72072",
+      "dStep": "439591/72072",
+      "seed_plus_eSlope": "14881/2574",
+      "seed_plus_dStep": "54014/9009",
+      "beta": "9/14",
+      "exact_match": true
+    },
+    {
+      "rank": 7,
+      "cutoff": 17,
+      "seed": "-116157/19448",
+      "eSlope": "17076937/2042040",
+      "dStep": "17076937/2042040",
+      "seed_plus_eSlope": "1220113/510510",
+      "seed_plus_dStep": "1220113/510510",
+      "beta": "2/3",
+      "exact_match": true
+    },
+    {
+      "rank": 8,
+      "cutoff": 21,
+      "seed": "-1267683/184756",
+      "eSlope": "8418651/739024",
+      "dStep": "8250691/739024",
+      "seed_plus_eSlope": "3347919/739024",
+      "seed_plus_dStep": "3179959/739024",
+      "beta": "15/22",
+      "exact_match": true
+    }
+  ],
+  "documentation_finding": {
+    "file": "NSP14/Ordinary/SmallScalar.lean",
+    "line": 155,
+    "issue": "The phrase all integer shifts is too broad for positivity.",
+    "actual_identity_domain": "s,t in Q, arbitrary",
+    "actual_positivity_domain": "r,s,t in N; 4 <= r <= 8; r <= 5 or s+t != 0",
+    "counterexample": "r=4,n=7,s=-4,t=0 gives e=1,d=10 and gap=-121/56 < 0.",
+    "lean_counterexample_check": {
+      "source": "audit/DomainChecks.lean",
+      "exit_code": 0
+    }
+  },
+  "unverified": [
+    "Original paper SO3-SO5 correspondence: referenced paper_source file is not in the supplied ZIP.",
+    "Actual model and natural-shift parameterization.",
+    "Actual Apery-Sidon proof of corner exclusion.",
+    "Resource-to-SO3 upper bound for actual F.",
+    "Betti transfer, full M12, and full P14."
+  ]
+}

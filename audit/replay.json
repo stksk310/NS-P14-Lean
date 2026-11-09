@@ -1,0 +1,34 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 378.085
+  },
+  {
+    "name": "source_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.461
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.258
+  }
+]
