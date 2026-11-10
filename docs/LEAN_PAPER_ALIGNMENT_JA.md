@@ -740,3 +740,15 @@ ordinaryModel、HeadIndex、ModelCoordinates/Multiplication/Quotient/Kernel、Mo
 VandermondeSpark、KoszulIncidence/MomentRank、CoefficientSlotsEquiv、TwoStepSlots/Boundary/Betti、EvaluationVariables。任意標数、distinct pointsの存在する体上で、実variable actionがu(t)*ell(t)の二次数加群の境界をactual recursive Koszul signsで評価。p>=Dで単射、p<=Dで全射となる。actual境界はsurjective lower projection、moment map、injective upper inclusionに因数分解される。range finrankを同定して全行beta_iを計算し、beta0とtopも保持。
 
 この線型代数的補題は一般APの実作用へ適用するまで、AP公式の証明として数えない。同標数無限拡大から元体への帰還は既存actualG Betti保存で行う。原稿の最小解消の別経路となる候補だが、未完成のLES接続を「退化」として仮定しない。
+
+### A71 — 一般AP公式のactual接続とx因数分解
+
+A69–A70の候補を実APへ適用して完成した。ModelVariableOrder/ModelPolynomialBetti/ModelKernelBetti/ModelHeadBettiは実最小表示とnative正則縮約を接続し、WindowHankel/WindowBettiはactual J/xJ作用を座標反転と実Vandermonde変数変更で評価作用へ移す。JはP有限生成、BもP有限生成だが、いずれもk有限次元とは扱わない。
+
+ModelKernelDivision/ModelTorClosureではm>vから実J⊂xBを証明する。xの単射性で作る実B線型の除算写像により、実包含J→Bを多項式変数xの倍として因数分解する。KoszulVariableMapsの実null-homotopyと実LESから全行のBetti加法を得る。過去の候補「gradingからTor写像消滅」を置換し、そのgrading集中まで証明したとは主張しない。GSSの解消自体ではなく、同じquotient Betti結論の独立なactual Koszul証明である。
+
+BettiFormula.semigroup_totalBetti/cone_totalBetti/completed_AP_totalBettiは一般公差d≥1・元の任意体・0行を含む全行に適用できる。無限拡大上で計算した実cone Bettiを体拡大保存で元体へ戻す。ProfileBoundsは1≤b≤vのm=av+b、D=v−b+1、i>vの0、Fmin下界と幅方向単調性を保持する。WidthとIntervalAPBettiは実幅、literal targetの実最小表示と完成接錐のBettiへ接続する。v=1、D=1/v、i=D/D+1、0/top/top+1、標数2、d>1を受入に含めた。
+
+### A72 — Run15の元の8目標の同時閉鎖
+
+audit/run15_closure/ClosedGoals.leanのall_original_goals_closedは、凍結した元の8目標の型を変えずに連言を証明する。A54以降の過去時点の未完記録は履歴として残すが、Run15内の数学的未完は解消した。ordinary全行比較はe≥3、幅w≥m−1、元の任意体、literal完成source/target、各自の最小全変数表示。一般AP公式と狭幅targetの計算を証明したことは、狭幅sourceとの主比較を証明したことを意味しない。後続Run16–20の完成条件は保持する。

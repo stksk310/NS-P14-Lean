@@ -1,5 +1,5 @@
 {
-  "status": "PARTIAL_NOT_RUN15_COMPLETE",
+  "status": "PROOFS_CLOSED_PENDING_FINAL_AUDIT",
   "baseline_commit": "fbfa5debe3daa115b610ecc72dedc8fd52a817ca",
   "requested_plan_commit": "586019b1c3063ac7160b1fc83a7da66ebbcf7311",
   "run15_complete": false,
@@ -37,20 +37,22 @@
     "exact original OrdinaryActualCompletionGoal: actual completed source and literal completed target, original arbitrary fields and all rows",
     "maximal-embedding AP cone Betti for every d>=1, plus the two-generator AP cone case; general algebraic AP Betti still open",
     "exact original APConeBettiGoal for every genuine minimal AP d>=1 and every field/row, from actual algebraic multiplicity quotient isomorphic to actual cone head as non-x polynomial modules",
-    "actual ordinary auxiliary cone surjects onto AP head, actual kernel tail basis, regular x shift, actual finite native quotient J/xJ with two-step variable action; general signed evaluation Koszul boundary rank and all-row two-step Betti theorem; final AP assembly still open"
+    "actual ordinary auxiliary cone surjects onto AP head, actual kernel tail basis, regular x shift, actual finite native quotient J/xJ with two-step variable action; general signed evaluation Koszul boundary rank and all-row two-step Betti theorem; final AP assembly still open",
+    "exact original APBettiGoal for every genuine minimal AP, every original field and all positive rows, from actual kernel/window Koszul computation, actual x-factorization and real LES",
+    "general AP algebraic/cone/completed-cone Betti profiles including zero and top, 1..v block residue, Fmin lower bound and width monotonicity, actual width and literal interval target"
   ],
   "goals": {
     "1_actual_interfaces": "PROVED_P_R_FULL_E_INTERFACES_VARIABLE_CHANGE_TOR_FINITE_AND_RELATIVE_TOP",
-    "2_general_AP_actual_Betti_and_target": "PARTIAL_EXACT_AP_CONE_BETTI_EQUALITY_PROVED_GENERAL_AP_FORMULA_REMAINS",
+    "2_general_AP_actual_Betti_and_target": "PROVED_EXACT_AP_BETTI_AP_CONE_ALL_ORIGINAL_FIELDS_ALL_ROWS_GENERAL_D_LITERAL_TARGET_FMIN",
     "3_harmonic_initial_module_rank": "PROVED_EXACT_HARMONIC_GOAL_ACTUAL_MODULE_BASIS_SIGNED_MINOR_RATIONAL_AVERAGING",
     "4_actual_tower_Tor": "PROVED_EXACT_ACTUAL_TOR_TO_ROW_GOAL_AND_ACTUAL_R_TARGET_ROWS",
     "5_corrected_full_transfer": "PROVED_EXACT_ORIGINAL_CORRECTED_FULL_TRANSFER_GOAL",
     "6_ordinary_all_fields_all_rows": "PROVED_EXACT_ORIGINAL_ORDINARY_ACTUAL_COMPLETION_GOAL_ZERO_AND_TOP_ALL_FIELDS_ALL_ROWS",
-    "7_verification_audit_push": "IMPLEMENTED_SCOPE_ONLY_SEE_VERIFICATION_AND_GIT"
+    "7_verification_audit_push": "PENDING_FINAL_REVIEW_FULL_VERIFICATION_AND_NORMAL_PUSH"
   },
   "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
   "production_uses_unproved_goal_definitions": false,
-  "acceptance_scope": "Seven exact original goals proved: APConeBettiGoal, HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal, OrdinaryBettiBoundGoal and OrdinaryActualCompletionGoal. General APBettiGoal still open; no missing formula is an input of production theorems.",
+  "acceptance_scope": "All eight exact originally frozen goals have kernel-checked proofs in audit/run15_closure/ClosedGoals.lean. Final fresh-context review, full verification and publication are pending.",
   "evidence": "verification/run15/verification.json",
   "new_source_files": 23,
   "new_source_lines": 1706,
@@ -86,5 +88,13 @@
   "apfoundations_evidence": "verification/run15_apfoundations/verification.json",
   "apfoundations_baseline_commit": "88d6f3e77a3e4f50fe3589d3af7986144521ad39",
   "apfoundations_new_source_files": 23,
-  "apfoundations_new_source_lines": 1802
+  "apfoundations_new_source_lines": 1802,
+  "proof_goals_complete": true,
+  "closed_goal_definitions": "audit/run15/RemainingGoals.lean",
+  "closure_proofs": "audit/run15_closure/ClosedGoals.lean",
+  "unresolved_run15_goals": [],
+  "closure_baseline_commit": "33079c170d038eddb432584837035566ae3577ae",
+  "closure_evidence": "verification/run15_closure/verification.json",
+  "closure_new_source_files": 24,
+  "closure_new_source_lines": 1289
 }
