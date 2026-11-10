@@ -35,11 +35,12 @@
     "actual ordinary interval-completion Betti formula over every field, including zeroth and top rows, also for two-variable targets",
     "actual zeroth full Betti equals one for every source and its completed cone, from real cyclic augmented polynomial presentations",
     "exact original OrdinaryActualCompletionGoal: actual completed source and literal completed target, original arbitrary fields and all rows",
-    "maximal-embedding AP cone Betti for every d>=1, plus the two-generator AP cone case; general algebraic AP Betti still open"
+    "maximal-embedding AP cone Betti for every d>=1, plus the two-generator AP cone case; general algebraic AP Betti still open",
+    "exact original APConeBettiGoal for every genuine minimal AP d>=1 and every field/row, from actual algebraic multiplicity quotient isomorphic to actual cone head as non-x polynomial modules"
   ],
   "goals": {
     "1_actual_interfaces": "PROVED_P_R_FULL_E_INTERFACES_VARIABLE_CHANGE_TOR_FINITE_AND_RELATIVE_TOP",
-    "2_general_AP_actual_Betti_and_target": "PARTIAL_ACTUAL_BETTI_AND_RING_CONE_EQUALITY_REMAIN",
+    "2_general_AP_actual_Betti_and_target": "PARTIAL_EXACT_AP_CONE_BETTI_EQUALITY_PROVED_GENERAL_AP_FORMULA_REMAINS",
     "3_harmonic_initial_module_rank": "PROVED_EXACT_HARMONIC_GOAL_ACTUAL_MODULE_BASIS_SIGNED_MINOR_RATIONAL_AVERAGING",
     "4_actual_tower_Tor": "PROVED_EXACT_ACTUAL_TOR_TO_ROW_GOAL_AND_ACTUAL_R_TARGET_ROWS",
     "5_corrected_full_transfer": "PROVED_EXACT_ORIGINAL_CORRECTED_FULL_TRANSFER_GOAL",
@@ -48,7 +49,7 @@
   },
   "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
   "production_uses_unproved_goal_definitions": false,
-  "acceptance_scope": "Six exact original goals proved: HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal, OrdinaryBettiBoundGoal and OrdinaryActualCompletionGoal. The general algebraic APBettiGoal and APConeBettiGoal remain open; the maximal-embedding/two-generator cone cases do not close them.",
+  "acceptance_scope": "Seven exact original goals proved: APConeBettiGoal, HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal, OrdinaryBettiBoundGoal and OrdinaryActualCompletionGoal. General APBettiGoal still open; no missing formula is an input of production theorems.",
   "evidence": "verification/run15/verification.json",
   "new_source_files": 23,
   "new_source_lines": 1706,
@@ -76,5 +77,9 @@
   "ordinary_evidence": "verification/run15_ordinary/verification.json",
   "ordinary_baseline_commit": "86361155a028cc9a6d6134218c67600770075e1f",
   "ordinary_new_source_files": 16,
-  "ordinary_new_source_lines": 793
+  "ordinary_new_source_lines": 793,
+  "apcone_evidence": "verification/run15_apcone/verification.json",
+  "apcone_baseline_commit": "3e82d46fe2dcfdafb530802d8c78914e675c1c40",
+  "apcone_new_source_files": 5,
+  "apcone_new_source_lines": 267
 }

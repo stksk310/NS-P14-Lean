@@ -376,3 +376,8 @@ public import NSP14.Semigroup.AugmentationBetti
 public import NSP14.Semigroup.HeadSquareZeroBetti
 public import NSP14.Semigroup.RegularHeadBetti
 public import NSP14.Target.IntervalBetti
+public import NSP14.Semigroup.AlgebraHeadQuotient
+public import NSP14.Semigroup.AlgebraVariableOrder
+public import NSP14.ArithmeticSequence.HeadMultiplication
+public import NSP14.ArithmeticSequence.HeadQuotientMap
+public import NSP14.ArithmeticSequence.ConeBetti

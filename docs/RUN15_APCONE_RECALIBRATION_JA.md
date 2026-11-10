@@ -1,0 +1,7 @@
+# Run15一般AP比較後の校正
+
+元の8目標の7個がexact theoremとして閉じた。一般d>=1の半群環/接錐Betti一致まで閉じ、残りはAPBettiGoal（一般公式）。Run15全体の完成条件は弱めない。全92検証コマンドPASS、全5622宣言（新規52）の公理監査を通過した。実測と固定原本数はverification/run15_apcone/verification.jsonに記録。
+
+一般公式の新しい証明候補を研究中。最大埋込次元ordinary coneの線型解消と、その特定単項式idealの二次数商に帰着できる見込みがある。境界の最大rankはVandermonde変換後のrank-one作用と小部分集合の独立性から示す経路。まだactual APへの全接続は未形式化。この候補を完成済みと数えず、同じRun15で継続する。
+
+Run16–20は狭幅端点、Kneser/SC、BHP/EK、N4/LTV、全域合成を保持。検証時間より一般APの残る実解消/Koszul計算とgradingの接続が主な不確定要素。20という予定数を守るために未証明入力を移し替えない。

@@ -722,3 +722,9 @@ APのv=m−1では、一般公差d>=1を保ったApéryリストから全headの
 `Ordinary.ordinary_actual_completion_betti_le`は任意元体・全行で、actual完成sourceとliteral interval completionのactual完成targetを各自の最小表示で比較する。元のOrdinaryActualCompletionGoalそのものの証明はaudit/run15_ordinary/ClosedGoals.lean。Gamma<6,7,11>のrank2例、Run12のterminal26/41とjumpの異なるchanging例、標数2、m=2 target、一般d>1のAP特殊例を受入に含めた。
 
 一般APの代数的半群環Betti公式と、一般APの半群環/接錐Betti一致はまだ未完。v=1やv=m−1のcone公式だけで公刊共通入力全体を閉じたとは表示しない。
+
+### A68 — 一般APの代数半群環と接錐のBetti一致
+
+ArithmeticSequence.ConeBetti.semigroup_cone_totalBetti。公差d>=1、m>=2、1<=v<m、gcd(m,d)=1、任意体・全行。実(t^m)商とactual HeadAlgebraのAlgEquivを構成し、両者の実非x変数作用が一致することを証明した。代数的半群環のt^m正則性は係数の平行移動で証明、接錐のx正則性は既存のactual核座標証明を使用。実Koszul正則縮約から各自の最小全原子表示における通常Tor/Bettiの一致を得た。環本体同士の同型や未証明の標準基底を仮定しない。
+
+APの和がApéryに残る場合のorder加法性が商AlgHomの核心。canonical表現のindex和がm以上ならm前元を明示構成して矛盾させる。index和がm未満ならcanonical_orderを直接適用。原稿X_AP_CONEの十分な別証明として残せる。一般AP数値公式X_AP_BETTIはこの比較だけでは閉じず、継続する。
