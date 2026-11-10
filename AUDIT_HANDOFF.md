@@ -1,4 +1,4 @@
-# Lean Block01–11 監査引継ぎ
+# Lean Block01–11 / Run12 監査引継ぎ
 
 2026年11月10日（JST）。このスナップショットは `work` ブランチで公開する。
 
@@ -22,6 +22,8 @@
 14. [Block10：全次数付き環・actual核/head商](NSP14/Semigroup/KernelHead.lean) と [7ファイル・範囲](verification/block10/README_JA.md)
 
 15. [Block11：actual斉次N・QとApéry/Hilbert](NSP14/Semigroup/NonAperyIdeal.lean) と [12ファイル・範囲](verification/block11/README_JA.md)
+
+16. [Run12：actual同jump S₀加群同型・全terminal上限・完備接錐比較](verification/block12/README_JA.md) と [原稿対応A23–A27](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
 ## 特に確認してほしい境界
 
@@ -49,8 +51,13 @@
 - Block10は全直和を可換k代数へ構成し、actual x乗算の核全体・像全体・principal quotient Aの基底まで同定する。
   その段階のN/Q接続はBlock11で以下の範囲まで進めた。global T≅Nは主張しない。
 - Block11はactual斉次N、実商Q、Apéry基底、actual次数像・Hilbert関数、自然なA₂→Q₂の同型、標準生成・Artin性、最高次数νまでを構成する。
-  完備化比較、同jump strataとjump上限、A・N・T全体の有限性、actual資源とTorは後続。
-- 実際のtowerからその共通資源列を作ること、actual接錐・Tor/Bettiへの接続、P14全体は未完成。
+  完備化比較・同jump strata・jump上限はRun12で下記の範囲まで閉じた。A・N・T全体の有限性、actual資源とTorは後続。
+- Run12はactual非x原子S₀の全作用とA/Q全射、反対向きの実斉次部分加群、actual同jump商のS₀線型同型と同じ写像の次数差sを証明する。
+  `terminalHeadVectorEquiv`はk線型座標同値のみ。S₀線型性を主張するのは`jumpStratumEquiv`であり、全体T≅Nではない。
+  すべてのterminalで2≤jump≤νを直接証明し、δ=0でactual T=N=0も示す。
+- literal k[[S]]の実極大イデアル冪の接錐と代数的Gの次数付きk代数同値がRun12で閉じる。
+  単項式・x・核・G→A→Qも自然に運ぶ。`formalOrderIdeal_eq_pow`は無限級数にも実冪判定を証明しており、完備化比較を仮定しない。
+- Run12の指定数学目標に未完はない。実際の安定化・towerからの共通資源列、Koszul/Tor/Betti、P14全体は未完成。
 
 ## 再現
 
@@ -59,12 +66,12 @@ Lean `v4.36.0-rc2` とmathlib revisionはtoolchain・Lake manifestに固定し�
 
 ```sh
 lake build
-python3 scripts/verify_block11.py
+python3 scripts/verify_block12.py
 ```
 
-Block11の検証は12ソース再検査・新テスト・旧10Block回帰・2監査の26コマンド。
-全新規120宣言と旧323件、計443公理依存報告を検査する。
-旧29ソース・10テスト・固定環境3ファイルの42hashもBlock10のmanifestと照合する。
+Run12の検証は22ソース再検査・6試験・全宣言監査・計画検査・旧11Block回帰・2監査の44コマンド。
+全新規224core宣言・74fixture宣言と旧443件、計741公理依存報告を検査する。
+旧41ソース・11テスト・固定環境3ファイルの55hashをBlock11のmanifestと照合する。
 通常のLean基盤 `propext`, `Classical.choice`, `Quot.sound` 以外の依存を拒否する。
 追加の数学公理や `sorryAx` への依存は認めない。
 
@@ -79,18 +86,19 @@ lake build
 同じ環境なら次で実行できる。
 
 ```sh
-PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block11.py
+PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block12.py
 ```
 
-[保存済みBlock11検証記録](verification/block11/verification.json) とログを同梱する。
+[保存済みRun12検証記録](verification/block12/verification.json) とログを同梱する。
 ローカルで再検証すると所要秒などは更新されるため、厳密な比較対象には監査するコミットを指定する。
 
 [Block01の独立監査](audit/README_JA.md) と [今回の対応記録](docs/BLOCK01_AUDIT_RESPONSE_JA.md) を保存した。
 `audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` はBlock01監査修正までの記録。
-Block03–10の記録も保持する。今回の公開import追加後の照合対象は `verification/block11/MANIFEST_SHA256.json` とする。
+Block03–10の記録も保持する。今回の公開import追加後の照合対象は `verification/block12/MANIFEST_SHA256.json` とする。
 
 [Block02独立監査](audit/block02/README_JA.md) は条件付き数値ブロックとして合格。
-Block03の外部監査は進行中で、Block04の実装検証と区別する。
+Block03についての上記記載は旧観測時点。今回は最新のBlock10外部監査branch `audit/block10-20261110`（28300b47f72df87983c3e1dba10a11da3466032d）の合格を確認した。認証範囲は代数的G/T/A。
+Run12の独立実装レビューは[別記録](verification/block12/INDEPENDENT_REVIEW_JA.md)であり、監査スレの最終数学査読とは区別する。
 
 ## 同梱資料
 

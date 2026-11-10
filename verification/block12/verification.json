@@ -1,0 +1,2003 @@
+{
+  "status": "PASS_COMPILED_RUN12_COORDINATE_CLOSURE",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.07
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/CompletedComparison.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.191
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/CompletedPieces.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.19
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/CompletedTransport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.587
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/CoordinateSupport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.335
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalFactorization.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.903
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalInclusion.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.57
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalOrder.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.727
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalSemigroupRing.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.574
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalTangentAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.819
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/FormalTangentScalars.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.835
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpAction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.546
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpBounds.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.619
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpDegrees.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.661
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpFiltration.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.512
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpHomogeneity.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.42
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpSlice.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.046
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/JumpStrata.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.277
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/LiveSplit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.608
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/PolynomialAction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.45
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/PolynomialGrading.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.492
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/PolynomialPresentation.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.852
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/TerminalCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.183
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12BasicExamples.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/Run12BasicExamples.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.206
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12Fixtures.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/Run12Fixtures.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.34
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/JumpBounds.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/JumpBounds.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.651
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/PolynomialAction.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/PolynomialAction.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.516
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/JumpStrata.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/JumpStrata.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.782
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/CompletedComparison.lean",
+        "-o",
+        "/workspace/NS-P14-Lean/.lake/build/lib/lean/tests/CompletedComparison.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.565
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12Axioms.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.607
+    },
+    {
+      "command": [
+        "python3",
+        "lean_planning/checks/check_run_schedule_r02.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.024
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.529
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.435
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.668
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.669
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.516
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.488
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.353
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupRing.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.838
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/TangentAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.135
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/AperyQuotient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.834
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.546
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.655
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 298,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15,
+    "block07_regression": 25,
+    "block08_regression": 86,
+    "block09_regression": 60,
+    "block10_regression": 71,
+    "block11_regression": 120
+  },
+  "run12_declarations": [
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedGradedLinearEquiv",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedLinearEquiv_of",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedLinearEquiv_mul",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedGradedAlgEquiv",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedAlgEquiv_of",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalMonomialClass",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalInitialMonomial",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedPieceEquiv_monomial",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedAlgEquiv_initial",
+      "source": "NSP14/Semigroup/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedPowerMap",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedRepresentative",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedRepresentative_ker",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedRepresentative_surjective",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedPieceEquiv",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedPieceEquiv_mk",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedPieceEquiv_mul",
+      "source": "NSP14/Semigroup/CompletedPieces.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalXElement",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalXMultiply",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedAlgEquiv_x",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedGradedAlgEquiv_xMultiply",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedKernelEquiv",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalXIdeal",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalXIdeal_eq_map",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FormalHeadAlgebra",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedHeadAlgEquiv",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalNonAperyIdeal",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FormalAperyAlgebra",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedAperyAlgEquiv",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedHeadAlgEquiv_mk",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completedAperyAlgEquiv_mk",
+      "source": "NSP14/Semigroup/CompletedTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.supported_comap_eq_span",
+      "source": "NSP14/Semigroup/CoordinateSupport.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.degreeExponentFintype",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.orderPrefix",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderPrefix_spec",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalFactor",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_mul_coeff",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formal_order_factorization",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalOrderIdeal_eq_pow",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_formalMaximalIdeal_pow",
+      "source": "NSP14/Semigroup/FormalFactorization.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalMonomialHom",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialToFormal",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToFormal_single",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToFormal_coeff",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToFormal_mem_pow",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalTruncation",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalTruncation_coeff",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalTruncation_mem",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalTruncation_difference",
+      "source": "NSP14/Semigroup/FormalInclusion.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalOrderIdeal",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_formalOrderIdeal",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalOrderIdeal_zero",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalOrderIdeal_one",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalOrderIdeal_mul_le",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMaximalIdeal_pow_le",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_mem_orderIdeal",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_zero_one",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_sum",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_order_mem_pow",
+      "source": "NSP14/Semigroup/FormalOrder.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalSeriesAlgebra",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FormalSemigroupRing",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalSemigroupCommRing",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalSemigroupAlgebra",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalMonomial",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_coeff",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMonomial_mul",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalConstantCoeff",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalMaximalIdeal",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalConstantCoeff_surjective",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalMaximalIdeal_isMaximal",
+      "source": "NSP14/Semigroup/FormalSemigroupRing.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalPowerModule",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalNextPower",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FormalGradedPiece",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalRepresentativeProduct",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalRepresentativeProduct_left_zero",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalRepresentativeProduct_right_zero",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalGradedMul",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formalGradedMul_mk",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceAddCommGroup",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalZeroRepresentative",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formal_homogeneous_mk_eq",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceGOne",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceGMul",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceGCommRing",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FormalTangentAlgebra",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalTangentCommRing",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.formal_tangent_of_mul",
+      "source": "NSP14/Semigroup/FormalTangentAlgebra.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceModule",
+      "source": "NSP14/Semigroup/FormalTangentScalars.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.formalScalarClass",
+      "source": "NSP14/Semigroup/FormalTangentScalars.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalPieceGAlgebra",
+      "source": "NSP14/Semigroup/FormalTangentScalars.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalTangentAlgebraStructure",
+      "source": "NSP14/Semigroup/FormalTangentScalars.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initial_product_coordinate",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_product_coordinate",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.same_jump_product_coordinate",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_product_coordinate_zero",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_product_coordinate_zero",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.same_jump_action_coordinate",
+      "source": "NSP14/Semigroup/JumpAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_jump_upper",
+      "source": "NSP14/Semigroup/JumpBounds.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_jump_bounds",
+      "source": "NSP14/Semigroup/JumpBounds.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.no_terminal_of_top_le_one",
+      "source": "NSP14/Semigroup/JumpBounds.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.no_terminal_of_deficit_zero",
+      "source": "NSP14/Semigroup/JumpBounds.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.tangentDegree",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_mem_tangentDegree",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_tangentDegree_coordinates",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingHomogeneous",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingHomogeneous",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingStratumDegree",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumDegree",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingStratumDegree_coordinates",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumDegree_coordinates",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.jumpStratumEquiv_degree",
+      "source": "NSP14/Semigroup/JumpDegrees.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpGSpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initial_mem_jumpGSpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangent_expansion",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_add_of_live",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initial_mul_mem_jumpGSpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.jumpGSpace_mul",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingJump",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_descendingJump",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingJump_antitone",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpASpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_mem_jumpASpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_mul_mem_jumpASpace",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.jumpASpace_mul",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingJump",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_ascendingJump",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingJump_monotone",
+      "source": "NSP14/Semigroup/JumpFiltration.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.tangentGradeProject",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentGradeProject_coordinates",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentGradeProject_mem_jumpGSpace",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentGradeProject_mem_kernel",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingJump_homogeneous",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_mem_jumpASpace",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingJump_homogeneous",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingJump_two",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingJump_top_succ",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingJump_top",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingJump_one",
+      "source": "NSP14/Semigroup/JumpHomogeneity.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nTerminalCoordinates",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nTerminalCoordinates_apply",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_descendingJump_coordinates",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_ascendingJump_coordinates",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.descendingJumpAddCommGroup",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.ascendingJumpAddCommGroup",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.descendingJumpModule",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.ascendingJumpModule",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nextDescendingJump",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.previousAscendingJump",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.DescendingJumpStratum",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.AscendingJumpStratum",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.JumpExponent",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingSlice",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingSlice",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingSlice_ker",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingSlice_ker",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingSlice_surjective",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingSlice_surjective",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingStratumCoordinates",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumCoordinates",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpStratumVectorEquiv",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingStratumCoordinates_mk",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumCoordinates_mk",
+      "source": "NSP14/Semigroup/JumpSlice.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingJumpMonomial",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingJumpMonomial",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nTerminalCoordinates_monomial",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingJumpMonomial_coordinates",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingJumpMonomial_coordinates",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.descendingStratumAction",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumAction",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.jump_stratum_coordinate_action",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpStratumEquiv",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.descendingStratumCoordinates_symm_single",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumCoordinates_symm_single",
+      "source": "NSP14/Semigroup/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.order_live_split",
+      "source": "NSP14/Semigroup/LiveSplit.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.atomic_live_split",
+      "source": "NSP14/Semigroup/LiveSplit.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.NonXAtom",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonXAtomEquivAtoms",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXAtomFintype",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonXAtom_card",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.PolynomialRing",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialToG",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialToA",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialToQ",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialAlgebraG",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialScalarTowerG",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToG_X",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToA_X",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToQ_X",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.terminalIdeal",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminalIdeal_restrictScalars",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.terminalPolynomialModule",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonAperyPolynomialModule",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_smul_G",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_smul_T",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_smul_A",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_smul_N",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_smul_Q",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialScalarTowerA",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialScalarTowerQ",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialScalarTowerT",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.polynomialScalarTowerN",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialGtoA",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.polynomialAtoQ",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToG_X_degree",
+      "source": "NSP14/Semigroup/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToG_X_mem_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToA_X_mem_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToQ_X_mem_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentDegree_mul_mem",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_X_smul_G_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_X_smul_T_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_X_smul_A_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_X_smul_N_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomial_X_smul_Q_degree",
+      "source": "NSP14/Semigroup/PolynomialGrading.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headAtomSubalgebra",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_mem_atomSubalgebra",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_atom_adjoin_top",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToA_eq_aeval",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToA_surjective",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.polynomialToQ_surjective",
+      "source": "NSP14/Semigroup/PolynomialPresentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.terminalHeadExponentEquiv",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.terminalHeadVectorEquiv",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_head_degree_shift",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_head_degree_shift_of_jump",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xKernel_eq_bot_of_deficit_zero",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdeal_eq_bot_of_deficit_zero",
+      "source": "NSP14/Semigroup/TerminalCoordinates.lean"
+    }
+  ],
+  "run12_test_declarations": [
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.naturals",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.naturals_m",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.naturals_e",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.singular",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_m",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.v5",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.v10",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.v11",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.v15",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.atom_five",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.atom_eleven",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.order_five",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.order_eleven",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.order_ten",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.order_fifteen",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.five_apery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ten_apery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.eleven_apery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_apery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_degree_one",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_degree_two",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_e",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.singular_delta",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.fifteen_nonapery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.fifteen_head",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.fifteen_in_N",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "def",
+      "name": "AperyQuotientExamples.ordinaryThree",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ordinaryThree_m",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ordinaryThree_order_small",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ordinaryThree_apery",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ordinaryThree_degree_one",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "AperyQuotientExamples.ordinaryThree_e",
+      "source": "tests/Run12BasicExamples.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.length_weight_bound",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.allowed",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.changing",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.changing_m",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.weight",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.weight_step",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.changing_order_le",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.exp",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v9",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v10",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v15",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v26",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v35",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v41",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run12Fixtures.v50",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.order_15",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.order_26",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.order_35",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.order_41",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.order_50",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.terminal_26",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.terminal_41",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.jump_26",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run12Fixtures.jump_41",
+      "source": "tests/Run12Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "PolynomialExamples.two",
+      "source": "tests/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "PolynomialExamples.two_m",
+      "source": "tests/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "PolynomialExamples.two_atom",
+      "source": "tests/PolynomialAction.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "PolynomialExamples.two_e",
+      "source": "tests/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "PolynomialExamples.atom3",
+      "source": "tests/PolynomialAction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataExamples.atom15",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataExamples.t26",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataExamples.t41",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataExamples.j26",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataExamples.j41",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "JumpStrataExamples.base_action_live",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "JumpStrataExamples.changed_jump_vanishes",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "JumpStrataBoundary.singular_top",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataBoundary.singularTerminal",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "def",
+      "name": "JumpStrataBoundary.singularJump",
+      "source": "tests/JumpStrata.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "CompletedExamples.naturals_order",
+      "source": "tests/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "CompletedExamples.allSeries",
+      "source": "tests/CompletedComparison.lean"
+    },
+    {
+      "kind": "def",
+      "name": "CompletedExamples.infiniteTail",
+      "source": "tests/CompletedComparison.lean"
+    }
+  ],
+  "run12_theorem_count": 127,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block11": true,
+  "predecessor_hash_count": 55,
+  "sources": [
+    "NSP14/Semigroup/CompletedComparison.lean",
+    "NSP14/Semigroup/CompletedPieces.lean",
+    "NSP14/Semigroup/CompletedTransport.lean",
+    "NSP14/Semigroup/CoordinateSupport.lean",
+    "NSP14/Semigroup/FormalFactorization.lean",
+    "NSP14/Semigroup/FormalInclusion.lean",
+    "NSP14/Semigroup/FormalOrder.lean",
+    "NSP14/Semigroup/FormalSemigroupRing.lean",
+    "NSP14/Semigroup/FormalTangentAlgebra.lean",
+    "NSP14/Semigroup/FormalTangentScalars.lean",
+    "NSP14/Semigroup/JumpAction.lean",
+    "NSP14/Semigroup/JumpBounds.lean",
+    "NSP14/Semigroup/JumpDegrees.lean",
+    "NSP14/Semigroup/JumpFiltration.lean",
+    "NSP14/Semigroup/JumpHomogeneity.lean",
+    "NSP14/Semigroup/JumpSlice.lean",
+    "NSP14/Semigroup/JumpStrata.lean",
+    "NSP14/Semigroup/LiveSplit.lean",
+    "NSP14/Semigroup/PolynomialAction.lean",
+    "NSP14/Semigroup/PolynomialGrading.lean",
+    "NSP14/Semigroup/PolynomialPresentation.lean",
+    "NSP14/Semigroup/TerminalCoordinates.lean"
+  ],
+  "paper_source": "V02 section2; V03 O_COORD, algebraic semigroup-ring coordinate step",
+  "scope": "Actual non-x S0 acts on G/T/A/N/Q, generates A/Q in degree one. Opposite homogeneous jump filtrations on actual T/N, actual S0-linear same-jump quotient equivalence with inherited degree shift s. All terminal 2<=jump<=actual nu; deficit zero T=N=0. Literal formal k[[S]], actual maximal-ideal powers, and natural degree-preserving k-algebra comparison with algebraic G, transporting x/kernel/A/Q.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A23-A27",
+  "coordinate_closure": "CLOSED_TASKS_1_TO_4",
+  "remaining": [
+    "actual stabilization and offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14"
+  ]
+}

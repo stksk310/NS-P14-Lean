@@ -4,6 +4,25 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Run 12
+
+Actual O_COORD and the formal-series tangent-cone comparison are closed.
+The same non-x atom polynomial ring acts on G/T/A/N/Q and surjects onto A/Q.
+Opposite homogeneous jump filtrations give an actual S₀-linear same-jump
+quotient equivalence with inherited degree shift s. Every terminal has
+2≤jump≤ν. The literal k[[S]] tangent cone is naturally graded-k-algebra
+isomorphic to the algebraic G, preserving monomials, x, kernels and quotients.
+
+```sh
+python3 scripts/verify_block12.py
+```
+
+[Scope, exports and tests](verification/block12/README_JA.md),
+[verification](verification/block12/verification.json),
+[independent implementation review](verification/block12/INDEPENDENT_REVIEW_JA.md).
+Twenty runs remain a planning target; stabilization, Koszul/Tor, resource
+construction and full P14 are subsequent work.
+
 ## Lean implementation — Block 11
 
 The non-Apéry head subspace is now an actual homogeneous ideal N of A.

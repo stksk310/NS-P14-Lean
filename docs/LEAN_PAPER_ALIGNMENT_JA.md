@@ -342,6 +342,78 @@ R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
   標準生成自体もA21で別に証明するので、他の後続用途を失わない。
 - 最終原稿：νの存在とactual性、上界をこの短い系列で説明できる。jump≤νの証明は本項に含まれない。
 
+## A23：非x原子の単一S₀とactual作用・全射（Run12）
+
+原稿：V02 §2 / V03 II.1 `O_COORD` の標準多項式作用。`NonXAtom` はactual最小生成元からmを除いた型で、変数の個数はe−1。
+`polynomialToG` はその実初期単項式へ送るk代数準同型であり、Gへの全射とは主張しない。
+T=ker(x:G→G)はGのannihilator ideal、NはAの実イデアルを通じて同じS₀の作用を受ける。
+`polynomial_smul_G/T/A/N/Q` は実乗算との一致。`polynomialGtoA` / `polynomialAtoQ` は同じ作用で線型。
+`polynomialToA_surjective` / `polynomialToQ_surjective` が全射である。
+
+Aの生成性は、headの最長表示からliveな原子を一つ剥がす強帰納法で示した。
+原子がmならlive incoming x-arrowとなりhead性に反するため、非x原子だけで生成される。
+Qは自然商の全射から従う。この経路は一般的な多項式表示・Noetherian性を新たに仮定しない。
+原稿には、S₀→Gの作用とS₀→A,Qの全射を区別し、次数1の実原子を明記する。
+
+## A24：全terminalのjump上限を最長表示の切断で直接証明（Run12）
+
+原稿：V03 O_COORDの `2≤jump≤ν`。旧方針のI_A⊆I_Q・生成次数・最小head経由の伝播を、同じ結論を持つ次の証明へ置換できる。
+νはBlock11で構成したactual Qの最高次数 `qTopDegree`。τを任意のterminal、h=τ+m、d=ord(h)−ord(τ)とする。
+d≥2はterminalの定義。ord(h)≤νならd≤νである。それ以外ではhの最長原子表示をν+1個で切り、h=u+v、ord(u)=ν+1、ord(v)=ord(h)−(ν+1)を得る。
+uがApéry元ならord(u)≤νに反する。従ってu=y+m、y∈Sでありτ=y+v。
+y=0ならu=mでord(u)=1となり、最長分解の次数とterminal不等式からd=1となる矛盾。
+y>0ならord(y)≥1なのでord(τ)≥1+ord(v)=ord(h)−ν。従ってd≤ν。
+
+Lean：`order_live_split`、`terminal_jump_upper`、`terminal_jump_bounds`。
+最小headだけでなく、すべてのterminalを直接扱う。生成イデアル・Gröbner入力・体の標数の仮定は増やさない。
+ν≤1ではterminalが存在せず、δ=0ではν≤δ+1=1よりactual T=N=0。
+`xKernel_eq_bot_of_deficit_zero` / `nonAperyIdeal_eq_bot_of_deficit_zero` が実対象への接続。
+
+## A25：反対向きfiltrationとactual同jump S₀加群同型（Run12）
+
+原稿：V02 §2 / V03 O_COORD。同じS₀作用で、`descendingJump s` はTのjump≥sの支持部分、`ascendingJump s` はNのpredecessor jump≤sの支持部分。
+数値集合だけではなく、実核・実イデアルの部分加群として構成した。
+G/Aの任意の元による乗算で安定することを実単項式基底の有限和まで証明しており、S₀安定性はその帰結である。
+`descendingJump_antitone` / `ascendingJump_monotone` は包含、`descendingJump_homogeneous` / `ascendingJump_homogeneous` はG/Aの実成分射影による斉次性。
+D₂T=T、D_(ν+1)T=0、F₁N=0、F_νN=Nもactual部分加群の等式である。
+
+商の分母は次/前の実部分加群をcomapして得る。`jumpStratumEquiv s hs` は実商同士のS₀線型同型で、hs:0<sの下で構成したので要求範囲2≤s≤νを含む。
+証明は、同jumpの両端ラベルについてbase/headのlive条件が一致することから、actual乗算の係数行列が一致することを示す。
+これをGの単項式基底から任意のG元へ、さらにS₀の任意多項式へ拡張する。
+異jumpへの項は各商で消える。global T≅NのS₀線型同型は使用・主張しない。
+
+`jumpStratumEquiv_degree` は同じ写像について、T側の次数pとN側の次数p+sの所属が同値であることを示す。
+次数部分はG/Aの実斉次部分の逆像を取り、実商写像で送ったものとして定義した。
+単項式の次数公式だけに留めず、任意の斉次有限和・商の元について成立する。
+
+## A26：literal k[[S]]の実極大イデアル冪と係数条件（Run12）
+
+原稿の形式級数環を、`PowerSeries k` のうちsupport⊆Sの部分k代数 `formalSeriesAlgebra` として直接定義した。
+この選択ではAdicCompletionと形式級数の同定を別の仮定に置かない。
+定数項写像のkernel `formalMaximalIdeal` は、任意の体で実極大イデアルであることを全射から証明した。
+一般可換係数環ではkernelと冪を構成するが、極大性を主張する定理はFieldを仮定する。
+
+`formalOrderIdeal_eq_pow` / `mem_formalMaximalIdeal_pow` が、無限級数についても実冪と「ord<nの全係数が0」を同定する。
+正方向は積の係数とorderの超加法性。逆方向は、各vでord(v)≥nなら最長表示の次数nの接頭部u(v)を選ぶ。
+ord(u)=nの集合はconductor boundにより有限。
+同じ接頭部を持つ係数を形式級数g_uへ集めると、f=Σ_u t^u g_uとなる。
+t^uは長さnの正元積なので実極大イデアルn乗に属する。
+無限和の閉性や未証明の完備化定理を仮定せず、形式級数の係数を比較した有限和で逆包含を証明した。
+
+## A27：代数的Gと完備半群環の接錐の次数付きk代数同値（Run12）
+
+`FormalGradedPiece n` はliteral形式級数環の実極大イデアルn乗をn+1乗で割った商、`FormalTangentAlgebra` はその直和。
+積は代表元の実積を商へ降ろして定義し、単位・k代数構造も構成した。
+自然な `polynomialToFormal : k[S]→ₐ[k]k[[S]]` は同じ指数の係数を保存する。
+各次数ではorder=nの有限切詰めで全射性、係数条件で単射性を得る。
+`completedPieceEquiv` は自然な実冪の商の同値で、`completedPieceEquiv_mul` が乗法整合性。
+`completedGradedAlgEquiv` はこれらを組み立てた次数を保つk代数同値である。
+
+`completedGradedAlgEquiv_initial` / `_x` は実初期単項式・xの対応、`_xMultiply` は実乗算の可換性。
+`completedKernelEquiv`、`completedHeadAlgEquiv`、`completedAperyAlgEquiv` と商写像の可換式によりG→A→Q・核を自然に運べる。
+formal側Nはこの自然商同値でactual Nを移したイデアルであり、未証明の独立モデルとの同定を追加したものではない。
+これで代数的Gを原稿の形式級数接錐として使う境界が閉じる。actual資源列・安定化・Tor/Betti・P14全体は後続Runの範囲である。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

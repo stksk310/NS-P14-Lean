@@ -152,3 +152,21 @@ S0の多項式表示・Koszul/Torとtarget Betti、P14全体は後続。Qの有�
 Block11最終検証：26/26コマンド、443公理依存報告、42既存hashが通過。
 独立実装レビューは指摘なし。レビュー担当はテスト再コンパイル・42hash・120宣言/reportの一致を独立確認した。
 ordinary m=e=3、δ=0、ν=1の追加境界例も含め、実装担当が全suiteを再実行した。
+
+## Run12：2026年11月10日（JST）
+
+22ソース・127定理、計224core宣言。指定されたactual O_COORDと形式級数接錐の比較を閉じた。
+単一の非x原子S₀作用をG/T/A/N/Qへ整備し、A/Q全射と次数1生成を証明。
+実核Tと実イデアルN上の反対向きの斉次jump filtration、実商のS₀線型同型、同じ写像の実継承次数差sを構成。
+全terminalで2≤jump≤actual νを最長表示の切断から直接証明し、δ=0でactual T=N=0も接続した。
+literal k[[S]]の実極大イデアル冪を無限級数の係数条件と同定し、代数的Gとの自然な次数付きk代数同値とx・核・A/Qの運搬を証明。
+
+44コマンド、741axiom報告（新規224core+74fixture、旧443）、55既存hashを検査。
+独立実装レビューは重要な指摘なし。宣言一覧をソースから再計算する照合も検証入口へ追加。
+原稿対応A23–A27、実行台帳、受入条件別のexport表と監査ZIPを同runへ含める。
+Run12の数学的目標に未完宣言・未証明入力はない。
+20runは目標であり完成条件ではない。X_BASIC全体・安定化・actual資源/cut/tower・Sidon接続・Koszul/Tor・target Betti・P14全体は後続。
+
+検証入口：scripts/verify_block12.py。監査入口：verification/block12/README_JA.md。
+Block10外部監査branch `audit/block10-20261110`（28300b47f72df87983c3e1dba10a11da3466032d）の合格も確認済み。
+その認証範囲は代数的G/T/Aであり、Run12の追加範囲の独立数学査読とは区別する。

@@ -1,0 +1,6 @@
+tests/JumpBounds.lean:5:9: error(lean.invalidField): Invalid field `order_live_split`: The environment does not contain `NSP14.NumericalSemigroup.order_live_split`, so it is not possible to project the field `order_live_split` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/JumpBounds.lean:6:9: error(lean.invalidField): Invalid field `terminal_jump_bounds`: The environment does not contain `NSP14.NumericalSemigroup.terminal_jump_bounds`, so it is not possible to project the field `terminal_jump_bounds` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
