@@ -1,0 +1,7 @@
+# Run15 AP基盤検証後の校正
+
+88d6f3e基準の23数学module1,802行、全96コマンドが空project test cacheから通過。全5938宣言（新規316）の公理依存は許容3種のみ。過去1,886ファイル不変を検査。検証コマンド実測合計241.201秒。verification/run15_apfoundationsに通常/explicit型、ログとhashを保存。
+
+AP公式の難所を実補助cone/実kernel/実二次数商とKoszul境界rankに分解できた。generic二次数加群の全Betti公式まで閉じたが、actual APへのGL適用とintrinsic変数表示の接続、gradingからのTor写像消滅、実LES合成が残る。元の8目標のうち7閉鎖は変わらず、Run15全体は未完のまま同じrunで継続する。
+
+20 run計画の完成条件は変えない。実測4分程度の回帰より、actual gradingと同じ変数作用を保った接続が主な作業量である。これを別runへ追い出してRun15完成とはしない。全体配分は一般APを閉じた時点で再校正する。

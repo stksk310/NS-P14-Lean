@@ -728,3 +728,15 @@ APのv=m−1では、一般公差d>=1を保ったApéryリストから全headの
 ArithmeticSequence.ConeBetti.semigroup_cone_totalBetti。公差d>=1、m>=2、1<=v<m、gcd(m,d)=1、任意体・全行。実(t^m)商とactual HeadAlgebraのAlgEquivを構成し、両者の実非x変数作用が一致することを証明した。代数的半群環のt^m正則性は係数の平行移動で証明、接錐のx正則性は既存のactual核座標証明を使用。実Koszul正則縮約から各自の最小全原子表示における通常Tor/Bettiの一致を得た。環本体同士の同型や未証明の標準基底を仮定しない。
 
 APの和がApéryに残る場合のorder加法性が商AlgHomの核心。canonical表現のindex和がm以上ならm前元を明示構成して矛盾させる。index和がm未満ならcanonical_orderを直接適用。原稿X_AP_CONEの十分な別証明として残せる。一般AP数値公式X_AP_BETTIはこの比較だけでは閉じず、継続する。
+
+### A69 — 一般AP公式への別経路：actual ordinary補助coneと実kernel
+
+ordinaryModel、HeadIndex、ModelCoordinates/Multiplication/Quotient/Kernel、ModelKernelShift/NativeWindow、WindowArithmetic、ModelWindowAction。v>=2に対して実Gamma=<v,...,2v−1>の接錐Bからactual AP head Aへ全射AlgHomを構成。kernel Jは実核、添字>=mの基底を持ち、actual x作用がvだけ添字をずらす。actual R-module J/xJは長さv、D=v−((m−1)%v)により二次数に分かれる。各変数作用とactual native正則縮約を証明した。BやJのk有限性は使わない。
+
+これは一般公式X_AP_BETTIの完成証明ではなく、同じrun内の実接続用構成。J→BのTor写像消滅、最小表示の同定、実二次数作用への変数変換と最終LES合成は別途証明する。
+
+### A70 — 評価点によるKoszul境界rankと二次数加群の全Betti公式
+
+VandermondeSpark、KoszulIncidence/MomentRank、CoefficientSlotsEquiv、TwoStepSlots/Boundary/Betti、EvaluationVariables。任意標数、distinct pointsの存在する体上で、実variable actionがu(t)*ell(t)の二次数加群の境界をactual recursive Koszul signsで評価。p>=Dで単射、p<=Dで全射となる。actual境界はsurjective lower projection、moment map、injective upper inclusionに因数分解される。range finrankを同定して全行beta_iを計算し、beta0とtopも保持。
+
+この線型代数的補題は一般APの実作用へ適用するまで、AP公式の証明として数えない。同標数無限拡大から元体への帰還は既存actualG Betti保存で行う。原稿の最小解消の別経路となる候補だが、未完成のLES接続を「退化」として仮定しない。

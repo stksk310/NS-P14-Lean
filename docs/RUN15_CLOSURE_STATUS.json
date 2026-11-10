@@ -36,7 +36,8 @@
     "actual zeroth full Betti equals one for every source and its completed cone, from real cyclic augmented polynomial presentations",
     "exact original OrdinaryActualCompletionGoal: actual completed source and literal completed target, original arbitrary fields and all rows",
     "maximal-embedding AP cone Betti for every d>=1, plus the two-generator AP cone case; general algebraic AP Betti still open",
-    "exact original APConeBettiGoal for every genuine minimal AP d>=1 and every field/row, from actual algebraic multiplicity quotient isomorphic to actual cone head as non-x polynomial modules"
+    "exact original APConeBettiGoal for every genuine minimal AP d>=1 and every field/row, from actual algebraic multiplicity quotient isomorphic to actual cone head as non-x polynomial modules",
+    "actual ordinary auxiliary cone surjects onto AP head, actual kernel tail basis, regular x shift, actual finite native quotient J/xJ with two-step variable action; general signed evaluation Koszul boundary rank and all-row two-step Betti theorem; final AP assembly still open"
   ],
   "goals": {
     "1_actual_interfaces": "PROVED_P_R_FULL_E_INTERFACES_VARIABLE_CHANGE_TOR_FINITE_AND_RELATIVE_TOP",
@@ -81,5 +82,9 @@
   "apcone_evidence": "verification/run15_apcone/verification.json",
   "apcone_baseline_commit": "3e82d46fe2dcfdafb530802d8c78914e675c1c40",
   "apcone_new_source_files": 5,
-  "apcone_new_source_lines": 267
+  "apcone_new_source_lines": 267,
+  "apfoundations_evidence": "verification/run15_apfoundations/verification.json",
+  "apfoundations_baseline_commit": "88d6f3e77a3e4f50fe3589d3af7986144521ad39",
+  "apfoundations_new_source_files": 23,
+  "apfoundations_new_source_lines": 1802
 }
