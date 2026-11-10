@@ -1,0 +1,6 @@
+tests/ArithmeticSequenceApery.lean:8:6: error(lean.invalidField): Invalid field `aperyValue`: The environment does not contain `NSP14.ArithmeticSequence.Data.aperyValue`, so it is not possible to project the field `aperyValue` from an expression
+  D
+of type `Data`
+tests/ArithmeticSequenceApery.lean:8:44: error(lean.invalidField): Invalid field `aperyValue_mem`: The environment does not contain `NSP14.ArithmeticSequence.Data.aperyValue_mem`, so it is not possible to project the field `aperyValue_mem` from an expression
+  D
+of type `Data`

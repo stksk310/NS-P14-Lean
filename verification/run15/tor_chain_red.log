@@ -1,0 +1,10 @@
+tests/OrdinaryTor.lean:8:6: error(lean.invalidField): Invalid field `cutKEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutKEuler`, so it is not possible to project the field `cutKEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/OrdinaryTor.lean:8:24: error(lean.invalidField): Invalid field `cutHighEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutHighEuler`, so it is not possible to project the field `cutHighEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/OrdinaryTor.lean:8:49: error(lean.invalidField): Invalid field `cutHighEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutHighEuler`, so it is not possible to project the field `cutHighEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/OrdinaryTor.lean:9:2: error(lean.unknownIdentifier): Unknown identifier `C.cutTower_kernel_le`

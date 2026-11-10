@@ -1,0 +1,6 @@
+tests/CutFinite.lean:7:76: error(lean.invalidField): Invalid field `cutA_finite`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutA_finite`, so it is not possible to project the field `cutA_finite` from an expression
+  C
+of type `S.LinearCutData k`
+tests/CutFinite.lean:8:76: error(lean.invalidField): Invalid field `cutT_finite`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutT_finite`, so it is not possible to project the field `cutT_finite` from an expression
+  C
+of type `S.LinearCutData k`

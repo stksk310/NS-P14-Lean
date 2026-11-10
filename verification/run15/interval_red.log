@@ -1,0 +1,18 @@
+tests/IntervalCompletion.lean:8:85: error(lean.invalidField): Invalid field `maxAtom`: The environment does not contain `NSP14.NumericalSemigroup.maxAtom`, so it is not possible to project the field `maxAtom` from an expression
+  S
+of type `NumericalSemigroup`
+tests/IntervalCompletion.lean:8:7: error(lean.invalidField): Invalid field `intervalCompletion`: The environment does not contain `NSP14.NumericalSemigroup.intervalCompletion`, so it is not possible to project the field `intervalCompletion` from an expression
+  S
+of type `NumericalSemigroup`
+tests/IntervalCompletion.lean:9:4: error(lean.invalidField): Invalid field `intervalCompletion_carrier`: The environment does not contain `NSP14.NumericalSemigroup.intervalCompletion_carrier`, so it is not possible to project the field `intervalCompletion_carrier` from an expression
+  S
+of type `NumericalSemigroup`
+tests/IntervalCompletion.lean:12:55: error(lean.invalidField): Invalid field `width`: The environment does not contain `NSP14.NumericalSemigroup.width`, so it is not possible to project the field `width` from an expression
+  S
+of type `NumericalSemigroup`
+tests/IntervalCompletion.lean:12:7: error(lean.invalidField): Invalid field `intervalCompletion`: The environment does not contain `NSP14.NumericalSemigroup.intervalCompletion`, so it is not possible to project the field `intervalCompletion` from an expression
+  S
+of type `NumericalSemigroup`
+tests/IntervalCompletion.lean:13:4: error(lean.invalidField): Invalid field `intervalCompletion_embeddingDimension`: The environment does not contain `NSP14.NumericalSemigroup.intervalCompletion_embeddingDimension`, so it is not possible to project the field `intervalCompletion_embeddingDimension` from an expression
+  S
+of type `NumericalSemigroup`

@@ -1,0 +1,35 @@
+{
+  "status": "PARTIAL_NOT_RUN15_COMPLETE",
+  "baseline_commit": "fbfa5debe3daa115b610ecc72dedc8fd52a817ca",
+  "requested_plan_commit": "586019b1c3063ac7160b1fc83a7da66ebbcf7311",
+  "run15_complete": false,
+  "completed_exports": [
+    "actual R presentation, R-finite G from finite heads and x action",
+    "same P finite/coefficient-finite A,T,X,M,K, actual P top Euler vanishing",
+    "prefix-preserving non-x basis change, split P embedding and split actual R embedding into full presentation",
+    "actual connecting rank/complement identities, including H0",
+    "finite-k Koszul chain rank/Euler identity, with explicit finite-k hypothesis",
+    "actual tower third Tor inequality and descending same-jump T filtration second inequality",
+    "general d>=1 genuine AP semigroup, minimal atoms, canonical order, Apery list and actual cone x-regularity",
+    "algebraic semigroup ring presentation on actual minimal atoms",
+    "literal interval completion, minimal target rank, ordinary wide carrier identification",
+    "exact numerical target-difference convolution and H0 correction coefficient identity"
+  ],
+  "goals": {
+    "1_actual_interfaces": "PARTIAL_TOR_VARIABLE_CHANGE_AND_RELATIVE_TOP_REMAIN",
+    "2_general_AP_actual_Betti_and_target": "PARTIAL_ACTUAL_BETTI_AND_RING_CONE_EQUALITY_REMAIN",
+    "3_harmonic_initial_module_rank": "PARTIAL_FINITE_EULER_ONLY_INITIAL_MODULE_AND_ACTUAL_MINOR_REMAIN",
+    "4_actual_tower_Tor": "PARTIAL_SECOND_AND_THIRD_INEQUALITIES_CLOSED_FIRST_AND_HARMONIC_ROW_REMAIN",
+    "5_corrected_full_transfer": "PARTIAL_NUMERICAL_IDENTITIES_ONLY_ACTUAL_H0_ACTION_AND_TRANSFER_REMAIN",
+    "6_ordinary_all_fields_all_rows": "NOT_CLOSED",
+    "7_verification_audit_push": "IMPLEMENTED_SCOPE_ONLY_SEE_VERIFICATION_AND_GIT"
+  },
+  "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
+  "production_uses_unproved_goal_definitions": false,
+  "acceptance_scope": "Proved exports only; tests do not certify APBettiGoal, HarmonicGoal, ActualTorToRowGoal or OrdinaryActualCompletionGoal.",
+  "evidence": "verification/run15/verification.json",
+  "new_source_files": 23,
+  "new_source_lines": 1706,
+  "integrated_remote_commit": "20aadbf7011692eb3bfffef49029e2c5e416ef3d",
+  "verification_baseline_commit": "20aadbf7011692eb3bfffef49029e2c5e416ef3d"
+}

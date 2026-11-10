@@ -1,0 +1,10 @@
+tests/JumpEuler.lean:8:6: error(lean.invalidField): Invalid field `descendingEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.descendingEuler`, so it is not possible to project the field `descendingEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/JumpEuler.lean:8:30: error(lean.invalidField): Invalid field `descendingEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.descendingEuler`, so it is not possible to project the field `descendingEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/JumpEuler.lean:8:56: error(lean.invalidField): Invalid field `cutKEuler`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutKEuler`, so it is not possible to project the field `cutKEuler` from an expression
+  C
+of type `S.LinearCutData k`
+tests/JumpEuler.lean:9:2: error(lean.unknownIdentifier): Unknown identifier `C.descendingEuler_step`

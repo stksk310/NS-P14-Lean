@@ -1,0 +1,6 @@
+tests/ArithmeticSequenceOrder.lean:8:40: error(lean.invalidField): Invalid field `canonical_order`: The environment does not contain `NSP14.ArithmeticSequence.Data.canonical_order`, so it is not possible to project the field `canonical_order` from an expression
+  D
+of type `Data`
+tests/ArithmeticSequenceOrder.lean:11:51: error(lean.invalidField): Invalid field `order_add_m`: The environment does not contain `NSP14.ArithmeticSequence.Data.order_add_m`, so it is not possible to project the field `order_add_m` from an expression
+  D
+of type `Data`

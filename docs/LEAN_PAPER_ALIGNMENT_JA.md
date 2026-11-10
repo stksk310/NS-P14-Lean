@@ -616,3 +616,45 @@ actual Sidon境界と併せて既存`all_rows`へ接続する。
 Green/cut、offset、tower、資源、SidonのRun14接続と、actual Torからの行上界、target Bettiの同定は区別する。
 後二者とordinaryのactual Betti閉鎖はユーザー指定どおりRun15。Run14の数値行比較を最終P14定理とは呼ばない。
 旧PARTIALの検証原本・ZIP・固定環境を保持し、継続の全生成宣言の公理と明示型は別証拠へ圧縮保存する。
+
+## A50 — Run15部分実装：P/R/全表示と同じcutの座標
+
+r変数P、r+1変数R、e変数全表示を型で区別する。
+原稿の「基底へ延長」はspan包含だけでなく、各λが元の位置に残るprefix延長として証明した。
+P→S₀のsplit単射、R→全表示のsplit単射を実多項式写像で与える。
+PのA像の独立性は使わない。GのR有限性はfiniteHeadExponentの実head生成とx作用から示す。
+GのP有限・k有限を仮定しない。変数変更によるTor保存はまだ未実装。
+
+## A51 — Run15部分実装：actual Eulerと第2/3Tor鎖
+
+c_jは指定した環の通常Tor/Bettiの整数部分交代和として定義する。
+実LESからconnecting rankとその補数を区別し、H₀を含む二つの恒等式を証明。
+有限k次元層だけでKoszul鎖の次元を使い、c_j=choose(r−1,j)length−rank d_(j+1)とc_r=0を得る。
+自由Pのc_1=−1も保持し、無条件のEuler非負性へ一般化しない。
+同じPの実towerに第3Tor不等式を適用し、実descending jump filtrationと同jump同型から
+第2Tor不等式を証明した。global T≅Nやconnecting map消滅は用いない。
+第1のx-Koszul比較・harmonic適用・actual row閉鎖は未完。
+
+## A52 — Run15部分実装：一般APの標準指数
+
+一般公差d≥1を保ち、AP membershipをx=l*m+j*d、j≤v*lで表す。
+この数値witnessが実際に長さlの正の原子分解を与えることを証明する。
+jをmで正規化するとm係数がq*dだけ増え、標準指数i<mの係数がactual orderになる。
+これによりApéry元ceil(i/v)m+i*d、order(x+m)=order(x)+1、actual coneのx正則性を得る。
+原稿では公刊Betti入力とは分離した補題として採用可能。GSS解消・APのBetti一致は未形式化。
+
+## A53 — Run15部分実装：actual intervalと数値畳み込み
+
+actual最大原子Mからw=M−mを定義し、生成区間[m,M]のadditive closureが
+v=min(w,m−1)、d=1の真正APと一致することを証明する。2m以上の冗長原子は実加法閉包で除く。
+wide時のtarget carrierは{0}∪[m,∞)、最小原子数mになる。
+Vandermondeと既存target_stepから、target差の正確な係数畳み込みを既存R_jへ接続し、
+T_(f+2)−T_(f+1)のH₀補正係数も証明する。これはactual target Betti同定の代用ではない。
+
+## A54 — Run15の未完境界
+
+23新規数学moduleの部分実装があるが、ordinaryのactual Betti閉鎖は未完。
+初期「加群」の標準基底と実minor、一般APの実解消、H₀作用を保った全変数への比較を
+未証明入力やconstructorのfieldとして追加しない。
+監査用RemainingGoalsの8命題はdef : Propとして保存し、productionへ依存させない。
+最終原稿との一致にはRUN15_REMAINING_DECLARATIONS_JA.mdの接続が必要。

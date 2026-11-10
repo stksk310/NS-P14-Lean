@@ -1,0 +1,3 @@
+tests/CutPolynomialInjection.lean:7:70: error(lean.invalidField): Invalid field `toPolynomialRing_injective`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.toPolynomialRing_injective`, so it is not possible to project the field `toPolynomialRing_injective` from an expression
+  C
+of type `S.LinearCutData k`

@@ -1,0 +1,6 @@
+tests/RelativePresentation.lean:10:23: error(lean.invalidField): Invalid field `relativeToG`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeToG`, so it is not possible to project the field `relativeToG` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:11:4: error(lean.invalidField): Invalid field `relativeToG_X_none`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeToG_X_none`, so it is not possible to project the field `relativeToG_X_none` from an expression
+  W
+of type `ActualWitness k`
