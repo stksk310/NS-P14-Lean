@@ -666,3 +666,13 @@ T_(f+2)−T_(f+1)のH₀補正係数も証明する。これはactual target Bet
 ## A56 — Run15継続：同じcutのtower資源row
 
 実truncationの座標から次数分解・単一次数生成・有限台を構成し、H0を実最下次数成分へ同定する。末端Xの消滅を実商から証明して第2/3Tor不等式をtelescopingし、同じH_tだけの既存rowへ全行を接続した。TowerRow.cutTower_resource_rowはj=1とj=rを保持する。actual Gからの第1x-Koszul比較、B評価、補正済み全変数比較と一般AP/targetのactual Bettiは引き続き接続が必要であり、ordinary枝の完成はまだ主張しない。
+
+## A57 — Run15継続：actual x比較と相対Rの末端行
+
+actual Gの加群として0→T→G→xG→0および0→xG→G→Aを構成し、同じcutのRへ制限して実Koszul複体へ送った。二つの完全列の写像錐を比較する実完全列から、有限なのはT/A側のhomologyだけで足りるEuler不等式を証明した。変数順none::some λの実自由Koszul解消と通常Torの比較を経て、`ActualWitness.relative_Euler_le` は全jについて c_(j+1)^R(G)≤c_(j+1)^P(A)+c_j^P(T) を与える。GをP有限または係数体有限とはしていない。
+
+同じ完全列の等式には実connecting rankの減算を残す。末端でA側homologyの実台が切れるためそのrankが0となり、有限長P加群のEuler末端と合わせて`ActualWitness.relative_Euler_terminal` によりc_(r+1)^R(G)=0を得た。c_r^R(G)=0への強化はしていない。元の`RelativeTerminalGoal`そのものの証明は`audit/run15_xclosure/ClosedGoals.lean`。原稿では、未構成のスペクトル系列退化を置く代わりに、この二つの写像錐と実connecting mapによる十分な比較を採用可能。
+
+## A58 — Run15継続：first-order加群の実boundary rankとB計算の準備
+
+各変数が定数射影を通じて独立な一次ベクトルへ作用する有限加群について、実slot分解によるrank上界と、各外積から一つの変数を除いて選ぶ実±1対角minorによるrank下界を一致させた。`SquareZeroEuler.squareZero_bettiEuler` は c_j=length·choose(r−1,j)−choose(r,j+1) を与える。実モデルは自明二乗零拡大 k⊕k^(r+f) とP=L[λ]の具体的aeval作用であり、f個の余分な一次生成元も保持する。H0はf+1で、標数2の非零boundary・第1行・topを検査する。これはactual Bとの同定を自動的に証明しない。同定後に長さeを代入しPascal恒等式で既存L_jへ接続するための共通補題として原稿に追記可能。

@@ -18,20 +18,23 @@
     "actual signed-unit triangular Koszul minor, characteristic-independent boundary-rank lower bound",
     "exact original HarmonicGoal, with finite homogeneous generating family constructed from actual bottom piece",
     "same-cut actual tower truncation grading, generated bottom piece, finite support, and harmonic evaluation",
-    "same-cut full tower contribution to existing resource row, exact H0/bottom identification, actual final X vanishing, all 1<=j<=r"
+    "same-cut full tower contribution to existing resource row, exact H0/bottom identification, actual final X vanishing, all 1<=j<=r",
+    "actual first x Tor/Euler comparison via two exact sequences and actual cones; no P/k finite G hypothesis",
+    "exact original RelativeTerminalGoal: actual R terminal c_(r+1)(G)=0 via real connecting correction and endpoint support",
+    "exact real boundary rank and Euler rows of finite first-order modules, including characteristic two and extra degree-one generators"
   ],
   "goals": {
-    "1_actual_interfaces": "PARTIAL_TOR_VARIABLE_CHANGE_AND_RELATIVE_TOP_REMAIN",
+    "1_actual_interfaces": "PARTIAL_TOR_VARIABLE_CHANGE_REMAINS_RELATIVE_TOP_PROVED",
     "2_general_AP_actual_Betti_and_target": "PARTIAL_ACTUAL_BETTI_AND_RING_CONE_EQUALITY_REMAIN",
     "3_harmonic_initial_module_rank": "PROVED_EXACT_HARMONIC_GOAL_ACTUAL_MODULE_BASIS_SIGNED_MINOR_RATIONAL_AVERAGING",
-    "4_actual_tower_Tor": "PARTIAL_COMPLETE_SAME_CUT_TOWER_RESOURCE_ROW_FIRST_X_COMPARISON_AND_B_EVALUATION_REMAIN",
+    "4_actual_tower_Tor": "PARTIAL_FIRST_X_COMPARISON_AND_FULL_TOWER_RESOURCE_ROW_PROVED_ACTUAL_B_EVALUATION_REMAINS",
     "5_corrected_full_transfer": "PARTIAL_NUMERICAL_IDENTITIES_ONLY_ACTUAL_H0_ACTION_AND_TRANSFER_REMAIN",
     "6_ordinary_all_fields_all_rows": "NOT_CLOSED",
     "7_verification_audit_push": "IMPLEMENTED_SCOPE_ONLY_SEE_VERIFICATION_AND_GIT"
   },
   "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
   "production_uses_unproved_goal_definitions": false,
-  "acceptance_scope": "Exact original HarmonicGoal proved in audit/run15_continuation/ClosedGoals.lean. Other original unresolved goals remain open; see separate continuation evidence.",
+  "acceptance_scope": "Exact HarmonicGoal and exact RelativeTerminalGoal proved in separate audit modules. The actual first x comparison is proved. General AP, actual B-to-row and corrected full transfer remain open.",
   "evidence": "verification/run15/verification.json",
   "new_source_files": 23,
   "new_source_lines": 1706,
@@ -39,5 +42,9 @@
   "verification_baseline_commit": "20aadbf7011692eb3bfffef49029e2c5e416ef3d",
   "continuation_evidence": "verification/run15_continuation/verification.json",
   "continuation_new_source_files": 31,
-  "continuation_new_source_lines": 2135
+  "continuation_new_source_lines": 2135,
+  "xclosure_evidence": "verification/run15_xclosure/verification.json",
+  "xclosure_baseline_commit": "0604586a39f2b3579e995bbbc789df70cca07107",
+  "xclosure_new_source_files": 35,
+  "xclosure_new_source_lines": 2044
 }
