@@ -33,11 +33,12 @@ def run(name,cmd):
     if r.returncode or re.search(r'\bwarning:',r.stdout):
         print(r.stdout,flush=True);raise SystemExit(r.returncode or 1)
     return r.stdout
-run('build',['lake','build'])
+run('build',['lake','build','NSP14','Mathlib.Algebra.Field.ZMod','Mathlib.FieldTheory.RatFunc.Basic'])
 for name,p,_ in previous:run(name,compile_test(p))
 for p in run12:run(Path(p).stem,compile_test(p))
 run('run12_axioms',['lake','env','lean','tests/Run12Axioms.lean'])
-for p in newtests:run(Path(p).stem,compile_test(p))
+orderedtests=['tests/Run13Fixtures.lean']+[p for p in newtests if p!='tests/Run13Fixtures.lean']
+for p in orderedtests:run(Path(p).stem,compile_test(p))
 modules=[p[:-5].replace('/','.') for p in newtests]
 audit='''module\nimport NSP14\n'''+''.join('import '+m+'\n' for m in modules)+'''
 import Lean

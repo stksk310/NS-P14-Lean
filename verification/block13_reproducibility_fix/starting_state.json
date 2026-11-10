@@ -1,0 +1,9 @@
+{
+  "base_commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "cold_project_test_build": true,
+  "missing_fixture_olean": true,
+  "library_sources_and_fixed_environment_unchanged": true,
+  "changed_pinned_paths": [
+    "scripts/verify_run13_continuation.py"
+  ]
+}

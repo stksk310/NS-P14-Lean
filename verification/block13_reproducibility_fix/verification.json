@@ -1,0 +1,661 @@
+{
+  "status": "PASS_FORMAL_VERIFICATION",
+  "closure": {
+    "run13_complete": true,
+    "mathematical_exports_complete": true,
+    "verification_complete": true,
+    "phase": "verified_release",
+    "full_P14_complete": false,
+    "X_BASIC_closed_for_Run13": true,
+    "I_FIELD_closed_for_Run13": true,
+    "required_order": "docs/superpowers/plans/2026-11-10-run13-koszul-tor-foundations-order.md",
+    "baseline_commit": "6b8d16889ea9b4d88567f0d9ac70391db2a49824",
+    "continuation_baseline": "92cbe8f875845fbcefc76c6c819780fe8776429c",
+    "independent_review": "docs/RUN13_CONTINUATION_REVIEW_JA.md",
+    "review_findings": {
+      "critical": 0,
+      "important": 2,
+      "fixed": 2,
+      "deferred_minors": []
+    },
+    "actual_L_grading_identification": "ActualGradedBaseChange: five independently constructed actual target order gradings; gradedScalarKoszulIso_commutes uses the same total comparison and actual inclusions",
+    "new_mathematical_axioms": [],
+    "axiom_audit": "Lean collectAxioms export dependency metadata; source guard; self-dependency guard; generated declarations included",
+    "verification": "verification/block13_continuation/verification.json",
+    "publication": "通常のworkコミットとしてPush。実測SHAとremote一致は最終応答で記録。",
+    "pending_Run13_mathematical_declarations": [],
+    "later_run_inputs": [
+      "actual cut/regular sequence/offset stabilization",
+      "actual harmonic initial ideal and ordinary/AP target",
+      "actual tower, localization/rank zero and specific connecting ranks",
+      "common endpoint transfer and public inputs",
+      "final P14 integration"
+    ]
+  },
+  "baseline_commit": "6b8d16889ea9b4d88567f0d9ac70391db2a49824",
+  "continuation_baseline": "92cbe8f875845fbcefc76c6c819780fe8776429c",
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "NSP14",
+        "Mathlib.Algebra.Field.ZMod",
+        "Mathlib.FieldTheory.RatFunc.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 1.38
+    },
+    {
+      "name": "block01",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/SmallScalar.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.033
+    },
+    {
+      "name": "block02",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Sidon.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6
+    },
+    {
+      "name": "block03",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Resources.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.065
+    },
+    {
+      "name": "block04",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/LowRank.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.975
+    },
+    {
+      "name": "block05",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/LargeSeed.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.867
+    },
+    {
+      "name": "block06",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/LargeScalar.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.832
+    },
+    {
+      "name": "block07",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.926
+    },
+    {
+      "name": "block08",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/SemigroupFoundations.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.302
+    },
+    {
+      "name": "block09",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupRing.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/SemigroupRing.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.825
+    },
+    {
+      "name": "block10",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/TangentAlgebra.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/TangentAlgebra.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.228
+    },
+    {
+      "name": "block11",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/AperyQuotient.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/AperyQuotient.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.368
+    },
+    {
+      "name": "Run12BasicExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12BasicExamples.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Run12BasicExamples.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.451
+    },
+    {
+      "name": "Run12Fixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12Fixtures.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Run12Fixtures.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.609
+    },
+    {
+      "name": "JumpBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/JumpBounds.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/JumpBounds.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.609
+    },
+    {
+      "name": "PolynomialAction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/PolynomialAction.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/PolynomialAction.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.865
+    },
+    {
+      "name": "JumpStrata",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/JumpStrata.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/JumpStrata.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.098
+    },
+    {
+      "name": "CompletedComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/CompletedComparison.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/CompletedComparison.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.704
+    },
+    {
+      "name": "run12_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12Axioms.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.628
+    },
+    {
+      "name": "Run13Fixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run13Fixtures.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Run13Fixtures.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.667
+    },
+    {
+      "name": "ActualGradedBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/ActualGradedBaseChange.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.647
+    },
+    {
+      "name": "BettiBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/BettiBaseChange.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/BettiBaseChange.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.68
+    },
+    {
+      "name": "FilteredHomology",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/FilteredHomology.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/FilteredHomology.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.491
+    },
+    {
+      "name": "GradedKoszul",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/GradedKoszul.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/GradedKoszul.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.566
+    },
+    {
+      "name": "KoszulActual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulActual.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulActual.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.801
+    },
+    {
+      "name": "KoszulComplex",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulComplex.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulComplex.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.668
+    },
+    {
+      "name": "KoszulExactness",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulExactness.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulExactness.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.54
+    },
+    {
+      "name": "KoszulFiniteModules",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulFiniteModules.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulFiniteModules.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.306
+    },
+    {
+      "name": "KoszulPresentation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulPresentation.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulPresentation.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.549
+    },
+    {
+      "name": "KoszulTor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/KoszulTor.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/KoszulTor.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.614
+    },
+    {
+      "name": "MinimalResolution",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/MinimalResolution.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/MinimalResolution.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.577
+    },
+    {
+      "name": "PolynomialBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/PolynomialBaseChange.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/PolynomialBaseChange.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.365
+    },
+    {
+      "name": "RankEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/RankEuler.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/RankEuler.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.439
+    },
+    {
+      "name": "Run13ClosureFixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run13ClosureFixtures.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/Run13ClosureFixtures.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.658
+    },
+    {
+      "name": "StandardMonomials",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/StandardMonomials.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/StandardMonomials.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.518
+    },
+    {
+      "name": "TorNaturality",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/TorNaturality.lean",
+        "-o",
+        "/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean/tests/TorNaturality.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.479
+    },
+    {
+      "name": "environment_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "verification/block13_continuation/EnvironmentAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 74.269
+    },
+    {
+      "name": "schedule",
+      "command": [
+        "python3",
+        "lean_planning/checks/check_run_schedule_r02.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.028
+    },
+    {
+      "name": "block01_domains",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7
+    },
+    {
+      "name": "block02_assumptions",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.801
+    }
+  ],
+  "environment_declarations": 1284,
+  "core_declarations": 1207,
+  "test_declarations": 77,
+  "core_line_count": 5895,
+  "sources": [
+    "NSP14/Homological/ActualCoefficientBaseChange.lean",
+    "NSP14/Homological/ActualGradedBaseChange.lean",
+    "NSP14/Homological/ActualGradedTransport.lean",
+    "NSP14/Homological/ActualGrading.lean",
+    "NSP14/Homological/ActualKoszulTransport.lean",
+    "NSP14/Homological/ActualTorTransport.lean",
+    "NSP14/Homological/Betti.lean",
+    "NSP14/Homological/CofiberNaturality.lean",
+    "NSP14/Homological/CompletedGradedTransport.lean",
+    "NSP14/Homological/ComplexRestriction.lean",
+    "NSP14/Homological/ConeExactness.lean",
+    "NSP14/Homological/CoordinateBaseChange.lean",
+    "NSP14/Homological/CoordinateGradePieces.lean",
+    "NSP14/Homological/CoordinateGrading.lean",
+    "NSP14/Homological/CoordinateScalarComparison.lean",
+    "NSP14/Homological/DirectSumHomology.lean",
+    "NSP14/Homological/FieldExtension.lean",
+    "NSP14/Homological/FilteredComparison.lean",
+    "NSP14/Homological/FreeKoszulHomology.lean",
+    "NSP14/Homological/GradedBaseChange.lean",
+    "NSP14/Homological/GradedBetti.lean",
+    "NSP14/Homological/GradedKoszulComplex.lean",
+    "NSP14/Homological/GradedKoszulHomology.lean",
+    "NSP14/Homological/GradedModule.lean",
+    "NSP14/Homological/GradedScalarComparison.lean",
+    "NSP14/Homological/GradedScalarKoszul.lean",
+    "NSP14/Homological/HomologyBaseChangeNaturality.lean",
+    "NSP14/Homological/HomologyRanks.lean",
+    "NSP14/Homological/KoszulAnnihilation.lean",
+    "NSP14/Homological/KoszulAugmentation.lean",
+    "NSP14/Homological/KoszulChainDimension.lean",
+    "NSP14/Homological/KoszulCoefficientBaseChange.lean",
+    "NSP14/Homological/KoszulComplex.lean",
+    "NSP14/Homological/KoszulContraction.lean",
+    "NSP14/Homological/KoszulExactness.lean",
+    "NSP14/Homological/KoszulFinite.lean",
+    "NSP14/Homological/KoszulFree.lean",
+    "NSP14/Homological/KoszulGradedInclusions.lean",
+    "NSP14/Homological/KoszulGradedMaps.lean",
+    "NSP14/Homological/KoszulGrading.lean",
+    "NSP14/Homological/KoszulH0Naturality.lean",
+    "NSP14/Homological/KoszulLongExact.lean",
+    "NSP14/Homological/KoszulLowDegree.lean",
+    "NSP14/Homological/KoszulNaturality.lean",
+    "NSP14/Homological/KoszulPolynomialBaseChange.lean",
+    "NSP14/Homological/KoszulPolynomialResolution.lean",
+    "NSP14/Homological/KoszulRanks.lean",
+    "NSP14/Homological/KoszulResolution.lean",
+    "NSP14/Homological/KoszulScalarComponents.lean",
+    "NSP14/Homological/KoszulTor.lean",
+    "NSP14/Homological/KoszulTorNaturality.lean",
+    "NSP14/Homological/KoszulZeroAction.lean",
+    "NSP14/Homological/MinimalFreeTower.lean",
+    "NSP14/Homological/MinorRank.lean",
+    "NSP14/Homological/ModuleProducts.lean",
+    "NSP14/Homological/PolynomialBaseChangeFinite.lean",
+    "NSP14/Homological/PolynomialBaseChangeFunctor.lean",
+    "NSP14/Homological/PolynomialBaseChangeModule.lean",
+    "NSP14/Homological/PolynomialBaseChangeNaturality.lean",
+    "NSP14/Homological/PolynomialLinearMaps.lean",
+    "NSP14/Homological/PolynomialModules.lean",
+    "NSP14/Homological/Presentation.lean",
+    "NSP14/Homological/PresentationGrading.lean",
+    "NSP14/Homological/PrincipalBetti.lean",
+    "NSP14/Homological/RankEuler.lean",
+    "NSP14/Homological/ResidueBetti.lean",
+    "NSP14/Homological/ScalarConeMaps.lean",
+    "NSP14/Homological/ScalarKoszulInclusions.lean",
+    "NSP14/Homological/StandardMonomials.lean"
+  ],
+  "acceptance_tests": [
+    "tests/ActualGradedBaseChange.lean",
+    "tests/BettiBaseChange.lean",
+    "tests/FilteredHomology.lean",
+    "tests/GradedKoszul.lean",
+    "tests/KoszulActual.lean",
+    "tests/KoszulComplex.lean",
+    "tests/KoszulExactness.lean",
+    "tests/KoszulFiniteModules.lean",
+    "tests/KoszulPresentation.lean",
+    "tests/KoszulTor.lean",
+    "tests/MinimalResolution.lean",
+    "tests/PolynomialBaseChange.lean",
+    "tests/RankEuler.lean",
+    "tests/Run13ClosureFixtures.lean",
+    "tests/Run13Fixtures.lean",
+    "tests/StandardMonomials.lean",
+    "tests/TorNaturality.lean"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "old_axiom_reports": {
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04": 13,
+    "block05": 22,
+    "block06": 15,
+    "block07": 25,
+    "block08": 86,
+    "block09": 60,
+    "block10": 71,
+    "block11": 120,
+    "run12_axioms": 298
+  },
+  "frozen_hash_count": 84,
+  "predecessor_and_fixed_environment_unchanged": true
+}
