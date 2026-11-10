@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "audited_commit": "6b8d16889ea9b4d88567f0d9ac70391db2a49824",
+  "checks": [
+    {
+      "name": "prepush_build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 35.053
+    },
+    {
+      "name": "fixture_basic",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12BasicExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run12BasicExamples.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.202
+    },
+    {
+      "name": "fixture_changing",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Run12Fixtures.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run12Fixtures.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.252
+    },
+    {
+      "name": "fixture_strata",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/JumpStrata.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/JumpStrata.olean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.385
+    },
+    {
+      "name": "formal_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block12/FormalChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.768
+    },
+    {
+      "name": "strata_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block12/StrataChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.293
+    },
+    {
+      "name": "global_boundary_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block12/GlobalBoundaryChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.381
+    },
+    {
+      "name": "run12_finite_checks",
+      "command": [
+        "python3",
+        "audit/block12/check_run12_models.py"
+      ],
+      "exit_code": 0,
+      "seconds": 10.393
+    }
+  ],
+  "submitted_manifest_files_still_unchanged": 249,
+  "finite_results_identical_to_snapshot": true
+}

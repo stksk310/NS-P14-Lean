@@ -1,0 +1,1 @@
+PASS {'models': 279, 'terminal_jump_bounds': 23, 'filtration_action_checks': 40320, 'same_jump_action_checks': 20160, 'nonzero_same_jump_actions': 106, 'degree_shift_checks': 153, 'live_split_checks': 199686, 'formal_factorization_coefficients': 898380, 'formal_truncation_coefficients': 898380, 'formal_product_comparisons': 7533, 'formal_product_coefficient_checks': 1212813}

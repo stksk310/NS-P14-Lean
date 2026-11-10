@@ -1,0 +1,6 @@
+'_private.audit.block12.FormalChecks.0.NSP14.Run12Audit.polynomial_inclusion_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block12.FormalChecks.0.NSP14.Run12Audit.infiniteRay_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

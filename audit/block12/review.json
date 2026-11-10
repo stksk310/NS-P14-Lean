@@ -1,0 +1,210 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_ACTUAL_SAME_JUMP_MODULES_AND_LITERAL_FORMAL_TANGENT_COMPARISON",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "6b8d16889ea9b4d88567f0d9ac70391db2a49824",
+  "predecessor_commit": "a6aac7b345e3e7dbd3ac660468bdd220ecfa7dca",
+  "sources": {
+    "NSP14/Semigroup/CompletedComparison.lean": "918e5afecd3d049d09f40ec5121e35f21986af2ae42559afdec6fced1f328e37",
+    "NSP14/Semigroup/CompletedPieces.lean": "5caa28ce6241c817c47d17b1c0f6e075e7cb07bc3efc8db67a8837acd48b9523",
+    "NSP14/Semigroup/CompletedTransport.lean": "63b623298e28dafb5f855b2149035eae0dbe19d38bb3f2b7f658b43ce9bc6ae1",
+    "NSP14/Semigroup/CoordinateSupport.lean": "d60f169524283f19ff63b1aada97346b65f3f6c012caa5be42d27bb036894dd9",
+    "NSP14/Semigroup/FormalFactorization.lean": "2a8ea887eab1e8c8b898ec4ad2a544ffe4d04069cd2fbcfe50634780a36e3bf2",
+    "NSP14/Semigroup/FormalInclusion.lean": "807402553403fc3e42870c3818382bd8ea7b148f139b6e495d90340a71819b77",
+    "NSP14/Semigroup/FormalOrder.lean": "f68bd04fe2c9576953cdd85971a995fee584aabf9c2cbc9426999e7a972f8c6b",
+    "NSP14/Semigroup/FormalSemigroupRing.lean": "d8ffe45779e12b9f90adc4de8088ca6fcd75a6f450045530429146e79d113395",
+    "NSP14/Semigroup/FormalTangentAlgebra.lean": "0ae11fa0ee77a32b8148a35db26cf961229f82b33666069a8a176427a3b1896b",
+    "NSP14/Semigroup/FormalTangentScalars.lean": "75f4e5030d06f48e29237a888a385e28a0bea5cce5d90ef0a4b09ac41adc8b62",
+    "NSP14/Semigroup/JumpAction.lean": "b9b31f9ee9b8ba4bfe4110d5291c840cd682ae1152268fe0db368c4ba756b275",
+    "NSP14/Semigroup/JumpBounds.lean": "b7c9018a6f621c232a59125982379074bbdca8f891ce39dfd8bba8988f4471e2",
+    "NSP14/Semigroup/JumpDegrees.lean": "35c41c9fe188355a2db994f06a5e5408192d19ff71563f354270ed5f9615b2a2",
+    "NSP14/Semigroup/JumpFiltration.lean": "c67b9e24e110e862982311b821694501ddd1e130f09e5da99fbc4d11dcebb249",
+    "NSP14/Semigroup/JumpHomogeneity.lean": "3097a38741df5e3e0c926637d6341162c93cf3157257e1e36c512fb0c7ab5d8f",
+    "NSP14/Semigroup/JumpSlice.lean": "00d83b6b639c353764473b8604b9609b3672f34eb0874816efdf11c531187d8b",
+    "NSP14/Semigroup/JumpStrata.lean": "138d31145a717dacf1b15d4d06976cb28fd48937be0a26e66e99baff4f54f2c0",
+    "NSP14/Semigroup/LiveSplit.lean": "73c83318a9a770968ed68002548f08a891b266e9c32a67bcfc823183c9fa7e13",
+    "NSP14/Semigroup/PolynomialAction.lean": "970ee8c9613885c3de4b484852d5a29f8ae7ee81e2f6df85eaaf8575d9073313",
+    "NSP14/Semigroup/PolynomialGrading.lean": "c7361551509b3aff90add72a5c6a1038d03fe7fc6a7f96dbe9bf9c0715c2d838",
+    "NSP14/Semigroup/PolynomialPresentation.lean": "3aaa88b0ab9bec103d6dbae5e7fbe070765157cfb081861e14426660b63451bd",
+    "NSP14/Semigroup/TerminalCoordinates.lean": "4f0fb9b566ec06103d40f182878bf1ad5504c5b9d586e294902a9e8dd5ad1be6"
+  },
+  "findings_requiring_run12_changes": [],
+  "inherited_nonblocking_findings": [
+    {
+      "id": "B11-DOC-01",
+      "priority": "P3",
+      "path": "verification/block11/README_JA.md",
+      "line": 97,
+      "status": "PREVIOUS_DOCUMENTATION_FINDING_REMAINS_IN_HISTORICAL_SUBMISSION",
+      "audit_url": "https://github.com/stksk310/NS-P14-Lean/blob/audit/block11-20261110/audit/block11/README_JA.md"
+    }
+  ],
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "fresh_replay": {
+    "commands_passed": 44,
+    "warnings": false,
+    "new_core_declarations": 224,
+    "new_core_theorems": 127,
+    "new_fixture_declarations": 74,
+    "new_axiom_reports": 298,
+    "total_axiom_reports": 741,
+    "independent_broader_declaration_scan_matches_inventory": true,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "reports_identical_to_submitted_logs": true,
+    "predecessor_source_test_environment_hashes": 55,
+    "independent_predecessor_git_diff_clean": true
+  },
+  "integrity": {
+    "manifest_entries": 249,
+    "mismatched_manifest_paths": [],
+    "zip_members": 250,
+    "mismatched_zip_members": [],
+    "zip_sha256": "992be3933b13f293ce0af5b45c31c5651213d70fb9bbf2d415981eb98af4ebc1",
+    "zip_sha256_file": "992be3933b13f293ce0af5b45c31c5651213d70fb9bbf2d415981eb98af4ebc1  NS_P14_LEAN_RUN12_20261110.zip",
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged_after_replay": true
+  },
+  "additional_lean_checks": {
+    "files": [
+      "audit/block12/FormalChecks.lean",
+      "audit/block12/StrataChecks.lean",
+      "audit/block12/GlobalBoundaryChecks.lean"
+    ],
+    "examples": 11,
+    "auxiliary_proofs_compiled": true,
+    "exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "warnings": false,
+    "formal_boundary": "Actual <3,4>: the infinite ray series on 3n+3N lies in the actual nth ideal power, but not the next power over any nontrivial commutative ring. Natural truncation, finite factorization, zero ring and polynomial inclusion injectivity checked.",
+    "same_jump_nonzero_action": "Actual <5,6,13>: atom 6 maps terminal 13 to terminal 19 at jump2, with a nonzero action in both actual matching strata, and formal initial 13 remains nonzero and killed by x.",
+    "global_boundary": "Using the certified <9,10,15,26> fixture, the particular unrestricted terminal/head vector equivalence does not intertwine the actual S0 action. No assertion that all abstract global module isomorphisms are impossible."
+  },
+  "independent_finite_checks": {
+    "status": "PASS",
+    "seed": 1412,
+    "counts": {
+      "models": 279,
+      "terminal_jump_bounds": 23,
+      "filtration_action_checks": 40320,
+      "same_jump_action_checks": 20160,
+      "nonzero_same_jump_actions": 106,
+      "degree_shift_checks": 153,
+      "live_split_checks": 199686,
+      "formal_factorization_coefficients": 898380,
+      "formal_truncation_coefficients": 898380,
+      "formal_product_comparisons": 7533,
+      "formal_product_coefficient_checks": 1212813
+    },
+    "anchors": {
+      "1": {
+        "least_conductor": 0,
+        "multiplicity": 1,
+        "apery": [
+          0
+        ],
+        "top_degree": 0,
+        "deficit": 0,
+        "terminal_jumps_through_120": {}
+      },
+      "3,4": {
+        "least_conductor": 6,
+        "multiplicity": 3,
+        "apery": [
+          0,
+          4,
+          8
+        ],
+        "top_degree": 2,
+        "deficit": 1,
+        "terminal_jumps_through_120": {}
+      },
+      "4,5,11": {
+        "least_conductor": 8,
+        "multiplicity": 4,
+        "apery": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "top_degree": 2,
+        "deficit": 1,
+        "terminal_jumps_through_120": {
+          "11": 2
+        }
+      },
+      "5,6,13": {
+        "least_conductor": 15,
+        "multiplicity": 5,
+        "apery": [
+          0,
+          6,
+          12,
+          13,
+          19
+        ],
+        "top_degree": 2,
+        "deficit": 2,
+        "terminal_jumps_through_120": {
+          "13": 2,
+          "19": 2
+        }
+      },
+      "9,10,15,26": {
+        "least_conductor": 33,
+        "multiplicity": 9,
+        "apery": [
+          0,
+          10,
+          15,
+          20,
+          25,
+          26,
+          30,
+          40,
+          41
+        ],
+        "top_degree": 4,
+        "deficit": 5,
+        "terminal_jumps_through_120": {
+          "26": 2,
+          "41": 3
+        }
+      }
+    },
+    "scope": "Independent exact finite checks on 279 semigroups. Formal-series identities are checked coefficientwise only through exponent160, including a zero coefficient ring; Lean separately proves actual infinite-series identities. Stratum action tests use polynomial evaluation in actual non-x atoms over Z/2Z,Z/4Z,Z/5Z, including nonzero same-jump actions and a failure of unrestricted coordinate S0-linearity. No global finiteness or P14/Tor conclusion is inferred."
+  },
+  "paper_correspondence": {
+    "paper": "V02 section2; V03 O_COORD; alignment ledger A23-A27",
+    "status": "MATCH_ACTUAL_COORDINATE_CLOSURE_AND_LITERAL_FORMAL_TANGENT_CONE",
+    "coordinate_closure_for_run12_spec": true,
+    "same_jump_S0_module_isomorphism": true,
+    "degree_shift_on_the_same_map": true,
+    "terminal_jump_upper_bound": true,
+    "formal_model": "Literal PowerSeries subalgebra supported on actual S; actual constant-term-kernel powers. No separate AdicCompletion comparison is assumed.",
+    "completed_comparison": "Natural degree-preserving k-algebra equivalence from ideal-power quotients induced by polynomial inclusion.",
+    "formal_N": "Actual N transported through the natural principal quotient algebra equivalence.",
+    "global_T_N_S0_module_equivalence_asserted": false
+  },
+  "proved_scope": [
+    "Actual non-x S0 action on G/T/A/N/Q, variable degree compatibility, and actual surjections onto A/Q.",
+    "Opposite actual homogeneous S0 jump filtrations, actual stratum quotient equivalence and homogeneous degree shift s for the same equivalence.",
+    "Every terminal jump satisfies 2<=jump<=actual top degree of Q, via a direct longest-factorization prefix argument; actual T=N=0 for deficit0.",
+    "Literal formal-series semigroup ring and equality of actual positive-ideal powers with numerical-order coefficient ideals, including truly infinite series.",
+    "Natural multiplicative degreewise comparison assembled into a k-algebra equivalence, preserving initial monomials, x and x multiplication; actual kernel/A/Q transported naturally."
+  ],
+  "unverified_remaining": [
+    "Actual stabilization and global finite-dimensionality of A,N,T requiring additional construction.",
+    "actual stabilization and offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14",
+    "All published inputs, complete X_BASIC/I_FIELD and final Lean/manuscript alignment remain future obligations."
+  ]
+}

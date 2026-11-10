@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "seed": 1412,
+  "counts": {
+    "models": 279,
+    "terminal_jump_bounds": 23,
+    "filtration_action_checks": 40320,
+    "same_jump_action_checks": 20160,
+    "nonzero_same_jump_actions": 106,
+    "degree_shift_checks": 153,
+    "live_split_checks": 199686,
+    "formal_factorization_coefficients": 898380,
+    "formal_truncation_coefficients": 898380,
+    "formal_product_comparisons": 7533,
+    "formal_product_coefficient_checks": 1212813
+  },
+  "anchors": {
+    "1": {
+      "least_conductor": 0,
+      "multiplicity": 1,
+      "apery": [
+        0
+      ],
+      "top_degree": 0,
+      "deficit": 0,
+      "terminal_jumps_through_120": {}
+    },
+    "3,4": {
+      "least_conductor": 6,
+      "multiplicity": 3,
+      "apery": [
+        0,
+        4,
+        8
+      ],
+      "top_degree": 2,
+      "deficit": 1,
+      "terminal_jumps_through_120": {}
+    },
+    "4,5,11": {
+      "least_conductor": 8,
+      "multiplicity": 4,
+      "apery": [
+        0,
+        5,
+        10,
+        11
+      ],
+      "top_degree": 2,
+      "deficit": 1,
+      "terminal_jumps_through_120": {
+        "11": 2
+      }
+    },
+    "5,6,13": {
+      "least_conductor": 15,
+      "multiplicity": 5,
+      "apery": [
+        0,
+        6,
+        12,
+        13,
+        19
+      ],
+      "top_degree": 2,
+      "deficit": 2,
+      "terminal_jumps_through_120": {
+        "13": 2,
+        "19": 2
+      }
+    },
+    "9,10,15,26": {
+      "least_conductor": 33,
+      "multiplicity": 9,
+      "apery": [
+        0,
+        10,
+        15,
+        20,
+        25,
+        26,
+        30,
+        40,
+        41
+      ],
+      "top_degree": 4,
+      "deficit": 5,
+      "terminal_jumps_through_120": {
+        "26": 2,
+        "41": 3
+      }
+    }
+  },
+  "scope": "Independent exact finite checks on 279 semigroups. Formal-series identities are checked coefficientwise only through exponent160, including a zero coefficient ring; Lean separately proves actual infinite-series identities. Stratum action tests use polynomial evaluation in actual non-x atoms over Z/2Z,Z/4Z,Z/5Z, including nonzero same-jump actions and a failure of unrestricted coordinate S0-linearity. No global finiteness or P14/Tor conclusion is inferred."
+}

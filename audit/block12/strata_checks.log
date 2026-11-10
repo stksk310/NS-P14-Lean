@@ -1,0 +1,6 @@
+'_private.audit.block12.StrataChecks.0.NSP14.Run12StrataAudit.live_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block12.StrataChecks.0.NSP14.Run12StrataAudit.terminal19' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
