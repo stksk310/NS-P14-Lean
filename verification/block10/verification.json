@@ -1,0 +1,529 @@
+{
+  "status": "PASS_COMPILED_BLOCK10",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 0.901
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/TangentAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.064
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/TangentCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.899
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/TangentScalars.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.817
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/ShiftCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.505
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/HeadCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.51
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/KernelHead.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.205
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/KernelHeadBasis.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.76
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/TangentAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.161
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.441
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.549
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.648
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.846
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.784
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.747
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.728
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.252
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupRing.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.708
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.509
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.535
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 71,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15,
+    "block07_regression": 25,
+    "block08_regression": 86,
+    "block09_regression": 60
+  },
+  "block10_declarations": [
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceAddCommGroup"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.zeroRepresentative"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.homogeneous_mk_eq"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceGOne"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceGMul"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceGCommRing"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.TangentAlgebra"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.tangentCommRing"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangent_of_mul"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.degreeSigmaEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.tangentCoordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentCoordinates_apply"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.initialMonomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentCoordinates_initial"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.tangentBasis"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentBasis_eq_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_mul_eq_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_mul_live"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceModule"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.scalarClass"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.pieceGAlgebra"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.tangentAlgebraStructure"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.shiftExponent"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.shiftExponent_injective"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.LiveExponent"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.not_live_iff_terminal"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.liveFilter"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.coordinateShift"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.coordinateShift_single_live"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.coordinateShift_single_dead"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.coordinateShift_eq_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.coordinateShift_ker"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.shift_live_not_head"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.not_head_predecessor"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.coordinateShift_range"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.TerminalExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.HeadExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.coordinateKernelEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headProjection"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headProjection_surjective"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headProjection_ker"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.coordinateHeadQuotientEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xElement"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xMultiply"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xMultiply_initial_live"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xMultiply_initial_dead"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xMultiply_coordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_xKernel_coordinates"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xKernelCoordinateEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xKernelEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xKernelBasis"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xMultiply_range"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.actualHeadProjection"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.actualHeadProjection_surjective"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.actualHeadProjection_ker"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headCokernelEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xIdeal_eq_range"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.HeadAlgebra"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headQuotientEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headBasis"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.terminalMonomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xKernelEquiv_terminal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xKernelBasis_eq_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headQuotientEquiv_mk"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headQuotientEquiv_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headBasis_eq_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_initial_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xElement_degree_one"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xMultiply_of"
+    }
+  ],
+  "block10_theorem_count": 35,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block09": true,
+  "predecessor_hash_count": 34,
+  "sources": [
+    "NSP14/Semigroup/TangentAlgebra.lean",
+    "NSP14/Semigroup/TangentCoordinates.lean",
+    "NSP14/Semigroup/TangentScalars.lean",
+    "NSP14/Semigroup/ShiftCoordinates.lean",
+    "NSP14/Semigroup/HeadCoordinates.lean",
+    "NSP14/Semigroup/KernelHead.lean",
+    "NSP14/Semigroup/KernelHeadBasis.lean"
+  ],
+  "paper_source": "V02 section2; V03 O_COORD, algebraic semigroup-ring coordinate step",
+  "scope": "Actual ideal-power quotients assembled as a commutative k-algebra. Global monomial coordinates conjugate actual x multiplication to the live coefficient shift with injective exponent translation, yielding full terminal kernel basis and actual principal-ideal quotient head basis.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A15-A17",
+  "remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "graded N/Q construction, same-jump modules and jump upper bound",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14"
+  ]
+}

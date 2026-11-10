@@ -4,6 +4,21 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 10
+
+The actual ideal-power quotients now form one commutative k-algebra.
+Global monomial coordinates identify the full kernel of multiplication
+by x with terminal-supported coordinates, and the actual ring quotient
+G/xG with head coordinates. Both bases are proved to be the corresponding
+initial monomial classes. Completion comparison and N/Q remain subsequent work.
+
+```sh
+python3 scripts/verify_block10.py
+```
+
+[Scope and reproduction](verification/block10/README_JA.md),
+[verification](verification/block10/verification.json).
+
 ## Lean implementation — Block 09
 
 The actual algebraic semigroup ring now has its positive ideal powers

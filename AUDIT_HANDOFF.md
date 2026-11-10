@@ -1,4 +1,4 @@
-# Lean Block01–09 監査引継ぎ
+# Lean Block01–10 監査引継ぎ
 
 2026年11月10日（JST）。このスナップショットは `work` ブランチで公開する。
 
@@ -18,6 +18,8 @@
 12. [Block08：実半群・Apéry・order・数値head](NSP14/Semigroup/Basic.lean) と [6ファイル・範囲](verification/block08/README_JA.md)
 
 13. [Block09：半群環の実冪・次数付き商・積](NSP14/Semigroup/IdealPowers.lean) と [7ファイル・範囲](verification/block09/README_JA.md)
+
+14. [Block10：全次数付き環・actual核/head商](NSP14/Semigroup/KernelHead.lean) と [7ファイル・範囲](verification/block10/README_JA.md)
 
 ## 特に確認してほしい境界
 
@@ -40,8 +42,10 @@
   同じ資源の条件と境界証拠は入力。actual Torやtarget Betti公式を構成したとは扱わない。
 - Block08は実半群からm/e・最小生成系・order・Apéry数値座標を構成する。
   数値terminal/headの全単射をactual T/Nの加群同型と混同しない。接錐との環同定は後続。
-- Block09で代数的半群環の実冪・有限単項式基底・商上の積とterminal単項式の核判定を構成した。
-  完備化比較・全直和環・核全体とA/N/Qの基底はまだ残る。
+- Block09で代数的半群環の実冪・各次数の有限単項式基底・商上の積とterminal単項式の核判定を構成した。
+  その先の全直和と核/商基底の接続は、Block10で以下の範囲まで進めた。
+- Block10は全直和を可換k代数へ構成し、actual x乗算の核全体・像全体・principal quotient Aの基底まで同定する。
+  完備化比較、N/Q、同jump strata、A全体の有限性は別工程。global T≅Nを主張しない。
 - 実際のtowerからその共通資源列を作ること、actual接錐・Tor/Bettiへの接続、P14全体は未完成。
 
 ## 再現
@@ -51,12 +55,12 @@ Lean `v4.36.0-rc2` とmathlib revisionはtoolchain・Lake manifestに固定し�
 
 ```sh
 lake build
-python3 scripts/verify_block09.py
+python3 scripts/verify_block10.py
 ```
 
-Block09の検証は7ソース再検査・新テスト・既存8Block回帰・2監査の19コマンド。
-全新規60宣言と既存192件、計252公理依存報告を検査する。
-旧15ソース・8テスト・固定環境3ファイルの26hashもBlock08のmanifestと照合する。
+Block10の検証は7ソース再検査・新テスト・旧9Block回帰・2監査の20コマンド。
+全新規71宣言と旧252件、計323公理依存報告を検査する。
+旧22ソース・9テスト・固定環境3ファイルの34hashもBlock09のmanifestと照合する。
 通常のLean基盤 `propext`, `Classical.choice`, `Quot.sound` 以外の依存を拒否する。
 追加の数学公理や `sorryAx` への依存は認めない。
 
@@ -71,15 +75,15 @@ lake build
 同じ環境なら次で実行できる。
 
 ```sh
-PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block09.py
+PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_block10.py
 ```
 
-[保存済みBlock09検証記録](verification/block09/verification.json) とログを同梱する。
+[保存済みBlock10検証記録](verification/block10/verification.json) とログを同梱する。
 ローカルで再検証すると所要秒などは更新されるため、厳密な比較対象には監査するコミットを指定する。
 
 [Block01の独立監査](audit/README_JA.md) と [今回の対応記録](docs/BLOCK01_AUDIT_RESPONSE_JA.md) を保存した。
 `audit/` と既存ZIPは監査時の記録、`verification/block01/`・`block02/` はBlock01監査修正までの記録。
-Block03–08の記録も保持する。今回の公開import追加後の照合対象は `verification/block09/MANIFEST_SHA256.json` とする。
+Block03–09の記録も保持する。今回の公開import追加後の照合対象は `verification/block10/MANIFEST_SHA256.json` とする。
 
 [Block02独立監査](audit/block02/README_JA.md) は条件付き数値ブロックとして合格。
 Block03の外部監査は進行中で、Block04の実装検証と区別する。

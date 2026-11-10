@@ -244,6 +244,45 @@ R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
   globalなT≅Nは導いていない。
 - 最終原稿：数値ラベルの全単射と、商・核・作用の代数的同定を区別して引用する。
 
+## A15：実冪の次数付き商を全可換k代数へ組み立て（Block10）
+
+- 原稿：V02 §2 / V03 O_COORD冒頭のGの数値座標と積。
+- Lean：`pieceGCommRing`、`TangentAlgebra`、`pieceGAlgebra`、`tangentCoordinates`、`tangentBasis_eq_initial`。
+- Block09で作った実商Gₙと双線型積から、結合則・単位元・交換則・整数の埋込みを証明した。
+  異なる次数型の等式は、次数の等式と同じ半群環代表であることから得る。
+  degree0の定数単項式を使い、既存のk加群構造と積の整合性を証明する。
+- 各次数の座標をDFinsuppでまとめ、Σₙ{v:order(v)=n}≃Sで添字を整理する。
+  これにより全体のactual初期単項式が基底と分かる。
+- 仮定：構造全体は可換係数環で構成。非零や積が消える条件の同値には非自明性を要求。
+- 最終原稿：冪の同定→各次数の基底→全直和環→積、という証明順を採用できる。
+  完備半群環との比較はこの構成とは別の未完定理として保持する。
+
+## A16：単項式の核判定からactual核・像全体へ（Block10）
+
+- Lean：`shiftExponent_injective`、`coordinateShift_ker`、`coordinateShift_range`、
+  `xMultiply_coordinates`、`xKernelEquiv`、`xKernelBasis_eq_initial`。
+- 数値作用は「liveな係数をv+mへ移し、deadな係数を消す」写像。
+  v↦v+mが単射なので、異なるlive矢印の係数が同じ行き先で打ち消し合うことはない。
+  従って核はterminal上に支持を持つ有限和の全体である。
+- 像はincoming live矢印のある全座標の張る空間。逆包含はheadでない指数の実predecessorから証明する。
+  全体の環のx乗算とこの係数作用が基底上で一致し、線型性で任意の元へ一致が延長する。
+- actual接続は非自明な可換係数環を仮定する。核の線型同値と基底はactual初期単項式に一致する。
+- 最終原稿：「Tの基底はdead矢印の始点」と述べる箇所に、単射性による無衝突の一文を補える。
+  数値ラベルの単項式判定のみで核全体を済ませず、この線型性の段階を明示する。
+
+## A17：head商をactual principal idealの環の商として同定（Block10）
+
+- Lean：`headProjection_ker`、`actualHeadProjection_ker`、`xIdeal_eq_range`、
+  `HeadAlgebra`、`headQuotientEquiv`、`headBasis_eq_initial`、`xMultiply_of`。
+- head座標への係数制限は0拡張で全射、核は非head座標の支持空間、従ってactual x乗算の像に等しい。
+  xGをIdeal.span{x}で定義し、そのk部分加群が乗算の像であることも証明した。
+  こうしてAは単にhead空間と定義した対象ではなく、actual環Gのprincipal idealによる商となる。
+- 非自明な可換係数環で、Aのhead基底と実単項式クラスが一致し、各headクラスは非零。
+  全体のx作用と各次数のxActionも一致する。
+- 最終原稿：Aの基底の主張を、制限写像の核・全射性とprincipal idealの像の同定で説明できる。
+  N/Q、A全体の有限性、同jumpの加群同型や完備化比較はこの結果から無断で済ませない。
+  global T≅Nの加群同型は導いていない。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

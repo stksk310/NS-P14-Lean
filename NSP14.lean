@@ -20,3 +20,10 @@ public import NSP14.Semigroup.GradedProduct
 public import NSP14.Semigroup.RingCoordinates
 public import NSP14.Semigroup.TangentAction
 public import NSP14.Semigroup.GradedBasis
+public import NSP14.Semigroup.TangentAlgebra
+public import NSP14.Semigroup.TangentCoordinates
+public import NSP14.Semigroup.ShiftCoordinates
+public import NSP14.Semigroup.TangentScalars
+public import NSP14.Semigroup.HeadCoordinates
+public import NSP14.Semigroup.KernelHead
+public import NSP14.Semigroup.KernelHeadBasis
