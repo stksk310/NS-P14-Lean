@@ -1,0 +1,18 @@
+{
+  "status": "PARTIAL_NOT_RUN14_COMPLETE",
+  "baseline_commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "run13": "COMPLETE_AND_PUSHED",
+  "goals": {
+    "1_offset_stabilization_volume": "PARTIAL: least words, prefix minimality, cycle exclusion, stabilization, terminal residue sum and finite A/N/T proved; sharp volume pending",
+    "2_green_degree_two": "OPEN: no Green theorem or cut existence assumed",
+    "3_same_characteristic_one_cut": "PARTIAL: fixed infinite RatFunc extension and characteristic proved; independent square-zero cut and restriction to P pending",
+    "4_actual_tower": "PARTIAL: homogeneous F ideals, U stages and low-degree Q equivalence proved; truncated short exact sequence and single-degree generation pending",
+    "5_one_resource_sequence": "PARTIAL: actual H, finite support, H0=deficit, actual Layers and full finite mass identity proved; volume, disjoint interval caps, H1 identity and head-linear bound pending",
+    "6_actual_numerical_data": "OPEN: actual layers fixed but Data inequalities not supplied",
+    "7_actual_sidon_boundary": "COMPLETE: maximal actual Q2 to actual AperyPairData, multiplicity/deficit bounds, guarded canonical-rank boundary proved",
+    "8_actual_all_rows": "OPEN: existing numerical all_rows cannot yet be instantiated with actual Data"
+  },
+  "remaining_typed_propositions": "audit/run14/RemainingGoals.lean",
+  "next_required_run": "CONTINUE_RUN14_BEFORE_RUN15",
+  "run15_actual_tor_and_target_betti": "DEFERRED_AS_REQUESTED"
+}

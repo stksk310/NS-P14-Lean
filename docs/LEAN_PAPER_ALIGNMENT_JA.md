@@ -535,3 +535,28 @@ actual G/T/A/N/Qとの係数変更は実指数基底の変数行列を比較し�
 同じtotal Koszul comparisonの実inl/inr式を使い、degree複体の同型とその可換式を導いた。
 G/T/A/N/Qの独立したL側gradingへ適用し、actual graded Betti保存を明示的に証明した。
 原稿のI_FIELDにはこのdegree同定を含める。標数2→RatFuncの五つのactual検査を追加した。
+
+## A41 — Run14：least-offsetの表示を実半群元から構成
+
+原稿§3の非x atom offset最小化に対し、Leanでは正の実半群元表示でまずbを最小化する。
+そのbで最短の長さlを取り、最短表示のorder=l、全因子がactual atom、m因子を含まないことを証明。
+`leastOffsetWord_exists`で原稿と同じ語を回収し、prefix最小性・剰余無反復・l<mを得る。
+`order_stabilization`、`terminal_residue_sum`とA/N/Tの有限性をこのactual構成から導く。
+最終原稿ではこの順序への変更が可能。鋭いδV上界のpath-countはまだ形式化していない。
+
+## A42 — Run14：最大Q₂からSidonへの体非依存の橋
+
+`degreeTwoPair`はactual degree-two Apéry元を非x atomのSym2へ単射する。
+最大次元でcardが一致すれば全quadraticがliveで異なるApéry元を与える。
+`maximal_low_pair_unique`で0を含む項と異次数の衝突も排除し、実AperyPairDataを作る。
+任意標数・平方・even/composite mで成立。原稿A02の未実装橋はこの部分で閉鎖。
+`actualCutRank_maximal`はr≥3の前提を保持し、Γ=<6,7,11>をr=2反例として記録する。
+
+## A43 — Run14：同じactual Hの先行固定と未完境界
+
+`jumpIdeal`は既存ascending supportをAの斉次idealにする。U_sの低次数同型は実商写像。
+Hはactual U_sのdegree次元の和として固定し、有限台・H₀=δ・δ=0を証明。
+`actualLayers`はhead=H₁、tail_j=H_{j+2}と全tail台を保持し、massの有限和同一性も証明。
+Green、単一cut、truncated towerのP短完全列と単一次数生成、鋭い体積・区間cap・
+head線形上界、actual Dataは未完。これらの未完を原稿の証明済み箇所の削除根拠にしない。
+最終原稿とLeanの一致にはRUN14_REMAINING_DECLARATIONS_JA.mdの全接続が必要。

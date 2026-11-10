@@ -1,5 +1,17 @@
 # Lean化進捗
 
+## 最新状態：Run14途中成果（2026年11月10日JST）
+
+Run13は`d8556dc`で完成・Push済み。Run14は未完であり、完了run数へ加算しない。
+11個の新規source・1,245行で、actual offset/安定化/有限性、最大Q₂からのSidon、
+F/Uの低次数同型、同じactual Hと全tail有限台、H₀=δ、actualLayersを証明した。
+Green・同じcut・鋭い体積・truncated tower/生成・全資源条件・actual Dataは未完。
+
+[正確な状態と宣言](docs/RUN14_REMAINING_DECLARATIONS_JA.md)、
+[検証](verification/run14/verification.json)、[再校正](docs/RUN14_20RUN_RECALIBRATION_JA.md)。
+以下は各段階時点の履歴であり、最新の未完境界は上記文書を優先する。
+
+
 2026年11月9日（JST）。
 
 | 範囲 | 状態 | 証拠 |

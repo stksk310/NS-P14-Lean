@@ -4,6 +4,25 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Run 14 (partial)
+
+Run13 is complete at `d8556dc`. Run14 adds proved actual offset stabilization,
+finite A/N/T, maximal-Q₂ Sidon witnesses, homogeneous F/U stages, and one finite
+actual H/layer sequence with H₀=δ. **Run14 is not complete:** Green, the single cut,
+sharp volume, truncated tower/generation and resource inequalities/actual Data remain open.
+
+```sh
+python3 scripts/verify_run14.py
+```
+
+[Exact closed exports and unfinished goals](docs/RUN14_REMAINING_DECLARATIONS_JA.md),
+[closure status](docs/RUN14_CLOSURE_STATUS.json),
+[verification](verification/run14/verification.json),
+[recalibration](docs/RUN14_20RUN_RECALIBRATION_JA.md).
+The new verifier includes the full predecessor suite. Historical verification commands
+below apply to their original commits; use `d8556dc` to reproduce Run13 in isolation.
+Run15 is pending completion of Run14.
+
 ## Lean implementation — Run 13
 
 Actual Koszul/Tor, finite coefficient homology, minimal-resolution ranks, graded Betti,
