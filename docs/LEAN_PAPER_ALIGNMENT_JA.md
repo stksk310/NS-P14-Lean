@@ -708,3 +708,17 @@ actual H0作用と実有界比較へ全変数Tor同定を接続し、`ActualWitn
 相対Rの実H0からbeta0=f+1を証明し、相対末端c_(r+1)=0と通常Torの上次数消滅から全j>rのc_j=0を得た。既存数値rowsに、余ったj>rのtarget非負性を加えて全正行を保持する。beta_j=c_j+c_(j-1)の正確な係数畳み込み、第0項の補正、既存target差恒等式を合成して、`ordinary_betti_bound`は任意元体k・e>=3・全i>=1でactual source beta_i<=i*choose(m,i+1)を与える。体拡大は通常Betti保存により元のkへ下降する。
 
 この数値容量の証明自体は幅仮定を使わず、原稿のordinary枝に必要なものより強いsource上界となる。literal interval completionがordinary targetである同定と、actual targetのBetti公式は依然必要である。一般APの公差d>=1の実Betti公式と半群環/接錐Betti一致も残る。Run15全体の完了とは表示しない。
+
+## A66 — Run15継続：正則xの実縮約とactual ordinary target
+
+実正則元rについてR --r→ R →R/(r)の実短完全列を構成し、native Koszulへ送った。単射の写像錐のhomologyと商複体のhomologyの実同型から、x正則なactual Gのintrinsic全変数Torを、非x変数によるactual A=G/(x)の通常Torへ同定した。有限次元chainやスペクトル系列の退化は仮定しない。
+
+APのv=m−1では、一般公差d>=1を保ったApéryリストから全headのorder<=1、高次数ideal(2)=0を証明した。actual non-x作用と実一次基底の独立性、実signed-unit boundary rankから全通常Bettiを計算し、第0行1、正行i*choose(m,i+1)を得た。literal interval completionへ実際に代入し、完成接錐との通常Tor比較も適用した。二変数targetも扱い、r=2 cutを過大適用していない。
+
+## A67 — Run15継続：第0行の等式とordinary actual閉鎖
+
+実多項式表示の全射とactual augmentationをP加群の全射として構成した。H0の右完全性を実Koszul写像から証明し、free Pと実residue moduleの第0Bettiが1であることの間にactual sourceを挟むことで、任意sourceと完成接錐の第0Betti=1を証明した。Gの係数体有限性は使わない。sourceとtarget双方の第0行を等式として保持する。
+
+`Ordinary.ordinary_actual_completion_betti_le`は任意元体・全行で、actual完成sourceとliteral interval completionのactual完成targetを各自の最小表示で比較する。元のOrdinaryActualCompletionGoalそのものの証明はaudit/run15_ordinary/ClosedGoals.lean。Gamma<6,7,11>のrank2例、Run12のterminal26/41とjumpの異なるchanging例、標数2、m=2 target、一般d>1のAP特殊例を受入に含めた。
+
+一般APの代数的半群環Betti公式と、一般APの半群環/接錐Betti一致はまだ未完。v=1やv=m−1のcone公式だけで公刊共通入力全体を閉じたとは表示しない。

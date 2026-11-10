@@ -30,7 +30,12 @@
     "ordinary Tor preservation under ring equivalence from actual mapped projective resolutions and tensor naturality",
     "same-cut actual full polynomial variable change, all-variable order complete and duplicate-free, intrinsic full Tor identified with the actual native complex",
     "exact original CorrectedFullTransferGoal with H0 correction and full e-variable intrinsic Betti numbers",
-    "exact original OrdinaryBettiBoundGoal over every original arbitrary field and all positive rows; the proved multiplicity capacity bound needs no width hypothesis"
+    "exact original OrdinaryBettiBoundGoal over every original arbitrary field and all positive rows; the proved multiplicity capacity bound needs no width hypothesis",
+    "actual regular-x Koszul reduction preserving all intrinsic rows, without finite chain groups",
+    "actual ordinary interval-completion Betti formula over every field, including zeroth and top rows, also for two-variable targets",
+    "actual zeroth full Betti equals one for every source and its completed cone, from real cyclic augmented polynomial presentations",
+    "exact original OrdinaryActualCompletionGoal: actual completed source and literal completed target, original arbitrary fields and all rows",
+    "maximal-embedding AP cone Betti for every d>=1, plus the two-generator AP cone case; general algebraic AP Betti still open"
   ],
   "goals": {
     "1_actual_interfaces": "PROVED_P_R_FULL_E_INTERFACES_VARIABLE_CHANGE_TOR_FINITE_AND_RELATIVE_TOP",
@@ -38,12 +43,12 @@
     "3_harmonic_initial_module_rank": "PROVED_EXACT_HARMONIC_GOAL_ACTUAL_MODULE_BASIS_SIGNED_MINOR_RATIONAL_AVERAGING",
     "4_actual_tower_Tor": "PROVED_EXACT_ACTUAL_TOR_TO_ROW_GOAL_AND_ACTUAL_R_TARGET_ROWS",
     "5_corrected_full_transfer": "PROVED_EXACT_ORIGINAL_CORRECTED_FULL_TRANSFER_GOAL",
-    "6_ordinary_all_fields_all_rows": "PARTIAL_EXACT_ORDINARY_BETTI_BOUND_GOAL_PROVED_ACTUAL_TARGET_AND_COMPLETION_COMPARISON_REMAIN",
+    "6_ordinary_all_fields_all_rows": "PROVED_EXACT_ORIGINAL_ORDINARY_ACTUAL_COMPLETION_GOAL_ZERO_AND_TOP_ALL_FIELDS_ALL_ROWS",
     "7_verification_audit_push": "IMPLEMENTED_SCOPE_ONLY_SEE_VERIFICATION_AND_GIT"
   },
   "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
   "production_uses_unproved_goal_definitions": false,
-  "acceptance_scope": "Five exact original goals proved: HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal and OrdinaryBettiBoundGoal. General APBettiGoal, APConeBettiGoal and OrdinaryActualCompletionGoal remain open.",
+  "acceptance_scope": "Six exact original goals proved: HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal, OrdinaryBettiBoundGoal and OrdinaryActualCompletionGoal. The general algebraic APBettiGoal and APConeBettiGoal remain open; the maximal-embedding/two-generator cone cases do not close them.",
   "evidence": "verification/run15/verification.json",
   "new_source_files": 23,
   "new_source_lines": 1706,
@@ -67,5 +72,9 @@
   "fulltransfer_evidence": "verification/run15_fulltransfer/verification.json",
   "fulltransfer_baseline_commit": "aa98d3cf717b918e4c6c6b1d03bf59fb3ecfd70b",
   "fulltransfer_new_source_files": 16,
-  "fulltransfer_new_source_lines": 696
+  "fulltransfer_new_source_lines": 696,
+  "ordinary_evidence": "verification/run15_ordinary/verification.json",
+  "ordinary_baseline_commit": "86361155a028cc9a6d6134218c67600770075e1f",
+  "ordinary_new_source_files": 16,
+  "ordinary_new_source_lines": 793
 }
