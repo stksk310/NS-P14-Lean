@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "isolated_temporary_negative_control": true,
+  "declarations": [
+    {
+      "axioms": [
+        "IsolatedAuditProbe.sentinel"
+      ],
+      "name": "IsolatedAuditProbe.sentinel",
+      "accepted_by_release_rule": false
+    },
+    {
+      "axioms": [
+        "IsolatedAuditProbe.sentinel"
+      ],
+      "name": "IsolatedAuditProbe.bad",
+      "accepted_by_release_rule": false
+    },
+    {
+      "axioms": [],
+      "name": "IsolatedAuditProbe.good",
+      "accepted_by_release_rule": true
+    }
+  ]
+}

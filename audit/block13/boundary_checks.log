@@ -1,0 +1,12 @@
+'_private.audit.block13.BoundaryChecks.0.Run13IndependentAudit.ordinary_residue_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block13.BoundaryChecks.0.Run13IndependentAudit.free_partial_euler_is_negative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block13.BoundaryChecks.0.Run13IndependentAudit.residue_partial_euler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block13.BoundaryChecks.0.Run13IndependentAudit.actual_degree_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

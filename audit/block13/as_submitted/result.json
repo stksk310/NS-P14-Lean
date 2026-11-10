@@ -1,0 +1,17 @@
+{
+  "status": "FAIL_CLEAN_TEST_BUILD",
+  "commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "passed_commands": 19,
+  "failed_command": [
+    "lake",
+    "env",
+    "lean",
+    "tests/ActualGradedBaseChange.lean",
+    "-o",
+    ".lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+  ],
+  "failure": "tests/Run13Fixtures.olean does not exist",
+  "cause": "Alphabetical acceptance order imports Run13Fixtures before compiling it; default library build excludes tests.",
+  "logs": 20,
+  "root_build_succeeded": true
+}

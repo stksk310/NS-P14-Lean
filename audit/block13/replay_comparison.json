@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "replay_checks": 40,
+  "new_environment_declarations": 1284,
+  "declaration_names_types_and_axioms_match_submission": true,
+  "predecessor_axiom_reports": 741,
+  "independent_boundary_axiom_reports": 4,
+  "forbidden_source_constructs_found": false,
+  "warnings_found": false,
+  "closure_flags_are_not_mathematical_evidence": true
+}

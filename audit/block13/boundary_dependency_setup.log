@@ -1,0 +1,1 @@
+audit/block13/BoundaryChecks.lean:1:0: error: object file '/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Field/ZMod.olean' of module Mathlib.Algebra.Field.ZMod does not exist

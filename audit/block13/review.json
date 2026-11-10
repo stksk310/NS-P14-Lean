@@ -1,0 +1,39 @@
+{
+  "commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "verdict": "MATHEMATICAL_SCOPE_PASS_VERIFICATION_REPRODUCIBILITY_FIX_REQUIRED",
+  "mathematical_scope": "Run13 actual Koszul, ordinary Tor, finite homology, grading, exact sequences and field-extension foundations",
+  "new_findings": [
+    {
+      "id": "RUN13-P2-VERIFY-ORDER",
+      "priority": "P2",
+      "file": "scripts/verify_run13_continuation.py",
+      "line": 40,
+      "title": "Compile the fixture before dependent acceptance modules",
+      "reason": "Sorted acceptance order imports tests.Run13Fixtures before its olean exists. Default lake build does not build tests or their extra mathlib imports.",
+      "reproduced_on_clean_test_build": true,
+      "passed_commands_before_failure": 19,
+      "patch": "audit/block13/verification_order_fix.patch",
+      "patched_replay_commands_passed": 40,
+      "patch_applied_to_submitted_script": false
+    }
+  ],
+  "new_mathematical_findings": [],
+  "inherited_nonblocking_findings": [
+    {
+      "priority": "P3",
+      "file": "verification/block11/README_JA.md",
+      "line": 97,
+      "description": "The example referred to by 後者 is ambiguous/incorrect; tracked in the Block11 audit."
+    }
+  ],
+  "patched_replay": {"commands": 40, "exit_codes_all_zero": true, "warnings": 0},
+  "environment_declarations": {"core": 1207, "acceptance": 77, "total": 1284, "types_and_axioms_match_submission": true},
+  "predecessor_axiom_reports": 741,
+  "independent_lean_checks": {"named_theorems": 4, "anonymous_examples": 1, "warnings": 0},
+  "additional_mathematical_axioms_in_library": [],
+  "full_P14_complete": false,
+  "minimal_resolution_existence_proved": false,
+  "actual_betti_localized_rank_euler_instantiated": false,
+  "actual_harmonic_initial_ideal_proved": false,
+  "submitted_sources_evidence_and_artifacts_modified": false
+}
