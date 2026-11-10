@@ -1,0 +1,9 @@
+✔ [3050/3066] Built NSP14.Semigroup.Ring (935ms)
+✔ [3052/3066] Built NSP14.Semigroup.IdealPowers (916ms)
+✔ [3054/3066] Built NSP14.Semigroup.GradedPieces (1.1s)
+✔ [3056/3066] Built NSP14.Semigroup.RingCoordinates (1.2s)
+✔ [3058/3066] Built NSP14.Semigroup.GradedBasis (1.2s)
+✔ [3060/3066] Built NSP14.Semigroup.GradedProduct (1.4s)
+✔ [3062/3066] Built NSP14.Semigroup.TangentAction (936ms)
+✔ [3064/3066] Built NSP14 (839ms)
+Build completed successfully (3066 jobs).

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "audited_commit": "1d7c4a8a088ecd37648fa5afeb7c35421e2a6f59",
+  "checks": [
+    {
+      "name": "prepush_build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 7.051
+    },
+    {
+      "name": "ring_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block09/RingChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.777
+    },
+    {
+      "name": "ring_finite_checks",
+      "command": [
+        "python3",
+        "audit/block09/check_ring_models.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.424
+    }
+  ],
+  "submitted_manifest_files_still_unchanged": 96,
+  "finite_results_identical_to_snapshot": true
+}

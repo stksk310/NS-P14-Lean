@@ -1,0 +1,4 @@
+'_private.audit.block09.RingChecks.0.NSP14.Block09Audit.exampleS' depends on axioms: [propext, Quot.sound]
+'_private.audit.block09.RingChecks.0.NSP14.Block09Audit.terminal_eleven' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

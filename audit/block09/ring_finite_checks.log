@@ -1,0 +1,1 @@
+PASS {'models': 278, 'ideal_power_membership_checks': 872530, 'degree_sets': 2502, 'polynomial_quotient_products': 53376, 'representative_changes': 53376, 'x_action_kernel_checks': 106752, 'nonadditive_unit_products': 1230, 'nonzero_products': 3222}

@@ -1,0 +1,190 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_ACTUAL_ALGEBRAIC_IDEAL_POWERS_AND_HOMOGENEOUS_COORDINATES",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "1d7c4a8a088ecd37648fa5afeb7c35421e2a6f59",
+  "predecessor_commit": "ae53ad026a55a663bfb295866317d30f8aa72fd3",
+  "sources": {
+    "NSP14/Semigroup/Ring.lean": "46e629ee5017441f24f7694af777b99837468358bc9eca137d8ea54434c53071",
+    "NSP14/Semigroup/IdealPowers.lean": "ab9f8dd48cb0995415d4ff70964375f67d7f9305e235644c4268a394aee4d275",
+    "NSP14/Semigroup/RingCoordinates.lean": "4eebec9c3f59883af1487d5e8d8583675b867e0c0802df8154f8e931cb9b7931",
+    "NSP14/Semigroup/GradedPieces.lean": "188918c75169e37664b3ebcbf34537076c9811d202fd0da6a01e0f1928dae4bb",
+    "NSP14/Semigroup/GradedProduct.lean": "49d50101558b87e17dc08cfe40c394594b55559752e7f7eee9f67735fe353e83",
+    "NSP14/Semigroup/GradedBasis.lean": "6f60ddb5cf4aae39446122317a55841ed4b91f1545227968a72e26d0fd68a0bb",
+    "NSP14/Semigroup/TangentAction.lean": "aff94f85dd56a9e0f3473765fcbd2d24b071c5c22706264e35c75831e5074caf"
+  },
+  "findings_requiring_block09_changes": [],
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "fresh_replay": {
+    "commands_passed": 19,
+    "warnings": false,
+    "new_named_declarations": 60,
+    "new_theorems": 43,
+    "total_axiom_reports": 252,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "reports_identical_to_submitted_logs": true,
+    "predecessor_source_test_environment_hashes": 26
+  },
+  "integrity": {
+    "manifest_entries": 96,
+    "mismatched_manifest_paths": [],
+    "zip_members": 97,
+    "mismatched_zip_members": [],
+    "zip_sha256": "beb6038a4302959cbdb70561d86f0592b399d5c2729286b647027001a149a857",
+    "zip_sha256_file": "beb6038a4302959cbdb70561d86f0592b399d5c2729286b647027001a149a857  NS_P14_LEAN_BLOCK09_20261110.zip",
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_environment_unchanged": true
+  },
+  "additional_lean_checks": {
+    "file": "audit/block09/RingChecks.lean",
+    "examples": 14,
+    "exit_code": 0,
+    "warnings": false,
+    "terminal_example": "Actual <4,5,11>, m=4, order(11)=1, order(15)=3; nonzero initial t^11 is killed by x over any nontrivial commutative coefficient ring.",
+    "coefficient_boundaries": [
+      "Arbitrary commutative ring interfaces",
+      "Zero ring Z/1Z: every monomial class vanishes",
+      "Z/4Z: unit-coefficient [t]^2 survives while (2[t])^2=0",
+      "Cancellation (t^11+t^15)-t^11 raises ideal membership",
+      "Degree zero; conductor witness zero; multiplicity one"
+    ]
+  },
+  "independent_finite_checks": {
+    "status": "PASS",
+    "seed": 1409,
+    "coefficient_rings": [
+      "Z/2Z",
+      "Z/4Z",
+      "Z/5Z"
+    ],
+    "counts": {
+      "models": 278,
+      "ideal_power_membership_checks": 872530,
+      "degree_sets": 2502,
+      "polynomial_quotient_products": 53376,
+      "representative_changes": 53376,
+      "x_action_kernel_checks": 106752,
+      "nonadditive_unit_products": 1230,
+      "nonzero_products": 3222
+    },
+    "anchors": {
+      "1": {
+        "least_conductor": 0,
+        "degree_exponents_0_to_3": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "2,3": {
+        "least_conductor": 2,
+        "degree_exponents_0_to_3": [
+          [
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "4,5,11": {
+        "least_conductor": 8,
+        "degree_exponents_0_to_3": [
+          [
+            0
+          ],
+          [
+            4,
+            5,
+            11
+          ],
+          [
+            8,
+            9,
+            10
+          ],
+          [
+            12,
+            13,
+            14,
+            15
+          ]
+        ]
+      },
+      "6,7,15": {
+        "least_conductor": 24,
+        "degree_exponents_0_to_3": [
+          [
+            0
+          ],
+          [
+            6,
+            7,
+            15
+          ],
+          [
+            12,
+            13,
+            14,
+            22
+          ],
+          [
+            18,
+            19,
+            20,
+            21,
+            29
+          ]
+        ]
+      }
+    },
+    "scope": "Supplementary finite exact computations. Actual ideal exponent powers use Boolean convolutions of all positive semigroup elements; order uses a separate factorization DP. Polynomial convolution is compared with exact-order quotient coordinates and changed representatives. No claim of completed-ring equivalence or universal kernel-basis formalization."
+  },
+  "paper_correspondence": {
+    "paper": "V02 section2; V03 O_COORD entry; alignment ledger A12-A14",
+    "status": "MATCH_AT_ALGEBRAIC_IDEAL_POWER_AND_HOMOGENEOUS_QUOTIENT_LEVEL",
+    "completion_comparison_proved": false,
+    "whole_graded_ring_assembled": false,
+    "full_kernel_basis_constructed": false
+  },
+  "proved_scope": [
+    "Actual semigroup algebra, actual positive monomial ideal and all its ideal powers identified by numerical order.",
+    "Actual atom-monomial generation and constant-coefficient homomorphism; maximality over a field.",
+    "Exact-order coefficient map has actual next-power kernel and is surjective; finite monomial basis of each actual homogeneous quotient.",
+    "Bilinear multiplication descends through both quotient arguments; unit-coefficient monomial products survive exactly for additive order in a nontrivial coefficient ring.",
+    "Actual multiplication by [t^m]; terminal iff unit-coefficient initial monomial lies in its kernel."
+  ],
+  "unverified_remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "assembly as one graded algebra with associativity/unit laws",
+    "full kernel and head/cokernel bases; A/N/Q and same-jump modules",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14",
+    "jump upper bound",
+    "global T~N is not asserted; final Lean/manuscript alignment is incomplete"
+  ]
+}

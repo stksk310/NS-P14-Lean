@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "seed": 1409,
+  "coefficient_rings": [
+    "Z/2Z",
+    "Z/4Z",
+    "Z/5Z"
+  ],
+  "counts": {
+    "models": 278,
+    "ideal_power_membership_checks": 872530,
+    "degree_sets": 2502,
+    "polynomial_quotient_products": 53376,
+    "representative_changes": 53376,
+    "x_action_kernel_checks": 106752,
+    "nonadditive_unit_products": 1230,
+    "nonzero_products": 3222
+  },
+  "anchors": {
+    "1": {
+      "least_conductor": 0,
+      "degree_exponents_0_to_3": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "2,3": {
+      "least_conductor": 2,
+      "degree_exponents_0_to_3": [
+        [
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    "4,5,11": {
+      "least_conductor": 8,
+      "degree_exponents_0_to_3": [
+        [
+          0
+        ],
+        [
+          4,
+          5,
+          11
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ]
+    },
+    "6,7,15": {
+      "least_conductor": 24,
+      "degree_exponents_0_to_3": [
+        [
+          0
+        ],
+        [
+          6,
+          7,
+          15
+        ],
+        [
+          12,
+          13,
+          14,
+          22
+        ],
+        [
+          18,
+          19,
+          20,
+          21,
+          29
+        ]
+      ]
+    }
+  },
+  "scope": "Supplementary finite exact computations. Actual ideal exponent powers use Boolean convolutions of all positive semigroup elements; order uses a separate factorization DP. Polynomial convolution is compared with exact-order quotient coordinates and changed representatives. No claim of completed-ring equivalence or universal kernel-basis formalization."
+}
