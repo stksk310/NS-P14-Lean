@@ -145,3 +145,22 @@ V03、旧証明、二つの紙上置換、Navi別証明、Lean化計画、対応
 コンパイラ本体、`.lake`、生成された`.olean`、Pythonキャッシュ、接続設定や資格情報は含めない。
 V03骨子ビルダーの入力指定文は元の添付パスを参照する。必要なら同梱V03 ZIPから元の相対位置へ復元する。
 Leanのbuild・検証はその添付指定文に依存しない。
+
+## Run14継続の監査入口（最新）
+
+検証：`PATH=/tmp/ns-p14-lean/bin:$PATH python3 scripts/verify_run14_continuation.py`。
+判定と集計：`verification/run14_continuation/verification.json`、`docs/RUN14_CLOSURE_STATUS.json`。
+全新規宣言の明示型と公理は`declarations.json.gz`、完全な環境出力は`environment_axioms.log.gz`。
+通常のgzipで展開できるJSON。型を省略している旧宣言は凍結済み旧証拠に明示型がある。
+
+新exportと正確な後続境界は`docs/RUN14_REMAINING_DECLARATIONS_JA.md`。
+新規Green証明、固定cut、actual P短完全列、単一次数生成とaugmentation商、同一Hの全資源、
+actual Dataと既存数値全行比較の対応は原稿台帳A44–A49。
+歴史的な未完Propの原本は変更せず、`audit/run14_continuation/ClosedGoals.lean`で5本とも証明する。
+有限体は原体でcutを仮定せず固定したk(X)上で構成し、Run13のactual Betti拡大保存を保持する。
+r=2へ三角数条件・maximal-cut系を拡張しない。full tailはheadTopに由来する有限台の全体を数える。
+
+監査ZIPは`artifacts/NS_P14_LEAN_RUN14_COMPLETE_20261110.zip`（最終検証後に作成）。
+旧PARTIAL ZIPと`verification/run14/`はhash照合で凍結したまま保持。
+P14の最終主定理、actual Tor-to-row、target Betti同定はこのRun14の完成範囲に含めない。
+通常Push先は既存の`work`。独立実装レビューは`verification/run14_continuation/FINAL_REVIEW_JA.md`。

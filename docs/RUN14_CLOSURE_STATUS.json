@@ -1,18 +1,21 @@
 {
-  "status": "PARTIAL_NOT_RUN14_COMPLETE",
-  "baseline_commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "status": "COMPLETE",
+  "baseline_commit": "8040c90138bf1aa76cc99d9a5e7df7b2c1a8a206",
+  "integrated_remote_commit": "aa6bf4ced7ea308686066e377ba1e5bc992a098e",
   "run13": "COMPLETE_AND_PUSHED",
   "goals": {
-    "1_offset_stabilization_volume": "PARTIAL: least words, prefix minimality, cycle exclusion, stabilization, terminal residue sum and finite A/N/T proved; sharp volume pending",
-    "2_green_degree_two": "OPEN: no Green theorem or cut existence assumed",
-    "3_same_characteristic_one_cut": "PARTIAL: fixed infinite RatFunc extension and characteristic proved; independent square-zero cut and restriction to P pending",
-    "4_actual_tower": "PARTIAL: homogeneous F ideals, U stages and low-degree Q equivalence proved; truncated short exact sequence and single-degree generation pending",
-    "5_one_resource_sequence": "PARTIAL: actual H, finite support, H0=deficit, actual Layers and full finite mass identity proved; volume, disjoint interval caps, H1 identity and head-linear bound pending",
-    "6_actual_numerical_data": "OPEN: actual layers fixed but Data inequalities not supplied",
-    "7_actual_sidon_boundary": "COMPLETE: maximal actual Q2 to actual AperyPairData, multiplicity/deficit bounds, guarded canonical-rank boundary proved",
-    "8_actual_all_rows": "OPEN: existing numerical all_rows cannot yet be instantiated with actual Data"
+    "1_offset_stabilization_volume": "COMPLETE",
+    "2_green_degree_two": "COMPLETE",
+    "3_same_characteristic_one_cut": "COMPLETE",
+    "4_actual_tower": "COMPLETE",
+    "5_one_resource_sequence": "COMPLETE",
+    "6_actual_numerical_data": "COMPLETE",
+    "7_actual_sidon_boundary": "COMPLETE",
+    "8_actual_all_rows": "COMPLETE"
   },
-  "remaining_typed_propositions": "audit/run14/RemainingGoals.lean",
-  "next_required_run": "CONTINUE_RUN14_BEFORE_RUN15",
-  "run15_actual_tor_and_target_betti": "DEFERRED_AS_REQUESTED"
+  "historical_remaining_types": "audit/run14/RemainingGoals.lean (preserved)",
+  "historical_goal_proofs": "audit/run14_continuation/ClosedGoals.lean",
+  "next_required_run": "RUN15_ACTUAL_TOR_AND_TARGET_BETTI",
+  "run15_actual_tor_and_target_betti": "DEFERRED_AS_REQUESTED",
+  "evidence": "verification/run14_continuation/verification.json"
 }

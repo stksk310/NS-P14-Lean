@@ -560,3 +560,59 @@ Hはactual U_sのdegree次元の和として固定し、有限台・H₀=δ・δ
 Green、単一cut、truncated towerのP短完全列と単一次数生成、鋭い体積・区間cap・
 head線形上界、actual Dataは未完。これらの未完を原稿の証明済み箇所の削除根拠にしない。
 最終原稿とLeanの一致にはRUN14_REMAINING_DECLARATIONS_JA.mdの全接続が必要。
+
+## A44 — Run14継続：鋭いoffset体積
+
+原稿(3.1)の昇順添字を、leastOffsetの有限rank順列で表す。最短語のprefix最小性から
+lρ≤rank(bρ)。初めてlevel n≥2へ達するprefixはactual非atom Apéry剰余を与えるため、
+Lρ≤δ+1。両者からLρ−1≤min(δ,rank(bρ)−1)と全剰余の鋭いδVを証明する。
+粗い安定化上界を体積予算へ代入しない。零剰余・m=1・δ=0も一般式に含む。
+
+## A45 — Run14継続：任意標数のGreen次数2証明
+
+対称双線型積μ:V×V→WがWを張る場合、最大乗算rank Rに対してdim W≤choose(R+1,2)を証明。
+実際のminor多項式でgeneric独立性と最大rank pencilの核像性を示す。
+全平方が零なら交代積のchoose(R,2)計数を使い、そうでなければ最大rankかつ非等方の点を
+非零二次多項式の回避で選ぶ。2で割らず、標数2を含む。
+その一段評価を同じV内の独立なflagへ反復し、全prefixで原稿X_GREENと同じ上界を得る。
+引用や未証明Green入力は追加しない。原稿ではこの実証明を次数2特殊版の独立な補論として採用可能。
+
+## A46 — Run14継続：一つのactual cutとP
+
+actual A₁×A₁→A₂の積が全A₂を張ることをlive分解から示し、Green flagを適用。
+r=max(2,p)へ独立形式を補完し、同一cutの二次積spanがA₂全体になる強いwitnessを得る。
+高次消滅・各次数の生成写像とも、この同じwitnessから証明する。
+一次形式はS₀へ実係数座標で持ち上げ、その線型独立性を証明。Pはr変数の形式的多項式環とし、
+実G/T/A/N/Q・jump層・towerのS₀作用を一つの写像P→S₀で制限する。
+A内の像が代数的独立であるという仮定は置かない。
+有限体では既存の同標数k(X)上にcutを構成。Run13のactual graded/total Betti保存を引き続き利用できる。
+
+## A47 — Run14継続：actual towerと極小生成元
+
+F_sは既存actual jump ideal、U_s=A/F_(s−1)。actual order座標の支持≥nをイデアル化し、
+その実像からX_s、M_sを構成する。F_sの像K_sはRun12のascendingJump商とS₀線型に同型。
+terminalの正次数を用いてK_s⊂M_sを証明し、実商写像で短完全列を構成する。
+同一Pへ制限した全写像の単射・完全性・全射とX_(ν+1)=0を証明。
+cutの強い二次spanからA_n→A_(n+1)、U_sの次数間の全射を構成し、X/Mの単一次数生成を得る。
+Pの変数倍部分がちょうど次の次数以上のtruncationに一致すること、augmentation商が
+actual底次数とk線型同型になることも証明し、極小生成元数を実次数のfinrankと同定する。
+
+## A48 — Run14継続：一意なHの全資源と数値閉鎖
+
+U_sの実基底は、F_(s−1)で消えないactual headラベル。Apéry headとterminal successorを分離すると、
+H_tは原稿の区間[0,sρ−2]と[p,p+d−2]の個数に一致する。
+同剰余で二つが同時に寄与すると、後のheadの前駆orderが先のheadのorder以上となり矛盾する。
+これにより全tでH_t≤m−1。全区間長を加え、terminal_residue_sumを使って
+Σ_t H_t=Σ_ρ(Lρ−1)≤δVを得る。tailはscalar cutoffで切り捨てない。
+H₁+a=δ+ell、ell≤e−1、同cutの次数生成からH₁≤rδを証明。
+r≥3に限って三角数head capを得る。r=2の<6,7,11>へこの系を適用しない。
+Hの体非依存性を実基底cardから示し、有限体にも同じ資源評価を運ぶ。
+`actualNumericalDataWithCut`/`ActualWitness.numericalData`はこの実Hと同一cutを使用し、
+actual Sidon境界と併せて既存`all_rows`へ接続する。
+
+## A49 — Run14の認証境界とRun15
+
+歴史的`audit/run14/RemainingGoals.lean`の5命題は改変せず、継続監査用ClosedGoalsで全て証明する。
+Green/cut、offset、tower、資源、SidonのRun14接続と、actual Torからの行上界、target Bettiの同定は区別する。
+後二者とordinaryのactual Betti閉鎖はユーザー指定どおりRun15。Run14の数値行比較を最終P14定理とは呼ばない。
+旧PARTIALの検証原本・ZIP・固定環境を保持し、継続の全生成宣言の公理と明示型は別証拠へ圧縮保存する。

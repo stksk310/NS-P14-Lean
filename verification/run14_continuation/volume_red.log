@@ -1,0 +1,3 @@
+tests/Run14Volume.lean:9:4: error(lean.invalidField): Invalid field `offset_volume_bound`: The environment does not contain `NSP14.NumericalSemigroup.offset_volume_bound`, so it is not possible to project the field `offset_volume_bound` from an expression
+  S
+of type `NumericalSemigroup`

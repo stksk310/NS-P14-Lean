@@ -213,3 +213,24 @@ P/(X²)の(1,1,0,…)、残余体binomial、自由P、標数2・非斉次写像�
 入口：`scripts/verify_run13_continuation.py`、`verification/block13_continuation/README_JA.md`、
 `docs/RUN13_CLOSURE_STATUS.json`。原稿台帳A34–A40、途中版原本は保持。
 最終P14・actual cut/tower・公刊入力は後続run。20runは再校正した目標配分であり達成保証ではない。
+
+## Run14継続完了：2026年11月10日（JST）
+
+途中版8040c90から38 coreファイル・3,112行を追加し、指定Run14の接続を閉じた。
+Greenは最大rank pencil/minorと対称・交代積の計数から任意標数で実証明し、全prefix同時のflagを構成。
+固定したk(X)上で一つのcutを選び、actual S₀/P作用、actual K≃Run12 stratum、
+truncated短完全列、X/M単一次数生成とaugmentation商の実底次数同型まで接続した。
+
+least-offset rankによる鋭いδV、actual区間・剰余内非交差、全mass恒等式、H1+a=δ+ell、
+ell≤e−1、同cutからH1≤rδ、全tail capを同じHで証明。
+actual DataとSidon Boundaryから既存全行比較へ通る。r=2へ三角数条件を課さない。
+歴史的な未完Prop5本も、その型のまま別監査ファイルで証明した。
+
+50検証コマンド、環境3,217宣言・全新規544宣言、許容3公理、旧source/依存/証拠241件を検査。
+fresh独立レビューはCritical/Important 0。匿名受入例二本の環境coverage欠落は公開定理化してRED→GREEN。
+origin/workで先行したRun13再現性修正aa6bf4cもfast-forwardで保持し、同修正を凍結照合へ追加した。
+最終数値と検証時間はverification/run14_continuation/verification.jsonが正本。
+原稿対応A44–A49、監査ZIPはCOMPLETE版。旧PARTIAL原本・固定依存は維持。
+
+Run14指定範囲の未完入力はない。actual Tor評価・target Betti同定・ordinaryのactual閉鎖と
+最終P14はRun15以降。20runは保証ではなく、再校正した数学的接続ごとの運用目標。
