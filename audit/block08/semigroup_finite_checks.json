@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "counts": {
+    "models": 278,
+    "membership_and_atomic_order_values": 166800,
+    "positive_element_vs_atomic_order_values": 44480,
+    "apery_elements": 1396,
+    "apery_decompositions": 41094,
+    "terminal_head_checks": 44758,
+    "live_jump_checks": 277870,
+    "models_with_redundant_input_generators": 114,
+    "live_base_without_live_head": 30,
+    "live_head_without_live_base": 79
+  },
+  "anchors": {
+    "1": {
+      "multiplicity": 1,
+      "least_conductor": 0,
+      "atoms": [
+        1
+      ],
+      "embedding_dimension": 1,
+      "deficit": 0,
+      "apery_by_residue": [
+        0
+      ],
+      "apery_orders": [
+        0
+      ],
+      "max_apery_order": 0,
+      "terminal_labels_within_checked_prefix": [],
+      "prefix_limit": 160
+    },
+    "3,4": {
+      "multiplicity": 3,
+      "least_conductor": 6,
+      "atoms": [
+        3,
+        4
+      ],
+      "embedding_dimension": 2,
+      "deficit": 1,
+      "apery_by_residue": [
+        0,
+        4,
+        8
+      ],
+      "apery_orders": [
+        0,
+        1,
+        2
+      ],
+      "max_apery_order": 2,
+      "terminal_labels_within_checked_prefix": [],
+      "prefix_limit": 160
+    },
+    "4,5,11": {
+      "multiplicity": 4,
+      "least_conductor": 8,
+      "atoms": [
+        4,
+        5,
+        11
+      ],
+      "embedding_dimension": 3,
+      "deficit": 1,
+      "apery_by_residue": [
+        0,
+        5,
+        10,
+        11
+      ],
+      "apery_orders": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "max_apery_order": 2,
+      "terminal_labels_within_checked_prefix": [
+        11
+      ],
+      "prefix_limit": 160
+    },
+    "6,7,15": {
+      "multiplicity": 6,
+      "least_conductor": 24,
+      "atoms": [
+        6,
+        7,
+        15
+      ],
+      "embedding_dimension": 3,
+      "deficit": 3,
+      "apery_by_residue": [
+        0,
+        7,
+        14,
+        15,
+        22,
+        29
+      ],
+      "apery_orders": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "max_apery_order": 3,
+      "terminal_labels_within_checked_prefix": [
+        15,
+        22,
+        29
+      ],
+      "prefix_limit": 160
+    },
+    "8,9,10,11,12,13,14,15": {
+      "multiplicity": 8,
+      "least_conductor": 8,
+      "atoms": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "embedding_dimension": 8,
+      "deficit": 0,
+      "apery_by_residue": [
+        0,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "apery_orders": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_apery_order": 1,
+      "terminal_labels_within_checked_prefix": [],
+      "prefix_limit": 160
+    }
+  },
+  "scope": "Exact finite dynamic programs, including independent maximal positive-element and maximal atomic decomposition lengths. These are supplementary checks; general results are proved in Lean. Live conditions here are numerical and do not construct module actions."
+}

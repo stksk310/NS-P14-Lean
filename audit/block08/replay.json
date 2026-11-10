@@ -1,0 +1,188 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 24.105
+  },
+  {
+    "name": "basic_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Basic.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.439
+  },
+  {
+    "name": "apery_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Apery.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.735
+  },
+  {
+    "name": "atoms_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Atoms.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.383
+  },
+  {
+    "name": "order_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Order.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.715
+  },
+  {
+    "name": "aperygrading_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/AperyGrading.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.457
+  },
+  {
+    "name": "heads_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Heads.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.41
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SemigroupFoundations.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.102
+  },
+  {
+    "name": "block01_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.385
+  },
+  {
+    "name": "block02_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.425
+  },
+  {
+    "name": "block03_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.506
+  },
+  {
+    "name": "block04_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.644
+  },
+  {
+    "name": "block05_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.572
+  },
+  {
+    "name": "block06_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.493
+  },
+  {
+    "name": "block07_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/OrdinaryNumerical.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.524
+  },
+  {
+    "name": "block01_domain_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.388
+  },
+  {
+    "name": "block02_assumption_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.493
+  }
+]

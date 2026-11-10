@@ -1,0 +1,440 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_ACTUAL_NUMERICAL_SEMIGROUP_COORDINATE_FOUNDATIONS",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "ae53ad026a55a663bfb295866317d30f8aa72fd3",
+  "sources": {
+    "NSP14/Semigroup/Basic.lean": "c7ee610d64d9ad33cc57a44d30028fa96f01be531e84d23d956903812b35c15e",
+    "NSP14/Semigroup/Apery.lean": "0d36d15d17064a5f86b843412d5eda14d3491a38a80c9c8bffbd4ef13a461c90",
+    "NSP14/Semigroup/Atoms.lean": "26d18776e82ed8b689d7e85eddf6e1e308c80467d389ced479f4ae8ac3022010",
+    "NSP14/Semigroup/Order.lean": "955bd16826a34aea983db8d3931450c12317c0f9c0b577ba30d252b926f3de18",
+    "NSP14/Semigroup/AperyGrading.lean": "1e76b6b47c0305d641ad1f580281ea9341db627daa37c3902ae22c04184e8edf",
+    "NSP14/Semigroup/Heads.lean": "200e783d698d0d4320fcb95669733140a65d48b46522395c5a8590e69f33c015"
+  },
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block08_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 81,
+    "zip_members_matched": 82,
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_fixed_environment_unchanged_since_block07": true
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 24.105
+    },
+    {
+      "name": "basic_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Basic.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.439
+    },
+    {
+      "name": "apery_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Apery.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.735
+    },
+    {
+      "name": "atoms_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Atoms.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.383
+    },
+    {
+      "name": "order_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Order.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.715
+    },
+    {
+      "name": "aperygrading_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyGrading.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.457
+    },
+    {
+      "name": "heads_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Heads.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.41
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.102
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.385
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.425
+    },
+    {
+      "name": "block03_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.506
+    },
+    {
+      "name": "block04_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.644
+    },
+    {
+      "name": "block05_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.572
+    },
+    {
+      "name": "block06_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.493
+    },
+    {
+      "name": "block07_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.524
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.388
+    },
+    {
+      "name": "block02_assumption_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.493
+    }
+  ],
+  "axioms": {
+    "block08_theorems": 85,
+    "block08_proof_bearing_definitions": 1,
+    "block08_reports": 86,
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04": 13,
+    "block05": 22,
+    "block06": 15,
+    "block07": 25,
+    "block08_complete_names_checked": true,
+    "all_reports_identical_to_saved_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block08/SemigroupChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Multiplicity depends only on the carrier, not on the conductor witness.",
+      "For x outside S, the total order definition has default value zero.",
+      "Explicit semigroup <4,5,11>, multiplicity 4, atom 11, orders 11->1,15->3,19->4.",
+      "Terminal 11 maps to numerical non-Apery head 15.",
+      "Jumps 0->1,11->2,15->1.",
+      "Without equal jump, numerical live-base/live-head equivalence fails in both directions."
+    ],
+    "new_theorem_axiom_report_count": 2,
+    "new_theorem_axioms_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_finite_checks": {
+    "status": "PASS",
+    "counts": {
+      "models": 278,
+      "membership_and_atomic_order_values": 166800,
+      "positive_element_vs_atomic_order_values": 44480,
+      "apery_elements": 1396,
+      "apery_decompositions": 41094,
+      "terminal_head_checks": 44758,
+      "live_jump_checks": 277870,
+      "models_with_redundant_input_generators": 114,
+      "live_base_without_live_head": 30,
+      "live_head_without_live_base": 79
+    },
+    "anchors": {
+      "1": {
+        "multiplicity": 1,
+        "least_conductor": 0,
+        "atoms": [
+          1
+        ],
+        "embedding_dimension": 1,
+        "deficit": 0,
+        "apery_by_residue": [
+          0
+        ],
+        "apery_orders": [
+          0
+        ],
+        "max_apery_order": 0,
+        "terminal_labels_within_checked_prefix": [],
+        "prefix_limit": 160
+      },
+      "3,4": {
+        "multiplicity": 3,
+        "least_conductor": 6,
+        "atoms": [
+          3,
+          4
+        ],
+        "embedding_dimension": 2,
+        "deficit": 1,
+        "apery_by_residue": [
+          0,
+          4,
+          8
+        ],
+        "apery_orders": [
+          0,
+          1,
+          2
+        ],
+        "max_apery_order": 2,
+        "terminal_labels_within_checked_prefix": [],
+        "prefix_limit": 160
+      },
+      "4,5,11": {
+        "multiplicity": 4,
+        "least_conductor": 8,
+        "atoms": [
+          4,
+          5,
+          11
+        ],
+        "embedding_dimension": 3,
+        "deficit": 1,
+        "apery_by_residue": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "apery_orders": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "max_apery_order": 2,
+        "terminal_labels_within_checked_prefix": [
+          11
+        ],
+        "prefix_limit": 160
+      },
+      "6,7,15": {
+        "multiplicity": 6,
+        "least_conductor": 24,
+        "atoms": [
+          6,
+          7,
+          15
+        ],
+        "embedding_dimension": 3,
+        "deficit": 3,
+        "apery_by_residue": [
+          0,
+          7,
+          14,
+          15,
+          22,
+          29
+        ],
+        "apery_orders": [
+          0,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "max_apery_order": 3,
+        "terminal_labels_within_checked_prefix": [
+          15,
+          22,
+          29
+        ],
+        "prefix_limit": 160
+      },
+      "8,9,10,11,12,13,14,15": {
+        "multiplicity": 8,
+        "least_conductor": 8,
+        "atoms": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "embedding_dimension": 8,
+        "deficit": 0,
+        "apery_by_residue": [
+          0,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "apery_orders": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_apery_order": 1,
+        "terminal_labels_within_checked_prefix": [],
+        "prefix_limit": 160
+      }
+    },
+    "scope": "Exact finite dynamic programs, including independent maximal positive-element and maximal atomic decomposition lengths. These are supplementary checks; general results are proved in Lean. Live conditions here are numerical and do not construct module actions."
+  },
+  "paper_correspondence": {
+    "paper": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md section 2; V03 O_COORD numerical foundations",
+    "alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md A10-A11",
+    "status": "MATCH_AT_THE_ACTUAL_NUMERICAL_COORDINATE_LEVEL",
+    "input": "Actual cofinite AddSubmonoid of N and a conductor witness; no assumed multiplicity, Apery minimum, atom set or maximum factorization length.",
+    "order": "Maximal positive-element decomposition is proved to be realized by atoms, and every atomic length is bounded by it.",
+    "grading": "Cardinalities of numerical Apery degree sets; no claim of finrank for an unconstructed quotient Q.",
+    "heads": "Bijection of numerical labels x->x+m; inverse subtraction uses an actual predecessor. No global T~N module isomorphism is constructed.",
+    "live_conditions": "Equal jump is a sufficient premise for the proved equivalence; the unconditioned numerical equivalence is false."
+  },
+  "proved_scope": [
+    "Actual multiplicity and finite unique Apery decomposition.",
+    "Finite minimal atom generating set, actual embedding dimension, and e<=m.",
+    "Maximal atomic representation length and superadditivity.",
+    "Actual numerical Apery degree counts, deficit=m-e, and order<=deficit+1.",
+    "Numerical terminal/head bijection and jump monotonicity under the stated live conditions."
+  ],
+  "unverified_remaining": [
+    "Actual completed semigroup tangent cone and ring/basis identification.",
+    "A,T,N,Q algebra/module identification and equal-jump stratum module isomorphisms.",
+    "Upper bound on jumps and the actual least-offset/volume/cut/tower resource construction.",
+    "Maximal actual Q2 to AperyPairData.",
+    "Actual Koszul/Tor and target Betti interpretation/transfer; full O_COORD/P14 and final paper alignment."
+  ]
+}

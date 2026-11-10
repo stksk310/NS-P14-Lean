@@ -1,0 +1,6 @@
+'_private.audit.block08.SemigroupChecks.0.NSP14.Block08Audit.multiplicity_carrier_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block08.SemigroupChecks.0.NSP14.Block08Audit.order_outside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,208 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 8.524
+  },
+  {
+    "name": "basic",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Basic.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.703
+  },
+  {
+    "name": "apery",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Apery.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.987
+  },
+  {
+    "name": "atoms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Atoms.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.483
+  },
+  {
+    "name": "order",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Order.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.611
+  },
+  {
+    "name": "aperygrading",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/AperyGrading.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.533
+  },
+  {
+    "name": "heads",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Semigroup/Heads.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.352
+  },
+  {
+    "name": "block08",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SemigroupFoundations.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.933
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.351
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.515
+  },
+  {
+    "name": "block03",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.653
+  },
+  {
+    "name": "block04",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.662
+  },
+  {
+    "name": "block05",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.574
+  },
+  {
+    "name": "block06",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.512
+  },
+  {
+    "name": "block07",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/OrdinaryNumerical.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.585
+  },
+  {
+    "name": "domain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.462
+  },
+  {
+    "name": "block02_assumptions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.489
+  },
+  {
+    "name": "semigroup_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block08/SemigroupChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.849
+  },
+  {
+    "name": "finite_checks",
+    "command": [
+      "python3",
+      "audit/block08/check_semigroups.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.664
+  }
+]
