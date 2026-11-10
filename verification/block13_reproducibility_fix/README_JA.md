@@ -19,6 +19,8 @@ Run13提出時の`verification/block13_continuation/`、途中版の記録、既
 このディレクトリが修正後の実測記録である。
 `SOURCE_SHA256.json`は修正済みスクリプトを含む92ファイルのhashを記録する。
 提出時の同manifestとの差は当該スクリプトの1件だけである。
+このRun13単体の検証対象は`f230884dfbaa431a88cacc39eeeeb7c17f07e79b`。
+後述のRun14統合後のソース集合を、このRun13単体のhashに照合するものではない。
 
 ## RED → GREEN
 
@@ -39,6 +41,16 @@ Run13提出時の`verification/block13_continuation/`、途中版の記録、既
 固定Lean `4.36.0-rc2`（commit `b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a`）、
 mathlib `139105d28c7685a154cb3093f79edb2e16708099`で実行した。
 判定：[resolution.json](resolution.json)。
+
+## 並行して公開されたRun14との統合
+
+Push直前に、Run14の`8040c90138bf1aa76cc99d9a5e7df7b2c1a8a206`がworkへ公開された。
+通常Pushが競合を検出したため、その更新とRun13修正commitの両方を保持するマージで統合した。
+Run14 commitに対する証明ソース・試験・固定環境・Run14の検証記録の差分はない。
+
+統合後も[lake build](run14_integration_build.log)が成功し、
+[Run13の17受入とRun14の4受入](integration/verification.json)がすべてexit 0、警告なしで通過した。
+これは修正の統合検査であり、Run14全体の独立数学監査や完成認定ではない。
 
 ## 再現
 

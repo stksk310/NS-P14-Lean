@@ -1,0 +1,1 @@
+tests/ActualSidon.lean:1:0: error: object file '/workspace/NS-P14-Lean/.lake/build/lib/lean/NSP14/Semigroup/ActualSidon.olean' of module NSP14.Semigroup.ActualSidon does not exist

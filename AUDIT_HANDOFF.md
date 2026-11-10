@@ -1,8 +1,23 @@
-# Lean Block01–13 / Run13共通基盤の監査引継ぎ
+# Lean Run14途中成果 / Run13完了基盤の監査引継ぎ
 
 2026年11月10日（JST）。`work`ブランチで通常公開する。
 
-## 最新：Run13共通基盤は全条件を接続・検証済み
+## 最新：Run14は未完、証明済み部分を独立に検証
+
+Run13は`d8556dc`で完成・公開済み。Run14の公開は途中成果として行う。
+least-offset安定化・実A/N/T有限性・actual最大Q₂→Sidon・F/U低次数同型・
+一つのactual Hの有限台/H₀=δ/actualLayersが証明済み。
+Green、単一cut、鋭い体積、truncated短完全列と単一次数生成、資源上界、actual Dataは未完。
+
+最初に[閉じたexportと未完の宣言](docs/RUN14_REMAINING_DECLARATIONS_JA.md)、
+[機械可読状態](docs/RUN14_CLOSURE_STATUS.json)、
+[検証入口](verification/run14/README_JA.md)、
+[20run再校正](docs/RUN14_20RUN_RECALIBRATION_JA.md)を読む。
+`audit/run14/RemainingGoals.lean`は未証明Propの定義だけで、定理・公理・仮定付き完成入力ではない。
+原稿台帳A41–A43。新しい全回帰コマンドは`python3 scripts/verify_run14.py`。
+旧verificationとZIPは凍結し、新たな証拠を`verification/run14/`へ分離する。
+
+## Run13共通基盤は全条件を接続・検証済み
 
 通常Torの実解消比較と自然性、有限Pから有限k homology、実minimal coverによるrank橋、
 actual graded Koszul/有限台・total和、同jumpの内部次数差s、実LES/connecting rank/有界比較を供給。

@@ -15,5 +15,10 @@
     "propext"
   ],
   "additional_mathematical_axioms": [],
-  "original_release_records_preserved": true
+  "original_release_records_preserved": true,
+  "run13_tested_commit": "f230884dfbaa431a88cacc39eeeeb7c17f07e79b",
+  "integrated_Run14_commit": "8040c90138bf1aa76cc99d9a5e7df7b2c1a8a206",
+  "integrated_Run14_sources_tests_and_evidence_unchanged": true,
+  "integration_acceptance_files_passed": 21,
+  "integration_library_build_exit_code": 0
 }
