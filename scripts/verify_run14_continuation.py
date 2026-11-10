@@ -43,6 +43,11 @@ if fresh_cache:
  (out/'fresh_test_cache.json').write_text(json.dumps(dict(mode='empty_project_test_cache',backup=str(backup)),indent=2)+'\n')
 run('build',['lake','build','NSP14','Mathlib.Algebra.Field.ZMod','Mathlib.FieldTheory.RatFunc.Basic'])
 oldchecks=[p['command'] for p in json.loads((root/'verification/run14/verification.json').read_text())['checks'] if p['name'] not in ['build','environment_axioms']]
+# Historical records contain the producer's absolute output paths. Rebuild
+# imported test modules in this checkout, where their consumers will find them.
+for command in oldchecks:
+ if command[:3]==['lake','env','lean'] and '-o' in command:
+  command[command.index('-o')+1]=compile_test(command[3])[-1]
 # Read the actual fixture imports rather than inheriting the pre-repair cached order.
 path_index={c[3]:i for i,c in enumerate(oldchecks) if c[:3]==['lake','env','lean']}
 prerequisites={}

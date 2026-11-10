@@ -1,0 +1,13 @@
+{
+  "status": "RESOLVED",
+  "finding": "RUN14-P2-ABSOLUTE-OUTPUT-PATH",
+  "baseline_commit": "fbfa5debe3daa115b610ecc72dedc8fd52a817ca",
+  "relocated_checkout": true,
+  "fresh_project_test_cache": true,
+  "passed_commands": 50,
+  "environment_declarations": 3217,
+  "new_environment_declarations": 544,
+  "declaration_types_and_axioms_identical_to_submission": true,
+  "mathematical_sources_changed": false,
+  "original_submission_records_preserved": true
+}
