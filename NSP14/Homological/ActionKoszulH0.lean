@@ -1,0 +1,116 @@
+module
+public import NSP14.Homological.ActionKoszul
+public import NSP14.Homological.KoszulAugmentation
+@[expose] public section
+open CategoryTheory CategoryTheory.Limits HomologicalComplex
+namespace NSP14.Homological
+universe u
+variable (R : Type u) [CommRing R]
+noncomputable abbrev actionKoszul (rs : List R) (M : ModuleCat.{u} R) :=
+  (actionKoszulFunctor R rs).obj M
+
+/-- The zeroth chain group is the original module, for the actual subset-recursive complex. -/
+noncomputable def actionZeroIso (xs : List R) (M : ModuleCat.{u} R) :
+    (actionKoszul R xs M).X 0 ≅ M :=
+  match xs with
+  | [] => Iso.refl _
+  | x::xs => (HomologicalComplex.homotopyCofiber.XIso
+      (x • 𝟙 (actionKoszul R xs M)) 0 (by
+        intro h
+        change (ComplexShape.down ℕ).next 0+1=0 at h
+        omega)) ≪≫ actionZeroIso xs M
+
+noncomputable def actionZeroDifferential (xs : List R) (M : ModuleCat.{u} R) :
+    (actionKoszul R xs M).X 1 →ₗ[R] M :=
+  ((actionZeroIso R xs M).hom).hom.comp ((actionKoszul R xs M).d 1 0).hom
+
+/-- Natural identification with the actual boundary quotient in the original module. -/
+noncomputable def actionH0BoundaryEquiv (xs : List R) (M : ModuleCat.{u} R) :
+    (actionKoszul R xs M).homology 0 ≃ₗ[R] (M ⧸ (actionZeroDifferential R xs M).range) :=
+  (chainH0QuotientEquiv _ (actionKoszul R xs M)).trans
+    (Submodule.Quotient.equiv _ _ (actionZeroIso R xs M).toLinearEquiv (by
+      rw [← LinearMap.range_comp]
+      rfl))
+
+noncomputable def actionVariableSubmodule (xs : List R) (M : ModuleCat.{u} R) :
+    Submodule R M :=
+  match xs with
+  | [] => ⊥
+  | x::xs => (x • 𝟙 M).hom.range ⊔ actionVariableSubmodule xs M
+
+theorem actionZeroIso_cons_inr (x : R) (xs : List R) (M : ModuleCat.{u} R) :
+    homotopyCofiber.inrX (x • 𝟙 (actionKoszul R xs M)) 0 ≫
+      (actionZeroIso R (x::xs) M).hom = (actionZeroIso R xs M).hom := by
+  have hn : ¬(ComplexShape.down ℕ).Rel 0 ((ComplexShape.down ℕ).next 0) := by
+    intro h; change (ComplexShape.down ℕ).next 0+1=0 at h; omega
+  simp only [homotopyCofiber.inrX,dite_eq_right hn]
+  change (homotopyCofiber.XIso (x • 𝟙 (actionKoszul R xs M)) 0 hn).inv ≫
+    (homotopyCofiber.XIso (x • 𝟙 (actionKoszul R xs M)) 0 hn).hom ≫
+      (actionZeroIso R xs M).hom = _
+  exact Iso.inv_hom_id_assoc _ _
+
+theorem actionZeroDifferential_cons_left (x : R) (xs : List R)
+    (M : ModuleCat.{u} R) (a : (actionKoszul R xs M).X 0) :
+    actionZeroDifferential R (x::xs) M
+      (homotopyCofiber.inlX (x • 𝟙 (actionKoszul R xs M)) 0 1 rfl a) =
+      x • (actionZeroIso R xs M).hom a := by
+  have hn : ¬(ComplexShape.down ℕ).Rel 0 ((ComplexShape.down ℕ).next 0) := by
+    intro h; change (ComplexShape.down ℕ).next 0+1=0 at h; omega
+  change (homotopyCofiber.inlX _ 0 1 rfl ≫ (actionKoszul R (x::xs) M).d 1 0 ≫
+    (actionZeroIso R (x::xs) M).hom) a = _
+  erw [homotopyCofiber.inlX_d'_assoc _ 1 0 rfl hn,actionZeroIso_cons_inr]
+  exact map_smul ((actionZeroIso R xs M).hom.hom) _ a
+
+theorem actionZeroDifferential_cons_right (x : R) (xs : List R)
+    (M : ModuleCat.{u} R) (b : (actionKoszul R xs M).X 1) :
+    actionZeroDifferential R (x::xs) M
+      (homotopyCofiber.inrX (x • 𝟙 (actionKoszul R xs M)) 1 b) =
+      actionZeroDifferential R xs M b := by
+  change (homotopyCofiber.inrX _ 1 ≫ (actionKoszul R (x::xs) M).d 1 0 ≫
+    (actionZeroIso R (x::xs) M).hom) b = _
+  erw [homotopyCofiber.inrX_d_assoc,actionZeroIso_cons_inr]
+  rfl
+
+theorem action_zero_boundary (xs : List R) (M : ModuleCat.{u} R) :
+    (actionZeroDifferential R xs M).range=actionVariableSubmodule R xs M := by
+  induction xs with
+  | nil =>
+    have hz : actionZeroDifferential R [] M=0 := by
+      ext z
+      have : Subsingleton ((actionKoszul R [] M).X 1) := ModuleCat.subsingleton_of_isZero
+        (HomologicalComplex.isZero_single_obj_X (ComplexShape.down ℕ) 0 M 1 (by decide))
+      have he : z=0 := Subsingleton.elim _ _
+      rw [he,map_zero,LinearMap.zero_apply]
+    rw [hz,LinearMap.range_zero]
+    rfl
+  | cons x xs ih =>
+    change (actionZeroDifferential R (x::xs) M).range =
+      (x • 𝟙 M).hom.range ⊔ actionVariableSubmodule R xs M
+    rw [← ih]
+    apply le_antisymm
+    · rintro a ⟨z,rfl⟩
+      erw [scalarCone_split (actionKoszul R xs M) x 0 z,map_add,
+        actionZeroDifferential_cons_left,actionZeroDifferential_cons_right]
+      apply Submodule.add_mem_sup
+      · exact ⟨_,rfl⟩
+      · exact ⟨_,rfl⟩
+    · apply sup_le
+      · rintro a ⟨b,rfl⟩
+        refine ⟨homotopyCofiber.inlX (x • 𝟙 (actionKoszul R xs M)) 0 1 rfl
+          ((actionZeroIso R xs M).inv b),?_⟩
+        rw [actionZeroDifferential_cons_left]
+        change x •
+          ((actionZeroIso R xs M).hom ((actionZeroIso R xs M).inv b)) = x • b
+        congr 1
+        exact congrArg (fun f : M ⟶ M => f.hom b) (actionZeroIso R xs M).inv_hom_id
+      · rintro a ⟨b,rfl⟩
+        exact ⟨homotopyCofiber.inrX (x • 𝟙 (actionKoszul R xs M)) 1 b,
+          actionZeroDifferential_cons_right R x xs M b⟩
+
+/-- H₀ is the module modulo the submodule generated by the actual variable actions. -/
+noncomputable def actionH0Equiv (xs : List R) (M : ModuleCat.{u} R) :
+    (actionKoszul R xs M).homology 0 ≃ₗ[R] (M ⧸ actionVariableSubmodule R xs M) :=
+  (actionH0BoundaryEquiv R xs M).trans
+    (Submodule.quotEquivOfEq _ _ (action_zero_boundary R xs M))
+
+end NSP14.Homological

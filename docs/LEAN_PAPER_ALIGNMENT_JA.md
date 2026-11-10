@@ -684,3 +684,13 @@ actual B=A/highIdeal(2)の基底とlambda作用を実商から構成し、BのEu
 ## A60 — Run15継続：B全作用とnative H0候補の残余Z加群
 
 actual Bの二乗零代数同型を同じextendedHeadBasisで構成し、lambdaだけでなく補完Zを含む全non-x作用を一致させた。さらにA/(lambda)の実代数商とk⊕k^fを同定し、残余Z作用を保持した実加群同型から通常Bettiの第0行1、全正行i*choose(f+1,i+1)を証明した。原稿のH0同定を支えるnative商の計算として採用できる。ただしactual R-Koszul H0とのZ作用を保つ同定と、補正済み全変数の有界比較は別の未完義務である。この計算のみをO14完成としない。
+
+## A61 — Run15継続：actual R-Koszul H0の残余作用
+
+実要素x/lambdaのnative G-linear Koszul複体を構成し、既存の相対R-variable Koszulとの実複体同型を証明した。native境界イデアルをideal(x,lambda)として計算し、headへの射影と既存cut idealを介して、H0を残余Z作用を保持した二乗零モデルへ同定した。`nativeCutH0ZIso`と`nativeCutH0Z_betti`は実際の誘導作用の同型と全行の通常Z-Bettiを与える。単なる長さf+1の同定で置き換えていない。
+
+## A62 — Run15継続：第0項の補正を保持する実有界比較
+
+任意native complex Kについて、K→single0(H0 K)の実全射とkernelの実短完全列を構成した。kernelのH0=0、正次数homologyはKのものと実同型である。追加変数の写像錐は実完全列からhomologyの有限性と二項係数上界を導き、H0側を別に保つ補正済み比較を証明した。`ActualWitness.nativeFull_corrected_bound`はこれを同じactual x/cut/Zへ適用し、H0モデルとactual relative R-Bettiを代入する。無限次元のchain groupにfinrank加法性を使わず、有限なのは必要なhomologyだけである。原稿では未構成のスペクトル系列の退化の代わりにこの有界比較を採用できる。
+
+この段階の左辺は実全変数作用のnative複体のhomologyである。元の最小表示のintrinsic full Torとの線型変数変換比較は引き続き別の未完義務であり、元のCorrectedFullTransferGoalが閉じたとはまだ表示しない。一般APの実Betti/環・接錐Betti一致、actual target、元体への最終下降も残る。
