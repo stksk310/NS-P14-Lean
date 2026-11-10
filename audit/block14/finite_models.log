@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "semigroups": 454,
+  "characteristic": 2,
+  "field": "GF(16)",
+  "same_cut_tower_action_checks": 86679,
+  "nonzero_terminal_models": 113,
+  "nonzero_tail_models": 312,
+  "nontrivial_volume_equalities": 23,
+  "maximal_quadratic_models": 111,
+  "level_decrease_models": 67
+}

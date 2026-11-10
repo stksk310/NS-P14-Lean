@@ -1,0 +1,9 @@
+{
+  "status": "FAIL_RELOCATED_CHECKOUT",
+  "commit": "fbfa5debe3daa115b610ecc72dedc8fd52a817ca",
+  "passed_commands": 14,
+  "failed_check": "predecessor_13",
+  "failed_source": "tests/JumpBounds.lean",
+  "missing_module": "tests.Run12Fixtures",
+  "cause": "Historical commands retain -o /workspace/NS-P14-Lean/... instead of this checkout; consumer searches this checkout build directory."
+}

@@ -1,0 +1,34 @@
+{
+  "submission_commit": "fbfa5debe3daa115b610ecc72dedc8fd52a817ca",
+  "verdict": "PASS_RUN14_SCOPE_AFTER_REPRODUCIBILITY_REPAIR",
+  "core_sources": 49,
+  "core_lines": 4357,
+  "core_environment_declarations_with_current_explicit_types": 699,
+  "all_project_environment_declarations": 3217,
+  "repaired_replay_commands": 50,
+  "new_mathematical_findings": [],
+  "new_findings": [
+    {
+      "id": "RUN14-P2-ABSOLUTE-OUTPUT-PATH",
+      "priority": "P2",
+      "file": "scripts/verify_run14_continuation.py",
+      "submission_line": 45,
+      "description": "Historical compiler commands keep the producer's absolute -o path, so fixtures are written outside a relocated checkout's import search path.",
+      "reproduced_with_empty_project_test_cache": true,
+      "passed_commands_before_failure": 14,
+      "status": "RESOLVED_AND_PUSHED_TO_WORK",
+      "repair_commit": "20aadbf7011692eb3bfffef49029e2c5e416ef3d",
+      "fresh_repaired_verification_commands_passed": 50
+    }
+  ],
+  "additional_mathematical_axioms": [],
+  "independent_lean_axiom_reports": 8,
+  "independent_finite_semigroups": 454,
+  "same_cut_action_checks": 86679,
+  "actual_Tor_to_row_proved_in_Run14": false,
+  "actual_target_Betti_proved_in_Run14": false,
+  "full_P14_complete": false,
+  "inherited_nonblocking_findings": [
+    {"priority": "P3", "file": "verification/block11/README_JA.md", "line": 97, "status": "HISTORICAL_DOCUMENTATION_FINDING"}
+  ]
+}

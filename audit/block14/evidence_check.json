@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "repaired_replay_commands": 50,
+  "environment_declarations": 3217,
+  "current_Run14_core_types": 699,
+  "core_modules": 49,
+  "independent_boundary_reports": 8,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "warning_count": 0,
+  "additional_mathematical_axioms": [],
+  "source_guard": "PASS"
+}
