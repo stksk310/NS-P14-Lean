@@ -414,6 +414,75 @@ t^uは長さnの正元積なので実極大イデアルn乗に属する。
 formal側Nはこの自然商同値でactual Nを移したイデアルであり、未証明の独立モデルとの同定を追加したものではない。
 これで代数的Gを原稿の形式級数接錐として使う境界が閉じる。actual資源列・安定化・Tor/Betti・P14全体は後続Runの範囲である。
 
+## A28：表示環の区別とactual最小表示（Run13・証明済み範囲）
+
+非x原子のS₀=k[Xₐ:a≠m]と、全actual原子のe変数環PFを型で区別した。
+`fullPolynomialToG_surjective` は実原子分解による全射、`atomDegreeOneEquiv` と
+`fullPolynomialToG_linearForm_eq_zero_iff` は次数1の余分な線型関係がないことを示す。
+`fullPolynomialToG_homogeneous` は全次数の斉次性を示す。
+S₀→Gは一般には全射でないため、intrinsic source Bettiの環として使用しない。
+`terminal_removeX_action` はactual Tでxが消えることからPF作用がS₀へfactorする証明である。
+原稿では全e変数・非xのe−1変数・将来のcut r変数の三者を明記する。
+
+## A29：具体的subset-recursion Koszulと通常Tor（Run13・部分閉鎖）
+
+外積基底に対応する有限部分集合を、変数列の末尾からscalar coneを反復する形で実装した。
+Kᵢ₊₁(x::xs;M)=Kᵢ(xs;M)⊕Kᵢ₊₁(xs;M)で、微分は(-d_old, X+d_old)の符号を持つ。
+`koszul_cons_d_first` / `_second` が実微分のblock式、`koszul_d_squared` がd²=0。
+`koszulH0Equiv` はH₀=M/(実変数作用)M、上次数はchain groupのIsZeroから消滅する。
+
+新しい変数は処理済み変数idealの商で非零因子である。実変数idealのprime性と未所属から
+`polynomial_variable_regular` を証明し、`scalarCone_exact_positive` のcycle chaseへ供給する。
+`koszulResolution` は全変数列の実際の有限自由解消であり、augmentation exactnessの仮定は残らない。
+`tensorKoszulIso` とこの解消から `torKoszulIso` を得る。
+使用する通常Torはmathlibの「第二因子kを解消する」規約。TorをKoszulと命名して比較をrflにしたものではない。
+
+未完：Tor比較のmodule-map自然性の可換式、第一因子を解消する規約とのbalancing、
+実極小自由解消rankとの一致、graded Koszul/Tor。原稿でこれらを完了として引用しない。
+
+## A30：無限k次元chain groupと有限homologyの分離（Run13）
+
+`koszul_chain_finite` は有限**P**生成性、`koszul_homology_polynomial_finite` はNoetherian性によるker/im商の有限P生成性。
+全変数のnull-homotopyを証明済みprojective resolutionから構成し、tensor同型でactual Koszulへ運ぶ。
+`koszul_homology_action_reduction` はhomologyのP作用がaugmentationを通ることを示す。
+これと有限P生成性から `koszul_homology_finite` が有限k次元性を与える。
+M自体やchain groupの有限k次元性を要求しない。試験では1変数多項式環がk有限生成でないことも証明した。
+`totalBetti` は有限P生成interfaceで定義し、通常Torへの係数線型同型と上次数消滅、自由Pの(1,0,…)を証明した。
+graded Bettiの有限台・totalとの和はまだ未完である。
+
+## A31：Run12比較のactual Tor運搬（Run13）
+
+`completedPolynomialLinearEquiv` は全e変数PF作用について線型であり、
+`completedTorIso` / `completed_totalBetti` が代数的Gと完成接錐を通常Tor/totalBettiで結ぶ。
+同jumpについて `jumpStratumTorIso` / `jumpStratum_totalBetti` をS₀上で構成する。
+Run12の元の実加群mapには次数差sがあるが、今回のTorは次数を忘れている。
+このsをgraded homology/Torへ運ぶ証明は未完で、global T≅N加群同型は導入しない。
+
+## A32：標準単項式と任意標数のminor（Run13）
+
+`StandardExponent` はidealの**全非零要素**の初項から定義する。
+除法によりnormal formの存在、初項矛盾で一意性を証明し、
+`standardMonomialBasis` / `_apply` が実商の標準単項式基底を与える。
+任意の候補生成元をGröbner基底と仮定する方法へ変更していない。
+`nonzero_minor_rank_lower_bound` は列有限性を明示する。
+整数det=±1のminorは任意体で非零であり、標数2でも同じ証明が成立する。
+sourceのinitial ideal全体・block初項rank比較・harmonic本体は後続の実証明が必要。
+
+## A33：局所rank式・flat複体比較の到達境界（Run13・未完を保持）
+
+`homology_rank_correction` は短完全な実複体について
+ dim Hᵢ(V)+rank δᵢ+rank δᵢ₊₁=dim Hᵢ(U)+dim Hᵢ(W) (i≥1)、
+`homology_rank_correction_zero` はH₀についてincoming rankだけの式を証明する。
+自然数の切捨て減算で補正を隠さない。Koszulが加群短完全列をこの実複体へ運ぶ接続、
+部分Euler/syzygy・有界filtration比較は未完。
+
+`fieldExtensionHomologyIso` は実L⊗ₖ複体のflat homology比較、
+`extendedCoefficientKoszul_finrank` はactual Koszulを係数体へrestrictした複体の拡大の次元保存。
+chain groupの有限次元性は使わない。L⊗ₖk[X]≃L[X]も証明済み。
+ただし変更後L[X]加群のKoszulとの自然同型とactual G等のbase changeは未完なので、
+これらをI_FIELD閉鎖・Betti体拡大保存の完成証明として引用しない。
+形式級数環全体のtensor同型も使用しない。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

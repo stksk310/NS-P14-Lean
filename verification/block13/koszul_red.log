@@ -1,0 +1,4 @@
+tests/KoszulComplex.lean:3:5: error: unknown namespace `NSP14.Homological`
+tests/KoszulComplex.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `koszulList`
+tests/KoszulComplex.lean:5:7: error(lean.unknownIdentifier): Unknown identifier `koszul_d_squared`
+tests/KoszulComplex.lean:6:7: error(lean.unknownIdentifier): Unknown identifier `koszulHomology`

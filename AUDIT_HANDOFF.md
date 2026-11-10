@@ -1,6 +1,19 @@
-# Lean Block01–11 / Run12 監査引継ぎ
+# Lean Block01–12 / Run13証明済み部分の監査引継ぎ
 
 2026年11月10日（JST）。このスナップショットは `work` ブランチで公開する。
+
+## 最新：Run13は部分到達、指定完成条件は未達
+
+Run12 `6b8d168` を基準に、actual最小表示・実変数Koszul・有限自由解消・通常Tor比較・k有限homologyを追加。
+通常Tor比較はobjectwiseで、graded/極小解消rank/actual L[X] base change/有界比較等は未完。
+X_BASIC・I_FIELD全体を閉鎖済みとは数えない。
+
+入口：[Run13検証と範囲](verification/block13/README_JA.md)、
+[未完宣言](docs/RUN13_REMAINING_DECLARATIONS_JA.md)、
+[20run再校正](docs/RUN13_20RUN_RECALIBRATION_JA.md)、
+[宣言全一覧](verification/block13/declarations.json)。
+`verification/block13/verification.json` のPASSは証明済みexportのコンパイル・回帰・公理検査のみを意味する。
+過去のBlock01–12検証原本は保持した。
 
 ## 最初に読むもの
 

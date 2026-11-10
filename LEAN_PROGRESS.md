@@ -170,3 +170,18 @@ Run12の数学的目標に未完宣言・未証明入力はない。
 検証入口：scripts/verify_block12.py。監査入口：verification/block12/README_JA.md。
 Block10外部監査branch `audit/block10-20261110`（28300b47f72df87983c3e1dba10a11da3466032d）の合格も確認済み。
 その認証範囲は代数的G/T/Aであり、Run12の追加範囲の独立数学査読とは区別する。
+
+## Run13：2026年11月10日（JST）— 証明済みexportあり・指定run全体は未完
+
+基準Run12 `6b8d168`。`NSP14/Homological/` に全原子最小表示・全次数の斉次性、
+実変数Koszul、actual augmentationと有限自由解消、通常mathlib Torとのobjectwise比較、
+全変数null-homotopy、有限P生成から有限k homology、totalBettiと自由PのBettiを追加した。
+完成接錐・同jump層の通常Tor/totalBetti運搬、実商の標準単項式基底と±1 minorも証明した。
+
+一般短完全複体のH₀/正次数rank補正式、flatな実L⊗ₖ複体のhomology比較と次元保存もある。
+ただしgraded Koszul/Betti、Tor比較自然性・極小解消rank/balancing、Koszul短完全列/有界比較、
+変更後L[X]加群との自然なbase-change比較は未完。X_BASIC/I_FIELD全体は閉鎖していない。
+
+詳細と宣言境界：`docs/RUN13_EXECUTION_LEDGER_JA.md`、`docs/RUN13_REMAINING_DECLARATIONS_JA.md`。
+原稿台帳A28–A33。検証入口 `scripts/verify_block13.py`、`verification/block13/README_JA.md`。
+全体20runの再校正：`docs/RUN13_20RUN_RECALIBRATION_JA.md`（暫定24〜28、完成条件は維持）。

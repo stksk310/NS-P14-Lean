@@ -1,0 +1,12 @@
+tests/KoszulFiniteModules.lean:5:73: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module.Finite (S.FullPolynomialRing k) (S.TangentAlgebra k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/KoszulFiniteModules.lean:6:70: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module.Finite (S.PolynomialRing k) ↥(S.xMultiply k).ker
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/KoszulFiniteModules.lean:7:88: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module.Finite (S.PolynomialRing k) ↥(Submodule.restrictScalars k (S.nonAperyIdeal k))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
