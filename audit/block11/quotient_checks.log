@@ -1,0 +1,6 @@
+'_private.audit.block11.QuotientChecks.0.NSP14.Block11Audit.eighteen_apery' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block11.QuotientChecks.0.NSP14.Block11Audit.delayed_order_eighteen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

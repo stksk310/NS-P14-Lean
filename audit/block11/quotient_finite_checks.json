@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "seed": 1411,
+  "coefficient_rings": [
+    "Z/2Z",
+    "Z/4Z",
+    "Z/5Z"
+  ],
+  "counts": {
+    "models": 278,
+    "apery_basis_vectors": 1396,
+    "hilbert_degree_checks": 1817,
+    "low_degree_isomorphism_checks": 834,
+    "nonapery_ideal_product_checks": 16680,
+    "quotient_product_and_representative_checks": 16680,
+    "homogeneous_projection_checks": 116940,
+    "live_atomic_prefix_checks": 2480,
+    "apery_sum_nonadditive_pairs": 15,
+    "additive_nonapery_head_products": 45,
+    "degree_three_noninjective_models": 4
+  },
+  "anchors": {
+    "1": {
+      "multiplicity": 1,
+      "least_conductor": 0,
+      "apery": [
+        0
+      ],
+      "atoms": [
+        1
+      ],
+      "embedding_dimension": 1,
+      "deficit": 0,
+      "top_degree": 0,
+      "hilbert_function": [
+        1
+      ],
+      "nonapery_heads_through_120": []
+    },
+    "3,4,5": {
+      "multiplicity": 3,
+      "least_conductor": 3,
+      "apery": [
+        0,
+        4,
+        5
+      ],
+      "atoms": [
+        3,
+        4,
+        5
+      ],
+      "embedding_dimension": 3,
+      "deficit": 0,
+      "top_degree": 1,
+      "hilbert_function": [
+        1,
+        2
+      ],
+      "nonapery_heads_through_120": []
+    },
+    "4,5,11": {
+      "multiplicity": 4,
+      "least_conductor": 8,
+      "apery": [
+        0,
+        5,
+        10,
+        11
+      ],
+      "atoms": [
+        4,
+        5,
+        11
+      ],
+      "embedding_dimension": 3,
+      "deficit": 1,
+      "top_degree": 2,
+      "hilbert_function": [
+        1,
+        2,
+        1
+      ],
+      "nonapery_heads_through_120": [
+        15
+      ]
+    },
+    "5,6,9": {
+      "multiplicity": 5,
+      "least_conductor": 14,
+      "apery": [
+        0,
+        6,
+        9,
+        12,
+        18
+      ],
+      "atoms": [
+        5,
+        6,
+        9
+      ],
+      "embedding_dimension": 3,
+      "deficit": 2,
+      "top_degree": 3,
+      "hilbert_function": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "nonapery_heads_through_120": []
+    },
+    "6,7,15": {
+      "multiplicity": 6,
+      "least_conductor": 24,
+      "apery": [
+        0,
+        7,
+        14,
+        15,
+        22,
+        29
+      ],
+      "atoms": [
+        6,
+        7,
+        15
+      ],
+      "embedding_dimension": 3,
+      "deficit": 3,
+      "top_degree": 3,
+      "hilbert_function": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "nonapery_heads_through_120": [
+        21,
+        28,
+        35
+      ]
+    }
+  },
+  "scope": "Supplementary exact finite computations. A is obtained by removing live incoming coordinates; N is non-Apery head support and Q is the actual two-stage coordinate quotient. Products, changed representatives, inherited degree restrictions, Hilbert counts and live atomic generation paths are checked independently. These computations do not prove general Lean theorems, completed-ring comparison, or global finiteness of A, N or T."
+}

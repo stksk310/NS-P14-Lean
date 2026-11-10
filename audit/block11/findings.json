@@ -1,0 +1,17 @@
+[
+  {
+    "id": "B11-DOC-01",
+    "priority": "P3",
+    "severity": "LOW_DOCUMENTATION_ONLY",
+    "status": "OPEN_PATCH_PREPARED",
+    "path": "verification/block11/README_JA.md",
+    "line": 97,
+    "title": "Specify which example has Apery set {0,5,10,11}",
+    "evidence": "The immediately preceding example is ordinary {0} union [3,infinity), whose actual Apery set is {0,4,5}, deficit=0, top degree=1 and Hilbert function (1,2). The displayed {0,5,10,11}, deficit=1 and Hilbert function (1,2,1) belong to <4,5,11>. Both Lean examples themselves are correct.",
+    "requested_change": "Replace 後者のactual with ⟨4,5,11⟩のactual.",
+    "prepared_patch": "audit/block11/README_SCOPE_FIX.patch",
+    "mathematical_proof_change_required": false,
+    "patch_check": "git apply --check: exit0",
+    "scope": "The submitted documentation, manifest and ZIP are preserved; the patch has not been applied."
+  }
+]

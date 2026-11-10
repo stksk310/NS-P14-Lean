@@ -1,0 +1,254 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_MATHEMATICAL_SCOPE_WITH_MINOR_DOCUMENTATION_FINDING",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "a6aac7b345e3e7dbd3ac660468bdd220ecfa7dca",
+  "predecessor_commit": "791a2c94eda09479d0582f30726669c6d28fbc7b",
+  "sources": {
+    "NSP14/Semigroup/HeadMonomials.lean": "6898182b5912539be0a0facd0c22d4e55929fc36dcb3a3da6925aedef1250d94",
+    "NSP14/Semigroup/NonAperyIdeal.lean": "748bb755d45e6fdcc9b9af522f4de376bed9b50feadaa99dcfe89e22a6bae67c",
+    "NSP14/Semigroup/AperyQuotient.lean": "19e9e6f5b1719940357cbbe9cba7d40a3b9c15f2e64a5238ecca104226703136",
+    "NSP14/Semigroup/AperyDegree.lean": "10ed874d067caa80aaf6cc98d8f15c3e29d2ae531b6ba8676455df0813e3c0c6",
+    "NSP14/Semigroup/HeadDegree.lean": "27394aae398df6a8aa6ccf4ecd2f99a5d2244d8e4a1cc450bac70f6811a97d66",
+    "NSP14/Semigroup/LowDegreeQuotient.lean": "ec859fd11d3275ecc533f30e46506fb59ebacfeba0f29a59b3a5855388b50faa",
+    "NSP14/Semigroup/AperyDimensions.lean": "42ae13a08425bd146e6e36ed619e952620f8e258649388f46becf4355d1b8350",
+    "NSP14/Semigroup/AperyProducts.lean": "7e92fabc11990309ce88bff4d667291b69dccd78738c331348d9a5ef8bb0d828",
+    "NSP14/Semigroup/AperyStandard.lean": "a2b8158b0621ad15926cf8b25de3304cbe88ac514a44eef0507907470b6f2c31",
+    "NSP14/Semigroup/AperyGradedAlgebra.lean": "891039ae5fbe314744f8e3926e79b4d191592ba2354e344075b5e79a771c6d0a",
+    "NSP14/Semigroup/HeadGradedAlgebra.lean": "7d99dee5aa58ad7d9e5c1b1c450b3f8bb331ca2b18eba1cf0e6cf6aa681992c0",
+    "NSP14/Semigroup/AperyTopDegree.lean": "ce9d4de3b6b0def3ff4b259c8f8cc220bc4548b25e6e56c8165032171ba4da79"
+  },
+  "findings_requiring_mathematical_proof_changes": [],
+  "documentation_findings": [
+    {
+      "id": "B11-DOC-01",
+      "priority": "P3",
+      "severity": "LOW_DOCUMENTATION_ONLY",
+      "status": "OPEN_PATCH_PREPARED",
+      "path": "verification/block11/README_JA.md",
+      "line": 97,
+      "title": "Specify which example has Apery set {0,5,10,11}",
+      "evidence": "The immediately preceding example is ordinary {0} union [3,infinity), whose actual Apery set is {0,4,5}, deficit=0, top degree=1 and Hilbert function (1,2). The displayed {0,5,10,11}, deficit=1 and Hilbert function (1,2,1) belong to <4,5,11>. Both Lean examples themselves are correct.",
+      "requested_change": "Replace 後者のactual with ⟨4,5,11⟩のactual.",
+      "prepared_patch": "audit/block11/README_SCOPE_FIX.patch",
+      "mathematical_proof_change_required": false,
+      "patch_check": "git apply --check: exit0",
+      "scope": "The submitted documentation, manifest and ZIP are preserved; the patch has not been applied."
+    }
+  ],
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "fresh_replay": {
+    "commands_passed": 26,
+    "warnings": false,
+    "new_named_declarations": 120,
+    "new_theorems": 81,
+    "total_axiom_reports": 443,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "reports_identical_to_submitted_logs": true,
+    "predecessor_source_test_environment_hashes": 42,
+    "independent_predecessor_git_diff_clean": true
+  },
+  "integrity": {
+    "manifest_entries": 128,
+    "mismatched_manifest_paths": [],
+    "zip_members": 129,
+    "mismatched_zip_members": [],
+    "zip_sha256": "292ac9bccf8c20904de32369cb56d3032224a98b4bc24f4fd4927d52f829504a",
+    "zip_sha256_file": "292ac9bccf8c20904de32369cb56d3032224a98b4bc24f4fd4927d52f829504a  NS_P14_LEAN_BLOCK11_20261110.zip",
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true
+  },
+  "additional_lean_checks": {
+    "file": "audit/block11/QuotientChecks.lean",
+    "examples": 11,
+    "auxiliary_proofs_compiled": true,
+    "exit_code": 0,
+    "warnings": false,
+    "low_degree_boundary": "For actual <4,5,11>, A_3 -> Q_3 is not injective over any nontrivial commutative ring: the degree-three head class [15] is nonzero in A and zero in Q.",
+    "product_boundary": "For actual <5,6,9> with a valid nonminimal conductor witness 25, 18 is Apery and order(18)=3, while order(9)=1. Thus Q has [18]!=0 but [9]^2=0.",
+    "other_checks": [
+      "Naturality of lowDegreeQuotientEquiv including degree zero",
+      "Registered grading projection preserves the actual non-Apery ideal",
+      "Distinct degree-one and degree-two supports have zero intersection",
+      "Z/4Z registered grading and actual atom generation"
+    ]
+  },
+  "independent_finite_checks": {
+    "status": "PASS",
+    "seed": 1411,
+    "coefficient_rings": [
+      "Z/2Z",
+      "Z/4Z",
+      "Z/5Z"
+    ],
+    "counts": {
+      "models": 278,
+      "apery_basis_vectors": 1396,
+      "hilbert_degree_checks": 1817,
+      "low_degree_isomorphism_checks": 834,
+      "nonapery_ideal_product_checks": 16680,
+      "quotient_product_and_representative_checks": 16680,
+      "homogeneous_projection_checks": 116940,
+      "live_atomic_prefix_checks": 2480,
+      "apery_sum_nonadditive_pairs": 15,
+      "additive_nonapery_head_products": 45,
+      "degree_three_noninjective_models": 4
+    },
+    "anchors": {
+      "1": {
+        "multiplicity": 1,
+        "least_conductor": 0,
+        "apery": [
+          0
+        ],
+        "atoms": [
+          1
+        ],
+        "embedding_dimension": 1,
+        "deficit": 0,
+        "top_degree": 0,
+        "hilbert_function": [
+          1
+        ],
+        "nonapery_heads_through_120": []
+      },
+      "3,4,5": {
+        "multiplicity": 3,
+        "least_conductor": 3,
+        "apery": [
+          0,
+          4,
+          5
+        ],
+        "atoms": [
+          3,
+          4,
+          5
+        ],
+        "embedding_dimension": 3,
+        "deficit": 0,
+        "top_degree": 1,
+        "hilbert_function": [
+          1,
+          2
+        ],
+        "nonapery_heads_through_120": []
+      },
+      "4,5,11": {
+        "multiplicity": 4,
+        "least_conductor": 8,
+        "apery": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "atoms": [
+          4,
+          5,
+          11
+        ],
+        "embedding_dimension": 3,
+        "deficit": 1,
+        "top_degree": 2,
+        "hilbert_function": [
+          1,
+          2,
+          1
+        ],
+        "nonapery_heads_through_120": [
+          15
+        ]
+      },
+      "5,6,9": {
+        "multiplicity": 5,
+        "least_conductor": 14,
+        "apery": [
+          0,
+          6,
+          9,
+          12,
+          18
+        ],
+        "atoms": [
+          5,
+          6,
+          9
+        ],
+        "embedding_dimension": 3,
+        "deficit": 2,
+        "top_degree": 3,
+        "hilbert_function": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "nonapery_heads_through_120": []
+      },
+      "6,7,15": {
+        "multiplicity": 6,
+        "least_conductor": 24,
+        "apery": [
+          0,
+          7,
+          14,
+          15,
+          22,
+          29
+        ],
+        "atoms": [
+          6,
+          7,
+          15
+        ],
+        "embedding_dimension": 3,
+        "deficit": 3,
+        "top_degree": 3,
+        "hilbert_function": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "nonapery_heads_through_120": [
+          21,
+          28,
+          35
+        ]
+      }
+    },
+    "scope": "Supplementary exact finite computations. A is obtained by removing live incoming coordinates; N is non-Apery head support and Q is the actual two-stage coordinate quotient. Products, changed representatives, inherited degree restrictions, Hilbert counts and live atomic generation paths are checked independently. These computations do not prove general Lean theorems, completed-ring comparison, or global finiteness of A, N or T."
+  },
+  "paper_correspondence": {
+    "paper": "V02 section2; V03 O_COORD (O1); alignment ledger A18-A22",
+    "status": "MATCH_AT_ALGEBRAIC_ACTUAL_N_Q_AND_INHERITED_HILBERT_STRUCTURE_LEVEL",
+    "completion_comparison_proved": false,
+    "S0_polynomial_presentation_constructed": false,
+    "same_jump_module_isomorphisms_proved": false,
+    "jump_upper_bound_proved": false,
+    "general_Module_length_identification_proved": false,
+    "global_T_N_module_isomorphism_asserted": false
+  },
+  "proved_scope": [
+    "Actual non-Apery head support in A is an ideal stable under the whole actual algebra; its basis is identified with actual monomial classes.",
+    "The actual quotient Q=A/N is linearly identified with the finite actual Apery monomial coordinates and retains actual quotient multiplication.",
+    "Inherited degrees are actual images of G_n. They form registered GradedAlgebra decompositions on A and Q; N is homogeneous for the registered grading.",
+    "The natural map A_n -> Q_n is surjective for all n and a linear equivalence for n<=2.",
+    "Over arbitrary fields, finite dimension of Q=m and Hilbert counts/high-degree sum/top-degree vanishing are established; Q is Artinian.",
+    "Actual nonmultiplicity atom classes of degree one generate Q. The numerical maximum Apery order is the actual top degree and is <=deficit+1."
+  ],
+  "unverified_remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "same-jump module isomorphisms and jump upper bound",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14",
+    "S0 polynomial presentation; global finiteness of A, N and T requires additional construction.",
+    "General Module.length identification and final Lean/manuscript alignment are not completed here."
+  ]
+}

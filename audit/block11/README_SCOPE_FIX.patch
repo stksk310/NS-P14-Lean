@@ -1,0 +1,10 @@
+diff --git a/verification/block11/README_JA.md b/verification/block11/README_JA.md
+--- a/verification/block11/README_JA.md
++++ b/verification/block11/README_JA.md
+@@ -95,5 +95,5 @@
+ 実例はℕ（m=1、dim Q=1、高次0）、S={0,4,5,8,9,10}∪[11,∞)（⟨4,5,11⟩）、
+ およびordinary半群{0}∪[3,∞)（m=e=3、δ=0、dim Q=3、q₁=2、Q₂=0、ν=1）。
+-後者のactual Apéry集合は{0,5,10,11}、e=3、δ=1、ν=2、Hilbert関数は(1,2,1)。
++⟨4,5,11⟩のactual Apéry集合は{0,5,10,11}、e=3、δ=1、ν=2、Hilbert関数は(1,2,1)。
+ Aで非零な[15]がNに入り、Qでは0になることを検査する。
+ Qでは[5]²=[10]≠0、[5][11]=[11]²=0。後二つは任意体で検査する。

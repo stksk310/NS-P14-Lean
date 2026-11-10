@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "audited_commit": "a6aac7b345e3e7dbd3ac660468bdd220ecfa7dca",
+  "checks": [
+    {
+      "name": "prepush_build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 25.396
+    },
+    {
+      "name": "quotient_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block11/QuotientChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.554
+    },
+    {
+      "name": "quotient_finite_checks",
+      "command": [
+        "python3",
+        "audit/block11/check_quotient_models.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.603
+    },
+    {
+      "name": "documentation_patch_check",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "audit/block11/README_SCOPE_FIX.patch"
+      ],
+      "exit_code": 0,
+      "seconds": 0.002
+    }
+  ],
+  "submitted_manifest_files_still_unchanged": 128,
+  "finite_results_identical_to_snapshot": true,
+  "documentation_patch_checked_but_not_applied": true
+}
