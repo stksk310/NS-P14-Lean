@@ -283,6 +283,65 @@ R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
   N/Q、A全体の有限性、同jumpの加群同型や完備化比較はこの結果から無断で済ませない。
   global T≅Nの加群同型は導いていない。
 
+## A18：非Apéry head空間をA全体のactual斉次イデアルへ（Block11）
+
+- 原稿：V02 §2 / V03 O_COORDの非Apéry部分N。
+- Lean：`nonAperySpace_mul`、`nonAperyIdeal`、`nonAperyIdealBasis_eq_initial`、`nonAperyIdeal_isHomogeneous`。
+- 非Apéry head支持空間として出発し、Aの任意の元による乗算の閉包を証明した。
+  和がApéryなら両因子もApéryなので、非Apéry項のlive積がApéryに戻ることはない。
+  dead積は0。この単項式の性質をactual head基底の任意の係数の和へ延長する。
+- Aの次数はactual G成分の像。係数フィルタとregistered gradingの射影が一致し、Nが各射影で保たれるので
+  mathlibの `Ideal.IsHomogeneous` としても斉次性が成立する。
+- 最終原稿：NはS₀の一部の変数だけでなく、A全体による乗算で閉じる、と明記できる。
+  次数付き理想の存在を数値ラベルの定義だけで済ませていない。
+
+## A19：実商Q=A/NとApéry基底・積（Block11）
+
+- Lean：`AperyAlgebra`、`aperyProjection_ker`、`aperyProjection_surjective`、`aperyQuotientEquiv`、
+  `aperyQuotientBasis_eq_initial`、`qMonomial_mul_ne_zero_iff`。
+- Qはactual Aのactual ideal Nによる環の商として定義する。
+  Apéry係数抽出の核がNで、0拡張により全射であることから、実商とApéry有限支持座標の同値を作る。
+- 非Apéry指数のクラスは0、Apéry指数のクラスは非零。
+  Qの単項式積が非零となる正確な条件は、orderが加法的かつ和がApéryであること。
+- 仮定：非自明な可換係数環で成立する。特定の標数に依存しない。
+- 最終原稿：Apéry空間をQの定義とするのではなく、実際の商から係数射影の第一同型定理で得る順にする。
+
+## A20：actual quotientの次数・Hilbert関数・A₂との接続（Block11）
+
+- Lean：`qDegree`、`mem_qDegree_coordinates`、`headDegree`、`lowDegreeQuotientEquiv`、
+  `aperyAlgebra_finrank`、`qDegree_finrank`、`qDegree_high_sum`、`aperyGradedAlgebra`。
+- QₙはGₙ→G→A→Qの実像として定義する。この像がorder=nのApéry支持空間と一致することを証明した。
+  異なる次数の支持は交わらず、全体を張り、積は次数和に入る。AとQの両方でGradedAlgebraを登録する。
+- 体kについてdimₖQ=m、q₀=1、q₁=e−1、q₂≤δ。
+  高次総量はΣ_{2≤n≤δ+1}qₙ=δという有限のfiberwise計数で実装する。それより高い次数は0。
+- actual Aₙ→Qₙは全nで全射。非Apéry headの次数≥3よりn≤2では核が0で、商写像そのものが同型となる。
+  原稿のA₂=Q₂は自然な線型同型として読む。
+- 最終原稿：数値Apéry計数（Block08）と、実商の次数への同定（本項）を区別して引用する。
+  原稿のlength Q=mの数値に対応する総k次元を形式化済み。一般のModule.lengthという定義との同定は別途。
+
+## A21：Qのactual原子による標準生成とArtin性（Block11）
+
+- Lean：`apery_atomic_split`、`apery_atom_adjoin_top`、`apery_atom_generator_degree`、`aperyAlgebraArtinian`。
+- 最長のApéry原子表示から先頭の一原子aを外し、残りvもApéryでorder(x)=order(a)+order(v)となることを示す。
+  a≠mもApéry性から従う。従ってQでこの積はliveで、値による強帰納により全Apéry単項式が
+  actual非multiplicity原子のクラスで生成される。
+- 生成元クラスは次数1で非零。基底の線型結合からadjoinがQ全体となることを証明する。
+  これは次数1生成を未証明の仮定として渡したものではない。
+- 有限Apéry基底からModule.Finiteとdim Q=mを得て、mathlibの有限生成Artin加群の定理を適用しArtin環を登録する。
+- 最終原稿：標準生成と有限性の両方をactual quotientの構成定理として明記できる。
+  S₀からの多項式環表示そのもの、A・N・Tのすべての有限性、Torを済ませたとは扱わない。
+
+## A22：νをactual Qの最高次数として構成（Block11）
+
+- Lean：`qTopDegree`、`qTopDegree_realized`、`qDegree_ne_bot_iff`、`qTopDegree_le_deficit`。
+- ν=max_{w∈Apéry}order(w)として有限集合から構成する。
+  最大を実現するApéry元から原子を外す次数列を使い、0≤n≤νの各次数が存在すると証明する。
+  実商の基底・次数の同定からQₙ≠0 ⇔ n≤ν。従って定義したνはactual Qの最高次数である。
+- Block08の有限計数によるApéry order≤δ+1を接続しν≤δ+1を得る。
+  原稿の「標準生成からν≤δ+1」を、実現する次数列とδ個の高次座標による直接計数に置換できる。
+  標準生成自体もA21で別に証明するので、他の後続用途を失わない。
+- 最終原稿：νの存在とactual性、上界をこの短い系列で説明できる。jump≤νの証明は本項に含まれない。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

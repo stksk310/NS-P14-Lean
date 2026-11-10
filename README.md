@@ -4,6 +4,21 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 11
+
+The non-Apéry head subspace is now an actual homogeneous ideal N of A.
+The actual quotient Q=A/N has the Apéry monomial basis, inherited registered
+grading, dimension m, Hilbert counts and top degree ν≤δ+1. The natural map
+A_n→Q_n is an isomorphism for n≤2. Actual degree-one atom classes generate Q,
+which is Artinian over every field. Completion comparison and jump strata remain separate work.
+
+```sh
+python3 scripts/verify_block11.py
+```
+
+[Scope and reproduction](verification/block11/README_JA.md),
+[verification](verification/block11/verification.json).
+
 ## Lean implementation — Block 10
 
 The actual ideal-power quotients now form one commutative k-algebra.
