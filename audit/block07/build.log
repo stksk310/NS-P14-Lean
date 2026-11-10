@@ -1,0 +1,11 @@
+✔ [2540/2560] Built NSP14.Ordinary.SmallScalar (2.1s)
+✔ [2542/2560] Built NSP14.Combinatorics.Sidon (1.3s)
+✔ [2544/2560] Built NSP14.Ordinary.Resources (1.5s)
+✔ [2546/2560] Built NSP14.Ordinary.LargeSeed (2.3s)
+✔ [2548/2560] Built NSP14.Ordinary.LowRank (2.6s)
+✔ [2550/2560] Built NSP14.Ordinary.LargeScalar (1.6s)
+✔ [2552/2560] Built NSP14.Ordinary.Scalarization (1.4s)
+✔ [2554/2560] Built NSP14.Ordinary.TargetMargin (1.6s)
+✔ [2556/2560] Built NSP14.Ordinary.NumericalClosure (1.5s)
+✔ [2558/2560] Built NSP14 (691ms)
+Build completed successfully (2560 jobs).

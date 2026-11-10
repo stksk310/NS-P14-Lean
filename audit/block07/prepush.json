@@ -1,0 +1,164 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 6.579
+  },
+  {
+    "name": "scalarization",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/Scalarization.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.944
+  },
+  {
+    "name": "target_margin",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/TargetMargin.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.345
+  },
+  {
+    "name": "closure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/NumericalClosure.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.051
+  },
+  {
+    "name": "block07",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/OrdinaryNumerical.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.479
+  },
+  {
+    "name": "block01",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.248
+  },
+  {
+    "name": "block02",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.327
+  },
+  {
+    "name": "block03",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.417
+  },
+  {
+    "name": "block04",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.424
+  },
+  {
+    "name": "block05",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.319
+  },
+  {
+    "name": "block06",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.42
+  },
+  {
+    "name": "domain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.461
+  },
+  {
+    "name": "block02_assumptions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.523
+  },
+  {
+    "name": "numerical_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block07/NumericalChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.969
+  },
+  {
+    "name": "rational_checks",
+    "command": [
+      "python3",
+      "audit/block07/check_numerical_closure.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.355
+  }
+]

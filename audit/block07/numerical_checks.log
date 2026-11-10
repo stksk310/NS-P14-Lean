@@ -1,0 +1,3 @@
+'_private.audit.block07.NumericalChecks.0.NSP14.Block07Audit.first_margin_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

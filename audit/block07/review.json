@@ -1,0 +1,322 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_COMMON_RESOURCE_ALL_RANKS_AND_ROWS_NUMERICAL_CLOSURE",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "51c558e1fe7b264edab204d389e7f2e6226e3096",
+  "sources": {
+    "NSP14/Ordinary/Scalarization.lean": "b846329ff8173c97c2ccdc1546746a150626e08f9278dc6160c2f89166403cdf",
+    "NSP14/Ordinary/TargetMargin.lean": "82cc7858919dceefd153b1eda00b6bb827b3e904e96d43e30962031507ec92b7",
+    "NSP14/Ordinary/NumericalClosure.lean": "e8e06594e3cb47ce6bf6cef620b5de17f0c92e025602dc1c89ca9c53684d1255"
+  },
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block07_changes": [],
+  "integrity": {
+    "manifest_entries_matched": 70,
+    "zip_members_matched": 71,
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_fixed_environment_unchanged_since_block06": true
+  },
+  "fresh_replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 16.473
+    },
+    {
+      "name": "scalarization_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/Scalarization.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.9
+    },
+    {
+      "name": "target_margin_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/TargetMargin.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.033
+    },
+    {
+      "name": "closure_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/NumericalClosure.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.044
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.306
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.353
+    },
+    {
+      "name": "block02_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.34
+    },
+    {
+      "name": "block03_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.469
+    },
+    {
+      "name": "block04_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.451
+    },
+    {
+      "name": "block05_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.517
+    },
+    {
+      "name": "block06_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.391
+    },
+    {
+      "name": "block01_domain_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.406
+    },
+    {
+      "name": "block02_assumption_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.503
+    }
+  ],
+  "axioms": {
+    "block07": 25,
+    "block01": 10,
+    "block02": 14,
+    "block03": 7,
+    "block04": 13,
+    "block05": 22,
+    "block06": 15,
+    "block07_complete_names_checked": true,
+    "all_reports_identical_to_saved_logs": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_found": false
+  },
+  "additional_lean_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block07/NumericalChecks.lean"
+    ],
+    "exit_code": 0,
+    "warnings": 0,
+    "checks": [
+      "Universal exact first-row target margin R1-L1=d(V+1).",
+      "Formal target and lower equal -6 at e=d=0,r=4,k=1, confirming signed rational coefficient subtraction.",
+      "A valid Data 3 200 6 profile fails general scalarization in row 2, yet all_rows succeeds through its low-rank branch.",
+      "A valid Data 2 3 3 profile has equality in the final first-row target comparison.",
+      "A valid Data 6 7 21 profile without Boundary exceeds the first target by 831/8008.",
+      "Boundary 6 7 21 is impossible by the Sidon cardinality theorem."
+    ],
+    "new_theorem_axiom_report_count": 1,
+    "new_theorem_axioms_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_rational_checks": {
+    "status": "PASS",
+    "binomial_balance_cases": 660,
+    "coefficient_weight_cases": 18270,
+    "target_formula_and_margin_cases": 84260,
+    "formal_cases_with_negative_signed_target_coefficient": 25300,
+    "common_profile_parameters": 303,
+    "integrated_row_comparisons": 3297,
+    "nonvacuous_boundary_witnesses": [
+      {
+        "rank": 6,
+        "modulus": 1000,
+        "e": 7,
+        "d": 993,
+        "points": [
+          0,
+          1,
+          3,
+          9,
+          27,
+          81,
+          243
+        ]
+      },
+      {
+        "rank": 7,
+        "modulus": 2000,
+        "e": 8,
+        "d": 1992,
+        "points": [
+          0,
+          1,
+          3,
+          9,
+          27,
+          81,
+          243,
+          729
+        ]
+      },
+      {
+        "rank": 8,
+        "modulus": 5000,
+        "e": 9,
+        "d": 4991,
+        "points": [
+          0,
+          1,
+          3,
+          9,
+          27,
+          81,
+          243,
+          729,
+          2187
+        ]
+      }
+    ],
+    "countermodels_when_Boundary_is_omitted": [
+      {
+        "rank": 6,
+        "e": 7,
+        "d": 21,
+        "first_row_excess": "831/8008",
+        "all_resource_fields_hold": true,
+        "Boundary_impossible": true
+      },
+      {
+        "rank": 7,
+        "e": 8,
+        "d": 28,
+        "first_row_excess": "116157/19448",
+        "all_resource_fields_hold": true,
+        "Boundary_impossible": true
+      },
+      {
+        "rank": 8,
+        "e": 9,
+        "d": 36,
+        "first_row_excess": "1267683/184756",
+        "all_resource_fields_hold": true,
+        "Boundary_impossible": true
+      }
+    ],
+    "rank_three_scalarization_counterexample": {
+      "e": 200,
+      "d": 6,
+      "head": 0,
+      "tail0": 205,
+      "factor_times_first_row": "892/3",
+      "second_row": "627/2"
+    },
+    "scope": "Supplementary exact finite checks, not a substitute for universal Lean proofs or actual semigroup/Tor semantics."
+  },
+  "paper_correspondence": {
+    "paper": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md (7.3),(8.2)-(8.4),sections 9-11; V03 ordinary numerical chain",
+    "alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md A07-A09",
+    "status": "MATCH_WITH_VALID_TARGET_DIFFERENCE_REPLACEMENT",
+    "scalarization": "Binomial factor C(r-1,k-1) is correct; k=2 tail comparison is sharp at r=4,layer=2; top row included.",
+    "target_margin": "Explicit R,L agree with the paper; exact d-increment and binomial monotonicity derive (8.4) without assuming it or the full Vandermonde remainder identity.",
+    "integration": "Ranks 2,3,4..8,>=9 partition the domain; all adapters preserve the same head, tail, and finite support. Natural subtraction shifts are justified by embedding and deficit bounds.",
+    "Boundary": "Explicitly required only for 6<=r<=8,e=r+1; resource fields alone do not imply this condition or the final comparison.",
+    "actual_interface": "relative_rows assumes the prospective Tor bound and does not construct actual Tor ranks or identify the target with Betti data."
+  },
+  "proved_scope": {
+    "all_rows": "For Data r e d with natural r,e,d, rank>=2, and Boundary r e d, every row 1<=k<=r satisfies lower(e,r,k)+weighted_row<=target(e,d,r,k).",
+    "apery_interface": "Numerical AperyPairData can supply the specified boundary witness; construction from maximal actual Q2 remains external.",
+    "non_strictness": "The uniform comparison must allow equality, including positive deficit in rank two."
+  },
+  "unverified_remaining": [
+    "Actual common tower and simultaneous resource bounds, including the actual parameter interpretation.",
+    "Maximal actual Q2 to AperyPairData.",
+    "Actual Koszul/Tor bound c_k<=L_k+weighted_row.",
+    "Identification of the explicit target formula with actual ordinary target Betti capacities and final Betti transfer.",
+    "Other branches, full P14 and final paper alignment."
+  ]
+}

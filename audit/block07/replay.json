@@ -1,0 +1,144 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 16.473
+  },
+  {
+    "name": "scalarization_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/Scalarization.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.9
+  },
+  {
+    "name": "target_margin_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/TargetMargin.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.033
+  },
+  {
+    "name": "closure_recheck",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "NSP14/Ordinary/NumericalClosure.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.044
+  },
+  {
+    "name": "tests_and_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/OrdinaryNumerical.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.306
+  },
+  {
+    "name": "block01_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/SmallScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.353
+  },
+  {
+    "name": "block02_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Sidon.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.34
+  },
+  {
+    "name": "block03_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/Resources.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.469
+  },
+  {
+    "name": "block04_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LowRank.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.451
+  },
+  {
+    "name": "block05_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeSeed.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.517
+  },
+  {
+    "name": "block06_regression",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "tests/LargeScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.391
+  },
+  {
+    "name": "block01_domain_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/DomainChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.406
+  },
+  {
+    "name": "block02_assumption_checks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.503
+  }
+]
