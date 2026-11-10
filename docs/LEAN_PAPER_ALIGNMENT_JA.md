@@ -676,3 +676,11 @@ actual Gの加群として0→T→G→xG→0および0→xG→G→Aを構成し�
 ## A58 — Run15継続：first-order加群の実boundary rankとB計算の準備
 
 各変数が定数射影を通じて独立な一次ベクトルへ作用する有限加群について、実slot分解によるrank上界と、各外積から一つの変数を除いて選ぶ実±1対角minorによるrank下界を一致させた。`SquareZeroEuler.squareZero_bettiEuler` は c_j=length·choose(r−1,j)−choose(r,j+1) を与える。実モデルは自明二乗零拡大 k⊕k^(r+f) とP=L[λ]の具体的aeval作用であり、f個の余分な一次生成元も保持する。H0はf+1で、標数2の非零boundary・第1行・topを検査する。これはactual Bとの同定を自動的に証明しない。同定後に長さeを代入しPascal恒等式で既存L_jへ接続するための共通補題として原稿に追記可能。
+
+## A59 — Run15継続：actual Bの評価と実Tor資源rowの閉鎖
+
+actual B=A/highIdeal(2)の基底とlambda作用を実商から構成し、BのEuler値を既存L_jへ一致させた。同じcutのhighIdeal(2)とX2の実同型、B短完全列、actual x比較、同じtowerと同じH_tから、`ActualWitness.actualTor_resource_row`により全1≤j≤rのactual R-Tor-to-rowを証明した。`actualTor_target_row`はそのままRun14の数値全行定理へ通す。元のActualTorToRowGoalそのものの証明はaudit/run15_bclosure/ClosedGoals.lean。原稿では83組等の再計算を挟まず、既存数値定理へこのactual接続を明示できる。
+
+## A60 — Run15継続：B全作用とnative H0候補の残余Z加群
+
+actual Bの二乗零代数同型を同じextendedHeadBasisで構成し、lambdaだけでなく補完Zを含む全non-x作用を一致させた。さらにA/(lambda)の実代数商とk⊕k^fを同定し、残余Z作用を保持した実加群同型から通常Bettiの第0行1、全正行i*choose(f+1,i+1)を証明した。原稿のH0同定を支えるnative商の計算として採用できる。ただしactual R-Koszul H0とのZ作用を保つ同定と、補正済み全変数の有界比較は別の未完義務である。この計算のみをO14完成としない。
