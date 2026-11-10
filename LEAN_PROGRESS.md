@@ -171,7 +171,7 @@ Run12の数学的目標に未完宣言・未証明入力はない。
 Block10外部監査branch `audit/block10-20261110`（28300b47f72df87983c3e1dba10a11da3466032d）の合格も確認済み。
 その認証範囲は代数的G/T/Aであり、Run12の追加範囲の独立数学査読とは区別する。
 
-## Run13：2026年11月10日（JST）— 証明済みexportあり・指定run全体は未完
+## Run13途中版：2026年11月10日（JST）— 92cbe8fでの歴史的スナップショット
 
 基準Run12 `6b8d168`。`NSP14/Homological/` に全原子最小表示・全次数の斉次性、
 実変数Koszul、actual augmentationと有限自由解消、通常mathlib Torとのobjectwise比較、
@@ -185,3 +185,19 @@ Block10外部監査branch `audit/block10-20261110`（28300b47f72df87983c3e1dba10
 詳細と宣言境界：`docs/RUN13_EXECUTION_LEDGER_JA.md`、`docs/RUN13_REMAINING_DECLARATIONS_JA.md`。
 原稿台帳A28–A33。検証入口 `scripts/verify_block13.py`、`verification/block13/README_JA.md`。
 全体20runの再校正：`docs/RUN13_20RUN_RECALIBRATION_JA.md`（暫定24〜28、完成条件は維持）。
+
+
+## Run13継続完了：2026年11月10日（JST）
+
+指定Task1–8の共通基盤を実装・接続し、全40コマンドの検証を通過した。
+core69ファイル・5,895行・named宣言458（theorem217）。環境に存在する生成宣言まで含めてcore1,207/test77を検査し、
+旧741レポートと合わせて2,025件の公理依存を確認。許容3公理のみ、旧84 hashと固定環境は一致。
+
+通常Torの自然性、実極小自由解消rank、graded/totalの有限和、actual grading、同jumpのt→t+s、
+実Koszul/Tor LES・補正rank・有界filtration、実L[X]作用とactual G/T/A/N/Qのtotal/graded Betti体拡大保存を閉じた。
+独立レビューImportant2件も修正し、L側の独立order-gradingとの同定とinclusion可換性まで供給した。
+P/(X²)の(1,1,0,…)、残余体binomial、自由P、標数2・非斉次写像・actual例が通過。
+
+入口：`scripts/verify_run13_continuation.py`、`verification/block13_continuation/README_JA.md`、
+`docs/RUN13_CLOSURE_STATUS.json`。原稿台帳A34–A40、途中版原本は保持。
+最終P14・actual cut/tower・公刊入力は後続run。20runは再校正した目標配分であり達成保証ではない。

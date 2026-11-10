@@ -117,6 +117,7 @@ theorem koszulAugmentation_quasiIso : QuasiIso (koszulAugmentation k σ) := by
     · apply ChainComplex.exactAt_succ_single_obj
 
 /-- A genuine finite free resolution of the augmentation module, for ordinary derived Tor. -/
+@[implicit_reducible]
 noncomputable def koszulResolution : ProjectiveResolution (residueField k σ) where
   complex := koszulList k σ (variableList k σ) (ModuleCat.of (VariableRing k σ) (VariableRing k σ))
   projective i := by

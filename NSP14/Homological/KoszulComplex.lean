@@ -40,6 +40,7 @@ theorem koszul_d_squared (xs : List σ) (M : ModuleCat.{w} (VariableRing k σ)) 
   (koszulList k σ xs M).d_comp_d i j l
 
 /-- Abstract homology of the concrete variable complex; no Tor renaming is involved. -/
+@[implicit_reducible]
 noncomputable def koszulHomology (xs : List σ) (M : ModuleCat.{w} (VariableRing k σ)) (i : ℕ) :
     ModuleCat.{w} (VariableRing k σ) := (koszulList k σ xs M).homology i
 

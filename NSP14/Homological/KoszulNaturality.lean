@@ -29,21 +29,36 @@ noncomputable def scalarConeFunctor (r : R) :
 
 variable (k : Type u) (σ : Type v) [CommRing k]
 
-/-- A genuine functor of actual polynomial modules, preserving the variable list. -/
-noncomputable def koszulFunctor (xs : List σ) :
-    ModuleCat.{w} (VariableRing k σ) ⥤ ChainComplex (ModuleCat.{w} (VariableRing k σ)) ℕ :=
+/-- The actual map on the recursive subset complex. -/
+noncomputable def koszulMap (xs : List σ) {M N : ModuleCat.{w} (VariableRing k σ)} (f : M ⟶ N) :
+    koszulList k σ xs M ⟶ koszulList k σ xs N :=
   match xs with
-  | [] => ChainComplex.single₀ _
-  | x::xs => koszulFunctor xs ⋙ scalarConeFunctor _ (MvPolynomial.X x)
+  | [] => (ChainComplex.single₀ _).map f
+  | x::xs => (scalarConeFunctor _ (MvPolynomial.X x)).map (koszulMap xs f)
+
+/-- A genuine functor with its actual complex as the definitional object field. -/
+@[implicit_reducible]
+noncomputable def koszulFunctor (xs : List σ) :
+    ModuleCat.{w} (VariableRing k σ) ⥤ ChainComplex (ModuleCat.{w} (VariableRing k σ)) ℕ where
+  obj M := koszulList k σ xs M
+  map f := koszulMap k σ xs f
+  map_id M := by
+    induction xs with
+    | nil => exact (ChainComplex.single₀ _).map_id M
+    | cons x xs ih =>
+      change (scalarConeFunctor _ (MvPolynomial.X x)).map (koszulMap k σ xs (𝟙 M)) = _
+      rw [ih]
+      exact (scalarConeFunctor _ (MvPolynomial.X x)).map_id _
+  map_comp f g := by
+    induction xs with
+    | nil => exact (ChainComplex.single₀ _).map_comp f g
+    | cons x xs ih =>
+      change (scalarConeFunctor _ (MvPolynomial.X x)).map (koszulMap k σ xs (f ≫ g)) = _
+      rw [ih]
+      exact (scalarConeFunctor _ (MvPolynomial.X x)).map_comp _ _
 
 theorem koszulFunctor_obj (xs : List σ) (M : ModuleCat.{w} (VariableRing k σ)) :
-    (koszulFunctor k σ xs).obj M=koszulList k σ xs M := by
-  induction xs with
-  | nil => rfl
-  | cons x xs ih =>
-    change HomologicalComplex.homotopyCofiber (MvPolynomial.X x • 𝟙 ((koszulFunctor k σ xs).obj M)) = _
-    rw [ih]
-    rfl
+    (koszulFunctor k σ xs).obj M=koszulList k σ xs M := rfl
 
 /-- Homology is functorial for the same concrete variable differential. -/
 noncomputable def koszulHomologyFunctor (xs : List σ) (i : ℕ) :

@@ -75,3 +75,81 @@ Ruling: ユーザーが指定した既存work checkout・通常Pushを継続 —
 新規core23ファイル/1,852行/183宣言/88 theorem、fixture46宣言を全監査。
 許容公理のみ、警告なし。独立レビューのP3文言2件を反映。
 検証statusは `PASS_PROVED_EXPORTS_RUN13_INCOMPLETE`。全体未完のcheckboxは変更しない。
+
+## 継続（基準92cbe8f、ユーザー「最後まで終わらせて？」）
+
+既存work・Push許可を継続。完成条件を保持し、Run13未完を閉じるまで実装を続ける。
+Ruling: 基準92cbe8fの証明済みexportは再実装せず、component-mapの自然性を共通基盤として不足接続を追加する — coneの実分解を共有すれば短完全列・graded・base-changeに同じ写像を使える — 誤ればTor比較の可換式が別写像になり得るため各成分で照合する。
+最初のRED：tests/KoszulExactness.lean。未供給のkoszulFunctor零写像保存とkoszul_shortExactを確認。
+Ruling: koszulFunctorを「obj=実koszulList、map=実再帰koszulMap」のfield表示へ整理 — 以前はfunctor全体のxs-recursionのためobj一致が命題的で、同じ実写像の可換式に型transportが混入した。変数作用・微分・mapの再帰内容は保持 — 誤れば旧自然性/transportが変わるため全旧exportを再ビルド・回帰する。
+継続到達：build22でTor比較自然性（koszulMapFunctorIso_naturality / tensorKoszulIso_naturality / torKoszulIso_naturality）が通過。
+build19でL⊗ₖMの実L[X]作用と係数線型同型・pure tensor変数作用が通過。
+build12で実filtrationのcokernel商homologyによるboundedFilteredComparisonが通過。
+これらはRun13全体の完了判定ではない。次はchanged-polynomial functor/複体同型・Betti保存、graded接続・極小解消rankを継続。
+継続到達：build28でkoszulPolynomialBaseChangeIso、実L[X]有限生成、koszulPolynomialHomologyBaseChangeIso、totalBetti_baseChangeが通過（L⊗ₖMの実作用を先に構成）。
+build31でordinaryTorKoszulNatIso、ordinaryTorFunctorの加法性、実torConnectingとmiddle exactness/両合成0が通過。
+build25でpartialEuler_sum / partialEuler_syzygy / rank0非負・末端消滅が実exact有限ベクトル複体について通過。
+build35でDirectSumHomologyの一般exact direct-sum比較が通過（ModuleCat AB4、無限chain groupも可）。
+
+### 残りの実装方針（継続用）
+
+- 通常Torの全体balancingを新規公理にせず、実minimal free towerのsyzygy短完全列と証明済みKoszul LESでrank橋を証明する。入力は実自由加群・実exact covers・inc.image⊂実変数部分加群という通常の極小性。極小解消の存在は使わない。
+- H0-map zero補題：chain f0.image⊂range d10ならopcyclesMap=0（pOpcycles epi・商のzero iff boundary）、H0=opcyclesからhomologyMap0=0。Koszul zeroIsoの自然性で実minimal incから供給する。
+- 自由P加群の正homology消滅は、free⇒flatとtensorKoszulIso、exact functorのhomology比較から供給する。
+- graded構成は次の具体案：入力GradedPolynomialModule(M)にpiece(q):ModuleCat k、実incl(q):piece→coefficientM、DirectSum.toModule inclのbijective、実Xiに対応するvar(x,q):piece(q)→piece(q+1)と可換式を持たせる。これは通常gradingのwitnessでありTor比較の仮定ではない。actual G/T/A/N/Q・strataでwitnessを供給する。
+- graded chain pieceは「係数次数q」で再帰する：nil i0=piece(q)、nil i>0=0、cons i0=old0(q)、cons i+1=old_i(q)×old_i+1(q)。実chain inclusionもinl/inrで再帰。内部次数tの複体ではq=t−iとする（dはq→q+1）。
+- 実変数のpiece operatorも同じproduct対角再帰。graded dは実coneの(-d_old, X+d_old) block式で再帰し、actual chain inclusionとの可換式を証明する。d²は実d²とincl単射から導く（別square-zero入力を置かない）。
+- DirectSumのproduct同値はlmap(fst/snd)とlmap(inl)+lmap(inr)で証明可能。これとcofiberの実product同値からchain inclusionのDirectSum.toModule bijectiveを帰納し、DirectSumHomologyIsoで実Hのgraded直和分解へ進む。
+- actual grading witnessは基底のdegree partitionから作る。Σq,{i//degree i=q}≃I、Finsupp.domLCongrとsigmaFinsuppLequivDFinsuppで実sum decomposition。pieceはdegree fibre finsupp、inclはbasis.repr.symm∘extendDomain。varは実Xiの基底座標をdegree(q+1)へsubtypeDomainする；homogeneityからextend戻し一致を証明。
+- actual Gの基底指数carrier、TはTerminalExponent、AはHeadExponent、NはNonAperyExponent、QはAperyExponent。Run12のbasis/coordinate/degree、PolynomialGrading/PresentationGradingの実Xi degree+1を使う。元k作用とcoefficient restrictionはalgebraMap_smulによるidentity linear isoでつなぐ。
+- same-jumpのdegree shift sはRun12の同じ実mapをpiece(q)→piece(q+s)へ制限し、再帰block map・graded complex iso・homology finrankへ運ぶ。
+継続到達：build90–92でfullGGrading / nonXGGrading / actualAGrading / actualQGrading / actualTGrading / actualNGradingを既存のactual degreeとcoordinate supportから供給。一般grading witnessだけに留めない。
+継続到達：build95でprincipal_totalBetti（非零のaugmentation ideal内の実principal関係のβ0=β1=1）、実minimal syzygy coverからのtoProjectiveResolution/minimalResolutionBetti、全Tor LES両端exactnessが通過。
+継続到達：build82でgradedBetti_total（実signed complexの内部次数分解、finite total Hからfinite degree supportと有限和）通過。chainのk有限性を仮定しない。
+
+### Final review → one fix pass（継続中）
+
+独立レビューは `docs/RUN13_CONTINUATION_REVIEW_JA.md`。Criticalなし、Important2件。
+Ruling: inherited extension gradingだけではactual L側の独立したorder-gradingとの同定を完成扱いにしない — レビューImportant1はTask6の要求に該当する — 無視すればactual graded Bettiの不変性を未証明のまま閉鎖してしまう。
+Ruling: exactness acceptanceのModuleCat universeは意図した0を明示する — libraryはk σと加群universeを同じuで定義しており、テストの独立universe推論が原因 — 誤れば高universe対応を検査したと過大報告する。高universe renameはこのactual P14 scope外。
+Final: Ruling: minimal resolution存在/全対象Tor-balancingは追加しない — given actual minimal coverから本物のresolutionとrank橋が証明済みで、存在を使う定理がない — 後続が存在を使う場合は別途供給が必要。
+Final: Ruling: cut・局所化rank0・actual tower/connecting rank・harmonic initial ideal・公刊入力/最終P14は後続入力として保持 — 指令の責務境界に一致 — 後続でこれらを一般補題の仮定のまま最終P14に使うことは不可。
+Final: Ruling: archive/progress/commit/pushは形式検証とfix完了後に実行 — 完成を先取りしない — 最後の公開まで未完ならrun完成とは報告しない。
+
+Current verified state: core build134=4938jobs green（CompletedGradedTransportをt+0の巨大finrank rewriteからiso末尾のeqToIsoへ修正し9.5秒で通過）。
+Full suite verification4は旧Block01–12全回帰を通過、new acceptance KoszulExactnessでuniverse mismatch RED。その後のenvironment auditはまだ実行していない。
+途中版verification/block13とPARTIAL ZIPは凍結。新しいverify_run13_continuation.pyは環境から全生成宣言/structure projection/constructor/recursorを列挙する。
+
+Important2 RED→GREEN: tests/KoszulExactnessのModuleCat.{0}明示で単体検査通過（exactness_universe_green.log）。
+Important1 RED: tests/ActualGradedBaseChange.leanで、独立actual L gradingを両辺に持つ5つの未供給定理を検査。actual_graded_base_change_red.logに全5件のmissing exportを保存。
+Fix strategy: GradedScalarComparisonには既存actual polynomial eと、各actual degree pieceのL tensor同型・inclusion可換式を持たせる。actual coordinate fibresからこのデータを証明供給する（target gradingをtransportで置換しない）。
+KoszulScalarComponentsは既存polynomialKoszulTotalIso e xsの実inl/inr成分式を証明する。scalarKoszulGradePieceIsoは同じ外積blockの再帰（nil/0、zero、cons0、cons正次数product）で構成。
+各chain grading inclusionとの可換式をinl/inr成分式で帰納し、rangeEquivをbaseChangeして実gradedKoszulSpaceの同型へ変換。既存total chain isoのcomm式とtarget inclusion単射からgraded複体可換式/diffを得る。
+最後にcoordinateDegreeInclusion_coordinate（degree fibreの座標値）とcoordinateBaseChangePolynomialIsoのpure tensor座標式から5actual対象のGradedScalarComparisonを供給し、actual L gradedBettiを閉じる。
+
+Important1 fix到達：build143で全4958jobs green。
+`GradedScalarComparison`の実degree piece同型をKoszulの同じ外積block再帰へ運び、`gradedScalarKoszulIso_commutes`で同じtotal比較・actual inclusionsとの可換性を証明。
+`ActualGradedBaseChange`は全5対象の独立した既存L側order-gradingを使用し、actualG/T/A/N/Q_gradedKoszulBaseChangeIsoとactualG/T/A/N/Q_gradedBetti_baseChangeを供給。
+actual_graded_base_change_green.logとclosure_fixtures_green.logの単体検査が通過。source条件を弱めず、transported target gradingへの置換もしない。
+型推論の負荷を避けるためBettiへの帰結はgeneric gradedScalarBetti_baseChangeへ集約し、実対象ごとの巨大なfinrank式展開を避けた。
+全suiteはverification5を実行中。environment audit以降・最終文書・ZIP・Pushはまだ未完。
+
+環境audit初回（verification5）で1284宣言（core1207/test77）の全依存は許容3公理内だったが、検証scriptの「ConstantInfo種別axiomは常に追加公理」というassertが失敗。
+固定Lean4のLean/Util/CollectAxioms.leanを読み、module export時に検査済みproof bodyがaxiomInfo stubとなる一方、依存はprivate kernelで計算してexportedAxiomsExtへ保存されることを確認した。
+Ruling: imported ConstantInfoの種別だけで数学公理と判定せず、Lean自身のcollectAxiomsと自己依存を検査する — コンパイラのproof-erasure stubと真正公理を区別する必要がある — 誤れば公理の混入を見逃すため、許容3公理以外・新宣言の自己依存・ソースの明示axiom/sorry等をすべて拒否し、exported_kindも原形保存する。
+これは検証器の誤判定の修正であり、数学ソース・証明条件・公理の許容範囲は変更しない。修正版の全suiteをverification6で再実行する。
+
+
+## 継続の最終到達・形式検証
+
+- 指定Run13のTask1–7の必要exportとactual接続を閉じた。数学的な未完宣言はない（後続run入力は別表に保持）。
+- Task8の全形式検証：verify_run13_continuation.py、40/40コマンド、全受入・旧Block01–12回帰・過去監査境界・schedule成功。
+- core69ファイル/5,895行、named宣言458/theorem217。Lean環境からcore1,207/test77、旧741レポートと合わせ2,025件の依存を確認。
+- 許容公理propext/Classical.choice/Quot.soundのみ。ソースaxiom/sorry等なし。新宣言自己依存なし。旧84 hashと固定環境一致。
+- 独立レビューImportant1/2を1 fix passで修正し、それぞれRED→GREEN、全suite40/40。Critical/Deferred minorsなし。再レビューは追加しない。
+- 原稿台帳A34–A40、20run再校正、宣言/仮定一覧、actual L gradingの不足と補強経路を保存。
+- 途中版検証とPARTIAL ZIPは凍結（sha256 bd5e2d4195518c671ec3b7db87dc424f7eb0354e4351f8062bdbfdf10ee2c56b）。
+- final COMPLETE ZIPはMANIFEST全payload hashとCRCを再読照合する。公開はこの台帳とZIPを含むworkコミットを通常Pushし、最終応答でremote SHA/cleanを照合する。
+
+検証コマンド合計162.632秒（キャッシュ使用。研究/実装/初回依存ビルドの時間ではない）。
+Rulingの全一覧はRUN13_RULINGS_JA.md、source snapshotはverification/block13_continuation/SOURCE_SHA256.json。

@@ -31,4 +31,17 @@ theorem signed_integer_minor_rank_lower_bound (k : Type*) [Field k] [Fintype n]
   nonzero_minor_rank_lower_bound k A rows cols
     (hmatch ▸ signed_unit_determinant_ne_zero k B hB)
 
+/-- A triangular selected minor with diagonal ±1 gives an initial/block rank bound
+in every characteristic. The zeros and diagonal are statements about the actual matrix. -/
+theorem triangular_signed_minor_rank_lower_bound (k : Type*) [Field k] [Fintype n]
+    [LinearOrder ι] (A : Matrix m n k) (rows : ι → m) (cols : ι → n)
+    (htri : (A.submatrix rows cols).IsUpperTriangular)
+    (hdiag : ∀ i,A (rows i) (cols i)=1 ∨ A (rows i) (cols i) = -1) :
+    Fintype.card ι ≤ A.rank := by
+  apply nonzero_minor_rank_lower_bound k A rows cols
+  rw [Matrix.det_of_isUpperTriangular htri]
+  apply Finset.prod_ne_zero_iff.mpr
+  intro i _
+  rcases hdiag i with h | h <;> simp [Matrix.submatrix_apply,h]
+
 end NSP14.Homological

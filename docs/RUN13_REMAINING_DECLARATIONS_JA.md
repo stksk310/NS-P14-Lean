@@ -1,36 +1,40 @@
-# Run13 未完宣言と接続境界
+# Run13 接続境界と後続入力
 
-基準Run12：`6b8d16889ea9b4d88567f0d9ac70391db2a49824`。指定Run13の完成条件は変更しない。
-以下の名前は**必要な未実装exportの設計名**であり、Leanへaxiom/構造field/仮定として登録していない。
+基準Run12：`6b8d16889ea9b4d88567f0d9ac70391db2a49824`。
+途中版`92cbe8f`の未完リストはgit履歴・`verification/block13/`・PARTIAL ZIPに凍結している。
+この文書はその継続後のexport対応表。形式検証と独立レビューの最終判定は
+`RUN13_CLOSURE_STATUS.json` と `verification/block13_continuation/verification.json` を参照する。
 
-| 必要な宣言 | 正確に残る結論 | 供給済みの入力／残る証明 |
+| 旧未完境界 | 今回の証明済みexport | 前提の供給・意味 |
 |---|---|---|
-| `torKoszulIso_naturality` | 任意P加群写像f:M→Nについて、通常Torのfによる写像と既存koszulHomologyFunctor.map fがtorKoszulIsoを通して可換 | objectwise `torKoszulIso`、実Koszul functor、projective-resolution comparisonはある。tensorKoszulIsoのfに関する可換式が未証明 |
-| `torBalancingIso` / `minimalResolutionBetti` | Mの実極小自由解消Qが与えられたとき、Qᵢの自由rankと既存totalBettiの一致 | 既存Torは第二因子kを解消。mathlibのTor'は第一因子を解消する別定義で、Torとのbalancingは同ライブラリでも未供給。二重複体又は同等のresolution比較が必要。極小解消の存在は使用も仮定もしていない |
-| `gradedKoszulComplex` / `gradedBetti_total` | Kᵢの内部次数をMの次数+iで扱い、dが内部次数0、homologyの実直和分解・有限台、total=gradedの有限和 | 現在は次数を忘れたP加群複体。Mのgradingを恣意的に振るモデルを導入していない。実graded subquotient構成が必要 |
-| `jumpStratum_gradedTor_shift` | Run12の同jump mapの内部次数差sをhomology/Tor上でも保持 | 元の実加群map `jumpStratumEquiv_degree` は証明済み。通常Tor・totalBetti保存は今回閉鎖。graded複体との接続は未完 |
-| `koszul_shortExact` / `koszulConnecting` | 実加群短完全列を各Koszul次数の短完全列へ送り、実connecting mapと通常Tor比較を結ぶ | 任意短完全**複体**のconnecting/rank式は証明済み。koszulFunctorのcomponent mapがblock対角になる自然性と、各次数でのexactnessを実証明する必要がある |
-| `partialEuler_syzygy` / `boundedFilteredComparison` | 部分交代和と実syzygy rank、rank0の非負性・末端、有限filtration/二重複体の必要な次元比較 | 正次数およびH₀の局所rank補正式はある。十分な有限自由解消又は証明済み代替との接続が未完。spectral sequenceの退化は仮定しない |
-| `koszulPolynomialBaseChangeIso` / `totalBetti_baseChange` | f:k[Xσ]→L[Xσ]に沿う実拡大加群M_Lについて、L⊗ₖK(X;M)≅K(X;M_L)とβᵢ(M_L)=βᵢ(M) | L⊗ₖk[Xσ]≃L[Xσ]、実L⊗ₖ複体のhomology/有限性/次元保存は証明済み。P_L作用を持つ実加群との自然な複体同型が未証明。現在の`extendedCoefficientKoszul_finrank`をこの定理と読み替えない |
-| `actualG_polynomialBaseChange` | actual G/T/A/N/Qと、係数をLに変えたactual対象との自然なP_L作用/核/商の整合 | Run12の指数基底・actual graded comparisonはある。形式級数環全体のtensor同型を使わずpiece/加群で接続する必要がある |
-| `initialRank_blockComparison` | O_HARMONICで使う初項rank比較とblock三角化の一般橋 | 全ideal初項に基づく標準単項式の実商基底と±1 minorの任意標数非零性は閉鎖。特定sourceのinitial idealやharmonic本体は予定どおり後続担当 |
+| Tor比較の自然性 | `torKoszulIso_naturality`, `ordinaryTorKoszulNatIso` | 実tensor写像・実解消comparisonから証明。通常Torは第二因子kを解消する規約 |
+| 極小自由解消rank | `MinimalFreeTower.toProjectiveResolution`, `minimalResolutionBetti` | 実自由基底、実syzygy短完全列、inc.image⊂変数部分加群という極小性から証明。比較等式を入力にしない。極小解消の存在は使用しない |
+| graded複体・有限台 | `koszul_d_homogeneous`, `gradedKoszulComplex`, `gradedKoszulHomologySumIso`, `gradedBetti_total`, `gradedBetti_eq_zero_of_gt` | 内部次数=係数次数+i。実dを部分空間へ制限し、d²は元の実d²から得る。無限直和のexactnessと有限total Hから有限台を得る |
+| 通常Torのgraded分解 | `ordinaryTorGradedSumIso` | 通常derived Torが実graded homologyの直和と同型。Torの名前の付替えではない |
+| actual grading | `fullGGrading`, `nonXGGrading`, `actualTGrading`, `actualAGrading`, `actualNGrading`, `actualQGrading`, `descendingStratumGrading`, `ascendingStratumGrading` | 既存のorder次数部分加群・既存の指数座標を用いたwitness |
+| 同jump次数差 | `jumpStratumGradedKoszulIso`, `jumpStratum_gradedBetti` | Run12の同じ`jumpStratumEquiv`、内部次数t→t+s。全体T≅Nは主張しない |
+| 完備接錐 | `completedTorIso`, `completed_totalBetti`, `completedGradedKoszulIso`, `completed_gradedBetti` | 同じ全e変数の比較。完備側gradingはRun12のideal-power graded比較を運ぶ |
+| 加群完全列→実Koszul/Tor LES | `koszul_shortExact`, `koszulConnecting`, `tor_exact_middle`, `tor_exact_connecting_left/right` | 実cone成分写像を用い次数ごとの短完全性を証明。H₀も含む |
+| Betti補正rank | `koszulCorrectionRank`, `koszul_betti_rank_correction`, `koszul_betti_rank_correction_zero` | finite Pからfinite k-homologyを供給。δᵢ・δᵢ₊₁を保持し、差を自然数の切捨てで隠さない |
+| rank Euler・有界比較 | `partialEuler_syzygy`, `partialEuler_nonnegative`, `partialEuler_terminal`, `boundedFilteredComparison` | 実exact有限ベクトル複体、実monic filtrationとcokernel商を入力にする。任意Betti配列やspectral degenerationを入力にしない |
+| 実L[X]加群 | `polynomialBaseChangeModule`, `polynomialBaseChange_finite`, `koszulPolynomialBaseChangeIso`, `totalBetti_baseChange` | L⊗ₖMの実作用を構成し変数作用をpure tensor上で確認。Mがk有限とは仮定しない |
+| 体拡大の自然性 | `polynomialBaseChangeCoefficientNatIso`, `koszulPolynomialBaseChangeIso_naturality`, `polynomialKoszulHomologyBaseChangeNatIso`, `homologyBaseChangeNatIso` | 非斉次加群写像を含む実chain mapについて自然。flat homology比較も自然同型 |
+| 拡大gradingの体拡大 | `extendedGradedKoszulInclusion`, `extendedGradedHomologySumIso`, `gradedBetti_baseChange` | 拡大gradingの次数t複体はL⊗ₖKₜ。実L[X]Koszulへの明示的inclusionを持ち、そのHがactual changed Koszul Hを直和分解する。通常の拡大gradingを採用している |
+| actual L側のgraded同定 | `gradedScalarKoszulIso_commutes`, `actualG/T/A/N/Q_gradedKoszulBaseChangeIso`, `actualG/T/A/N/Q_gradedBetti_baseChange` | 既存actual係数変更mapとinclusionの可換性を保って、独立したL側order-gradingへ同定。実pieceの指数fibreとpure tensor座標から供給し、target gradingをtransportで置換しない |
+| actual係数変更 | `fullG_baseChangeIso`, `actualT/A/N/Q_baseChangeIso`, `actualG/T/A/N/Q_totalBetti_baseChange` | 実変数行列を既存指数基底で比較。G行列はlive-order条件つき0/1、T/商の行列は実restriction/projection。形式級数環全体のtensor同型を使わない |
+| 初項・block rank | `standardMonomialBasis`, `triangular_signed_minor_rank_lower_bound`, `signed_integer_minor_rank_lower_bound` | 全ideal初項によるactual商の基底、実三角minorと±1対角から任意標数のrank下限 |
+| 数値例 | `residue_totalBetti`, `principal_totalBetti`, `Run13ClosureFixtures.square_betti` | 残余体βᵢ=binomial(n,i)、P/(X²)=(1,1,0,…)、標数2を含む |
 
-## 受入検査の不足
+## 後続runが供給するactual入力
 
-- 自由PのBetti=(1,0,…)、空変数列・上次数IsZero、実P/(X²)の通常Tor比較と有限性は検査した。
-- **P/(X²)のBetti=(1,1)の数値同定、n変数残余体のbinomial Bettiは未証明・未検査**。
-- 標数2の実Tor/全変数null-homotopy、標数2からRatFuncへの実複体scalar extensionを検査した。これは未完のP_L-Koszul/Betti保存の代用ではない。
-- actual ℕ、二生成元、jump2と3を持つ半群、actual G/T/A/N/Q、同jump Tor/totalBettiを検査した。graded shiftのhomology検査は未完。
+これらはRun13の未証明比較定理を仮定する境界ではない。後続のP14対象を上の証明済み一般定理に入れる責務である。
 
-## 判定
-
-今回の閉じたexportは監査・再利用できる。ただしRun13のTask1–8全達成、X_BASIC、I_FIELD閉鎖は主張できない。
-障害は追加の公理ではなく、上表のresolution balancing・graded subquotient・changed-polynomial-module comparisonの形式証明をまだ構成できていないことである。
-次の実行はRun13の継続としてこれらを埋める。予定run数に合わせて要求を縮めない。
+- Run14：選んだ実cut変数、正則性、有限cut商、必要なら有限体から同標数の無限拡大を選ぶ。source全e変数と非xのe−1変数S₀とcutのr変数を区別する。
+- Run15/16：ordinary/AP targetの実表示、harmonic/initial idealの全競合、実tower短完全列、connecting mapの特定rank、rank Eulerへ入れる実exact有限ベクトル複体（例えば証明したflat性による局所化）とrank 0の供給。
+- Run17以降：共通端点でのactual移行、公刊7入力、N4・小ordinaryの算術不等式、最終P14。これらは今回証明したとは扱わない。
+- 一般の`Tor`と`Tor'`の全対象balancing定理は追加していない。P14で必要な実極小自由解消のrank橋はsyzygy LESで証明しているため、この未使用の汎用定理を入力にもしていない。
 
 ## Universe interface
 
-現在のTor/monoidal接続は `k σ : Type u` と `ModuleCat.{u}` を使う。
-actual半群のTor/totalBetti運搬は `k : Type` のexportである。
-表示・多項式有限生成・初期Koszul等のより一般のuniverseは型一覧で確認できる。
-必要なら変数型のULiftとrenameによるuniverse transportも追加する。任意標数性を制限する仮定ではない。
+Tor/monoidal接続は`k σ : Type u`、`ModuleCat.{u}`。actual半群の便利exportは`k : Type`。
+任意標数性を制限する仮定ではない。高いuniverseでのactual変数ULift/renameは現在のP14 exportには使わない。

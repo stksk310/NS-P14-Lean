@@ -489,3 +489,49 @@ chain groupの有限次元性は使わない。L⊗ₖk[X]≃L[X]も証明済み
 2. 公開定理の仮定・添字・定義域・狭義/非狭義を原稿と照合する。
 3. actual接続の未完欄を、証明済みの構成定理で埋める。
 4. 最終Lean commitと原稿版のhashを固定する。現時点ではこの最終照合は未完である。
+
+## A34 — Run13継続：実写像と短完全列
+
+`koszulFunctor`のobjを実`koszulList`と定義的に一致させ、mapを同じ再帰的`koszulMap`へ整理。
+coneの実inl/inr成分式、各次数の短完全列、connecting map、通常Tor比較の自然性、LESの三つのexactnessを追加。
+数学的な微分や符号は変更しない。原稿には「実短完全列→実Koszul短完全複体→通常Tor LES」という接続を明記する。
+
+## A35 — 極小自由解消rankの証明経路
+
+一般Tor/Tor' balancingを未証明入力にしない。実minimal free towerの各syzygy coverの短完全列からdimension shiftingを反復し、H₀-inc=0を実極小性から証明してrank一致を得た。
+`toProjectiveResolution`も実装した。原稿のrank橋はこのLES経路へ合わせる。極小解消の存在をこのrunで使う主張はない。
+
+## A36 — gradingと無限chain group
+
+内部次数tのchainは係数次数t−iの部分空間。実cone微分(-d,X+d)のhomogeneityを証明して制限し、d²は実d²から導く。
+exactな無限直和のhomology比較から分解を得て、有限total Hから有限degree support/有限和を導く。
+G/T/A/N/Qと同jump商には既存order次数を供給。同jumpはt→t+s、完備接錐は同次数を保持。
+chainのk有限性を一般仮定にする文言は加えない。
+
+## A37 — I_FIELDの実体化
+
+L⊗ₖMに実L[X]作用を構成し、finite P生成、実Koszul複体比較、自然性、homology/total Betti保存を証明。
+拡大gradingはL⊗ₖKₜとし、actual changed Koszulへのinclusionとhomologyの実直和分解を供給した。
+actual G/T/A/N/Qとの係数変更は実指数基底の変数行列を比較して同定する。形式級数環全体のtensor同型は主張しない。
+
+## A38 — rank Euler・有界比較・minor
+
+部分交代和はℤで定義。実exact有限ベクトル複体のsyzygy像rankと一致し、非負・末端消滅を導く。
+実monic filtrationのcokernel商homologyから有界比較を得る。後続のactual tower/cutへの実体化は別途供給する。
+初項rank橋は実選択minorの三角性と±1対角から任意標数の下限を得る。harmonicの特定initial idealは後続担当。
+
+## A39 — 数値受入と監査方法
+
+残余体の二項係数Bettiは実零微分とchain基底次元から証明。
+非零principal関係がaugmentation ideal内にある商のβ₀=β₁=1を実LESから証明し、P/(X²)と標数2に適用。
+新規監査ではLean環境からconstructor/recursor/structure projection/生成補助宣言も列挙する。
+途中版の証拠原本は`verification/block13/`とPARTIAL ZIPに凍結し、継続の証拠を別ディレクトリへ保存する。
+
+
+## A40 — 独立レビュー後：actual L gradingの同定
+
+拡大gradingの一般不変性だけでは、別途定義したactual L側のorder-gradingへの適用が明示されていなかった。
+実指数degree fibreのscalar extensionを構成し、既存actual係数変更eとのinclusion可換式を証明。
+同じtotal Koszul comparisonの実inl/inr式を使い、degree複体の同型とその可換式を導いた。
+G/T/A/N/Qの独立したL側gradingへ適用し、actual graded Betti保存を明示的に証明した。
+原稿のI_FIELDにはこのdegree同定を含める。標数2→RatFuncの五つのactual検査を追加した。

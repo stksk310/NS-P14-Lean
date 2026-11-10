@@ -1,35 +1,32 @@
 # Run13実測による20run計画の再校正
 
-2026年11月10日JST。旧R02計画と50項目checkerは履歴として保持する。
-Run01–12は既存の閉鎖単位、Run13は今回の証明済みexportを持つ**未完のrun**。
+2026年11月10日JST。旧R02 schedule/checkerは履歴として保持する。
+途中版の24〜28runという見積りは、今回同じRun13内で閉じた複数境界を追加runへ分割した仮見積りだった。
+ユーザーの「小ファイルでは終わらず、数学的接続が閉じるまで同じrun」という単位に合わせて再計測する。
 
-## 観測
+Run13は途中版23ファイル・1,852行から、継続後には69 coreファイル・5,895行の共通基盤へ拡大した。
+正確なファイル・宣言・生成宣言・検査時間は`verification/block13_continuation/verification.json`を正とする。
+キャッシュ使用の検査時間を、研究・実装・初回mathlib依存ビルドの所要時間とは読み替えない。
 
-- mathlibにはTor/projective resolution/一般homology完全列があるが、固定版にはKoszul複体がない。
-- 実微分、正次数exactness、augmentation、有限自由解消、通常Tor比較、全変数annihilation、k有限性まで独自の接続が必要だった。
-- 基本部分だけで23新規coreファイル・約1,850行（最終正確値は検証JSON）になった。
-- さらにgraded構成・resolution balancing・actual polynomial base change・有界filtrationの独立した境界が残った。
-- 行数やビルド時間から公刊7入力の所要時間を予測できるとは扱わない。今回の実測は「共通基盤を1runで全部閉じる」R02の配分が過小だったという証拠である。
+## 目標配分
 
-## 配分の修正
+| run | 閉じる接続 | 主な不確実性 |
+|---|---|---|
+| 14 | 実cut・正則性・offset/有限商・同標数拡大の実適用 | actual regular sequence/安定化の証明量 |
+| 15 | ordinary/AP target・harmonic・初項rank | 全競合の初項証明、組合せとactual商の接続 |
+| 16 | ordinary Tor/tower・補正rank・端点への入力 | 実filtration/connecting mapの同定 |
+| 17 | 共通端点のactual移行・五生成元以上の幅側 | kernel・Tor補償・全分岐の接続 |
+| 18 | BHP/Pardue/EK等の必要な公刊入力 | 固定mathlibにない比較定理の新規証明量 |
+| 19 | N4/LTV/三生成元・小ordinary残余 | 公刊入力と算術部分の閉鎖 |
+| 20 | 統合・全actual回帰・最終仮定/公理監査・原稿照合 | 未供給依存の発見、最終対象の量化 |
 
-1. **Run13を継続**：Tor比較の自然性、Koszul短完全列、数値受入例、極小解消rank/balancing。
-2. **同じ共通基盤の残り**：graded Koszul/homology、有限台とtotal和、同jumpのshift s。
-3. **体拡大の閉鎖**：実L[X]加群・自然な複体同型・actual G/T/A/N/Q・I_FIELD。
-4. Run14のcutへ進む前に、上の必要exportが閉じたかを判定する。未完のX_BASIC/I_FIELDをinputにしない。
-5. 元Run15（AP target/harmonic/Tor鎖）、Run18（BHP/Pardue/EK）、Run19（N4/LTV/三生成元）も複数の大きい理論を束ねている。各々の入口で公刊入力の証明量を再測定する。
+全体20runは再び目標配分として保持できる。ただし達成保証ではない。
+とくにRun18/19は公刊入力の証明量を入口で再測定する必要があり、現在の根拠だけで20run以内を認証しない。
+必要なら1runをさらに長くし、完成条件や独立した数学の入力を弱めて数を合わせることはしない。
 
-20runは引き続き希望目標だが、現時点で達成できると認証する根拠はない。
-上の共通基盤を少なくとも2〜3個の追加閉鎖単位として見込み、公刊入力の不確実性も含めた
-**暫定レンジを全体24〜28run**へ修正する。これは実行保証でも、定理の完成条件を弱める変更でもない。
-Run13継続でbalancing/graded/base-changeが想定以上にまとまれば再圧縮できる。
+## 今回からの修正
 
-## 再測定の基準
-
-ユーザー操作や小ファイル数をrun数に換算しない。
-証明済みの実比較・前提の供給・actual受入検査が閉じたまとまりを完了単位とする。
-今回Run13を「Task1–8完成」とカウントして残り7runへ進むことはしない。
-
-最終検証実測：core23ファイル・1,852行・183宣言（88 theorem）、fixture46宣言。
-55コマンドの合計126.860秒（キャッシュ使用、研究/実装/初回依存ビルドの時間ではない）。
-970公理依存レポートと旧84 hashの照合を含む。
+- 極小自由解消rankは、未実装の汎用Tor/Tor' balancingを新規に作る代わりに、実syzygy短完全列のKoszul LESで閉じた。
+- gradingはactual座標・既存次数に基づくwitnessから実dを制限し、chainのk有限性に依存しない。
+- 体拡大は実L[X]作用とactual指数行列から供給し、形式級数環全体のtensor同型を不要にした。
+- 検証はソース正規表現の宣言一覧から、Lean環境が持つ生成宣言・構造射影まで含めた公理依存一覧へ拡張した。固定Lean4のproof-erasure stubは依存情報で真正公理と区別する。

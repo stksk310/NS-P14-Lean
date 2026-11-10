@@ -1,19 +1,29 @@
-# Lean Block01–12 / Run13証明済み部分の監査引継ぎ
+# Lean Block01–13 / Run13共通基盤の監査引継ぎ
 
-2026年11月10日（JST）。このスナップショットは `work` ブランチで公開する。
+2026年11月10日（JST）。`work`ブランチで通常公開する。
 
-## 最新：Run13は部分到達、指定完成条件は未達
+## 最新：Run13共通基盤は全条件を接続・検証済み
 
-Run12 `6b8d168` を基準に、actual最小表示・実変数Koszul・有限自由解消・通常Tor比較・k有限homologyを追加。
-通常Tor比較はobjectwiseで、graded/極小解消rank/actual L[X] base change/有界比較等は未完。
-X_BASIC・I_FIELD全体を閉鎖済みとは数えない。
+通常Torの実解消比較と自然性、有限Pから有限k homology、実minimal coverによるrank橋、
+actual graded Koszul/有限台・total和、同jumpの内部次数差s、実LES/connecting rank/有界比較を供給。
+実L[X]作用とactual G/T/A/N/Q係数変更を構成し、L側で独立に定義したorder-gradingとの同型・可換式まで証明した。
 
-入口：[Run13検証と範囲](verification/block13/README_JA.md)、
-[未完宣言](docs/RUN13_REMAINING_DECLARATIONS_JA.md)、
-[20run再校正](docs/RUN13_20RUN_RECALIBRATION_JA.md)、
-[宣言全一覧](verification/block13/declarations.json)。
-`verification/block13/verification.json` のPASSは証明済みexportのコンパイル・回帰・公理検査のみを意味する。
-過去のBlock01–12検証原本は保持した。
+全40コマンド成功、新規環境1,284宣言＋旧741件の依存は許容3公理のみ。
+旧84ファイル・固定環境のhash一致。core69ファイル・5,895行。
+独立レビューImportant2件は同じfix passでRED→GREEN。追加数学公理・sorryはない。
+
+入口：[継続検証README](verification/block13_continuation/README_JA.md)、
+[形式検証JSON](verification/block13_continuation/verification.json)、
+[生成宣言を含む型/依存一覧](verification/block13_continuation/declarations.json)、
+[レビューと修正](docs/RUN13_CONTINUATION_REVIEW_JA.md)、
+[exportと後続入力](docs/RUN13_REMAINING_DECLARATIONS_JA.md)、
+[20run再校正](docs/RUN13_20RUN_RECALIBRATION_JA.md)。原稿台帳A34–A40。
+
+固定Leanのexported proof stubはConstantInfo上axiomInfoとなり得るため、真正公理はLean自身の
+collectAxioms依存と自己依存で判定し、ソースguardも独立に実施。種別原形も一覧へ保存した。
+
+Run12・Run13途中版の検証原本とPARTIAL ZIPは凍結している。
+最終P14・actual cut/tower・harmonicの特定initial ideal・公刊入力は後続担当であり、今回の閉鎖には含めない。
 
 ## 最初に読むもの
 

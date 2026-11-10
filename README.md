@@ -4,6 +4,24 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Run 13
+
+Actual Koszul/Tor, finite coefficient homology, minimal-resolution ranks, graded Betti,
+long exact sequences and rank bounds are connected. Scalar extension preserves total and
+graded Betti for actual G/T/A/N/Q with their independently defined order gradings.
+The completed-cone and same-jump comparisons use the same actual maps, retaining the shift s.
+
+```sh
+python3 scripts/verify_run13_continuation.py
+```
+
+[Scope and reproduction](verification/block13_continuation/README_JA.md),
+[verification](verification/block13_continuation/verification.json),
+[review and fixes](docs/RUN13_CONTINUATION_REVIEW_JA.md),
+[Run13 closure and later inputs](docs/RUN13_REMAINING_DECLARATIONS_JA.md).
+The full P14 theorem, actual cuts/towers and public inputs remain subsequent work.
+The prior partial Run13 evidence stays frozen in `verification/block13/`.
+
 ## Lean implementation — Run 12
 
 Actual O_COORD and the formal-series tangent-cone comparison are closed.

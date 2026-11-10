@@ -1,0 +1,9 @@
+tests/KoszulExactness.lean:6:74: error: Application type mismatch: The argument
+  S
+has type
+  ShortComplex.{u_1, u_1 + 1} (ModuleCat (VariableRing k σ))
+of sort `Type (u_1 + 1)` but is expected to have type
+  ShortComplex.{0, 1} (ModuleCat (VariableRing k σ))
+of sort `Type 1` in the application
+  koszul_shortExact k σ xs S
+

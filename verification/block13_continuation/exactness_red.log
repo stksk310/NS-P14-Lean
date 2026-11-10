@@ -1,0 +1,5 @@
+tests/KoszulExactness.lean:6:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  (koszulFunctor k σ xs).PreservesZeroMorphisms
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/KoszulExactness.lean:6:49: error(lean.unknownIdentifier): Unknown identifier `koszul_shortExact`
