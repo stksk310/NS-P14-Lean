@@ -752,3 +752,7 @@ BettiFormula.semigroup_totalBetti/cone_totalBetti/completed_AP_totalBettiは一�
 ### A72 — Run15の元の8目標の同時閉鎖
 
 audit/run15_closure/ClosedGoals.leanのall_original_goals_closedは、凍結した元の8目標の型を変えずに連言を証明する。A54以降の過去時点の未完記録は履歴として残すが、Run15内の数学的未完は解消した。ordinary全行比較はe≥3、幅w≥m−1、元の任意体、literal完成source/target、各自の最小全変数表示。一般AP公式と狭幅targetの計算を証明したことは、狭幅sourceとの主比較を証明したことを意味しない。後続Run16–20の完成条件は保持する。
+
+### A73 — TLOW個別行の明示的export
+
+APLowerRowsは一般Fminから、F1≥choose(v,2)+1、F2≥2choose(v,3)+v (v≥3)、F3≥3choose(v,4)+choose(v,2) (v≥5)、F4≥4choose(v,5)を証明し、同一literal interval completionの完成接錐へ一括適用する。v=3/5の隣接二項係数が等しい端点も含む。一般下界が存在するだけで個別行まで供給済みとはせず、この接続を明記する。

@@ -27,8 +27,19 @@ for p in sources+tests+[remaining,'NSP14.lean']:
     assert all(line.rstrip()==line for line in (root/p).read_text().splitlines()),p
 for p in sources: assert 'Run15Remaining' not in (root/p).read_text(),p
 status=json.loads((root/'docs/RUN15_CLOSURE_STATUS.json').read_text())
-assert status['status']=='COMPLETE' and status['run15_complete'] is True
+# Publication status is not evidence for a theorem. Independently compile
+# the unchanged original-goal conjunction and inspect its kernel dependencies.
+assert status['status'] in ['PROOFS_CLOSED_PENDING_FINAL_AUDIT','COMPLETE']
 assert status['proof_goals_complete'] is True and status['unresolved_run15_goals']==[]
+def bound_paths():
+    # Include inherited sources and every input the numerical regression reads.
+    return sorted([str(p.relative_to(root)) for directory in ['NSP14','tests','audit']
+        for p in (root/directory).rglob('*.lean')]+[
+        'NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json',
+        'scripts/verify_run15_closure.py','scripts/package_run15_closure_audit.py',
+        'lean_planning/checks/check_run_schedule_r02.py',
+        'lean_planning/run_schedule_r02.json','proof_structure_v3/lemma_registry.json'])
+initial_hashes={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in bound_paths()}
 records=[]
 def run(name,command,compressed=False):
     start=time.monotonic()
@@ -138,16 +149,19 @@ assert 'Run15Closed.ap_betti_closed' in {d['name'] for d in newdecls}
 run15decls=[d for d in declarations if d['source'] in run15_lean or d['module']=='NSP14']
 assert set(run15_lean)<={d['source'] for d in run15decls}
 assert all('explicit_type' in d for d in run15decls)
-summary=dict(status='PASS_RUN15_COMPLETE',baseline_commit=base,source_baseline_commit=source_base,
+summary=dict(status='PASS_RUN15_PROOF_CLOSURE',baseline_commit=base,source_baseline_commit=source_base,
     fresh_project_test_cache=fresh,fixture_order=ordered,checks=records,sources=sources,acceptance_tests=tests,
     environment_declarations=len(declarations),new_environment_declarations=len(newdecls),
     frozen_source_dependency_script_and_evidence_count=len(frozen),allowed_axioms=sorted(allowed),
     core_line_count=sum(len((root/p).read_text().splitlines()) for p in sources),
-    original_goals_closure_audit=remaining,run15_complete=True,all_original_goals_closed=True,
+    original_goals_closure_audit=remaining,all_original_goals_closed=True,
     run15_source_baseline_commit=run_source_base,run15_lean_files=run15_lean,run15_environment_declarations=len(run15decls),
     types='declarations.json.gz: normal and explicit types for all new declarations, instances, constructors, helpers and goal definitions')
 (out/'declarations.json.gz').write_bytes(gzip.compress((json.dumps(sorted(declarations,key=lambda d:d['name']),ensure_ascii=False,indent=2)+'\n').encode(),mtime=0))
 (out/'verification.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
-paths=run15_lean+['NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run15_closure.py','docs/RUN15_CLOSURE_STATUS.json']
-(out/'SOURCE_SHA256.json').write_text(json.dumps({p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in paths},indent=2)+'\n')
+# Reject concurrent source additions/edits during the verification itself.
+assert set(bound_paths())==set(initial_hashes),'source set changed during verification'
+for p,digest in initial_hashes.items():
+    assert hashlib.sha256((root/p).read_bytes()).hexdigest()==digest,('source changed during verification',p)
+(out/'SOURCE_SHA256.json').write_text(json.dumps(initial_hashes,indent=2)+'\n')
 print(summary['status'],len(records),'commands',len(declarations),'all project declarations',len(newdecls),'new declarations',flush=True)

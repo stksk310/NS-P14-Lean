@@ -60,6 +60,7 @@ v=1 は既証明の実二生成元の場合を使う。d=1への縮小はない�
 | 一般AP全行 | `BettiFormula.lean`：代数的半群環/実接錐/完成接錐の全行、0行は1 |
 | m=av+b、1≤b≤v | `ProfileBounds.lean`：`multiplicity_blocks`、`blockResidue_pos/le`、`residueDefect_eq_blockResidue` |
 | i>vは0、Fmin、単調性 | `positiveBettiProfile_above`、`semigroup_totalBetti_above`、`positiveBettiProfile_lower`、`apLowerProfile_monotone` |
+| TLOW個別4行 | `APLowerRows.lean`：F1≥choose(v,2)+1、F2≥2choose(v,3)+v (v≥3)、F3≥3choose(v,4)+choose(v,2) (v≥5)、F4≥4choose(v,5)。実literal完成targetへの同時適用、v=3/5の等号境界を受入 |
 | 実幅とliteral target | `Width.lean` の `maxAtom/width`、`IntervalCompletion.lean` の実carrier一致、`IntervalAPBetti.lean` のactual完成target公式・下界 |
 | ordinary source全体 | `ordinary_betti_bound` はe≥3の全sourceにmultiplicity容量を証明。幅仮定が不要な強い結論 |
 | ordinary literal completion | `ordinary_actual_completion_betti_le` はe≥3、w≥m−1、元の任意体、0を含む全行、各自の最小表示 |
@@ -69,8 +70,14 @@ v=1 は既証明の実二生成元の場合を使う。d=1への縮小はない�
 
 ## 最終受入と証拠
 
-新規3受入ファイルは、一般AP d>1、v=1、D=1/v、i=D/D+1、0/top/top+1、
+最終接続の新規4受入ファイルは、一般AP d>1、v=1、D=1/v、i=D/D+1、0/top/top+1、
 標数2、実Jの全行Tor写像0、実LES、狭幅literal完成targetを検査する。
 凍結した既存受入で非零T・異jump・δ=0・r=2/3・relative top・H0補正等を保持する。
 最終verifierは全fixture依存順・空project test cache・数値回帰・全宣言公理依存を検査し、
 Run15全体の新規moduleについて通常型とexplicit型をまとめて保存する。
+
+最終レビューでTLOW個別行のexport不足と、packagerの継承Lean sourceのhash固定不足を
+指摘され、いずれも補った。最後の全回帰はこの補強後のソースに対して実行する。
+Harmonic受入のq>1・非単項式kernel・途中の零成分は、任意加群を量化した一般定理と
+そのactual kernel構成で検査される。これらすべてに独立した具体例fixtureを用意した
+とは報告しない。標数2の適用、非零rank・top・actual towerの境界受入とは区別する。

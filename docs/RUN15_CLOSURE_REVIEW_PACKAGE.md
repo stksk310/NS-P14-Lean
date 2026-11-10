@@ -10,7 +10,7 @@ Review head is recorded in the fresh reviewer request and final review report.
 Read the complete order:
 `docs/superpowers/plans/2026-11-10-run15-actual-tor-target-ordinary-order.md`.
 Inspect whole Run15 in passes and distinguish inherited checked source/evidence from
-the final 24 production modules plus 3 tests and exact original-goal closure audit.
+the final 25 production modules plus 4 tests and exact original-goal closure audit.
 No need to duplicate the full verifier; independently inspect its coverage and types.
 
 Entry points:
@@ -33,8 +33,8 @@ Entry points:
   Lean environment axiom scan and normal/explicit types for the entire Run15 delta.
 
 At review start the status is PROOFS_CLOSED_PENDING_FINAL_AUDIT, not a claim that
-final evidence or remote publication already exists. The final verifier is prepared
-to validate the COMPLETE status after review. Old PARTIAL documents and ZIPs are
+final evidence or remote publication already exists. The final verifier independently validates mathematical closure; the packager
+requires COMPLETE publication status and a separate final review PASS. Old PARTIAL documents and ZIPs are
 historical immutable checkpoints; use the current remaining-goals registry.
 
 Check original arbitrary fields (including characteristic 2), genuine general d,

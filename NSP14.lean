@@ -428,3 +428,4 @@ public import NSP14.Homological.LinearCoefficientAction
 public import NSP14.Homological.QuotientBettiAdditivity
 public import NSP14.Homological.ReverseWindowSplit
 public import NSP14.Target.IntervalAPBetti
+public import NSP14.Target.APLowerRows
