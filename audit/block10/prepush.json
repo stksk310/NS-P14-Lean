@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "audited_commit": "791a2c94eda09479d0582f30726669c6d28fbc7b",
+  "checks": [
+    {
+      "name": "prepush_build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 8.199
+    },
+    {
+      "name": "kernel_head_checks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block10/KernelHeadChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.409
+    },
+    {
+      "name": "tangent_finite_checks",
+      "command": [
+        "python3",
+        "audit/block10/check_tangent_models.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.181
+    }
+  ],
+  "submitted_manifest_files_still_unchanged": 106,
+  "finite_results_identical_to_snapshot": true
+}

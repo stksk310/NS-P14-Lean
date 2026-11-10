@@ -1,0 +1,1 @@
+PASS {'models': 278, 'monomial_associativity_checks': 480384, 'mixed_polynomial_ring_checks': 10008, 'exhaustive_coefficient_vectors': 249366, 'kernel_checks': 259374, 'range_preimage_checks': 24734, 'head_quotient_product_checks': 10008, 'terminal_coordinates_in_prefix': 21, 'nonapery_head_coordinates_in_prefix': 21}

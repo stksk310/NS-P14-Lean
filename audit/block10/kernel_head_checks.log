@@ -1,0 +1,6 @@
+'_private.audit.block10.KernelHeadChecks.0.NSP14.Block10Audit.mixed_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.audit.block10.KernelHeadChecks.0.NSP14.Block10Audit.eight_in_xIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

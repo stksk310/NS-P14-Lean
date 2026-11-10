@@ -1,0 +1,170 @@
+{
+  "date_jst": "2026-11-10",
+  "verdict": "PASS_ACTUAL_GRADED_ALGEBRA_KERNEL_AND_PRINCIPAL_HEAD_QUOTIENT",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "791a2c94eda09479d0582f30726669c6d28fbc7b",
+  "predecessor_commit": "1d7c4a8a088ecd37648fa5afeb7c35421e2a6f59",
+  "sources": {
+    "NSP14/Semigroup/TangentAlgebra.lean": "d6016ea61a17e8c0ddb74a2b6dbff3ebfb55785d2ac5ebadcdb3375b708bcb76",
+    "NSP14/Semigroup/TangentCoordinates.lean": "92726bedf8557df5728350264703a64c87ca4872991080e77aa4517b23fcb847",
+    "NSP14/Semigroup/TangentScalars.lean": "08a79c804df8945840b6568aa0024f2704665287806dba0aaa18336f1665fc87",
+    "NSP14/Semigroup/ShiftCoordinates.lean": "062fff6ac63f7ccb91d1ea7261b45a316e654a38f28281406c887a221fd831c9",
+    "NSP14/Semigroup/HeadCoordinates.lean": "05280841ff19ead37968b52118f53e5673463768f131e64644c242b5165cc60c",
+    "NSP14/Semigroup/KernelHead.lean": "a4f815ff8338309bee241da7ef25fb1e6ee9c9a96651e398410125ff9d74ed89",
+    "NSP14/Semigroup/KernelHeadBasis.lean": "d47bfcc468a50eac99481ce5c2197b719fbf849064eb271785d6761990f2aa3b"
+  },
+  "findings_requiring_block10_changes": [],
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "fresh_replay": {
+    "commands_passed": 20,
+    "warnings": false,
+    "new_named_declarations": 71,
+    "new_theorems": 35,
+    "total_axiom_reports": 323,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "reports_identical_to_submitted_logs": true,
+    "predecessor_source_test_environment_hashes": 34
+  },
+  "integrity": {
+    "manifest_entries": 106,
+    "mismatched_manifest_paths": [],
+    "zip_members": 107,
+    "mismatched_zip_members": [],
+    "zip_sha256": "9c1bdb2f43297e14cdfb6ab0a95f66d2d75c43f8ae57981b417155a0d2bbfb7f",
+    "zip_sha256_file": "9c1bdb2f43297e14cdfb6ab0a95f66d2d75c43f8ae57981b417155a0d2bbfb7f  NS_P14_LEAN_BLOCK10_20261110.zip",
+    "pinned_dependencies_matched": 9,
+    "submitted_files_unchanged": true,
+    "predecessor_sources_tests_and_environment_unchanged": true
+  },
+  "additional_lean_checks": {
+    "file": "audit/block10/KernelHeadChecks.lean",
+    "examples": 11,
+    "auxiliary_proofs_compiled": true,
+    "exit_code": 0,
+    "warnings": false,
+    "kernel_example": "Actual <4,5,11>: over any nontrivial commutative k, c[11]+d[4] lies in the actual x kernel iff d=0; image coordinates are single(8,d).",
+    "quotient_example": "Actual principal ideal quotient: [8]=0, [15] is a nonzero non-Apery head; coordinates of c[15]+d[8] are single(head15,c).",
+    "coefficient_boundaries": [
+      "Generic commutative nontrivial rings including zero divisors",
+      "Z/4Z full kernel and head equivalences",
+      "Z/1Z graded algebra coordinates",
+      "Scalar and integer embeddings agree with inherited module action",
+      "The actual head quotient has a nonzero identity"
+    ]
+  },
+  "independent_finite_checks": {
+    "status": "PASS",
+    "seed": 1410,
+    "coefficient_rings": [
+      "Z/2Z",
+      "Z/4Z",
+      "Z/5Z"
+    ],
+    "counts": {
+      "models": 278,
+      "monomial_associativity_checks": 480384,
+      "mixed_polynomial_ring_checks": 10008,
+      "exhaustive_coefficient_vectors": 249366,
+      "kernel_checks": 259374,
+      "range_preimage_checks": 24734,
+      "head_quotient_product_checks": 10008,
+      "terminal_coordinates_in_prefix": 21,
+      "nonapery_head_coordinates_in_prefix": 21
+    },
+    "anchors": {
+      "1": {
+        "least_conductor": 0,
+        "terminal_prefix": [],
+        "head_prefix": [
+          0
+        ],
+        "checked_exponents_through": 120,
+        "nonapery_heads_prefix": []
+      },
+      "2,3": {
+        "least_conductor": 2,
+        "terminal_prefix": [],
+        "head_prefix": [
+          0,
+          3
+        ],
+        "checked_exponents_through": 120,
+        "nonapery_heads_prefix": []
+      },
+      "4,5,11": {
+        "least_conductor": 8,
+        "terminal_prefix": [
+          11
+        ],
+        "head_prefix": [
+          0,
+          5,
+          10,
+          11,
+          15
+        ],
+        "checked_exponents_through": 120,
+        "nonapery_heads_prefix": [
+          15
+        ]
+      },
+      "6,7,15": {
+        "least_conductor": 24,
+        "terminal_prefix": [
+          15,
+          22,
+          29
+        ],
+        "head_prefix": [
+          0,
+          7,
+          14,
+          15,
+          21,
+          22,
+          28,
+          29,
+          35
+        ],
+        "checked_exponents_through": 120,
+        "nonapery_heads_prefix": [
+          21,
+          28,
+          35
+        ]
+      }
+    },
+    "scope": "Supplementary exact finite computations, not a proof over all exponents or semigroups. Global multiplication is independently compared with degreewise multiplication of polynomial representatives. Kernels include exhaustive coefficient vectors, with explicit live-predecessor lifts for the image. Head-quotient products are invariant under adding actual x multiples. No completion comparison or global finiteness of T/head sets is inferred."
+  },
+  "paper_correspondence": {
+    "paper": "V02 section2; V03 O_COORD entry; alignment ledger A15-A17",
+    "status": "MATCH_AT_ALGEBRAIC_GRADED_ALGEBRA_AND_ACTUAL_T_A_BASES_LEVEL",
+    "completion_comparison_proved": false,
+    "whole_commutative_k_algebra_assembled": true,
+    "full_kernel_basis_constructed": true,
+    "actual_principal_ideal_quotient_head_basis_constructed": true,
+    "global_T_N_module_isomorphism_asserted": false,
+    "global_terminal_or_head_finiteness_certified": false
+  },
+  "proved_scope": [
+    "The direct sum of actual positive-ideal power quotients is assembled into a commutative k-algebra, with multiplication and scalar action from actual representatives.",
+    "Global linear monomial coordinates and basis match actual initial monomials; this is not an isomorphism to ordinary semigroup-ring convolution.",
+    "Injective exponent translation with a live filter gives full terminal-supported kernel and non-head-supported range at the coefficient level.",
+    "Actual x multiplication is conjugate to the coefficient shift on all elements. Its entire kernel has the actual terminal monomial basis.",
+    "The actual principal ideal generated by x restricts to the actual multiplication range; its ring quotient has the actual head monomial basis.",
+    "Global x multiplication restricts to the degreewise xAction constructed in Block09."
+  ],
+  "unverified_remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "graded N/Q construction, same-jump modules and jump upper bound",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14",
+    "Global finiteness of terminal/head index sets is not newly proved here.",
+    "Final Lean/manuscript alignment is incomplete; global T~N as modules is not asserted."
+  ]
+}

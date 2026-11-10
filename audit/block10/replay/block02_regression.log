@@ -1,0 +1,16 @@
+'NSP14.sidon_difference_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.sidon_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.apery_min_unique' depends on axioms: [propext]
+'NSP14.AperyPairData.residue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.AperyPairData.residues_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.AperyPairData.residues_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.AperyPairData.multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.AperyPairData.deficit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.corner_condition_of_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.small_gap_pos_of_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.corner_condition_of_boundary_sidon' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Ordinary.SmallScalar.small_gap_pos_of_boundary_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.scalar_lt_of_boundary_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.small_gap_pos_of_apery_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]

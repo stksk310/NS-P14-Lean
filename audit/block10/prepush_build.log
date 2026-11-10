@@ -1,0 +1,9 @@
+✔ [3116/3132] Built NSP14.Semigroup.ShiftCoordinates (1.1s)
+✔ [3118/3132] Built NSP14.Semigroup.TangentAlgebra (1.9s)
+✔ [3120/3132] Built NSP14.Semigroup.HeadCoordinates (1.1s)
+✔ [3122/3132] Built NSP14.Semigroup.TangentCoordinates (1.5s)
+✔ [3124/3132] Built NSP14.Semigroup.TangentScalars (1.5s)
+✔ [3126/3132] Built NSP14.Semigroup.KernelHead (1.6s)
+✔ [3128/3132] Built NSP14.Semigroup.KernelHeadBasis (1.3s)
+✔ [3130/3132] Built NSP14 (857ms)
+Build completed successfully (3132 jobs).

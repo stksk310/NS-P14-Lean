@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "seed": 1410,
+  "coefficient_rings": [
+    "Z/2Z",
+    "Z/4Z",
+    "Z/5Z"
+  ],
+  "counts": {
+    "models": 278,
+    "monomial_associativity_checks": 480384,
+    "mixed_polynomial_ring_checks": 10008,
+    "exhaustive_coefficient_vectors": 249366,
+    "kernel_checks": 259374,
+    "range_preimage_checks": 24734,
+    "head_quotient_product_checks": 10008,
+    "terminal_coordinates_in_prefix": 21,
+    "nonapery_head_coordinates_in_prefix": 21
+  },
+  "anchors": {
+    "1": {
+      "least_conductor": 0,
+      "terminal_prefix": [],
+      "head_prefix": [
+        0
+      ],
+      "checked_exponents_through": 120,
+      "nonapery_heads_prefix": []
+    },
+    "2,3": {
+      "least_conductor": 2,
+      "terminal_prefix": [],
+      "head_prefix": [
+        0,
+        3
+      ],
+      "checked_exponents_through": 120,
+      "nonapery_heads_prefix": []
+    },
+    "4,5,11": {
+      "least_conductor": 8,
+      "terminal_prefix": [
+        11
+      ],
+      "head_prefix": [
+        0,
+        5,
+        10,
+        11,
+        15
+      ],
+      "checked_exponents_through": 120,
+      "nonapery_heads_prefix": [
+        15
+      ]
+    },
+    "6,7,15": {
+      "least_conductor": 24,
+      "terminal_prefix": [
+        15,
+        22,
+        29
+      ],
+      "head_prefix": [
+        0,
+        7,
+        14,
+        15,
+        21,
+        22,
+        28,
+        29,
+        35
+      ],
+      "checked_exponents_through": 120,
+      "nonapery_heads_prefix": [
+        21,
+        28,
+        35
+      ]
+    }
+  },
+  "scope": "Supplementary exact finite computations, not a proof over all exponents or semigroups. Global multiplication is independently compared with degreewise multiplication of polynomial representatives. Kernels include exhaustive coefficient vectors, with explicit live-predecessor lifts for the image. Head-quotient products are invariant under adding actual x multiples. No completion comparison or global finiteness of T/head sets is inferred."
+}
