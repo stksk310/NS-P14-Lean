@@ -111,3 +111,16 @@ terminal/headの数値全単射とjumpの向きも証明した。
 新規85定理と全単射定義1件の公理依存を検査する。既存Block01–07は保持。
 actual接錐・商/核との環・加群同定、volume/cut/tower、Tor/Bettiは未完。
 原稿対応は台帳A10–A11、検証記録は `verification/block08/`。
+
+## Block09：2026年11月10日（JST）
+
+7ソース・43定理、60宣言。actual代数的半群環の正元イデアルの全冪とorderの係数条件が一致する。
+定数項環準同型とactual原子での生成、体上の極大性、次数付き実商の係数同値・有限単項式基底、
+商上の双線型積とlive/killed条件、terminalとx乗算の単項式核の同値まで構成した。
+
+完備化との比較と全直和の次数付き環のパッケージ、核全体・A/N/Qの基底、同jump加群同型、
+actual塔/資源、Tor/Betti、P14全体は後続。対応台帳A12–A14へ原稿に使える証明を記録する。
+検証入口はscripts/verify_block09.py。完成範囲と境界はverification/block09/README_JA.md。
+
+Block09最終検証：19/19コマンド、252公理依存報告、26既存hashが通過。
+独立レビューも重要な実装指摘なし。説明の係数環仮定2か所を修正し全検証を再実行した。

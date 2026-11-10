@@ -205,6 +205,45 @@ R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
   globalなT≅Nは主張しない。同jump stratumの加群同型、jump≤ν、actual塔・資源・Torは後続工程。
 - 最終原稿：上の数値補題と、actual環への同定を二段に分けて記述できる。数値段階だけをactual環の形式化完了とは数えない。
 
+## A12：正元イデアルの全冪と数値orderの一致（Block09）
+
+- 原稿：V02 §2、V03 O_COORDの「数値座標[v]は次数order(v)」という入口。
+- Lean：`orderIdeal_eq_pow`、`mem_positiveIdeal_pow`、`positiveIdeal_eq_atom_span`、`positiveIdeal_isMaximal`。
+- R=k[S]はactual半群の加法モノイド環。𝔪は正元単項式の生成イデアルとして定義する。
+  係数で切る集合を𝔪の冪と定義して済ませず、両包含を証明した。
+- 証明：order(v)を実現する正元分解の単項式積からtᵛ∈𝔪^order(v)。
+  冪の降下性と各支持単項式の和からorder≥nの多項式⊆𝔪ⁿ。
+  逆包含はorderの超加法性とイデアル積の帰納から得る。
+- actual原子の和因子を最長原子表示から取り出し、𝔪が最小生成系の単項式で生成されることも示す。
+  定数項写像の積保存はℕの非負性から証明し、全射・核=𝔪を得る。kが体なら𝔪は極大。
+- 仮定：冪の同定は任意の可換係数環。tᵛの所属・非零判定には非自明性、極大性には体が必要。
+- 最終原稿：座標補題の最初にこの冪所属補題を置ける。完備半群環との比較定理は別途必要。
+
+## A13：次数付き商の単項式基底と積を構成（Block09）
+
+- Lean：`leadingMap_ker`、`leadingMap_surjective`、`gradedPieceEquiv`、`gradedPieceBasis_eq_monomial`、
+  `gradedMul_mk`、`gradedMul_monomial_layers`、`gradedMul_monomial_ne_zero_iff`。
+- 分母は𝔪ⁿの内部の実次冪𝔪ⁿ⁺¹。order=nの係数抽出の核がこれに等しく、
+  任意の有限支持座標は0拡張で持ち上がる。第一同型定理からGₙの基底を構成した。
+- 有限性の短い証明：conductor証拠Cを固定する。v≥(n+1)(C+1)なら
+  vはn個のC+1と残りv−n(C+1)≥C+1の和なのでorder(v)≥n+1。
+  従ってorder(v)≤nならv<(n+1)(C+1)。Cは最小でなくてよい。
+- 代表の両側の変更が積を次冪だけ変えることを示し、実商上へ双線型積を降ろす。
+  積の値は次数和の層でのt^(u+v)のクラス。order(u+v)>order(u)+order(v)なら0、
+  等号なら非零。この非零判定は非自明係数環kの下で成立する。超加法性があるため他の場合はない。
+- 最終原稿：冪→係数抽出→基底→積という順で入口のactual性を明記できる。
+  本Blockでは直和環としての結合則・単位元のパッケージと完備化の比較をまだ構成していない。
+
+## A14：terminalとactual単項式のx核の一致（Block09）
+
+- Lean：`xAction`、`xAction_monomial_eq_zero_iff`、`monomial_mem_xKernel_iff`。
+- actual乗算Gₙ×G₁→Gₙ₊₁の片側を[tᵐ]で固定してx作用を作る。
+  非自明係数環kの下で、そのactual核へ[v]が入る条件は、Block08で定義したTerminal vと一致する。
+- これは数値terminalをactual kernelに接続する最初の構成である。
+  核全体の基底、Aのhead基底、N/Q、同jump strataの加群同型は未完。
+  globalなT≅Nは導いていない。
+- 最終原稿：数値ラベルの全単射と、商・核・作用の代数的同定を区別して引用する。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

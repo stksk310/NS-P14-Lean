@@ -1,0 +1,475 @@
+{
+  "status": "PASS_COMPILED_BLOCK09",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 2.185
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Ring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.504
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/IdealPowers.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.475
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/RingCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.878
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/GradedPieces.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.833
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/GradedProduct.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.05
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/GradedBasis.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.599
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/TangentAction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.465
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupRing.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.741
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.433
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.512
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.664
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.675
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.716
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.721
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.614
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.171
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.702
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.735
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 60,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15,
+    "block07_regression": 25,
+    "block08_regression": 86
+  },
+  "block09_declarations": [
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.SemigroupRing"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.orderIdeal"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.positiveIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_orderIdeal_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_orderIdeal_coeff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.single_mem_orderIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.single_mem_orderIdeal_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderIdeal_antitone"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderIdeal_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderIdeal_one"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_of_support_single_mem"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderIdeal_mul_le"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.positive_single_mem"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.single_sum_mem_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.single_order_mem_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.positiveIdeal_pow_le"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.orderIdeal_eq_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_positiveIdeal_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.monomial_mem_pow_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_positiveIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.constantCoeff_mul"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.constantCoeff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.constantCoeff_surjective"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.constantCoeff_ker"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.positiveIdeal_isMaximal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.positive_atom_summand"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.positiveIdeal_eq_atom_span"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.powerModule"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nextPower"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.GradedPiece"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.DegreeExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.leadingMap"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.leadingMap_apply"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.leadingMap_ker"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.leadingMap_surjective"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.gradedPieceEquiv"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedPieceEquiv_mk"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.monomialClass"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.monomialClass_eq_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.monomialClass_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.product_class_eq_zero_iff"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.representativeProduct"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.representativeProduct_left_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.representativeProduct_right_zero"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.gradedMul"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedMul_mk"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedMul_monomial_layers"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedMul_monomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedMul_monomial_eq_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedMul_monomial_ne_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.order_level_bound"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.degreeExponentFinite"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.gradedPieceBasis"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedPieceBasis_coordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.gradedPieceBasis_eq_monomial"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.multiplicityExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.xAction"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xAction_monomial_eq_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.xAction_monomial_ne_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.monomial_mem_xKernel_iff"
+    }
+  ],
+  "block09_theorem_count": 43,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block08": true,
+  "predecessor_hash_count": 26,
+  "sources": [
+    "NSP14/Semigroup/Ring.lean",
+    "NSP14/Semigroup/IdealPowers.lean",
+    "NSP14/Semigroup/RingCoordinates.lean",
+    "NSP14/Semigroup/GradedPieces.lean",
+    "NSP14/Semigroup/GradedProduct.lean",
+    "NSP14/Semigroup/GradedBasis.lean",
+    "NSP14/Semigroup/TangentAction.lean"
+  ],
+  "paper_source": "V02 section2; V03 O_COORD, algebraic semigroup-ring coordinate step",
+  "scope": "Actual positive ideal powers equal numerical-order monomial ideals. Exact-order coordinates give finite bases of homogeneous quotients; quotient multiplication and terminal monomial/kernel criterion are constructed.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A12-A14",
+  "remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "assembly as one graded algebra with associativity/unit laws",
+    "full kernel and head/cokernel bases; A/N/Q and same-jump modules",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14"
+  ]
+}

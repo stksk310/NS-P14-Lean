@@ -4,6 +4,21 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 09
+
+The actual algebraic semigroup ring now has its positive ideal powers
+identified with numerical-order coefficient conditions. Exact-order
+monomials give finite bases of the homogeneous quotients, with a
+well-defined bilinear product and the terminal monomial/kernel criterion.
+Completion comparison and the remaining A/T/N/Q module constructions are subsequent work.
+
+```sh
+python3 scripts/verify_block09.py
+```
+
+[Scope and reproduction](verification/block09/README_JA.md),
+[verification](verification/block09/verification.json).
+
 ## Lean implementation — Block 08
 
 Actual cofinite additive submonoids now supply multiplicity, unique Apéry
