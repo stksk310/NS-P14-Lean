@@ -98,3 +98,16 @@ target余裕はVandermondeの完全展開を介さず、δ方向の正確な差�
 原稿に移せる証明と全域統合の仮定は対応台帳A07–A09に保存する。
 ordinary側の有限資源を入力とする数値部分の統合であり、actual資源・Tor・BettiやP14全体は未完。
 検証記録は `verification/block07/`。Block01–06のソース・テストを保持する。
+
+## Block08：2026年11月10日（JST）
+
+実際のcofinite AddSubmonoid ℕから始め、6ファイル・85定理とterminal/head全単射を構成した。
+mは最小正元、Apéryは各剰余の最小元として存在・一意性を証明し、濃度mとω+qm一意分解を得る。
+原子の有限性・生成性・任意生成集合に含まれる最小性、actual eと0<e≤mを証明した。
+最長orderの存在・超加法性・原子表示との一致、Apéry次数0/1/≥2とδ、order≤δ+1も接続した。
+terminal/headの数値全単射とjumpの向きも証明した。
+
+ℕ、⟨3,4⟩、jumpが実際にある⟨6,7,15⟩を検査し、actual m/e付きデータをBlock02へ接続した。
+新規85定理と全単射定義1件の公理依存を検査する。既存Block01–07は保持。
+actual接錐・商/核との環・加群同定、volume/cut/tower、Tor/Bettiは未完。
+原稿対応は台帳A10–A11、検証記録は `verification/block08/`。

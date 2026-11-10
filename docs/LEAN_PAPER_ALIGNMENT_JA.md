@@ -175,6 +175,36 @@ R_k(δ)−L_k ≥ [eδ+δ(δ−1)/2] choose(r−1,k−1)
   actual towerから全入力を同時に作る証明と、c_k≤L_k+ΣWHを与えるTorの証明は別途必要。
   `Data.relative_rows` は後者を明示した入力として受け取る入口であり、それ自体をactual Tor証明とは数えない。
 
+## A10：actual半群からApéry・最小生成系・orderを構成（Block08）
+
+- 原稿：V02 §2、V03 O_COORDの数値座標、SO1のatom/Apéry入力。
+- Lean：`NumericalSemigroup`、`multiplicity`、`apery`、`closure_atoms`、`atom_mem_of_generates`、
+  `order_realized_by_atoms`。
+- 表現：数値半群はcofiniteなAddSubmonoid ℕと、あるconductorの証明で定義する。
+  conductorの最小性は不要。multiplicityは正元の最小値として構成し、各剰余の最小元もNat.findで構成する。
+  Apéry集合の濃度mとx=ω+qmの一意分解、predecessor不在の特徴付けを証明する。
+- 最小生成系：mとApéry中の原子から有限集合を作り、Sを生成すること、任意の生成集合に含まれることを証明する。
+  eはこの集合の濃度。0<e≤mが結論であり、仮定ではない。
+- orderの定義：まず正の半群元への分解長の最大値を、n≤xという有限上界から構成する。
+  最長分解の各因子が原子であることを証明したので、原稿の「最長生成元表示長」と一致する。
+  正元への分解を原子への分解と無断で読み替えていない。
+- 最終原稿：数学的な主張は同じ。存在・有限性・原子表示との一致を基礎補題として明記するとLeanとの対応が明確になる。
+
+## A11：Apéry次数計数とterminal/headの数値段階（Block08）
+
+- Lean：`degree_zero_card`、`degree_one_card`、`highSet_card`、`degree_two_le_deficit`、`apery_order_bound`、
+  `terminalHeadEquiv`、`jump_le_of_live_base`、`jump_le_of_live_head`、`live_iff_of_equal_jump`。
+- 完成：actual数値Apéry集合上で、次数0は1点、次数1はe−1点、次数≥2はδ=m−e点。
+  二次層の濃度≤δ、全Apéry元のorder≤δ+1を証明する。
+- νの上界の数値証明：最長原子表示から一原子を外すと、残りもApéryでorderがちょうど1減る。
+  よって最大orderまで各次数が存在し、次数2,…,orderの相異なる代表をhighSetへ単射にしてorder−1≤δを得る。
+- terminal/head：order(x+m)>order(x)+1というterminalと、liveなincoming m-arrowがない非Apéry headを数値的に定義する。
+  x↦x+m、逆y↦y−mで全単射。terminalは正でjump≥2、head次数≥3。
+  liveなbase作用ではjump非減少、liveなhead作用では非増加、同jumpならlive条件が一致する。
+- 未完：これら数値集合をactual completed-semigroup tangent coneとその商・核の基底へ同定する環/加群の証明。
+  globalなT≅Nは主張しない。同jump stratumの加群同型、jump≤ν、actual塔・資源・Torは後続工程。
+- 最終原稿：上の数値補題と、actual環への同定を二段に分けて記述できる。数値段階だけをactual環の形式化完了とは数えない。
+
 ## 最終照合時の手順
 
 1. 各項目を最終原稿へ反映するか、元の証明へLeanを戻すかを確定し、対応する式番号を追記する。

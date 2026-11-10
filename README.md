@@ -4,6 +4,22 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Block 08
+
+Actual cofinite additive submonoids now supply multiplicity, unique Apéry
+decomposition, finite minimal atom generators, embedding dimension, and
+maximum atomic representation length. Apéry degree counts and the
+numerical terminal/head bijection are proved across six foundation files.
+The identification with the actual completed-semigroup tangent cone and
+its modules remains a subsequent step.
+
+```sh
+python3 scripts/verify_block08.py
+```
+
+[Proof scope, concrete semigroups and reproduction](verification/block08/README_JA.md),
+[verification](verification/block08/verification.json).
+
 ## Lean implementation — Block 07
 
 Three proof units now form one numerical ordinary comparison:
