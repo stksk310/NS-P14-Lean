@@ -694,3 +694,17 @@ actual Bの二乗零代数同型を同じextendedHeadBasisで構成し、lambda�
 任意native complex Kについて、K→single0(H0 K)の実全射とkernelの実短完全列を構成した。kernelのH0=0、正次数homologyはKのものと実同型である。追加変数の写像錐は実完全列からhomologyの有限性と二項係数上界を導き、H0側を別に保つ補正済み比較を証明した。`ActualWitness.nativeFull_corrected_bound`はこれを同じactual x/cut/Zへ適用し、H0モデルとactual relative R-Bettiを代入する。無限次元のchain groupにfinrank加法性を使わず、有限なのは必要なhomologyだけである。原稿では未構成のスペクトル系列の退化の代わりにこの有界比較を採用できる。
 
 この段階の左辺は実全変数作用のnative複体のhomologyである。元の最小表示のintrinsic full Torとの線型変数変換比較は引き続き別の未完義務であり、元のCorrectedFullTransferGoalが閉じたとはまだ表示しない。一般APの実Betti/環・接錐Betti一致、actual target、元体への最終下降も残る。
+
+## A63 — Run15継続：全最小表示の変数変換と通常Tor保存
+
+環同値で実射影解消を運び、tensorの実自然同型とhomology保存を用いて通常Torの同型を構成した。augmentationを保つ多項式環同値と線型変数変換に適用し、有限生成の伝播と通常totalBetti保存を得た。同じcutの拡張non-x基底をactual xと合わせ、全e変数の実多項式環同値を構成した。補完Z、x、lambdaの順の変数列は完全かつ重複なしであり、実作用の一致からnative全変数複体を通常intrinsic Torへ同定した。AlgEquivだけからTor保存を主張していない。
+
+## A64 — Run15継続：元の補正済み全変数比較を閉鎖
+
+actual H0作用と実有界比較へ全変数Tor同定を接続し、`ActualWitness.correctedFullTransfer`により元のCorrectedFullTransferGoalそのものを証明した。H0項f+1は正Betti列の和をj=1から始めることで除外され、対象は元の全e変数の最小表示である。f=0/非零f、標数2の非自明shear、全行で通常Tor保存を受入検査する。補正済み比較を単なる係数恒等式として置いていない。
+
+## A65 — Run15継続：任意元体・全正行のordinary数値容量
+
+相対Rの実H0からbeta0=f+1を証明し、相対末端c_(r+1)=0と通常Torの上次数消滅から全j>rのc_j=0を得た。既存数値rowsに、余ったj>rのtarget非負性を加えて全正行を保持する。beta_j=c_j+c_(j-1)の正確な係数畳み込み、第0項の補正、既存target差恒等式を合成して、`ordinary_betti_bound`は任意元体k・e>=3・全i>=1でactual source beta_i<=i*choose(m,i+1)を与える。体拡大は通常Betti保存により元のkへ下降する。
+
+この数値容量の証明自体は幅仮定を使わず、原稿のordinary枝に必要なものより強いsource上界となる。literal interval completionがordinary targetである同定と、actual targetのBetti公式は依然必要である。一般APの公差d>=1の実Betti公式と半群環/接錐Betti一致も残る。Run15全体の完了とは表示しない。

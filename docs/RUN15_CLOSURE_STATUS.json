@@ -26,20 +26,24 @@
     "actual B algebra and P-module isomorphism, including all extended non-x variable actions",
     "actual A/(lambda) square-zero algebra and complementary Z-module isomorphism, actual ordinary Z Betti numbers",
     "native actual R-Koszul H0 with actual complement Z action, Z-module isomorphism to the square-zero model and all Z-Betti rows",
-    "actual same-cut corrected bound via genuine H0 truncation and iterated cone comparisons, with finite homology only; intrinsic full Tor identification still separate"
+    "actual same-cut corrected bound via genuine H0 truncation and iterated cone comparisons, with finite homology only; intrinsic full Tor identification still separate",
+    "ordinary Tor preservation under ring equivalence from actual mapped projective resolutions and tensor naturality",
+    "same-cut actual full polynomial variable change, all-variable order complete and duplicate-free, intrinsic full Tor identified with the actual native complex",
+    "exact original CorrectedFullTransferGoal with H0 correction and full e-variable intrinsic Betti numbers",
+    "exact original OrdinaryBettiBoundGoal over every original arbitrary field and all positive rows; the proved multiplicity capacity bound needs no width hypothesis"
   ],
   "goals": {
-    "1_actual_interfaces": "PARTIAL_TOR_VARIABLE_CHANGE_REMAINS_RELATIVE_TOP_PROVED",
+    "1_actual_interfaces": "PROVED_P_R_FULL_E_INTERFACES_VARIABLE_CHANGE_TOR_FINITE_AND_RELATIVE_TOP",
     "2_general_AP_actual_Betti_and_target": "PARTIAL_ACTUAL_BETTI_AND_RING_CONE_EQUALITY_REMAIN",
     "3_harmonic_initial_module_rank": "PROVED_EXACT_HARMONIC_GOAL_ACTUAL_MODULE_BASIS_SIGNED_MINOR_RATIONAL_AVERAGING",
     "4_actual_tower_Tor": "PROVED_EXACT_ACTUAL_TOR_TO_ROW_GOAL_AND_ACTUAL_R_TARGET_ROWS",
-    "5_corrected_full_transfer": "PARTIAL_ACTUAL_R_H0_Z_ACTION_AND_NATIVE_CORRECTED_COMPARISON_PROVED_INTRINSIC_FULL_TOR_VARIABLE_CHANGE_REMAINS",
-    "6_ordinary_all_fields_all_rows": "NOT_CLOSED",
+    "5_corrected_full_transfer": "PROVED_EXACT_ORIGINAL_CORRECTED_FULL_TRANSFER_GOAL",
+    "6_ordinary_all_fields_all_rows": "PARTIAL_EXACT_ORDINARY_BETTI_BOUND_GOAL_PROVED_ACTUAL_TARGET_AND_COMPLETION_COMPARISON_REMAIN",
     "7_verification_audit_push": "IMPLEMENTED_SCOPE_ONLY_SEE_VERIFICATION_AND_GIT"
   },
   "unresolved_goal_definitions": "audit/run15/RemainingGoals.lean",
   "production_uses_unproved_goal_definitions": false,
-  "acceptance_scope": "Exact HarmonicGoal, RelativeTerminalGoal and ActualTorToRowGoal proved. Actual R-H0 with Z action and corrected native full complex bound proved. General AP, actual target, intrinsic full Tor variable change and final ordinary closure remain open.",
+  "acceptance_scope": "Five exact original goals proved: HarmonicGoal, RelativeTerminalGoal, ActualTorToRowGoal, CorrectedFullTransferGoal and OrdinaryBettiBoundGoal. General APBettiGoal, APConeBettiGoal and OrdinaryActualCompletionGoal remain open.",
   "evidence": "verification/run15/verification.json",
   "new_source_files": 23,
   "new_source_lines": 1706,
@@ -59,5 +63,9 @@
   "h0closure_evidence": "verification/run15_h0closure/verification.json",
   "h0closure_baseline_commit": "20a449c8762bc38db17b48dcf14343a942ac880c",
   "h0closure_new_source_files": 21,
-  "h0closure_new_source_lines": 1213
+  "h0closure_new_source_lines": 1213,
+  "fulltransfer_evidence": "verification/run15_fulltransfer/verification.json",
+  "fulltransfer_baseline_commit": "aa98d3cf717b918e4c6c6b1d03bf59fb3ecfd70b",
+  "fulltransfer_new_source_files": 16,
+  "fulltransfer_new_source_lines": 696
 }

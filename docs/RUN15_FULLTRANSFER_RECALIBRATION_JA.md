@@ -1,0 +1,7 @@
+# Run15実測に基づく20 run計画の継続校正
+
+今回の検証は16数学module696行、全86コマンド、新規117宣言を含む全5366宣言。空test cacheから194.391秒で通過した。検証原本はverification/run15_fulltransfer。前段のactual H0とnative比較は21module1213行・83コマンド・207.789秒だった。実装上の主な負担は検証コマンドではなく、数学的接続とLean上の同じ実複体の表現を揃える作業にあった。
+
+Run15の元の8目標は5個がexact theoremで閉じた。一般AP実Betti、一般APの半群環/接錐Betti一致、actual完成targetとの比較の3個は残る。sourceの任意体全正行容量は閉じたが、これをactual target同定の代わりにしない。
+
+Run15はこの3目標を同じrunで継続する。Run16–20の狭幅端点・Kneser/SC・BHP/EK・N4/LTV・全域合成の完成条件は変更しない。20という数を守るためにAP入力やtarget同定を未証明のfieldへ移したり、別runへ追い出してRun15を完了と表示したりしない。一般AP実解消/実Koszul計算が閉じた段階で、その実測を使って残りの所要量を再評価する。
