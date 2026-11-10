@@ -658,3 +658,11 @@ T_(f+2)−T_(f+1)のH₀補正係数も証明する。これはactual target Bet
 未証明入力やconstructorのfieldとして追加しない。
 監査用RemainingGoalsの8命題はdef : Propとして保存し、productionへ依存させない。
 最終原稿との一致にはRUN15_REMAINING_DECLARATIONS_JA.mdの接続が必要。
+
+## A55 — Run15継続：actual加群からのharmonic評価
+
+任意個数のP生成元に対し、加群項m.syn ×lex Fin qからactual標準基底を構成し、除数閉性と乗法の三角性を証明した。実Koszul微分に入れる列と実座標から読み取る行で三角小行列を作り、対角±1を証明する。有理数での多重次数平均化と外積部分集合の計数により実boundary rankを評価し、有限鎖Eulerと接続した。Harmonic.harmonic_boundは元のHarmonicGoalそのものを証明する。体内で分母を割らず、標数2も保持する。原稿では初項複体全体のrank比較を独立の入力とする代わりに、この直接の実minor証明を採用できる。
+
+## A56 — Run15継続：同じcutのtower資源row
+
+実truncationの座標から次数分解・単一次数生成・有限台を構成し、H0を実最下次数成分へ同定する。末端Xの消滅を実商から証明して第2/3Tor不等式をtelescopingし、同じH_tだけの既存rowへ全行を接続した。TowerRow.cutTower_resource_rowはj=1とj=rを保持する。actual Gからの第1x-Koszul比較、B評価、補正済み全変数比較と一般AP/targetのactual Bettiは引き続き接続が必要であり、ordinary枝の完成はまだ主張しない。
