@@ -1,0 +1,38 @@
+{
+  "status": "IN_PROGRESS_NOT_RUN16_COMPLETE",
+  "run16_complete": false,
+  "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "requested_plan_commit": "0cda4e8597ea1bafa8770b851ff2373973ee0e03",
+  "ids": {
+    "I_NORMALIZE": "PROVED",
+    "E_CORE": "PROVED",
+    "E_COORD": "PARTIAL_COORDINATE_INDEX_EQUIV_ONLY",
+    "E_KERNEL": "UNPROVED",
+    "E_STOP": "UNPROVED",
+    "E_BOUNDS": "UNPROVED",
+    "E_HOMOLOGY": "UNPROVED",
+    "E_TRANSFER": "UNPROVED",
+    "E_ARTIN": "UNPROVED",
+    "E_ROW": "UNPROVED",
+    "E_TWO": "UNPROVED"
+  },
+  "proved_exports": [
+    "broad EH actual source/minimal atoms/multiplicity/width",
+    "original-source narrow normalization, same carrier/graded algebra/intrinsic Betti",
+    "P/R/full variable identification for endpoint E, internal T and full S",
+    "actual integer monoid algebra core, graded monomial map, actual surjection and exact dead-monomial linear kernel",
+    "unique nonnegative residue/L/K coordinates of actual core indices"
+  ],
+  "unproved_ids": [
+    "E_COORD",
+    "E_KERNEL",
+    "E_STOP",
+    "E_BOUNDS",
+    "E_HOMOLOGY",
+    "E_TRANSFER",
+    "E_ARTIN",
+    "E_ROW",
+    "E_TWO"
+  ],
+  "production_uses_unproved_goal_inputs": false
+}

@@ -1,0 +1,9 @@
+tests/EndpointData.lean:50:61: error(lean.invalidField): Invalid field `q_add_one_le_u`: The environment does not contain `NSP14.Endpoint.Data.q_add_one_le_u`, so it is not possible to project the field `q_add_one_le_u` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointData.lean:52:59: error(lean.invalidField): Invalid field `internalOffset`: The environment does not contain `NSP14.Endpoint.Data.internalOffset`, so it is not possible to project the field `internalOffset` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointData.lean:52:79: error(lean.invalidField): Invalid field `internalOffset_strictMono`: The environment does not contain `NSP14.Endpoint.Data.internalOffset_strictMono`, so it is not possible to project the field `internalOffset_strictMono` from an expression
+  D
+of type `Endpoint.Data`

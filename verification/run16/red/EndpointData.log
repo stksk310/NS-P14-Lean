@@ -1,0 +1,8 @@
+tests/EndpointData.lean:7:27: error(lean.unknownIdentifier): Unknown identifier `Endpoint.Data`
+tests/EndpointData.lean:20:19: error(lean.unknownIdentifier): Unknown identifier `Endpoint.Data`
+tests/EndpointData.lean:33:8: warning: declaration uses `sorry`
+tests/EndpointData.lean:36:81: error: unsolved goals
+⊢ sorry = 4
+tests/EndpointData.lean:40:57: error: unsolved goals
+⊢ sorry = 8
+tests/EndpointData.lean:44:32: error(lean.unknownIdentifier): Unknown identifier `Endpoint.Data`
