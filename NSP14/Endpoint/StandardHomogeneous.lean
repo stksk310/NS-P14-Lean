@@ -30,7 +30,7 @@ theorem normal_homogeneous [Fintype σ] [LinearOrder σ]
   rw [map_sub,MvPolynomial.homogeneousComponent_eq_self hf] at hc
   have hi : r.val-MvPolynomial.homogeneousComponent n r.val∈I := by
     have := I.sub_mem hc hr
-    convert this using 1 <;> abel
+    convert this using 1; abel
   have hz := normal_in_ideal_eq_zero MonomialOrder.degLex I _
     ((normalSpace MonomialOrder.degLex I).sub_mem r.property (normal_component k σ _ I n r)) hi
   have he : r.val=MvPolynomial.homogeneousComponent n r.val := sub_eq_zero.mp hz

@@ -1,0 +1,3 @@
+tests/EndpointInternalCoordinates.lean:8:49: error(lean.invalidField): Invalid field `internal_coordinate_step`: The environment does not contain `NSP14.Endpoint.Data.internal_coordinate_step`, so it is not possible to project the field `internal_coordinate_step` from an expression
+  D
+of type `Data`

@@ -6,7 +6,7 @@ open CategoryTheory HomologicalComplex
 namespace NSP14.Endpoint
 variable (k : Type) [Field k] (K : ChainComplex (ModuleCat.{0} k) ℕ) (f : K ⟶ K)
   [∀ i,Module.Finite k (K.homology i)]
-example (h : Module.finrank k (K.homology 2)=0) :
+theorem EndpointConeBalance_acceptance_001 (h : Module.finrank k (K.homology 2)=0) :
     Module.finrank k ((homotopyCofiber f).homology 1)=
       Module.finrank k ((homotopyCofiber f).homology 0)+Module.finrank k ((homotopyCofiber f).homology 2) :=
   endomorphismCone_balance k K f h

@@ -4,6 +4,26 @@ Lean開発・監査ブランチ：`work`。今後の関連成果物のPushはユ
 [Git運用と承認記録](docs/LEAN_WORKFLOW.md)／[監査引継ぎ](AUDIT_HANDOFF.md)
 [Leanと最終原稿の対応・変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)
 
+## Lean implementation — Run 16
+
+Run16 closes the actual endpoint chain: broad EH normalization, the integer core,
+all-competitor kernel and finite stopping, exact endpoint homology/socle,
+kernel compensation, general Artin bounds and every full Betti row over any field.
+The original narrow completed source has direct entry points
+`narrow_endpoint_rows` and `narrow_endpoint_two_rows`.
+Final audit/publication state: [Run16 status](docs/RUN16_CLOSURE_STATUS.json).
+
+```sh
+python3 scripts/verify_run16.py --fresh-test-cache
+```
+
+[Actual exports and review guide](docs/RUN16_AUDIT_HANDOFF_JA.md),
+[paper correspondence](docs/RUN16_PAPER_CORRESPONDENCE_JA.md),
+[recalibration](docs/RUN16_PLAN_RECALIBRATION_JA.md).
+Run15 ordinary closure was completed at `447b7ae`; its original eight goals and
+all predecessor evidence are preserved. Kneser/SC, BHP/EK, N4/LTV and the final
+P14 synthesis remain Runs17–20. Historical entries below describe their own stage.
+
 ## Lean implementation — Run 14
 
 Run14 continuation closes arbitrary-characteristic degree-two Green, one actual

@@ -756,3 +756,22 @@ audit/run15_closure/ClosedGoals.leanのall_original_goals_closedは、凍結し�
 ### A73 — TLOW個別行の明示的export
 
 APLowerRowsは一般Fminから、F1≥choose(v,2)+1、F2≥2choose(v,3)+v (v≥3)、F3≥3choose(v,4)+choose(v,2) (v≥5)、F4≥4choose(v,5)を証明し、同一literal interval completionの完成接錐へ一括適用する。v=3/5の隣接二項係数が等しい端点も含む。一般下界が存在するだけで個別行まで供給済みとはせず、この接続を明記する。
+
+
+### A74 — Run16の同じactual sourceのEH正規化と整数core
+
+raw EHのm,d,a,uを維持し、actual sourceの最小原子、multiplicity、embedding、widthを証明。du<mやgcd(m,u)=1は追加しない。狭幅では元のcarrier・次数付き代数・完備接錐・各自の最小表示のBettiへ戻る。整数対(n,B)の実coreからGへの全射と全長い表示による核、E上のC≃⊕M、G≃⊕M/(M∩T)を実作用で構成した。
+
+### A75 — 全競合停止、実端点socleと同じ向きの資源
+
+極小core点の純内部語長<u、全残基非空、周期u/gcd(m,u)を用いて全jを停止。実端点homologyは(PG,PG+R,R)。Gのk有限性を仮定しない。実socle基底をM内のNの角と同定し、隣接極小点の角式も証明。T商への実単射からR≤Σz≤W−uとR≤u max(Hx−2,0)を得る。PCとPG、Rと内部σを混同しない。
+
+### A76 — 一般Artin評価の証明経路変更
+
+真の斉次ideal・一次関係0・実有限商を持つ任意体上のT/Iについて、実Gröbner正規形が次数を保つこと、実基底・有限台・Hilbert総和・次数0生成とaugmentationを構成。第一行はRun15の実標準加群の調和型定理j=1から導出し、parent/child計数の重複を避けた。実完全列のconnecting mapからb1=実idealのTor0を供給。三形、負係数を保つ符号付き差、q5の差14をℚ上で証明。独立な±1 Koszul minorにより全正次数評価を得る。詳細と判断の費用はRun16原稿対応台帳・execution ledgerに記録。
+
+### A77 — Run16の全行・二内部変数・具体例
+
+実QC→QGの核完全列でPC−PGを補償し、q内部変数からq+2全変数へ移行。floor・減算の加法形、第0/top/上次数行を保持し、元の狭幅完備sourceへの全行APIを構成した。q2のみ実単項式核を証明。内部carry作用と内部socle点基底からσ_Cを数え、実二変数Koszulから(1,σ_C+1,σ_C)と四行を得る。一般qの非単項式関係を排除しない。
+
+三例のactual(PC,PG,R)=(5,4,0),(5,5,0),(9,6,1)は任意体でLean等式。これらは実対象との一致を証明した有限計算を使う。反射でHxが異なること、q3の生存関係、標数2を確認する。799例の独立回帰は一般証明の代替ではない。Run17–20の担当は引き続き保持する。

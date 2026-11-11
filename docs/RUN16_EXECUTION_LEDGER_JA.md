@@ -25,10 +25,12 @@ Ruling: cloud skillの実行スクリプトはローカルfilesystemの実行可
 11 ID: I_NORMALIZE, E_CORE, E_COORD, E_KERNEL, E_STOP, E_BOUNDS,
 E_HOMOLOGY, E_TRANSFER, E_ARTIN, E_ROW, E_TWO。すべて未完から開始。
 
-- Task1 in progress: EHを広い算術条件のみで固定し、actual sourceと最小原子を構成する。
-- Task2–7 pending。
+- Task1–6: 数学的なactual接続を実装済み。最終判定はclosure statusと最終検証記録。
+- Task7: 全回帰・独立レビュー・監査ZIP・通常Pushを実行中。
 
 小補題/ファイル/内部commitをrun終了にしない。証明・回帰・原稿台帳・監査引継ぎ・Pushまで継続。
+
+## 時系列履歴（以下のpendingは当時の状態）
 
 Task1: raw EH Data/source/atoms/multiplicity/embeddingDimension/width GREEN。
 RED: verification/run16/red/EndpointData.log (Endpoint.Data未定義)。
@@ -64,3 +66,18 @@ E_COORD major connections GREEN: genuine E-module C≃directSum M; Min words pur
 Geometry/transfer regression: root5758 jobs PASS; 26 scoped acceptance files PASS in verification/run16/transfer/results.json. FullTransfer combined bound, original completed/narrow transports, actual zero/top/above rows built. QC Min basis and PC<=W, genuine internal polynomial presentation/grading and degree-one labels independently built. This is an internal durability checkpoint; same Run16 continues; Rhat/general Artin/q2/final audit unresolved.
 
 E_HOMOLOGY closed: TwoActionTop actual chain top, cycle/joint kernel and actual H2 native G-linear equivalence; Socle actual simultaneous x/v annihilator, finite k, actualR=its finrank. CoreHilbert h0=1, h1=q and n>=u vanishing GREEN. Rhat injection/count remains E_BOUNDS, not hidden in E_HOMOLOGY claim.
+
+
+Ruling: E_ARTINの三つの第一行評価の導出には、計画記載のparent/child重み計数を新規に重複実装する代わりに、Run15の`generated_harmonic_bound`（実初期加群・標準単項式・実Koszul rankに基づく一般定理）のj=1を使用する。真の斉次ideal Iについて実商の標準単項式座標・次数分解・有限台・h0=1・h1=q・次数0生成・b0=1を今回証明し、`artin_first_harmonic`、全三形、q=5の符号付き差を導出した。`artinFirstIdealIso`は実完全列0→I→T→T/I→0のconnecting mapからb1=dim(I/(y)I)を供給する。— 同じ結論を既存のより一般的な実証明で得て依存の重複を避ける判断。原稿ではIV.21の証明経路をこの調和型評価へ差し替える必要がある。— 誤りの場合の費用：計画のparent/child計数の独立形式化が別途必要となるが、一般商の全行exportに未証明のArtin評価を入力してはいない。
+
+Tasks1–6: 数学的接続を実装し、11 IDの受入型を `audit/run16/ClosedGoals.lean` に固定。一般Artin商、実完全列によるb1/ideal Tor0、全三形、q5、±1 minor、元の狭幅完備接錐への全行APIまで接続済み。実R角基底・内部σ_C基底を別々に構成し、q2単項式性を別証明した。すべての新規production moduleのroot build（5894 jobs、後追加時は最新ログを正本）を警告なしで通過。
+
+Concrete acceptance: `EndpointComputedExamples.lean` は三例のPC/PG/R九等式を任意体で証明。標数2にも実適用。大きすぎるR計算窓での最初の`decide`はheartbeat制限に達したため、実competitor上端を証明してから小さな窓に制限する `actualR_computed_window` を追加し、同じR値を核で検証した。heartbeat制限の増加・native_decide・検算値のaxiom化は行っていない。反射のHx差、q3非単項式関係の生存、u最小端/u|m/height0,1,2,3を試験した。
+
+Task7: `scripts/verify_run16.py --fresh-test-cache` を開始。過去baselineをbytes固定し、空のproject test cacheから依存順の全回帰と全新規宣言の型/公理監査を実行する。数値独立モデル799例は約1.1秒で通過。最終レビュー・監査ZIP・Pushが終わるまでRun16を終了扱いにしない。
+
+Verification metadata repair: 最初のcold検証は146受入、既存数値、独立座標モデル、公理抽出がexit0。その後、28 test moduleにexport宣言がないためcoverage assertionが停止した。原因は匿名exampleの非永続性であり、production宣言の欠落ではない。同じ受入命題61件を32ファイルで名前付き定理へ変更し、全test moduleも型監査する既存assertionを緩めず再実行した。旧試行はfinal_attempt_anonymousに保存。source/evidence hashと全cold回帰を新しい名前付き版に対して作り直す。
+
+Named acceptance scope repair: 第二試行は0..137番まで通過。EndpointStandardArtinの三つの名前付き受入定理で、証明本体だけが参照するsection仮定hp/hh/h1/hqに明示includeが必要だった。意図した同じ仮定を宣言へ明記し、該当ファイルと後続六ファイルを個別に再検証して警告/エラーなし。その後、最終source hashを一つのcold結果に束縛するため全回帰を再実行。旧試行はfinal_attempt_named_scopeに保持。production証明は変更していない。
+
+Task7 cold verification: FINAL PASS_RUN16_PROOF_CLOSURE。150 commands、146受入、7835環境宣言、1629新規宣言（通常/explicit型）、2160過去原本をbytes固定、production7586行。総コマンド実測440.594秒。全件exit0/警告なし。許容依存はpropext/Classical.choice/Quot.soundのみ。source集合・hashの前後一致、自己依存なし。これを固定commitに保存し、一回のfresh-context全体レビューへ渡す。

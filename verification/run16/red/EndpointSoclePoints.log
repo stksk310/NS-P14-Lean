@@ -1,0 +1,6 @@
+tests/EndpointSoclePoints.lean:5:65: error(lean.invalidField): Invalid field `EndpointSocleExponent`: The environment does not contain `NSP14.Endpoint.Data.EndpointSocleExponent`, so it is not possible to project the field `EndpointSocleExponent` from an expression
+  D
+of type `Data`
+tests/EndpointSoclePoints.lean:6:4: error(lean.invalidField): Invalid field `actualR_exponent_count`: The environment does not contain `NSP14.Endpoint.Data.actualR_exponent_count`, so it is not possible to project the field `actualR_exponent_count` from an expression
+  D
+of type `Data`

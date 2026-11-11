@@ -1,6 +1,15 @@
 # Lean化進捗
 
-## 最新状態：Run14途中成果（2026年11月10日JST）
+## 最新状態：Run16（2026年11月11日JST）
+
+Run14とRun15は完成・Push済み。Run16は担当11 IDの数学的actual接続を閉じ、全回帰・独立レビュー・監査ZIP・通常Pushを実行する段階。最終判定は [Run16 closure status](docs/RUN16_CLOSURE_STATUS.json) を正本とする。
+
+同じsourceからEH正規化、実core全射、N=M∩T、全j停止、実homology三項、実R角基底/Rhat、核補償付き全行Tor、一般Artin商、q=2の単項式性・内部σ基底・四行評価まで接続した。原稿へ戻す証明変更は [Run16原稿台帳](docs/RUN16_PAPER_CORRESPONDENCE_JA.md) に記録する。
+
+実際の元の狭幅完備接錐への出口は `narrow_endpoint_rows` と `narrow_endpoint_two_rows`。全P14の最終合成はRun17–20に残る。再現は `python3 scripts/verify_run16.py --fresh-test-cache`。以下のpending記述は各段階当時の履歴であり、最新境界を意味しない。
+
+
+## 履歴：Run14途中成果（2026年11月10日JST）
 
 Run13は`d8556dc`で完成・Push済み。Run14は未完であり、完了run数へ加算しない。
 11個の新規source・1,245行で、actual offset/安定化/有限性、最大Q₂からのSidon、

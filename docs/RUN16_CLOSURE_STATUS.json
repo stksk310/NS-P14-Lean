@@ -1,20 +1,20 @@
 {
-  "status": "IN_PROGRESS_NOT_RUN16_COMPLETE",
+  "status": "VERIFIED_PENDING_INDEPENDENT_REVIEW",
   "run16_complete": false,
   "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
   "requested_plan_commit": "0cda4e8597ea1bafa8770b851ff2373973ee0e03",
   "ids": {
-    "I_NORMALIZE": "PROVED",
-    "E_CORE": "PROVED",
-    "E_COORD": "PROVED",
-    "E_KERNEL": "PROVED",
-    "E_STOP": "PROVED",
-    "E_BOUNDS": "PARTIAL_PC_W_CARRY_Z_PROVED_ACTUAL_SOCLE_RHAT_PENDING",
-    "E_HOMOLOGY": "PROVED",
-    "E_TRANSFER": "PARTIAL_ACTUAL_KERNEL_COMPENSATED_FULL_COMPLETED_BOUND_PROVED_RHAT_PENDING",
-    "E_ARTIN": "PARTIAL_ACTUAL_QC_BASIS_STANDARD_GRADING_INTERNAL_PRESENTATION_PROVED_GENERAL_ROWS_PENDING",
-    "E_ROW": "UNPROVED",
-    "E_TWO": "UNPROVED"
+    "I_NORMALIZE": "PROVED_VERIFIED",
+    "E_CORE": "PROVED_VERIFIED",
+    "E_COORD": "PROVED_VERIFIED",
+    "E_KERNEL": "PROVED_VERIFIED",
+    "E_STOP": "PROVED_VERIFIED",
+    "E_BOUNDS": "PROVED_VERIFIED",
+    "E_HOMOLOGY": "PROVED_VERIFIED",
+    "E_TRANSFER": "PROVED_VERIFIED",
+    "E_ARTIN": "PROVED_VERIFIED",
+    "E_ROW": "PROVED_VERIFIED",
+    "E_TWO": "PROVED_VERIFIED"
   },
   "proved_exports": [
     "broad EH actual source/minimal atoms/multiplicity/width",
@@ -31,14 +31,29 @@
     "actual QC minimal-point basis, PC=minimalCount<=W, internal presentation surjective, degree1 labels and degree>=u vanish",
     "same-orientation carry cancellation and T-antichains: sum z<=W-u, z<=Hx-2",
     "actual endpoint H2 is the simultaneous annihilator in G, G-linear before coefficient restriction; exact homology dimensions (PG,PG+R,R)",
-    "QC genuine standard grading, h0=1,h1=q, all degrees n>=u vanish, actual q-variable presentation surjective"
+    "QC genuine standard grading, h0=1,h1=q, all degrees n>=u vanish, actual q-variable presentation surjective",
+    "actual endpoint socle basis in M\\N corners and adjacent-minimal-point formula; exact R point counts",
+    "actual R<=sum z<=W-u and R<=u max(Hx-2,0), same-orientation Rhat",
+    "all kernel-compensated actual/completed/narrow-source row bounds, including i0/top/above",
+    "general actual homogeneous Artin quotient, finite graded basis/hilbert, genuine connecting first ideal iso and first three estimates/q5/positive minor rows",
+    "q2 genuine monomial kernel; exact carry action; actual internal socle point basis and (1,sigma+1,sigma)",
+    "certified executable finite models and all three arbitrary-field actual (PC,PG,R) examples"
   ],
-  "unproved_ids": [
-    "E_BOUNDS",
-    "E_TRANSFER",
-    "E_ARTIN",
-    "E_ROW",
-    "E_TWO"
-  ],
-  "production_uses_unproved_goal_inputs": false
+  "unproved_ids": [],
+  "production_uses_unproved_goal_inputs": false,
+  "proof_goals_complete": true,
+  "unproved_goal_declarations": [],
+  "closure_contract": "audit/run16/ClosedGoals.lean",
+  "canonical_api": "NSP14/Endpoint/RowPackage.lean",
+  "paper_ledger": "docs/RUN16_PAPER_CORRESPONDENCE_JA.md",
+  "verification_pending": false,
+  "verification": "verification/run16/final/verification.json",
+  "verification_checks": 150,
+  "environment_declarations": 7835,
+  "new_environment_declarations": 1629,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
 }

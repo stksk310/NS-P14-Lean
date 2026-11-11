@@ -6,6 +6,6 @@ public import NSP14.Endpoint.Volume
 open scoped BigOperators
 namespace NSP14.Endpoint.Data
 variable (D : NSP14.Endpoint.Data)
-example : (∑ s : Fin D.u,D.competitorZ s)≤D.wordVolume-D.u := D.competitorZ_sum_bound
-example (s : Fin D.u) : D.competitorZ s≤D.coreHeight-2 := D.competitorZ_height s
+theorem EndpointCompetitorBounds_acceptance_001 : (∑ s : Fin D.u,D.competitorZ s)≤D.wordVolume-D.u := D.competitorZ_sum_bound
+theorem EndpointCompetitorBounds_acceptance_002 (s : Fin D.u) : D.competitorZ s≤D.coreHeight-2 := D.competitorZ_height s
 end NSP14.Endpoint.Data

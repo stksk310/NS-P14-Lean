@@ -5,6 +5,6 @@ public import NSP14.Endpoint.Volume
 @[expose] public section
 namespace NSP14.Endpoint.Data
 variable (D : NSP14.Endpoint.Data) (k : Type) [Field k]
-example : D.coreP k≤D.wordVolume := D.coreP_le_wordVolume k
-example : D.coreP k=∑ r : Fin D.u,(D.minimalPoints r).card := D.coreP_minimalCount k
+theorem EndpointCoreArtin_acceptance_001 : D.coreP k≤D.wordVolume := D.coreP_le_wordVolume k
+theorem EndpointCoreArtin_acceptance_002 : D.coreP k=∑ r : Fin D.u,(D.minimalPoints r).card := D.coreP_minimalCount k
 end NSP14.Endpoint.Data
