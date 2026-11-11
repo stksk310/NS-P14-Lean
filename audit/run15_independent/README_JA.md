@@ -75,6 +75,7 @@ python3 audit/run15_independent/check_ap_koszul.py
 `check_replay.py`は再実行の完了ログを要求し、公開時と同じ101検査、397 project module（rootを含む）のcold build、
 全宣言の通常/explicit型・kind/module・公理集合とsource hashの一致を検査して別ディレクトリへ証拠を保存する。
 `verification/run15_closure`の原本は、保存後に監査対象commitの内容へ戻した。
+公開ZIP用のmanifestは再生成証拠へ複写せず、独立証拠は`verification/run15_independent/MANIFEST_SHA256.json`で束縛する。
 記録された絶対`-o`を別checkoutで再生せず、verifierが現在のcheckoutから生成するコマンドを使用する。
 
 ## 境界と後続

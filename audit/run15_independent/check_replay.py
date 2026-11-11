@@ -58,7 +58,11 @@ def main():
     assert hashes == json.loads(original('verification/run15_closure/SOURCE_SHA256.json'))
     for path, digest in hashes.items():
         assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest() == digest, path
-    shutil.copytree(CURRENT, SAVED, dirs_exist_ok=True)
+    # The stock packager's manifest authenticates the original publication,
+    # not newly generated timings/logs. The independent bundle has its own
+    # manifest; do not carry the historical publication manifest into it.
+    shutil.copytree(CURRENT, SAVED, dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns('MANIFEST_SHA256.json'))
     shutil.copyfile(args.run_log, SAVED/'independent_run.log')
     result = dict(status='PASS_INDEPENDENT_REPLAY_COMPARISON', audited_commit=AUDITED,
                   checks=len(fresh['checks']), all_exit_codes_zero=True,
