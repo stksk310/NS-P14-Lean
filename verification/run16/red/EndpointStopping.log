@@ -1,0 +1,3 @@
+tests/EndpointStopping.lean:10:63: error(lean.invalidField): Invalid field `competitorFiber_stopping`: The environment does not contain `NSP14.Endpoint.Data.competitorFiber_stopping`, so it is not possible to project the field `competitorFiber_stopping` from an expression
+  D
+of type `Data`

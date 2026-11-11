@@ -1,0 +1,172 @@
+[
+  {
+    "test": "tests/EndpointActualKernel.lean",
+    "exit": 0,
+    "seconds": 1.553096204996109
+  },
+  {
+    "test": "tests/EndpointArtinRank.lean",
+    "exit": 0,
+    "seconds": 1.5953067239897791
+  },
+  {
+    "test": "tests/EndpointArtinRefinements.lean",
+    "exit": 0,
+    "seconds": 1.6176505420007743
+  },
+  {
+    "test": "tests/EndpointCarry.lean",
+    "exit": 0,
+    "seconds": 1.5746370909910183
+  },
+  {
+    "test": "tests/EndpointCompensation.lean",
+    "exit": 0,
+    "seconds": 1.4289635769964661
+  },
+  {
+    "test": "tests/EndpointCompetitorBounds.lean",
+    "exit": 0,
+    "seconds": 1.5029080630047247
+  },
+  {
+    "test": "tests/EndpointCompetitors.lean",
+    "exit": 0,
+    "seconds": 1.8618424400046933
+  },
+  {
+    "test": "tests/EndpointConeBalance.lean",
+    "exit": 0,
+    "seconds": 1.7029343169997446
+  },
+  {
+    "test": "tests/EndpointCoordinates.lean",
+    "exit": 0,
+    "seconds": 1.533706954010995
+  },
+  {
+    "test": "tests/EndpointCore.lean",
+    "exit": 0,
+    "seconds": 1.6125352139933966
+  },
+  {
+    "test": "tests/EndpointCoreArtin.lean",
+    "exit": 0,
+    "seconds": 1.4132980699941982
+  },
+  {
+    "test": "tests/EndpointCoreGrading.lean",
+    "exit": 0,
+    "seconds": 1.446895234985277
+  },
+  {
+    "test": "tests/EndpointData.lean",
+    "exit": 0,
+    "seconds": 1.6761479990091175
+  },
+  {
+    "test": "tests/EndpointFiberModule.lean",
+    "exit": 0,
+    "seconds": 1.6222629029944073
+  },
+  {
+    "test": "tests/EndpointFibers.lean",
+    "exit": 0,
+    "seconds": 1.7030982479918748
+  },
+  {
+    "test": "tests/EndpointFirstBetti.lean",
+    "exit": 0,
+    "seconds": 1.5061570290126838
+  },
+  {
+    "test": "tests/EndpointHomology.lean",
+    "exit": 0,
+    "seconds": 1.3652096879959572
+  },
+  {
+    "test": "tests/EndpointMinimal.lean",
+    "exit": 0,
+    "seconds": 1.4479244319954887
+  },
+  {
+    "test": "tests/EndpointMinimalBounds.lean",
+    "exit": 0,
+    "seconds": 1.5533861469884869
+  },
+  {
+    "test": "tests/EndpointModules.lean",
+    "exit": 0,
+    "seconds": 1.7547783769841772
+  },
+  {
+    "test": "tests/EndpointNativeTransfer.lean",
+    "exit": 0,
+    "seconds": 1.607459237013245
+  },
+  {
+    "test": "tests/EndpointNilpotence.lean",
+    "exit": 0,
+    "seconds": 1.5428974220121745
+  },
+  {
+    "test": "tests/EndpointNormalization.lean",
+    "exit": 0,
+    "seconds": 1.5324243390059564
+  },
+  {
+    "test": "tests/EndpointPresentation.lean",
+    "exit": 0,
+    "seconds": 1.6253219820209779
+  },
+  {
+    "test": "tests/EndpointQuadratic.lean",
+    "exit": 0,
+    "seconds": 1.4733150110114366
+  },
+  {
+    "test": "tests/EndpointQuotient.lean",
+    "exit": 0,
+    "seconds": 1.6394073700066656
+  },
+  {
+    "test": "tests/EndpointResidues.lean",
+    "exit": 0,
+    "seconds": 1.3989881430170499
+  },
+  {
+    "test": "tests/EndpointRhat.lean",
+    "exit": 0,
+    "seconds": 1.9251416289771441
+  },
+  {
+    "test": "tests/EndpointRows.lean",
+    "exit": 0,
+    "seconds": 1.5759579619916622
+  },
+  {
+    "test": "tests/EndpointSocle.lean",
+    "exit": 0,
+    "seconds": 1.4853558320028242
+  },
+  {
+    "test": "tests/EndpointStopping.lean",
+    "exit": 0,
+    "seconds": 1.6571935460087843
+  },
+  {
+    "test": "tests/EndpointTwoVariables.lean",
+    "exit": 0,
+    "seconds": 1.6727557099948172
+  },
+  {
+    "test": "tests/EndpointVolume.lean",
+    "exit": 0,
+    "seconds": 1.5956968059763312
+  },
+  {
+    "test": "tests/EndpointWords.lean",
+    "exit": 0,
+    "seconds": 1.7706495199818164
+  }
+]

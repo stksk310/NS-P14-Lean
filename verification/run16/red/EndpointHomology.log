@@ -1,0 +1,6 @@
+tests/EndpointHomology.lean:6:38: error(lean.invalidField): Invalid field `endpointComplex`: The environment does not contain `NSP14.Endpoint.Data.endpointComplex`, so it is not possible to project the field `endpointComplex` from an expression
+  D
+of type `Data`
+tests/EndpointHomology.lean:6:74: error(lean.invalidField): Invalid field `endpointHomologyFinite`: The environment does not contain `NSP14.Endpoint.Data.endpointHomologyFinite`, so it is not possible to project the field `endpointHomologyFinite` from an expression
+  D
+of type `Data`

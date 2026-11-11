@@ -1,0 +1,3 @@
+tests/EndpointCompetitors.lean:12:4: error(lean.invalidField): Invalid field `core_dead_iff_competitor`: The environment does not contain `NSP14.Endpoint.Data.core_dead_iff_competitor`, so it is not possible to project the field `core_dead_iff_competitor` from an expression
+  D
+of type `Endpoint.Data`

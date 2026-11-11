@@ -1,0 +1,3 @@
+tests/EndpointFiberModule.lean:11:48: error(lean.invalidField): Invalid field `coreFiberModuleEquiv`: The environment does not contain `NSP14.Endpoint.Data.coreFiberModuleEquiv`, so it is not possible to project the field `coreFiberModuleEquiv` from an expression
+  D
+of type `Endpoint.Data`

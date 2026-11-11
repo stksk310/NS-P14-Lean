@@ -1,0 +1,6 @@
+tests/EndpointMinimalBounds.lean:7:23: error(lean.invalidField): Invalid field `minimalFiber_budget`: The environment does not contain `NSP14.Endpoint.Data.minimalFiber_budget`, so it is not possible to project the field `minimalFiber_budget` from an expression
+  D
+of type `Data`
+tests/EndpointMinimalBounds.lean:8:74: error(lean.invalidField): Invalid field `minimalFiber_finite`: The environment does not contain `NSP14.Endpoint.Data.minimalFiber_finite`, so it is not possible to project the field `minimalFiber_finite` from an expression
+  D
+of type `Data`

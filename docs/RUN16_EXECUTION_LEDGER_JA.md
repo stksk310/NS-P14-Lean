@@ -58,3 +58,9 @@ Gのk有限性は要求しない。候補段階なのでE_HOMOLOGYを完了に�
 Task1 complete (I_NORMALIZE): actual narrow normalization, broad raw EH, actual minimal full presentation, original-source graded/completed/Bettis transport. Six scoped acceptance files including core/coordinates have exited0; root build5668 jobs PASS.
 E_CORE complete: actual coreToG AlgHom surjective; coreToG_kernel_span exactly the killed core monomial span; full presentation diagram proved.
 E_COORD remains partial: only coordinate index equivalence, no E-module direct-sum/finiteness/short words/antichain bounds yet. Continuing same run.
+
+E_COORD major connections GREEN: genuine E-module C≃directSum M; Min words pure internal with length<u; all fibers nonzero; Hx<=u-2; actual finite ideal generating set proved. E_KERNEL actual G≃directSum M/N is E-linear, N independently actual dead-order ideal, N=M∩T. E_STOP exact all-j finite stopping, E-finiteness, v^m=0 and rank0 GREEN. Endpoint homology finite over k and ordinary E-Tor comparison GREEN; no k-finite G input. Remaining actual quotient/PC/W/R bounds/homology Euler/transfer/Artin/final rows pending.
+
+Geometry/transfer regression: root5758 jobs PASS; 26 scoped acceptance files PASS in verification/run16/transfer/results.json. FullTransfer combined bound, original completed/narrow transports, actual zero/top/above rows built. QC Min basis and PC<=W, genuine internal polynomial presentation/grading and degree-one labels independently built. This is an internal durability checkpoint; same Run16 continues; Rhat/general Artin/q2/final audit unresolved.
+
+E_HOMOLOGY closed: TwoActionTop actual chain top, cycle/joint kernel and actual H2 native G-linear equivalence; Socle actual simultaneous x/v annihilator, finite k, actualR=its finrank. CoreHilbert h0=1, h1=q and n>=u vanishing GREEN. Rhat injection/count remains E_BOUNDS, not hidden in E_HOMOLOGY claim.

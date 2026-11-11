@@ -1,0 +1,12 @@
+tests/EndpointCompetitorBounds.lean:8:27: error(lean.invalidField): Invalid field `competitorZ`: The environment does not contain `NSP14.Endpoint.Data.competitorZ`, so it is not possible to project the field `competitorZ` from an expression
+  D
+of type `Data`
+tests/EndpointCompetitorBounds.lean:8:64: error(lean.invalidField): Invalid field `competitorZ_sum_bound`: The environment does not contain `NSP14.Endpoint.Data.competitorZ_sum_bound`, so it is not possible to project the field `competitorZ_sum_bound` from an expression
+  D
+of type `Data`
+tests/EndpointCompetitorBounds.lean:9:26: error(lean.invalidField): Invalid field `competitorZ`: The environment does not contain `NSP14.Endpoint.Data.competitorZ`, so it is not possible to project the field `competitorZ` from an expression
+  D
+of type `Data`
+tests/EndpointCompetitorBounds.lean:9:60: error(lean.invalidField): Invalid field `competitorZ_height`: The environment does not contain `NSP14.Endpoint.Data.competitorZ_height`, so it is not possible to project the field `competitorZ_height` from an expression
+  D
+of type `Data`

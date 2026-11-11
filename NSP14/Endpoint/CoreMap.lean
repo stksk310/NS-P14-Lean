@@ -22,10 +22,8 @@ theorem coreAtomPoint_value (a : D.source.AtomExponent) : D.coreValue (D.coreAto
   change (D.atomVariableEquiv (D.atomVariableEquiv.symm a)).val=a.val
   rw [Equiv.apply_symm_apply]
 
-variable (k : Type) [Field k]
-
-theorem exists_coreInitial (a : D.source.carrier) :
-    ∃ p : D.corePoints,D.coreInitial k p=D.source.initialMonomial k a := by
+theorem exists_corePoint (a : D.source.carrier) :
+    ∃ p : D.corePoints,D.coreDegree p=D.source.order a.val ∧ D.coreValue p=a := by
   obtain ⟨f,hf,hs⟩ := D.source.order_realized_by_atoms a.property
   let pts : Fin (D.source.order a.val) → D.corePoints :=
     fun i => D.coreAtomPoint ⟨⟨f i,(hf i).1⟩,hf i⟩
@@ -39,6 +37,13 @@ theorem exists_coreInitial (a : D.source.carrier) :
     change D.source.carrier.subtype (∑ i,(⟨f i,(hf i).1⟩ : D.source.carrier))=a.val
     rw [map_sum]
     exact hs
+  exact ⟨p,hpd,hpv⟩
+
+variable (k : Type) [Field k]
+
+theorem exists_coreInitial (a : D.source.carrier) :
+    ∃ p : D.corePoints,D.coreInitial k p=D.source.initialMonomial k a := by
+  obtain ⟨p,hpd,hpv⟩ := D.exists_corePoint a
   refine ⟨p,?_⟩
   unfold coreInitial NumericalSemigroup.initialMonomial
   apply DirectSum.of_eq_of_gradedMonoid_eq

@@ -1,0 +1,6 @@
+tests/EndpointNativeTransfer.lean:9:45: error(lean.invalidField): Invalid field `endpointRemainder`: The environment does not contain `NSP14.Endpoint.Data.endpointRemainder`, so it is not possible to project the field `endpointRemainder` from an expression
+  D
+of type `Data`
+tests/EndpointNativeTransfer.lean:9:72: error(lean.invalidField): Invalid field `actual_native_endpoint_bound`: The environment does not contain `NSP14.Endpoint.Data.actual_native_endpoint_bound`, so it is not possible to project the field `actual_native_endpoint_bound` from an expression
+  D
+of type `Data`

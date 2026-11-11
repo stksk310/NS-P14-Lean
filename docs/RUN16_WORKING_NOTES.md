@@ -44,3 +44,94 @@ Task1 tests EndpointData/EndpointNormalization/EndpointPresentation/CarrierTrans
 - Some opaque defs in simp do not unfold id/function applications; change before omega/rw when necessary.
 - Use PATH=/tmp/ns-p14-lean/bin:$PATH. One lake build at a time. Direct independent lean tests may parallelize. Root olean is removed during root rebuild: do not race tests importing NSP14 against an ongoing root build.
 - Git mutations need exec_command sandbox_permissions=require_escalated (authorized, no need to ask user). Prefix git. Explicit fetch refs/heads/work:refs/remotes/origin/work before final Push, normal no force, remote SHA+clean verify.
+
+## Since first internal checkpoint ceb3e84 (not yet committed)
+
+- CoreMap refactored to expose exists_corePoint without k: exists p of degree=actual order and coreValue=a. Old exists_coreInitial delegates; old types unchanged.
+- Competitors.lean GREEN: longer_core_pair and core_dead_iff_competitor prove all j>=1 actual long-representation criterion.
+- Fibers.lean GREEN: actual coreFiber upper sets, endpoint point shifts, coreFiberIdeal membership, M0=E.
+- Carry.lean GREEN: shiftedResidue/carry, exact carry reconstruction, positive carry for j>=1, carry+eps_s >=floor(jm/u)+eps_r, forbiddenStart using Int.toNat, exact componentwise budget equivalence and first-coordinate decay <=Nat(H-2*j).
+- ActualKernel.lean GREEN: all-long-point/all-j competitorFiber, actual order-defined actualDeadFiber, exact actualDeadFiber=coreFiber∩competitorFiber. Proof constructs longer point after clamp; no one-step-only assumption.
+- CoordinateIdeals.lean + KernelIdeals.lean GREEN: actual polynomial ideals of upper sets and exact independently order-defined actualKernelIdeal=coreFiberIdeal inf competitorIdeal.
+- IdealCoordinates.lean GREEN: coordinateIdeal as k-restricted submodule is AddMonoidAlgebra.supported; actual coefficient linear equivalence to Finsupp on allowed endpoint exponents. coreFiberCoefficients wrapper.
+- Root currently appended Competitors/Fibers only, must append Carry/ActualKernel/CoordinateIdeals/KernelIdeals/IdealCoordinates and rebuild before GREEN tests EndpointCarry/EndpointActualKernel/EndpointFibers(new coefficient lemma). Competitors and simple Fibers tests GREEN before coefficient test added.
+- New failing fixtures/logs under verification/run16/red/EndpointCompetitors,EndpointFibers,EndpointCarry,EndpointActualKernel,EndpointKernelIdeal,EndpointFiberCoefficients.
+
+Useful existing export: Homological.polynomialHomOfVariables takes a coefficient-k-linear map plus actual X-variable commutation and builds actual polynomial-linear map between ModuleCat modules. No need to redo arbitrary-polynomial induction. New endpoint module objects should use restrictScalars of endpointToCore/endpointToG; avoid installing a global E=Fin2 action on actual G because it can clash with old cut actions. Then coefficient restriction equivalences are handled by algebraRestrictionCoefficientEquiv.
+
+Next E_COORD route: represent each actual ideal M_r via coreFiberCoefficients; Fin2 exponents equivalent Nat² (use single0L+single1K). Core's coeff space reindexed through coreCoordinateEquiv and sigmaFinsuppLequivDFinsupp yields k-linear C≃directSum M_r. Prove actual x/v generator compatibility and lift via polynomialHomOfVariables to the required E-module isomorphism. Internal variables move residues, do NOT claim T-component decomposition.
+
+Minimal points finite/height route (not yet implemented): every minimal core fiber point has no nonzero endpoint factor. For any full-generator word representing it, repeated prefix residues give a nonempty segment of length l and offset c*u, 0<=c<=l (full offsets include0/u). That segment equals endpoint point(l-c,c), nonzero as l>0, contradiction. Thus prefix residues inject, word length<=u-1; adjacent collisions also exclude endpoint letters, so minimal words are pure internal. Nonzero residue n=L+K+1 gives L+K<=u-2. This avoids a separate iterative cycle algorithm. A shortest word to each residue is automatically minimal and internal. Reach all residues using gcd1/cofiniteness of closure(a∪{u}).
+
+## Next checkpoint: finite geometry GREEN
+
+Minimal/MinimalWords/MinimalBounds/Residues/Stopping build independently PASS (2026-11-11 JST).
+Actual minimal words: all prefix residues inject, length<u, every letter lies in actual a; all Min L+K<=u-2 (residue0 unit ideal handled).
+Every residue fiber is nonempty from actual offset-closure gcd1, no individual offset coprimality. shortestDegree/shortestPoint are actual minimizers, shortestDegree<u, residue0 degree0.
+Stopping exact: competitorFiber (independently all j/all long points) iff minimal long point and 1<=j<=floor((u-2)/2)+u/gcd(m,u). Uses real period p*m=u*carryStep, later starts L=0, K increases. No gcd(m,u)=1 or du<m.
+No all11 completion claim: actual G direct-sum quotients, homology/Tor/bounds/Artin/rows remain.
+
+## Further actual connections GREEN (continuing same Run16)
+
+New green modules since finite geometry: Antichains (sharp Min count <= A+B-kappa+1); Volume (sum Min M <= W); CarrySums (shift-one permutation, sum carry=m, sum ceil=m, W=sum shortest(L+K)+u); CompetitorBounds (all actual T finite Min, count=z+1, kappa ceiling, z point bound, sum z<=W-u, z<=Hx-2).
+Quotient/AssemblyCoefficients/AssembledKernel: genuine G≃E directSum M_r/N_r, N actual order-kernel independently, coefficient extraction prevents cancellations.
+SingleAction: genuine native single-element H1≃actual kernel, no finite chain hypothesis.
+XHomology: actual x H0≃HeadAlgebra, H1≃xMultiply.kernel; all x homology k finite from prior actual terminal/head finiteness.
+ConeBalance: self-cone H1=H0+H2 from actual LES with finite base homology, no infinite chain finrank used.
+HomologyFinite/Balance: endpoint native [v,x] all H finite and ordinary E-Tor comparison; exact H1=H0+H2 by actual v cone on actual x complex.
+ArtinQuotient/Transport: QC=C/(x,v)C and QG=G/(x,v)G actual ring quotients; their k-finiteness derived from E-finiteness and actual Tor; actual T polynomial actions; real surjective QC->QG T-module morphism.
+H0Internal: actual internal action on native H0 is isomorphic to QG as T-module, finite and all Tor Betti identified.
+VariableOrder: actual full list internal then [v,x], covers all q+2 atoms nodup; exact action regrouping.
+NativeTransfer: actual double-Koszul bound betaFull <= bT(QG)+ guarded [(PG+R)*choose(q,i-1)+R*choose(q,i-2)]. H0 unaltered; all original fields.
+QuotientBound/Compensation: actual T-short-exact QC kernel sequence, dim kernel=PC-PG, guarded bT(QG)<=bT(QC)+(PC-PG)choose(q,i-1).
+FullTransfer: combined betaFull <= bT(QC)+guard[PC choose(q,i-1)+R choose(q+1,i-1)], beta0=1, top<=R, aboveq+2 zero; actual completed cone and original narrow S exports. Module independently built PASS.
+MinimalPredecessors/CoreArtinIdeal green: actual endpoint ideal in C kills exactly nonminimal monomials, arbitrary polynomial coefficients tested. MinimalPredecessors has push_neg deprecation warnings to replace with push Not.
+Current pending build: CoreArtinBasis /tmp/run16_coreartinbasis_build.log. Constructs actual QC Min basis -> PC=minimalCount<=W. Inspect/fix, not yet claimed green.
+Additional tests RED correctly missing exports: EndpointVolume, EndpointConeBalance, EndpointCompetitorBounds, EndpointNativeTransfer, EndpointCompensation, EndpointCoreArtin. Their imports must update to new producer modules for GREEN. EndpointConeBalance K must be ModuleCat.{0} because k:Type0 and generic existing tools use matching field/module universes.
+Last root build only imports up to Geometry initial set (5720 jobs), 20 Endpoint+CarrierTransport tests PASS recorded verification/run16/geometry/results.json. No final full regression/audit yet. New production later modules need root append.
+
+## Important mathematical reuse opportunity (not implemented, ruling needed if used)
+
+Run15 Homological.Harmonic.generated_harmonic_bound at j=1, b=0 on an actual finite standard graded cyclic algebra already yields exactly first Artin bound: bettiEuler1=b1-b0, b0=1, h0=1 => b1<=q+sum n>=1 (q-1)h_n/(n+1). It uses real standard-module basis/Groebner lift and actual signed minor, arbitrary fields. Could avoid duplicating separate parent-child proof; if taking this alternative record mathematical equivalence and paper ledger (user permits proof improvements; plan explicit details must not silently disappear).
+General positive-row Artin rank is mostly existing Homological.KoszulIndependentImages: given actual coefficient functionals rho_j with rho_j(y_l*1)=delta, koszulBoundaryRank_ge_choose is already proved using actual +/-1 diagonal minor. Supply rho from actual degree1 independent images (I1=0), then finite chain rank plus Pascal gives b_i<=P choose(q,i)-choose(q+1,i+1).
+Remaining genuinely unclosed: QC Min basis (in progress), QG surviving Min basis, actual H2=socle and socle injection/count to T corners -> Rhat; QC T-surjective standard grading/I1=0/n>=u vanishing; general Artin refinements and q2 Artin/socle row table; final audits/docs/ZIP/review/normal Push. Do not finish at helper checkpoint.
+
+## Latest (after prior notes)
+
+CoreArtinBasis GREEN: QCoreCoordinates genuine QC≃k(Finsupp actual CoreMinimalIndex), actual monomial basis, PC=sum_r card Min M_r, PC<=W. CoreMinimalIndex finite/Fintype, sigma equivalence to actual residue minimal coordinates. Exact ideal support lemma excludes cancellations, so no Q_C monomiality as T-quotient presumed.
+CoreInternalAction GREEN: actual internal action sends basis p to actual class p+internalGenerator, basis if minimal else0. All core-minimal degrees<u.
+BasisGrading GREEN: generic actual basis variable matrices homogeneous => actual GradedPolynomialModule via coordinateGrading (proof by supported/span_single).
+CoreInternalPresentation GREEN: actual fullToCore surjective (real core words), removeEndpoints polynomial map, QC actual internal q-variable presentation surjective. Only QC kills endpoints, not G.
+CoreGrading GREEN: real T-grading with CoreMinimal degree; n>=u pieces IsZero.
+CoreLowDegrees GREEN: internal generator minimal, actual degree-one minimal labels equiv actual a, unique degree-zero point.
+CoreHilbert build was fixed for PUnit universe and ModuleCat.subsingleton_of_isZero; inspect /tmp/run16_corehilbert_build.log (last build expected green).
+New test EndpointCoreGrading RED correctly missing dimension0/1 exports; update import CoreHilbert when green.
+Root latest /tmp/run16_coregrading_root.log 5768 jobs PASS (before CoreHilbert and TwoActionTop). 26 scoped tests PASS in verification/run16/transfer/results.json, after that NativeTransfer test extended with FullTransfer core/top/zero assertions and needs rerun.
+Current new pending module TwoActionTop.lean, build /tmp/run16_twoactiontop_build.log: genuine 2-element degree2 chain equiv M, cycles=joint kernel, H2 equiv joint kernel, intended to connect actualR to actualSocle. New test EndpointSocle RED saved (actualSocle/actualR_socle_dimension missing), production actual Socle not yet written.
+All work still IN_PROGRESS, no Run16 final commit/Push yet (HEAD ceb3e84). No final reviewer until whole feature closes. No end at this checkpoint.
+
+CoreAugmentation GREEN: actual original S.tangentAugmentation descends through actual QG; compose real QC->QG gives QC augmentation, internal presentation comp equals augmentationT; QCore_betti_zero=1.
+Corners GREEN: for any upward U nonempty, corner labels inject into actual minimal points excluding one minimal first-coordinate label, hence #corners<#Min. No finite E/U assumption. LetI style warnings fixed with let.
+MonomialQuotient/MonomialCoordinates GREEN: for actual coordinateIdeal(U), genuine polynomial quotient standard monomial basis indexed c notin U, using existing actual Groebner normal form theorem; coordinate of actual quotient class is actual polynomial coeff at c.
+MonomialSocle GREEN: actual joint x/v annihilator of E/coordinateIdeal(U) injects into corner Finsupp; finite socle and finrank<=#Min(U)-1 proved. E/U may be infinite k-dimensional.
+FiberInjection GREEN: actual E-linear M/(M intersect T)->E/T injections, product map, actual G injects E-linearly through existing actual fiber equivalence.
+SocleInjection was being fixed (explicit Fin2/ideal annotations and canonical k/E scalar restriction); inspect /tmp/run16_socleinjection_build.log and latest /tmp/run16_soclebounds_build.log.
+SocleBounds.lean just written/build launched: real R<=sum z, <=W-u, <=u*(Hx-2), Rhat=min(...), wordVolume>=u, all-row actual/completed/top Rhat variants. Not yet assumed green.
+Current HEAD still ceb3e84 (no later commit yet). Root /tmp/run16_checkpoint_root.log passed before later corner/socle modules; 28 scoped tests running in exec session89518 with logs verification/run16/closure_checkpoint/results.json. Need poll/read outcomes. New tests EndpointCoreGrading and EndpointSocle now import correct CoreHilbert/Socle producers and individually PASS. No final all-regression/audit yet.
+
+SocleInjection/SocleBounds GREEN after explicit native/canonical scalar bridges: real R<=sum z<=W-u and R<=u*(Hx-2), Rhat=min, W>=u; actual/completed/top Rhat bounds. Added narrow original completed-source Rhat wrapper after genuine RED EndpointRhat missing declaration (log now correct).
+ArtinRank GREEN: existing true +/-1 Koszul minor reused with actual degree-one QC basis functionals; generic positive_artin_rank_sum and weak bound, QC b_i+choose(q+1,i+1)<=PC choose(q,i), all fields incl char2.
+PositiveRows GREEN: actual/full/completed general positive row bound derived additively first, subtraction feasibility preserved; i>=2 export. EndpointRows RED missing actual_positive_rows recorded; update test import PositiveRows for GREEN.
+Current new module CoreGeneration.lean build /tmp/run16_coregeneration_build.log: QC unit actual degree0, real cyclic degree0 generation from internalToQCore surj. Inspect/fix (possible missing k arg D.QCoreUnit_degree_zero in hunit).
+Next first-Betti route: apply existing generated_harmonic_bound at j1,b0,N=u-1 to actual QCoreGrading; QCore_betti_zero already1, h0=1,h1=q, n>=u vanish. Ruling needed if replacing requested parent-child proof with mathematically equivalent prior generic Groebner/signed-minor harmonic route; do not silently omit required general-Artin interface/refinements.
+Remaining math: generic Artin first/refinements/q5, q2 internal socle/Euler and monomiality, QC Hilbert total sum; QG surviving Min basis / exact N-corners labels still auxiliary tasks to close; final root/tests/cold full regression/complete axiom/type/source-evidence audit/paper+11ID ledger/review once/auditZIP/normal Push. HEAD still ceb3e84; enormous green uncommitted changes, do checkpoint after current remaining RED tests become GREEN. No final completion claim.
+
+FirstHarmonic GREEN: generic cyclic_first_harmonic from existing Run15 actual Groebner/signed-minor harmonic theorem at j1; actual QC_first_harmonic with original k and true QC grading. Needed Int.natCast_add/Int.natCast_one (Nat.cast_add alone fails on opaque Int.ofNat in piece indices). CoreGeneration and CoreHilbertSum GREEN (PC=sum n<u h_n).
+TwoScalarSocle GREEN generic actual 2-element H2=joint actual annihilator in any commutative k-algebra.
+TwoInternal GREEN: actual q2 variable enumeration, internalSocle in actual QC (not endpoint R), genuine H2/Tor->socle, internalSigma dimension; actual bQC=(1,sigma+1,sigma), above2 zero. Proof uses actual finite-QC Euler; monomiality is not used as an unproved input. Still must separately provide requested q2 monomiality auxiliary.
+FirstRow.lean created with actual Nat floor of true QC harmonic bound; wrong nonexistent Floor.Field import fixed to Floor.Ring. Inspect /tmp/run16_weights_firstrow_build.log.
+ArtinWeights.lean created arithmetic generic harmonic third/fourth/signed identities; initial ring_nf<=reflexive fixed by exact le_rfl, q cast nonnegative fixed explicitly. Same log /tmp/run16_weights_firstrow_build.log; inspect.
+TwoRows.lean just written/build /tmp/run16_tworows_build.log: all4 actual q2 full Betti rows, Rhat versions, all-row actual/completed bound. Not yet assume green.
+Need update tests imports: EndpointArtinRank->ArtinRank, EndpointFirstBetti->FirstHarmonic, EndpointRows->PositiveRows, EndpointTwoVariables->TwoInternal or TwoRows. EndpointRhat already importsSocleBounds; narrow wrapper added. No final review/ZIP/Push yet; do not finish prematurely.
+
+Current checkpoint: root build 5830 jobs GREEN; all 34 previously implemented Endpoint tests GREEN (artin_checkpoint/results.json). Actual Rhat socle bounds, general positive rows, harmonic first row, three refinements, q=5 signed bound, and q=2 four actual/completed rows are implemented. StandardHomogeneous general normal-form homogeneity newly GREEN; general arbitrary homogeneous Artin quotient API, q2 monomiality and surviving-Min/corner labels remain. Run16 IN_PROGRESS, no final completion/Push claim.

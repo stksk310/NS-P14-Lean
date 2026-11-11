@@ -1,0 +1,6 @@
+tests/EndpointTwoVariables.lean:8:62: error(lean.invalidField): Invalid field `internalSigma`: The environment does not contain `NSP14.Endpoint.Data.internalSigma`, so it is not possible to project the field `internalSigma` from an expression
+  D
+of type `Data`
+tests/EndpointTwoVariables.lean:8:88: error(lean.invalidField): Invalid field `QCore_two_betti_one`: The environment does not contain `NSP14.Endpoint.Data.QCore_two_betti_one`, so it is not possible to project the field `QCore_two_betti_one` from an expression
+  D
+of type `Data`

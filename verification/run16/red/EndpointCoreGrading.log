@@ -1,0 +1,6 @@
+tests/EndpointCoreGrading.lean:7:63: error(lean.invalidField): Invalid field `QCoreGrading_zero_dim`: The environment does not contain `NSP14.Endpoint.Data.QCoreGrading_zero_dim`, so it is not possible to project the field `QCoreGrading_zero_dim` from an expression
+  D
+of type `Data`
+tests/EndpointCoreGrading.lean:8:65: error(lean.invalidField): Invalid field `QCoreGrading_one_dim`: The environment does not contain `NSP14.Endpoint.Data.QCoreGrading_one_dim`, so it is not possible to project the field `QCoreGrading_one_dim` from an expression
+  D
+of type `Data`

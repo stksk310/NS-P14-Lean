@@ -1,0 +1,9 @@
+tests/EndpointResidues.lean:6:55: error(lean.invalidField): Invalid field `coreFiber_nonempty`: The environment does not contain `NSP14.Endpoint.Data.coreFiber_nonempty`, so it is not possible to project the field `coreFiber_nonempty` from an expression
+  D
+of type `Data`
+tests/EndpointResidues.lean:7:26: error(lean.invalidField): Invalid field `shortestDegree`: The environment does not contain `NSP14.Endpoint.Data.shortestDegree`, so it is not possible to project the field `shortestDegree` from an expression
+  D
+of type `Data`
+tests/EndpointResidues.lean:7:52: error(lean.invalidField): Invalid field `shortestDegree_lt`: The environment does not contain `NSP14.Endpoint.Data.shortestDegree_lt`, so it is not possible to project the field `shortestDegree_lt` from an expression
+  D
+of type `Data`
