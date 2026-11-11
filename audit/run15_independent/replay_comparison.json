@@ -1,0 +1,17 @@
+{
+  "status": "PASS_INDEPENDENT_REPLAY_COMPARISON",
+  "audited_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "checks": 101,
+  "all_exit_codes_zero": true,
+  "production_cache": "empty on worktree creation; all 396 production files rebuilt",
+  "built_project_modules_including_root": 397,
+  "fresh_project_test_cache": true,
+  "environment_declarations": 6206,
+  "core_run15_declarations": 2329,
+  "all_run15_environment_declarations": 2654,
+  "identical_full_declaration_type_and_axiom_records": true,
+  "identical_bound_source_hashes": 503,
+  "current_checkout_output_paths": true,
+  "check_seconds": 779.536,
+  "evidence_directory": "verification/run15_independent/reproduction"
+}

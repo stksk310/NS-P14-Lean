@@ -1,0 +1,45 @@
+{
+  "verdict": "PASS_RUN15_SCOPE",
+  "date_jst": "2026-11-11",
+  "audited_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "baseline_commit": "20aadbf7011692eb3bfffef49029e2c5e416ef3d",
+  "run15_original_goals": 8,
+  "run15_registry_ids": [
+    "X_AP_BETTI",
+    "X_AP_CONE",
+    "I_TARGET",
+    "O_HARMONIC",
+    "O_TOR",
+    "O_TARGET",
+    "O_LOW",
+    "O_SCALAR",
+    "O_SMALL",
+    "O_LARGE",
+    "O_CLOSE"
+  ],
+  "new_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "known_nonblocking_test_coverage_note": "Standalone Harmonic fixtures do not individually realize every multi-generator/nonmonomial/internal-zero condition; the general theorem and actual tower applications are proved. This inherited note is not a newly discovered defect.",
+  "production_changes_by_auditor": 0,
+  "source_files": 215,
+  "source_lines": 13186,
+  "fresh_checks": 101,
+  "fresh_build_modules_including_root": 397,
+  "environment_declarations": 6206,
+  "new_run15_environment_declarations": 2654,
+  "core_run15_declarations": 2329,
+  "all_type_and_axiom_records_match": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "independent_ap_cases": 238,
+  "independent_field_checks": 714,
+  "zip_entries": 643,
+  "later_runs_certified": false,
+  "next_run": "Run16 may consume the proved Run15 exports; its endpoint source comparison remains to be implemented."
+}

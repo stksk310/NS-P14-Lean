@@ -1,0 +1,9 @@
+{
+  "status": "PASS_SOURCE_SCOPE_SCAN",
+  "source_files": 215,
+  "all_new_sources_imported": true,
+  "forbidden_proof_or_metaprogramming_constructs": [],
+  "production_imports_audit": false,
+  "original_goals_changed_after_creation": false,
+  "original_goals_creation_commit": "51ec591513b7683aaba2bccde24e5eda81f3d97a"
+}
