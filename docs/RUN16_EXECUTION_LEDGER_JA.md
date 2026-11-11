@@ -81,3 +81,12 @@ Verification metadata repair: 最初のcold検証は146受入、既存数値、�
 Named acceptance scope repair: 第二試行は0..137番まで通過。EndpointStandardArtinの三つの名前付き受入定理で、証明本体だけが参照するsection仮定hp/hh/h1/hqに明示includeが必要だった。意図した同じ仮定を宣言へ明記し、該当ファイルと後続六ファイルを個別に再検証して警告/エラーなし。その後、最終source hashを一つのcold結果に束縛するため全回帰を再実行。旧試行はfinal_attempt_named_scopeに保持。production証明は変更していない。
 
 Task7 cold verification: FINAL PASS_RUN16_PROOF_CLOSURE。150 commands、146受入、7835環境宣言、1629新規宣言（通常/explicit型）、2160過去原本をbytes固定、production7586行。総コマンド実測440.594秒。全件exit0/警告なし。許容依存はpropext/Classical.choice/Quot.soundのみ。source集合・hashの前後一致、自己依存なし。これを固定commitに保存し、一回のfresh-context全体レビューへ渡す。
+
+Final review: fresh-context gpt-6-astra /root/run16_final_review、base447b7ae..f010c72。116production/47acceptanceを全件passごとに検査。664source/155evidence/2160凍結hash、公理7835宣言、独立Lean再実行7件を確認。Ready、Critical/Important/Minor=0。再判定でも修正・延期Minorなし。追加の数学的fix passは不要。
+
+Final: Ruling: Run17–20の数学と最終P14合成は今回のレビュー対象外 — 指令の担当11IDを閉じ、後続担当を維持する — 誤るとP14全域までLean完成したとの過大表示になるため、その完了は主張しない。
+Final: Ruling: 任意非斉次idealの大域的最小生成集合アルゴリズムは対象外 — μは実idealのTor0/Nakayama fibreの次元という標準次数付きの定義で、実connecting同型を証明している — 誤ると利用者が未供給の生成集合構成を期待するため、原稿台帳で定義の範囲を明記する。
+Final: Ruling: 完成原稿の改訂・公刊は対象外 — ユーザーはLeanと原稿を最終一致させる記録を求めており、現段階は対応台帳を供給する — 後で原稿へ反映する作業が残る。
+Final: Ruling: 最終ZIP・Push・clean状態はproof commitの独立レビュー後に実行側が検証する — future actionをレビュー済みと偽らず、source/evidence hash・CRC・remote SHAを実測する — 検査を誤ると付属記録/公開状態に不一致が残るため、通常Push後もremote一致とcleanを確認する。
+
+Publication validation: pending状態ではpackagerが期待どおり拒否しZIPを作らないことを確認。COMPLETE/独立レビューPASS後の正の実行で、source/evidence hashを再照合し、812ファイルのZIPを作成、CRCと全格納ファイルSHAを照合してexit0。archive自身のSHAは隣の.zip.sha256を正本とし、自己参照するledger内hashは作らない。公開commit後の通常Pushとremote/clean確認を継続する。

@@ -2,7 +2,7 @@
 
 ## 最新状態：Run16（2026年11月11日JST）
 
-Run14とRun15は完成・Push済み。Run16は担当11 IDの数学的actual接続を閉じ、全回帰・独立レビュー・監査ZIP・通常Pushを実行する段階。最終判定は [Run16 closure status](docs/RUN16_CLOSURE_STATUS.json) を正本とする。
+Run14とRun15は完成・Push済み。Run16は担当11 IDの数学的actual接続・全150検証・独立レビュー（全severity0）を完了。公開記録は監査ZIPおよびworkブランチ。最終判定は [Run16 closure status](docs/RUN16_CLOSURE_STATUS.json) を正本とする。
 
 同じsourceからEH正規化、実core全射、N=M∩T、全j停止、実homology三項、実R角基底/Rhat、核補償付き全行Tor、一般Artin商、q=2の単項式性・内部σ基底・四行評価まで接続した。原稿へ戻す証明変更は [Run16原稿台帳](docs/RUN16_PAPER_CORRESPONDENCE_JA.md) に記録する。
 

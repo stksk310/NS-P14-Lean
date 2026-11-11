@@ -1,20 +1,20 @@
 {
-  "status": "VERIFIED_PENDING_INDEPENDENT_REVIEW",
-  "run16_complete": false,
+  "status": "COMPLETE",
+  "run16_complete": true,
   "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
   "requested_plan_commit": "0cda4e8597ea1bafa8770b851ff2373973ee0e03",
   "ids": {
-    "I_NORMALIZE": "PROVED_VERIFIED",
-    "E_CORE": "PROVED_VERIFIED",
-    "E_COORD": "PROVED_VERIFIED",
-    "E_KERNEL": "PROVED_VERIFIED",
-    "E_STOP": "PROVED_VERIFIED",
-    "E_BOUNDS": "PROVED_VERIFIED",
-    "E_HOMOLOGY": "PROVED_VERIFIED",
-    "E_TRANSFER": "PROVED_VERIFIED",
-    "E_ARTIN": "PROVED_VERIFIED",
-    "E_ROW": "PROVED_VERIFIED",
-    "E_TWO": "PROVED_VERIFIED"
+    "I_NORMALIZE": "PROVED_VERIFIED_REVIEWED",
+    "E_CORE": "PROVED_VERIFIED_REVIEWED",
+    "E_COORD": "PROVED_VERIFIED_REVIEWED",
+    "E_KERNEL": "PROVED_VERIFIED_REVIEWED",
+    "E_STOP": "PROVED_VERIFIED_REVIEWED",
+    "E_BOUNDS": "PROVED_VERIFIED_REVIEWED",
+    "E_HOMOLOGY": "PROVED_VERIFIED_REVIEWED",
+    "E_TRANSFER": "PROVED_VERIFIED_REVIEWED",
+    "E_ARTIN": "PROVED_VERIFIED_REVIEWED",
+    "E_ROW": "PROVED_VERIFIED_REVIEWED",
+    "E_TWO": "PROVED_VERIFIED_REVIEWED"
   },
   "proved_exports": [
     "broad EH actual source/minimal atoms/multiplicity/width",
@@ -55,5 +55,11 @@
     "Classical.choice",
     "Quot.sound",
     "propext"
-  ]
+  ],
+  "independent_review": "verification/run16/final_review.json",
+  "reviewed_proof_commit": "f010c72c5f77fd0074123574bee4079f1c0b98c0",
+  "publication_branch": "work",
+  "review_critical": 0,
+  "review_important": 0,
+  "review_minor": 0
 }
