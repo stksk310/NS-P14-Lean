@@ -16,7 +16,7 @@ def main():
         git('init','-q');write('src.lean','-- guard fixture, not a mathematical verification\n')
         git('add','src.lean');git('-c','user.name=Run18 Guard','-c','user.email=guard@example.invalid','commit','-qm','source')
         base=git('rev-parse','HEAD')
-        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,proof_snapshot_commit=base,closed_ids=['W_SPARSE'],unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'])
+        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,fresh_project_test_cache=True,fresh_new_production_cache=True,checks=[dict(passed=True)],proof_snapshot_commit=base,closed_ids=['W_SPARSE'],unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'])
         write('verification/run18/runs/guard/verification.json',json.dumps(summary))
         write('verification/run18/runs/guard/SOURCE_SHA256.json',json.dumps({'src.lean':sha(r/'src.lean')}))
         manifest={str(p.relative_to(r)):sha(p)for p in v.iterdir()}
@@ -33,6 +33,10 @@ def main():
             try:pkg.checked_payload(r,'verification/run18/runs/guard','review.json')
             except ValueError as e:assert fragment in str(e),(fragment,e);count+=1
             else:raise AssertionError('guard did not reject '+fragment)
+        summary_original=(v/'verification.json').read_bytes()
+        summary['fresh_project_test_cache']=False;write('verification/run18/runs/guard/verification.json',json.dumps(summary));fails('cold validation required');(v/'verification.json').write_bytes(summary_original)
+        write('verification/run18/runs/guard/unmanifested.log','unreviewed')
+        fails('evidence coverage differs');(v/'unmanifested.log').unlink()
         original=(r/'src.lean').read_bytes();(r/'src.lean').write_text('changed\n');fails('source changed');(r/'src.lean').write_bytes(original)
         review['source_snapshot_commit']='0'*40;write('review.json',json.dumps(review));fails('review snapshot mismatch');review['source_snapshot_commit']=base
         review['important']=1;write('review.json',json.dumps(review));fails('review gate failed');review['important']=0;write('review.json',json.dumps(review))

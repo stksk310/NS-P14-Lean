@@ -17,6 +17,8 @@ def checked_payload(root,verification,review):
     summary=json.loads((vdir/'verification.json').read_text())
     decision=json.loads(safe(root,review).read_text())
     if summary.get('status')!='PASS_RUN18_PARTIAL_VALIDATION'or summary.get('run18_complete')is not False:raise ValueError('not a validated partial snapshot')
+    if summary.get('fresh_project_test_cache')is not True or summary.get('fresh_new_production_cache')is not True:raise ValueError('cold validation required')
+    if not summary.get('checks')or not all(c.get('passed')is True for c in summary['checks']):raise ValueError('validation checks failed')
     if summary.get('closed_ids')!=['W_SPARSE']or set(summary.get('unproved_ids',[]))!={'X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'}:raise ValueError('closure scope differs')
     if decision.get('verdict')!='PASS'or decision.get('critical')!=0 or decision.get('important')!=0:raise ValueError('review gate failed')
     if decision.get('source_snapshot_commit')!=summary['proof_snapshot_commit']:raise ValueError('review snapshot mismatch')
@@ -25,6 +27,8 @@ def checked_payload(root,verification,review):
     if decision.get('review_report_sha256')!=sha(safe(root,decision['review_report']).read_bytes()):raise ValueError('review report changed')
     source=json.loads((vdir/'SOURCE_SHA256.json').read_text());evidence=json.loads((vdir/'MANIFEST_SHA256.json').read_text())
     if set(source)&set(evidence):raise ValueError('source/evidence path collision')
+    actual_evidence={str(p.relative_to(root))for p in vdir.rglob('*')if p.is_file()and p.name!='MANIFEST_SHA256.json'}
+    if set(evidence)!=actual_evidence:raise ValueError('evidence coverage differs')
     payload={}
     for f,h in source.items():
         data=safe(root,f).read_bytes()
@@ -51,7 +55,9 @@ def main():
     except(ValueError,KeyError,FileNotFoundError,subprocess.CalledProcessError)as e:p.error(str(e))
     extra=['docs/RUN18_CLOSURE_STATUS.json','docs/RUN18_EXECUTION_LEDGER_JA.md','docs/RUN18_FINAL_REVIEW_JA.md',
            'NSP14/Additive/Kneser_SOURCE_LICENSE','verification/run17/sources/provenance.json']
-    for f in extra:payload[f]=safe(ROOT,f).read_bytes()
+    for f in extra:
+        payload[f]=safe(ROOT,f).read_bytes()
+        if f!=decision['review_report']and payload[f]!=git(ROOT,'show',decision['reviewed_commit']+':'+f):p.error('unreviewed extra payload: '+f)
     status=json.loads(payload['docs/RUN18_CLOSURE_STATUS.json'])
     if status['run18_complete']is not False or status['closed_ids']!=summary['closed_ids']or status['unproved_ids']!=summary['unproved_ids']:p.error('status document overstates closure')
     manifest={f:sha(data)for f,data in sorted(payload.items())}

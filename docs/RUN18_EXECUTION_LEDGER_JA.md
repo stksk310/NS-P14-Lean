@@ -34,3 +34,11 @@ Ruling: 計算を含むLean fixtureを `-j1 -M12288` で直列elaborationし、p
 Ruling: 当該具体例では四重和から全intervalになることを帰納で証明し、全次数で元のoffsetSumsと一致する検算専用表を作った。computedMinima/order/survivors/socleWindowとの一致もLeanで証明して置換する。元の43命題は削除・弱化しない。誤った表なら等式のLean証明が失敗するため、未検証の数値入力として扱わない。
 
 初期focused shellの複数commandの最終exitだけではWidthSparse単独の成功を認定できなかったため、それを成功根拠から外した。修正版は個別subprocess終了コード0、64.745秒、最大RSS 2,727,840 KiBで全43命題を通過した。新規cold全回帰でさらに再確認する。数学production sourceと凍結契約は変更していない。
+
+## 公開theorem interfaceの判定修正
+
+r02では全159 fixture、5つの未完受入、数値検算・公開guard・旧検算replay・Lean環境抽出が通過したが、verifierがConstantInfo.axiomInfoを一律拒否したため最終判定が失敗した。8,429宣言の実際の推移公理依存に違反は0件で、6,258件はLeanの公開theorem interfaceが返す形だった。元のweight_head_leはbaselineにも証明本体がある。
+
+Ruling: import後のConstantInfoの見かけだけで追加公理と断定せず、collectAxiomsの実依存と自己依存で判定する。実際の追加公理は自身の名前を依存に含むため拒否する。既存の証明済みexported stubの受入と、隔離された本物の追加axiomの拒否をLeanの対照実験で確認した。対照用axiomはverification内の専用processだけで宣言し、production・fixture・本環境監査から一切importしない。誤判定なら禁止公理を通す危険があるため、このnegative controlを全検証へ組み込む。
+
+r01/r02はいずれも失敗として保持し、最終の新規cold検証をr03へ保存する。公開guardはcold検証、全check通過、証跡coverage、review済み追加payloadも要求する。

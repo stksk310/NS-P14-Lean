@@ -8,6 +8,14 @@ FROZEN='86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689'
 ALLOWED={'propext','Classical.choice','Quot.sound'}
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT)
+def validated_kind(declaration):
+    # Lean's public module interface can expose a proved theorem as axiomInfo.
+    # The recorded transitive dependencies distinguish it from an actual axiom.
+    forbidden=set(declaration['axioms'])-ALLOWED
+    if forbidden or declaration['name']in declaration['axioms']:
+        raise ValueError('unapproved mathematical axiom dependency: '+declaration['name'])
+    return 'exported_proof_stub'if declaration['kind']=='axiom'else declaration['kind']
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--fresh-test-cache',action='store_true')
@@ -30,12 +38,13 @@ def main():
     valid_new=[f for f in new_sources if f not in open_acceptances]
     bound=sorted([str(p.relative_to(ROOT))for d in ['NSP14','tests','audit']for p in(ROOT/d).rglob('*.lean')]+[
         'NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run18.py',
-        'scripts/check_run18_width.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py',
+        'scripts/check_run18_width.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py','scripts/check_run18_axiom_policy.py',
         'docs/RUN18_INPUT_INVENTORY_JA.md','docs/RUN18_PAPER_CORRESPONDENCE_JA.md',
         'docs/superpowers/plans/2026-11-13-run18-lex-width-closure-order.md']+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/acceptance_probes_20261113').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r01').iterdir()if p.is_file()]+
-        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/diagnostics_20261113').iterdir()if p.is_file()])
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/diagnostics_20261113').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r02').iterdir()if p.is_file()])
     initial={f:sha(ROOT/f)for f in bound}
     source_snapshot=git('rev-parse','HEAD').decode().strip()
     (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
@@ -90,6 +99,7 @@ def main():
         run('open_'+Path(f).stem,['lake','env','lean','-j1','-M12288',f],expected=required[0])
     run('width_model',['python3','scripts/check_run18_width.py','--output',str(rel/'width_checks.json')])
     run('publication_guards',['python3','scripts/check_run18_guards.py'])
+    run('axiom_policy_controls',['python3','scripts/check_run18_axiom_policy.py','--output-dir',str(rel/'axiom_policy_controls')])
     for mode in ['schedule','coordinates']:
         run('inherited_'+mode,['python3','scripts/replay_run17_inherited.py',mode,'--output',str(rel/('inherited_'+mode+'.json'))])
     run('inherited_additive',['python3','scripts/check_run17_additive.py','--output',str(rel/'inherited_additive.json')])
@@ -132,7 +142,7 @@ set_option maxHeartbeats 0
     assert declarations and len({d['name']for d in declarations})==len(declarations)
     for d in declarations:
         assert set(d['axioms'])<=ALLOWED and d['name']not in d['axioms'],d
-        assert d['kind']!='axiom',d
+        d['exported_kind']=d['kind'];d['kind']=validated_kind(d)
         d['source']=d['module'].replace('.','/')+'.lean';d['source_sha256']=sha(ROOT/d['source'])
     newdecls=[d for d in declarations if d['source']in valid_new]
     assert set(valid_new)<={d['source']for d in newdecls}
