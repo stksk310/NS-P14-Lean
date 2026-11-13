@@ -1,0 +1,17 @@
+NSP14.Endpoint.Data.shortestDegree (D : NSP14.Endpoint.Data) (r : Fin D.u) : ℕ
+NSP14.Endpoint.Data.shortestDegree_lt (D : NSP14.Endpoint.Data) (r : Fin D.u) : D.shortestDegree r < D.u
+NSP14.Endpoint.Data.shortestDegree_le (D : NSP14.Endpoint.Data) (r : Fin D.u) (c : ℕ × ℕ) (hc : c ∈ D.coreFiber r) :
+  D.shortestDegree r ≤ c.1 + c.2 + D.epsilon r
+NSP14.Endpoint.Data.shortestPoint_degree (D : NSP14.Endpoint.Data) (r : Fin D.u) :
+  (D.shortestPoint r).1 + (D.shortestPoint r).2 + D.epsilon r = D.shortestDegree r
+NSP14.Endpoint.Data.wordVolume (D : NSP14.Endpoint.Data) : ℕ
+NSP14.Endpoint.Data.exists_coreWord (D : NSP14.Endpoint.Data) (p : ↥D.corePoints) : ∃ w, D.coreWord w = p
+NSP14.Endpoint.Data.internalPoint (D : NSP14.Endpoint.Data) : (↥D.a →₀ ℕ) →+ ↥D.corePoints
+NSP14.Endpoint.Data.internalPoint_degree (D : NSP14.Endpoint.Data) (β : ↥D.a →₀ ℕ) :
+  D.coreDegree (D.internalPoint β) = ∑ b, β b
+NSP14.Endpoint.Data.internalPoint_offset (D : NSP14.Endpoint.Data) (β : ↥D.a →₀ ℕ) :
+  D.coreOffset (D.internalPoint β) = ∑ b, β b * ↑b
+NSP14.Endpoint.Data.QCore_class_monomial (D : NSP14.Endpoint.Data) (k : Type) [Field k] (p : ↥D.corePoints) :
+  (Ideal.Quotient.mk (NSP14.Endpoint.endpointIdeal k (D.Core k) (D.endpointToCore k))) (D.coreMonomial k p) =
+    if h : D.CoreMinimal p then (D.QCoreBasis k) ⟨p, h⟩ else 0
+NSP14.Endpoint.Data.coreMinimal_degree_lt (D : NSP14.Endpoint.Data) (p : D.CoreMinimalIndex) : D.coreDegree ↑p < D.u

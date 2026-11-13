@@ -1,0 +1,1 @@
+tests/EndpointAdditive.lean:1:0: error: object file '/workspace/NS-P14-Lean/.lake/build/lib/lean/NSP14/Additive/EndpointDistance.olean' of module NSP14.Additive.EndpointDistance does not exist

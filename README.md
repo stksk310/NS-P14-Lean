@@ -316,3 +316,11 @@ the complete manuscript above.
 python -B proof/checks/verify_scalar.py
 python -B proof/checks/recheck_rows.py
 ```
+
+## Lean implementation — Run17
+
+Run17 supplies full finite-group Kneser, composite-modulus Savchev–Chen, cyclic growth,
+and the same actual-core distance/volume/QC-word consumers. See [Run17 status](docs/RUN17_CLOSURE_STATUS.json),
+[exports and audit guide](docs/RUN17_AUDIT_HANDOFF_JA.md), and [paper correspondence](docs/RUN17_PAPER_CORRESPONDENCE_JA.md).
+Reproduce with `python3 scripts/verify_run17.py --fresh-test-cache`.
+The Run16 section above is its historical snapshot; BHP/EK, N4/LTV and global synthesis remain Runs18–20.

@@ -243,3 +243,9 @@ origin/workで先行したRun13再現性修正aa6bf4cもfast-forwardで保持し
 
 Run14指定範囲の未完入力はない。actual Tor評価・target Betti同定・ordinaryのactual閉鎖と
 最終P14はRun15以降。20runは保証ではなく、再校正した数学的接続ごとの運用目標。
+
+## Run17 — Kneser / Savchev–Chen and actual consumers
+
+General proof exports and actual-core consumers are implemented. Final verification/publication gates are tracked in
+[Run17 status](docs/RUN17_CLOSURE_STATUS.json) and [audit handoff](docs/RUN17_AUDIT_HANDOFF_JA.md).
+No theorem is replaced by a finite table or a conclusion-valued input.

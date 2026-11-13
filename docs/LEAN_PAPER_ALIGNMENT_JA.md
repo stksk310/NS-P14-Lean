@@ -775,3 +775,10 @@ raw EHのm,d,a,uを維持し、actual sourceの最小原子、multiplicity、emb
 実QC→QGの核完全列でPC−PGを補償し、q内部変数からq+2全変数へ移行。floor・減算の加法形、第0/top/上次数行を保持し、元の狭幅完備sourceへの全行APIを構成した。q2のみ実単項式核を証明。内部carry作用と内部socle点基底からσ_Cを数え、実二変数Koszulから(1,σ_C+1,σ_C)と四行を得る。一般qの非単項式関係を排除しない。
 
 三例のactual(PC,PG,R)=(5,4,0),(5,5,0),(9,6,1)は任意体でLean等式。これらは実対象との一致を証明した有限計算を使う。反射でHxが異なること、q3の生存関係、標数2を確認する。799例の独立回帰は一般証明の代替ではない。Run17–20の担当は引き続き保持する。
+
+## Run17 alignment
+
+Kneser uses the source-checked Bakšys–Dillies implementation of the DeVos proof, with attribution/license.
+SC uses a proved positional connected-subsequence argument following Lev; a direct sharp-term uniqueness lemma removes the need for the cited coset-structure proof.
+The original SC conclusion is proved without extra assumptions. Actual D.u, a_i, W and QC are retained.
+See [Run17 paper ledger](RUN17_PAPER_CORRESPONDENCE_JA.md) for all exports and the manuscript changes to preserve.
