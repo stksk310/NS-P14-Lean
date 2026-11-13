@@ -27,3 +27,7 @@ Run18全体は未完である。今回閉じた担当IDは **W_SPARSE** の一�
 - W_CLOSE：上の未完幅分岐を全物理狭幅へ合成すること。疎幅一分岐の完成で代用しない。
 
 これらを入力する未証明structure fieldやaxiomを加えていない。Run19/20の担当は保持し、今回のPARTIALを完成runとしてrun数を進めない。
+
+## 具体例の計算方法
+
+`tests/WidthSparseData` と `WidthSparseCache` はメモリ対策の検算専用補助である。当該固定Dataの四重和以降がintervalになることを帰納で証明し、次数0–3の直接計算と合わせ、全次数で元のoffsetSumsに一致することを証明した。これから元のcomputedMinima/order/survivors/socleWindowとの等式を導き、43の既存受入を同じ内容で検証する。この表はW_SPARSEの一般証明には使わず、native_decide・未証明certificate・異標数rank一致も用いない。

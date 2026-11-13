@@ -20,3 +20,17 @@
 4. Ruling: Run18全体の終了条件は満たしていない。BHP/EKの新規一般定理を構成できておらず、残る幅分岐も未完のため、COMPLETE/全域NS-P14を宣言しない。PARTIALとして証跡を保存し、継続すべき正確な型を保持する。
 
 新規productionのcold build、空のtest cacheでの全既存fixture、公理依存・通常/explicit型、旧証跡のbyte保持、独立計数と公開guardは `verification/run18/runs/` の各排他的な検証ディレクトリへ保存する。途中の失敗を含む再実行では既存ディレクトリを上書きしない。
+
+## cold検証の失敗と修正
+
+最初のcold検証r01は旧154 fixtureとRequested/PartialClosedGoalsを通過したが、最後のWidthSparse具体例processがSIGKILL(-9)で停止した。cgroupの上限16 GiB、peakが上限付近、累積OOM kill counter=4を観測した。counterは累積値であり当該processだけの発生回数とは表示しない。r01を失敗として保存し、成功記録へ上書きしない。
+
+Ruling: 計算を含むLean fixtureを `-j1 -M12288` で直列elaborationし、processごとのメモリ上限を12 GiBにする。数学source・43の受入命題・通常のdecideによる核検査は維持する。誤っていれば検証が遅くなる/明示的に失敗するが、失敗を成功に変換しない。SOURCE_SHAとsnapshotを検証開始時に保存し、以後の失敗も構造化JSONへ残す。
+
+進行中に公開された指令監査 `2f0baa1703ec514a5b757264f70c19d7f6227856` も確認した。指令の必須修正0件。これは今回の実装の合格認証ではなく、BHP/EKの一般証明が大きな未完義務である点を再確認したもの。
+
+単独のraw fixtureは1 threadでもR=1のdecideで再帰深さ8192に達し失敗した（最大RSS 10,315,468 KiB）。通常の36 Betti比較だけのprobeは約6秒で成功したため、問題を具体例の再帰的offset和評価に局所化した。
+
+Ruling: 当該具体例では四重和から全intervalになることを帰納で証明し、全次数で元のoffsetSumsと一致する検算専用表を作った。computedMinima/order/survivors/socleWindowとの一致もLeanで証明して置換する。元の43命題は削除・弱化しない。誤った表なら等式のLean証明が失敗するため、未検証の数値入力として扱わない。
+
+初期focused shellの複数commandの最終exitだけではWidthSparse単独の成功を認定できなかったため、それを成功根拠から外した。修正版は個別subprocess終了コード0、64.745秒、最大RSS 2,727,840 KiBで全43命題を通過した。新規cold全回帰でさらに再確認する。数学production sourceと凍結契約は変更していない。

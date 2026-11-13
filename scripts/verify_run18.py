@@ -33,8 +33,18 @@ def main():
         'scripts/check_run18_width.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py',
         'docs/RUN18_INPUT_INVENTORY_JA.md','docs/RUN18_PAPER_CORRESPONDENCE_JA.md',
         'docs/superpowers/plans/2026-11-13-run18-lex-width-closure-order.md']+
-        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/acceptance_probes_20261113').iterdir()if p.is_file()])
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/acceptance_probes_20261113').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r01').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/diagnostics_20261113').iterdir()if p.is_file()])
     initial={f:sha(ROOT/f)for f in bound}
+    source_snapshot=git('rev-parse','HEAD').decode().strip()
+    (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
+    dependency=dict(lean_version=subprocess.check_output(['lean','--version'],text=True).strip(),
+        mathlib_commit=subprocess.check_output(['git','-C',str(ROOT/'.lake/packages/mathlib'),'rev-parse','HEAD'],text=True).strip(),
+        source_snapshot_commit=source_snapshot,fixture_threads=1,fixture_memory_limit_mib=12288)
+    assert 'version 4.36.0-rc2,'in dependency['lean_version']
+    assert dependency['mathlib_commit']=='139105d28c7685a154cb3093f79edb2e16708099'
+    (out/'snapshot.json').write_text(json.dumps(dependency,indent=2)+'\n')
     assert sha(ROOT/'audit/run18/RequestedGoals.lean')==FROZEN
     for f in valid_new+['NSP14.lean']:
         assert not re.search(r'\b(?:sorry|admit|sorryAx|native_decide)\b|^\s*(?:private\s+|public\s+)?axiom\b',(ROOT/f).read_text(),re.M),f
@@ -45,7 +55,10 @@ def main():
         ok=(r.returncode==0 and not re.search(r'\bwarning:',r.stdout))if expected is None else(r.returncode==1 and expected in r.stdout and 'lean.unknownIdentifier'in r.stdout and 'does not exist'not in r.stdout)
         records.append(dict(name=name,command=command,exit_code=r.returncode,expected_missing_declaration=expected,passed=ok,seconds=round(time.monotonic()-start,3)))
         print(name,r.returncode,'EXPECTED_OPEN'if expected else'PASS'if ok else'FAIL',flush=True)
-        if not ok:print(r.stdout[:12000]);raise SystemExit(1)
+        if not ok:
+            (out/'failure.json').write_text(json.dumps(dict(status='FAILED_VALIDATION_ATTEMPT',run18_complete=False,
+                source_snapshot_commit=source_snapshot,checks=records,failed_check=name),indent=2)+'\n')
+            print(r.stdout[:12000]);raise SystemExit(1)
         return r.stdout
     if args.fresh_test_cache:
         backup=Path(tempfile.mkdtemp(prefix='nsp14-run18-cache-'));moved=[]
@@ -70,11 +83,11 @@ def main():
     for f in paths:emit(f)
     for i,f in enumerate(ordered):
         target=Path('.lake/build/lib/lean')/Path(f).with_suffix('.olean');(ROOT/target).parent.mkdir(parents=True,exist_ok=True)
-        run('fixture_'+str(i).zfill(3)+'_'+Path(f).stem,['lake','env','lean',f,'-o',str(target)])
+        run('fixture_'+str(i).zfill(3)+'_'+Path(f).stem,['lake','env','lean','-j1','-M12288',f,'-o',str(target)])
     for f in open_acceptances:
         text=(ROOT/f).read_text();required=re.findall(r':=\s*([\w.]+)\s*$',text,re.M)
         assert len(required)==1,(f,required)
-        run('open_'+Path(f).stem,['lake','env','lean',f],expected=required[0])
+        run('open_'+Path(f).stem,['lake','env','lean','-j1','-M12288',f],expected=required[0])
     run('width_model',['python3','scripts/check_run18_width.py','--output',str(rel/'width_checks.json')])
     run('publication_guards',['python3','scripts/check_run18_guards.py'])
     for mode in ['schedule','coordinates']:
@@ -114,7 +127,7 @@ set_option maxHeartbeats 0
    IO.println ((Json.mkObj fields).compress)
 '''
     (out/'EnvironmentAudit.lean').write_text(audit)
-    raw=run('environment_axioms',['lake','env','lean',str(rel/'EnvironmentAudit.lean')],compressed=True)
+    raw=run('environment_axioms',['lake','env','lean','-j1','-M12288',str(rel/'EnvironmentAudit.lean')],compressed=True)
     declarations=[json.loads(l)for l in raw.splitlines()if l.startswith('{')]
     assert declarations and len({d['name']for d in declarations})==len(declarations)
     for d in declarations:
@@ -127,13 +140,14 @@ set_option maxHeartbeats 0
     names={d['name']for d in declarations}
     assert {'NSP14.Run18.sparse_closed','NSP14.NumericalSemigroup.narrow_sparse_comparison','Run15Closed.all_original_goals_closed','NSP14.Run17.kneser_closed','NSP14.Run17.savchevChen_closed'}<=names
     assert not {'NSP14.Lex.bhp_ek','NSP14.Run18.edge_closed','NSP14.Run18.dense_closed','NSP14.Run18.five_closed','NSP14.Run18.width_closed'}&names
+    assert git('rev-parse','HEAD').decode().strip()==source_snapshot,'HEAD changed during verification'
     assert {f:sha(ROOT/f)for f in bound}==initial,'source changed during verification'
     assert {f:sha(ROOT/f)for f in retained}==retained,'inherited evidence changed'
     for f in old-append_only:assert(ROOT/f).read_bytes()==git('show',BASE+':'+f),f
     (out/'declarations.json.gz').write_bytes(gzip.compress((json.dumps(sorted(declarations,key=lambda d:d['name']),ensure_ascii=False,indent=2)+'\n').encode(),mtime=0))
     (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
     summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,baseline_commit=BASE,
-        proof_snapshot_commit=git('rev-parse','HEAD').decode().strip(),fresh_project_test_cache=args.fresh_test_cache,
+        proof_snapshot_commit=source_snapshot,fixture_threads=1,fixture_memory_limit_mib=12288,fresh_project_test_cache=args.fresh_test_cache,
         fresh_new_production_cache=args.fresh_test_cache,evidence_directory=str(rel),checks=records,
         fixture_order=ordered,expected_open_acceptances=open_acceptances,allowed_axioms=sorted(ALLOWED),
         environment_declarations=len(declarations),new_environment_declarations=len(newdecls),

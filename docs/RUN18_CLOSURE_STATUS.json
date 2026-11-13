@@ -18,7 +18,8 @@
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
     "status": "PENDING_COLD_VALIDATION",
-    "evidence": "verification/run18/runs/release_candidate_20261113_r01/verification.json"
+    "evidence": "verification/run18/runs/release_candidate_20261113_r02/verification.json",
+    "previous_failed_attempt": "verification/run18/runs/release_candidate_20261113_r01/failure.json"
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
