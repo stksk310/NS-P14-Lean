@@ -1,0 +1,29 @@
+{
+  "gate": "PASS",
+  "fresh_context": true,
+  "reviewer": "/root/run17_final_review",
+  "model": "gpt-6-astra",
+  "base_commit": "584f92d8c1a7fc1e2413f606b661fc9b81f472cd",
+  "initial_reviewed_commit": "dc66f3ac9115e0d1fd044008f582eedc20ecf312",
+  "head_commit": "857777397c2c063f03cc6c8edb6e5e50bf1c41bd",
+  "source_manifest_sha256": "d5a61950283fa6ebc6cbbd2291cd966204512b5ca438ee12db360ece8f66f3cd",
+  "evidence_manifest_sha256": "748b2e79dc8a96c341d1a0bd4e633ce07402df2575849fe24ed70b2226650713",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "resolved_initial_findings": {
+    "important": 3,
+    "minor": 1
+  },
+  "independent_checks": [
+    "all 28 math modules and six fixtures initially read and checked",
+    "all 13 isolated publication cases independently rechecked",
+    "707 source hashes, 168 evidence hashes, 3260 predecessors, 368 earlier Run17 evidence files",
+    "no mathematical source changes after initial review"
+  ],
+  "declined_to_judge": [
+    "Actual publication ZIP is a subsequent executor action",
+    "Normal Push and remote confirmation are subsequent executor actions",
+    "Another complete in-checkout cold run would violate read-only review; recorded evidence and independent focused checks assessed instead"
+  ]
+}

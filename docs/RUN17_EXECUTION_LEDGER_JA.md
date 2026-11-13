@@ -116,3 +116,15 @@ Ruling: finishing-a-development-branchの統合先選択は、ユーザーが明
     未review文書変更の拒否、明示したledger追記境界の成功を実測。
     synthetic reviewはtemporary clone内のtool testのみ。実作業treeのreview gateはpendingのまま。
     証跡はpublication_tool_checks.json。これを固定して同じreviewerへ再確認を依頼する。
+
+21. 同じfresh-context reviewerが8577773を再確認しReady。Critical/Important/Minor=0。
+    13ケースを独立再実行し、707 source/168 evidence、旧Run17証跡368、過去3,260を照合。
+    source/evidence manifest hashはfinal_review.jsonの実値へ束縛。
+    Declined scopeの裁定: 実ZIPの全entry/hash/CRCと通常Push/remote cleanは実行側が続けて検証。
+    readonly reviewでの全cold再実行は対象外とし、記録済み160コマンドと独立focused検証を採用。
+    Run18–20の数学と全P14完成は今回の承認範囲外。
+
+22. 実監査ZIPを生成。598格納file+2管理entry、1,456,429 bytes。
+    全entry集合・全SHA・CRCをpackagerと別読み込みで照合しPASS。
+    実packagerを再実行して既存ZIP拒否とhash不変も確認。
+    archive SHAは隣の.zip.sha256。通常Pushとremote/clean照合へ進む。

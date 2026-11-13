@@ -1,6 +1,6 @@
 {
-  "status": "REVIEW_PENDING",
-  "run17_complete": false,
+  "status": "COMPLETE",
+  "run17_complete": true,
   "proof_goals_complete": true,
   "consumer_goals_complete": true,
   "closed_ids": [
@@ -27,8 +27,21 @@
     ],
     "evidence": "verification/run17/runs/release_candidate_20261113_r02/verification.json"
   },
-  "review": "Initial mathematical review satisfactory; three Important tooling fixes and one Minor wording fix under recheck",
-  "publication": "pending normal Push",
+  "review": {
+    "gate": "PASS",
+    "head_commit": "857777397c2c063f03cc6c8edb6e5e50bf1c41bd",
+    "report": "docs/RUN17_FINAL_REVIEW_JA.md",
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "publication": {
+    "stage": "validated_bundle_ready_for_authorized_normal_push",
+    "archive": "artifacts/NS_P14_RUN17_COMPLETE_AUDIT_20261113.zip",
+    "archive_sha256": "eeffe5df963b007dfb57c7a1b0ba4b9907b9441074de1bff364205235a01e543",
+    "entries": 600,
+    "crc": "PASS"
+  },
   "remaining_scope": [
     "Run18 BHP/EK, sparse polynomial, width target payment",
     "Run19 socle triangle, R<c0, mixed word counting, N4/LTV",
