@@ -782,3 +782,7 @@ Kneser uses the source-checked Bakšys–Dillies implementation of the DeVos pro
 SC uses a proved positional connected-subsequence argument following Lev; a direct sharp-term uniqueness lemma removes the need for the cited coset-structure proof.
 The original SC conclusion is proved without extra assumptions. Actual D.u, a_i, W and QC are retained.
 See [Run17 paper ledger](RUN17_PAPER_CORRESPONDENCE_JA.md) for all exports and the manuscript changes to preserve.
+
+## Run18 PARTIAL：疎幅一IDの閉鎖
+
+V03 W_SPARSE / V02 §13.4 W17–W21をactual source/targetの全行へ接続した。`NSP14.Run18.sparse_closed`が凍結契約を証明する。Run18全体は未完であり、X_BHP_EK・W_EDGE・W_DENSE・W_FIVE・W_CLOSEはopenのまま。詳細・範囲・原稿との差は`docs/RUN18_PAPER_CORRESPONDENCE_JA.md`、検証は新規排他的ディレクトリ`verification/run18/runs/`を参照。

@@ -1,0 +1,3 @@
+# 受入APIの不在probe
+
+実装前の既存import環境で公開宣言が不在であることを確認したログ。cache不在や構文エラーの試行は含めない。GREEN側は新規moduleと実fixtureで検証した。これらは新規moduleを追加した同一fixtureのRED→GREEN記録そのものではなく、受入型/APIを先に固定するための不在probeである。数学的な一般証明はproductionのLean証明と凍結されたW_SPARSE閉鎖定理にある。

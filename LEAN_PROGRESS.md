@@ -249,3 +249,7 @@ Run14指定範囲の未完入力はない。actual Tor評価・target Betti同�
 General proof exports and actual-core consumers are implemented. Final verification/publication gates are tracked in
 [Run17 status](docs/RUN17_CLOSURE_STATUS.json) and [audit handoff](docs/RUN17_AUDIT_HANDOFF_JA.md).
 No theorem is replaced by a finite table or a conclusion-valued input.
+
+## Run18 — partial execution (2026-11-13)
+
+W_SPARSE is proved on the original arbitrary-field completed source and literal interval target, in every row, for e>=6 and normalized width u>=2e-2. The frozen contract is `NSP14.Run18.sparse_closed`. BHP/Pardue/EK, edge, dense, five-generator and full narrow closure remain open: Run18 is PARTIAL, not complete. See `docs/RUN18_CLOSURE_STATUS.json` and `docs/RUN18_PAPER_CORRESPONDENCE_JA.md`.

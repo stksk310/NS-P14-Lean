@@ -588,3 +588,7 @@ public import NSP14.Width.SparseFirstLarge
 public import NSP14.Width.SparseFirstSmall
 public import NSP14.Width.SparseRemainder
 public import NSP14.Width.SparseVolume
+public import NSP14.Width.NormalizedCapacity
+public import NSP14.Width.SparseComparison
+public import NSP14.Width.SparseHigher
+public import NSP14.Width.SparseSecond

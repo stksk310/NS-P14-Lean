@@ -1,0 +1,30 @@
+{
+  "status": "PARTIAL",
+  "run18_complete": false,
+  "baseline_commit": "c4fd8153f55bb231aab4168a47c1546888fa7ab0",
+  "order_commit": "131f559a9ad495891f0aab487f969bf91b5a447f",
+  "closed_ids": [
+    "W_SPARSE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_FIVE",
+    "W_CLOSE"
+  ],
+  "frozen_requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+  "closed_goal": "NSP14.Run18.sparse_closed",
+  "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
+  "verification": {
+    "status": "PENDING_COLD_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261113_r01/verification.json"
+  },
+  "unproved_assigned_declarations": [
+    "NSP14.Lex.bhp_ek",
+    "NSP14.Run18.edge_closed",
+    "NSP14.Run18.dense_closed",
+    "NSP14.Run18.five_closed",
+    "NSP14.Run18.width_closed"
+  ]
+}

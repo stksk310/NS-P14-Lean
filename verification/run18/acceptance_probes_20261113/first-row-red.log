@@ -1,0 +1,2 @@
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/FirstRowRed.lean:3:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Endpoint.Data.actual_first_volume_third`
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/FirstRowRed.lean:4:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Endpoint.Data.actual_first_sparse_large`

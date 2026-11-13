@@ -1,0 +1,15 @@
+{
+  "FirstRowRed.lean": "1a9a03dc4d5bb59609a7264fa1fca07aa109d532ca7ce92e615af1b9639813e3",
+  "HigherRed.lean": "e89cbf8a51c494b970b5473dff59dc275acf811c6bc9412f104a1d3f26e6ff3a",
+  "LexHilbertRed.lean": "f09f9bff3fd9373771fb55e049f6bfa0f5400cef5458557c6fd914b4388b70ad",
+  "ProgressionRed.lean": "d080ac3418b61a5b32957037b945f9a67386b9303ef55290924c15bf8f6503d7",
+  "README_JA.md": "b9b7ec40b8c4f6ab3b6a87c39a9bea189c786eb2fd01958a80cdd57bd29c83c2",
+  "SmallRankRed.lean": "de66190790ce7ff91fc636373e2badaa7a54819313ea4dc58eba7ffc2b56f801",
+  "SparseClosureRed.lean": "177e6a4bb43f55d4e4426412eef1d2d22cb699668484d5ab54eed66d6e03d30a",
+  "first-row-red.log": "a78f1ff245f3001275658c03905a79941cf7bf702aed13e527b9e93566948f4a",
+  "higher-red.log": "afcf157fc18821e7684168a1ccc52724aa41c34f831c236626925bb8880908ae",
+  "lex-hilbert-red.log": "9cc5b364da8ec74ccf5c2c09b666acbd80bf6e6bc86b6feb157a4a0f659781e7",
+  "progression-red.log": "1a92c54f294ee1f5752aacb2038cb240d416843beaec005b7065fe64002b5100",
+  "small-rank-red-r02.log": "84b6ff1ab2db3e02725910a71a92f193214452143dc3a98e1db2306b0a485c8d",
+  "sparse-closure-red.log": "bdbbaba7c435ebedca09d12939992f743ecd3e13f13d8f19e6ddb6195a189ea1"
+}
