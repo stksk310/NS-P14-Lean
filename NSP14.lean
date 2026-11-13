@@ -579,3 +579,12 @@ public import NSP14.Additive.ThreePointGrowth
 public import NSP14.Additive.TwoValueSequence
 public import NSP14.Additive.UnitRepresentatives
 public import NSP14.Additive.ZeroSumSequence
+public import NSP14.Lex.Hilbert
+public import NSP14.Lex.Ideal
+public import NSP14.Width.FirstResources
+public import NSP14.Width.Progression
+public import NSP14.Width.SparseFirst
+public import NSP14.Width.SparseFirstLarge
+public import NSP14.Width.SparseFirstSmall
+public import NSP14.Width.SparseRemainder
+public import NSP14.Width.SparseVolume
