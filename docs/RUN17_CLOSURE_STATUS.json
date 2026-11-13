@@ -36,11 +36,15 @@
     "minor": 0
   },
   "publication": {
-    "stage": "validated_bundle_ready_for_authorized_normal_push",
+    "stage": "published",
     "archive": "artifacts/NS_P14_RUN17_COMPLETE_AUDIT_20261113.zip",
     "archive_sha256": "eeffe5df963b007dfb57c7a1b0ba4b9907b9441074de1bff364205235a01e543",
     "entries": 600,
-    "crc": "PASS"
+    "crc": "PASS",
+    "published_release_commit": "b85438dd46bfdd920c7b6117c5541b2078094b09",
+    "remote_work_at_release_check": "b85438dd46bfdd920c7b6117c5541b2078094b09",
+    "release_worktree_clean": true,
+    "release_checked_at_utc": "2026-11-13T09:43:36.963285+00:00"
   },
   "remaining_scope": [
     "Run18 BHP/EK, sparse polynomial, width target payment",

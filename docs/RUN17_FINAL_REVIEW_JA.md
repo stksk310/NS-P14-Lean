@@ -19,3 +19,9 @@ Evidence manifest SHA256: `748b2e79dc8a96c341d1a0bd4e633ce07402df2575849fe24ed70
 - readonly制約によるcheckout内の再cold実行は対象外。記録済みcoldと独立focused再検証、hash照合を採用。
 
 このReadyは担当Run17 snapshotの公開承認。全P14の完成や未実行の公開操作を完了済みとは表示しない。
+
+## 実行側の公開確認
+
+実ZIPは600 entry、全SHA/CRC照合PASS、既存先拒否も実測。
+release `b85438dd46bfdd920c7b6117c5541b2078094b09`を通常Pushし、origin/work一致とcleanを確認。
+これらはレビュー後に実行側が検証した結果である。

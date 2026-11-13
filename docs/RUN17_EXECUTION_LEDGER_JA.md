@@ -128,3 +128,7 @@ Ruling: finishing-a-development-branchの統合先選択は、ユーザーが明
     全entry集合・全SHA・CRCをpackagerと別読み込みで照合しPASS。
     実packagerを再実行して既存ZIP拒否とhash不変も確認。
     archive SHAは隣の.zip.sha256。通常Pushとremote/clean照合へ進む。
+
+23. release b85438dd46bfdd920c7b6117c5541b2078094b09を通常Push。
+    fetch後origin/workとrelease SHAが一致し、worktree cleanを実測。
+    この公開確認をmetadata receipt commitへ追記し、再度通常Pushする。
