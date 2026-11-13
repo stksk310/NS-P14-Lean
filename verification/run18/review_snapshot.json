@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS",
+  "scope": "READ_ONLY_WHOLE_BRANCH_REVIEW_FOR_PARTIAL_PUBLICATION_ONLY",
+  "run18_complete": false,
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "source_snapshot_commit": "fa3787cff6e924690ea7abc1bc522fb43a06be02",
+  "reviewed_commit": "008b3247442e6ab5d6f2e1cf025855d629bfc542",
+  "reviewer": "/root/run18_final_review",
+  "review_report": "docs/RUN18_FINAL_REVIEW_JA.md",
+  "review_report_sha256": "6f6ffe74a70ea9a86d229fd502b46e3e4f1246da7af63904b57fd04d58ed81c8",
+  "verification_summary_sha256": "a947e2d472b5122403c5374b62c9783bda8c6bc67b93f468b5b8f7761191b061",
+  "verification_manifest_sha256": "e1d68e2b4522e41ae94fe464fd15b37c24e4e0ea0dc9d24e7203bbe272d102ed",
+  "closed_ids": [
+    "W_SPARSE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_FIVE",
+    "W_CLOSE"
+  ]
+}
