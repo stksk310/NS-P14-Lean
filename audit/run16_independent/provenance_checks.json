@@ -1,0 +1,25 @@
+{
+  "status": "PASS_COMMITTED_PROVENANCE_AND_SOURCE_SCOPE",
+  "audited_commit": "584f92d8c1a7fc1e2413f606b661fc9b81f472cd",
+  "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "source_files": 116,
+  "source_lines": 7586,
+  "old_production_files_changed": 0,
+  "all_new_sources_root_imported": true,
+  "forbidden_proof_or_metaprogramming_constructs": [],
+  "production_imports_audit": false,
+  "bound_source_hashes": 664,
+  "bound_evidence_hashes": 155,
+  "zip_entries": 814,
+  "zip_manifest_entries": 812,
+  "zip_sha256": "a1106405d62c17ccc899b920b1baa6c2e67674c4826473786ff1e4b9e290d816",
+  "recorded_environment_declarations": 7835,
+  "core_declarations": 1437,
+  "type_records": 1629,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "note": "Committed integrity checked; fresh Lean replay is separate."
+}

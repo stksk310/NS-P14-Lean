@@ -1,0 +1,18 @@
+{
+  "status": "PASS_INDEPENDENT_RUN16_REPLAY",
+  "audited_commit": "584f92d8c1a7fc1e2413f606b661fc9b81f472cd",
+  "checks": 150,
+  "all_exit_codes_zero": true,
+  "fresh_project_production_and_test_cache": true,
+  "built_project_modules_including_root": 513,
+  "environment_declarations": 7835,
+  "new_type_records": 1629,
+  "core_run16_declarations": 1437,
+  "identical_full_declaration_records": true,
+  "identical_bound_source_hashes": 664,
+  "current_checkout_output_paths": true,
+  "inherited_original_run15_goal_closure_compiled": true,
+  "inherited_coordinate_model_cases": 799,
+  "check_seconds": 873.888,
+  "evidence_directory": "verification/run16_independent/reproduction"
+}

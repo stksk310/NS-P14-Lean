@@ -1,0 +1,2419 @@
+{
+  "status": "PASS_FINITE_ACTUAL_TOR_CROSS_CHECKS",
+  "scope": "Finite EH cases only; no universal proof claim.",
+  "script_sha256": "93433d9b573f9e53f699117153488aa0b901c44db8eda0b2f91a586850ed01ec",
+  "cases": 34,
+  "field_checks": 102,
+  "kernel_points_checked": 18885,
+  "characteristics": [
+    2,
+    3,
+    101
+  ],
+  "records": [
+    {
+      "m": 6,
+      "d": 1,
+      "internal": [
+        1,
+        3
+      ],
+      "u": 4,
+      "atoms": [
+        6,
+        7,
+        9,
+        10
+      ],
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 5,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 311,
+      "order_stable_from": 12,
+      "full_tor_max_weight": 44,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        1,
+        3
+      ],
+      "u": 4,
+      "atoms": [
+        7,
+        9,
+        13,
+        15
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 5,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 335,
+      "order_stable_from": 20,
+      "full_tor_max_weight": 64,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        1,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        7,
+        8,
+        12,
+        13
+      ],
+      "PC": 9,
+      "PG": 6,
+      "R": 1,
+      "endpoint_homology": [
+        6,
+        7,
+        1
+      ],
+      "W": 10,
+      "Hx": 3,
+      "Rhat": 4,
+      "sigma": 2,
+      "kernel_points_checked": 758,
+      "order_stable_from": 26,
+      "full_tor_max_weight": 66,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          8,
+          5,
+          1
+        ],
+        "3": [
+          1,
+          5,
+          8,
+          5,
+          1
+        ],
+        "101": [
+          1,
+          5,
+          8,
+          5,
+          1
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "internal": [
+        2,
+        3,
+        4
+      ],
+      "u": 7,
+      "atoms": [
+        9,
+        11,
+        12,
+        13,
+        16
+      ],
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "endpoint_homology": [
+        7,
+        7,
+        0
+      ],
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": null,
+      "kernel_points_checked": 1150,
+      "order_stable_from": 20,
+      "full_tor_max_weight": 81,
+      "full_actual_betti": {
+        "2": [
+          1,
+          7,
+          15,
+          13,
+          4,
+          0
+        ],
+        "3": [
+          1,
+          7,
+          15,
+          13,
+          4,
+          0
+        ],
+        "101": [
+          1,
+          7,
+          15,
+          13,
+          4,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          4,
+          6,
+          3
+        ],
+        "3": [
+          1,
+          4,
+          6,
+          3
+        ],
+        "101": [
+          1,
+          4,
+          6,
+          3
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 5,
+      "atoms": [
+        8,
+        9,
+        10,
+        13
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 528,
+      "order_stable_from": 16,
+      "full_tor_max_weight": 56,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        3,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        8,
+        11,
+        12,
+        13
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 546,
+      "order_stable_from": 19,
+      "full_tor_max_weight": 63,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          9,
+          4,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 3,
+      "atoms": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "endpoint_homology": [
+        3,
+        3,
+        0
+      ],
+      "W": 3,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 180,
+      "order_stable_from": 12,
+      "full_tor_max_weight": 42,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 3,
+      "atoms": [
+        9,
+        11,
+        13,
+        15
+      ],
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "endpoint_homology": [
+        3,
+        3,
+        0
+      ],
+      "W": 3,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 225,
+      "order_stable_from": 35,
+      "full_tor_max_weight": 83,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "internal": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "PC": 7,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": null,
+      "kernel_points_checked": 863,
+      "order_stable_from": 18,
+      "full_tor_max_weight": 90,
+      "full_actual_betti": {
+        "2": [
+          1,
+          12,
+          27,
+          27,
+          14,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          12,
+          27,
+          27,
+          14,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          12,
+          27,
+          27,
+          14,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          8,
+          14,
+          9,
+          2
+        ],
+        "3": [
+          1,
+          8,
+          14,
+          9,
+          2
+        ],
+        "101": [
+          1,
+          8,
+          14,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 3,
+      "atoms": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "endpoint_homology": [
+        3,
+        3,
+        0
+      ],
+      "W": 3,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 165,
+      "order_stable_from": 10,
+      "full_tor_max_weight": 36,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 2,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 3,
+      "atoms": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "endpoint_homology": [
+        3,
+        3,
+        0
+      ],
+      "W": 3,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 165,
+      "order_stable_from": 14,
+      "full_tor_max_weight": 46,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 4,
+      "atoms": [
+        6,
+        7,
+        8,
+        10
+      ],
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 5,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 299,
+      "order_stable_from": 12,
+      "full_tor_max_weight": 43,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "internal": [
+        2,
+        3
+      ],
+      "u": 4,
+      "atoms": [
+        6,
+        8,
+        9,
+        10
+      ],
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 5,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 306,
+      "order_stable_from": 14,
+      "full_tor_max_weight": 47,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        8,
+        9,
+        12
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 495,
+      "order_stable_from": 14,
+      "full_tor_max_weight": 50,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        9,
+        11,
+        17
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 495,
+      "order_stable_from": 20,
+      "full_tor_max_weight": 64,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          7,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        1,
+        3
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        8,
+        10,
+        12
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 495,
+      "order_stable_from": 14,
+      "full_tor_max_weight": 51,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        1,
+        3
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        9,
+        13,
+        17
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 495,
+      "order_stable_from": 20,
+      "full_tor_max_weight": 66,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        1,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        8,
+        11,
+        12
+      ],
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 521,
+      "order_stable_from": 18,
+      "full_tor_max_weight": 56,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        1,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        9,
+        15,
+        17
+      ],
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 521,
+      "order_stable_from": 21,
+      "full_tor_max_weight": 69,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        2,
+        3
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        9,
+        10,
+        12
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 503,
+      "order_stable_from": 16,
+      "full_tor_max_weight": 54,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        2,
+        3
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        11,
+        13,
+        17
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 503,
+      "order_stable_from": 24,
+      "full_tor_max_weight": 72,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        2,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        9,
+        11,
+        12
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 511,
+      "order_stable_from": 18,
+      "full_tor_max_weight": 57,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        2,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        11,
+        15,
+        17
+      ],
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "endpoint_homology": [
+        5,
+        5,
+        0
+      ],
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 511,
+      "order_stable_from": 28,
+      "full_tor_max_weight": 78,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "internal": [
+        3,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        10,
+        11,
+        12
+      ],
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 511,
+      "order_stable_from": 17,
+      "full_tor_max_weight": 57,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "internal": [
+        3,
+        4
+      ],
+      "u": 5,
+      "atoms": [
+        7,
+        13,
+        15,
+        17
+      ],
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 511,
+      "order_stable_from": 26,
+      "full_tor_max_weight": 78,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          6,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        1,
+        2
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        9,
+        10,
+        14
+      ],
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 10,
+      "Hx": 2,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 748,
+      "order_stable_from": 22,
+      "full_tor_max_weight": 63,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        1,
+        3
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        9,
+        11,
+        14
+      ],
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 10,
+      "Hx": 2,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 748,
+      "order_stable_from": 22,
+      "full_tor_max_weight": 64,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          6,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          6,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          6,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        1,
+        4
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        9,
+        12,
+        14
+      ],
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 10,
+      "Hx": 2,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 780,
+      "order_stable_from": 20,
+      "full_tor_max_weight": 63,
+      "full_actual_betti": {
+        "2": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "3": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ],
+        "101": [
+          1,
+          6,
+          8,
+          3,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        1,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        9,
+        13,
+        14
+      ],
+      "PC": 9,
+      "PG": 6,
+      "R": 1,
+      "endpoint_homology": [
+        6,
+        7,
+        1
+      ],
+      "W": 10,
+      "Hx": 3,
+      "Rhat": 4,
+      "sigma": 2,
+      "kernel_points_checked": 806,
+      "order_stable_from": 29,
+      "full_tor_max_weight": 73,
+      "full_actual_betti": {
+        "2": [
+          1,
+          7,
+          11,
+          6,
+          1
+        ],
+        "3": [
+          1,
+          7,
+          11,
+          6,
+          1
+        ],
+        "101": [
+          1,
+          7,
+          11,
+          6,
+          1
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        2,
+        3
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        10,
+        11,
+        14
+      ],
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 758,
+      "order_stable_from": 24,
+      "full_tor_max_weight": 67,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        2,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        10,
+        13,
+        14
+      ],
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "endpoint_homology": [
+        6,
+        6,
+        0
+      ],
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 2,
+      "kernel_points_checked": 798,
+      "order_stable_from": 26,
+      "full_tor_max_weight": 71,
+      "full_actual_betti": {
+        "2": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "3": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "101": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ],
+        "101": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        3,
+        4
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        11,
+        12,
+        14
+      ],
+      "PC": 6,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 776,
+      "order_stable_from": 30,
+      "full_tor_max_weight": 75,
+      "full_actual_betti": {
+        "2": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ],
+        "3": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ],
+        "101": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        3,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        11,
+        13,
+        14
+      ],
+      "PC": 6,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 10,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 784,
+      "order_stable_from": 32,
+      "full_tor_max_weight": 78,
+      "full_actual_betti": {
+        "2": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "3": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ],
+        "101": [
+          1,
+          5,
+          5,
+          1,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "internal": [
+        4,
+        5
+      ],
+      "u": 6,
+      "atoms": [
+        8,
+        12,
+        13,
+        14
+      ],
+      "PC": 6,
+      "PG": 4,
+      "R": 0,
+      "endpoint_homology": [
+        4,
+        4,
+        0
+      ],
+      "W": 10,
+      "Hx": 0,
+      "Rhat": 0,
+      "sigma": 1,
+      "kernel_points_checked": 784,
+      "order_stable_from": 32,
+      "full_tor_max_weight": 79,
+      "full_actual_betti": {
+        "2": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ],
+        "3": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ],
+        "101": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ]
+      },
+      "QC_betti": {
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ],
+        "101": [
+          1,
+          2,
+          1
+        ]
+      }
+    }
+  ]
+}
