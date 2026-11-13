@@ -1,0 +1,21 @@
+{
+  "status": "PASS_ISOLATED_PUBLICATION_GUARDS",
+  "full": true,
+  "cases": [
+    "verifier refuses existing evidence directory before any replay",
+    "check_run17_additive.py refuses existing numeric output",
+    "replay_run17_inherited.py refuses existing numeric output",
+    "packager refuses existing archive",
+    "packager refuses existing checksum",
+    "positive packaging of exact committed source/evidence succeeds in isolated clone",
+    "second positive invocation cannot overwrite published ZIP",
+    "rejects invalid or stale head_commit",
+    "rejects invalid or stale source_manifest_sha256",
+    "rejects invalid or stale evidence_manifest_sha256",
+    "rejects a real but stale reviewed commit",
+    "rejects unreviewed packaged document change",
+    "explicit append-only publication ledger boundary succeeds"
+  ],
+  "tested_head_commit": "7c38921b54bc956759d9dddb828685bbb664a552",
+  "scope": "Isolated temporary clones only; synthetic test attestations do not certify an independent review."
+}

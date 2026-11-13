@@ -109,3 +109,10 @@ Ruling: finishing-a-development-branchの統合先選択は、ユーザーが明
     154 fixture、8,241宣言、新規406、450.127秒。Run01–16原本3,260件と
     既存Run17証跡368件のhash/bytesを保持。数学28ファイルはdc66f3aと完全同一。
     採用証跡: verification/run17/runs/release_candidate_20261113_r02。原本final/は変更していない。
+
+20. committed candidate 7c38921のtemporary cloneで公開処理13ケースPASS。
+    正のZIP生成、再実行による上書き拒否、checksum単独の既存先拒否、
+    全ゼロcommit/実在する古いcommit/誤ったsource又はevidence manifestの拒否、
+    未review文書変更の拒否、明示したledger追記境界の成功を実測。
+    synthetic reviewはtemporary clone内のtool testのみ。実作業treeのreview gateはpendingのまま。
+    証跡はpublication_tool_checks.json。これを固定して同じreviewerへ再確認を依頼する。
