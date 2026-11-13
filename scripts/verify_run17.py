@@ -1,8 +1,22 @@
 #!/usr/bin/env python3
 """Cold, checkout-local verification of all Run17 proofs and inherited regressions."""
 from pathlib import Path
-import gzip,hashlib,json,re,shutil,subprocess,sys,tempfile,time
-root=Path(__file__).resolve().parents[1];out=root/'verification/run17/final';out.mkdir(parents=True,exist_ok=True)
+import argparse,datetime,gzip,hashlib,json,re,shutil,subprocess,sys,tempfile,time,uuid
+root=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--fresh-test-cache',action='store_true')
+parser.add_argument('--output-dir',help='new repository-relative directory under verification/run17')
+args=parser.parse_args()
+stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+out_rel=Path(args.output_dir or f'verification/run17/runs/check_{stamp}_{uuid.uuid4().hex[:8]}')
+if out_rel.is_absolute()or'..'in out_rel.parts or out_rel.parts[:2]!=('verification','run17'):
+    parser.error('output directory must be repository-relative under verification/run17')
+out=root/out_rel
+if out.exists():parser.error('output directory already exists; existing evidence is never overwritten')
+out.mkdir(parents=True,exist_ok=False)
+print('EVIDENCE_DIRECTORY',out_rel.as_posix(),flush=True)
+preserved_evidence={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest()
+    for p in (root/'verification/run17').rglob('*')if p.is_file()}
 base='584f92d8c1a7fc1e2413f606b661fc9b81f472cd'
 def git(*args):return subprocess.check_output(['git',*args],cwd=root)
 old=set(git('ls-tree','-r','--name-only',base).decode().splitlines())
@@ -26,7 +40,7 @@ for original,local in [('MulStab.lean','KneserFinsetStabilizer.lean'),('Kneser.l
 status=json.loads((root/'docs/RUN17_CLOSURE_STATUS.json').read_text())
 assert status['proof_goals_complete'] and status['consumer_goals_complete'] and status['unproved_ids']==[]
 def bound_paths():
-    return sorted([str(p.relative_to(root))for d in ['NSP14','tests','audit']for p in(root/d).rglob('*.lean')]+['NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run17.py','scripts/check_run17_additive.py','scripts/package_run17_audit.py','scripts/replay_run17_inherited.py','NSP14/Additive/Kneser_SOURCE_LICENSE','verification/run17/sources/provenance.json','docs/RUN17_PAPER_CORRESPONDENCE_JA.md','docs/superpowers/plans/2026-11-13-run17-kneser-savchev-chen-order.md'])
+    return sorted([str(p.relative_to(root))for d in ['NSP14','tests','audit']for p in(root/d).rglob('*.lean')]+['NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run17.py','scripts/check_run17_additive.py','scripts/package_run17_audit.py','scripts/replay_run17_inherited.py','scripts/check_run17_publication.py','NSP14/Additive/Kneser_SOURCE_LICENSE','verification/run17/sources/provenance.json','docs/RUN17_PAPER_CORRESPONDENCE_JA.md','docs/superpowers/plans/2026-11-13-run17-kneser-savchev-chen-order.md'])
 initial={p:hashlib.sha256((root/p).read_bytes()).hexdigest()for p in bound_paths()};records=[]
 def run(name,command,compressed=False):
     start=time.monotonic();r=subprocess.run(command,cwd=root,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
@@ -35,7 +49,7 @@ def run(name,command,compressed=False):
     print(name,r.returncode,flush=True)
     if r.returncode or re.search(r'\bwarning:',r.stdout):print(r.stdout[:12000]);raise SystemExit(r.returncode or 1)
     return r.stdout
-fresh='--fresh-test-cache'in sys.argv
+fresh=args.fresh_test_cache
 if fresh:
     cache=root/'.lake/build/lib/lean/tests';backup=Path(tempfile.mkdtemp(prefix='nsp14-run17-testcache-'))/'tests'
     if cache.exists():shutil.move(str(cache),str(backup))
@@ -75,8 +89,10 @@ for i,path in enumerate(ordered):
 for i,cmd in enumerate(other):
     modes={'lean_planning/checks/check_run_schedule_r02.py':'schedule','scripts/check_run16_coordinates.py':'coordinates'}
     assert len(cmd)==2 and cmd[0]=='python3'and cmd[1]in modes,('unclassified legacy side effects',cmd)
-    run('inherited_numeric_'+str(i),['python3','scripts/replay_run17_inherited.py',modes[cmd[1]]])
-run('additive_model',['python3','scripts/check_run17_additive.py'])
+    mode=modes[cmd[1]]
+    run('inherited_numeric_'+str(i),['python3','scripts/replay_run17_inherited.py',mode,'--output',str(out_rel/('inherited_'+mode+'.json'))])
+run('additive_model',['python3','scripts/check_run17_additive.py','--output',str(out_rel/'additive_checks.json')])
+run('publication_guards',['python3','scripts/check_run17_publication.py'])
 modules=[p[:-5].replace('/','.')for p in ordered];newmodules=[p[:-5].replace('/','.')for p in new_lean]+['NSP14']
 audit='''module
 import NSP14
@@ -111,7 +127,7 @@ set_option maxHeartbeats 0
    IO.println ((Json.mkObj fields).compress)
 '''
 (out/'EnvironmentAudit.lean').write_text(audit)
-raw=run('environment_axioms',['lake','env','lean','verification/run17/final/EnvironmentAudit.lean'],True)
+raw=run('environment_axioms',['lake','env','lean',str(out_rel/'EnvironmentAudit.lean')],True)
 declarations=[json.loads(line)for line in raw.splitlines()if line.startswith('{')]
 allowed={'propext','Classical.choice','Quot.sound'}
 assert declarations and len({d['name']for d in declarations})==len(declarations)
@@ -136,9 +152,12 @@ assert 'Run15Closed.all_original_goals_closed'in{d['name']for d in declarations}
 assert set(bound_paths())==set(initial),'source set changed during verification'
 for p,h in initial.items():assert hashlib.sha256((root/p).read_bytes()).hexdigest()==h,('source changed',p)
 for p in frozen:assert (root/p).read_bytes()==git('show',base+':'+p),('baseline changed during verification',p)
+for p,h in preserved_evidence.items():assert hashlib.sha256((root/p).read_bytes()).hexdigest()==h,('earlier Run17 evidence changed',p)
 (out/'declarations.json.gz').write_bytes(gzip.compress((json.dumps(sorted(declarations,key=lambda d:d['name']),ensure_ascii=False,indent=2)+'\n').encode(),mtime=0))
 (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
 summary=dict(status='PASS_RUN17_PROOF_CLOSURE',baseline_commit=base,fresh_project_test_cache=fresh,
+    evidence_directory=out_rel.as_posix(),output_policy='new_exclusive_directory_only',
+    preserved_run17_evidence_count=len(preserved_evidence),
     fresh_new_production_cache=fresh,
     checks=records,fixture_order=ordered,sources=sources,acceptance_tests=tests,closure_contract=contract,
     audit_sources=['audit/run17/RequestedGoals.lean',contract],
@@ -148,6 +167,6 @@ summary=dict(status='PASS_RUN17_PROOF_CLOSURE',baseline_commit=base,fresh_projec
     required_exports=required_exports,required_consumers=required_consumers,run16_contract_ids=run16ids,
     types='all new declarations including instances, constructors and generated helpers: normal and explicit types, source hash')
 (out/'verification.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
-manifest={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest()for p in sorted(out.iterdir())if p.is_file()and p.name!='MANIFEST_SHA256.json'}
+manifest={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest()for p in sorted(out.rglob('*'))if p.is_file()and p.name!='MANIFEST_SHA256.json'}
 (out/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(summary['status'],len(records),'commands',len(declarations),'environment declarations',len(newdecls),'new',flush=True)

@@ -9,7 +9,7 @@ Bakšys–Dillies実証明の再利用である。依存更新や外部oleanへ�
 SCは位置付き部分列の新規主鎖を実装した。finite regressionの約0.2秒は開発工数と別物。
 baseline build記録は2026-11-13 07:55 UTC、数学接続後のcold検証着手は08:50台UTC。
 この間隔は原典調査・実装・compile/debugを含み、純粋な証明CPU時間ではない。
-最終cold回帰時間・宣言数・source数は`verification/run17/final/verification.json`を正本とする。
+採用したcold回帰時間・宣言数・source数はclosure statusの`verification.evidence`が指すJSONを正本とする。
 
 Run16の「Kneser/SCは約1〜3倍」という暫定幅より今回が小さくなった主因は、
 一般Kneserの再利用可能な形式証明を発見したことと、SCのsharp一意性を短く直接証明できたこと。
@@ -25,6 +25,10 @@ Run16の「Kneser/SCは約1〜3倍」という暫定幅より今回が小さく�
 Run18着手時には、予定名より実exportの型と公刊証明の依存量で順序と工数を更新する。
 Run17だけでP14全体のLean証明が完成したという表示はしない。
 
-最終cold実測: 159コマンド、154 fixture、8,241宣言うち新規406。
+最初の合格cold実測: 159コマンド、154 fixture、8,241宣言うち新規406。
 コマンド実測合計 506.05秒。
 新規production/testの空cache、過去原本3260ファイルのbytes照合を含む。
+
+公開tooling修正後の採用cold: 160コマンド、154 fixture、宣言数は同じ。
+コマンド実測450.127秒、Run01–16原本3,260件と既存Run17証跡368件を保持。
+数学sourceは最初の合格snapshot dc66f3aから変更なし。

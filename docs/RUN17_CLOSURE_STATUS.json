@@ -15,7 +15,7 @@
   "requested_goals_sha256": "54dc3a2a4f0f204388751deaaffb7d77d673ac80444b646d1794a2b984891888",
   "verification": {
     "status": "PASS_RUN17_PROOF_CLOSURE",
-    "commands": 159,
+    "commands": 160,
     "environment_declarations": 8241,
     "new_environment_declarations": 406,
     "fresh_project_test_cache": true,
@@ -25,9 +25,9 @@
       "Quot.sound",
       "propext"
     ],
-    "evidence": "verification/run17/final/verification.json"
+    "evidence": "verification/run17/runs/release_candidate_20261113_r02/verification.json"
   },
-  "review": "pending fresh-context review",
+  "review": "Initial mathematical review satisfactory; three Important tooling fixes and one Minor wording fix under recheck",
   "publication": "pending normal Push",
   "remaining_scope": [
     "Run18 BHP/EK, sparse polynomial, width target payment",

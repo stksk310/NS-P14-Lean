@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Run exact legacy numeric checkers in an isolated root, preserving old evidence."""
 from pathlib import Path
-import json,shutil,subprocess,sys,tempfile
+import argparse,json,subprocess,sys,tempfile
 root=Path(__file__).resolve().parents[1]
-mode=sys.argv[1]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('mode',choices=['coordinates','schedule'])
+parser.add_argument('--output',help='fresh JSON output path; default prints only')
+args=parser.parse_args();mode=args.mode
+destination=Path(args.output)if args.output else None
+if destination is not None and destination.exists():parser.error('output already exists; existing evidence is never overwritten')
 if mode=='coordinates':
     script='scripts/check_run16_coordinates.py'
     inputs=[]
@@ -26,8 +31,8 @@ with tempfile.TemporaryDirectory(prefix='nsp14-run17-inherited-')as tmp:
     expected=json.loads(before[output])
     excluded={'seconds'}if mode=='coordinates'else set()
     assert {k:v for k,v in result.items()if k not in excluded}=={k:v for k,v in expected.items()if k not in excluded}
-    destination=root/'verification/run17/inherited_numeric'/Path(output).name
-    destination.parent.mkdir(parents=True,exist_ok=True)
-    shutil.copy2(isolated/output,destination)
+    if destination is not None:
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        with destination.open('xb')as f:f.write((isolated/output).read_bytes())
 for rel,data in before.items():assert (root/rel).read_bytes()==data,('legacy input/evidence changed',rel)
 print('PASS_ISOLATED_LEGACY_REPLAY',mode)

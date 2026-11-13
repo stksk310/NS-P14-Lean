@@ -4,7 +4,7 @@ from itertools import combinations_with_replacement
 from math import gcd
 from functools import reduce
 from pathlib import Path
-import json
+import argparse,json
 
 def residues(mask,u): return [i for i in range(u) if mask>>i&1]
 def sumset(a,b,u):
@@ -20,6 +20,11 @@ def zsf(seq,u):
     return True
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',help='fresh JSON output path; default prints only')
+    args=parser.parse_args()
+    out=Path(args.output)if args.output else None
+    if out is not None and out.exists():parser.error('output already exists; existing evidence is never overwritten')
     counts=dict(kneser_pairs=0,iterated=0,proper_growth=0,four_point=0,
                 zero_sum_free_multisets=0,long_multisets=0)
     for u in range(1,9):
@@ -90,8 +95,8 @@ def main():
     report=dict(status='PASS_FINITE_REGRESSION_ONLY',counts=counts,SC_examples=examples,
                 boundary_representative_sums=boundary,actual_core=actual,
                 universal_proof='Lean exports, not this finite search')
-    out=Path(__file__).resolve().parents[1]/'verification/run17/additive_checks.json'
-    out.parent.mkdir(parents=True,exist_ok=True)
-    out.write_text(json.dumps(report,indent=2)+'\n')
+    if out is not None:
+        out.parent.mkdir(parents=True,exist_ok=True)
+        with out.open('x')as f:f.write(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
 if __name__=='__main__':main()

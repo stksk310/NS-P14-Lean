@@ -97,3 +97,15 @@ Ruling: finishing-a-development-branchの統合先選択は、ユーザーが明
     新規406宣言の通常/explicit型、公理3種制限、source hash前後一致、
     全過去baseline bytes照合がPASS。正本はverification/run17/final/verification.json。
     proof snapshotをcommitして一回のfresh-context独立reviewへ渡す。
+
+18. 初回fresh-context独立review: 数学的欠陥なし。全28 source/6 fixture、hash/public goal/actual consumerを確認。
+    公開toolingにImportant 3件: 自runの証跡再利用、ZIP上書き、reviewとsnapshotの非束縛。
+    Minor 1件: paper ledgerの予定表現。公開前に全件修正し同じreview seatへ再確認する。
+    新規run出力をexclusive化し、数値JSONを同じrunへ揃え、既存archive/sidecarを拒否。
+    実在Git commit、source/evidence manifest、全bundle静的fileをreviewへ束縛し、
+    publication-onlyの明示境界だけを許す。数学sourceは変更しない。
+
+19. 公開tooling修正版のcold検証 PASS_RUN17_PROOF_CLOSURE。160 commands、
+    154 fixture、8,241宣言、新規406、450.127秒。Run01–16原本3,260件と
+    既存Run17証跡368件のhash/bytesを保持。数学28ファイルはdc66f3aと完全同一。
+    採用証跡: verification/run17/runs/release_candidate_20261113_r02。原本final/は変更していない。

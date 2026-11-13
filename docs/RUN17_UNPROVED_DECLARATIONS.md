@@ -3,7 +3,7 @@
 担当X_KNESER / X_SC、および指令Task1–5のconsumerに未証明宣言はない。
 定義したPropを完成と数えるのではなく、元の二つの凍結命題を
 `NSP14.Run17.kneser_closed` / `NSP14.Run17.savchevChen_closed`で証明する。
-公開型・全生成宣言・許容公理依存は最終検証JSONを参照。
+公開型・全生成宣言・許容公理依存はclosure statusの`verification.evidence`が指すJSONを参照。
 
 Run17全体の完了にはcold回帰・独立レビュー・監査ZIP・通常Pushのgateがある。
 それらの実行状態は`RUN17_CLOSURE_STATUS.json`を正本とする。

@@ -43,6 +43,8 @@ sharpの逆向き包含、一意性、同値項の反復、極値subset、
 全Run01–16 tracked baselineをbytes固定 (root import追加と共通進捗文書追記は元の全prefixを保持)。
 test cacheと新規productionのlib/irを退避してからrootを再build。
 全fixtureをimport依存順に、相対olean出力先で実行する。
+既存の証跡ディレクトリは再利用しない。既定では`verification/run17/runs/`配下に
+新しい名前を割り当て、指定する場合も`--output-dir`の既存pathは拒否する。
 全新規・生成宣言とrootに対し通常/explicit型・source hash・公理を抽出。
 Run15元8目標、Run16全11 IDのClosedGoalsも再実行。
 verifier/packager/数値入力/原典provenanceをsource hashへ束縛する。
@@ -58,4 +60,12 @@ ZIP自身のSHAは隣の`.zip.sha256`を正本とする。
 
 `attempt_01_legacy_write`は旧checkerのseconds書き直しを最後のbyte照合で検出した試行、
 `attempt_02_full_fixture_elaboration`は追加full-group受入の型展開を修正するため中断した試行。
-旧履歴として保持し、完成判定には`final/verification.json`だけを使う。
+旧履歴として保持し、完成判定には`RUN17_CLOSURE_STATUS.json`の`verification.evidence`が指す結果を使う。
+`final/`は最初の合格snapshot dc66f3aの原本として保持し、その後の再実行で書き直さない。
+
+再実行する数値checkerも出力先を新しいrunディレクトリへ揃える。
+単独実行の既定動作は標準出力のみであり、`--output`は既存fileを拒否する。
+ZIPとchecksumは既存pathを拒否し、検証済みtemporary archiveをexclusiveに公開する。
+reviewのcommit実在性、source/evidence manifestのhash、Git内の実bytesを照合する。
+その後に変えられるのはstatusの公開状態、追記のみのexecution ledger、
+snapshotを明記した最終review文書・review JSONという明示境界だけである。

@@ -48,7 +48,7 @@ URL: https://math.haifa.ac.il/seva/Papers/SavChenY.pdf
 sharpの一意性は`S.erase 0⊆b+S`からの二回逆移動で直接証明し、
 引用に依存するcoset構造やmaximal zero-free extensionを不要にする。
 同値な末尾操作・反復同値項は全て位置を保持する。原典の結論を入力にはしない。
-SCの最終exportは元の凍結命題そのものを予定し、代替方針の補題だけでは閉鎖しない。
+SCの最終exportは元の凍結命題そのものを証明し、代替方針の補題だけを閉鎖とは数えない。
 
 ## 証明済みexport対応
 
