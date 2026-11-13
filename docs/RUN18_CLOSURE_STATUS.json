@@ -17,12 +17,25 @@
   "closed_goal": "NSP14.Run18.sparse_closed",
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
-    "status": "PENDING_COLD_VALIDATION",
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
     "evidence": "verification/run18/runs/release_candidate_20261113_r03/verification.json",
     "previous_failed_attempts": [
       "verification/run18/runs/release_candidate_20261113_r01/failure.json",
       "verification/run18/runs/release_candidate_20261113_r02/failure.json"
-    ]
+    ],
+    "commands": 172,
+    "fixtures": 159,
+    "environment_declarations": 8429,
+    "new_environment_declarations": 188,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "fa3787cff6e924690ea7abc1bc522fb43a06be02",
+    "preserved_evidence_count": 3165
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",

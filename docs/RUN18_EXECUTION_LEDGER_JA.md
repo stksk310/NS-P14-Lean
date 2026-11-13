@@ -42,3 +42,9 @@ r02では全159 fixture、5つの未完受入、数値検算・公開guard・旧
 Ruling: import後のConstantInfoの見かけだけで追加公理と断定せず、collectAxiomsの実依存と自己依存で判定する。実際の追加公理は自身の名前を依存に含むため拒否する。既存の証明済みexported stubの受入と、隔離された本物の追加axiomの拒否をLeanの対照実験で確認した。対照用axiomはverification内の専用processだけで宣言し、production・fixture・本環境監査から一切importしない。誤判定なら禁止公理を通す危険があるため、このnegative controlを全検証へ組み込む。
 
 r01/r02はいずれも失敗として保持し、最終の新規cold検証をr03へ保存する。公開guardはcold検証、全check通過、証跡coverage、review済み追加payloadも要求する。
+
+## 最終cold検証 r03
+
+`fa3787cff6e924690ea7abc1bc522fb43a06be02` をsource snapshotとして、新規production lib/irとtest cacheを空にして再構築し、全159 fixtureを通過。未完5契約は指定宣言の不在だけを理由に失敗することを確認した。全172検証commandの期待結果が一致し、全8429宣言・新規188宣言の公理依存/型を抽出した。実推移依存は許容3公理のみで、3165の既存証跡をbyte保持した。
+
+この成功はW_SPARSE一IDを持つPARTIAL snapshotの検証であり、Run18全体の完成ではない。別視点の最終review・bundle・通常Pushの結果は最終review記録と公開receiptに記載する。未完の計画workspaceは継続用に保持する。

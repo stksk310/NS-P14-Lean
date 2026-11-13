@@ -1,0 +1,11 @@
+{
+  "backup": "/tmp/nsp14-run18-cache-h5ctrkco",
+  "moved": [
+    ".lake/build/lib/lean/tests",
+    ".lake/build/lib/lean/NSP14/Lex",
+    ".lake/build/lib/lean/NSP14/Width",
+    ".lake/build/ir/NSP14/Lex",
+    ".lake/build/ir/NSP14/Width",
+    ".lake/build/lib/lean/audit/run18"
+  ]
+}
