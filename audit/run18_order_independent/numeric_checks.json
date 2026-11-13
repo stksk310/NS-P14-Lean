@@ -1,0 +1,43 @@
+{
+  "status": "PASS_ORDER_CHECKS_ONLY",
+  "scope": "instruction arithmetic and finite independent integer-core/Koszul models; not Lean closure",
+  "counts": {
+    "B_quadratic_identity": 1,
+    "sparse_first_small_symbolic": 4,
+    "sparse_first_large_symbolic": 1,
+    "sparse_second_large_symbolic": 1,
+    "sparse_second_seven_symbolic": 1,
+    "sparse_second_six_symbolic": 1,
+    "dense_positive_symbolic": 1,
+    "five_second_symbolic": 1,
+    "five_first_symbolic": 3,
+    "sparse_volume": 2205,
+    "sparse_first_payment": 2205,
+    "sparse_T_base": 48510,
+    "sparse_T_increment": 48510,
+    "sparse_all_higher_payment": 48510,
+    "dense_payment": 22866,
+    "five_B3": 293,
+    "five_first_floor": 293,
+    "five_resource": 293,
+    "five_high_payment": 1172,
+    "antipodal_first": 97,
+    "five_small_table": 2,
+    "core_cutoff_finite": 677,
+    "edge_core_basis": 30,
+    "edge_transfer_payment": 660,
+    "edge_signed_rank": 450,
+    "edge_QC_Betti": 450,
+    "edge_injection_bound": 450,
+    "dense_actual_height_length": 623,
+    "dense_actual_volume": 623,
+    "antipodal_actual_core": 24,
+    "antipodal_actual_betti": 72,
+    "antipodal_actual_volume": 24
+  },
+  "characteristics": [
+    0,
+    2,
+    3
+  ]
+}

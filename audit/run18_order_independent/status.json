@@ -1,0 +1,85 @@
+{
+  "scope": "RUN18_PUBLIC_ORDER_REVIEW_ONLY",
+  "order_commit": "131f559a9ad495891f0aab487f969bf91b5a447f",
+  "order_sha256": "e20bde91698d2163f2a6f6c4b5a9d30b1a3c18a9a074dd819a56562082a5094c",
+  "production_baseline": "c4fd8153f55bb231aab4168a47c1546888fa7ab0",
+  "decision": "NO_REQUIRED_CHANGES_FOUND_IN_ORDER",
+  "implementation_audit": "NOT_AVAILABLE_IN_PUBLIC_HEADS",
+  "run18_completion_certified": false,
+  "closed_ids_certified": [],
+  "ids_not_implementation_audited": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_SPARSE",
+    "W_FIVE",
+    "W_CLOSE"
+  ],
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "lean_probe": {
+    "exit_code": 0,
+    "axiom_declarations": {
+      "Run18OrderAudit.actualTransfer": "propext, Classical.choice, Quot.sound",
+      "Run18OrderAudit.physicalNormalization": "propext, Classical.choice, Quot.sound",
+      "Run18OrderAudit.literalTarget": "propext, Classical.choice, Quot.sound",
+      "NSP14.Endpoint.Data.wordVolume_growth_bound": "propext, Classical.choice, Quot.sound",
+      "NSP14.Additive.fourPoint_growth": "propext, Classical.choice, Quot.sound"
+    },
+    "cold_build": false,
+    "full_regression": false
+  },
+  "independent_numeric": {
+    "status": "PASS_ORDER_CHECKS_ONLY",
+    "scope": "instruction arithmetic and finite independent integer-core/Koszul models; not Lean closure",
+    "counts": {
+      "B_quadratic_identity": 1,
+      "sparse_first_small_symbolic": 4,
+      "sparse_first_large_symbolic": 1,
+      "sparse_second_large_symbolic": 1,
+      "sparse_second_seven_symbolic": 1,
+      "sparse_second_six_symbolic": 1,
+      "dense_positive_symbolic": 1,
+      "five_second_symbolic": 1,
+      "five_first_symbolic": 3,
+      "sparse_volume": 2205,
+      "sparse_first_payment": 2205,
+      "sparse_T_base": 48510,
+      "sparse_T_increment": 48510,
+      "sparse_all_higher_payment": 48510,
+      "dense_payment": 22866,
+      "five_B3": 293,
+      "five_first_floor": 293,
+      "five_resource": 293,
+      "five_high_payment": 1172,
+      "antipodal_first": 97,
+      "five_small_table": 2,
+      "core_cutoff_finite": 677,
+      "edge_core_basis": 30,
+      "edge_transfer_payment": 660,
+      "edge_signed_rank": 450,
+      "edge_QC_Betti": 450,
+      "edge_injection_bound": 450,
+      "dense_actual_height_length": 623,
+      "dense_actual_volume": 623,
+      "antipodal_actual_core": 24,
+      "antipodal_actual_betti": 72,
+      "antipodal_actual_volume": 24
+    },
+    "characteristics": [
+      0,
+      2,
+      3
+    ]
+  },
+  "preservation": {
+    "tracked_files_checked": 3857,
+    "changed": []
+  },
+  "toolchain": "v4.36.0-rc2",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "recorded_at_utc": "2026-11-13T13:25:44.287138+00:00"
+}
