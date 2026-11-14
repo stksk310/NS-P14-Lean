@@ -84,3 +84,59 @@ reviewerが判断を保留した事項と実行側の判断：
 6. **別名review report対応**：今回も既存固定reportへ追記するので、別名reportをpayloadへ自動追加しないpackagerの一般化は不要。誤ればreport欠落となるため、今回のZIPにもこのreport本体を含むことを検査する。
 
 軽微な指摘の繰越はなし。未完の計画workspaceは継続用に保持する。追加の正確なexport・paper variant・残る義務は[原稿対応](RUN18_PAPER_CORRESPONDENCE_JA.md)と[実行台帳](RUN18_EXECUTION_LEDGER_JA.md)を参照。
+
+
+## 2026-11-14 五生成元全域閉鎖・R05 最終レビュー
+
+# Run18 five-generator closure: final whole-branch review
+
+**Verdict: PASS for publication as an honest PARTIAL checkpoint. Critical 0 / Important 0 / Minor 0. Full Run18 complete: NO.**
+
+This completes the same review whose static phase is recorded in `/tmp/run18-five-review.md`; it is not a second independent review. Source snapshot: `bc554ffc0231c0e83fdf4c62673e438cc123c417`. Reviewed evidence/status/ledger commit: `b22600b61e013da0e3d55e5a6b0559216cc4d76f`. Whole Run18 range starts at `c4fd8153f55bb231aab4168a47c1546888fa7ab0`; continuation focus starts at `e4bb337900e75bdb15e609b2518e8a02009565ca`. The evidence commit changes no source-bound bytes from the static review.
+
+## Mathematical and contract findings
+
+No actionable defect was found. The following are checked properties, not unresolved findings:
+
+- `audit/run18/FiveClosedGoals.lean:7` proves the exact frozen `Requested.W_FIVE`. `RequestedGoals.lean` retains SHA256 `86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689`.
+- `NSP14/Width/FiveComparison.lean:13` compares actual total Betti numbers over each ring’s own minimal variables, for the original S, arbitrary field k, physical narrow-width hypothesis, every row i, and the literal interval completion. Its lower-width proof and 4/5/6–7/at-least-8 split cover every allowed width. No comparison-valued hypothesis was added.
+- `NSP14/Width/AntipodalPresentation.lean:139` derives the actual coefficientwise kernel from the surviving basis and injectivity of surviving exponents. `AntipodalIdeal.lean:102` identifies the literal ideal `(YZ,Z²,ZW)+(Y,W)^h`. Lines 110, 117, 140, 154 and 164 retain the original quotient map, variables, polynomial-module action, actual Tor and degrees. The hypothesis is gcd(t,h)=1, not gcd(t,2h)=1. `AntipodalBasis` and `AntipodalVolume` establish actual P=C(h+1,2)+1 and W=h²−h+2.
+- `AntipodalComparison.lean:76` pays the first row with the proved P bound and rational harmonic inequality. It does not import the unproved universal equality b1=h+4. The documented alternative proof is sufficient for the frozen comparison.
+- `FiveHoleKernel.lean:145` proves the actual internal-omission kernel has five explicit generators. `FiveHoleTopRank.lean:43` constructs a signed unit minor in the actual top Koszul differential. Its diagonal ±1 entries remain units in characteristic 2. `FiveHoleComparison.lean:30` uses actual Euler, this rank bound and original P bounds; edge omissions use P≤5. The final comparison returns to the same S and physical-width target.
+- SparseComparison, FirstResources, NormalizedCapacity and SparseHigher preserve actual QC-to-G transfer, original resource quantities, rational weights, positive denominators and endpoint cases. No field-characteristic division, P_C=P_G assumption, reflected-source replacement or cross-characteristic rank equality was introduced. The top row is not divided by e−i; zero and source-vanishing rows are handled.
+- Dense resources include q=3 and are correctly distinguished from the still-open q≥4 DenseClosure. AP edge identifies the actual carrier and retains d=1 source=target and d≥2 physical-width payment. The u=7 improvement is conditional on original R>0. Neither partial result is advertised as full W_EDGE/W_DENSE.
+- Lex definitions and degree-piece finiteness remain preparatory results. The general arbitrary-characteristic BHP/Pardue/EK theorem and one whole-Hilbert-function lex comparison remain explicitly open. No unsupported characteristic-zero argument or comparison tower substitutes for them.
+- Tests exercise original-source all-row consumers, widths 4/5/6/7/8/9, physical boundary m=du+2 with d=3, nonunit t=2,u=10 and fields of characteristic 0/2/3. Independent finite rank checks are explicitly labeled finite evidence. Universal closure is supplied by the Lean contract, not by enumeration.
+
+## Completed R05 evidence inspection
+
+The reviewer did not rerun Lean/lake or alter cache/repository files. Existing R05 output was inspected, and independent read-only hash/git comparisons were performed.
+
+- R05 records **183 passing expected outcomes, 169 fixtures, 8942 environment declarations and 701 new declarations**, in 695.647 seconds of recorded command time. The fresh-cache record names the removed test, Lex/Width lib/IR and Run18 audit caches; the source snapshot fixes Lean 4.36.0-rc2 and mathlib `139105d28c7685a154cb3093f79edb2e16708099`. The build log ends successfully with 6040 jobs.
+- `FiveClosedGoals` and the original W_FIVE acceptance both exit 0. The four open acceptances each contain only the expected unknown-identifier diagnostic for bhp_ek, edge_closed, dense_closed or width_closed. Those declarations are absent from the actual environment inventory.
+- All **1226 source manifest entries** match current bytes, proof-commit bytes and reviewed-commit bytes. All **198 evidence entries** match current bytes and reviewed-commit bytes, with complete directory coverage. The manifest itself matches the reviewed commit.
+- All **3653 verification/artifact files present before R05** were independently compared against source-commit bytes and remain identical. Failed R01/R02 evidence stays preserved as failed attempts. From the Run18 baseline, only the three designated append-only files change; their exact old prefixes remain intact.
+- The raw collectAxioms output was compared with the processed declarations. Every actual transitive dependency is among `propext`, `Classical.choice`, `Quot.sound`; no declaration depends on itself. Normal and explicit types exist for all 701 new declarations. Main contract, original-source comparison, actual presentation/Tor and rank types were inspected.
+- Recorded exported kinds are 1811 definitions, 6699 axiomInfo interfaces, 388 theorems, 14 inductives, 16 constructors and 14 recursors. The 6699 interfaces are valid exported proof stubs under the transitive-dependency test, not additional mathematical axioms. The isolated real-extra-axiom control is rejected by its self-dependency; that probe is absent from the production inventory.
+- Publication controls report 15 passing guards. The finite five-generator checker reports nine actual cores and five presentation examples, with its non-universal status explicit. Old replay checks and all other recorded checks pass.
+
+Evidence hashes:
+
+- verification.json: `1d2f962be3ed96be2a0649c13d55396ce75dff6f1a9ae5858173e4e73570342f`
+- MANIFEST_SHA256.json: `b7178751b483e05f27413a4b5a3622db375b3a231814b66c00e797ff1f30fefd`
+
+## Publication scope and limitations
+
+Current status and appended ledger agree: **W_SPARSE and W_FIVE closed; X_BHP_EK, W_EDGE, W_DENSE and W_CLOSE open**. The handoff preserves their exact frozen types, distinguishes q=3 width-5 ranks from general one-missing-offset ranks, records the alternative antipodal first-row proof, and does not promise completion in two further runs. Historical status sections are marked historical. These Rulings are consistent with the inspected code and evidence.
+
+The reviewed packager binds source, evidence, review decision/report hashes and reviewed git bytes, requires the exact PARTIAL scope and cold successful checks, refuses an existing output, and checks archive contents/hash/CRC. The fixed `docs/RUN18_FINAL_REVIEW_JA.md` body is explicitly included in its payload. Publication is safe through those existing gates after this review is recorded. No mathematical or evidence fix is requested.
+
+The reviewer declines to certify:
+
+1. Completion of the four open IDs or full Run18/whole-domain NS-P14.
+2. A universal exact antipodal b1=h+4 theorem, or stronger paper intermediate bounds replaced by sufficient proved alternatives.
+3. Independent rederivation of every inherited baseline theorem or inaccessible published source text; the review checks relevant connections, unchanged bytes and recorded regression/dependency evidence.
+4. Finite examples as proof of universality, or independently rerun build/performance/OOM behavior; this reviewer remained read-only.
+5. Future review-decision file creation, ZIP creation/CRC/hash results, remote Push and final remote SHA/clean status. These actions have not yet occurred at this review boundary and must be observed separately by the execution agent.
+
+The review’s positive PARTIAL verdict is not a claim that future publication actions have already succeeded. No repository/cache mutation, Lean/lake execution, commit or agent spawning was performed by this reviewer.
