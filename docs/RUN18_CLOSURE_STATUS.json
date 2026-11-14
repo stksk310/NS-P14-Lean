@@ -17,8 +17,25 @@
   "closed_goal": "NSP14.Run18.sparse_closed",
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
-    "status": "PENDING_NEW_COLD_VALIDATION",
-    "evidence": "verification/run18/runs/release_candidate_20261114_r05/verification.json"
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r05/verification.json",
+    "previous_failed_attempts": [
+      "verification/run18/runs/release_candidate_20261113_r01/failure.json",
+      "verification/run18/runs/release_candidate_20261113_r02/failure.json"
+    ],
+    "commands": 183,
+    "fixtures": 169,
+    "environment_declarations": 8942,
+    "new_environment_declarations": 701,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "bc554ffc0231c0e83fdf4c62673e438cc123c417",
+    "preserved_evidence_count": 3653
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
@@ -97,7 +114,7 @@
     "preserved_evidence_count": 3388
   },
   "five_closure_20261114": {
-    "status": "COMPILED_FROZEN_CONTRACT_FOCUSED_PASS_COLD_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "e4bb337900e75bdb15e609b2518e8a02009565ca",
     "closed_contract": "NSP14.Run18.five_closed : Requested.W_FIVE",
     "presentation": "NSP14.Endpoint.Data.antipodalPresentation",
@@ -112,6 +129,13 @@
       "one lex quotient and dense all-row comparison",
       "full original-source width closure"
     ],
-    "paper_variant": "Exact antipodal b1=h+4 is not proved as a universal Lean export. The first-row comparison uses proved P upper bound and actual transfer instead."
-  }
+    "paper_variant": "Exact antipodal b1=h+4 is not proved as a universal Lean export. The first-row comparison uses proved P upper bound and actual transfer instead.",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r05/verification.json"
+  },
+  "final_review_decision": "verification/run18/review_snapshot_five_20261114.json",
+  "historical_sections": [
+    "continuation_20261114",
+    "previous_successful_verification_20261114_r04",
+    "previous_successful_verification_20261113"
+  ]
 }

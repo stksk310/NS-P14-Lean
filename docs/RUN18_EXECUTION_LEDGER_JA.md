@@ -74,3 +74,26 @@ Ruling: W_FIVEのu=5は一般W_EDGEの完成を待たず、四つのactual offse
 全数学moduleのbuild（6038 jobs）と凍結W_FIVE consumer、actual presentation/Tor/P/W、幅4/5/6/7/8/9・nonunit t・d=3,m=du+2の全行fixtureをfocused検証した。各subprocessの終了コードはfocused02.jsonへ記録。失敗したelaboration試行と修正ログもantipodal_20261114へ保存し、過去の成功証跡を上書きしない。最新closed IDはW_SPARSE,W_FIVEの2件。BHP/EK、一般一欠落、dense lex閉鎖、全域合成の4件は開いたまま。
 
 公開guardは2件閉鎖を要求し、W_CLOSEまで閉じたという過大表示を拒否する新しいnegative controlを追加した。全新規source/fixture/verifier/checker/ログを新source snapshotへ束縛し、新しいR05 cold検証・独立最終review・PARTIAL ZIP・通常Pushを行う。
+
+R05 cold検証成功：source `bc554ffc0231c0e83fdf4c62673e438cc123c417`、全183 command・169 fixture、8942宣言・新規701宣言の通常/explicit型・実公理依存を確認。許容三公理のみ。source manifest 1226 entry、evidence manifest 198 entry、3653既存証跡をbyte保持。未完4契約は指定宣言の不在だけを理由に失敗し、W_FIVEの元の受入は成功した。
+
+Final: Ruling: reviewerが認証対象外とした一般b1=h+4、未完4ID、公刊本文の未取得部分は証明済みと表示しない。実比較の別経路とコンパイル済み凍結契約のみを閉鎖根拠とする。誤っていれば完成度を過大表示するため、正確な未完型を次節へ残す。将来のZIP/remoteは別途実測し、静的reviewの合格をPush成功の代用にしない。
+
+## Run18 継続用引継ぎ（五生成元閉鎖後、PARTIAL）
+
+凍結された六IDのうちW_SPARSEとW_FIVEは証明済み。Run18全体の完了条件はまだ満たさない。契約本文は `audit/run18/RequestedGoals.lean` をそのまま保持する。
+
+| ID | 現在の実export・未完境界 |
+|---|---|
+| W_SPARSE | `NSP14.Run18.sparse_closed`。元のS、任意体、e≥6、u≥2e−2、全i。 |
+| W_FIVE | `NSP14.Run18.five_closed`。元のS、任意体、e=5、物理狭幅、全u・全i。 |
+| X_BHP_EK | `NSP14.Lex.bhp_ek : Requested.X_BHP_EK` は不在。一般の斉次商の任意標数graded比較、全Hilbert関数lex、実EK解消が必要。 |
+| W_EDGE | `NSP14.Run18.edge_closed : Requested.W_EDGE` は不在。u=q+1の実AP比較は完成。q=3,u=5もW_FIVE経由で完成。q≥4,u=q+2の実作用/rankとtarget補正が必要。 |
+| W_DENSE | `NSP14.Run18.dense_closed : Requested.W_DENSE` は不在。`dense_resources_closed : Requested.DenseResources` は完成。DenseClosureは一つの実lex商とK調和計数/容量支払いが未完。 |
+| W_CLOSE | `NSP14.Run18.width_closed : Requested.W_CLOSE` は不在。e=5と疎幅は完成。一般一欠落とdenseを閉じて元のSへ全域合成する必要がある。 |
+
+次の独立した証明作業として、一般一欠落の実Koszul作用を元のQC基底上で表し、符号付き単位minorまたは像の明示基底からrankを証明する。今回の幅5のminorはq=3専用であり、一般qへのrank公式として流用しない。denseはBHP/EKの完成後に実lex consumerへ進む。既存の末尾4本の未完受入は追加仮定を入れずに閉じる。
+
+antipodalで新しく使える実exportは `antipodalPresentation`、`antipodalModuleIso`、`antipodal_actual_betti`、`antipodal_coreP`、`antipodal_wordVolume`。必要なcoprimeはgcd(t,h)=1でありgcd(t,2h)=1ではない。一般の厳密b1=h+4は未証明で、W_FIVEの第一行は実P上界による別経路を使う。有限検算のb1値を一般定理の入力にしない。
+
+残るBHP/Pardue/EKは固定mathlibに該当証明を確認できておらず、新規の大きな形式化を要する。公刊本文の取得制限と調査範囲は `RUN18_INPUT_INVENTORY_JA.md` に記録。残りを必ず2runで終えられるとは評価しない。Run19/20へ進む前にRun18の正確な閉鎖条件を維持する。
