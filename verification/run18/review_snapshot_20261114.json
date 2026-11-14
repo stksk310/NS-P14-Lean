@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "reviewer": "/root/run18_final_review",
+  "review_scope": "Whole branch and Nov14 continuation; actual code and immutable R04 evidence; PARTIAL only",
+  "source_snapshot_commit": "f1732ce45500a191df2b76780f5feddd3d87adfa",
+  "reviewed_commit": "decdb7142cb5272c13a75a7536a8b4d3fbef6fdc",
+  "review_report": "docs/RUN18_FINAL_REVIEW_JA.md",
+  "review_report_sha256": "2851143980f0d8890d904fda7dfb26188c751548210f9c2c4a658e90265bf7d3",
+  "verification_summary_sha256": "332640ebe41eca08589db28be4679c5763ad3224cce41f761087985352cce37a",
+  "verification_manifest_sha256": "ff75943276cd3d47b88d258b6ba4068bfad85169d22d5500c3b695bd942dd397",
+  "run18_complete": false
+}

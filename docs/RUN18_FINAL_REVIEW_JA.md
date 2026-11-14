@@ -1,5 +1,9 @@
 # Run18 PARTIAL：最終レビュー・検証結果
 
+> 最新結果は末尾の「2026-11-14 継続checkpoint」を参照。直下は11月13日の公開記録。
+
+## 2026-11-13 checkpoint
+
 **Run18全体は未完。閉鎖はW_SPARSEのみ。PARTIAL checkpointとして公開可。**
 
 - baseline: `c4fd8153f55bb231aab4168a47c1546888fa7ab0`
@@ -47,3 +51,36 @@ read-only reviewer `/root/run18_final_review` による結果。checkout・index
 6. **有限fixtureの網羅性による全称性認定。** 有限検算は補助証拠に限定し、全称性はLeanのW_SPARSE閉鎖から判断する。有限範囲を一般証明へ代用する危険を避ける。
 
 実装時の判断とその限界の全記録は[実行台帳](RUN18_EXECUTION_LEDGER_JA.md)、原稿対応と残る正確な義務は[原稿対応](RUN18_PAPER_CORRESPONDENCE_JA.md)を参照。
+
+## 2026-11-14 継続checkpoint
+
+**PARTIALとして公開可能。Run18全体は未完、完全閉鎖は引き続きW_SPARSEのみ。**
+
+- proof/source: `f1732ce45500a191df2b76780f5feddd3d87adfa`
+- evidence/status/ledger: `81bdbe66055d7ade9ef0d9e2f9ef00745bb3ea7d`
+- reviewed head: `decdb7142cb5272c13a75a7536a8b4d3fbef6fdc`（直前commitとの差は検証完了とreview gateを分けるstatus文字列一行のみで、reviewerも追加確認）
+- [R04検証](../verification/run18/runs/release_candidate_20261114_r04/verification.json): **179 command／165 fixture、8594宣言／新規353宣言**。公理依存は許容三公理のみ。1139 source entry、193 evidence entry、開始時3388証跡のbyte保持。
+- 追加production: 7 module、774行。新fixtureの名前付き定理53件。凍結した六契約と既存疎幅証明は維持。
+
+既存read-only reviewer `/root/run18_final_review` が継続差分 `aa29347..f1732ce` とwhole branchの接続・R04証跡を追加確認した。新たなfresh-context reviewerを起動したという表示はしない。ファイル・cache・HEADへの変更、並走buildは行っていない。
+
+**Critical 0 / Important 0 / Minor 0。Safe as another PARTIAL checkpoint: Yes。Full Run18 complete: No。**
+
+確認した追加経路：
+
+- denseのprefixは同じ実CoreMinimalから端点factorを排除し、元の向きの欠落剰余へ単射を構成。元のW/P/R/Hxへ接続し、`dense_resources_closed`が元のRequested.DenseResourcesそのものを証明する。DenseClosure／W_DENSE全体の閉鎖とは区別。
+- AP edgeは実offsetから実AP sourceを識別し、d=1はliteral targetとのcarrier equality、d≥2は物理幅で支払う。双方自身の最小変数列、任意体、全iを保持。
+- 五生成元小幅のR>0改善は元のactualR→元のHx→実QC高次基底であり、Rhatへのすり替えなし。第二行44/68という十分な別上界とtarget46/77の接続は台帳どおり。
+- u≥8の高次行は全構造を扱い、非antipodal第一行は同じDのresidueAlphabetへ仮定を掛ける。二項係数の取消し・Nat減算・上端・source消滅後の範囲を確認。有理重みを係数体内で割らず、有限検算を全称証明へ代用しない。
+- 全source/evidenceは現状・proof/evidence git bytesと一致。coverageも完全。前回公開時のverification/artifacts3355ファイルは独立照合でも不変。12,852算術check／35 actual core例にはu=7の元のR>0例（PC10、PG7、R1、Hx3）と、標数0/2/3の個別matrix計算が含まれる。
+
+reviewerが判断を保留した事項と実行側の判断：
+
+1. **未完五ID**：一般BHP/Pardue/EK、一欠落rank、dense lex比較、antipodal第一行／実presentation、全域合成はopenのまま。誤って完成扱いすると未証明の全域定理を公開するため、五つの失敗受入とPARTIAL gateを保持する。
+2. **原稿の強い中間式との同一性**：今回の十分な別評価として採用。強い40/62やantipodal presentationを証明済みとはしない。誤れば紙との対応が誤解されるため、差分を原稿対応と実行台帳へ明記した。
+3. **有限検算による全称性**：一般性はLean定理から判断。checkerは補助に限定。誤れば有限例を一般証明に代用するため、statusにも有限検算であることを残す。
+4. **baseline全数学の独立再証明**：利用する型・接続・差分・回帰の確認までとし、全既存定理の再導出を認定しない。既存の意味上の問題が波及する可能性は残る。
+5. **実ZIPとremote公開**：review時点の未実行操作は認定しない。実行側が既存gate、全entry/hash/CRC、通常Push、remote SHAを確認し、新しいreceiptへ保存する。未実行成功の先取りを避ける。
+6. **別名review report対応**：今回も既存固定reportへ追記するので、別名reportをpayloadへ自動追加しないpackagerの一般化は不要。誤ればreport欠落となるため、今回のZIPにもこのreport本体を含むことを検査する。
+
+軽微な指摘の繰越はなし。未完の計画workspaceは継続用に保持する。追加の正確なexport・paper variant・残る義務は[原稿対応](RUN18_PAPER_CORRESPONDENCE_JA.md)と[実行台帳](RUN18_EXECUTION_LEDGER_JA.md)を参照。
