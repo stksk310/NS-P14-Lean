@@ -1,0 +1,43 @@
+✖ [5436/5437] Building NSP14.Width.EdgeAP (5.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeAP.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeAP.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeAP.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeAP.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeAP.setup.json --json
+error: NSP14/Width/EdgeAP.lean:11:21: unexpected token ')'; expected term
+error: NSP14/Width/EdgeAP.lean:97:16: unexpected token ':='; expected term
+error: NSP14/Width/EdgeAP.lean:72:7: failed to synthesize
+  Module ((S.intervalCompletion ?m.33).FullPolynomialRing k) ((S.intervalCompletion ?m.36).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: NSP14/Width/EdgeAP.lean:97:13: failed to synthesize instance of type class
+  OfNat (Type ?u.130) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  Type ?u.130
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Width/EdgeAP.lean:97:7: Missing cases:
+error: NSP14/Width/EdgeAP.lean:73:73: unsolved goals
+case neg
+S : NumericalSemigroup
+k : Type
+inst✝ : Field k
+he : 5 ≤ S.embeddingDimension
+hw : S.width ≤ S.multiplicity - 2
+hu : (S.endpointData ⋯ hw).u = (S.endpointData ⋯ hw).q + 1
+i : ℕ
+D : Endpoint.Data := S.endpointData ⋯ hw
+hDA : D.source.carrier = D.fullAP.source.carrier
+hDS : D.source.carrier = S.carrier
+hSA : S.carrier = D.fullAP.source.carrier
+hSm : S.multiplicity = D.m
+hSw : S.width = D.d * D.u
+hd : ¬D.d = 1
+hi : ¬i = 0
+hip : InitialSeg (fun x1 x2 => sorry) fun x1 x2 => sorry
+⊢ totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤ sorry
+Some required targets logged failures:
+- NSP14.Width.EdgeAP
+error: build failed

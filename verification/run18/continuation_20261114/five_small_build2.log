@@ -1,0 +1,41 @@
+✖ [5692/5693] Building NSP14.Width.FiveSmall (7.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveSmall.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveSmall.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveSmall.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveSmall.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveSmall.setup.json --json
+warning: NSP14/Width/FiveSmall.lean:57:8: This simp argument is unused:
+  hn0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn1, hn2, hn0.symm, hn1.symm, hn2.symm] at hs
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveSmall.lean:57:12: This simp argument is unused:
+  hn1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn0, hn2, hn0.symm, hn1.symm, hn2.symm] at hs
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveSmall.lean:57:16: This simp argument is unused:
+  hn2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn0, hn1, hn0.symm, hn1.symm, hn2.symm] at hs
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: NSP14/Width/FiveSmall.lean:147:84: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 47
+  0 ≤ f ≤ 8
+  0 ≤ e ≤ 2
+  0 ≤ c ≤ 3
+  4*c + 6*f - g ≥ 4
+  b ≥ 0
+  b ≥ 5
+where
+ b := ↑D.u
+ c := ↑D.Rhat
+ e := ↑D.coreHeight
+ f := ↑(D.coreP k)
+ g := ↑(totalBetti k D.Variables (D.fullG k) 2)
+Some required targets logged failures:
+- NSP14.Width.FiveSmall
+error: build failed

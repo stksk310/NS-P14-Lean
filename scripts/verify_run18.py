@@ -38,13 +38,14 @@ def main():
     valid_new=[f for f in new_sources if f not in open_acceptances]
     bound=sorted([str(p.relative_to(ROOT))for d in ['NSP14','tests','audit']for p in(ROOT/d).rglob('*.lean')]+[
         'NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run18.py',
-        'scripts/check_run18_width.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py','scripts/check_run18_axiom_policy.py',
+        'scripts/check_run18_width.py','scripts/check_run18_continuation.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py','scripts/check_run18_axiom_policy.py',
         'docs/RUN18_INPUT_INVENTORY_JA.md','docs/RUN18_PAPER_CORRESPONDENCE_JA.md',
         'docs/superpowers/plans/2026-11-13-run18-lex-width-closure-order.md']+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/acceptance_probes_20261113').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r01').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/diagnostics_20261113').iterdir()if p.is_file()]+
-        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r02').iterdir()if p.is_file()])
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r02').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/continuation_20261114').iterdir()if p.is_file()])
     initial={f:sha(ROOT/f)for f in bound}
     source_snapshot=git('rev-parse','HEAD').decode().strip()
     (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
@@ -98,6 +99,7 @@ def main():
         assert len(required)==1,(f,required)
         run('open_'+Path(f).stem,['lake','env','lean','-j1','-M12288',f],expected=required[0])
     run('width_model',['python3','scripts/check_run18_width.py','--output',str(rel/'width_checks.json')])
+    run('continuation_model',['python3','scripts/check_run18_continuation.py','--output',str(rel/'continuation_checks.json')])
     run('publication_guards',['python3','scripts/check_run18_guards.py'])
     run('axiom_policy_controls',['python3','scripts/check_run18_axiom_policy.py','--output-dir',str(rel/'axiom_policy_controls')])
     for mode in ['schedule','coordinates']:

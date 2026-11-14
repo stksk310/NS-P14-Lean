@@ -592,3 +592,10 @@ public import NSP14.Width.NormalizedCapacity
 public import NSP14.Width.SparseComparison
 public import NSP14.Width.SparseHigher
 public import NSP14.Width.SparseSecond
+public import NSP14.Width.DenseVolume
+public import NSP14.Width.DenseHeight
+public import NSP14.Width.DenseResources
+public import NSP14.Width.EdgeAP
+public import NSP14.Width.FiveSmall
+public import NSP14.Width.FiveHigher
+public import NSP14.Width.FiveNonAntipodal

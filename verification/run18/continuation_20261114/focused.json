@@ -1,0 +1,98 @@
+[
+  {
+    "file": "tests/WidthDenseResources.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "tests/WidthDenseResources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDenseResources.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.926
+  },
+  {
+    "file": "tests/WidthEdgeAP.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "tests/WidthEdgeAP.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeAP.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 8.826
+  },
+  {
+    "file": "tests/WidthFiveSmall.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "tests/WidthFiveSmall.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveSmall.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 9.05
+  },
+  {
+    "file": "tests/WidthFiveHigher.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "tests/WidthFiveHigher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveHigher.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.752
+  },
+  {
+    "file": "tests/WidthFiveNonAntipodal.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "tests/WidthFiveNonAntipodal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveNonAntipodal.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 8.938
+  },
+  {
+    "file": "audit/run18/DenseResourcesClosed.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M4096",
+      "audit/run18/DenseResourcesClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseResourcesClosed.olean"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.548
+  }
+]

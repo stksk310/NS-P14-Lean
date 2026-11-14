@@ -1,0 +1,72 @@
+✖ [5696/5697] Building NSP14.Width.FiveNonAntipodal (6.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveNonAntipodal.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveNonAntipodal.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveNonAntipodal.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveNonAntipodal.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveNonAntipodal.setup.json --json
+error: NSP14/Width/FiveNonAntipodal.lean:53:4: Tactic `generalize` failed: result is not type correct
+  ∀ (x : ℕ),
+    8 ≤ x →
+      ¬Additive.CyclicAntipodal x D.residueAlphabet →
+        ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - ↑x + 5 →
+          ¬12 ≤ x → D.wordVolume ≤ Width.growthVolume x 4 3 → totalBetti k D.Variables (D.fullG k) 1 ≤ x.choose 2 + 1
+
+case neg
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+⊢ 8 ≤ D.u →
+    ¬Additive.CyclicAntipodal D.u D.residueAlphabet →
+      ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - ↑D.u + 5 →
+        ¬12 ≤ D.u →
+          D.wordVolume ≤ Width.growthVolume D.u 4 3 → totalBetti k D.Variables (D.fullG k) 1 ≤ D.u.choose 2 + 1
+error: NSP14/Width/FiveNonAntipodal.lean:95:28: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 2
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ -1
+  c ≥ 8
+  c - f ≤ -1
+  b ≥ 8
+  a ≥ 0
+  a - g ≤ -2
+where
+ a := ↑S.width
+ b := ↑S.normalizedWidth
+ c := ↑D.u
+ d := ↑(D.u.choose 2)
+ e := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ f := ↑(D.u.choose (1 - 1))
+ g := ↑S.multiplicity
+error: NSP14/Width/FiveNonAntipodal.lean:92:70: unsolved goals
+S : NumericalSemigroup
+k : Type
+inst✝ : Field k
+he : S.embeddingDimension = 5
+hw : S.width ≤ S.multiplicity - 2
+hu : 8 ≤ S.normalizedWidth
+ha : ¬Additive.CyclicAntipodal (S.endpointData ⋯ hw).u (S.endpointData ⋯ hw).residueAlphabet
+hi0 : ¬1 = 0
+hi : 1 ≤ 1
+D : Endpoint.Data := S.endpointData ⋯ hw
+hD : (S.endpointData ⋯ hw).q + 2 = S.embeddingDimension
+hq : D.q = 3
+huD : 8 ≤ D.u
+h : totalBetti k D.Variables (D.fullG k) 1 ≤ D.u.choose 2 + 1
+⊢ D.u.choose 2 + 1 ≤ D.u.choose (1 + 1) + D.u.choose (1 - 1)
+warning: NSP14/Width/FiveNonAntipodal.lean:94:19: This simp argument is unused:
+  Nat.choose_zero_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.choose_one_right, one_mul, Nat.add_sub_cancel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveNonAntipodal.lean:94:70: This simp argument is unused:
+  Nat.add_sub_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.choose_zero_right, Nat.choose_one_right, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Width.FiveNonAntipodal
+error: build failed

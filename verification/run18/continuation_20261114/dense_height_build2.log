@@ -1,0 +1,81 @@
+✖ [5476/5477] Building NSP14.Width.DenseHeight (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/DenseHeight.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/DenseHeight.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/DenseHeight.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/DenseHeight.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/DenseHeight.setup.json --json
+error: NSP14/Width/DenseHeight.lean:77:8: Type mismatch: After simplification, term
+  he
+ has type
+  @Eq (Fin D.u) (f i) ⟨0, ⋯⟩
+but is expected to have type
+  @Eq (Fin D.u) ⟨D.coreOffset (D.coreWord (List.take (↑i) w)) % D.u, ⋯⟩ ⟨0, ⋯⟩
+error: NSP14/Width/DenseHeight.lean:80:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 2
+  e ≥ 0
+  e - g ≥ 1
+  c ≥ 0
+  c - g ≥ 0
+  b ≥ 0
+where
+ b := ↑D.q
+ c := ↑w.length
+ e := ↑D.u
+ g := ↑↑(f ⟨0, ⋯⟩)
+error: NSP14/Width/DenseHeight.lean:87:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(D.corePrefixResidue w i)
+in the target expression
+  D.coreOffset (D.coreWord (List.take (↑i) w)) % D.u ∈ D.a
+
+D : Data
+w : List D.Variables
+hm : D.CoreMinimal (D.coreWord w)
+f : Fin (w.length + 1) → Fin D.u := D.corePrefixResidue w
+A : Finset (Fin D.u) := Finset.image (fun b => ⟨↑b, ⋯⟩) D.a.attach
+hA : A.card = D.q
+I : Finset (Fin (w.length + 1)) := {i | 2 ≤ ↑i}
+i : Fin (w.length + 1)
+hi : i ∈ ↑I
+hi2 : 2 ≤ ↑i
+hiw : ↑i ≤ w.length
+h : f i ∈ A
+b : ↥D.a
+left✝ : b ∈ D.a.attach
+he : ⟨↑b, ⋯⟩ = f i
+hh : ↑b = ↑(D.corePrefixResidue w i)
+⊢ D.coreOffset (D.coreWord (List.take (↑i) w)) % D.u ∈ D.a
+error: NSP14/Width/DenseHeight.lean:96:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 1
+  j ≥ 0
+  i ≥ 0
+  i - j ≤ -1
+  g ≥ 0
+  e ≥ 0
+  e - g ≥ 0
+  c ≥ 0
+where
+ c := ↑D.q
+ e := ↑(Finset.univ \ insert ⟨0, ⋯⟩ A).card
+ g := ↑I.card
+ i := ↑↑⟨0, ⋯⟩
+ j := ↑D.u
+ k := ↑↑b
+error: NSP14/Width/DenseHeight.lean:112:50: `simp` made no progress
+error: NSP14/Width/DenseHeight.lean:112:6: `simp` made no progress
+error: NSP14/Width/DenseHeight.lean:114:4: unsolved goals
+case neg
+D : Data
+w : List D.Variables
+hm : D.CoreMinimal (D.coreWord w)
+f : Fin (w.length + 1) → Fin D.u := D.corePrefixResidue w
+A : Finset (Fin D.u) := Finset.image (fun b => ⟨↑b, ⋯⟩) D.a.attach
+hA : A.card = D.q
+I : Finset (Fin (w.length + 1)) := {i | 2 ≤ ↑i}
+hf : Set.MapsTo f ↑I ↑(Finset.univ \ insert ⟨0, ⋯⟩ A)
+hcard : I.card ≤ D.u - (D.q + 1)
+hzero : ⟨0, ⋯⟩ ∉ A
+he : I = Finset.univ \ {i | ↑i < 2}
+hw : ¬1 ≤ w.length
+hz : w.length = 0
+⊢ 1 - {x | ↑x ≤ 1}.card = 0
+Some required targets logged failures:
+- NSP14.Width.DenseHeight
+error: build failed

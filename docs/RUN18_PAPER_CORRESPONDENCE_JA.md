@@ -31,3 +31,15 @@ Run18全体は未完である。今回閉じた担当IDは **W_SPARSE** の一�
 ## 具体例の計算方法
 
 `tests/WidthSparseData` と `WidthSparseCache` はメモリ対策の検算専用補助である。当該固定Dataの四重和以降がintervalになることを帰納で証明し、次数0–3の直接計算と合わせ、全次数で元のoffsetSumsに一致することを証明した。これから元のcomputedMinima/order/survivors/socleWindowとの等式を導き、43の既存受入を同じ内容で検証する。この表はW_SPARSEの一般証明には使わず、native_decide・未証明certificate・異標数rank一致も用いない。
+
+## 2026-11-14 継続実装（上の未完一覧は11月13日時点）
+
+- `DenseVolume` は半分超の有限群集合の二重和を鳩の巣原理で全群と同定し、同じ実Dの距離尾和からW=q+1+2t、P≤W、元のR≤tを証明した。素数位数・各offsetのunit性を要求しない。
+- `DenseHeight` は長さ2以上の生存prefixが内部offset/0の剰余に入れず、互いに異なることを実endpoint factorと元のminimalityから示す。Hx≤u−q−1はdense以外にも成立する。`DenseResources` はこれからHx≤t、t≤2で元のR=0を得る。`dense_resources_closed` は凍結したRequested.DenseResourcesそのものを証明する。W_DENSE全体には未証明のDenseClosureが残る。
+- `EdgeAP` はu=q+1の実offset集合から実AP sourceを識別し、元のSの全行比較まで戻す。d=1ではsource/targetのcarrierを同定し、d≥2ではV≥u+1と実AP公式を使う。一欠落幅u=q+2のKoszul rankは未完なのでW_EDGE全体は開いたまま。
+- `FiveSmall` はu=6,7の全行actual比較を供給する。u=7かつ元のR>0の場合にだけHx≥3から実QCの高次基底の存在を導き、h2+q+2≤Pと第四調和上界でb1≤9を得る。R=0ではb1≤10を使う。原稿のτによる第一行改善と異なる十分な実証明であり、特性2/3で体内除算しない。
+- 小幅高次行は既存の実rank envelopeで十分だった。第二行の44（u=6）、68（u=7）は原稿の40、62より弱いが、targetの46、77以下。原稿のより強い数値式を証明済みとはしない。
+- `FiveHigher` はu≥8の全構造で第2行以上を閉じる。u=8は実尾和からW≤14、第2行のu≥9は非負多項式2z³+33z²+136z+33（z=u−9）で払う。第3–5行はC(u,k)/u²の分母を払った単調性（k=4,5,6）とu=8の基点を使う。これはantipodalの実QC presentationを証明したという主張ではない。
+- `FiveNonAntipodal` は実fourPoint_growthからW≤growthVolume(u,4,3)を得て第一行を払う。u=8..11は同じ一般距離和の四つの算術基点、u≥12は6W≤u²+u+6からの非負多項式で処理する。元のS/任意体/literal targetの全行比較をexportした。
+
+依然として五ID X_BHP_EK、W_EDGE、W_DENSE、W_FIVE、W_CLOSEは未完。残りは一般のBHP/Pardue/EK、一欠落coreの実rank、一つのlex商とdense容量、antipodal第一行/実presentation、それらの全域合成である。既存のW_SPARSEと凍結受入は変更しない。

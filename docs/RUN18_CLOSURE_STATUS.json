@@ -43,5 +43,24 @@
     "NSP14.Run18.dense_closed",
     "NSP14.Run18.five_closed",
     "NSP14.Run18.width_closed"
-  ]
+  ],
+  "continuation_20261114": {
+    "status": "FOCUSED_CHECKS_PASSED_COLD_VALIDATION_PENDING",
+    "base_commit": "aa29347b261633e5a9db4c8467a1831ec69e2d81",
+    "closed_subcontract": "NSP14.Run18.dense_resources_closed : Requested.DenseResources",
+    "actual_comparisons_added": [
+      "NSP14.NumericalSemigroup.narrow_fullAP_comparison",
+      "NSP14.NumericalSemigroup.narrow_five_small_comparison",
+      "NSP14.NumericalSemigroup.narrow_five_nonAntipodal_comparison"
+    ],
+    "higher_rows_added": "NSP14.Endpoint.Data.actual_five_higher",
+    "remaining": [
+      "arbitrary-characteristic BHP/Pardue and EK",
+      "one-missing-offset actual Koszul ranks",
+      "one lex quotient and dense all-row comparison",
+      "antipodal actual QC presentation and first row",
+      "full original-source width closure"
+    ],
+    "focused_evidence": "verification/run18/continuation_20261114/focused.json"
+  }
 }

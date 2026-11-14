@@ -48,3 +48,15 @@ r01/r02はいずれも失敗として保持し、最終の新規cold検証をr03
 `fa3787cff6e924690ea7abc1bc522fb43a06be02` をsource snapshotとして、新規production lib/irとtest cacheを空にして再構築し、全159 fixtureを通過。未完5契約は指定宣言の不在だけを理由に失敗することを確認した。全172検証commandの期待結果が一致し、全8429宣言・新規188宣言の公理依存/型を抽出した。実推移依存は許容3公理のみで、3165の既存証跡をbyte保持した。
 
 この成功はW_SPARSE一IDを持つPARTIAL snapshotの検証であり、Run18全体の完成ではない。別視点の最終review・bundle・通常Pushの結果は最終review記録と公開receiptに記載する。未完の計画workspaceは継続用に保持する。
+
+## 2026-11-14 継続
+
+最新work/実装branchはaa29347で一致し、新着のRun18監査修正はなかった。既存worktreeと未完workspaceを継続使用した。
+
+Ruling: BHP/EKが未構成の間も、それに依存しないdense実資源、AP edge、五生成元の小幅/高次/非antipodalを先に構成する。六IDを弱めず、dense資源のconjunctと幅の部分分岐を全ID閉鎖と混同しない。誤っていれば完成度を過大表示するため、五つの失敗受入とPARTIALを維持する。
+
+Ruling: 五生成元u=6,7の高次行では既存のactual rank envelopeがtargetの下界を払えるので、原稿の追加Euler改善を前提にしない。第二行上界44/68とtarget46/77を直接証明する。u=7のR>0改善には実高次QC基底によるh2≤P−5を用いる。誤っていれば数値の接続が壊れるため、同じ元のRとactual TorをLeanで追跡する。
+
+Ruling: 五生成元u≥8の高次行は全構造を先に閉じ、antipodalの第一行/実presentationを未完として分離する。非antipodal第一行の基点をu=8..11に拡げ、u≥12は一つの非負多項式で払う。原稿より弱い中間上界でも同じactual結論を証明しており、未証明のpresentationを入力しない。誤っていればantipodalを閉じたと誤読されるため、export名・型と台帳で範囲を明示する。
+
+新規受入moduleを先に実行した不在RED、各Lean構成途中の失敗、focused結果を `verification/run18/continuation_20261114/` に保存した。不在REDは新moduleの不存在であり、凍結五契約のunknown-declaration受入とは別のもの。型class上限と有理数/Natの明示変換、依存するZMod型へのgeneralizeを避ける修正を行った。旧原本は書き換えない。

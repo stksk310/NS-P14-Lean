@@ -1,0 +1,72 @@
+✖ [5692/5693] Building NSP14.Width.FiveSmall (6.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveSmall.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveSmall.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveSmall.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveSmall.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveSmall.setup.json --json
+error: NSP14/Width/FiveSmall.lean:57:35: `simp` made no progress
+error: NSP14/Width/FiveSmall.lean:57:2: `simp` made no progress
+error: NSP14/Width/FiveSmall.lean:104:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  0 ≤ f ≤ 2
+  e ≥ 0
+  e - g ≥ 2
+  0 ≤ c ≤ 8
+  0 ≤ b ≤ 8
+  b + c - e ≥ 0
+where
+ b := ↑(totalBetti k (↥D.a) (D.QCoreModule k) 1)
+ c := ↑(D.coreP k)
+ e := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ f := ↑D.coreHeight
+ g := ↑(Nat.choose 6 2)
+error: NSP14/Width/FiveSmall.lean:112:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 2
+  0 ≤ c ≤ 10
+  0 ≤ b ≤ 10
+  b + c - e ≥ 0
+where
+ b := ↑(totalBetti k (↥D.a) (D.QCoreModule k) 1)
+ c := ↑(D.coreP k)
+ e := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ f := ↑(Nat.choose 7 2)
+error: NSP14/Width/FiveSmall.lean:114:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  f - g ≥ 2
+  1 ≤ e ≤ 3
+  0 ≤ c ≤ 10
+  0 ≤ b ≤ 9
+  b + c + e - f ≥ 0
+where
+ b := ↑(totalBetti k (↥D.a) (D.QCoreModule k) 1)
+ c := ↑(D.coreP k)
+ e := ↑(D.actualR k)
+ f := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ g := ↑(Nat.choose 7 2)
+error: NSP14/Width/FiveSmall.lean:125:17: failed to synthesize instance of type class
+  OfNat (Type ?u.31) 5
+numerals are polymorphic in Lean, but the numeral `5` cannot be used in a context where the expected type is
+  Type ?u.31
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Width/FiveSmall.lean:126:2: invalid occurrence of `·` notation, it must be surrounded by parentheses (e.g. `(· + 1)`)
+error: NSP14/Width/FiveSmall.lean:148:4: interval_cases failed: could not find upper bound on i
+error: NSP14/Width/FiveSmall.lean:152:4: interval_cases failed: could not find upper bound on i
+error: NSP14/Width/FiveSmall.lean:121:82: unsolved goals
+case neg
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+hu : D.u = 6 ∨ D.u = 7
+i : ℕ
+hi : 1 ≤ i
+hi1 : ¬i = 1
+hit : ¬sorry
+⊢ totalBetti k D.Variables (D.fullG k) i ≤ Target.apLowerProfile D.u i
+Some required targets logged failures:
+- NSP14.Width.FiveSmall
+error: build failed

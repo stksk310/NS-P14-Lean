@@ -253,3 +253,7 @@ No theorem is replaced by a finite table or a conclusion-valued input.
 ## Run18 — partial execution (2026-11-13)
 
 W_SPARSE is proved on the original arbitrary-field completed source and literal interval target, in every row, for e>=6 and normalized width u>=2e-2. The frozen contract is `NSP14.Run18.sparse_closed`. BHP/Pardue/EK, edge, dense, five-generator and full narrow closure remain open: Run18 is PARTIAL, not complete. See `docs/RUN18_CLOSURE_STATUS.json` and `docs/RUN18_PAPER_CORRESPONDENCE_JA.md`.
+
+## Run18 継続：2026年11月14日（UTC）
+
+denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成元u=6,7全行、u≥8の全構造高次行、u≥8の非antipodal全行を追加した。いずれも元のsource/任意体を保持し、比較はliteral completionへ接続する。全IDの閉鎖はW_SPARSEだけであり、BHP/EK、一欠落幅、dense lex比較、antipodal第一行/実presentation、全域合成は未完。新しい検証snapshotを旧公開証跡と区別して保存する。
