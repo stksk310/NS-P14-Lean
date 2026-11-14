@@ -60,3 +60,5 @@ Ruling: 五生成元u=6,7の高次行では既存のactual rank envelopeがtarge
 Ruling: 五生成元u≥8の高次行は全構造を先に閉じ、antipodalの第一行/実presentationを未完として分離する。非antipodal第一行の基点をu=8..11に拡げ、u≥12は一つの非負多項式で払う。原稿より弱い中間上界でも同じactual結論を証明しており、未証明のpresentationを入力しない。誤っていればantipodalを閉じたと誤読されるため、export名・型と台帳で範囲を明示する。
 
 新規受入moduleを先に実行した不在RED、各Lean構成途中の失敗、focused結果を `verification/run18/continuation_20261114/` に保存した。不在REDは新moduleの不存在であり、凍結五契約のunknown-declaration受入とは別のもの。型class上限と有理数/Natの明示変換、依存するZMod型へのgeneralizeを避ける修正を行った。旧原本は書き換えない。
+
+R04 cold検証：source `f1732ce45500a191df2b76780f5feddd3d87adfa`、全179 command・165 fixture成功。全8594宣言、新規353宣言の通常/explicit型と実公理依存を抽出し、許容三公理のみ。既存証跡3388ファイルをbyte保持。元の五IDの指定宣言不在も確認した。旧audit branch一覧を再確認し、Run17独立監査の新着branchはなく、Run18の指令監査のみだった。
