@@ -1,0 +1,174 @@
+✖ [5700/5703] Building NSP14.Width.AntipodalBasis (2.9s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalBasis.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalBasis.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalBasis.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalBasis.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalBasis.setup.json --json
+error: NSP14/Width/AntipodalBasis.lean:19:20: Expected type must not contain free variables
+  0 ≤ ((fun b => (1, ↑b)) b).1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/AntipodalBasis.lean:20:20: Expected type must not contain free variables
+  0 ≤ ((fun b => (1, ↑b)) b).1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/AntipodalBasis.lean:24:22: Expected type must not contain free variables
+  1 ≤ ((fun b => (1, ↑b)) b).1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/AntipodalBasis.lean:25:22: Expected type must not contain free variables
+  0 ≤ ((fun b => (1, ↑b)) b).1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/AntipodalBasis.lean:26:22: Expected type must not contain free variables
+  1 ≤ ((fun b => (1, ↑b)) b).1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/AntipodalBasis.lean:61:8: Type mismatch: After simplification, term
+  he'
+ has type
+  (x + z) * t % h = l * t % h
+but is expected to have type
+  (x + z) * t ≡ l * t [MOD h]
+error: NSP14/Width/AntipodalBasis.lean:61:8: Type mismatch: After simplification, term
+  he'
+ has type
+  (x + z) * t % h = l * t % h
+but is expected to have type
+  (x + z) * t ≡ l * t [MOD h]
+error: NSP14/Width/AntipodalBasis.lean:61:8: Type mismatch: After simplification, term
+  he'
+ has type
+  (x + z) * t % h = l * t % h
+but is expected to have type
+  (x + z) * t ≡ l * t [MOD h]
+error: NSP14/Width/AntipodalBasis.lean:61:8: Type mismatch: After simplification, term
+  he'
+ has type
+  (x + z) * t % h = l * t % h
+but is expected to have type
+  (x + z) * t ≡ l * t [MOD h]
+error: NSP14/Width/AntipodalBasis.lean:97:37: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => 0 * t + 1 * h + 0 * (t + h) = (_a - ↑w) * t + 0 * h + ↑w * (t + h)
+Error: Application type mismatch: The argument
+  w
+has type
+  Fin (↑m + 1)
+but is expected to have type
+  Fin (_a + 1)
+in the application
+  ↑w
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case none.some.inl
+D : Data
+h t : ℕ
+hh : 0 < h
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+m : Fin h
+w : Fin (↑m + 1)
+he : D.antipodalCandidate h t ha none = D.antipodalCandidate h t ha (some ⟨m, w⟩)
+hd : 0 + 1 + 0 = ↑m - ↑w + 0 + ↑w
+ho : 0 * t + 1 * h + 0 * (t + h) = (↑m - ↑w) * t + 0 * h + ↑w * (t + h)
+hw : ↑w < ↑m + 1
+hm : ↑m = 1
+hw0 : ↑w = 0
+⊢ none = some ⟨m, w⟩
+error: NSP14/Width/AntipodalBasis.lean:97:37: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => 0 * t + 1 * h + 0 * (t + h) = (_a - ↑w) * t + 0 * h + ↑w * (t + h)
+Error: Application type mismatch: The argument
+  w
+has type
+  Fin (↑m + 1)
+but is expected to have type
+  Fin (_a + 1)
+in the application
+  ↑w
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case none.some.inr
+D : Data
+h t : ℕ
+hh : 0 < h
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+m : Fin h
+w : Fin (↑m + 1)
+he : D.antipodalCandidate h t ha none = D.antipodalCandidate h t ha (some ⟨m, w⟩)
+hd : 0 + 1 + 0 = ↑m - ↑w + 0 + ↑w
+ho : 0 * t + 1 * h + 0 * (t + h) = (↑m - ↑w) * t + 0 * h + ↑w * (t + h)
+hw : ↑w < ↑m + 1
+hm : ↑m = 1
+hw1 : ↑w = 1
+⊢ none = some ⟨m, w⟩
+error: NSP14/Width/AntipodalBasis.lean:103:37: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (_a - ↑z) * t + 0 * h + ↑z * (t + h) = 0 * t + 1 * h + 0 * (t + h)
+Error: Application type mismatch: The argument
+  z
+has type
+  Fin (↑n + 1)
+but is expected to have type
+  Fin (_a + 1)
+in the application
+  ↑z
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case some.none.inl
+D : Data
+h t : ℕ
+hh : 0 < h
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+n : Fin h
+z : Fin (↑n + 1)
+he : D.antipodalCandidate h t ha (some ⟨n, z⟩) = D.antipodalCandidate h t ha none
+hd : ↑n - ↑z + 0 + ↑z = 0 + 1 + 0
+ho : (↑n - ↑z) * t + 0 * h + ↑z * (t + h) = 0 * t + 1 * h + 0 * (t + h)
+hz : ↑z < ↑n + 1
+hn : ↑n = 1
+hz0 : ↑z = 0
+⊢ some ⟨n, z⟩ = none
+error: NSP14/Width/AntipodalBasis.lean:103:37: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (_a - ↑z) * t + 0 * h + ↑z * (t + h) = 0 * t + 1 * h + 0 * (t + h)
+Error: Application type mismatch: The argument
+  z
+has type
+  Fin (↑n + 1)
+but is expected to have type
+  Fin (_a + 1)
+in the application
+  ↑z
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case some.none.inr
+D : Data
+h t : ℕ
+hh : 0 < h
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+n : Fin h
+z : Fin (↑n + 1)
+he : D.antipodalCandidate h t ha (some ⟨n, z⟩) = D.antipodalCandidate h t ha none
+hd : ↑n - ↑z + 0 + ↑z = 0 + 1 + 0
+ho : (↑n - ↑z) * t + 0 * h + ↑z * (t + h) = 0 * t + 1 * h + 0 * (t + h)
+hz : ↑z < ↑n + 1
+hn : ↑n = 1
+hz1 : ↑z = 1
+⊢ some ⟨n, z⟩ = none
+✔ [5702/5703] Built NSP14.Width.AntipodalComparison (8.8s)
+Some required targets logged failures:
+- NSP14.Width.AntipodalBasis
+error: build failed

@@ -1,0 +1,69 @@
+✖ [5566/5567] Building NSP14.Width.AntipodalVolume (1.0s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalVolume.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalVolume.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalVolume.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalVolume.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalVolume.setup.json --json
+error: NSP14/Width/AntipodalVolume.lean:88:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  v ≥ 0
+  s ≥ 0
+  o ≥ 0
+  k ≥ 0
+  k + o ≥ 0
+  i ≥ 1
+  i - v ≥ 1
+  g ≥ 0
+  0 ≤ f ≤ 1
+  f - i ≤ 0
+  b ≥ 0
+  b - i ≥ 1
+  2*b - g ≥ 1
+where
+ b := ↑h
+ f := ↑↑e
+ g := ↑↑(D.antipodalResidue h t (n, e))
+ i := ↑l
+ k := ↑l * ↑t
+ o := ↑j * ↑h
+ s := ↑(↑n * t) % ↑h
+ v := ↑(D.shortestDegree (D.antipodalResidue h t (n, e)))
+error: NSP14/Width/AntipodalVolume.lean:120:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  r
+in the target expression
+  D.shortestDegree (D.antipodalResidue h t (⟨0, hh⟩, e)) = ↑e
+
+case inr
+D : Data
+h t : ℕ
+hu : D.u = 2 * h
+hh : 0 < h
+ha : D.a = {t, h, t + h}
+e : Fin 2
+he : ↑e < 2
+he1 : ↑e = 1
+b : ↥D.a := ⟨h, ⋯⟩
+r : Fin D.u := D.antipodalResidue h t (⟨0, hh⟩, e)
+hr : r = ⟨h, ⋯⟩
+hcoord : D.coreCoordinates (D.coreGeneratorPoint (D.internalVariable b)) = (⟨↑b, ⋯⟩, 0, 0)
+hmem : (⟨↑b, ⋯⟩, 0, 0).2 ∈ D.coreFiber (⟨↑b, ⋯⟩, 0, 0).1
+hupp : D.shortestDegree ⟨h, ⋯⟩ ≤ (0, 0).1 + (0, 0).2 + D.epsilon ⟨h, ⋯⟩
+hlow : (D.shortestPoint ⟨h, ⋯⟩).1 + (D.shortestPoint ⟨h, ⋯⟩).2 + 1 = D.shortestDegree ⟨h, ⋯⟩
+heps : D.epsilon r = 1
+⊢ D.shortestDegree (D.antipodalResidue h t (⟨0, hh⟩, e)) = ↑e
+warning: NSP14/Width/AntipodalVolume.lean:131:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: NSP14/Width/AntipodalVolume.lean:133:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: NSP14/Width/AntipodalVolume.lean:148:57: Unused tactic linter: `<;>` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NSP14/Width/AntipodalVolume.lean:148:61: Unused tactic linter: `omega` is never executed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NSP14/Width/AntipodalVolume.lean:148:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Some required targets logged failures:
+- NSP14.Width.AntipodalVolume
+error: build failed

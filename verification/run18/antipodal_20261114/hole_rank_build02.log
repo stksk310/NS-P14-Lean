@@ -1,0 +1,55 @@
+✖ [5612/5613] Building NSP14.Width.FiveHoleTopRank (7.8s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveHoleTopRank.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleTopRank.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleTopRank.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleTopRank.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleTopRank.setup.json --json
+error: NSP14/Width/FiveHoleTopRank.lean:21:8: Type mismatch
+  Subtype.ext
+has type
+  ↑?m.68 = ↑?m.69 → ?m.68 = ?m.69
+but is expected to have type
+  p = ↑j → ⟨p, hm⟩ = j
+error: NSP14/Width/FiveHoleTopRank.lean:98:4: unsolved goals
+case true
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+hu : D.u = 5
+flip : Bool
+v : Fin 3 ≃ ↥D.a
+hv : ∀ (i : Fin 3), ↑(v i) = fiveHoleValues flip i
+M : ModuleCat (D.InternalRing k) := D.QCoreModule k
+xs : List ↥D.a := variableList k ↥D.a
+hslot : Nonempty (KoszulSlot xs.length 3)
+s : KoszulSlot xs.length 3 := Classical.choice hslot
+hw : koszulSlotWedge xs 3 s = Finset.univ
+hdelete :
+  ∀ (b : ↥D.a),
+    ∃ t b_1,
+      koszulSlotWedge (variableList k ↥D.a) 2 t = (koszulSlotWedge (variableList k ↥D.a) (2 + 1) s).erase b ∧
+        koszulSlotArrow (variableList k ↥D.a) 2 s t = some (b, b_1)
+ds : ↥D.a → KoszulSlot xs.length 2 × Bool := fun b => (⋯.choose, ⋯.choose)
+harrow : ∀ (b : ↥D.a), koszulSlotArrow xs 2 s (ds b).1 = some (b, (ds b).2)
+vs : Fin 3 → ↥D.a := ![v 0, v 0, v 2]
+ps : Fin 3 → ↥D.corePoints :=
+  ![0, D.coreGeneratorPoint (D.internalVariable (v 0)), D.coreGeneratorPoint (D.internalVariable (v 1))]
+js : Fin 3 → D.CoreMinimalIndex :=
+  ![D.internalMinimalIndex (v 0), ⟨D.triplePoint v 2 0 0, ⋯⟩, ⟨D.triplePoint v 0 1 1, ⋯⟩]
+heval : ∀ (r c : Fin 3), (D.coreRow k (js r)) (MvPolynomial.X (vs r) • D.coreColumn k (ps c)) = if r = c then 1 else 0
+columns : Fin 3 → ↑((coefficientKoszulComplex k (↥D.a) M).X 3) :=
+  fun c => (coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))
+rows : Fin 3 → ↑((coefficientKoszulComplex k (↥D.a) M).X 2) →ₗ[k] k :=
+  fun r => D.coreRow k (js r) ∘ₗ coefficientSlotOut k (↥D.a) M xs 2 (ds (vs r)).1
+sign : Fin 3 → k := fun r => if (ds (vs r)).2 = true then -1 else 1
+r c : Fin 3
+he :
+  (D.coreRow k (js r))
+      ((coefficientSlotOut k (↥D.a) M xs 2 (ds (vs r)).1)
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) M).d 3 2))
+          ((coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))))) =
+    (D.coreRow k (js r))
+      ((ModuleCat.Hom.hom (koszulSignedVariable k (↥D.a) M (koszulSlotArrow xs 2 s (ds (vs r)).1)))
+        (D.coreColumn k (ps c)))
+hb : (ds (vs r)).2 = true
+⊢ (-if r = c then 1 else 0) = if r = c then -1 else 0
+Some required targets logged failures:
+- NSP14.Width.FiveHoleTopRank
+error: build failed

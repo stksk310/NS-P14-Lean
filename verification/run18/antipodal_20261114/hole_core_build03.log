@@ -1,0 +1,19 @@
+✖ [5582/5583] Building NSP14.Width.FiveHoleCore (2.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveHoleCore.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleCore.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleCore.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleCore.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleCore.setup.json --json
+error: NSP14/Width/FiveHoleCore.lean:70:2: unsolved goals
+case «4»
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+hu : D.u = 5
+flip : Bool
+v : Fin 3 ≃ ↥D.a
+hv : ∀ (i : Fin 3), ↑(v i) = fiveHoleValues flip i
+hm : D.CoreMinimal (D.internalPoint (D.fiveHoleExponent v ((fun i => i) ⟨4, ⋯⟩)))
+hd✝ : D.coreDegree (D.internalPoint (D.fiveHoleExponent v 4)) ≤ 2
+hd : (((if v 0 = ?m.642 0 then 3 else 0) + if v 0 = ?m.642 1 then 3 else 0) + if v 0 = ?m.642 2 then 3 else 0) ≤ 2
+⊢ False
+Some required targets logged failures:
+- NSP14.Width.FiveHoleCore
+error: build failed

@@ -257,3 +257,7 @@ W_SPARSE is proved on the original arbitrary-field completed source and literal 
 ## Run18 継続：2026年11月14日（UTC）
 
 denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成元u=6,7全行、u≥8の全構造高次行、u≥8の非antipodal全行を追加した。いずれも元のsource/任意体を保持し、比較はliteral completionへ接続する。全IDの閉鎖はW_SPARSEだけであり、BHP/EK、一欠落幅、dense lex比較、antipodal第一行/実presentation、全域合成は未完。新しい検証snapshotを旧公開証跡と区別して保存する。
+
+## Run18 第2継続：2026年11月14日（UTC）
+
+五生成元の全幅・全行の元のsource/literal completion比較を `NSP14.Run18.five_closed : Requested.W_FIVE` として証明した。antipodalの実QC presentation・変数/次数/Tor対応・P/Wの厳密式、幅5の実核と任意標数rankを追加した。第一行は原稿の厳密b1式に代わる証明済みP上界で払う。閉鎖IDはW_SPARSE,W_FIVEの2件。一般BHP/EK、q≥4の一欠落、dense lex閉鎖、全域幅合成は未完で、Run18はPARTIALを維持する。

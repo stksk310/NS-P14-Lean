@@ -19,7 +19,7 @@ def checked_payload(root,verification,review):
     if summary.get('status')!='PASS_RUN18_PARTIAL_VALIDATION'or summary.get('run18_complete')is not False:raise ValueError('not a validated partial snapshot')
     if summary.get('fresh_project_test_cache')is not True or summary.get('fresh_new_production_cache')is not True:raise ValueError('cold validation required')
     if not summary.get('checks')or not all(c.get('passed')is True for c in summary['checks']):raise ValueError('validation checks failed')
-    if summary.get('closed_ids')!=['W_SPARSE']or set(summary.get('unproved_ids',[]))!={'X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'}:raise ValueError('closure scope differs')
+    if summary.get('closed_ids')!=['W_SPARSE','W_FIVE']or set(summary.get('unproved_ids',[]))!={'X_BHP_EK','W_EDGE','W_DENSE','W_CLOSE'}:raise ValueError('closure scope differs')
     if decision.get('verdict')!='PASS'or decision.get('critical')!=0 or decision.get('important')!=0:raise ValueError('review gate failed')
     if decision.get('source_snapshot_commit')!=summary['proof_snapshot_commit']:raise ValueError('review snapshot mismatch')
     if decision.get('verification_summary_sha256')!=sha((vdir/'verification.json').read_bytes()):raise ValueError('review summary mismatch')

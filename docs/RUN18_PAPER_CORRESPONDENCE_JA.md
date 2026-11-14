@@ -1,6 +1,6 @@
 # Run18 原稿対応（PARTIAL）
 
-Run18全体は未完である。今回閉じた担当IDは **W_SPARSE** の一つ。残るX_BHP_EK・W_EDGE・W_DENSE・W_FIVE・W_CLOSEを完了扱いしない。
+Run18全体は未完である。現時点で閉じた担当IDは **W_SPARSE・W_FIVE** の二つ。残るX_BHP_EK・W_EDGE・W_DENSE・W_CLOSEを完了扱いしない。以下の11月13日/第1継続時点の記録は履歴として残し、最新の証明経路を末尾に示す。
 
 ## W_SPARSE：V03 V.3 / V02 §13.4 W17–W21
 
@@ -43,3 +43,14 @@ Run18全体は未完である。今回閉じた担当IDは **W_SPARSE** の一�
 - `FiveNonAntipodal` は実fourPoint_growthからW≤growthVolume(u,4,3)を得て第一行を払う。u=8..11は同じ一般距離和の四つの算術基点、u≥12は6W≤u²+u+6からの非負多項式で処理する。元のS/任意体/literal targetの全行比較をexportした。
 
 依然として五ID X_BHP_EK、W_EDGE、W_DENSE、W_FIVE、W_CLOSEは未完。残りは一般のBHP/Pardue/EK、一欠落coreの実rank、一つのlex商とdense容量、antipodal第一行/実presentation、それらの全域合成である。既存のW_SPARSEと凍結受入は変更しない。
+
+## 2026-11-14 第2継続：W_FIVEの凍結契約を閉鎖
+
+- `AntipodalCore/Basis` は同じDの実core点を三つの内部文字の個数で表示し、端点因子を持つyz,z²,zwと次数hの純語を除く。孤立zと次数n<hの(y,w)語の全単射を実CoreMinimalIndexへ構成し、`P=C(h+1,2)+1`を証明した。使うのはgcd(t,h)=1であり、gcd(t,u)=1を仮定しない。
+- `AntipodalPresentation/Ideal` は生存指数の単射と係数ごとの実kernel判定から、元の内部変数環でliteral ideal `(YZ,Z²,ZW)+(Y,W)^h` の商を実QCへ同定する。`BinaryMonomialPower` が最後の冪を文字どおりのideal冪と同定する。元の変数像、単項式の標準次数、同じ多項式作用のmodule同型、実totalBettiの一致まで供給し、群のunitでGを置き換えない。
+- `AntipodalVolume` はFin h×Fin 2と同じDの剰余の全単射を作り、全距離を評価して元のW=h²−h+2を証明する。
+- 第一行は原稿の厳密式b1=h+4を経由せず、実Pの上界、既存の第三調和上界、元のR≤W−uから十分な比較を証明する。h=4はW≤14、h≥5は非負多項式を使う。厳密式b1=h+4は一般Lean定理としては未証明で、有限検算例のみ。この別経路は同じW_FIVE契約を追加前提なしに閉じる。
+- u=5の四つの元のoffset集合を分類する。内部欠落2種類は `FiveHoleKernel` が実核の5生成元xy,xz,y²,z²,x³を証明し、`FiveHoleTopRank` が元のKoszul微分に3×3の符号付き単位小行列を構成する。b1≤5,b3+3≤Pと実Eulerからb2≤7を得る。端欠落2種類は元の向きのまま次数2基底のoffset一意性からP≤5を導く。元のR=0を通し、全行を実target下界へ払う。
+- `FiveComparison` はu=4のAP、u=5、u=6/7、u≥8の二構造を網羅する。元の任意S、任意体k、物理幅V=d*u、各環自身のactual最小変数列、全iを保持する。`audit/run18/FiveClosedGoals.lean` の `NSP14.Run18.five_closed` が変更していない `Requested.W_FIVE` を証明する。
+
+最新の未完はX_BHP_EK、W_EDGE（q≥4の一欠落）、W_DENSEのlex/閉鎖、W_CLOSE。DenseResourcesとAP半分は既に証明済み。Run18全体はPARTIALのままであり、五生成元閉鎖だけで一般のBHP/EKや全域幅比較を証明したとはしない。

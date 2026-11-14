@@ -1,0 +1,53 @@
+✖ [5610/5611] Building NSP14.Width.FiveHoleKernel (3.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveHoleKernel.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleKernel.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleKernel.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleKernel.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleKernel.setup.json --json
+error: NSP14/Width/FiveHoleKernel.lean:34:66: Unknown identifier `k`
+error: NSP14/Width/FiveHoleKernel.lean:34:98: Unknown identifier `k`
+error: NSP14/Width/FiveHoleKernel.lean:35:6: Unknown constant `MvPolynomial.monomial_dvd_monomial.mpr`
+error: NSP14/Width/FiveHoleKernel.lean:37:32: Unknown identifier `k`
+error: NSP14/Width/FiveHoleKernel.lean:37:62: Unknown identifier `k`
+error: NSP14/Width/FiveHoleKernel.lean:42:43: Unknown identifier `k`
+error: NSP14/Width/FiveHoleKernel.lean:32:57: unsolved goals
+case refine_1
+D : Data
+hq : D.q = 3
+hu : D.u = 5
+flip : Bool
+v : Fin 3 ≃ ↥D.a
+hv : ∀ (i : Fin 3), ↑(v i) = fiveHoleValues flip i
+β : ↥D.a →₀ ℕ
+hm : D.CoreMinimal (D.internalPoint β)
+i : Fin 5
+hle : D.fiveHoleExponent v i ≤ β
+⊢ CommSemiring sorry
+warning: NSP14/Width/FiveHoleKernel.lean:51:43: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveHoleExponent, v.injective.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveHoleKernel.lean:57:43: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveHoleExponent, v.injective.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveHoleKernel.lean:63:43: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveHoleExponent, v.injective.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/FiveHoleKernel.lean:69:43: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveHoleExponent, v.injective.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: NSP14/Width/FiveHoleKernel.lean:77:2: interval_cases failed: could not find upper bound on β (v 0)
+Some required targets logged failures:
+- NSP14.Width.FiveHoleKernel
+error: build failed

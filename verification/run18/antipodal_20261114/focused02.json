@@ -1,0 +1,62 @@
+[
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/FiveClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.6622823030011205,
+    "log": "verification/run18/antipodal_20261114/focused02_FiveClosedGoals.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_FIVE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_FIVE.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.776797202997841,
+    "log": "verification/run18/antipodal_20261114/focused02_W_FIVE.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AntipodalActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AntipodalActual.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.7742039090007893,
+    "log": "verification/run18/antipodal_20261114/focused02_AntipodalActual.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFive.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.115954557997611,
+    "log": "verification/run18/antipodal_20261114/focused02_WidthFive.log"
+  }
+]

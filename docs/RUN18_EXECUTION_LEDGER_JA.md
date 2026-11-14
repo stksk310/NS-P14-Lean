@@ -62,3 +62,15 @@ Ruling: 五生成元u≥8の高次行は全構造を先に閉じ、antipodalの�
 新規受入moduleを先に実行した不在RED、各Lean構成途中の失敗、focused結果を `verification/run18/continuation_20261114/` に保存した。不在REDは新moduleの不存在であり、凍結五契約のunknown-declaration受入とは別のもの。型class上限と有理数/Natの明示変換、依存するZMod型へのgeneralizeを避ける修正を行った。旧原本は書き換えない。
 
 R04 cold検証：source `f1732ce45500a191df2b76780f5feddd3d87adfa`、全179 command・165 fixture成功。全8594宣言、新規353宣言の通常/explicit型と実公理依存を抽出し、許容三公理のみ。既存証跡3388ファイルをbyte保持。元の五IDの指定宣言不在も確認した。旧audit branch一覧を再確認し、Run17独立監査の新着branchはなく、Run18の指令監査のみだった。
+
+## 2026-11-14 第2継続：五生成元の全幅
+
+開始時の最新workはe4bb337で実装branchと一致し、新着監査修正branchはなかった。元のworktreeで継続した。
+
+Ruling: antipodalの実QC基底・presentation・次数・変数作用・Tor対応・P/Wを構成する。第一行は未証明の厳密b1式を入力せず、証明済みのP上界と調和評価から同じactual比較を払う。誤っていれば原稿の厳密式まで閉じたと誤読されるため、b1=h+4の一般式は未証明と明記し、比較の別経路と分ける。
+
+Ruling: W_FIVEのu=5は一般W_EDGEの完成を待たず、四つのactual offset集合を分類して独立に閉じる。内部2ケースの実核5生成元と元のKoszul微分の符号付き単位minor、端2ケースの次数2基底一意性を用いる。反射によるG/R同一視は行わない。誤っていれば標数2や元の向きでrankが変わるため、符号±1のみのminorをLeanで証明し、標数0/2/3を独立検算する。
+
+全数学moduleのbuild（6038 jobs）と凍結W_FIVE consumer、actual presentation/Tor/P/W、幅4/5/6/7/8/9・nonunit t・d=3,m=du+2の全行fixtureをfocused検証した。各subprocessの終了コードはfocused02.jsonへ記録。失敗したelaboration試行と修正ログもantipodal_20261114へ保存し、過去の成功証跡を上書きしない。最新closed IDはW_SPARSE,W_FIVEの2件。BHP/EK、一般一欠落、dense lex閉鎖、全域合成の4件は開いたまま。
+
+公開guardは2件閉鎖を要求し、W_CLOSEまで閉じたという過大表示を拒否する新しいnegative controlを追加した。全新規source/fixture/verifier/checker/ログを新source snapshotへ束縛し、新しいR05 cold検証・独立最終review・PARTIAL ZIP・通常Pushを行う。

@@ -1,0 +1,15 @@
+✖ [5772/5773] Building NSP14.Width.FiveComparison (8.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveComparison.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveComparison.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveComparison.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveComparison.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveComparison.setup.json --json
+error: NSP14/Width/FiveComparison.lean:28:109: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 2
+  0 ≤ b ≤ 3
+  a ≥ 0
+  a - c ≤ -2
+where
+ a := ↑S.width
+ b := ↑D.u
+ c := ↑S.multiplicity
+Some required targets logged failures:
+- NSP14.Width.FiveComparison
+error: build failed

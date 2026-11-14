@@ -62,7 +62,7 @@ def main():
     assert positive_R>0,'conditional R>0 branch must be exercised'
     result=dict(status='PASS_FINITE_CONTINUATION_CHECKS_NOT_UNIVERSAL_PROOF',arithmetic_checks=arithmetic,
         actual_core_examples=records,small_width_R_positive_examples=positive_R,
-        note='Characteristics 0/2/3 computed separately. No equality of ranks across characteristics is assumed. Antipodal first row and BHP/EK remain open.')
+        note='Characteristics 0/2/3 computed separately. No equality of ranks across characteristics is assumed. The later five-closure checker covers the antipodal branch; general BHP/EK remains open.')
     out.parent.mkdir(parents=True,exist_ok=True)
     with out.open('x')as f:json.dump(result,f,indent=2);f.write('\n')
     print(result['status'],arithmetic,len(records),positive_R)

@@ -16,7 +16,7 @@ def main():
         git('init','-q');write('src.lean','-- guard fixture, not a mathematical verification\n')
         git('add','src.lean');git('-c','user.name=Run18 Guard','-c','user.email=guard@example.invalid','commit','-qm','source')
         base=git('rev-parse','HEAD')
-        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,fresh_project_test_cache=True,fresh_new_production_cache=True,checks=[dict(passed=True)],proof_snapshot_commit=base,closed_ids=['W_SPARSE'],unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'])
+        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,fresh_project_test_cache=True,fresh_new_production_cache=True,checks=[dict(passed=True)],proof_snapshot_commit=base,closed_ids=['W_SPARSE','W_FIVE'],unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_CLOSE'])
         write('verification/run18/runs/guard/verification.json',json.dumps(summary))
         write('verification/run18/runs/guard/SOURCE_SHA256.json',json.dumps({'src.lean':sha(r/'src.lean')}))
         manifest={str(p.relative_to(r)):sha(p)for p in v.iterdir()}
@@ -34,6 +34,7 @@ def main():
             except ValueError as e:assert fragment in str(e),(fragment,e);count+=1
             else:raise AssertionError('guard did not reject '+fragment)
         summary_original=(v/'verification.json').read_bytes()
+        summary['closed_ids'].append('W_CLOSE');write('verification/run18/runs/guard/verification.json',json.dumps(summary));fails('closure scope differs');summary['closed_ids'].pop();(v/'verification.json').write_bytes(summary_original)
         summary['fresh_project_test_cache']=False;write('verification/run18/runs/guard/verification.json',json.dumps(summary));fails('cold validation required');(v/'verification.json').write_bytes(summary_original)
         write('verification/run18/runs/guard/unmanifested.log','unreviewed')
         fails('evidence coverage differs');(v/'unmanifested.log').unlink()

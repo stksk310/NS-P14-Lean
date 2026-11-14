@@ -1,0 +1,1 @@
+tests/AntipodalActual.lean:1:0: error: object file '/workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.olean' of module NSP14.Width.AntipodalCore does not exist

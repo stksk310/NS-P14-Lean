@@ -1,0 +1,42 @@
+✖ [5562/5563] Building NSP14.Width.AntipodalCore (3.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalCore.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.setup.json --json
+error: NSP14/Width/AntipodalCore.lean:223:66: invalid `▸` notation, expected result type of cast is 
+  D.CoreMinimal (D.antipodalCandidate h t ha none)
+however, the equality 
+  he
+of type 
+  ↑p = D.antipodalPoint h t ha 0 1 0
+does not contain the expected result type on either the left or the right hand side
+warning: NSP14/Width/AntipodalCore.lean:225:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: NSP14/Width/AntipodalCore.lean:237:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+error: NSP14/Width/AntipodalCore.lean:244:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ i, ?f ↑i
+in the target expression
+  ∑ x, (↑x + 1) + 1 = (h + 1).choose 2 + 1
+
+h : ℕ
+⊢ ∑ x, (↑x + 1) + 1 = (h + 1).choose 2 + 1
+error: NSP14/Width/AntipodalCore.lean:262:7: Invalid field notation: Function `antipodalCandidate_card` does not have a usable parameter of type `Data` for which to substitute `D`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+error: NSP14/Width/AntipodalCore.lean:258:36: unsolved goals
+D : Data
+k : Type
+inst✝ : Field k
+h t : ℕ
+hu : D.u = 2 * h
+hh : 4 ≤ h
+_ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+hc : Fintype.card D.CoreMinimalIndex ≤ Fintype.card (Option ((n : Fin h) × Fin (↑n + 1)))
+⊢ Fintype.card D.CoreMinimalIndex ≤ (h + 1).choose 2 + 1
+Some required targets logged failures:
+- NSP14.Width.AntipodalCore
+error: build failed

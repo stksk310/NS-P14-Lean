@@ -34,18 +34,19 @@ def main():
     for f in append_only:assert(ROOT/f).read_bytes().startswith(git('show',BASE+':'+f)),f
     retained={str(p.relative_to(ROOT)):sha(p)for d in ['verification','artifacts']for p in(ROOT/d).rglob('*')if p.is_file()and not p.is_relative_to(out)}
     new_sources=sorted(str(p.relative_to(ROOT))for d in ['NSP14','tests','audit/run18']for p in(ROOT/d).rglob('*.lean')if str(p.relative_to(ROOT))not in old)
-    open_acceptances=[f for f in new_sources if '/acceptance/'in f]
+    open_acceptances=[f for f in new_sources if '/acceptance/'in f and Path(f).stem!='W_FIVE']
     valid_new=[f for f in new_sources if f not in open_acceptances]
     bound=sorted([str(p.relative_to(ROOT))for d in ['NSP14','tests','audit']for p in(ROOT/d).rglob('*.lean')]+[
         'NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run18.py',
-        'scripts/check_run18_width.py','scripts/check_run18_continuation.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py','scripts/check_run18_axiom_policy.py',
+        'scripts/check_run18_width.py','scripts/check_run18_continuation.py','scripts/check_run18_five.py','scripts/package_run18_audit.py','scripts/check_run18_guards.py','scripts/check_run18_axiom_policy.py',
         'docs/RUN18_INPUT_INVENTORY_JA.md','docs/RUN18_PAPER_CORRESPONDENCE_JA.md',
         'docs/superpowers/plans/2026-11-13-run18-lex-width-closure-order.md']+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/acceptance_probes_20261113').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r01').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/diagnostics_20261113').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/runs/release_candidate_20261113_r02').iterdir()if p.is_file()]+
-        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/continuation_20261114').iterdir()if p.is_file()])
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/continuation_20261114').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/antipodal_20261114').iterdir()if p.is_file()])
     initial={f:sha(ROOT/f)for f in bound}
     source_snapshot=git('rev-parse','HEAD').decode().strip()
     (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')
@@ -100,6 +101,7 @@ def main():
         run('open_'+Path(f).stem,['lake','env','lean','-j1','-M12288',f],expected=required[0])
     run('width_model',['python3','scripts/check_run18_width.py','--output',str(rel/'width_checks.json')])
     run('continuation_model',['python3','scripts/check_run18_continuation.py','--output',str(rel/'continuation_checks.json')])
+    run('five_model',['python3','scripts/check_run18_five.py','--output',str(rel/'five_checks.json')])
     run('publication_guards',['python3','scripts/check_run18_guards.py'])
     run('axiom_policy_controls',['python3','scripts/check_run18_axiom_policy.py','--output-dir',str(rel/'axiom_policy_controls')])
     for mode in ['schedule','coordinates']:
@@ -150,8 +152,8 @@ set_option maxHeartbeats 0
     assert set(valid_new)<={d['source']for d in newdecls}
     assert all('type'in d and'explicit_type'in d for d in newdecls)
     names={d['name']for d in declarations}
-    assert {'NSP14.Run18.sparse_closed','NSP14.NumericalSemigroup.narrow_sparse_comparison','Run15Closed.all_original_goals_closed','NSP14.Run17.kneser_closed','NSP14.Run17.savchevChen_closed'}<=names
-    assert not {'NSP14.Lex.bhp_ek','NSP14.Run18.edge_closed','NSP14.Run18.dense_closed','NSP14.Run18.five_closed','NSP14.Run18.width_closed'}&names
+    assert {'NSP14.Run18.five_closed','NSP14.NumericalSemigroup.narrow_five_comparison','NSP14.Run18.sparse_closed','NSP14.NumericalSemigroup.narrow_sparse_comparison','Run15Closed.all_original_goals_closed','NSP14.Run17.kneser_closed','NSP14.Run17.savchevChen_closed'}<=names
+    assert not {'NSP14.Lex.bhp_ek','NSP14.Run18.edge_closed','NSP14.Run18.dense_closed','NSP14.Run18.width_closed'}&names
     assert git('rev-parse','HEAD').decode().strip()==source_snapshot,'HEAD changed during verification'
     assert {f:sha(ROOT/f)for f in bound}==initial,'source changed during verification'
     assert {f:sha(ROOT/f)for f in retained}==retained,'inherited evidence changed'
@@ -163,8 +165,8 @@ set_option maxHeartbeats 0
         fresh_new_production_cache=args.fresh_test_cache,evidence_directory=str(rel),checks=records,
         fixture_order=ordered,expected_open_acceptances=open_acceptances,allowed_axioms=sorted(ALLOWED),
         environment_declarations=len(declarations),new_environment_declarations=len(newdecls),
-        sources=valid_new,preserved_evidence_count=len(retained),closed_ids=['W_SPARSE'],
-        unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_FIVE','W_CLOSE'],frozen_requested_goals_sha256=FROZEN)
+        sources=valid_new,preserved_evidence_count=len(retained),closed_ids=['W_SPARSE','W_FIVE'],
+        unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_CLOSE'],frozen_requested_goals_sha256=FROZEN)
     (out/'verification.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
     manifest={str(p.relative_to(ROOT)):sha(p)for p in sorted(out.rglob('*'))if p.is_file()and p.name!='MANIFEST_SHA256.json'}
     (out/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')

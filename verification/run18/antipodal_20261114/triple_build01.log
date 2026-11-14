@@ -1,0 +1,56 @@
+✖ [5564/5565] Building NSP14.Width.TripleCorePoint (2.0s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/TripleCorePoint.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/TripleCorePoint.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/TripleCorePoint.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/TripleCorePoint.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/TripleCorePoint.setup.json --json
+error: NSP14/Width/TripleCorePoint.lean:25:6: Invalid field `internalPoint`: The environment does not contain `NSP14.Endpoint.Data.internalPoint`, so it is not possible to project the field `internalPoint` from an expression
+  D
+of type `Data`
+error: NSP14/Width/TripleCorePoint.lean:31:27: Invalid field `internalPoint`: The environment does not contain `NSP14.Endpoint.Data.internalPoint`, so it is not possible to project the field `internalPoint` from an expression
+  D
+of type `Data`
+error: NSP14/Width/TripleCorePoint.lean:32:10: Invalid field `internalPoint_degree`: The environment does not contain `NSP14.Endpoint.Data.internalPoint_degree`, so it is not possible to project the field `internalPoint_degree` from an expression
+  D
+of type `Data`
+error: NSP14/Width/TripleCorePoint.lean:34:27: Invalid field `internalPoint`: The environment does not contain `NSP14.Endpoint.Data.internalPoint`, so it is not possible to project the field `internalPoint` from an expression
+  D
+of type `Data`
+error: NSP14/Width/TripleCorePoint.lean:35:10: Invalid field `internalPoint_offset`: The environment does not contain `NSP14.Endpoint.Data.internalPoint_offset`, so it is not possible to project the field `internalPoint_offset` from an expression
+  D
+of type `Data`
+error: NSP14/Width/TripleCorePoint.lean:41:2: unsolved goals
+case mp.«0»
+D : Data
+v : Fin 3 ≃ ↥D.a
+a : ℕ
+ha : a ∈ D.a
+hi : v ((fun i => i) ⟨0, ⋯⟩) = ⟨a, ha⟩
+hv : ↑(v ((fun i => i) ⟨0, ⋯⟩)) = ↑⟨a, ha⟩
+⊢ a = ↑(v 0) ∨ a = ↑(v 1) ∨ a = ↑(v 2)
+
+case mp.«1»
+D : Data
+v : Fin 3 ≃ ↥D.a
+a : ℕ
+ha : a ∈ D.a
+hi : v ((fun i => i) ⟨1, ⋯⟩) = ⟨a, ha⟩
+hv : ↑(v ((fun i => i) ⟨1, ⋯⟩)) = ↑⟨a, ha⟩
+⊢ a = ↑(v 0) ∨ a = ↑(v 1) ∨ a = ↑(v 2)
+
+case mp.«2»
+D : Data
+v : Fin 3 ≃ ↥D.a
+a : ℕ
+ha : a ∈ D.a
+hi : v ((fun i => i) ⟨2, ⋯⟩) = ⟨a, ha⟩
+hv : ↑(v ((fun i => i) ⟨2, ⋯⟩)) = ↑⟨a, ha⟩
+⊢ a = ↑(v 0) ∨ a = ↑(v 1) ∨ a = ↑(v 2)
+warning: NSP14/Width/TripleCorePoint.lean:44:26: This simp argument is unused:
+  ← hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Width.TripleCorePoint
+error: build failed

@@ -1,0 +1,25 @@
+✖ [5562/5563] Building NSP14.Width.AntipodalCore (3.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalCore.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.setup.json --json
+error: NSP14/Width/AntipodalCore.lean:256:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  i - j ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  c ≥ 0
+  c - f + g ≤ -2
+  c + e ≥ -1
+  b ≥ 0
+where
+ b := ↑(∑ i ∈ Finset.range (h + 1), (i + 1))
+ c := ↑h
+ e := ↑((h + 1).choose (Nat.succ 1))
+ f := ↑((h + 1 + 1).choose 2)
+ g := ↑((h + 1).choose 2)
+ i := ↑(∑ i ∈ Finset.range h, (i + 1))
+ j := ↑(∑ i, (↑i + 1))
+Some required targets logged failures:
+- NSP14.Width.AntipodalCore
+error: build failed
