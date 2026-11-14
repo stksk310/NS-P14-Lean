@@ -45,7 +45,7 @@
     "NSP14.Run18.width_closed"
   ],
   "continuation_20261114": {
-    "status": "PASS_COLD_PARTIAL_VALIDATION_REVIEW_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "aa29347b261633e5a9db4c8467a1831ec69e2d81",
     "closed_subcontract": "NSP14.Run18.dense_resources_closed : Requested.DenseResources",
     "actual_comparisons_added": [
