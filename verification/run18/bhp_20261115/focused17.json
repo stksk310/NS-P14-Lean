@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/BasisGradedScalarComparison.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.024
+  },
+  {
+    "file": "tests/MonomialExtension.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.594
+  },
+  {
+    "file": "tests/MonomialExtensionGraded.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.884
+  },
+  {
+    "file": "tests/MonomialScalarExamples.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.861
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms16.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.649
+  }
+]

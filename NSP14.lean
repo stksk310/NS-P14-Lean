@@ -677,3 +677,6 @@ public import NSP14.Lex.DistractionTensor
 public import NSP14.Lex.DistractionChain
 public import NSP14.Homological.KoszulExteriorGrading
 public import NSP14.Lex.DistractionGraded
+public import NSP14.Homological.BasisGradedScalarComparison
+public import NSP14.Lex.MonomialExtension
+public import NSP14.Lex.MonomialExtensionGraded
