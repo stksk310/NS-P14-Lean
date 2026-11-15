@@ -684,3 +684,9 @@ public import NSP14.Lex.GenericDistractionStep
 public import NSP14.Lex.Uniqueness
 public import NSP14.Lex.GenericDistractionPrincipal
 public import NSP14.Lex.FiniteHilbertProfiles
+public import NSP14.Lex.PrefixOrder
+public import NSP14.Lex.GenericDistractionProgress
+public import NSP14.Lex.ElementaryDistraction
+public import NSP14.Lex.GenericDistractionStable
+public import NSP14.Lex.GenericDistractionIteration
+public import NSP14.Lex.SmallVariableComparison

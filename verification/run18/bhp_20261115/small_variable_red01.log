@@ -1,0 +1,2 @@
+tests/SmallVariableComparison.lean:14:2: error(lean.unknownIdentifier): Unknown constant `Lex.quotientGradedBetti_le_lex_of_le_two`
+tests/SmallVariableComparison.lean:21:2: error(lean.unknownIdentifier): Unknown constant `Lex.exists_lex_sameHilbert_of_le_two`

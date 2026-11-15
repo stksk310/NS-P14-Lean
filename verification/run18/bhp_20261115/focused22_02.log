@@ -1,0 +1,16 @@
+'NSP14.Lex.IsStronglyStable.isLex_of_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.quotientGradedBetti_le_lex_of_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.exists_lex_sameHilbert_of_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.quotientGradedBetti_le_lex_of_le_two : ∀ (k : Type) [inst : Field k],
+  ∀ q ≤ 2,
+    ∀ (I L : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+      (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+      NSP14.Lex.IsLex k q L →
+        (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert k q L hL n) →
+          ∀ (i : ℕ) (t : ℤ), NSP14.Lex.quotientGradedBetti k q I hI i t ≤ NSP14.Lex.quotientGradedBetti k q L hL i t
+NSP14.Lex.exists_lex_sameHilbert_of_le_two : ∀ (k : Type) [inst : Field k],
+  ∀ q ≤ 2,
+    ∀ (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+      ∃ L,
+        ∃ (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+          NSP14.Lex.IsLex k q L ∧ ∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert k q L hL n

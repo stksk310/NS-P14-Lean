@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/PrefixOrder.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/GenericDistractionProgress.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/ElementaryDistraction.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/GenericDistractionStable.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/GenericDistractionIteration.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  }
+]
