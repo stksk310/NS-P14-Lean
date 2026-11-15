@@ -1,0 +1,23 @@
+{
+  "status": "PASS_REVIEW_FOR_ACTUAL_COLEX_RESTRICTION_AND_STRONGLY_STABLE_EK",
+  "run18_complete": false,
+  "proof_snapshot_commit": "4a6cede80567146de89d6775c806b5ca719dabf7",
+  "reviewed_source_commit": "4a6cede80567146de89d6775c806b5ca719dabf7",
+  "verification": "verification/run18/runs/release_candidate_20261115_r13/verification.json",
+  "verification_sha256": "eaab85f17db35d7e8e449a3dee3c82ed835250d7b3c76864009eab4ac912b3ef",
+  "report": "verification/run18/colex_stable_ek_review_20261115.md",
+  "report_sha256": "962968aa1373bdb216ebc4b6b333b75b45f7616c5c6d9d54a3e18b648a209dd1",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": [
+    "general BHP",
+    "general common-whole-Hilbert lex existence",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}
