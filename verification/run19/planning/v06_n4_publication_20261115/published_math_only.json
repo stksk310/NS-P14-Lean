@@ -1,0 +1,54 @@
+{
+  "status": "PASS_V06_ARITHMETIC_TRANSCRIPTION_CHECKS_ONLY",
+  "symbolic_identities": [
+    "N4 cubic for every u=6+z",
+    "N4 third-row comparison",
+    "N4 fourth-row comparison",
+    "APD integer capacity plus one",
+    "APD positive polynomial from h=4",
+    "V05 nonAP exact step-three tail",
+    "V05 nonAP remainder upper gap",
+    "V05 nonAP integer capacity plus one",
+    "V05 nonAP positive gap from u=8",
+    "V05 normalized capacity base",
+    "V05 normalized payment equivalence",
+    "V05 adjacent normalized binomial ratio",
+    "V05 adjacent width-increment difference",
+    "sparse second-row polynomial",
+    "five higher second row",
+    "dense positive gap",
+    "V06 dense unified nonnegative coefficient",
+    "sparse e6 endpoint factor",
+    "sparse first row e=6",
+    "sparse first row e=7",
+    "sparse first row e=8",
+    "sparse first row e=9"
+  ],
+  "finite_transcription_checks": 366959,
+  "v05_finite_checks": {
+    "nonAP_exact_tail_and_integer_slack": 993,
+    "normalized_base_step_equivalence_and_monotonicity": 57460,
+    "normalized_top_row_and_above_top": 3120,
+    "five_generator_normalized_payment": 1972
+  },
+  "v06_finite_checks": {
+    "carry_ceil_and_floor": 8880,
+    "integer_clamp_height_bound": 237600,
+    "fixed_target_residue_large_j": 21186,
+    "dense_unified_all_rows": 21978,
+    "dense_t2_retained_rows": 888
+  },
+  "carry_boundaries_exercised": {
+    "r_zero": true,
+    "s_zero": true,
+    "noncoprime_m_u": true,
+    "m_equals_u_plus_one": true,
+    "height_at_most_two": true,
+    "height_zero": true,
+    "height_two": true
+  },
+  "partition_sanity_cases": 6660,
+  "universal_proof_claimed_by_enumeration": false,
+  "files_modified": false,
+  "scope": "Polynomial identities and finite transcription/boundary checks; universal proofs are in the manuscript."
+}

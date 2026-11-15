@@ -1,0 +1,90 @@
+{
+  "status": "PASS_V06_N4_PLANNING_INPUT_AND_ARITHMETIC_REVIEW_NOT_LEAN_CERTIFICATION",
+  "checked_utc": "2026-11-15T15:02:10.365671+00:00",
+  "publication_commit": "a7504eea25f02728d1be6cd0082e8484d639dbe2",
+  "previous_plan_commit": "3cf5e157fa7bb85831de2eb0b202183abd81b1d3",
+  "source_sha256": {
+    "proof_sharp_v6/chapters/05_N4_JA.md": "cd6236f6b16d5de7998064e66d566f5c6522c8a943d040ec6242a18dde2194c5",
+    "proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md": "fe8271bbaabf6b3d31243628c3a5a5a305b82361c794f03c6e13a2fe98c72791",
+    "proof_sharp_v6/notes/N4_AUDIT_JA.md": "92c4b5b32776c5eb5bd53a2d3ad651441de71898be52fd8a9bae1ca778268f64",
+    "proof_sharp_v6/chapters/01_COMMON_JA.md": "1b2daedd049dd91fc3f242011801cd648204ac6cd9cfc4e260bca2a9aa63a07a",
+    "proof_sharp_v6/chapters/06_SYNTHESIS_JA.md": "67a10b00ab51ab1836fc071bb1c03b9fa2898ec470e84762151aeba032316f4d",
+    "proof_sharp_v6/NS_P14_SHARP_V06.zip": "788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d",
+    "proof_sharp_publication/PUBLICATION_MANIFEST_SHA256.json": "1cfd41b52bbc417e11ff42672399c3896b4f39fa0eeab14a5d35ab8b97f7f745",
+    "lean_alignment_v06_handoff/EXECUTION_PROMPT_JA.md": "419e30630f757e6ada83c6e062580a4dd896ca1d63da3ade15f0eb7979fb02f2"
+  },
+  "all_sources_match_publication_git_blobs": true,
+  "publication_manifest_entries": 136,
+  "publication_manifest_all_hashes_match": true,
+  "archive": {
+    "entries": 52,
+    "payload_hashes": 51,
+    "crc": "PASS",
+    "exact_coverage": true,
+    "all_payload_hashes": "PASS"
+  },
+  "n4_chapter_occurs_verbatim_once_in_full_text": true,
+  "publication_changes_lean_or_scripts": false,
+  "symbolic_identity_residuals": {
+    "N4b": "0",
+    "U2_minus_U3": "0",
+    "U2_minus_5U4": "0",
+    "T3_cross_product": "0",
+    "T4_cross_product": "0"
+  },
+  "boundary_u6": {
+    "T": [
+      40,
+      45,
+      24
+    ],
+    "U": [
+      "37",
+      "22",
+      "4"
+    ],
+    "twelve_gap": 36
+  },
+  "small_actual_target_minima_rows_2_3_4": {
+    "4": [
+      12,
+      7,
+      1
+    ],
+    "5": [
+      25,
+      25,
+      9
+    ]
+  },
+  "math_only_check": {
+    "command": [
+      "python3",
+      "-B",
+      "proof_sharp_v6/checks/verify_reduction.py",
+      "--math-only"
+    ],
+    "exit_code": 0,
+    "stdout": "verification/run19/planning/v06_n4_publication_20261115/published_math_only.json",
+    "stdout_sha256": "979181af9ee841c669fcf0bda6cece80e98b897d92aad3553f8a7ada10238bad",
+    "symbolic_identities": 22,
+    "finite_transcription_checks": 366959,
+    "partition_sanity_cases": 6660
+  },
+  "reading_scope": [
+    "N4 chapter N0-N8",
+    "common BRIDGE/CAP/MINCAP",
+    "synthesis 6.1-6.3",
+    "N4_AUDIT and V06 handoff scope",
+    "existing TwoRows/SocleBounds and target API"
+  ],
+  "findings_within_this_scope": [],
+  "lean_build_performed": false,
+  "new_lean_proof_performed": false,
+  "v06_lean_alignment_completion_inferred_from_publication": false,
+  "limitations": [
+    "Not a fresh whole-P14 or original-publication proof audit.",
+    "Symbolic and finite checks supplement the manuscript reasoning; they are not Lean proofs.",
+    "V06 route alignment and Run19 actual closure remain implementation work."
+  ]
+}

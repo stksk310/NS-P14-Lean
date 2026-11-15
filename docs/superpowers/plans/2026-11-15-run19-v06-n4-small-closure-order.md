@@ -4,16 +4,16 @@
 
 **Goal:** V06同期後の最新workを基準に、四生成元の全物理狭幅・幅4の全multiplicity・一〜三生成元を、任意体・actual完成接錐・literal interval completion・全Betti行の実証明まで閉じる。
 
-**Architecture:** 先行するV06経路同期の証明・検証を引き継ぐ。N4ではV06本文の新cubicとactual接続を先に正確な命題として固定し、既存の二内部変数QC・元のR/Hx・三点成長・SCから必要な資源を供給する。第一行の標準語計数・小幅・幅4全m、および小生成元を接続し、Run20へ証明済みの出口を渡す。
+**Architecture:** 先行するV06経路同期の証明・検証を引き継ぐ。N4ではN1b→N4aのactual資源上界を、新cubic `4z³+45z²+140z+36` とN4cの二項係数比で払う。既存の二内部変数QC・元のR/Hx・三点成長・SCから資源を供給し、第一行計数・小幅・幅4全mと小生成元を接続してRun20へ証明済みの出口を渡す。
 
 **Tech Stack:** Lean `v4.36.0-rc2`、mathlib `139105d28c7685a154cb3093f79edb2e16708099`、既存Python checker・不変証跡方式。
 
-**Spec:** ユーザー指定の紙上固定版V06が数学的な主仕様。[先行V06同期指令の原文](../specs/2026-11-15-v06-alignment-order-input.txt)、[本指令の入力範囲](../specs/2026-11-15-run19-v06-input-scope.md)、[Run18引継ぎ](../../RUN18_HANDOFF_JA.md)を読む。V06原稿の取得・hash・該当節の確定はTask 1。V03依存表と旧Run19指令はID・既存型・旧証明との対応資料であり、V06と異なる旧経路を優先させない。
+**Spec:** 公開commit `a7504eea25f02728d1be6cd0082e8484d639dbe2` の[V06 N4本文N0–N8](../../../proof_sharp_v6/chapters/05_N4_JA.md)、[全体本文](../../../proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md)、[N4監査ノート](../../../proof_sharp_v6/notes/N4_AUDIT_JA.md)を数学的な主仕様とする。[確定した数式とactual接続](../specs/2026-11-15-run19-v06-n4-checked-contracts.md)、[先行V06同期指令](../../../lean_alignment_v06_handoff/EXECUTION_PROMPT_JA.md)、[入力範囲](../specs/2026-11-15-run19-v06-input-scope.md)、[Run18引継ぎ](../../RUN18_HANDOFF_JA.md)も読む。V03と旧Run19はID・旧型との対応資料であり、異なる旧経路を優先させない。
 
 ## Global Constraints
 
 - 本書は**実行スレへ渡す事前指令**である。指令書の作成・PushはV06同期やRun19数学の実装・監査合格ではない。添付原文の「今回は実装の依頼」を、この指令作成スレでの実装命令として実行しない。
-- 調査時のorigin/workは `345e2d82fea50ef89e00a8f35c4fb53ac601d7ce`。Run18は六IDすべてCOMPLETE。最終R16は280 checks／268 fixtures、10662宣言／新規2421宣言。旧Run19指令の「Run18が4件未完」「R05が最新」という記載は現在の状態ではない。
+- 原稿公開後に確認したorigin/workは `a7504eea25f02728d1be6cd0082e8484d639dbe2`。Run19準備commit `3cf5e15` は保持され、追加は資料公開のみでLeanコード変更はない。Run18は六IDすべてCOMPLETE、最終R16は280 checks／268 fixtures、10662宣言／新規2421宣言。旧指令のRun18未完記述は現在の状態ではない。
 - **先行同期とRun19を分ける。** Endpointの全j経路、antipodal／non-antipodal第一行の整数slack、five／sparseの共通第二行支払い、dense二枝化は先行V06同期の五項目。完了証跡を検査して再利用し、未達をRun19の成果へ付け替えない。本書はその同期を完了済みと推測しない。
 - V06同期の完了・通常Pushを確認してから、Run19の実装baseを固定する。先行実行が進行中なら、そのcheckout・source・cache・HEADへ変更を加えない。独立した原典調査・契約草案までは準備できる。
 - 本来の担当は次表の10 ID。小補題・途中commit・時間目安・context圧縮を終了条件にせず、actual接続、必要な修正、全検証、台帳、レビュー可能な配布物、通常Pushまで同じrunで進める。20 runは目標であり数学的条件を弱めない。
@@ -55,14 +55,14 @@
 
 - [ ] `git fetch origin refs/heads/work:refs/remotes/origin/work`で最新workを取得。適用AGENTS、既存作業、到着済み監査修正を確認し、base SHA・採用差分を記録する。先行実行のdirty成果を上書きしない。
 - [ ] 先行同期五項目の「新補題→actual consumer→Run18凍結受入」、source/evidence/reviewのGit bytes、fresh再構築範囲、依存検査、通常Pushを確認する。`V06_ALIGNMENT_COMPLETE`という文字列だけでは受理しない。
-- [ ] V06原稿を取得して実SHA・内容・該当節を記録する。共有された候補ZIP SHA256は `788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d`。実物未取得で一致を宣言しない。別版なら版差を明示する。
-- [ ] **新cubicの式は添付同期指令に含まれない。** V06本文から変数、数体系、全仮定、下限、等号／不等号、全係数、例外幅、actual sourceへの橋を対応表へ転記する。式を推測して作らない。本文未取得の項目は未確定と記録し、その項目のV06一致を認定しない。独立な小生成元・原典調査は進められる。
+- [ ] 公開されたV06原稿のGit bytesとhashを再確認する。N4章SHA256は `cd6236f6b16d5de7998064e66d566f5c6522c8a943d040ec6242a18dde2194c5`、ZIPの実SHA256は `788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d`。本指令作成側で実物のCRC・51 payload hashを確認済み。実行時に別版なら差を明示する。
+- [ ] [確定数式](../specs/2026-11-15-run19-v06-n4-checked-contracts.md)と本文N1b/N4a–cを照合し、変数、ℚへのcast、u≥6、u=3/4/5の例外、actual source→literal targetを対応表へ固定する。cubicの未取得を理由に止まる必要はなくなった。原稿公開と、先行V06経路同期のLean完了を区別する。
 - [ ] 旧IDとの対応は、最終actual出口を保持しつつ、V06で保持／置換／不要化された中間補題を一つずつ区別する。不要になった旧主経路を、ID数を合わせるため再実装しない。中間契約を変更する場合はV06の正確な新statementと旧statementの関係を先に明記する。
 - [ ] 最終比較はe≥2で `Run18.Requested.Comparison S k he` と同じactual対象。N_CLOSEは`S.embeddingDimension=4`・物理狭幅・全i、I_THREEは`=3`・全幅・全i。N_HIGHは同じN4対象の全`2≤i`。I_BASEにはe=1のliteral carrier等式と実Betti列を含める。10 Propを通常／explicit型とhashごと凍結する。
 - [ ] 要求する名前付き受入は候補 `NSP14.Run19.{distance_closed,words_closed,high_closed,first_closed,small_closed,width4_closed,narrow_four_closed,base_closed,ltv_closed,three_closed}`。最初のREDは該当宣言の不在だけで失敗することを記録。import／構文失敗をRED成功にしない。
 - [ ] Run18の`RequestedGoals.lean` SHA256 `86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689`と六閉鎖を継承する。Run18を未完として再実装しない。V06の`PASS_WITH_EXACT_SCOPE`という紙上監査表示はLean認証の代用ではない。
 
-**Check/Commit:** 契約定義fixtureと型検査はPASS、未実装受入は指定unknown declarationのみFAIL。V06本文の未取得を隠さず入力状態をcommitする。定義作成を数学的閉鎖と数えない。
+**Check/Commit:** 契約定義fixtureと型検査はPASS、未実装受入は指定unknown declarationのみFAIL。取得済みV06のreceiptと先行同期の実際の状態を記録する。定義作成を数学的閉鎖と数えない。
 
 ## Task 2：実QCの二変数標準語・socle・元のheightを接続する
 
@@ -83,13 +83,16 @@
 
 **Files:** Create `NSP14/NarrowFour/CubicPayment.lean`, `HigherRows.lean`; tests `N4CubicPayment.lean`, `N4Higher.lean`。
 
-**Consumes:** Task 1で凍結したV06の正確なcubic／下限／例外とTask 2の同じ資源。既存入口は`actual_two_row_two/three/four`、`actual_positive_rows_add`、先行V06同期の共通higher API、実target lower profile。
+**Consumes:** N1bの`actual_two_row_two/three/four`と、同じP/sigma/R/WについてTask 2が供給する`P≤W`、`R+u≤W`、`sigma≤u−1`、`W≤1+floor(u²/4)`。最終targetには`interval_completed_betti_lower`等の実capacity APIを使う。
 
-- [ ] V06対応表の純算術命題を先にRED受入へ写し、正確な係数恒等式と非負性をLeanで証明する。符号付き差はInt/ℚで扱い、Nat飽和減算を負の多項式の代用にしない。
-- [ ] 同じP・sigma・元のRまたは正当化済みRhatを代入して、V06のcubicをactual β₂へ接続する。新cubicとactual接続は二つとも必要である。
-- [ ] V06が共通higher APIを用いる場合、**actual β₂≤target₂だけを仮定にせず、同じBの第二行資源支払い**を供給する。Bがℚでも使える型、正のchoose分母、i=eの別扱いを保持する。V06の実際の導出が別ならその正確な橋を対応表に従って実装する。
-- [ ] 第3・4行、source消滅後の行、例外幅を原稿の範囲どおり接続する。旧Run19の四次／五次多項式や行別比較を主経路へ呼び戻しただけで本Taskを完了にしない。
-- [ ] u=3,d=1はAP/carrier APIからsource=targetを供給する（既存`narrow_fullAP_comparison`のhe≥5をe=4へ誤適用しない）。V=4で、V≥5が必要なtarget下界を使わない。V06のcubic適用下限とその直前、i=2/3/4/5、m=d*u+2、d=1/3、Q/F2/F3を検査する。
+- [ ] 新しいℚ値の包絡を `U2=5u²/4−2u+4`、`U3=u²−3u+4`、`U4=u²/4−u+1`、`T_i=i*C(u,i+1)`と定義する。名前付きRED受入を置き、正確なN4a–cの型を先に固定する。以下の除法は全てℚ上である。
+- [ ] N1bから`β2≤5W−2u−1≤U2`、`β3≤4W−3u≤U3`、`β4≤W−u≤U4`を証明する。引算はℚまたは等価な加法形を使い、actual接続を未証明fieldへ押し出さない。
+- [ ] u=6+zで **`12*(T_2−U2)=4z³+45z²+140z+36>0`** をLeanで証明する。旧式`152z+108`は`+u`補正付きの別の差なので使わない。
+- [ ] `U2−U3=u²/4+u>0`、`U2−5U4=3u−1>0`と、`8*T_3=3*(u−3)*T_2`、`10*T_4=(u−3)*(u−4)*T_2`を証明する。u≥6から`T_2≤T_3`、`T_2≤5*T_4`を得て、三行とも`β_i≤T_i(u)`へ接続する。比を使う場合はT_2>0を供給し、e−iや0の二項係数で割らない。
+- [ ] N4c直後の **`F_i(m,V)≥T_i(V)≥T_i(u)`** を、V=d*uと各環自身のactual変数を保って証明する。第2行の`+V`、第3・4行用の旧四次／五次払い戻しは主経路に不要。先行同期のfive/sparse向け共通higher wrapperをN4へ強制しない。
+- [ ] u=5のsource上界(24,13,2)→target最小(25,25,9)、u=4の(12,5,0)→(12,7,1)を実資源と実profileから証明する。u=5の床を捨てずP≤7、R≤2、sigma≤4を使う。u=4のtarget第4行を0にしない。
+- [ ] u=3は実QCを`k[y,z]/(y,z)^2`へ同定してsource高次上界(8,3,0)を供給する。d=1はAP/carrier APIでsource=target、d≥2はV≥6の容量で払う。he≥5の`narrow_fullAP_comparison`をe=4へ誤適用しない。
+- [ ] 境界u=6,z=0でT=(40,45,24)、U=(37,22,4)、差の12倍36を検査する。u=3/4/5、i=2/3/4/5、target自身のtop、m=d*u+2、d=1/3、Q/F2/F3を実consumerで確認する。新cubic→actual β₂→比によるβ₃/β₄→物理targetという使用経路を監査する。
 
 **Check/Commit:** build・両fixture・N_HIGH受入をGREENにし、新cubic→実資源→actual行→literal targetの経路を保存する。算術単独のGREENでは閉鎖としない。
 
@@ -97,11 +100,11 @@
 
 **Files:** Create `NSP14/NarrowFour/Relations.lean`, `FirstCount.lean`, `FirstLarge.lean`, `SmallWidths.lean`; tests `N4First.lean`, `N4Small.lean`。
 
-**Consumes:** Task 1のV06該当節、Task 2、同じactual第一行。旧N4置換稿の式は、V06でも採用されていることを確かめたものだけ使う。
+**Consumes:** V06 N5a–d/N6、Task 2、同じactual第一行。三関係・guard付き計数・小幅の原稿上の保持を確認済みであり、ここを未取得入力として扱わない。
 
 - [ ] V06で使う禁止語を、元の実coreの同次数・同offset関係から証明する。保持される三関係は `y^b=x^(b−a)z^a`、`z^(u−a)=y^(u−b)v^(b−a)`、`y^(u−b)z^a=x^(u−b)v^a`。右辺の端点因子と指数範囲を示す。
 - [ ] 純軸の単位元を一度だけ数え、混合三角形／禁止矩形の有限集合写像からPとsigmaを評価する。旧式 `E_h(k0)=C(h−k0+2,2)` を使うなら`k0≤h`のguardを保持する。V06が別計数ならその正確な集合と対応を証明する。
-- [ ] 元のR/Hxとactual第一行へ接続し、V06の無限範囲を全称定理で払う。幅6–8など原稿に残る小幅は、明示的な関係とdownset包含により任意m/dで閉じる。
+- [ ] N5b/cの`P≤2u−h−2+C(h,2)`、`sigma≤min(h+1,k0)`を元のR/Hxとactual第一行へ接続する。targetとの差は偶数u=2hで`h(h−5)/2`、奇数u=2h+1で`(h²−3h−2)/2`。全u≥9とu=5（P≤7,sigma≤3,Hx≤2,R=0,β1≤11）を閉じる。残る幅6–8はN6の明示関係と包含で任意m/dを扱う。
 - [ ] 旧196組証書、有限m探索、反射後のR、core計算の最大値を証明前提にしない。V06で不要になった小幅分岐を旧計画に合わせて復活させない。
 - [ ] V06の各境界と例外offsetを名前付き定理にし、元の向きのR>0、非unitケース、u=3/4/5/6/7/8/9/10、k0のguard境界、Q/F2/F3を必要範囲で検査する。u=4の通常二対で`P+sigma≤5`が必要なら、別々の粗い上界の単なる加算で済ませない。
 
@@ -111,7 +114,7 @@
 
 **Files:** Create `NSP14/NarrowFour/WidthFourCore.lean`, `WidthFourCompetitors.lean`, `WidthFourInitial.lean`, `WidthFourComparison.lean`; test `N4WidthFour.lean`。
 
-**Consumes:** V06で保持される幅4証明、actual全競合核。対象は`d=1,u=4,a=1,b=3,m≥6`。以下は既存V02 §14.6の実式であり、Task 1でV06の採用箇所との一致を確認して使う。
+**Consumes:** V06 N7a–dとその四剰余表、actual全競合核。対象は`d=1,u=4,a=1,b=3,m≥6`。全j・両座標・非禁止像独立性を保持する原稿との一致を確認済み。
 
 - [ ] 内部重みwt(y)=1, wt(z)=2, wt(x)=wt(v)=0、通常次数、固定lexの順に比較する実well-founded順序を作る。`J0=(y³,yz,xz²,z³)`の標準列1,y,y²,zとx-free列z²の実像の独立性・停止除算を証明する。
 - [ ] 列基点の次数／offsetを(c,n)とする。任意j≥1について `r_j=(n−jm) mod4`、`kappa_j=(jm+r_j−n)/4`、lambda=(0,1,2,1)、`Delta_j=lambda(r_j)−c−kappa_j−j`をIntで定義し、**K'=K−kappa_j, L'=L−Delta_j**と両非負条件のiffを供給する。
@@ -181,4 +184,4 @@
 
 **終了条件：V06に沿うN4の資源・新cubic・actual接続・第一行・小幅・幅4全mと、一〜三生成元の全行が、追加の未証明比較前提なしで元のactual sourceからliteral completionへ接続し、全検証・台帳・公開確認まで揃うこと。**
 
-この文書の作成時点ではV06のN4本文は未提供・未取得であり、式を代作していない。原稿receiptとTask 1の命題対応が揃った後に、その部分の実装仕様が確定する。先行V06同期の実装やRun19の実装を、この指令作成スレから開始・送信していない。
+V06 N4本文は公開commit `a7504ee` で取得・照合済みとなり、本文待ちの障害は解消した。先行V06同期の実装・検証完了確認は引き続き開始条件である。資料公開だけで同期のLean認証を済ませたとは扱わず、先行同期やRun19の実装をこの指令作成スレから開始・送信していない。
