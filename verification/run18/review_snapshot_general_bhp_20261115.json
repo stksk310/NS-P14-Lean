@@ -1,0 +1,22 @@
+{
+  "status": "PASS_REVIEW_FOR_GENERAL_ARBITRARY_CHARACTERISTIC_GRADED_BHP",
+  "run18_complete": false,
+  "proof_snapshot_commit": "22cbb0ed5b6a2f48b66d35b2aee34f9f488bef57",
+  "reviewed_source_commit": "22cbb0ed5b6a2f48b66d35b2aee34f9f488bef57",
+  "verification": "verification/run18/runs/release_candidate_20261115_r14/verification.json",
+  "verification_sha256": "bfac554d8da937049de88c0ae1bd55d2e1667ac969605ef67dc221f48b9d4a81",
+  "report": "verification/run18/general_bhp_review_20261115.md",
+  "report_sha256": "e146bfd7a260a5832737739f36cb982609ead7a05e4d4bc6189bddd97dcdbae2",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": [
+    "general common-whole-Hilbert lex existence and remaining Task 2 concrete acceptance",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

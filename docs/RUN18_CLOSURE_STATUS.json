@@ -6,10 +6,10 @@
   "closed_ids": [
     "W_SPARSE",
     "W_FIVE",
-    "W_EDGE"
+    "W_EDGE",
+    "X_BHP_EK"
   ],
   "unproved_ids": [
-    "X_BHP_EK",
     "W_DENSE",
     "W_CLOSE"
   ],
@@ -18,8 +18,8 @@
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
-    "environment_declarations": 9932,
-    "new_environment_declarations": 1691,
+    "environment_declarations": 10334,
+    "new_environment_declarations": 2093,
     "allowed_axioms": [
       "Classical.choice",
       "Quot.sound",
@@ -27,14 +27,13 @@
     ],
     "fresh_project_test_cache": true,
     "fresh_new_production_cache": true,
-    "preserved_evidence_count": 5342,
-    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
-    "commands": 237,
-    "fixtures": 223,
-    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2"
+    "preserved_evidence_count": 6523,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r14/verification.json",
+    "commands": 264,
+    "fixtures": 251,
+    "source_snapshot_commit": "22cbb0ed5b6a2f48b66d35b2aee34f9f488bef57"
   },
   "unproved_assigned_declarations": [
-    "NSP14.Lex.bhp_ek",
     "NSP14.Run18.dense_closed",
     "NSP14.Run18.width_closed"
   ],
@@ -82,7 +81,8 @@
   "closed_goals": [
     "NSP14.Run18.sparse_closed",
     "NSP14.Run18.five_closed",
-    "NSP14.Run18.edge_closed"
+    "NSP14.Run18.edge_closed",
+    "NSP14.Lex.bhp_ek"
   ],
   "public_actual_comparisons": [
     "NSP14.NumericalSemigroup.narrow_sparse_comparison",
@@ -160,7 +160,7 @@
     "source_snapshot_commit": "bc554ffc0231c0e83fdf4c62673e438cc123c417",
     "preserved_evidence_count": 3653
   },
-  "current_goal": "Finish remaining Run18 contracts. Run19 execution is on hold by explicit user instruction of 2026-11-15.",
+  "current_goal": "Run18: general lex existence and concrete Task2 acceptance, then dense/global closure; Run19 HOLD",
   "edge_closure_20261115": {
     "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "88dbd044ef7a8073d6d0bed6a7a4b550ed86a1bf",
@@ -431,5 +431,29 @@
     "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms15_focused16.log",
     "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
     "review": "verification/run18/review_snapshot_graded_distraction_20261115.json"
+  },
+  "previous_successful_verification_20261115_r10": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9932,
+    "new_environment_declarations": 1691,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 5342,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+    "commands": 237,
+    "fixtures": 223,
+    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2"
+  },
+  "general_bhp_20261115": {
+    "proof": "NSP14.Lex.quotientGradedBetti_le_lex",
+    "frozen_closure": "NSP14.Lex.bhp_ek : Requested.X_BHP_EK",
+    "review": "verification/run18/general_bhp_review_20261115.md",
+    "decision": "verification/run18/review_snapshot_general_bhp_20261115.json",
+    "remaining_task2": "general whole-Hilbert lex existence and concrete acceptance"
   }
 }
