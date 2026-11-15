@@ -1,0 +1,35 @@
+{
+  "format": {
+    "engine": "XeLaTeX",
+    "paper": "A4",
+    "font_size_pt": 11,
+    "columns": 1,
+    "margin_mm": 25,
+    "font": "Noto Serif CJK JP",
+    "published_theorems": "cited, not reproved",
+    "required_appendix_pages": 0
+  },
+  "outputs": [
+    {
+      "source": "proof_sharp_v4/NS_P14_SHARP_PROOF_JA.md",
+      "pdf": "proof_sharp_v4/build/NS_P14_SHARP_PROOF_JA.pdf",
+      "pages": 34,
+      "source_characters": 66367,
+      "sha256": "7a743e74d19fc3e6eba6863087ed1eef6a16e85e6a5f267aaaa56f25145cfa1d",
+      "missing_character_warnings": 0,
+      "overfull_boxes": 0,
+      "measured_reference_is_complete_current_manuscript": null
+    },
+    {
+      "source": "proof_sharp_v4/CURRENT_ROUTE_PAGINATION_REFERENCE_JA.md",
+      "pdf": "proof_sharp_v4/build/CURRENT_ROUTE_PAGINATION_REFERENCE_JA.pdf",
+      "pages": 45,
+      "source_characters": 79920,
+      "sha256": "d6f3020a623cb8b590f366101a4f3e65f5515c57ca101eb32781fb2e775a6bdd",
+      "missing_character_warnings": 0,
+      "overfull_boxes": 0,
+      "measured_reference_is_complete_current_manuscript": false
+    }
+  ],
+  "limitation": "The current-route reference is assembled source material, not a new verified canonical manuscript. Its page count is a reference measurement; a clean current-route estimate must retain uncertainty."
+}

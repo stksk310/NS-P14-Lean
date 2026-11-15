@@ -1,0 +1,10 @@
+{
+  "status": "PASS_PAPER_REDUCTION_TRANSCRIPTION_AND_PRESERVATION_CHECKS",
+  "finite_transcription_checks": 366959,
+  "partition_sanity_cases": 6660,
+  "run18_recorded_checks_passed": 280,
+  "rehashed_existing_manifests": {
+    "SOURCE_SHA256.json": 2033,
+    "MANIFEST_SHA256.json": 297
+  }
+}

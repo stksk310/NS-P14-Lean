@@ -1,0 +1,39 @@
+{
+  "remote": "https://github.com/stksk310/NS-P14-Lean",
+  "requested_branch": "work",
+  "fetch_command": "git fetch origin refs/heads/work:refs/remotes/origin/work",
+  "read_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "working_branch": "proof/canonical-reduction-20261115",
+  "core_source_sha256": {
+    "proof_structure_v3/P14_PROOF_SKELETON_V03_JA.md": "2179a2a674e9b66d66a27089552e8efb1306650fbee07abfc62f5cdd78ef4ad5",
+    "proof_structure_v3/P14_DEPENDENCY_MAP_V03.md": "e8997b2916ca927206b5aaebfe0c745f74472dbd8d1ada5f662a35c39d3e89d6",
+    "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md": "37489ff37efa3de703a78990b294d956d07581082e70d60bae323901b4accef9",
+    "n4_further_reduction/N4_PAPER_REDUCTION_JA.md": "467cd0776e09d95e037281c9b40fcaf972b1d0910154b7d5eb87c07c889537a6",
+    "docs/LEAN_PAPER_ALIGNMENT_JA.md": "3ddbc7278a2b5a2c84fbe9e0c5b564087f681e831f8a9db11469eb7c67da9937",
+    "docs/RUN18_PAPER_CORRESPONDENCE_JA.md": "cc699853e3785c5a8187ad6311529f9eab95288e5129f1f25fefea750cbc7e40",
+    "docs/RUN18_CLOSURE_STATUS.json": "988826218e5b11415f664cd63651e4b3590094fc6f4609644b0ad173684b0b74",
+    "proof_structure_v3/work/ENDPOINT_PART.md": "df584bc47e60ed62118906d76f2330dc5394f7f62677c4f12b2530455674cd08",
+    "proof_structure_v3/work/INTRO_AND_PART_I.md": "a814c1ee07c6dc6d51c2e3be5d8b57eacc8feea5e31a7e3f7e094284266feb40",
+    "proof_structure_v3/work/ORDINARY_PARTS.md": "93fde5133b08a9a692df2203f85ca2258dfa510b1fffbe774f0bbbc038554d84",
+    "proof_structure_v3/work/PART_VI.md": "2ab0388a44529a2d8154ef4b1023ca91e05a5d295649f2562a31dcde9c6019c9",
+    "proof_structure_v3/work/WIDTH_PART.md": "90617568621c2a3f375ca120137597a54fbe9b56fc55ca858fcf93564792d65e",
+    "auditability_search/CORE_READABILITY_AUDIT.md": "e0595089d75d42145366a1c353395ac0396e213875951082e4418254a699be8f",
+    "auditability_search/LATER_READABILITY_AUDIT.md": "d6d9542387951c12ec1e37b0e2b760585b913cc9f184a198be71bee982217527",
+    "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md": "97f6b39cec112aab8d2e94b0c7feb5f2654ada898f61130796bd05fb4871931f",
+    "auditability_search/ORDINARY_REDUCTION.md": "df4e3e1544840ae01eedd729588b7a29a852d178f044421949dc9c1005dbd908",
+    "auditability_search/ORDINARY_REDUCTION_REFEREE.md": "dcaa946926dc678d55a6728704e7054f64c46eda2a753776b6159d3083f3f4f7",
+    "auditability_search/SEARCH_AND_HUMAN_AUDIT_JA.md": "28e1acf3415e1666fba6dbcb01b0c69ee4bd8e18ed33277c9cb25bc3322d9536",
+    "auditability_search/SIDON_INDEPENDENT_AUDIT.md": "42ac876398cf6251178a7dcf030316397d1bc113a2b58be95ffc391bdabc0ca1"
+  },
+  "production_lean_files": 681,
+  "scope": "V04 manuscript retained byte-for-byte. Only the approved two width-proof changes are integrated; original work source SHA is unchanged.",
+  "fresh_lean_build": false,
+  "revision": "V05",
+  "previous_revision": "proof_sharp_v4",
+  "previous_revision_file_count": 49,
+  "preservation_snapshot": "proof_sharp_v5/PREVIOUS_VERSION_SHA256.json",
+  "requested_changes": [
+    "non-antipodal first-row integer threshold",
+    "common second-to-all higher-row payment"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "format": {
+    "engine": "XeLaTeX",
+    "paper": "A4",
+    "font_size_pt": 11,
+    "columns": 1,
+    "margin_mm": 25,
+    "font": "Noto Serif CJK JP",
+    "published_theorems": "cited, not reproved",
+    "required_appendix_pages": 0
+  },
+  "outputs": [
+    {
+      "source": "proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md",
+      "pdf": "proof_sharp_v6/build/NS_P14_SHARP_PROOF_JA.pdf",
+      "pages": 34,
+      "source_characters": 67031,
+      "source_sha256": "fe8271bbaabf6b3d31243628c3a5a5a305b82361c794f03c6e13a2fe98c72791",
+      "tex": "proof_sharp_v6/build/NS_P14_SHARP_PROOF_JA.tex",
+      "tex_sha256": "94953ea15f7411b21a86a31339f3555e0c4d6ec0fcc67753bc58fb5248445321",
+      "sha256": "f3bc415e4433426f3b69182807260f0cc400670851e9360b86a7a4fd97385e60",
+      "missing_character_warnings": 0,
+      "overfull_boxes": 0,
+      "measured_reference_is_complete_current_manuscript": null
+    },
+    {
+      "source": "proof_sharp_v6/CURRENT_ROUTE_PAGINATION_REFERENCE_JA.md",
+      "pdf": "proof_sharp_v6/build/CURRENT_ROUTE_PAGINATION_REFERENCE_JA.pdf",
+      "pages": 45,
+      "source_characters": 79920,
+      "source_sha256": "bfc68f7bb8b708a44e8df90dae7d0a56c1ec25eea27763765f660052e6b52c1d",
+      "tex": "proof_sharp_v6/build/CURRENT_ROUTE_PAGINATION_REFERENCE_JA.tex",
+      "tex_sha256": "67e15c77204df0d6b1002d62d679b97b2bd9381c1b71960e5a4505996201fe2c",
+      "sha256": "33e40667c17126b73655165904a71ed31d59222251142f3c959f8b16ec0565e2",
+      "missing_character_warnings": 0,
+      "overfull_boxes": 0,
+      "measured_reference_is_complete_current_manuscript": false
+    }
+  ],
+  "revision": "V06",
+  "previous_revision": {
+    "revision": "V05",
+    "source": "proof_sharp_v5/NS_P14_SHARP_PROOF_JA.md",
+    "pdf": "proof_sharp_v5/build/NS_P14_SHARP_PROOF_JA.pdf",
+    "pages": 34,
+    "source_characters": 66939,
+    "source_sha256": "fbe79a94bfabd2e4ee9dbc87ead116cc166e3f3c1b5f0a5696982e4a062a63ad",
+    "sha256": "5338d1dff91f03b9bf36b42a3f06d1ac10b7017d6627530e6fc6b2ff750ae341"
+  },
+  "limitation": "The current-route reference is assembled source material, not a new verified canonical manuscript. Its page count is a reference measurement; a clean current-route estimate must retain uncertainty."
+}

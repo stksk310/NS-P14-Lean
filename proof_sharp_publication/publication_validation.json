@@ -1,0 +1,77 @@
+{
+  "scope": "Publication of frozen V04-V06 paper artifacts and Lean alignment handoff; no Lean code changes",
+  "prepared_at_utc": "2026-11-15T14:51:45.874629+00:00",
+  "base_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "intended_remote_branch": "work",
+  "old_tracked_files_modified": false,
+  "original_proof_files_rehashed_and_preserved": 167,
+  "canonical_n4_chapter_sha256": "cd6236f6b16d5de7998064e66d566f5c6522c8a943d040ec6242a18dde2194c5",
+  "canonical_n4_in_single_manuscript": true,
+  "original_bundle_checks": [
+    {
+      "path": "proof_sharp_v4/NS_P14_SHARP_V04.zip",
+      "sha256": "cce5631b814532b3c2b9955f53ffdae4010e952a7e819dd6677820196077c39d",
+      "entries": 40,
+      "verified_payload_hashes": 39,
+      "crc": "PASS"
+    },
+    {
+      "path": "proof_sharp_v5/NS_P14_SHARP_V05.zip",
+      "sha256": "3cb35b047292fc86d545d1482ad508f9b538d9a7cbf8ae981960c52274188dbb",
+      "entries": 46,
+      "verified_payload_hashes": 45,
+      "crc": "PASS"
+    },
+    {
+      "path": "proof_sharp_v6/NS_P14_SHARP_V06.zip",
+      "sha256": "788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d",
+      "entries": 52,
+      "verified_payload_hashes": 51,
+      "crc": "PASS"
+    }
+  ],
+  "supplemental_typesetting_archive": {
+    "path": "proof_sharp_publication/FROZEN_TYPESETTING_EVIDENCE.zip",
+    "sha256": "972bfa4b8c4d0c43822dbfef164c3652183d4ff80b837a9bf2cc2f2114e4f3a7",
+    "entries": 36,
+    "purpose": "Restore frozen historical typesetting evidence omitted from normal Git source tree"
+  },
+  "fresh_paper_transcription_and_preservation_check": {
+    "status": "PASS_PAPER_REDUCTION_TRANSCRIPTION_AND_PRESERVATION_CHECKS",
+    "finite_transcription_checks": 366959,
+    "partition_sanity_cases": 6660,
+    "run18_recorded_checks_passed": 280,
+    "rehashed_existing_manifests": {
+      "SOURCE_SHA256.json": 2033,
+      "MANIFEST_SHA256.json": 297
+    }
+  },
+  "new_lean_build_performed": false,
+  "new_lean_formalization_performed": false,
+  "original_bundle_receipts_preserved_as_historical_records": true,
+  "historical_default_checker_reproduction": "Use the documented baseline checkout restoration; do not weaken its original Git guard.",
+  "publication_review": {
+    "verdict": "PASS",
+    "scope": "publication README, baseline restoration recipe, all 36 supplemental archive entries; no new mathematical or Lean certification"
+  },
+  "not_claimed": [
+    "New Lean certification of V06 routes",
+    "N4 actual full-scope Lean completion",
+    "Run19 completion",
+    "Independent rederivation of the entire paper"
+  ],
+  "frozen_whitespace_preserved": {
+    "scope": "One extra blank line at EOF in each of six frozen manuscript/reference Markdown files",
+    "normalization_performed": false,
+    "diff_check_policy": "Allow blank-at-eof while retaining all other Git whitespace checks"
+  },
+  "baseline_checkout_restoration_rehearsal": {
+    "status": "PASS",
+    "baseline_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+    "published_files_rehashed": 136,
+    "supplemental_archive_restored_without_collisions": true,
+    "historical_full_checker_passed": true,
+    "original_published_payload_bytes_unchanged_after_check": true,
+    "new_lean_build_performed": false
+  }
+}
