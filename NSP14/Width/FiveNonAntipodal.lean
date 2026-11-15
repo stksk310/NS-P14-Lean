@@ -1,5 +1,6 @@
 module
 public import NSP14.Width.FiveHigher
+public import NSP14.Width.IntegerPayment
 public import NSP14.Additive.CyclicAntipodal
 public import NSP14.Target.IntervalAPBetti
 @[expose] public section
@@ -40,50 +41,11 @@ theorem actual_five_nonAntipodal_first (hq : D.q=3) (hu : 8 ≤ D.u)
   have hβ := D.actual_first_volume_fourth k
   rw [hq] at hβ
   norm_num at hβ
-  by_cases hu12 : 12 ≤ D.u
-  · have hW := D.five_nonAntipodal_volume_remainder hq hu ha
-    have hWq : 6*(D.wordVolume:ℚ) ≤ (D.u:ℚ)^2+D.u+6 := by exact_mod_cast hW
-    have huQ : (12:ℚ) ≤ D.u := by exact_mod_cast hu12
-    have hp : 0 ≤ ((D.u:ℚ)-12)^2+25*((D.u:ℚ)-12)+18 := by positivity
-    have hc := NSP14.Width.choose_two_rat D.u
-    have hh : (totalBetti k D.Variables (D.fullG k) 1:ℚ) ≤ (D.u.choose 2:ℚ)+1 := by
-      nlinarith only [hβ,hWq,huQ,hp,hc]
-    exact_mod_cast hh
-  · have hW := D.five_nonAntipodal_volume hq ha
-    have hcases : D.u=8 ∨ D.u=9 ∨ D.u=10 ∨ D.u=11 := by omega
-    rcases hcases with h|h|h|h
-    · norm_num [h,NSP14.Width.growthVolume,Finset.sum_range_succ] at hW
-      have hp := (Nat.cast_le (α:=ℚ)).mpr hW
-      norm_num only [Nat.cast_ofNat] at hp
-      rw [h] at hβ ⊢
-      have hlt : (totalBetti k D.Variables (D.fullG k) 1:ℚ)<30 := by linarith only [hβ,hp]
-      have hn : totalBetti k D.Variables (D.fullG k) 1<30 := by exact_mod_cast hlt
-      norm_num [Nat.choose]
-      omega
-    · norm_num [h,NSP14.Width.growthVolume,Finset.sum_range_succ] at hW
-      have hp := (Nat.cast_le (α:=ℚ)).mpr hW
-      norm_num only [Nat.cast_ofNat] at hp
-      rw [h] at hβ ⊢
-      have hlt : (totalBetti k D.Variables (D.fullG k) 1:ℚ)<38 := by linarith only [hβ,hp]
-      have hn : totalBetti k D.Variables (D.fullG k) 1<38 := by exact_mod_cast hlt
-      norm_num [Nat.choose]
-      omega
-    · norm_num [h,NSP14.Width.growthVolume,Finset.sum_range_succ] at hW
-      have hp := (Nat.cast_le (α:=ℚ)).mpr hW
-      norm_num only [Nat.cast_ofNat] at hp
-      rw [h] at hβ ⊢
-      have hlt : (totalBetti k D.Variables (D.fullG k) 1:ℚ)<47 := by linarith only [hβ,hp]
-      have hn : totalBetti k D.Variables (D.fullG k) 1<47 := by exact_mod_cast hlt
-      norm_num [Nat.choose]
-      omega
-    · norm_num [h,NSP14.Width.growthVolume,Finset.sum_range_succ] at hW
-      have hp := (Nat.cast_le (α:=ℚ)).mpr hW
-      norm_num only [Nat.cast_ofNat] at hp
-      rw [h] at hβ ⊢
-      have hlt : (totalBetti k D.Variables (D.fullG k) 1:ℚ)<57 := by linarith only [hβ,hp]
-      have hn : totalBetti k D.Variables (D.fullG k) 1<57 := by exact_mod_cast hlt
-      norm_num [Nat.choose]
-      omega
+  have hW := D.five_nonAntipodal_volume_remainder hq hu ha
+  have hWq : 6*(D.wordVolume:ℚ) ≤ (D.u:ℚ)^2+D.u+6 := by exact_mod_cast hW
+  apply NSP14.Width.nonAntipodal_integer_payment D.u _ hu
+  nlinarith only [hβ,hWq]
+
 end NSP14.Endpoint.Data
 namespace NSP14.NumericalSemigroup
 variable (S : NumericalSemigroup) (k : Type) [Field k]

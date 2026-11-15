@@ -1,5 +1,6 @@
 module
 public import NSP14.Endpoint.FiniteMinima
+public import NSP14.Endpoint.Stopping
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 namespace NSP14.Endpoint.Data

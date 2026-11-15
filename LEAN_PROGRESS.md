@@ -273,3 +273,7 @@ denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成
 2026-11-15 Run18継続：generic係数体上の実monomial ideal→実distraction idealのactual full/内部次数別Koszul chain同型を構成し、全ordinary/graded Betti保存を証明。R10 cold237検証/223fixture、9932宣言/新規1691、公理依存・normal/explicit型・旧5342証跡保持が通過。独立レビュー0/0/0、認証source6bcd0259b84b61614d3e6f5ed14f30aa935717e2。元のk-idealへの係数拡大/下降、lex存在/反復/停止、一般BHP、dense/globalは未完。閉鎖三IDを維持、Run18継続、Run19保留。
 
 2026-11-15 Run18数学的閉鎖：元の六IDをaudit/run18/ClosedGoals.leanのall_closedへ接続。任意標数BHP/EKと一般whole-Hilbert lex存在、actual QC/suffix harmonic K評価、dense全行支払いを経て、元のSの全物理狭幅のactual completion比較narrow_width_comparisonを証明。最終検証・独立レビュー・公開状態はdocs/RUN18_CLOSURE_STATUS.json参照。既存全証跡とfrozen RequestedGoalsは保持。
+
+## 2026-11-16 V06主証明経路の同期
+
+base a7504ee。endpointの全j高さによる停止非依存、二つの整数slack第一行、同じ有理資源Bの第二行から全高次行への共通化、同一lex商Kによるdense二枝を実装した。既存公開型とRun18六契約を維持する。認証結果は新規v06_alignment証跡に固定proof commitとともに保存し、旧Run18証跡を再ラベルしない。詳細はdocs/V06_ALIGNMENT_LEDGER_JA.md。N4/Run19/全P14合成は対象外。

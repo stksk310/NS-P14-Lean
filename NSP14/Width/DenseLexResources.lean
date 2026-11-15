@@ -57,10 +57,12 @@ theorem dense_lex_correction_bound (t r : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q)
   convert hb using 1; ring
 
 
-theorem dense_core_lex_bound (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4≤D.q) :
+/-- One lex quotient supplies all core rows and both V06 correction bounds.
+The implications retain the full range, including t = 0 and t = 1. -/
+theorem dense_core_lex_bound_two_branch (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4≤D.q) :
     ∃ K : ℕ,(∀ i : ℕ,1 ≤ i → totalBetti k D.a (D.QCoreModule k) i≤
       i*(D.q+1).choose (i+1)+K*(D.q-1).choose (i-1)) ∧
-      (t=2 → K≤2) ∧ (t=3 → K≤4) ∧ (4≤t → 3*K≤2*t*(t-1)) := by
+      (t=2 → K≤2) ∧ (3≤t → 3*K≤2*t*(t-1)) := by
   obtain ⟨L,hL,hlL,hHF,hbetti⟩ := D.exists_core_lex k
   let K := Lex.lexCorrection k D.q L (D.u-2)
   have hu3 : 3≤D.u := by omega
@@ -74,7 +76,7 @@ theorem dense_core_lex_bound (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4
   have hN (n : ℕ) (hn : D.u-2+1<n) : Lex.quotientHilbert k D.q L hL n=0 := by
     rw [hHF n]
     exact D.coreHilbert_above k n (by omega)
-  refine ⟨K,?_,?_,?_,?_⟩
+  refine ⟨K,?_,?_,?_⟩
   · intro i hi
     obtain ⟨j,rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : i≠0)
     have hh := (hbetti (j+1) (by omega)).trans (hlL.total_betti_le_correction k D.q L hp hL (D.u-2) j hN h0 h1)
@@ -86,12 +88,6 @@ theorem dense_core_lex_bound (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4
     have hNat : 3*K≤8 := by exact_mod_cast hbound
     omega
   · intro ht3
-    have hh := D.dense_lex_correction_bound k t 3 hu ht (by omega) (by omega) (by rw [ht3]; decide) L hL hlL hHF
-    change (K:ℚ)≤_ at hh
-    rw [ht3] at hh
-    norm_num at hh
-    exact_mod_cast hh
-  · intro ht4
     have hchoose : 2*t≤(t+1).choose 2 := by
       have hc := Nat.add_one_mul_choose_eq t 1
       rw [Nat.choose_one_right] at hc
@@ -101,5 +97,16 @@ theorem dense_core_lex_bound (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4
     change (K:ℚ)≤_ at hh
     have hbound : (3:ℚ)*(K:ℚ)≤2*(t:ℚ)*((t-1:ℕ):ℚ) := by linarith only [hh]
     exact_mod_cast hbound
+/-- Compatibility export for the previous three-branch resource statement. -/
+theorem dense_core_lex_bound (t : ℕ) (hu : D.u=D.q+1+t) (ht : t≤D.q) (hq : 4≤D.q) :
+    ∃ K : ℕ,(∀ i : ℕ,1 ≤ i → totalBetti k D.a (D.QCoreModule k) i≤
+      i*(D.q+1).choose (i+1)+K*(D.q-1).choose (i-1)) ∧
+      (t=2 → K≤2) ∧ (t=3 → K≤4) ∧ (4≤t → 3*K≤2*t*(t-1)) := by
+  obtain ⟨K,hcore,h2,hge3⟩ := D.dense_core_lex_bound_two_branch k t hu ht hq
+  refine ⟨K,hcore,h2,?_,fun h4 => hge3 (by omega)⟩
+  intro he
+  have hh := hge3 (by omega : 3≤t)
+  rw [he] at hh
+  omega
 end NSP14.Endpoint.Data
 

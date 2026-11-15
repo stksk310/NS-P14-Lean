@@ -720,3 +720,7 @@ public import NSP14.Width.DensePayment
 public import NSP14.Width.DenseComparison
 public import NSP14.Width.Closure
 public import NSP14.Lex.PrefixGeneratorCorrection
+
+-- V06 route synchronization; all previously published imports remain above.
+public import NSP14.Width.IntegerPayment
+public import NSP14.Width.HigherFromSecond

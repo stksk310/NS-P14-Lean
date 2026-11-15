@@ -101,31 +101,16 @@ theorem actual_antipodal_first (hq : D.q=3) (hu8 : 8 ≤ D.u)
     omega
   have hW := D.wordVolume_quadratic_bound
   rw [hq,hu] at hW
-  by_cases hh4 : h=4
-  · have hu4 : D.u=8 := by omega
-    have hw := NSP14.Width.five_wordVolume_eight D hq hu4
-    rw [hh4] at hP
-    norm_num [Nat.choose] at hP
-    have hp : (D.coreP k:ℚ) ≤ 11 := by exact_mod_cast hP
-    have hr : (D.actualR k:ℚ) ≤ 6 := by exact_mod_cast (show D.actualR k ≤ 6 by omega)
-    have hlt : (totalBetti k D.Variables (D.fullG k) 1:ℚ)<30 := by linarith
-    have hn : totalBetti k D.Variables (D.fullG k) 1<30 := by exact_mod_cast hlt
-    rw [hu4]
-    norm_num [Nat.choose]
-    omega
-  · have hh5 : (5:ℚ) ≤ h := by exact_mod_cast (show 5 ≤ h by omega)
-    have hw : (D.wordVolume:ℚ) ≤ (h:ℚ)^2 := by
-      have : D.wordVolume ≤ h^2 := by nlinarith only [hW]
-      exact_mod_cast this
-    have hr : (D.actualR k:ℚ)+2*h ≤ D.wordVolume := by rw [hu] at hR; exact_mod_cast hR
-    have hc : (D.u.choose 2:ℚ)=2*(h:ℚ)^2-h := by
-      rw [hu,NSP14.Width.choose_two_rat]
-      push_cast
-      ring
-    have hp : 0 ≤ ((h:ℚ)-5)^2+11*((h:ℚ)-5)+6 := by positivity
-    have hgoal : (totalBetti k D.Variables (D.fullG k) 1:ℚ) ≤ (D.u.choose 2:ℚ)+1 := by
-      nlinarith only [hPc,hfq,hb,hw,hr,hc,hp]
-    exact_mod_cast hgoal
+  have hw : (D.wordVolume:ℚ) ≤ (h:ℚ)^2 := by
+    have : D.wordVolume ≤ h^2 := by nlinarith only [hW]
+    exact_mod_cast this
+  have hr : (D.actualR k:ℚ)+2*h ≤ D.wordVolume := by
+    rw [hu] at hR
+    exact_mod_cast hR
+  rw [hu]
+  apply NSP14.Width.antipodal_integer_payment h _ hh
+  nlinarith only [hPc,hfq,hb,hw,hr]
+
 end NSP14.Endpoint.Data
 namespace NSP14.NumericalSemigroup
 variable (S : NumericalSemigroup) (k : Type) [Field k]

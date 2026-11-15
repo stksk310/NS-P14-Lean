@@ -1,5 +1,5 @@
 module
-public import NSP14.Width.SparseSecond
+public import NSP14.Width.HigherFromSecond
 public import NSP14.Width.SparseRemainder
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
@@ -51,40 +51,41 @@ theorem actual_five_higher (hq : D.q=3) (hu : 8 ≤ D.u) (i : ℕ) (hi : 2 ≤ i
   by_cases hit : 5 < i
   · rw [D.actual_endpoint_above k i (by omega)]
     exact Nat.zero_le _
-  have hb := D.actual_positive_rows_add k i (by omega)
-  rw [hq] at hb
   have hP := D.coreP_le_wordVolume k
   have hR : D.Rhat+D.u ≤ D.wordVolume := by
     have h := min_le_left (D.wordVolume-D.u) (D.u*(D.coreHeight-2))
     change D.Rhat ≤ _ at h
     have := D.wordVolume_ge_u
     omega
-  have hW := D.wordVolume_quadratic_bound
-  rw [hq] at hW
-  norm_num at hW
-  by_cases hi2 : i=2
-  · subst i
-    norm_num [Nat.choose] at hb
-    by_cases hu8 : D.u=8
-    · have hw := NSP14.Width.five_wordVolume_eight D hq hu8
-      rw [hu8] at *
-      norm_num [Nat.choose]
-      omega
-    · have hu9 : (9:ℚ) ≤ D.u := by exact_mod_cast (show 9 ≤ D.u by omega)
-      have hWq : 4*(D.wordVolume:ℚ) ≤ (D.u:ℚ)^2 := by exact_mod_cast hW
-      have hPq : (D.coreP k:ℚ) ≤ D.wordVolume := by exact_mod_cast hP
-      have hRq : (D.Rhat:ℚ)+D.u ≤ D.wordVolume := by exact_mod_cast hR
-      have hbq : (totalBetti k D.Variables (D.fullG k) 2:ℚ)+4 ≤ 6*D.coreP k+4*D.Rhat := by
-        exact_mod_cast (show totalBetti k D.Variables (D.fullG k) 2+4≤6*D.coreP k+4*D.Rhat by simpa only [mul_comm] using hb)
-      have hp : 0 ≤ 2*((D.u:ℚ)-9)^3+33*((D.u:ℚ)-9)^2+136*((D.u:ℚ)-9)+33 := by positivity
-      have hchoose := NSP14.Width.choose_three_rat D.u
-      have htarget : (totalBetti k D.Variables (D.fullG k) 2:ℚ) ≤ 2*(D.u.choose 3:ℚ) := by
-        nlinarith only [hWq,hPq,hRq,hbq,hp,hchoose]
-      exact_mod_cast htarget
-  · have hi3 : 3 ≤ i := by omega
-    have h4 := NSP14.Width.choose_quadratic_from_eight D.u 4 hu (by decide) (by decide)
-    have h5 := NSP14.Width.choose_quadratic_from_eight D.u 5 hu (by decide) (by decide)
-    have h6 := NSP14.Width.choose_quadratic_from_eight D.u 6 hu (by decide) (by decide)
-    norm_num [Nat.choose] at h4 h5 h6
-    interval_cases i <;> norm_num [Nat.choose] at hb ⊢ <;> nlinarith only [hb,hP,hR,hW,h4,h5,h6]
+  have hie : i ≤ D.q+2 := by omega
+  have hue : D.q+2 ≤ D.u := by omega
+  by_cases hu8 : D.u=8
+  · have hw := NSP14.Width.five_wordVolume_eight D hq hu8
+    have hPq : (D.coreP k:ℚ) ≤ 14 := by exact_mod_cast hP.trans hw
+    have hRq : (D.Rhat:ℚ)+D.u ≤ 14 := by exact_mod_cast hR.trans hw
+    apply D.actual_higher_from_second k 14 hPq hRq hue ?_ i hi hie
+    rw [hq,hu8]
+    norm_num [Nat.choose]
+  · have hu9 : (9:ℚ) ≤ D.u := by exact_mod_cast (show 9 ≤ D.u by omega)
+    have hW := D.wordVolume_quadratic_bound
+    rw [hq] at hW
+    norm_num at hW
+    have hWq : 4*(D.wordVolume:ℚ) ≤ (D.u:ℚ)^2 := by exact_mod_cast hW
+    have hPq : (D.coreP k:ℚ) ≤ (D.u:ℚ)^2/4 := by
+      have hp : (D.coreP k:ℚ) ≤ D.wordVolume := by exact_mod_cast hP
+      linarith only [hp,hWq]
+    have hRq : (D.Rhat:ℚ)+D.u ≤ (D.u:ℚ)^2/4 := by
+      have hr : (D.Rhat:ℚ)+D.u ≤ D.wordVolume := by exact_mod_cast hR
+      linarith only [hr,hWq]
+    apply D.actual_higher_from_second k ((D.u:ℚ)^2/4) hPq hRq hue ?_ i hi hie
+    rw [hq]
+    norm_num only [Nat.reduceAdd,Nat.choose, Nat.cast_ofNat]
+    rw [NSP14.Width.choose_three_rat]
+    have hp : 0 < (2*((D.u:ℚ)-9)^3+33*((D.u:ℚ)-9)^2+
+        136*((D.u:ℚ)-9)+33)/6 := by positivity
+    have hgap : 2*((D.u:ℚ)*((D.u:ℚ)-1)*((D.u:ℚ)-2)/6)+
+        (D.u:ℚ)*4+4-((D.u:ℚ)^2/4)*10 =
+        (2*((D.u:ℚ)-9)^3+33*((D.u:ℚ)-9)^2+
+          136*((D.u:ℚ)-9)+33)/6 := by ring
+    linarith only [hgap,hp]
 end NSP14.Endpoint.Data
