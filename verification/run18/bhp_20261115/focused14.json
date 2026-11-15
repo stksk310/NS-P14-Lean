@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/BasiswiseTensor.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.397
+  },
+  {
+    "file": "tests/DistractionTensor.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.202
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms13.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.607
+  }
+]

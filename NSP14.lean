@@ -672,3 +672,6 @@ public import NSP14.Homological.KoszulExterior
 public import NSP14.Homological.KoszulExteriorMap
 public import NSP14.Lex.GenericDistractionExterior
 public import NSP14.Lex.GenericDistractionBoundary
+public import NSP14.Homological.BasiswiseTensor
+public import NSP14.Lex.DistractionTensor
+public import NSP14.Lex.DistractionChain

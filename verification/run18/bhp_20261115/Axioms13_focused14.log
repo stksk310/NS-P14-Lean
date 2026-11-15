@@ -1,0 +1,29 @@
+'NSP14.Homological.basiswiseTensorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.basiswiseTensorEquiv_tmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionTensorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionTensorEquiv_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionBasis_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+@NSP14.Homological.basiswiseTensorEquiv_tmul : ∀ {k M V J : Type} [inst : Field k] [inst_1 : AddCommGroup M]
+  [inst_2 : Module k M] [inst_3 : AddCommGroup V] [inst_4 : Module k V] (b : Module.Basis J k M) (e : J → V ≃ₗ[k] V)
+  (j : J) (w : V), (NSP14.Homological.basiswiseTensorEquiv b e) (b j ⊗ₜ[k] w) = b j ⊗ₜ[k] (e j) w
+NSP14.Lex.genericDistractionTensorEquiv_monomial : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hmono : NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I) (j : ℕ) (a : Fin q →₀ ℕ)
+  (w : ↥(⋀[NSP14.Lex.GenericDistractionField k q]^j (Fin q → NSP14.Lex.GenericDistractionField k q))),
+  (NSP14.Lex.genericDistractionTensorEquiv k q I hmono j)
+      ((have this := (Ideal.Quotient.mk I) ((MvPolynomial.monomial a) 1);
+        this) ⊗ₜ[NSP14.Lex.GenericDistractionField k q]
+        w) =
+    (have this :=
+        (Ideal.Quotient.mk (NSP14.Lex.genericDistractionIdeal k q I)) (NSP14.Lex.genericFieldDistraction k q a);
+      this) ⊗ₜ[NSP14.Lex.GenericDistractionField k q]
+      (NSP14.Lex.genericDistractionWedgeEquiv k q j a) w
+NSP14.Lex.genericDistractionBasis_homogeneous : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hmono : NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I),
+  Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)) I →
+    ∀ (p : ↑(NSP14.Homological.StandardExponent MonomialOrder.degLex I)),
+      (NSP14.Lex.genericDistractionBasis k q I hmono) p ∈
+        (NSP14.Endpoint.artinGrading (NSP14.Lex.GenericDistractionField k q) (Fin q)
+              (NSP14.Lex.genericDistractionIdeal k q I) ⋯).degreeSpace
+          ↑(Finsupp.degree ↑p)
