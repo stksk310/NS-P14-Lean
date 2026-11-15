@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/DistractionMonomial.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.934
+  },
+  {
+    "file": "tests/GenericDistraction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.675
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms06.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.439
+  }
+]

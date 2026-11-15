@@ -1,0 +1,2 @@
+tests/DistractionLinearEquiv.lean:10:3: error(lean.unknownIdentifier): Unknown constant `Lex.genericPolynomialEquiv`
+tests/DistractionLinearEquiv.lean:10:35: error(lean.unknownIdentifier): Unknown constant `Lex.genericPolynomialEquiv_monomial`

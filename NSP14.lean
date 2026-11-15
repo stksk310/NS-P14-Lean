@@ -660,3 +660,7 @@ public import NSP14.Endpoint.InitialBoundary
 public import NSP14.Endpoint.InitialTransport
 public import NSP14.Endpoint.InitialDiagonal
 public import NSP14.Lex.InitialBetti
+public import NSP14.Lex.DistractionMonomial
+public import NSP14.Lex.GenericDistraction
+public import NSP14.Lex.GenericDistractionField
+public import NSP14.Lex.DistractionLinearEquiv
