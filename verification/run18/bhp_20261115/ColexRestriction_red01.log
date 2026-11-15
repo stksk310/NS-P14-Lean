@@ -1,0 +1,1 @@
+tests/ColexRestriction.lean:12:2: error(lean.unknownIdentifier): Unknown identifier `NSP14.Lex.colex_zero_mem_card_le`

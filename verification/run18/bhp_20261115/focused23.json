@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/DegreeSeparator.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.816
+  },
+  {
+    "file": "tests/ColexRestriction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.327
+  },
+  {
+    "file": "tests/StrongStableOperations.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.62
+  },
+  {
+    "file": "tests/DegreeFamily.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.627
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms22.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.485
+  }
+]

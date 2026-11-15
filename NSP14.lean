@@ -690,3 +690,7 @@ public import NSP14.Lex.ElementaryDistraction
 public import NSP14.Lex.GenericDistractionStable
 public import NSP14.Lex.GenericDistractionIteration
 public import NSP14.Lex.SmallVariableComparison
+public import NSP14.Lex.DegreeSeparator
+public import NSP14.Lex.ColexRestriction
+public import NSP14.Lex.StrongStableOperations
+public import NSP14.Lex.DegreeFamily

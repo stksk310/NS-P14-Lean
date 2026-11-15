@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/DegreeSeparator.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 3,
+    "warning_free": true
+  },
+  {
+    "file": "tests/ColexRestriction.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/StrongStableOperations.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  },
+  {
+    "file": "tests/DegreeFamily.lean",
+    "exit_code": 1,
+    "unknown_identifier_count": 1,
+    "warning_free": true
+  }
+]
