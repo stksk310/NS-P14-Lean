@@ -77,7 +77,7 @@ def validate_coverage(prior,records,fixtures):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output-dir');p.add_argument('--fresh-test-cache',action='store_true')
-    p.add_argument('--preflight',action='store_true');a=p.parse_args();created=False
+    p.add_argument('--preflight',action='store_true');p.add_argument('--baseline-cache');a=p.parse_args();created=False
     try:
         policy=validate_changes(ROOT,require_new=not a.preflight)
         if a.preflight:print('PASS_RUN19_PREFLIGHT_NOT_CERTIFICATION');return
@@ -144,7 +144,7 @@ def main():
                 run(name,cmd)
             mapping.append({'name':name,'old_command':old['command'],'new_command':command if name=='build' else cmd})
         # The old base/type checks have a different source by definition; identity is checked before copying its cache.
-        base_rows=v06.baseline_audit(ROOT,out,run,'/tmp/nsp14-v06-base-bzmlfrkr/.lake/build')
+        base_rows=v06.baseline_audit(ROOT,out,run,a.baseline_cache)
         mapping.extend({'name':n,'old_command':next(r['command'] for r in prior['checks'] if r['name']==n),
                         'new_command':next(r['command'] for r in records if r['name']==n)} for n in ['base_build','base_environment_types'])
         write_json(out/'COMMAND_MAP.json',mapping)
