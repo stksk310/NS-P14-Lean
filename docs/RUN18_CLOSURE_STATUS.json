@@ -18,8 +18,8 @@
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
-    "environment_declarations": 9626,
-    "new_environment_declarations": 1385,
+    "environment_declarations": 9753,
+    "new_environment_declarations": 1512,
     "allowed_axioms": [
       "Classical.choice",
       "Quot.sound",
@@ -27,11 +27,11 @@
     ],
     "fresh_project_test_cache": true,
     "fresh_new_production_cache": true,
-    "preserved_evidence_count": 4768,
-    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
-    "commands": 218,
-    "fixtures": 204,
-    "source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+    "preserved_evidence_count": 5037,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+    "commands": 224,
+    "fixtures": 210,
+    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79"
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
@@ -319,5 +319,53 @@
     "commands": 206,
     "fixtures": 192,
     "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "previous_successful_verification_20261115_r08": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9626,
+    "new_environment_declarations": 1385,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 4768,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "commands": 218,
+    "fixtures": 204,
+    "source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "post_r08_generic_distraction": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79",
+    "modules": [
+      "NSP14.Lex.DistractionMonomial",
+      "NSP14.Lex.GenericDistraction",
+      "NSP14.Lex.GenericDistractionField",
+      "NSP14.Lex.DistractionLinearEquiv",
+      "NSP14.Lex.DistractionIdeal",
+      "NSP14.Lex.DistractionHilbert"
+    ],
+    "proved": "Actual generic-coefficient fraction field; invertible selected-linear-form and per-degree coefficient matrices; genuine polynomial linear equivalence with exact distraction monomial images; actual homogeneous ideal image of a monomial ideal; actual quotient and all integer-degree piece linear equivalences; actual entire quotientHilbert equality.",
+    "field_scope": "Input monomial ideal is over GenericDistractionField k q. Original k-ideal extension/descent is not yet supplied.",
+    "not_proved": [
+      "distraction actual graded Betti preservation",
+      "original-field scalar extension and descent",
+      "general BHP monomial-to-lex iteration and termination",
+      "common-Hilbert lex existence",
+      "W_DENSE closure",
+      "W_CLOSE"
+    ],
+    "closure_id_effect": "No new assigned closed ID. EK conjunct alone remains closed; X_BHP_EK remains open.",
+    "focused_evidence": [
+      "verification/run18/bhp_20261115/focused07.json",
+      "verification/run18/bhp_20261115/focused08.json",
+      "verification/run18/bhp_20261115/focused09.json"
+    ],
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms08_focused09.log",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+    "review": "verification/run18/review_snapshot_distraction_20261115.json"
   }
 }

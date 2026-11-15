@@ -1,0 +1,23 @@
+{
+  "status": "PASS_REVIEW_FOR_GENERIC_FIELD_DISTRACTION_AND_HILBERT_PRESERVATION",
+  "run18_complete": false,
+  "proof_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79",
+  "reviewed_source_commit": "abf2dad5369509b3893a54eda25cce446b435a79",
+  "verification": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+  "verification_sha256": "faa786267f58d9596eb650fd0f99f48dceb3e06e8324d555d5a6783da5a41067",
+  "report": "verification/run18/distraction_review_20261115.md",
+  "report_sha256": "323e0b9e175e41adb95dc46ef4a4ae6c911e03e3f17bab702f90aeccbfb7f2f6",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "remaining": [
+    "distraction actual graded Betti preservation",
+    "original-field scalar extension and descent",
+    "general BHP monomial-to-lex iteration and termination",
+    "common-Hilbert lex existence",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

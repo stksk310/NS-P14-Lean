@@ -267,3 +267,5 @@ denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成
 一般一欠落幅の任意標数actual Koszul minorから全行比較を構成し、凍結W_EDGEを閉じた。closed IDはW_SPARSE,W_FIVE,W_EDGEの3件。BHP/EK、dense閉鎖、全域幅合成は未完でRun18は継続中。ユーザー指示によりRun19の実行は保留。内部検証checkpointを全Run18の完了と数えない。
 
 2026-11-15 Run18継続：元のW_EDGE閉鎖＋R06全188検証成功。追加で任意体の実ordinary EK公式を証明・focused8fixture/root検証。graded EKとBHP/Pardueは未証明、六IDは3閉鎖/3未完。Run19保留。
+
+2026-11-15 Run18継続：任意体の元のgraded EK conjunct、実初期idealへの全graded Betti比較に続き、generic coefficient field上の実distraction多項式/商/全次数pieceの線形同型と実ideal性・全Hilbert関数保存まで証明。R09 cold 224 command/210 fixture・9753宣言/新規1512宣言、公理依存・公開型・旧5037証跡保持が通過、独立レビュー0/0/0。認証source abf2dad5369509b3893a54eda25cce446b435a79。Betti保存、元の基礎体への接続、一般BHP/lex存在/停止、dense/globalは未完。閉鎖IDはW_SPARSE/W_FIVE/W_EDGEの3件、Run18継続、Run19保留。
