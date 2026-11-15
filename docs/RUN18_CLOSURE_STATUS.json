@@ -502,7 +502,7 @@
     "concrete_acceptance": "tests/LexHilbertExamples.lean",
     "review": "verification/run18/lex_existence_correction_review_20261115.md",
     "decision": "verification/run18/review_snapshot_lex_existence_correction_20261115.json",
-    "remaining": "Resolved mathematically by dense_global_proof_candidate; final validation pending"
+    "remaining": "Historical R15 remainder resolved by the final dense/global proofs and R16 PASS cold validation with independent review; no current Run18 mathematical or validation remainder."
   },
   "previous_successful_verification_20261115_r15": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
