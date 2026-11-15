@@ -1,0 +1,14 @@
+{
+  "whole_project_lib_and_ir": true,
+  "moved": [
+    {
+      "from": ".lake/build/lib/lean",
+      "to": "/tmp/nsp14-v06-cold-cache-8hfho2_5/.lake_build_lib_lean"
+    },
+    {
+      "from": ".lake/build/ir",
+      "to": "/tmp/nsp14-v06-cold-cache-8hfho2_5/.lake_build_ir"
+    }
+  ],
+  "shared_mathlib_cache_untouched": true
+}
