@@ -528,7 +528,7 @@
     "global": "NSP14.Run18.width_closed : Requested.W_CLOSE",
     "all_six": "NSP14.Run18.all_closed",
     "frozen_goals_unchanged": true,
-    "review_status": "PENDING_FINAL_COLD_VALIDATION_AND_REVIEW",
+    "review_status": "PASS_FINAL_COLD_VALIDATION_AND_INDEPENDENT_REVIEW",
     "status": "PASS_FINAL_COLD_VALIDATION_AND_INDEPENDENT_REVIEW",
     "source_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
     "evidence": "verification/run18/runs/release_candidate_20261115_r16/verification.json",
