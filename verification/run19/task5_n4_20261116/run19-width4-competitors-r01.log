@@ -1,0 +1,39 @@
+NSP14/NarrowFour/WidthFourCompetitors.lean:24:13: error(lean.unknownIdentifier): Unknown constant `Int.emod_add_ediv`
+NSP14/NarrowFour/WidthFourCompetitors.lean:22:78: error: unsolved goals
+m n j : ℕ
+hr : ↑↑(residue m n j) = (↑n - ↑j * ↑m) % 4
+⊢ 4 * kappa m n j = ↑j * ↑m + ↑↑(residue m n j) - ↑n
+NSP14/NarrowFour/WidthFourCompetitors.lean:31:13: error(lean.unknownIdentifier): Unknown constant `Int.emod_add_ediv`
+NSP14/NarrowFour/WidthFourCompetitors.lean:28:69: error: unsolved goals
+m n j : ℕ
+hk : 4 * kappa m n j = ↑j * ↑m + ↑↑(residue m n j) - ↑n
+hr : ↑↑(residue m n j) = (↑n - ↑j * ↑m) % 4
+⊢ kappa m n j = -((↑n - ↑j * ↑m) / 4)
+NSP14/NarrowFour/WidthFourCompetitors.lean:49:8: error: unexpected token 'λ'; expected ':=' or '|'
+NSP14/NarrowFour/WidthFourCompetitors.lean:49:7: error: Missing cases:
+NSP14/NarrowFour/WidthFourCompetitors.lean:47:91: error: unsolved goals
+m : ℕ
+hm : 6 ≤ m
+i : Fin 5
+j : ℕ
+hj : 1 ≤ j
+hi :
+  4 * delta m i j =
+    4 * ↑(lambda (residue m (anchorN i) j)) - ↑↑(residue m (anchorN i) j) - (4 * ↑(anchorC i) - ↑(anchorN i)) -
+      ↑j * (↑m + 4)
+⊢ delta m i j < 0
+NSP14/NarrowFour/WidthFourCompetitors.lean:65:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ d ≤ 3
+  d - 4*e + f ≥ 0
+  0 ≤ c ≤ 3
+  b - e ≥ 1
+  a ≥ 6
+where
+ a := ↑m
+ b := kappa m n j
+ c := ↑↑(residue m n j)
+ d := ↑↑(residue m n (j + 1))
+ e := kappa m n (j + 1)
+ f := (↑j + 1) * ↑m
+NSP14/NarrowFour/WidthFourCompetitors.lean:75:15: error(lean.unknownIdentifier): Unknown constant `Int.emod_add_ediv`

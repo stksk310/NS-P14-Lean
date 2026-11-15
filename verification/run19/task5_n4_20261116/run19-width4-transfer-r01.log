@@ -1,0 +1,21 @@
+NSP14/NarrowFour/WidthFourComparison.lean:101:7: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module.Finite (VariableRing k (Fin 4))
+    ↑(polynomialRegularModule k (Fin 4) (D.source.TangentAlgebra k) (toActual D k hu ha))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+NSP14/NarrowFour/WidthFourComparison.lean:97:109: error: unsolved goals
+D : Endpoint.Data
+k : Type
+inst✝¹ : Field k
+hm : 6 ≤ D.m
+hd : D.d = 1
+hu : D.u = 4
+ha : D.a = {1, 3}
+ι : Type
+inst✝ : Fintype ι
+v : ι → P k
+hgen : candidateIdeal k D.m = Ideal.span (Set.range v)
+e :
+  Endpoint.artinModule k (Fin 4) (RingHom.ker (toActual D k hu ha).toRingHom) ≅
+    polynomialRegularModule k (Fin 4) (D.source.TangentAlgebra k) (toActual D k hu ha)
+⊢ totalBetti k (Fin 4) (actualModule D k hu ha) 1 ≤ Fintype.card ι

@@ -1,0 +1,2 @@
+NSP14/NarrowFour/WidthFourInitial.lean:102:2: error: Invalid alternative name `h`: Expected `ind`
+NSP14/NarrowFour/WidthFourInitial.lean:101:2: error: Alternative `ind` has not been provided

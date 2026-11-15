@@ -1,0 +1,41 @@
+NSP14/NarrowFour/WidthFourInitial.lean:124:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.commRing', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:127:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'wordPolynomial', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:130:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.ring', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:136:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.instMul', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:139:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'coreRelation', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:142:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.semiring', which is 'noncomputable'
+NSP14/NarrowFour/WidthFourInitial.lean:189:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq (Candidate k m)
+    ((candidateMap k m) (MvPolynomial.X 1) ^ anchorY i * (candidateMap k m) (MvPolynomial.X 2) ^ anchorZ i *
+      (candidateMap k m) (MvPolynomial.X 3) ^ theta m (anchorN i))
+    0
+but is expected to have type
+  @Eq (Candidate k m)
+    (candidateVariable k m 1 ^ anchorY i * candidateVariable k m 2 ^ anchorZ i *
+      candidateVariable k m 3 ^ theta m (anchorN i))
+    0
+NSP14/NarrowFour/WidthFourInitial.lean:204:4: error: Type mismatch
+  Submodule.smul_mem
+    (liveSpan k (Candidate k m) (candidateVariable k m 0) (candidateVariable k m 1) (candidateVariable k m 2)
+      (candidateVariable k m 3) m)
+    c
+    (evalWord_mem k (Candidate k m) (candidateVariable k m 0) (candidateVariable k m 1) (candidateVariable k m 2)
+      (candidateVariable k m 3) m hy hyz hxz hz (candidate_tail_relations k m) ?m.187 ?m.188 ?m.189 ?m.190)
+has type
+  c •
+      evalWord (candidateVariable k m 0) (candidateVariable k m 1) (candidateVariable k m 2) (candidateVariable k m 3)
+        ?m.187 ?m.188 ?m.189 ?m.190 ∈
+    liveSpan k (Candidate k m) (candidateVariable k m 0) (candidateVariable k m 1) (candidateVariable k m 2)
+      (candidateVariable k m 3) m
+but is expected to have type
+  (algebraMap k (Candidate k m)) c *
+      evalWord ((candidateMap k m) (MvPolynomial.X 0)) ((candidateMap k m) (MvPolynomial.X 1))
+        ((candidateMap k m) (MvPolynomial.X 2)) ((candidateMap k m) (MvPolynomial.X 3)) (a 0) (a 1) (a 2) (a 3) ∈
+    liveSpan k (Candidate k m) (candidateVariable k m 0) (candidateVariable k m 1) (candidateVariable k m 2)
+      (candidateVariable k m 3) m
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Finsupp.onFinsetSupport ↦ 24
+  AddMonoidAlgebra.mul' ↦ 192

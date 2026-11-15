@@ -1,0 +1,53 @@
+NSP14/NarrowFour/WidthFourCompetitors.lean:263:2: error: unsolved goals
+case h1
+D : Endpoint.Data
+k : Type
+inst✝ : Field k
+hm : 6 ≤ D.m
+hd : D.d = 1
+hu : D.u = 4
+ha : D.a = {1, 3}
+f : LiveColumn D.m → Module.Dual k (D.source.TangentAlgebra k) :=
+  fun p =>
+    { toFun := fun a => ((D.source.tangentCoordinates k) a) (D.coreValue (columnPoint D ha ↑p)), map_add' := ⋯,
+      map_smul' := ⋯ }
+p q : LiveColumn D.m
+hpq : p ≠ q
+hne : columnPoint D ha ↑q ≠ columnPoint D ha ↑p
+⊢ (Finsupp.single (columnPoint D ha ↑q) 1) (columnPoint D ha ↑p) = 0
+NSP14/NarrowFour/WidthFourCompetitors.lean:272:2: error: unsolved goals
+case h2
+D : Endpoint.Data
+k : Type
+inst✝ : Field k
+hm : 6 ≤ D.m
+hd : D.d = 1
+hu : D.u = 4
+ha : D.a = {1, 3}
+f : LiveColumn D.m → Module.Dual k (D.source.TangentAlgebra k) :=
+  fun p =>
+    { toFun := fun a => ((D.source.tangentCoordinates k) a) (D.coreValue (columnPoint D ha ↑p)), map_add' := ⋯,
+      map_smul' := ⋯ }
+p : LiveColumn D.m
+⊢ (Finsupp.single (columnPoint D ha ↑p) 1) (columnPoint D ha ↑p) = 1
+NSP14/NarrowFour/WidthFourCompetitors.lean:271:72: warning: This simp argument is unused:
+  hne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Endpoint.Data.coreMonomial, AddMonoidAlgebra.coeff_single, ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/WidthFourCompetitors.lean:271:76: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Endpoint.Data.coreMonomial, AddMonoidAlgebra.coeff_single, hne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/WidthFourCompetitors.lean:276:72: warning: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Endpoint.Data.coreMonomial, AddMonoidAlgebra.coeff_single]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,17 @@
+NSP14/NarrowFour/WidthFourInitial.lean:472:23: error(lean.unknownIdentifier): Unknown identifier `haug`
+NSP14/NarrowFour/WidthFourInitial.lean:476:6: error: Function expected at
+  first_generator_number k I
+but this term has type
+  totalBetti k (Fin 4) (Endpoint.artinModule k (Fin 4) I) 1 = Endpoint.idealGeneratorNumber k (Fin 4) I
+
+Note: Expected a function because this term is being applied to the argument
+  haug
+NSP14/NarrowFour/WidthFourInitial.lean:475:88: error: unsolved goals
+k : Type
+inst✝¹ : Field k
+I : Ideal (P k)
+ι : Type
+inst✝ : Fintype ι
+v : ι → P k
+hI : I = Ideal.span (Set.range v)
+⊢ totalBetti k (Fin 4) (Endpoint.artinModule k (Fin 4) I) 1 ≤ Fintype.card ι

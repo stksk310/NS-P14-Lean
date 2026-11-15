@@ -1,6 +1,6 @@
 module
 public import audit.run19.RequestedGoals
-public import NSP14.NarrowFour.SmallWidths
+public import NSP14.NarrowFour.Comparison
 @[expose] public section
 namespace NSP14.Run19
 
@@ -39,4 +39,13 @@ theorem small_closed : Requested.N_SMALL := by
   dsimp only
   intro hu
   exact NarrowFour.narrow_four_small S k he hw hu
+
+theorem width4_closed : Requested.N_WIDTH4 := by
+  intro D k _ hq hm hd hu ha
+  have hm6 : 6 ≤ D.m := by rw [hd,hu] at hm;omega
+  exact NarrowFour.WidthFour.width_four_comparison D k hq hm6 hd hu ha
+
+theorem narrow_four_closed : Requested.N_CLOSE := by
+  intro S k _ he hw
+  exact NarrowFour.narrow_four_comparison S k he hw
 end NSP14.Run19

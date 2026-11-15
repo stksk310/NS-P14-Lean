@@ -8,11 +8,11 @@
     "N_HIGH",
     "N_FIRST",
     "N_SMALL",
-    "I_BASE"
+    "I_BASE",
+    "N_WIDTH4",
+    "N_CLOSE"
   ],
   "unproved_ids": [
-    "N_WIDTH4",
-    "N_CLOSE",
     "X_LTV",
     "I_THREE"
   ],

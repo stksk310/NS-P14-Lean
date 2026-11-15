@@ -1,0 +1,22 @@
+NSP14/NarrowFour/WidthFourCore.lean:129:40: error: Type mismatch
+  Finsupp.basisSingleOne.reindex (columnEquiv D hu ha).symm
+has type
+  Module.Basis Column ?m.24 (↥D.corePoints →₀ ?m.24)
+but is expected to have type
+  Module.Basis Column k (D.Core k)
+NSP14/NarrowFour/WidthFourCore.lean:133:52: error(lean.unknownIdentifier): Unknown constant `Finsupp.basisSingleOne_apply`
+NSP14/NarrowFour/WidthFourCore.lean:133:13: warning: declaration uses `sorry`
+NSP14/NarrowFour/WidthFourCore.lean:133:25: warning: This simp argument is unused:
+  Module.Basis.reindex_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [columnBasis, Finsupp.basisSingleOne_apply, Equiv.symm_symm, Endpoint.Data.coreMonomial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/WidthFourCore.lean:134:4: warning: This simp argument is unused:
+  Equiv.symm_symm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [columnBasis, Module.Basis.reindex_apply, Finsupp.basisSingleOne_apply, Endpoint.Data.coreMonomial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
