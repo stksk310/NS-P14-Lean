@@ -1,0 +1,126 @@
+{
+  "status": "PASS_V06_ALIGNMENT_NEGATIVE_CONTROLS",
+  "disposable_isolated_environment": true,
+  "checkout_commit_or_build_performed": false,
+  "controls": [
+    {
+      "control": "unaltered_disposable_snapshot",
+      "passed": true
+    },
+    {
+      "control": "absolute_output",
+      "passed": true,
+      "rejection": "unsafe relative path: /tmp/v06_alignment_escape"
+    },
+    {
+      "control": "parent_traversal_output",
+      "passed": true,
+      "rejection": "unsafe relative path: verification/run18/runs/../v06_alignment_escape"
+    },
+    {
+      "control": "old_evidence_output",
+      "passed": true,
+      "rejection": "a unique verification/run18/runs/v06_alignment_* directory is required"
+    },
+    {
+      "control": "existing_output",
+      "passed": true,
+      "rejection": "output already exists; evidence is immutable"
+    },
+    {
+      "control": "internal_symlink_output",
+      "passed": true,
+      "rejection": "symlink path is forbidden: verification/run18/runs/v06_alignment_alias_control"
+    },
+    {
+      "control": "external_symlink_output",
+      "passed": true,
+      "rejection": "symlink path is forbidden: verification/run18/runs/v06_alignment_alias_control"
+    },
+    {
+      "control": "forbidden_inherited_source_edit",
+      "passed": true,
+      "rejection": "forbidden inherited edit: audit/run18/RequestedGoals.lean"
+    },
+    {
+      "control": "inherited_evidence_edit",
+      "passed": true,
+      "rejection": "forbidden inherited edit: verification/run18/runs/release_candidate_20261115_r16/verification.json"
+    },
+    {
+      "control": "source_manifest_edit",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "source_fileset_addition",
+      "passed": true,
+      "rejection": "files outside finite allowlist: ['NSP14/UnlistedV06Control.lean']"
+    },
+    {
+      "control": "evidence_manifest_edit",
+      "passed": true,
+      "rejection": "evidence manifest content or fileset changed"
+    },
+    {
+      "control": "evidence_fileset_addition",
+      "passed": true,
+      "rejection": "evidence manifest content or fileset changed"
+    },
+    {
+      "control": "public_proof_stub_is_accepted",
+      "passed": true
+    },
+    {
+      "control": "modified_old_module_omission",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "modified_old_declaration_missing_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "modified_old_declaration_missing_explicit_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "modified_old_declaration_missing_axioms",
+      "passed": true,
+      "rejection": "axiom audit coverage missing: Control.existing"
+    },
+    {
+      "control": "extra_transitive_axiom",
+      "passed": true,
+      "rejection": "unapproved or self axiom dependency: Control.existing"
+    },
+    {
+      "control": "self_axiom_dependency",
+      "passed": true,
+      "rejection": "unapproved or self axiom dependency: Control.existing"
+    },
+    {
+      "control": "base_public_type_changed",
+      "passed": true,
+      "rejection": "base export type changed: Control.existing (explicit_type)"
+    },
+    {
+      "control": "base_public_export_removed",
+      "passed": true,
+      "rejection": "base export removed: Control.existing"
+    },
+    {
+      "control": "new_declaration_row_omitted",
+      "passed": true,
+      "rejection": "environment declaration fileset coverage differs"
+    },
+    {
+      "control": "empty_import_module_missing",
+      "passed": true,
+      "rejection": "environment imported-module coverage missing"
+    }
+  ],
+  "count": 24
+}

@@ -1,5 +1,5 @@
 module
-public import NSP14.Endpoint.Stopping
+public import NSP14.Endpoint.ActualKernel
 public import NSP14.Endpoint.Volume
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

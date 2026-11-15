@@ -1,0 +1,4 @@
+NSP14.Homological.torKoszulIso_naturality.{u} (k σ : Type u) [Field k] [Fintype σ] {M N : ModuleCat (VariableRing k σ)}
+  (f : M ⟶ N) (i : ℕ) :
+  ((Tor (ModuleCat (VariableRing k σ)) i).map f).app (residueField k σ) ≫ (torKoszulIso k σ N i).hom =
+    (torKoszulIso k σ M i).hom ≫ (koszulHomologyFunctor k σ (variableList k σ) i).map f

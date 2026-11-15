@@ -16,7 +16,11 @@ theorem competitor_zero_column (r : Fin D.u) : (0,D.m+D.u)∈D.competitorFiber r
   have hc := D.shortestPoint_minimal r
   have hb := D.minimalFiber_budget r c hc
   have hu := D.u_pos
-  have hz := D.forbiddenStart_tail_zero r D.u c hc (by unfold stoppingStart;omega)
+  have hh := D.forbiddenStart_height r D.u c.1 c.2 D.coreHeight
+    (D.minimalPoint_height r c ((D.mem_minimalPoints r c).mpr hc))
+  change (D.forbiddenStart r D.u c).1≤D.coreHeight-2*D.u at hh
+  have hH := D.coreHeight_le
+  have hz : (D.forbiddenStart r D.u c).1=0 := by omega
   have hK : (D.forbiddenStart r D.u c).2≤D.m+D.u := by
     change c.2+D.carry r D.u≤D.m+D.u
     rw [D.carry_u]

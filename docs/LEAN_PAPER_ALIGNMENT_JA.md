@@ -792,3 +792,7 @@ V03 W_SPARSE / V02 §13.4 W17–W21をactual source/targetの全行へ接続し�
 2026-11-15 Run18 R10：Pardueのgeneric distraction段階に対し、引用を仮定にすることなく実Koszul chain同型から全graded Betti保存を構成。原典の極化/正則切断の代わりに、実selected coefficient matrixの指数依存外積変換と実収縮の可換性を証明した。scopeはGenericDistractionField上の実monomial ideal。任意の元の基礎体idealへの接続・lexへの反復と停止・lex存在・dense/globalは未完。cold全回帰と独立レビューは6bcd0259b84b61614d3e6f5ed14f30aa935717e2までの実装を認証し、Run18全体の完了ではない。
 
 2026-11-15 Run18数学的閉鎖：元の六IDをaudit/run18/ClosedGoals.leanのall_closedへ接続。任意標数BHP/EKと一般whole-Hilbert lex存在、actual QC/suffix harmonic K評価、dense全行支払いを経て、元のSの全物理狭幅のactual completion比較narrow_width_comparisonを証明。最終検証・独立レビュー・公開状態はdocs/RUN18_CLOSURE_STATUS.json参照。既存全証跡とfrozen RequestedGoalsは保持。
+
+## 2026-11-16 V06経路同期
+
+V06の五変更をLeanのactual consumerへ接続：competitorMin_height/competitor_zero_columnの全j高さ証明、antipodal_integer_payment/nonAntipodal_integer_paymentによる第一行、actual_higher_from_secondによる同一Bの全高次行、dense_core_lex_bound_two_branchとdense_payment_ge_threeによる二枝化。公開型・任意体・元source/literal target・各自の最小変数・全行は保存する。旧停止の有限計算API、厳密antipodal成果、choose_quadratic_*も保持する。原稿の具体的な式、代替経路、consumer、保存範囲はdocs/V06_ALIGNMENT_LEDGER_JA.mdに記録。新経路のLean認証は新規verification/run18/runs/v06_alignment_*とproof/evidence/review bindingによって示し、V06紙上監査や旧Run18 COMPLETEで代用しない。ordinary一般export/N4/Run19/全P14完成は今回の対象外。

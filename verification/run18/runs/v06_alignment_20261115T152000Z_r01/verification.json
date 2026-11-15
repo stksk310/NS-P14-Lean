@@ -1,0 +1,5475 @@
+{
+  "status": "V06_ALIGNMENT_COMPLETE",
+  "v06_alignment_complete": true,
+  "scope": [
+    "endpoint",
+    "antipodal_integer_payment",
+    "nonantipodal_integer_payment",
+    "higher_from_second",
+    "dense_two_branches"
+  ],
+  "baseline_commit": "a7504eea25f02728d1be6cd0082e8484d639dbe2",
+  "proof_snapshot_commit": "d446fc2f18f7a8603d1eedd446e93810dc44d01c",
+  "evidence_directory": "verification/run18/runs/v06_alignment_20261115T152000Z_r01",
+  "inherited_run18_complete_preserved": true,
+  "inherited_replay": "verification/run18/runs/release_candidate_20261115_r16",
+  "inherited_command_count": 280,
+  "fixture_order": [
+    "tests/SmallScalar.lean",
+    "tests/Sidon.lean",
+    "tests/Resources.lean",
+    "tests/LowRank.lean",
+    "tests/LargeSeed.lean",
+    "tests/LargeScalar.lean",
+    "tests/OrdinaryNumerical.lean",
+    "tests/SemigroupFoundations.lean",
+    "tests/SemigroupRing.lean",
+    "tests/TangentAlgebra.lean",
+    "tests/AperyQuotient.lean",
+    "tests/Run12BasicExamples.lean",
+    "tests/Run12Fixtures.lean",
+    "tests/JumpBounds.lean",
+    "tests/PolynomialAction.lean",
+    "tests/JumpStrata.lean",
+    "tests/CompletedComparison.lean",
+    "tests/Run12Axioms.lean",
+    "tests/Run13Fixtures.lean",
+    "tests/ActualGradedBaseChange.lean",
+    "tests/BettiBaseChange.lean",
+    "tests/FilteredHomology.lean",
+    "tests/GradedKoszul.lean",
+    "tests/KoszulActual.lean",
+    "tests/KoszulComplex.lean",
+    "tests/KoszulExactness.lean",
+    "tests/KoszulFiniteModules.lean",
+    "tests/KoszulPresentation.lean",
+    "tests/KoszulTor.lean",
+    "tests/MinimalResolution.lean",
+    "tests/PolynomialBaseChange.lean",
+    "tests/RankEuler.lean",
+    "tests/Run13ClosureFixtures.lean",
+    "tests/StandardMonomials.lean",
+    "tests/TorNaturality.lean",
+    "audit/DomainChecks.lean",
+    "audit/block02/AssumptionChecks.lean",
+    "tests/Run14Fixtures.lean",
+    "tests/ActualSidon.lean",
+    "tests/OffsetStabilization.lean",
+    "tests/Run14Acceptance.lean",
+    "audit/run14/RemainingGoals.lean",
+    "tests/GreenLinearAlgebra.lean",
+    "tests/Run14Closure.lean",
+    "tests/Run14Volume.lean",
+    "audit/run14_continuation/ClosedGoals.lean",
+    "tests/ArithmeticSequenceMaximalBetti.lean",
+    "tests/ArithmeticSequenceConeBetti.lean",
+    "tests/APKernelWindow.lean",
+    "tests/APLowerRows.lean",
+    "tests/APResolutionFoundations.lean",
+    "tests/ActualTorRow.lean",
+    "tests/ArithmeticSequence.lean",
+    "tests/ArithmeticSequenceApery.lean",
+    "tests/ArithmeticSequenceBetti.lean",
+    "tests/ArithmeticSequenceKernelTor.lean",
+    "tests/ArithmeticSequenceOrder.lean",
+    "tests/BettiEuler.lean",
+    "tests/ChangingOrdinaryClosure.lean",
+    "tests/CoefficientComparison.lean",
+    "tests/CutBasis.lean",
+    "tests/CutFinite.lean",
+    "tests/CutPolynomialInjection.lean",
+    "tests/TowerHarmonic.lean",
+    "tests/CutResidual.lean",
+    "tests/FiniteKoszulEuler.lean",
+    "tests/FunctionalMinor.lean",
+    "tests/GradedBasis.lean",
+    "tests/Harmonic.lean",
+    "tests/HeadFirstOrder.lean",
+    "tests/IntervalAPBetti.lean",
+    "tests/IntervalCompletion.lean",
+    "tests/IntrinsicFullTransfer.lean",
+    "tests/JumpEuler.lean",
+    "tests/KoszulSlots.lean",
+    "tests/LinearVariableBetti.lean",
+    "tests/LinearVariables.lean",
+    "tests/NativeCutH0.lean",
+    "tests/OrderedQuotientBasis.lean",
+    "tests/OrdinaryClosure.lean",
+    "tests/OrdinaryTor.lean",
+    "tests/RelativePresentation.lean",
+    "tests/RelativeXComparison.lean",
+    "tests/Run13Axioms.lean",
+    "tests/Run15Actual.lean",
+    "tests/SemigroupAlgebraPresentation.lean",
+    "tests/SquareZeroEuler.lean",
+    "tests/TwoStepActual.lean",
+    "audit/run15/RemainingGoals.lean",
+    "audit/run15_continuation/ClosedGoals.lean",
+    "audit/run15_xclosure/ClosedGoals.lean",
+    "audit/run15_bclosure/ClosedGoals.lean",
+    "audit/run15_h0closure/ClosedGoals.lean",
+    "audit/run15_fulltransfer/ClosedGoals.lean",
+    "audit/run15_ordinary/ClosedGoals.lean",
+    "audit/run15_apcone/ClosedGoals.lean",
+    "audit/run15_apfoundations/Scope.lean",
+    "audit/run15_closure/ClosedGoals.lean",
+    "tests/CarrierTransport.lean",
+    "tests/EndpointActualKernel.lean",
+    "tests/EndpointArtinRank.lean",
+    "tests/EndpointArtinRefinements.lean",
+    "tests/EndpointBoundaryExamples.lean",
+    "tests/EndpointCarry.lean",
+    "tests/EndpointCompensation.lean",
+    "tests/EndpointCompetitorBounds.lean",
+    "tests/EndpointCompetitors.lean",
+    "tests/EndpointComputedExamples.lean",
+    "tests/EndpointConeBalance.lean",
+    "tests/EndpointCoordinates.lean",
+    "tests/EndpointCore.lean",
+    "tests/EndpointCoreArtin.lean",
+    "tests/EndpointCoreGrading.lean",
+    "tests/EndpointData.lean",
+    "tests/EndpointFiberModule.lean",
+    "tests/EndpointFibers.lean",
+    "tests/EndpointFirstBetti.lean",
+    "tests/EndpointHomology.lean",
+    "tests/EndpointIdealGenerators.lean",
+    "tests/EndpointInternalCoordinates.lean",
+    "tests/EndpointInternalSocle.lean",
+    "tests/EndpointMinimal.lean",
+    "tests/EndpointMinimalBounds.lean",
+    "tests/EndpointModules.lean",
+    "tests/EndpointNativeTransfer.lean",
+    "tests/EndpointNilpotence.lean",
+    "tests/EndpointNonmonomial.lean",
+    "tests/EndpointNormalization.lean",
+    "tests/EndpointOrientation.lean",
+    "tests/EndpointPresentation.lean",
+    "tests/EndpointQuadratic.lean",
+    "tests/EndpointQuotient.lean",
+    "tests/EndpointResidues.lean",
+    "tests/EndpointRhat.lean",
+    "tests/EndpointRowPackage.lean",
+    "tests/EndpointRows.lean",
+    "tests/EndpointSocle.lean",
+    "tests/EndpointSoclePoints.lean",
+    "tests/EndpointStandardArtin.lean",
+    "tests/EndpointStopping.lean",
+    "tests/EndpointSurvivingBasis.lean",
+    "tests/EndpointTwoMonomial.lean",
+    "tests/EndpointTwoVariables.lean",
+    "tests/EndpointVolume.lean",
+    "tests/EndpointWords.lean",
+    "audit/run16/ClosedGoals.lean",
+    "tests/EndpointAdditive.lean",
+    "tests/KneserActual.lean",
+    "tests/Run17Definitions.lean",
+    "tests/Run17Growth.lean",
+    "tests/Run17SequenceExamples.lean",
+    "tests/SavchevChen.lean",
+    "audit/run17/RequestedGoals.lean",
+    "audit/run17/ClosedGoals.lean",
+    "audit/run18/RequestedGoals.lean",
+    "audit/run18/BHPEKClosedGoals.lean",
+    "audit/run18/EdgeClosedGoals.lean",
+    "audit/run18/DenseResourcesClosed.lean",
+    "audit/run18/DenseClosedGoals.lean",
+    "audit/run18/PartialClosedGoals.lean",
+    "audit/run18/FiveClosedGoals.lean",
+    "audit/run18/ClosedGoals.lean",
+    "audit/run18/EKClosedGoals.lean",
+    "audit/run18/acceptance/BHPEK.lean",
+    "audit/run18/acceptance/W_CLOSE.lean",
+    "audit/run18/acceptance/W_DENSE.lean",
+    "audit/run18/acceptance/W_EDGE.lean",
+    "audit/run18/acceptance/W_FIVE.lean",
+    "tests/WidthFiveHigher.lean",
+    "tests/AntipodalActual.lean",
+    "tests/ArtinGradedChain.lean",
+    "tests/ArtinGradedMaps.lean",
+    "tests/ArtinGradedZero.lean",
+    "tests/BasisBlocks.lean",
+    "tests/BasisGradedScalarComparison.lean",
+    "tests/BasiswiseTensor.lean",
+    "tests/ColexRestriction.lean",
+    "tests/DegreeFamily.lean",
+    "tests/DegreeSeparator.lean",
+    "tests/DensePayment.lean",
+    "tests/DirectSumSplit.lean",
+    "tests/DistractionChain.lean",
+    "tests/DistractionGraded.lean",
+    "tests/LexLinearQuotientExamples.lean",
+    "tests/DistractionGradedExamples.lean",
+    "tests/DistractionHilbert.lean",
+    "tests/DistractionIdeal.lean",
+    "tests/DistractionLinearEquiv.lean",
+    "tests/DistractionMonomial.lean",
+    "tests/DistractionTensor.lean",
+    "tests/ElementaryDistraction.lean",
+    "tests/ExteriorContraction.lean",
+    "tests/FiniteHilbertProfiles.lean",
+    "tests/GenericDistraction.lean",
+    "tests/GenericDistractionBoundary.lean",
+    "tests/GenericDistractionExterior.lean",
+    "tests/GenericDistractionField.lean",
+    "tests/GenericDistractionIteration.lean",
+    "tests/GenericDistractionPrincipal.lean",
+    "tests/GenericDistractionProgress.lean",
+    "tests/GenericDistractionStable.lean",
+    "tests/GenericDistractionStep.lean",
+    "tests/GradedIdealAdjoining.lean",
+    "tests/GradedKoszulBasis.lean",
+    "tests/GradedKoszulExact.lean",
+    "tests/GradedKoszulRestriction.lean",
+    "tests/HomogeneousBasisPieces.lean",
+    "tests/IdealAdjoining.lean",
+    "tests/IdealScalarQuotient.lean",
+    "tests/InitialAction.lean",
+    "tests/InitialBetti.lean",
+    "tests/InitialBoundary.lean",
+    "tests/InitialIdeal.lean",
+    "tests/InitialTransport.lean",
+    "tests/KoszulExterior.lean",
+    "tests/KoszulExteriorBasis.lean",
+    "tests/KoszulExteriorContraction.lean",
+    "tests/KoszulExteriorGrading.lean",
+    "tests/KoszulExteriorMap.lean",
+    "tests/KoszulSlotGrading.lean",
+    "tests/KoszulVariableFactor.lean",
+    "tests/LexBetti.lean",
+    "tests/LexCompatibleDegrees.lean",
+    "tests/LexDegreeIdeal.lean",
+    "tests/LexEK.lean",
+    "tests/LexEKOrdinary.lean",
+    "tests/LexGeneratorOrder.lean",
+    "tests/LexGradedStep.lean",
+    "tests/LexHilbert.lean",
+    "tests/LexHilbertExamples.lean",
+    "tests/LexLinearQuotients.lean",
+    "tests/LexStable.lean",
+    "tests/LexTailCorrection.lean",
+    "tests/LexTailSupport.lean",
+    "tests/LexUniqueness.lean",
+    "tests/MonomialExtension.lean",
+    "tests/MonomialExtensionGraded.lean",
+    "tests/MonomialScalarExamples.lean",
+    "tests/NormalTriangular.lean",
+    "tests/PrefixDominance.lean",
+    "tests/PrefixGeneratorCorrection.lean",
+    "tests/PrefixOrder.lean",
+    "tests/PrefixVariableRestriction.lean",
+    "tests/SmallVariableComparison.lean",
+    "tests/StableBettiComparison.lean",
+    "tests/StableBinomialWeights.lean",
+    "tests/StableDegreeDecomposition.lean",
+    "tests/StandardBettiWeights.lean",
+    "tests/StrongStableEK.lean",
+    "tests/StrongStableOperations.lean",
+    "tests/StrongStableRestriction.lean",
+    "tests/SuffixVariableRestriction.lean",
+    "tests/TotalLexBetti.lean",
+    "tests/TriangularBlockRank.lean",
+    "tests/VariableIdealBetti.lean",
+    "tests/VariableIdealGraded.lean",
+    "tests/WidthDenseResources.lean",
+    "tests/WidthSparseData.lean",
+    "tests/WidthSparseCache.lean",
+    "tests/WidthSparse.lean",
+    "tests/WidthEdgeGeneral.lean",
+    "tests/WidthActualClosure.lean",
+    "tests/WidthDense.lean",
+    "tests/WidthEdgeAP.lean",
+    "tests/WidthEdgeGeometry.lean",
+    "tests/WidthFive.lean",
+    "tests/WidthFiveNonAntipodal.lean",
+    "tests/WidthFiveSmall.lean",
+    "audit/v06_alignment/RouteChecks.lean",
+    "tests/V06Dense.lean",
+    "tests/V06Endpoint.lean",
+    "tests/V06HigherFromSecond.lean",
+    "tests/V06IntegerPayment.lean"
+  ],
+  "fixture_count": 273,
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "NSP14",
+        "Mathlib.Algebra.Field.ZMod"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 757.055
+    },
+    {
+      "name": "fixture_000_SmallScalar",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SmallScalar.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SmallScalar.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.711
+    },
+    {
+      "name": "fixture_001_Sidon",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Sidon.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Sidon.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.797
+    },
+    {
+      "name": "fixture_002_Resources",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Resources.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Resources.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.783
+    },
+    {
+      "name": "fixture_003_LowRank",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LowRank.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LowRank.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.365
+    },
+    {
+      "name": "fixture_004_LargeSeed",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LargeSeed.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LargeSeed.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.285
+    },
+    {
+      "name": "fixture_005_LargeScalar",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LargeScalar.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LargeScalar.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.172
+    },
+    {
+      "name": "fixture_006_OrdinaryNumerical",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/OrdinaryNumerical.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.853
+    },
+    {
+      "name": "fixture_007_SemigroupFoundations",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SemigroupFoundations.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SemigroupFoundations.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.07
+    },
+    {
+      "name": "fixture_008_SemigroupRing",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SemigroupRing.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SemigroupRing.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.556
+    },
+    {
+      "name": "fixture_009_TangentAlgebra",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TangentAlgebra.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TangentAlgebra.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.5
+    },
+    {
+      "name": "fixture_010_AperyQuotient",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/AperyQuotient.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/AperyQuotient.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 8.449
+    },
+    {
+      "name": "fixture_011_Run12BasicExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run12BasicExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run12BasicExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 6.38
+    },
+    {
+      "name": "fixture_012_Run12Fixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run12Fixtures.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run12Fixtures.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.093
+    },
+    {
+      "name": "fixture_013_JumpBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/JumpBounds.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/JumpBounds.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.875
+    },
+    {
+      "name": "fixture_014_PolynomialAction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PolynomialAction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PolynomialAction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.516
+    },
+    {
+      "name": "fixture_015_JumpStrata",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/JumpStrata.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/JumpStrata.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 7.482
+    },
+    {
+      "name": "fixture_016_CompletedComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CompletedComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CompletedComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.592
+    },
+    {
+      "name": "fixture_017_Run12Axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run12Axioms.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run12Axioms.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.131
+    },
+    {
+      "name": "fixture_018_Run13Fixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run13Fixtures.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run13Fixtures.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.201
+    },
+    {
+      "name": "fixture_019_ActualGradedBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ActualGradedBaseChange.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.547
+    },
+    {
+      "name": "fixture_020_BettiBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/BettiBaseChange.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/BettiBaseChange.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.563
+    },
+    {
+      "name": "fixture_021_FilteredHomology",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/FilteredHomology.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/FilteredHomology.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "fixture_022_GradedKoszul",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedKoszul.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedKoszul.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.069
+    },
+    {
+      "name": "fixture_023_KoszulActual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulActual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulActual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.839
+    },
+    {
+      "name": "fixture_024_KoszulComplex",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulComplex.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulComplex.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.034
+    },
+    {
+      "name": "fixture_025_KoszulExactness",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExactness.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExactness.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.795
+    },
+    {
+      "name": "fixture_026_KoszulFiniteModules",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulFiniteModules.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulFiniteModules.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.98
+    },
+    {
+      "name": "fixture_027_KoszulPresentation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulPresentation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulPresentation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.026
+    },
+    {
+      "name": "fixture_028_KoszulTor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulTor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulTor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.985
+    },
+    {
+      "name": "fixture_029_MinimalResolution",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/MinimalResolution.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/MinimalResolution.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.06
+    },
+    {
+      "name": "fixture_030_PolynomialBaseChange",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PolynomialBaseChange.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PolynomialBaseChange.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.632
+    },
+    {
+      "name": "fixture_031_RankEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/RankEuler.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/RankEuler.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.005
+    },
+    {
+      "name": "fixture_032_Run13ClosureFixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run13ClosureFixtures.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run13ClosureFixtures.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.21
+    },
+    {
+      "name": "fixture_033_StandardMonomials",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StandardMonomials.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StandardMonomials.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.975
+    },
+    {
+      "name": "fixture_034_TorNaturality",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TorNaturality.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TorNaturality.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.884
+    },
+    {
+      "name": "fixture_035_DomainChecks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/DomainChecks.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/DomainChecks.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.346
+    },
+    {
+      "name": "fixture_036_AssumptionChecks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/block02/AssumptionChecks.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/block02/AssumptionChecks.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.471
+    },
+    {
+      "name": "fixture_037_Run14Fixtures",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run14Fixtures.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run14Fixtures.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 12.352
+    },
+    {
+      "name": "fixture_038_ActualSidon",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ActualSidon.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ActualSidon.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "fixture_039_OffsetStabilization",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/OffsetStabilization.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/OffsetStabilization.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.464
+    },
+    {
+      "name": "fixture_040_Run14Acceptance",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run14Acceptance.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run14Acceptance.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 7.793
+    },
+    {
+      "name": "fixture_041_RemainingGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run14/RemainingGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run14/RemainingGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.639
+    },
+    {
+      "name": "fixture_042_GreenLinearAlgebra",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GreenLinearAlgebra.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GreenLinearAlgebra.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.925
+    },
+    {
+      "name": "fixture_043_Run14Closure",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run14Closure.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run14Closure.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 16.06
+    },
+    {
+      "name": "fixture_044_Run14Volume",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run14Volume.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run14Volume.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.1
+    },
+    {
+      "name": "fixture_045_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run14_continuation/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run14_continuation/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.075
+    },
+    {
+      "name": "fixture_046_ArithmeticSequenceMaximalBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceMaximalBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceMaximalBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.353
+    },
+    {
+      "name": "fixture_047_ArithmeticSequenceConeBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceConeBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceConeBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.572
+    },
+    {
+      "name": "fixture_048_APKernelWindow",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/APKernelWindow.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/APKernelWindow.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 12.214
+    },
+    {
+      "name": "fixture_049_APLowerRows",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/APLowerRows.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/APLowerRows.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.859
+    },
+    {
+      "name": "fixture_050_APResolutionFoundations",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/APResolutionFoundations.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/APResolutionFoundations.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.16
+    },
+    {
+      "name": "fixture_051_ActualTorRow",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ActualTorRow.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ActualTorRow.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.994
+    },
+    {
+      "name": "fixture_052_ArithmeticSequence",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequence.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequence.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.002
+    },
+    {
+      "name": "fixture_053_ArithmeticSequenceApery",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceApery.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceApery.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.844
+    },
+    {
+      "name": "fixture_054_ArithmeticSequenceBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.567
+    },
+    {
+      "name": "fixture_055_ArithmeticSequenceKernelTor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceKernelTor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceKernelTor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.832
+    },
+    {
+      "name": "fixture_056_ArithmeticSequenceOrder",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArithmeticSequenceOrder.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArithmeticSequenceOrder.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.861
+    },
+    {
+      "name": "fixture_057_BettiEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/BettiEuler.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/BettiEuler.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.232
+    },
+    {
+      "name": "fixture_058_ChangingOrdinaryClosure",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ChangingOrdinaryClosure.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ChangingOrdinaryClosure.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.684
+    },
+    {
+      "name": "fixture_059_CoefficientComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CoefficientComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CoefficientComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.103
+    },
+    {
+      "name": "fixture_060_CutBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CutBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CutBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.93
+    },
+    {
+      "name": "fixture_061_CutFinite",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CutFinite.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CutFinite.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.09
+    },
+    {
+      "name": "fixture_062_CutPolynomialInjection",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CutPolynomialInjection.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CutPolynomialInjection.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.971
+    },
+    {
+      "name": "fixture_063_TowerHarmonic",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TowerHarmonic.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TowerHarmonic.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.242
+    },
+    {
+      "name": "fixture_064_CutResidual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CutResidual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CutResidual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.828
+    },
+    {
+      "name": "fixture_065_FiniteKoszulEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/FiniteKoszulEuler.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/FiniteKoszulEuler.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.027
+    },
+    {
+      "name": "fixture_066_FunctionalMinor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/FunctionalMinor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/FunctionalMinor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.187
+    },
+    {
+      "name": "fixture_067_GradedBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.908
+    },
+    {
+      "name": "fixture_068_Harmonic",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Harmonic.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Harmonic.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.1
+    },
+    {
+      "name": "fixture_069_HeadFirstOrder",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/HeadFirstOrder.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/HeadFirstOrder.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.155
+    },
+    {
+      "name": "fixture_070_IntervalAPBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/IntervalAPBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/IntervalAPBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.25
+    },
+    {
+      "name": "fixture_071_IntervalCompletion",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/IntervalCompletion.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/IntervalCompletion.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.827
+    },
+    {
+      "name": "fixture_072_IntrinsicFullTransfer",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/IntrinsicFullTransfer.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/IntrinsicFullTransfer.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.578
+    },
+    {
+      "name": "fixture_073_JumpEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/JumpEuler.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/JumpEuler.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.964
+    },
+    {
+      "name": "fixture_074_KoszulSlots",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulSlots.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulSlots.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.998
+    },
+    {
+      "name": "fixture_075_LinearVariableBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LinearVariableBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LinearVariableBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.163
+    },
+    {
+      "name": "fixture_076_LinearVariables",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LinearVariables.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LinearVariables.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.949
+    },
+    {
+      "name": "fixture_077_NativeCutH0",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/NativeCutH0.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/NativeCutH0.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.122
+    },
+    {
+      "name": "fixture_078_OrderedQuotientBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/OrderedQuotientBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/OrderedQuotientBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.999
+    },
+    {
+      "name": "fixture_079_OrdinaryClosure",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/OrdinaryClosure.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/OrdinaryClosure.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.521
+    },
+    {
+      "name": "fixture_080_OrdinaryTor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/OrdinaryTor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/OrdinaryTor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.896
+    },
+    {
+      "name": "fixture_081_RelativePresentation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/RelativePresentation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/RelativePresentation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.091
+    },
+    {
+      "name": "fixture_082_RelativeXComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/RelativeXComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/RelativeXComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.947
+    },
+    {
+      "name": "fixture_083_Run13Axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run13Axioms.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run13Axioms.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.99
+    },
+    {
+      "name": "fixture_084_Run15Actual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run15Actual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run15Actual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.172
+    },
+    {
+      "name": "fixture_085_SemigroupAlgebraPresentation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SemigroupAlgebraPresentation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SemigroupAlgebraPresentation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.035
+    },
+    {
+      "name": "fixture_086_SquareZeroEuler",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SquareZeroEuler.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SquareZeroEuler.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.057
+    },
+    {
+      "name": "fixture_087_TwoStepActual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TwoStepActual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TwoStepActual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.242
+    },
+    {
+      "name": "fixture_088_RemainingGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15/RemainingGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15/RemainingGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.777
+    },
+    {
+      "name": "fixture_089_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_continuation/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_continuation/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.903
+    },
+    {
+      "name": "fixture_090_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_xclosure/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_xclosure/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.908
+    },
+    {
+      "name": "fixture_091_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_bclosure/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_bclosure/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.061
+    },
+    {
+      "name": "fixture_092_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_h0closure/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_h0closure/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.049
+    },
+    {
+      "name": "fixture_093_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_fulltransfer/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_fulltransfer/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.259
+    },
+    {
+      "name": "fixture_094_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_ordinary/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_ordinary/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.237
+    },
+    {
+      "name": "fixture_095_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_apcone/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_apcone/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.277
+    },
+    {
+      "name": "fixture_096_Scope",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_apfoundations/Scope.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_apfoundations/Scope.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.195
+    },
+    {
+      "name": "fixture_097_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run15_closure/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run15_closure/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.977
+    },
+    {
+      "name": "fixture_098_CarrierTransport",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/CarrierTransport.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/CarrierTransport.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.391
+    },
+    {
+      "name": "fixture_099_EndpointActualKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointActualKernel.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointActualKernel.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.937
+    },
+    {
+      "name": "fixture_100_EndpointArtinRank",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointArtinRank.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointArtinRank.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.915
+    },
+    {
+      "name": "fixture_101_EndpointArtinRefinements",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointArtinRefinements.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointArtinRefinements.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.794
+    },
+    {
+      "name": "fixture_102_EndpointBoundaryExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointBoundaryExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointBoundaryExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 14.665
+    },
+    {
+      "name": "fixture_103_EndpointCarry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCarry.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCarry.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.099
+    },
+    {
+      "name": "fixture_104_EndpointCompensation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCompensation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCompensation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.866
+    },
+    {
+      "name": "fixture_105_EndpointCompetitorBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCompetitorBounds.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCompetitorBounds.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.125
+    },
+    {
+      "name": "fixture_106_EndpointCompetitors",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCompetitors.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCompetitors.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.046
+    },
+    {
+      "name": "fixture_107_EndpointComputedExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointComputedExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointComputedExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 115.41
+    },
+    {
+      "name": "fixture_108_EndpointConeBalance",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointConeBalance.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointConeBalance.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.828
+    },
+    {
+      "name": "fixture_109_EndpointCoordinates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCoordinates.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCoordinates.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.603
+    },
+    {
+      "name": "fixture_110_EndpointCore",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCore.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCore.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.17
+    },
+    {
+      "name": "fixture_111_EndpointCoreArtin",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCoreArtin.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCoreArtin.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.984
+    },
+    {
+      "name": "fixture_112_EndpointCoreGrading",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointCoreGrading.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointCoreGrading.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.797
+    },
+    {
+      "name": "fixture_113_EndpointData",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointData.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointData.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.015
+    },
+    {
+      "name": "fixture_114_EndpointFiberModule",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointFiberModule.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointFiberModule.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.773
+    },
+    {
+      "name": "fixture_115_EndpointFibers",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointFibers.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointFibers.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.942
+    },
+    {
+      "name": "fixture_116_EndpointFirstBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointFirstBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointFirstBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.77
+    },
+    {
+      "name": "fixture_117_EndpointHomology",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointHomology.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointHomology.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.852
+    },
+    {
+      "name": "fixture_118_EndpointIdealGenerators",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointIdealGenerators.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointIdealGenerators.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.012
+    },
+    {
+      "name": "fixture_119_EndpointInternalCoordinates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointInternalCoordinates.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointInternalCoordinates.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.986
+    },
+    {
+      "name": "fixture_120_EndpointInternalSocle",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointInternalSocle.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointInternalSocle.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.977
+    },
+    {
+      "name": "fixture_121_EndpointMinimal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointMinimal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointMinimal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.763
+    },
+    {
+      "name": "fixture_122_EndpointMinimalBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointMinimalBounds.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointMinimalBounds.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.682
+    },
+    {
+      "name": "fixture_123_EndpointModules",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointModules.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointModules.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.966
+    },
+    {
+      "name": "fixture_124_EndpointNativeTransfer",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointNativeTransfer.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointNativeTransfer.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.866
+    },
+    {
+      "name": "fixture_125_EndpointNilpotence",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointNilpotence.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointNilpotence.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.897
+    },
+    {
+      "name": "fixture_126_EndpointNonmonomial",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointNonmonomial.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointNonmonomial.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 10.555
+    },
+    {
+      "name": "fixture_127_EndpointNormalization",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointNormalization.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointNormalization.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.03
+    },
+    {
+      "name": "fixture_128_EndpointOrientation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointOrientation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointOrientation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 30.344
+    },
+    {
+      "name": "fixture_129_EndpointPresentation",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointPresentation.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointPresentation.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.656
+    },
+    {
+      "name": "fixture_130_EndpointQuadratic",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointQuadratic.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointQuadratic.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.818
+    },
+    {
+      "name": "fixture_131_EndpointQuotient",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointQuotient.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointQuotient.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.983
+    },
+    {
+      "name": "fixture_132_EndpointResidues",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointResidues.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointResidues.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.721
+    },
+    {
+      "name": "fixture_133_EndpointRhat",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointRhat.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointRhat.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.331
+    },
+    {
+      "name": "fixture_134_EndpointRowPackage",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointRowPackage.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointRowPackage.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.18
+    },
+    {
+      "name": "fixture_135_EndpointRows",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointRows.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointRows.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.97
+    },
+    {
+      "name": "fixture_136_EndpointSocle",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointSocle.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointSocle.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.882
+    },
+    {
+      "name": "fixture_137_EndpointSoclePoints",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointSoclePoints.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointSoclePoints.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.926
+    },
+    {
+      "name": "fixture_138_EndpointStandardArtin",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointStandardArtin.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointStandardArtin.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.284
+    },
+    {
+      "name": "fixture_139_EndpointStopping",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointStopping.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointStopping.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.812
+    },
+    {
+      "name": "fixture_140_EndpointSurvivingBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointSurvivingBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointSurvivingBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.802
+    },
+    {
+      "name": "fixture_141_EndpointTwoMonomial",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointTwoMonomial.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointTwoMonomial.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.885
+    },
+    {
+      "name": "fixture_142_EndpointTwoVariables",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointTwoVariables.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointTwoVariables.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.894
+    },
+    {
+      "name": "fixture_143_EndpointVolume",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointVolume.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointVolume.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "name": "fixture_144_EndpointWords",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointWords.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointWords.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.236
+    },
+    {
+      "name": "fixture_145_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run16/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run16/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.298
+    },
+    {
+      "name": "fixture_146_EndpointAdditive",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/EndpointAdditive.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/EndpointAdditive.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 6.214
+    },
+    {
+      "name": "fixture_147_KneserActual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KneserActual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KneserActual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.363
+    },
+    {
+      "name": "fixture_148_Run17Definitions",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run17Definitions.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run17Definitions.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.616
+    },
+    {
+      "name": "fixture_149_Run17Growth",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run17Growth.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run17Growth.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.498
+    },
+    {
+      "name": "fixture_150_Run17SequenceExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/Run17SequenceExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/Run17SequenceExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.909
+    },
+    {
+      "name": "fixture_151_SavchevChen",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SavchevChen.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SavchevChen.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.406
+    },
+    {
+      "name": "fixture_152_RequestedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run17/RequestedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run17/RequestedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.379
+    },
+    {
+      "name": "fixture_153_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run17/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run17/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.416
+    },
+    {
+      "name": "fixture_154_RequestedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/RequestedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/RequestedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.811
+    },
+    {
+      "name": "fixture_155_BHPEKClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/BHPEKClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/BHPEKClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.903
+    },
+    {
+      "name": "fixture_156_EdgeClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/EdgeClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/EdgeClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.39
+    },
+    {
+      "name": "fixture_157_DenseResourcesClosed",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/DenseResourcesClosed.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/DenseResourcesClosed.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.83
+    },
+    {
+      "name": "fixture_158_DenseClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/DenseClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/DenseClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.985
+    },
+    {
+      "name": "fixture_159_PartialClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/PartialClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/PartialClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.802
+    },
+    {
+      "name": "fixture_160_FiveClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/FiveClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.511
+    },
+    {
+      "name": "fixture_161_ClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/ClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/ClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.823
+    },
+    {
+      "name": "fixture_162_EKClosedGoals",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/EKClosedGoals.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/EKClosedGoals.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.812
+    },
+    {
+      "name": "fixture_163_BHPEK",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/acceptance/BHPEK.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/acceptance/BHPEK.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.749
+    },
+    {
+      "name": "fixture_164_W_CLOSE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/acceptance/W_CLOSE.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/acceptance/W_CLOSE.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.881
+    },
+    {
+      "name": "fixture_165_W_DENSE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/acceptance/W_DENSE.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/acceptance/W_DENSE.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.944
+    },
+    {
+      "name": "fixture_166_W_EDGE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/acceptance/W_EDGE.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/acceptance/W_EDGE.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.879
+    },
+    {
+      "name": "fixture_167_W_FIVE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/run18/acceptance/W_FIVE.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/run18/acceptance/W_FIVE.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.853
+    },
+    {
+      "name": "fixture_168_WidthFiveHigher",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthFiveHigher.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthFiveHigher.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.163
+    },
+    {
+      "name": "fixture_169_AntipodalActual",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/AntipodalActual.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/AntipodalActual.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.016
+    },
+    {
+      "name": "fixture_170_ArtinGradedChain",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArtinGradedChain.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArtinGradedChain.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.799
+    },
+    {
+      "name": "fixture_171_ArtinGradedMaps",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArtinGradedMaps.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArtinGradedMaps.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.962
+    },
+    {
+      "name": "fixture_172_ArtinGradedZero",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ArtinGradedZero.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ArtinGradedZero.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.776
+    },
+    {
+      "name": "fixture_173_BasisBlocks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/BasisBlocks.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/BasisBlocks.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.621
+    },
+    {
+      "name": "fixture_174_BasisGradedScalarComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/BasisGradedScalarComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/BasisGradedScalarComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.977
+    },
+    {
+      "name": "fixture_175_BasiswiseTensor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/BasiswiseTensor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/BasiswiseTensor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.622
+    },
+    {
+      "name": "fixture_176_ColexRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ColexRestriction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ColexRestriction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.381
+    },
+    {
+      "name": "fixture_177_DegreeFamily",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DegreeFamily.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DegreeFamily.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.742
+    },
+    {
+      "name": "fixture_178_DegreeSeparator",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DegreeSeparator.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DegreeSeparator.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.769
+    },
+    {
+      "name": "fixture_179_DensePayment",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DensePayment.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DensePayment.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.877
+    },
+    {
+      "name": "fixture_180_DirectSumSplit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DirectSumSplit.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DirectSumSplit.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.745
+    },
+    {
+      "name": "fixture_181_DistractionChain",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionChain.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionChain.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.519
+    },
+    {
+      "name": "fixture_182_DistractionGraded",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionGraded.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionGraded.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.005
+    },
+    {
+      "name": "fixture_183_LexLinearQuotientExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexLinearQuotientExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexLinearQuotientExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.138
+    },
+    {
+      "name": "fixture_184_DistractionGradedExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionGradedExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionGradedExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.018
+    },
+    {
+      "name": "fixture_185_DistractionHilbert",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionHilbert.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionHilbert.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.833
+    },
+    {
+      "name": "fixture_186_DistractionIdeal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionIdeal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionIdeal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.797
+    },
+    {
+      "name": "fixture_187_DistractionLinearEquiv",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionLinearEquiv.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionLinearEquiv.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.668
+    },
+    {
+      "name": "fixture_188_DistractionMonomial",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionMonomial.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionMonomial.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.651
+    },
+    {
+      "name": "fixture_189_DistractionTensor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/DistractionTensor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/DistractionTensor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.247
+    },
+    {
+      "name": "fixture_190_ElementaryDistraction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ElementaryDistraction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ElementaryDistraction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.556
+    },
+    {
+      "name": "fixture_191_ExteriorContraction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/ExteriorContraction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/ExteriorContraction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.867
+    },
+    {
+      "name": "fixture_192_FiniteHilbertProfiles",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/FiniteHilbertProfiles.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/FiniteHilbertProfiles.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.07
+    },
+    {
+      "name": "fixture_193_GenericDistraction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistraction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistraction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.633
+    },
+    {
+      "name": "fixture_194_GenericDistractionBoundary",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionBoundary.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionBoundary.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.417
+    },
+    {
+      "name": "fixture_195_GenericDistractionExterior",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionExterior.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionExterior.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.509
+    },
+    {
+      "name": "fixture_196_GenericDistractionField",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionField.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionField.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.911
+    },
+    {
+      "name": "fixture_197_GenericDistractionIteration",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionIteration.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionIteration.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.225
+    },
+    {
+      "name": "fixture_198_GenericDistractionPrincipal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionPrincipal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionPrincipal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.599
+    },
+    {
+      "name": "fixture_199_GenericDistractionProgress",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionProgress.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionProgress.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.144
+    },
+    {
+      "name": "fixture_200_GenericDistractionStable",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionStable.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionStable.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.848
+    },
+    {
+      "name": "fixture_201_GenericDistractionStep",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GenericDistractionStep.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GenericDistractionStep.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.004
+    },
+    {
+      "name": "fixture_202_GradedIdealAdjoining",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedIdealAdjoining.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedIdealAdjoining.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.117
+    },
+    {
+      "name": "fixture_203_GradedKoszulBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedKoszulBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedKoszulBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.882
+    },
+    {
+      "name": "fixture_204_GradedKoszulExact",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedKoszulExact.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedKoszulExact.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.996
+    },
+    {
+      "name": "fixture_205_GradedKoszulRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/GradedKoszulRestriction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/GradedKoszulRestriction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.917
+    },
+    {
+      "name": "fixture_206_HomogeneousBasisPieces",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/HomogeneousBasisPieces.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/HomogeneousBasisPieces.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.885
+    },
+    {
+      "name": "fixture_207_IdealAdjoining",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/IdealAdjoining.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/IdealAdjoining.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.798
+    },
+    {
+      "name": "fixture_208_IdealScalarQuotient",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/IdealScalarQuotient.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/IdealScalarQuotient.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.836
+    },
+    {
+      "name": "fixture_209_InitialAction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/InitialAction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/InitialAction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.835
+    },
+    {
+      "name": "fixture_210_InitialBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/InitialBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/InitialBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.974
+    },
+    {
+      "name": "fixture_211_InitialBoundary",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/InitialBoundary.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/InitialBoundary.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.916
+    },
+    {
+      "name": "fixture_212_InitialIdeal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/InitialIdeal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/InitialIdeal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.813
+    },
+    {
+      "name": "fixture_213_InitialTransport",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/InitialTransport.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/InitialTransport.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.965
+    },
+    {
+      "name": "fixture_214_KoszulExterior",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExterior.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExterior.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.115
+    },
+    {
+      "name": "fixture_215_KoszulExteriorBasis",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExteriorBasis.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExteriorBasis.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.722
+    },
+    {
+      "name": "fixture_216_KoszulExteriorContraction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExteriorContraction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExteriorContraction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.99
+    },
+    {
+      "name": "fixture_217_KoszulExteriorGrading",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExteriorGrading.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExteriorGrading.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.88
+    },
+    {
+      "name": "fixture_218_KoszulExteriorMap",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulExteriorMap.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulExteriorMap.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.149
+    },
+    {
+      "name": "fixture_219_KoszulSlotGrading",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulSlotGrading.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulSlotGrading.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.951
+    },
+    {
+      "name": "fixture_220_KoszulVariableFactor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/KoszulVariableFactor.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/KoszulVariableFactor.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.557
+    },
+    {
+      "name": "fixture_221_LexBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.304
+    },
+    {
+      "name": "fixture_222_LexCompatibleDegrees",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexCompatibleDegrees.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexCompatibleDegrees.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.967
+    },
+    {
+      "name": "fixture_223_LexDegreeIdeal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexDegreeIdeal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexDegreeIdeal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.938
+    },
+    {
+      "name": "fixture_224_LexEK",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexEK.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexEK.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.843
+    },
+    {
+      "name": "fixture_225_LexEKOrdinary",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexEKOrdinary.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexEKOrdinary.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.001
+    },
+    {
+      "name": "fixture_226_LexGeneratorOrder",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexGeneratorOrder.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexGeneratorOrder.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.847
+    },
+    {
+      "name": "fixture_227_LexGradedStep",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexGradedStep.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexGradedStep.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.808
+    },
+    {
+      "name": "fixture_228_LexHilbert",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexHilbert.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexHilbert.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.045
+    },
+    {
+      "name": "fixture_229_LexHilbertExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexHilbertExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexHilbertExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.401
+    },
+    {
+      "name": "fixture_230_LexLinearQuotients",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexLinearQuotients.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexLinearQuotients.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "fixture_231_LexStable",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexStable.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexStable.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "fixture_232_LexTailCorrection",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexTailCorrection.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexTailCorrection.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.961
+    },
+    {
+      "name": "fixture_233_LexTailSupport",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexTailSupport.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexTailSupport.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.973
+    },
+    {
+      "name": "fixture_234_LexUniqueness",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/LexUniqueness.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/LexUniqueness.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.448
+    },
+    {
+      "name": "fixture_235_MonomialExtension",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/MonomialExtension.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/MonomialExtension.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.045
+    },
+    {
+      "name": "fixture_236_MonomialExtensionGraded",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/MonomialExtensionGraded.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/MonomialExtensionGraded.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.875
+    },
+    {
+      "name": "fixture_237_MonomialScalarExamples",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/MonomialScalarExamples.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/MonomialScalarExamples.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.046
+    },
+    {
+      "name": "fixture_238_NormalTriangular",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/NormalTriangular.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/NormalTriangular.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.993
+    },
+    {
+      "name": "fixture_239_PrefixDominance",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PrefixDominance.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PrefixDominance.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.078
+    },
+    {
+      "name": "fixture_240_PrefixGeneratorCorrection",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PrefixGeneratorCorrection.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PrefixGeneratorCorrection.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.042
+    },
+    {
+      "name": "fixture_241_PrefixOrder",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PrefixOrder.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PrefixOrder.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "fixture_242_PrefixVariableRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/PrefixVariableRestriction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/PrefixVariableRestriction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.854
+    },
+    {
+      "name": "fixture_243_SmallVariableComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SmallVariableComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SmallVariableComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.915
+    },
+    {
+      "name": "fixture_244_StableBettiComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StableBettiComparison.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StableBettiComparison.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.069
+    },
+    {
+      "name": "fixture_245_StableBinomialWeights",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StableBinomialWeights.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StableBinomialWeights.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.921
+    },
+    {
+      "name": "fixture_246_StableDegreeDecomposition",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StableDegreeDecomposition.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StableDegreeDecomposition.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.874
+    },
+    {
+      "name": "fixture_247_StandardBettiWeights",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StandardBettiWeights.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StandardBettiWeights.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.126
+    },
+    {
+      "name": "fixture_248_StrongStableEK",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StrongStableEK.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StrongStableEK.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.813
+    },
+    {
+      "name": "fixture_249_StrongStableOperations",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StrongStableOperations.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StrongStableOperations.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.884
+    },
+    {
+      "name": "fixture_250_StrongStableRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/StrongStableRestriction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/StrongStableRestriction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.923
+    },
+    {
+      "name": "fixture_251_SuffixVariableRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/SuffixVariableRestriction.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/SuffixVariableRestriction.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.011
+    },
+    {
+      "name": "fixture_252_TotalLexBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TotalLexBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TotalLexBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.275
+    },
+    {
+      "name": "fixture_253_TriangularBlockRank",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/TriangularBlockRank.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/TriangularBlockRank.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.542
+    },
+    {
+      "name": "fixture_254_VariableIdealBetti",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/VariableIdealBetti.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/VariableIdealBetti.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.862
+    },
+    {
+      "name": "fixture_255_VariableIdealGraded",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/VariableIdealGraded.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/VariableIdealGraded.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.854
+    },
+    {
+      "name": "fixture_256_WidthDenseResources",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthDenseResources.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthDenseResources.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.776
+    },
+    {
+      "name": "fixture_257_WidthSparseData",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthSparseData.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthSparseData.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.793
+    },
+    {
+      "name": "fixture_258_WidthSparseCache",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthSparseCache.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthSparseCache.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.921
+    },
+    {
+      "name": "fixture_259_WidthSparse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthSparse.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthSparse.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 63.949
+    },
+    {
+      "name": "fixture_260_WidthEdgeGeneral",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthEdgeGeneral.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthEdgeGeneral.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.32
+    },
+    {
+      "name": "fixture_261_WidthActualClosure",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthActualClosure.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthActualClosure.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 7.201
+    },
+    {
+      "name": "fixture_262_WidthDense",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthDense.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthDense.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.648
+    },
+    {
+      "name": "fixture_263_WidthEdgeAP",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthEdgeAP.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthEdgeAP.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 11.975
+    },
+    {
+      "name": "fixture_264_WidthEdgeGeometry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthEdgeGeometry.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthEdgeGeometry.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.137
+    },
+    {
+      "name": "fixture_265_WidthFive",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthFive.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthFive.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.128
+    },
+    {
+      "name": "fixture_266_WidthFiveNonAntipodal",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthFiveNonAntipodal.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthFiveNonAntipodal.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 12.494
+    },
+    {
+      "name": "fixture_267_WidthFiveSmall",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/WidthFiveSmall.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/WidthFiveSmall.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 11.866
+    },
+    {
+      "name": "v06_fixture_268_RouteChecks",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "audit/v06_alignment/RouteChecks.lean",
+        "-o",
+        ".lake/build/lib/lean/audit/v06_alignment/RouteChecks.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 3.053
+    },
+    {
+      "name": "v06_fixture_269_V06Dense",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/V06Dense.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/V06Dense.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.959
+    },
+    {
+      "name": "v06_fixture_270_V06Endpoint",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/V06Endpoint.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/V06Endpoint.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.969
+    },
+    {
+      "name": "v06_fixture_271_V06HigherFromSecond",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/V06HigherFromSecond.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/V06HigherFromSecond.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "v06_fixture_272_V06IntegerPayment",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "tests/V06IntegerPayment.lean",
+        "-o",
+        ".lake/build/lib/lean/tests/V06IntegerPayment.olean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.143
+    },
+    {
+      "name": "width_model",
+      "command": [
+        "python3",
+        "scripts/check_run18_width.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/width_checks.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.221
+    },
+    {
+      "name": "dense_model",
+      "command": [
+        "python3",
+        "scripts/check_run18_dense.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/dense_checks.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.229
+    },
+    {
+      "name": "continuation_model",
+      "command": [
+        "python3",
+        "scripts/check_run18_continuation.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/continuation_checks.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.207
+    },
+    {
+      "name": "five_model",
+      "command": [
+        "python3",
+        "scripts/check_run18_five.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/five_checks.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.146
+    },
+    {
+      "name": "edge_model",
+      "command": [
+        "python3",
+        "scripts/check_run18_edge.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/edge_checks.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.62
+    },
+    {
+      "name": "publication_guards",
+      "command": [
+        "python3",
+        "scripts/check_run18_guards.py"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.434
+    },
+    {
+      "name": "axiom_policy_controls",
+      "command": [
+        "python3",
+        "scripts/check_run18_axiom_policy.py",
+        "--output-dir",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/axiom_policy_controls"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.683
+    },
+    {
+      "name": "inherited_schedule",
+      "command": [
+        "python3",
+        "scripts/replay_run17_inherited.py",
+        "schedule",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_schedule.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.082
+    },
+    {
+      "name": "inherited_coordinates",
+      "command": [
+        "python3",
+        "scripts/replay_run17_inherited.py",
+        "coordinates",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_coordinates.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 1.384
+    },
+    {
+      "name": "inherited_additive",
+      "command": [
+        "python3",
+        "scripts/check_run17_additive.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_additive.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 0.287
+    },
+    {
+      "name": "environment_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/EnvironmentAudit.lean"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 9.352
+    },
+    {
+      "name": "v06_routes",
+      "command": [
+        "python3",
+        "scripts/check_v06_routes.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/routes.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 2.357
+    },
+    {
+      "name": "v06_alignment_controls",
+      "command": [
+        "python3",
+        "scripts/check_v06_alignment_controls.py",
+        "--output",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01/alignment_controls.json"
+      ],
+      "cwd": "/tmp/ns-p14-v06-alignment-20261116",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 9.514
+    },
+    {
+      "name": "base_build",
+      "command": [
+        "lake",
+        "build",
+        "NSP14",
+        "Mathlib.Algebra.Field.ZMod"
+      ],
+      "cwd": "/tmp/nsp14-v06-base-bzmlfrkr",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 4.745
+    },
+    {
+      "name": "base_environment_types",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "BaseEnvironmentAudit.lean"
+      ],
+      "cwd": "/tmp/nsp14-v06-base-bzmlfrkr",
+      "exit_code": 0,
+      "expected_missing_declaration": null,
+      "passed": true,
+      "seconds": 5.104
+    }
+  ],
+  "fresh_whole_project_cache": true,
+  "base_public_types_preserved": true,
+  "normal_explicit_type_and_axiom_coverage": [
+    "NSP14.Endpoint.CarrySums",
+    "NSP14.Endpoint.CompetitorBounds",
+    "NSP14.Endpoint.FiniteCompetitors",
+    "NSP14.Endpoint.FiniteSocleBounds",
+    "NSP14.Width.AntipodalComparison",
+    "NSP14.Width.DenseComparison",
+    "NSP14.Width.DenseLexResources",
+    "NSP14.Width.DensePayment",
+    "NSP14.Width.FiveHigher",
+    "NSP14.Width.FiveNonAntipodal",
+    "NSP14.Width.HigherFromSecond",
+    "NSP14.Width.IntegerPayment",
+    "NSP14.Width.SparseHigher",
+    "tests.V06Dense",
+    "tests.V06Endpoint",
+    "tests.V06HigherFromSecond",
+    "tests.V06IntegerPayment"
+  ],
+  "verified_import_only_modules": [
+    "NSP14",
+    "audit.v06_alignment.RouteChecks"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "environment_declarations": 10713,
+  "preserved_evidence_count": 7518,
+  "frozen_requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+  "not_claimed": [
+    "N4",
+    "Run19",
+    "all_P14"
+  ]
+}

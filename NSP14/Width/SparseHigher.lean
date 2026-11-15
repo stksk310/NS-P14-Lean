@@ -1,5 +1,5 @@
 module
-public import NSP14.Width.NormalizedCapacity
+public import NSP14.Width.HigherFromSecond
 public import NSP14.Width.SparseFirst
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
@@ -35,22 +35,16 @@ theorem actual_sparse_higher (he : 6≤D.q+2) (hu : 2*(D.q+2)-2≤D.u)
     push_cast
     nlinarith only [h]
   have hp := NSP14.Width.sparse_second_payment e D.u he hu (D.wordVolume:ℚ) hW
-  have hepos : (0:ℚ)<(e.choose 2:ℚ) := by exact_mod_cast Nat.choose_pos (by dsimp [e];omega : 2≤e)
-  have hcap2 : (D.wordVolume:ℚ)≤NSP14.Width.normalizedCapacity e D.u 2 := by
-    unfold NSP14.Width.normalizedCapacity
-    apply (le_div_iff₀ hepos).mpr
-    simpa only [Nat.reduceAdd,Nat.reduceSub,Nat.choose_one_right,Nat.cast_ofNat,
-      Nat.cast_sub (by dsimp [e];omega : 1≤e),Nat.cast_one] using hp
-  have hcap := hcap2.trans (NSP14.Width.normalized_capacity_monotone e D.u i hue hi hie)
-  have heipos : (0:ℚ)<(e.choose i:ℚ) := by exact_mod_cast Nat.choose_pos hie
-  have hpay := (le_div_iff₀ heipos).mp hcap
-  have h := D.actual_sparse_resource_add k i (by omega)
-  have hQ : (totalBetti k D.Variables (D.fullG k) i:ℚ)+(D.u:ℚ)*((D.q+1).choose (i-1):ℚ)+
-      ((D.q+1).choose (i+1):ℚ)≤(D.wordVolume:ℚ)*((D.q+2).choose i:ℚ) := by exact_mod_cast h
+  have hP : (D.coreP k:ℚ) ≤ D.wordVolume := by
+    exact_mod_cast D.coreP_le_wordVolume k
+  have hR : (D.Rhat:ℚ)+D.u ≤ D.wordVolume := by
+    have hu := D.wordVolume_ge_u
+    have hr : D.Rhat ≤ D.wordVolume-D.u := min_le_left _ _
+    exact_mod_cast (show D.Rhat+D.u ≤ D.wordVolume by omega)
   have hem : e-1=D.q+1 := by rfl
-  rw [hem] at hpay
-  change (D.wordVolume:ℚ)*((D.q+2).choose i:ℚ)≤_ at hpay
-  have hresult : (totalBetti k D.Variables (D.fullG k) i:ℚ)≤(i:ℚ)*(D.u.choose (i+1):ℚ) := by
-    linarith only [hQ,hpay]
-  exact_mod_cast hresult
+  rw [hem] at hp
+  dsimp [e] at hp
+  push_cast at hp
+  apply D.actual_higher_from_second k (D.wordVolume:ℚ) hP hR hue ?_ i hi hie
+  linarith only [hp]
 end NSP14.Endpoint.Data

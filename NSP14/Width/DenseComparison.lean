@@ -16,15 +16,22 @@ variable (D : NSP14.Endpoint.Data) (k : Type) [Field k]
 theorem actual_dense_firstterm (t : ℕ) (hu : D.u=D.q+1+t) (ht2 : 2≤t) (htq : t≤D.q) (hq : 4≤D.q)
     (i : ℕ) (hi : 1 ≤ i) : totalBetti k D.Variables (D.fullG k) i≤ i*D.u.choose (i+1) := by
   by_cases hie : i≤D.q+2
-  · obtain ⟨K,hQC,hK2,hK3,hKlarge⟩ := D.dense_core_lex_bound k t hu htq hq
+  · obtain ⟨K,hQC,hK2,hKge3⟩ := D.dense_core_lex_bound_two_branch k t hu htq hq
     obtain ⟨_,hP,hR,hR0,_⟩ := D.dense_resources k t hu htq
     obtain ⟨j,rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : i≠0)
     have hfull := D.actual_core_endpoint_bound k (j+1)
     simp only [coreRemainder,ite_eq_right (by omega : j+1≠0),Nat.add_sub_cancel] at hfull
     have hc := hQC (j+1) (by omega)
     simp only [Nat.add_sub_cancel] at hc
-    have hpay := NSP14.Width.dense_payment D.q t (D.coreP k) (D.actualR k) K j hq ht2 htq (by omega)
-      hP hR (fun he => ⟨hR0 (by omega),hK2 he⟩) hK3 hKlarge
+    have hpay : (j+1)*(D.q+1).choose (j+2)+(D.coreP k)*D.q.choose j+
+        (D.actualR k)*(D.q+1).choose j+K*(D.q-1).choose j≤
+        (j+1)*(D.q+t+1).choose (j+2) := by
+      by_cases ht : t=2
+      · subst t
+        exact NSP14.Width.dense_payment_two D.q (D.coreP k) (D.actualR k) K j hq
+          (by omega) (by omega) (hR0 (by omega)) (hK2 rfl)
+      · exact NSP14.Width.dense_payment_ge_three D.q t (D.coreP k) (D.actualR k) K j
+          hq (by omega) htq (by omega) hP hR (hKge3 (by omega))
     have hU : D.u=D.q+t+1 := by omega
     rw [hU]
     simp only [Nat.succ_eq_add_one,Nat.add_assoc,Nat.reduceAdd] at hfull hc hpay ⊢

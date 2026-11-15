@@ -1,0 +1,38 @@
+{
+  "base": "a7504eea25f02728d1be6cd0082e8484d639dbe2",
+  "modified": [
+    "NSP14/Endpoint/CarrySums.lean",
+    "NSP14/Endpoint/CompetitorBounds.lean",
+    "NSP14/Endpoint/FiniteCompetitors.lean",
+    "NSP14/Endpoint/FiniteSocleBounds.lean",
+    "NSP14/Width/AntipodalComparison.lean",
+    "NSP14/Width/DenseComparison.lean",
+    "NSP14/Width/DenseLexResources.lean",
+    "NSP14/Width/DensePayment.lean",
+    "NSP14/Width/FiveHigher.lean",
+    "NSP14/Width/FiveNonAntipodal.lean",
+    "NSP14/Width/SparseHigher.lean"
+  ],
+  "append_only": [
+    "LEAN_PROGRESS.md",
+    "NSP14.lean",
+    "docs/LEAN_PAPER_ALIGNMENT_JA.md"
+  ],
+  "new": [
+    "NSP14/Width/HigherFromSecond.lean",
+    "NSP14/Width/IntegerPayment.lean",
+    "audit/v06_alignment/RouteChecks.lean",
+    "docs/V06_ALIGNMENT_CHANGE_POLICY.json",
+    "docs/V06_ALIGNMENT_HANDOFF_JA.md",
+    "docs/V06_ALIGNMENT_LEDGER_JA.md",
+    "docs/V06_ALIGNMENT_PLAN_JA.md",
+    "scripts/check_v06_alignment_controls.py",
+    "scripts/check_v06_routes.py",
+    "scripts/package_v06_alignment.py",
+    "scripts/verify_v06_alignment.py",
+    "tests/V06Dense.lean",
+    "tests/V06Endpoint.lean",
+    "tests/V06HigherFromSecond.lean",
+    "tests/V06IntegerPayment.lean"
+  ]
+}

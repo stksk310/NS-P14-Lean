@@ -48,9 +48,15 @@ theorem competitorZ_point_bound (s : Fin D.u) (c : ℕ×ℕ) (hc : c∈D.competi
 
 theorem competitorMin_height (s : Fin D.u) (c : ℕ×ℕ) (hc : Minimal (·∈D.competitorFiber s) c) :
     c.1≤D.coreHeight-2 := by
-  obtain ⟨r,j,hj,_,b,hb,hs,hstart⟩ := (D.competitorFiber_stopping s c).mp hc.prop
+  obtain ⟨r,j,hj,a,ha,hs,hstart⟩ := hc.prop
+  obtain ⟨b,hba,hb⟩ := D.exists_minimalFiber_le r a ha
+  have hstart' : D.forbiddenStart r j b≤c := by
+    apply (D.forbiddenStart_le r j b c).mpr
+    have h := (D.forbiddenStart_le r j a c).mp hstart
+    obtain ⟨hL,hK⟩ := hba
+    constructor <;> omega
   have hmem : D.forbiddenStart r j b∈D.competitorFiber s := ⟨r,j,hj,b,hb.prop,hs,le_rfl⟩
-  have he := hc.eq_of_le hmem hstart
+  have he := hc.eq_of_le hmem hstart'
   have hh := D.forbiddenStart_height r j b.1 b.2 D.coreHeight
     (D.minimalPoint_height r b ((D.mem_minimalPoints r b).mpr hb))
   change (D.forbiddenStart r j b).1≤D.coreHeight-2*j at hh
