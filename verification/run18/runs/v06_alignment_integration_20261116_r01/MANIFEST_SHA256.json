@@ -1,0 +1,7 @@
+{
+  "verification/run18/runs/v06_alignment_integration_20261116_r01/check_integration.py": "21bfe0515dae3e22f0220cbafe806837ca39a002c9039d788601ad5e52542066",
+  "verification/run18/runs/v06_alignment_integration_20261116_r01/independent_check.py": "1209e925fa38385aa8d00b393c152b63d4519e804e7a5bf191334ce1928b1074",
+  "verification/run18/runs/v06_alignment_integration_20261116_r01/independent_result.json": "a84aedd73dfe68a5c29c91c54f2aaadbd87097d648241e3dbb5f1bff9e24c742",
+  "verification/run18/runs/v06_alignment_integration_20261116_r01/independent_review.md": "a3b0cd82f6d6d80dae7cb5d4736de7b8c871b65b41055a3776cde0a9bb5501d8",
+  "verification/run18/runs/v06_alignment_integration_20261116_r01/receipt.json": "59c9faf73996ee146d49edf42f8cdc9af58669e2777ca3bd43219b9270446b99"
+}
