@@ -1,0 +1,44 @@
+'NSP14.Lex.genericDistractionIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.mem_genericDistractionIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionIdeal_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionPieceEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistraction_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.mem_genericDistractionIdeal : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))),
+  NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+    ∀ (f : MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)),
+      f ∈ NSP14.Lex.genericDistractionIdeal k q I ↔ (NSP14.Lex.genericPolynomialEquiv k q).symm f ∈ I
+NSP14.Lex.genericDistractionIdeal_homogeneous : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))),
+  Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q))
+    (NSP14.Lex.genericDistractionIdeal k q I)
+NSP14.Lex.genericDistractionQuotientEquiv : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))) →
+        NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+          (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q) ⧸ I) ≃ₗ[NSP14.Lex.GenericDistractionField k q]
+            MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q) ⧸ NSP14.Lex.genericDistractionIdeal k q I
+NSP14.Lex.genericDistractionPieceEquiv : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))) →
+        NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+          (hI :
+              Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q))
+                I) →
+            (t : ℤ) →
+              ↑((NSP14.Endpoint.artinGrading (NSP14.Lex.GenericDistractionField k q) (Fin q) I hI).piece
+                    t) ≃ₗ[NSP14.Lex.GenericDistractionField k q]
+                ↑((NSP14.Endpoint.artinGrading (NSP14.Lex.GenericDistractionField k q) (Fin q)
+                        (NSP14.Lex.genericDistractionIdeal k q I) ⋯).piece
+                    t)
+NSP14.Lex.genericDistraction_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)) I),
+  NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+    ∀ (n : ℕ),
+      NSP14.Lex.quotientHilbert (NSP14.Lex.GenericDistractionField k q) q I hI n =
+        NSP14.Lex.quotientHilbert (NSP14.Lex.GenericDistractionField k q) q (NSP14.Lex.genericDistractionIdeal k q I) ⋯
+          n

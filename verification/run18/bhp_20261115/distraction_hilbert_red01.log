@@ -1,0 +1,5 @@
+tests/DistractionHilbert.lean:7:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) (Lex.GenericDistractionField k q))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/DistractionHilbert.lean:12:2: error(lean.unknownIdentifier): Unknown constant `Lex.genericDistraction_sameHilbert`

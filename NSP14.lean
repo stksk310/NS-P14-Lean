@@ -664,3 +664,5 @@ public import NSP14.Lex.DistractionMonomial
 public import NSP14.Lex.GenericDistraction
 public import NSP14.Lex.GenericDistractionField
 public import NSP14.Lex.DistractionLinearEquiv
+public import NSP14.Lex.DistractionIdeal
+public import NSP14.Lex.DistractionHilbert
