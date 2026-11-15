@@ -1,0 +1,31 @@
+{
+  "status": "PASS_COMPLETE_BUNDLE_ENTRY_HASH_CRC_REPORT_AND_IMMUTABILITY",
+  "observed_utc": "2026-11-15T12:37:09.604709+00:00",
+  "package_result": {
+    "status": "PUBLISHED_COMPLETE_BUNDLE",
+    "archive": "artifacts/NS_P14_LEAN_RUN18_COMPLETE_20261115.zip",
+    "archive_sha256": "1acfe35915b20c4c870a148a6a39d833a1f796de4f62f3f83ba280ca894c774d",
+    "entries": 2338,
+    "crc": "PASS",
+    "run18_complete": true
+  },
+  "all_entry_hashes_match": true,
+  "all_entry_bytes_match_repository": true,
+  "duplicate_entries": false,
+  "crc": "PASS",
+  "review_report_included": "docs/RUN18_FINAL_REVIEW_JA.md",
+  "review_report_sha256": "8c13a3a84d9969ecfb8069cce10e032d59994295a3a0a256b98f4da0b1f04bd2",
+  "source_entries": 2033,
+  "evidence_entries": 297,
+  "source_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+  "reviewed_commit": "c97fa324d90277bcae20a88863366bff6ba7a35b",
+  "publication_decision": "verification/run18/COMPLETE_publication_decision_20261115.json",
+  "binding_review": "verification/run18/complete_publication_review_20261115.md",
+  "binding_review_sha256": "7d501f9675539ec7df0e4b16b025fb06f129fda8a9fffd7df356bfe26ad69101",
+  "overwrite_control": {
+    "exit_code": 2,
+    "expected_error": "archive already exists",
+    "archive_unchanged": true
+  },
+  "scope": "Reviewed proof/evidence bundle; reproduce full validation from the proof Git checkout and fixed dependencies."
+}
