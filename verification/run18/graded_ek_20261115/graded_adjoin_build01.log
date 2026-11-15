@@ -1,0 +1,17 @@
+✖ [4720/4721] Building NSP14.Endpoint.GradedIdealAdjoining (1.0s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Endpoint/GradedIdealAdjoining.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/GradedIdealAdjoining.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/GradedIdealAdjoining.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/GradedIdealAdjoining.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/GradedIdealAdjoining.setup.json --json
+error: NSP14/Endpoint/GradedIdealAdjoining.lean:36:4: Type mismatch: After simplification, term
+  hm
+ has type
+  @Membership.mem (MvPolynomial σ k ⧸ J) (Submodule k ↑(coefficientModule k σ (artinModule k σ J)))
+    SetLike.instMembership ((artinGrading k σ J hJ).degreeSpace q)
+    ((ConcreteCategory.hom (artinMultiplyMap k σ (Submodule.colon J {g}) J g ⋯)) a)
+but is expected to have type
+  @Membership.mem (↑S.X₂) (Submodule k ↑(coefficientModule k σ (artinModule k σ J))) SetLike.instMembership
+    (G2.degreeSpace q) ((ConcreteCategory.hom S.f) a)
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  AddMonoidAlgebra.mul' ↦ 8
+Some required targets logged failures:
+- NSP14.Endpoint.GradedIdealAdjoining
+error: build failed

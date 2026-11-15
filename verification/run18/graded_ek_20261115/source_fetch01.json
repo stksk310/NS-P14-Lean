@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-11-15T04:01:39.621406+00:00",
+  "records": [
+    {
+      "url": "https://arxiv.org/pdf/1210.5562",
+      "status": "FETCH_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/pdf/0812.0594",
+      "status": "FETCH_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://macaulay2.com/doc/Macaulay2/share/Macaulay2/ChainComplexExtras.m2",
+      "status": "FETCH_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://doi.org/10.1215/ijm/1255985937",
+      "status": "FETCH_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}

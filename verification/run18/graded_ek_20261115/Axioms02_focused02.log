@@ -1,0 +1,25 @@
+'NSP14.Run18.ek_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.graded_ek' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.variable_ideal_gradedBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artin_adjoin_gradedBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artin_gradedBetti_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Run18.ek_closed : NSP14.Run18.Requested.EK
+NSP14.Lex.IsLex.graded_ek : ∀ (k : Type) [inst : Field k] (q : ℕ) {L : Ideal (MvPolynomial (Fin q) k)},
+  NSP14.Lex.IsLex k q L →
+    L ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L) (g : Finset (Fin q →₀ ℕ)),
+        (∀ (v : Fin q →₀ ℕ), v ∈ g ↔ NSP14.Lex.MinimalGenerator k q L v) →
+          ∀ (i : ℕ),
+            1 ≤ i →
+              ∀ (t : ℤ),
+                NSP14.Lex.quotientGradedBetti k q L hHom i t =
+                  ∑ v ∈ g,
+                    if ↑(Finsupp.degree v) + ↑i - 1 = t then (NSP14.Lex.maxVariable q v - 1).choose (i - 1) else 0
+NSP14.Endpoint.variable_ideal_gradedBetti : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ]
+  [inst_2 : LinearOrder σ] (xs : List σ),
+  xs.Nodup →
+    ∀ (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule σ k) (NSP14.Homological.variablesIdeal k σ xs))
+      (i : ℕ) (t : ℤ),
+      NSP14.Homological.gradedBetti k σ (NSP14.Endpoint.artinModule k σ (NSP14.Homological.variablesIdeal k σ xs))
+          (NSP14.Endpoint.artinGrading k σ (NSP14.Homological.variablesIdeal k σ xs) hI) i t =
+        if ↑i = t then xs.length.choose i else 0

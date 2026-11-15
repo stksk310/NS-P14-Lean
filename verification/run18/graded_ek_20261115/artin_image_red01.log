@@ -1,0 +1,5 @@
+tests/ArtinGradedMaps.lean:11:39: error(lean.invalidField): Invalid field `degreeSpace`: The environment does not contain `NSP14.Homological.GradedPolynomialModule.degreeSpace`, so it is not possible to project the field `degreeSpace` from an expression
+  Endpoint.artinGrading k σ I hI
+of type
+  Homological.GradedPolynomialModule k σ (Endpoint.artinModule k σ I)
+tests/ArtinGradedMaps.lean:12:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artin_mk_homogeneous`

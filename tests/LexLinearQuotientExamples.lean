@@ -1,5 +1,5 @@
 module
-public import NSP14.Lex.EliahouKervaireOrdinary
+public import NSP14.Lex.EliahouKervaire
 public import Mathlib.Algebra.Field.ZMod
 public import Mathlib.Tactic.FinCases
 @[expose] public section
@@ -140,4 +140,46 @@ theorem mixed_ordinary_rows : MixedOrdinaryRows k := by
 theorem mixed_ordinary_rows_char2 : MixedOrdinaryRows (ZMod 2) := mixed_ordinary_rows (ZMod 2)
 theorem mixed_ordinary_rows_char3 : MixedOrdinaryRows (ZMod 3) := mixed_ordinary_rows (ZMod 3)
 theorem mixed_ordinary_rows_char0 : MixedOrdinaryRows ℚ := mixed_ordinary_rows ℚ
+
+attribute [local instance] MvPolynomial.gradedAlgebra
+
+theorem mixed_homogeneous : (mixedIdeal k).IsHomogeneous
+    (MvPolynomial.homogeneousSubmodule (Fin 2) k) := by
+  unfold mixedIdeal
+  apply Ideal.homogeneous_span
+  rintro _ ⟨v,_,rfl⟩
+  exact ⟨v.degree,MvPolynomial.isHomogeneous_monomial (1:k) rfl⟩
+
+/-- Distinct generator degrees and their quotient shift, for every positive row
+and every internal degree of this actual lex ideal. -/
+def MixedGradedRows : Prop := ∀ i : ℕ, 1 ≤ i → ∀ t : ℤ,
+  Lex.quotientGradedBetti k 2 (mixedIdeal k) (mixed_homogeneous k) i t=
+    (if i=1 ∧ t=1 then 1 else 0)+(if i=1 ∧ t=2 then 1 else 0)+
+    (if i=2 ∧ t=3 then 1 else 0)
+
+theorem mixed_graded_rows : MixedGradedRows k := by
+  intro i hi t
+  have hb := (mixed_lex k).graded_ek k 2 (mixed_proper k) (mixed_homogeneous k)
+    _ (mixed_minimal_set k) i hi t
+  have hne : Finsupp.single (0:Fin 2) 1 ≠ Finsupp.single (1:Fin 2) 2 := by
+    intro he
+    have h := congrArg (fun v : Fin 2 →₀ ℕ => v 0) he
+    norm_num at h
+  norm_num [hne,Lex.maxVariable,Finsupp.degree_eq_sum] at hb
+  by_cases h1 : i=1
+  · subst i
+    simpa only [Nat.reduceSub,Nat.choose_zero_right,Nat.cast_one,
+      add_sub_cancel_right,one_add_one_eq_two,true_and,false_and,ite_false,add_zero,
+      show ¬(1:ℕ)=2 by omega,eq_comm] using hb
+  · by_cases h2 : i=2
+    · subst i
+      norm_num [h1] at hb ⊢
+      simpa only [eq_comm] using hb
+    · have hz0 : Nat.choose 0 (i-1)=0 := Nat.choose_eq_zero_of_lt (by omega)
+      have hz1 : Nat.choose 1 (i-1)=0 := Nat.choose_eq_zero_of_lt (by omega)
+      simpa [h1,h2,hz0,hz1] using hb
+
+theorem mixed_graded_rows_char2 : MixedGradedRows (ZMod 2) := mixed_graded_rows (ZMod 2)
+theorem mixed_graded_rows_char3 : MixedGradedRows (ZMod 3) := mixed_graded_rows (ZMod 3)
+theorem mixed_graded_rows_char0 : MixedGradedRows ℚ := mixed_graded_rows ℚ
 end NSP14.Tests.LexLinearQuotientExamples

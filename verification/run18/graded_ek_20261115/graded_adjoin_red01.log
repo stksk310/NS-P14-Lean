@@ -1,0 +1,1 @@
+tests/GradedIdealAdjoining.lean:19:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artin_adjoin_gradedBetti`

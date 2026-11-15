@@ -124,3 +124,7 @@ focused03：8 named consumer fixtureと公理probeの9 command個別exit0/警告
 3 named fixture＋公理/公開型probeの4 command個別exit0/警告0、root build成功。主要5exportは許容三公理のみ。公開型にhf/hg/hS/hzが正しく残ることを#checkで確認。最初のred1件は≫のopen不足だったためREDに数えず、open修正後のunknown-name REDを保持した。暗黙のcoefficientFunctor.obj展開でrwが失敗する箇所はcongrArgとtransで実等式を接続し、前提を追加していない。公開済みverification/artifactは無変更。
 ordinary EK source ae7da74はwork/実装branchへ通常atomicPush済み、両remote実測SHA一致・cleanを確認。最新追加4moduleはfocused検証済みだがR06 cold snapshotには含まれない。六IDは引き続き3閉鎖/3未完。
 次の具体的証明：artinGradingのactual homogeneous monomial像/quotient maps、actual shifted gradingとdegree補正、coordinate quotientのgraded集中（ordinary C(r,i)は完成）、graded EK有限生成元帰納。一般BHP/Pardue/lex存在の形式証明は依然未構成。ユーザー依頼は全Run18完了であり、内部milestoneを完了/Run19移行に変えず継続。
+
+2026-11-15 graded EK：`NSP14.Run18.ek_closed : Requested.EK` が元の凍結契約そのものを証明。properな実lex ideal、任意体、全i≥1・全j∈Int、実極小生成元集合に対して、商の内部次数deg(v)+i−1と寄与C(max(v)−1,i−1)を保持する。実斉次像/商map、実grading shift、実colon SESの次数付き加法性、座標商のgraded集中を構成し、実生成元順で有限帰納した。座標商は非Artinも含み、有限k-chainの仮定を加えていない。
+focused02は7 fixture＋公理probeの8 commandが個別exit0/警告0。実lex ideal(X0,X1²)の全positive row/全internal degreeの式をQ/F2/F3で検査し、生成元の異なる次数と商の一段ずれを確認。root6102jobs成功。主要5exportの推移公理はpropext/Classical.choice/Quot.soundだけ。元のRequestedGoals hash不変、旧verification/artifactのbyte変更なし。以前のR06 coldは新規追加前の記録で、現在追加の全回帰はまだ。
+X_BHP_EKはBHP conjunctが未証明のため閉じていない。全体は引き続き3閉鎖/3未完。任意標数BHP/Pardue、同じ全Hilbert関数の一つのlex idealの存在、dense支払い、元のSへの全域幅比較を継続する。ユーザーが共有したarXiv1210.5562/0812.0594、M2 source、Pardue DOIは4本ともCONNECT403だった（source_fetch01.json）。未読本文を読了扱いせず、PDF添付を依頼済み。Run19は保留、Run18の内部milestoneを完了としない。

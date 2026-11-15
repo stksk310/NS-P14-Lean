@@ -1,0 +1,7 @@
+⚠ [4804/4805] Built NSP14.Endpoint.VariableIdealGraded (1.5s)
+warning: NSP14/Endpoint/VariableIdealGraded.lean:100:6: Unused tactic linter: `change
+  coordinateGradedBetti k σ (x :: xs) (i + 1) t =
+    if ((i + 1 : ℕ) : ℤ) = t then (x :: xs).length.choose (i + 1) else 0` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (4805 jobs).

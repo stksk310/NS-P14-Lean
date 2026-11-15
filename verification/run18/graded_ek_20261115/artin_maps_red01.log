@@ -1,0 +1,4 @@
+tests/ArtinGradedMaps.lean:21:4: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinQuotientMap`
+tests/ArtinGradedMaps.lean:22:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinQuotientMap_homogeneous`
+tests/ArtinGradedMaps.lean:31:4: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinMultiplyMap`
+tests/ArtinGradedMaps.lean:33:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinMultiplyMap_homogeneous`

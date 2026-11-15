@@ -1,0 +1,5 @@
+tests/LexGradedStep.lean:9:9: error(lean.unknownIdentifier): Unknown constant `Lex.predecessor_adjoin_homogeneous`
+tests/LexGradedStep.lean:11:9: error(lean.unknownIdentifier): Unknown constant `Lex.predecessor_homogeneous`
+tests/LexGradedStep.lean:12:35: error(lean.unknownIdentifier): Unknown constant `Lex.beforeVariableIdeal`
+tests/LexGradedStep.lean:13:9: error(lean.unknownIdentifier): Unknown constant `Lex.beforeVariableIdeal_homogeneous`
+tests/LexGradedStep.lean:14:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsLex.predecessor_graded_step`

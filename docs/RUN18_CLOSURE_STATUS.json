@@ -133,7 +133,9 @@
     "continuation_20261114",
     "previous_successful_verification_20261114_r04",
     "previous_successful_verification_20261113",
-    "previous_successful_verification_20261114_r05"
+    "previous_successful_verification_20261114_r05",
+    "post_r06_ek_foundations",
+    "post_r06_graded_infrastructure"
   ],
   "previous_successful_verification_20261114_r05": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
@@ -199,5 +201,22 @@
     "focused_evidence": "verification/run18/graded_ek_20261115/focused01.json",
     "root_build": "verification/run18/graded_ek_20261115/root_build01.log",
     "axioms_and_public_type": "verification/run18/graded_ek_20261115/Axioms_green01.log"
+  },
+  "post_r06_graded_ek": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "closed_subcontract": "NSP14.Run18.ek_closed : Requested.EK",
+    "export": "NSP14.Lex.IsLex.graded_ek",
+    "proved": "Frozen graded EK over arbitrary fields, all positive homological rows and all integer internal degrees; actual coordinate quotient concentration and shifted actual colon sequences; finite actual minimal-generator induction.",
+    "focused_evidence": "verification/run18/graded_ek_20261115/focused02.json",
+    "root_build": "verification/run18/graded_ek_20261115/graded_ek_root02.log",
+    "axioms_and_public_type": "verification/run18/graded_ek_20261115/Axioms02_focused02.log",
+    "not_proved": [
+      "BHP/Pardue over arbitrary fields",
+      "common-Hilbert lex existence",
+      "dense closure",
+      "global width closure"
+    ],
+    "closure_id_effect": "X_BHP_EK remains open because its BHP conjunct is unproved; closed_ids unchanged.",
+    "source_fetch": "verification/run18/graded_ek_20261115/source_fetch01.json"
   }
 }
