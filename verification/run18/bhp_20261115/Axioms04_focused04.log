@@ -1,0 +1,20 @@
+'NSP14.Homological.basisDiagonalMap_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artinGradedChain_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artinGradedBoundary_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artinGradedBoundary_triangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artinGradedBoundary_sameTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artinGradedBoundary_monomial_offTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Endpoint.artinGradedBoundary_sameTerm : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (t : ℤ) (i : ℕ)
+  (s : NSP14.Endpoint.ArtinChainIndex k q I t (i + 1)) (r : NSP14.Endpoint.ArtinChainIndex k q I t i),
+  NSP14.Endpoint.artinChainTerm k q I t (i + 1) s = NSP14.Endpoint.artinChainTerm k q I t i r →
+    ((NSP14.Endpoint.artinGradedChainBasis k q I hI t i).repr
+          ((NSP14.Homological.gradedKoszulDifferential k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) I)
+              (NSP14.Endpoint.artinGrading k (Fin q) I hI) (NSP14.Homological.variableList k (Fin q)) t i)
+            ((NSP14.Endpoint.artinGradedChainBasis k q I hI t (i + 1)) s)))
+        r =
+      NSP14.Endpoint.koszulArrowEntry k q
+        (NSP14.Homological.koszulSlotArrow (NSP14.Homological.variableList k (Fin q)) i (↑s).1 (↑r).1)
+NSP14.Endpoint.artinGradedChain_finite : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (t : ℤ) (i : ℕ),
+  Module.Finite k ↥(NSP14.Endpoint.artinGradedChainSpace k q I hI t i)

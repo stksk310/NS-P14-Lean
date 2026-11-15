@@ -654,3 +654,9 @@ public import NSP14.Endpoint.InitialAction
 public import NSP14.Homological.KoszulSlotGrading
 public import NSP14.Homological.HomogeneousBasisPieces
 public import NSP14.Homological.GradedKoszulBasis
+public import NSP14.Homological.BasisBlocks
+public import NSP14.Endpoint.ArtinGradedChain
+public import NSP14.Endpoint.InitialBoundary
+public import NSP14.Endpoint.InitialTransport
+public import NSP14.Endpoint.InitialDiagonal
+public import NSP14.Lex.InitialBetti

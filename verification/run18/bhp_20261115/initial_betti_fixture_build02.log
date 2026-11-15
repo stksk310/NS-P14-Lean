@@ -1,0 +1,9 @@
+tests/InitialBetti.lean:25:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  (MvPolynomial.X 0 ^ 2 + MvPolynomial.X 1 ^ 2).IsHomogeneous 2
+but is expected to have type
+  MvPolynomial.X 0 ^ 2 + MvPolynomial.X 1 ^ 2 ∈ MvPolynomial.homogeneousSubmodule (Fin 2) k 2
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  AddMonoidAlgebra.mul' ↦ 16

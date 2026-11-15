@@ -1,0 +1,1 @@
+tests/ArtinGradedChain.lean:12:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinGradedChain_finite`

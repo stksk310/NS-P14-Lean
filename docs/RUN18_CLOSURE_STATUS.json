@@ -135,7 +135,9 @@
     "previous_successful_verification_20261113",
     "previous_successful_verification_20261114_r05",
     "post_r06_ek_foundations",
-    "post_r06_graded_infrastructure"
+    "post_r06_graded_infrastructure",
+    "post_r07_bhp_initial_foundations",
+    "post_r07_bhp_graded_basis"
   ],
   "previous_successful_verification_20261114_r05": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
@@ -255,7 +257,8 @@
     "focused_evidence": "verification/run18/bhp_20261115/focused01.json",
     "root_build": "verification/run18/bhp_20261115/root_build02.log",
     "source_receipts": "verification/run18/bhp_20261115/source_receipts01.json",
-    "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+    "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c",
+    "as_of_commit": "adc4e32e71ee8d567015b503f46dd83aa11d84e3"
   },
   "post_r07_bhp_graded_basis": {
     "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
@@ -268,6 +271,30 @@
     "focused_evidence": "verification/run18/bhp_20261115/focused03.json",
     "axioms": "verification/run18/bhp_20261115/Axioms03_focused03.log",
     "root_build": "verification/run18/bhp_20261115/root_build04.log",
-    "not_proved": "Initial-ideal graded Betti comparison is not yet assembled. BHP/Pardue, common-Hilbert lex existence, dense/global remain open."
+    "not_proved": "Initial-ideal graded Betti comparison is not yet assembled. BHP/Pardue, common-Hilbert lex existence, dense/global remain open.",
+    "as_of_commit": "15ede63f456d96d3195568d58bcbdff38c4a3cb4"
+  },
+  "post_r07_initial_betti": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "export": "NSP14.Lex.quotientGradedBetti_initial_le",
+    "proved": "Actual graded Betti inequality for every homogeneous quotient and its actual degLex initial ideal, every field, all homological rows and integer internal degrees, including non-Artinian quotients.",
+    "modules": [
+      "NSP14.Homological.BasisBlocks",
+      "NSP14.Endpoint.ArtinGradedChain",
+      "NSP14.Endpoint.InitialBoundary",
+      "NSP14.Endpoint.InitialTransport",
+      "NSP14.Endpoint.InitialDiagonal",
+      "NSP14.Lex.InitialBetti"
+    ],
+    "focused_evidence": "verification/run18/bhp_20261115/focused06.json",
+    "root_build": "verification/run18/bhp_20261115/root_build06.log",
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms05_focused06.log",
+    "not_proved": [
+      "general initial-monomial-to-lex BHP deformation and termination",
+      "common-Hilbert lex ideal existence",
+      "dense closure",
+      "global width closure"
+    ],
+    "closure_id_effect": "No new assigned closed ID. X_BHP_EK remains open; EK conjunct alone is closed."
   }
 }

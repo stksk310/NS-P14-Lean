@@ -1,0 +1,17 @@
+'NSP14.Lex.quotientGradedBetti_initial_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.initial_graded_boundary_rank_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.initialBoundary_eq_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.initialBoundaryTransport_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.quotientGradedBetti_initial_le : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (i : ℕ) (t : ℤ),
+  NSP14.Lex.quotientGradedBetti k q I hI i t ≤
+    NSP14.Lex.quotientGradedBetti k q (NSP14.Lex.initialIdeal k q MonomialOrder.degLex I) ⋯ i t
+NSP14.Endpoint.initial_graded_boundary_rank_le : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (t : ℤ) (i : ℕ),
+  Module.finrank k
+      ↥(NSP14.Homological.gradedKoszulDifferential k (Fin q)
+            (NSP14.Endpoint.artinModule k (Fin q) (NSP14.Lex.initialIdeal k q MonomialOrder.degLex I))
+            (NSP14.Endpoint.artinGrading k (Fin q) (NSP14.Lex.initialIdeal k q MonomialOrder.degLex I) ⋯)
+            (NSP14.Homological.variableList k (Fin q)) t i).range ≤
+    Module.finrank k ↥(NSP14.Endpoint.artinBoundaryMap k q I hI t i).range

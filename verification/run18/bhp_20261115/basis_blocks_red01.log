@@ -1,0 +1,2 @@
+tests/BasisBlocks.lean:10:22: error(lean.unknownIdentifier): Unknown identifier `Homological.basisDiagonalMap`
+tests/BasisBlocks.lean:11:2: error(lean.unknownIdentifier): Unknown identifier `Homological.basisDiagonalMap_rank`

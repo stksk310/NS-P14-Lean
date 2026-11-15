@@ -1,0 +1,51 @@
+✖ [3798/3799] Building NSP14.Homological.BasisBlocks (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/BasisBlocks.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/BasisBlocks.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/BasisBlocks.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/BasisBlocks.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/BasisBlocks.setup.json --json
+error: NSP14/Homological/BasisBlocks.lean:38:4: Type mismatch: After simplification, term
+  he
+ has type
+  @Eq k ((b.coord j) ((basisBlockProjection k b key a) x)) ((b.coord j) x)
+but is expected to have type
+  @Eq k ((b.repr ((basisBlockProjection k b key a) x)) j) ((b.repr x) j)
+error: NSP14/Homological/BasisBlocks.lean:39:4: Type mismatch: After simplification, term
+  he
+ has type
+  @Eq k ((b.coord j) ((basisBlockProjection k b key a) x)) 0
+but is expected to have type
+  @Eq k ((b.repr ((basisBlockProjection k b key a) x)) j) 0
+warning: NSP14/Homological/BasisBlocks.lean:63:0: automatically included section variable(s) unused in theorem `NSP14.Homological.basisDiagonalMap_basis`:
+  [Fintype I]
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: NSP14/Homological/BasisBlocks.lean:79:53: unsolved goals
+k : Type
+inst✝⁸ : Field k
+I Γ X : Type
+inst✝⁷ : AddCommGroup X
+inst✝⁶ : Module k X
+b : Module.Basis I k X
+key : I → Γ
+inst✝⁵ : Fintype I
+J Y : Type
+inst✝⁴ : Fintype J
+inst✝³ : Fintype Γ
+inst✝² : LinearOrder Γ
+inst✝¹ : AddCommGroup Y
+inst✝ : Module k Y
+c : Module.Basis J k Y
+v : J → Γ
+d : X →ₗ[k] Y
+i : I
+j : J
+⊢ (if v j = key i then (c.repr (d (b i))) j else 0) = if v j = key i then (c.repr (d (b i))) j else 0
+error: NSP14/Homological/BasisBlocks.lean:101:6: Type mismatch: After simplification, term
+  hea
+ has type
+  e < a
+but is expected to have type
+  key i < a
+Some required targets logged failures:
+- NSP14.Homological.BasisBlocks
+error: build failed

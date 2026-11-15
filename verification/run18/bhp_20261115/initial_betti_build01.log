@@ -1,0 +1,39 @@
+✖ [4984/4985] Building NSP14.Lex.InitialBetti (2.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/InitialBetti.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/InitialBetti.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/InitialBetti.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/InitialBetti.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/InitialBetti.setup.json --json
+error: NSP14/Lex/InitialBetti.lean:35:6: Type mismatch: After simplification, term
+  Endpoint.initial_graded_boundary_rank_le k q I hI t n
+ has type
+  Module.finrank k
+      ↥(gradedKoszulDifferential k (Fin q) (Endpoint.artinModule k (Fin q) (initialIdeal k q MonomialOrder.degLex I))
+            (Endpoint.artinGrading k (Fin q) (initialIdeal k q MonomialOrder.degLex I) ⋯) (variableList k (Fin q)) t
+            n).range ≤
+    Module.finrank k ↥(Endpoint.artinBoundaryMap k q I hI t n).range
+but is expected to have type
+  Module.finrank k
+      ↥(ModuleCat.Hom.hom
+            (ChainComplex.of.d
+              (fun i =>
+                ↧↥(gradedKoszulSpace k (Fin q) (Endpoint.artinModule k (Fin q) J) (Endpoint.artinGrading k (Fin q) J hJ)
+                      (variableList k (Fin q)) t i))
+              (fun i =>
+                ModuleCat.ofHom
+                  (gradedKoszulDifferential k (Fin q) (Endpoint.artinModule k (Fin q) J)
+                    (Endpoint.artinGrading k (Fin q) J hJ) (variableList k (Fin q)) t i))
+              (n + 1) n)).range ≤
+    Module.finrank k
+      ↥(ModuleCat.Hom.hom
+            (ChainComplex.of.d
+              (fun i =>
+                ↧↥(gradedKoszulSpace k (Fin q) (Endpoint.artinModule k (Fin q) I) (Endpoint.artinGrading k (Fin q) I hI)
+                      (variableList k (Fin q)) t i))
+              (fun i =>
+                ModuleCat.ofHom
+                  (gradedKoszulDifferential k (Fin q) (Endpoint.artinModule k (Fin q) I)
+                    (Endpoint.artinGrading k (Fin q) I hI) (variableList k (Fin q)) t i))
+              (n + 1) n)).range
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Module.rank ↦ 8
+Some required targets logged failures:
+- NSP14.Lex.InitialBetti
+error: build failed
