@@ -1,0 +1,19 @@
+⚠ [5580/5583] Built NSP14.Width.EdgeHoleGeometry (1.5s)
+warning: NSP14/Width/EdgeHoleGeometry.lean:51:58: Variable name `hh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✖ [5582/5583] Building NSP14.Homological.KoszulCombinedMinor (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/KoszulCombinedMinor.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulCombinedMinor.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulCombinedMinor.setup.json --json
+error: NSP14/Homological/KoszulCombinedMinor.lean:18:43: unexpected token 'include'; expected 'lemma'
+warning: NSP14/Homological/KoszulCombinedMinor.lean:56:8: Unused tactic linter: `change _ ≠ 0` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NSP14/Homological/KoszulCombinedMinor.lean:59:8: Unused tactic linter: `change _ ≠ 0` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Some required targets logged failures:
+- NSP14.Homological.KoszulCombinedMinor
+error: build failed

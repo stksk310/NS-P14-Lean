@@ -1,0 +1,89 @@
+✖ [4632/4633] Building NSP14.Lex.Stable (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/Stable.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/Stable.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/Stable.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/Stable.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/Stable.setup.json --json
+error: NSP14/Lex/Stable.lean:10:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Finsupp.instAdd', which is 'noncomputable'
+error: NSP14/Lex/Stable.lean:19:6: Type mismatch: After simplification, term
+  hj
+ has type
+  0 < v j
+but is expected to have type
+  1 ≤ v j
+error: NSP14/Lex/Stable.lean:20:6: `simp` made no progress
+error: NSP14/Lex/Stable.lean:33:2: unsolved goals
+case refine_1
+q : ℕ
+v : Fin q →₀ ℕ
+i j : Fin q
+hij : i < j
+t : Fin q
+ht : t < i
+htj : j ≠ t
+hti : i ≠ t
+⊢ v t = v t - (Finsupp.single j 1) t + (Finsupp.single i 1) t
+error: NSP14/Lex/Stable.lean:41:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  d ≥ 0
+  d ≥ 0
+  d + e ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑↑j
+ b := ↑↑i
+ c := ↑q
+ d := ↑(v i - (Finsupp.single j 1) i)
+ e := ↑((Finsupp.single j 1) i)
+warning: NSP14/Lex/Stable.lean:36:67: This simp argument is unused:
+  Finsupp.single_eq_of_ne htj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_of_ne hti, Nat.sub_zero,
+    add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Lex/Stable.lean:37:6: This simp argument is unused:
+  Finsupp.single_eq_of_ne hti
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_of_ne htj, Nat.sub_zero,
+    add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Lex/Stable.lean:37:34: This simp argument is unused:
+  Nat.sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_of_ne htj,
+    Finsupp.single_eq_of_ne hti, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Lex/Stable.lean:37:47: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_of_ne htj,
+    Finsupp.single_eq_of_ne hti, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Lex/Stable.lean:39:67: This simp argument is unused:
+  Finsupp.single_eq_of_ne hji
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_same, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Lex/Stable.lean:40:29: This simp argument is unused:
+  Nat.sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raisedExponent, Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_eq_of_ne hji,
+    Finsupp.single_eq_same]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Lex.Stable
+error: build failed

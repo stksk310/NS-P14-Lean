@@ -1,0 +1,38 @@
+✖ [5616/5617] Building NSP14.Width.EdgeHoleAction (1.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleAction.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleAction.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleAction.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleAction.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleAction.setup.json --json
+error: NSP14/Width/EdgeHoleAction.lean:44:16: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 1
+  e ≥ 0
+  e - f ≥ 1
+  c ≥ 0
+  c - e + f ≥ 1
+  c ≥ 1
+where
+ c := ↑D.u
+ e := ↑H.h
+ f := ↑(H.h - ↑b)
+error: NSP14/Width/EdgeHoleAction.lean:44:16: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 0
+  e - f ≤ -1
+  c ≥ 0
+  c - f ≥ 1
+  c ≥ 1
+  c + e - f ≥ 1
+where
+ c := ↑D.u
+ e := ↑H.h
+ f := ↑(H.h + D.u - ↑b)
+error: NSP14/Width/EdgeHoleAction.lean:71:71: Application type mismatch: The argument
+  rfl
+has type
+  ?m.21 = ?m.21
+but is expected to have type
+  True
+in the application
+  hm.right rfl
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleAction
+error: build failed

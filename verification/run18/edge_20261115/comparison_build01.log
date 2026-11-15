@@ -1,0 +1,76 @@
+✖ [5752/5759] Building NSP14.Width.EdgeHoleCounting (1.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleCounting.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleCounting.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleCounting.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleCounting.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleCounting.setup.json --json
+error: NSP14/Width/EdgeHoleCounting.lean:84:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  c ≥ 0
+  c - g ≤ -1
+  b ≥ 0
+  b - c ≥ 0
+  b - c - d + e ≤ 0
+  a ≥ 1
+where
+ a := ↑i
+ b := ↑(q.succ.choose i.succ)
+ c := ↑(q.choose i.succ)
+ d := ↑((q + 1).succ.choose i.succ)
+ e := ↑((q + 1).choose i.succ)
+ f := ↑((q + 2).choose (i + 1)) * ↑(i + 1)
+ g := ↑(q.choose (i + 1))
+error: NSP14/Width/EdgeHoleCounting.lean:86:2: linarith failed to find a contradiction
+case h1
+q i : ℕ
+hi : 1 ≤ i
+hp : (q + 1).choose i = q.choose (i - 1) + q.choose i
+hp1 : q.succ.choose i.succ = q.choose i + q.choose i.succ
+hp2 : (q + 1).succ.choose i.succ = (q + 1).choose i + (q + 1).choose i.succ
+h : (q + 2) * (q.choose (i - 1) + q.choose i) = (q.choose (i - 1) + 2 * q.choose i + q.choose (i + 1)) * (i + 1)
+hf : (q + 2).choose (i + 1) = q.choose (i - 1) + 2 * q.choose i + q.choose (i + 1)
+a✝ :
+  i * (q + 2).choose (i + 1) + 3 * q.choose i + 2 * q.choose (i - 1) + q.choose (i + 1) <
+    (q + 3) * (q.choose i + q.choose (i - 1))
+⊢ False
+failed
+error: NSP14/Width/EdgeHoleCounting.lean:102:6: unsolved goals
+case neg
+q i : ℕ
+hqi : q ≤ i
+hiq : ¬i = q
+hiq1 : ¬i = q + 1
+⊢ 0 + Nat.choose 1 (i - q) = 0
+error: NSP14/Width/EdgeHoleCounting.lean:114:4: Tactic `apply` failed: could not unify the conclusion of `@Nat.le_min`
+  ?a ≤ min ?b ?c ↔ ?a ≤ ?b ∧ ?a ≤ ?c
+with the goal
+  1 ≤ min ((q + 2).choose (i - 1)) ((q + 2).choose i)
+
+Note: The full type of `@Nat.le_min` is
+  ∀ {a b c : ℕ}, a ≤ min b c ↔ a ≤ b ∧ a ≤ c
+
+case pos
+q i : ℕ
+hq : 3 ≤ q
+hi : 1 ≤ i
+he : i = q ∨ i = q + 1
+hiq : i ≤ q + 1
+⊢ 1 ≤ min ((q + 2).choose (i - 1)) ((q + 2).choose i)
+✖ [5756/5759] Building NSP14.Width.EdgeHoleResources (1.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleResources.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleResources.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleResources.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleResources.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleResources.setup.json --json
+error: NSP14/Width/EdgeHoleResources.lean:116:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  c ≥ 0
+  -2 ≤ c - e ≤ -1
+  b ≥ 1
+  b - e ≤ -3
+where
+ b := ↑D.a.card
+ c := ↑D.q
+ e := ↑(D.coreP k)
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleCounting
+- NSP14.Width.EdgeHoleResources
+error: build failed

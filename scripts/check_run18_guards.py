@@ -16,7 +16,7 @@ def main():
         git('init','-q');write('src.lean','-- guard fixture, not a mathematical verification\n')
         git('add','src.lean');git('-c','user.name=Run18 Guard','-c','user.email=guard@example.invalid','commit','-qm','source')
         base=git('rev-parse','HEAD')
-        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,fresh_project_test_cache=True,fresh_new_production_cache=True,checks=[dict(passed=True)],proof_snapshot_commit=base,closed_ids=['W_SPARSE','W_FIVE'],unproved_ids=['X_BHP_EK','W_EDGE','W_DENSE','W_CLOSE'])
+        summary=dict(status='PASS_RUN18_PARTIAL_VALIDATION',run18_complete=False,fresh_project_test_cache=True,fresh_new_production_cache=True,checks=[dict(passed=True)],proof_snapshot_commit=base,closed_ids=['W_SPARSE','W_FIVE','W_EDGE'],unproved_ids=['X_BHP_EK','W_DENSE','W_CLOSE'])
         write('verification/run18/runs/guard/verification.json',json.dumps(summary))
         write('verification/run18/runs/guard/SOURCE_SHA256.json',json.dumps({'src.lean':sha(r/'src.lean')}))
         manifest={str(p.relative_to(r)):sha(p)for p in v.iterdir()}

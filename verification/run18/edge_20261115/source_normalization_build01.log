@@ -1,0 +1,20 @@
+✖ [4628/4629] Building NSP14.Width.SourceNormalization (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/SourceNormalization.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/SourceNormalization.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/SourceNormalization.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/SourceNormalization.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/SourceNormalization.setup.json --json
+error: NSP14/Width/SourceNormalization.lean:13:2: `simp` made no progress
+warning: NSP14/Width/SourceNormalization.lean:16:45: This simp argument is unused:
+  normalize_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [offsets, Finset.gcd_insert, id_eq, gcd_eq_nat_gcd, Nat.gcd_zero_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: NSP14/Width/SourceNormalization.lean:21:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Finset.gcd ?m.20 fun x => ?m.21 x * ?m.22
+in the target expression
+  D.offsets.gcd (id ∘ fun b => b * D.d) = D.d
+
+D : Data
+⊢ D.offsets.gcd (id ∘ fun b => b * D.d) = D.d
+Some required targets logged failures:
+- NSP14.Width.SourceNormalization
+error: build failed

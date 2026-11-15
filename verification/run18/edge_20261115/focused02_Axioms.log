@@ -1,0 +1,3 @@
+'NSP14.Run18.edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.Data.OneHole.actual_boundary_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.raise' depends on axioms: [propext, Classical.choice, Quot.sound]

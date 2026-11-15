@@ -1,0 +1,9 @@
+⚠ [5616/5619] Built NSP14.Width.EdgeHoleCounting (1.5s)
+warning: NSP14/Width/EdgeHoleCounting.lean:30:22: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NSP14/Width/EdgeHoleCounting.lean:30:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [5618/5619] Built NSP14.Width.EdgeHoleAction (1.8s)
+Build completed successfully (5619 jobs).

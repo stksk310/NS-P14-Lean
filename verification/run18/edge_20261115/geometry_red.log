@@ -1,0 +1,3 @@
+tests/WidthEdgeGeometry.lean:9:4: error(lean.invalidField): Invalid field `one_missing_offset`: The environment does not contain `NSP14.Endpoint.Data.one_missing_offset`, so it is not possible to project the field `one_missing_offset` from an expression
+  D
+of type `Endpoint.Data`

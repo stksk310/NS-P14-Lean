@@ -616,3 +616,14 @@ public import NSP14.Width.FiveHoleTopRank
 public import NSP14.Width.FiveHoleEdge
 public import NSP14.Width.FiveHoleComparison
 public import NSP14.Width.FiveComparison
+public import NSP14.Homological.KoszulCombinedMinor
+public import NSP14.Width.EdgeHoleGeometry
+public import NSP14.Width.EdgeHoleAction
+public import NSP14.Width.EdgeHoleCounting
+public import NSP14.Width.EdgeHoleMinor
+public import NSP14.Width.EdgeHoleWedgeCount
+public import NSP14.Width.EdgeHoleResources
+public import NSP14.Width.EdgeHoleComparison
+public import NSP14.Width.SourceNormalization
+public import NSP14.Lex.Stable
+public import NSP14.Lex.MonomialGenerators

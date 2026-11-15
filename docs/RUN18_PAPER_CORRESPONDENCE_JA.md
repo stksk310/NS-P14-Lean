@@ -54,3 +54,15 @@ Run18全体は未完である。現時点で閉じた担当IDは **W_SPARSE・W_
 - `FiveComparison` はu=4のAP、u=5、u=6/7、u≥8の二構造を網羅する。元の任意S、任意体k、物理幅V=d*u、各環自身のactual最小変数列、全iを保持する。`audit/run18/FiveClosedGoals.lean` の `NSP14.Run18.five_closed` が変更していない `Requested.W_FIVE` を証明する。
 
 最新の未完はX_BHP_EK、W_EDGE（q≥4の一欠落）、W_DENSEのlex/閉鎖、W_CLOSE。DenseResourcesとAP半分は既に証明済み。Run18全体はPARTIALのままであり、五生成元閉鎖だけで一般のBHP/EKや全域幅比較を証明したとはしない。
+
+## 2026-11-15：一般一欠落幅の閉鎖（Run18継続中）
+
+最新closed IDはW_SPARSE,W_FIVE,W_EDGEの3件。X_BHP_EK,W_DENSE,W_CLOSEは未完で、Run19着手はユーザー指示で保留した。
+
+`EdgeHoleGeometry` は元のaのcardから一意な欠落hと、実minimal語次数≤2、二次生存offset h/h+uを導く。`OneHole` はhの範囲と元のalphabet等式だけを持ち、比較結論やrank証明書を含まない。
+`EdgeHoleAction` は欠落の左右の実内部変数にmate involutionを構成する。各線形係数は同じ側の唯一のpartnerにだけ二次基底成分を持つ。`EdgeHoleMinor` は各target wedgeに存在する欠落partnerから、元のKoszul slotへの挿入と符号付き対角単位minorを構成する。`KoszulCombinedMinor` は一次/二次係数の実交差成分が0であることを用いてunit minorと合成する。全証明は任意Fieldで、標数2でも±1は単位である。
+`EdgeHoleWedgeCount` は全blockを含むwedge数をguard付き二項係数で数え、`EdgeHoleCounting` は二つの補正の和をactual targetの二つの補正以下に抑える。負添字をNat飽和減算で別係数に変えない。原稿のexact rank/Betti等式を一般定理としては主張せず、actual chain rankの十分な下界を証明した。
+端欠落では二次offsetの一意性からP≤q+2、内部欠落では元のdense資源P≤q+3、いずれも元のHx≤1とR=0を使う。`narrow_oneHole_comparison` は元のS/物理幅/独自の最小変数/完備接錐を保持する。既存のAP比較と合わせた `edge_closed` が凍結W_EDGEそのものを閉じる。
+`SourceNormalization` は任意Dの実sourceのoffsetGcd=d、normalizedWidth=uを証明し、m=du+2,d=3のactual source fixtureへ適用した。
+
+`Lex/Stable` は元のlex条件から同次数の変数引上げ閉性を任意標数で導く。`Lex/MonomialGenerators` は実monomial membershipから最小divisorを構成し、Dicksonにより実極小生成元集合の有限性とideal span等式を証明する。これはEK解消や一般BHP比較の代用ではなく、X_BHP_EKは閉じていない。

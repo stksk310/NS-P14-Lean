@@ -97,3 +97,15 @@ Final: Ruling: reviewerが認証対象外とした一般b1=h+4、未完4ID、公
 antipodalで新しく使える実exportは `antipodalPresentation`、`antipodalModuleIso`、`antipodal_actual_betti`、`antipodal_coreP`、`antipodal_wordVolume`。必要なcoprimeはgcd(t,h)=1でありgcd(t,2h)=1ではない。一般の厳密b1=h+4は未証明で、W_FIVEの第一行は実P上界による別経路を使う。有限検算のb1値を一般定理の入力にしない。
 
 残るBHP/Pardue/EKは固定mathlibに該当証明を確認できておらず、新規の大きな形式化を要する。公刊本文の取得制限と調査範囲は `RUN18_INPUT_INVENTORY_JA.md` に記録。残りを必ず2runで終えられるとは評価しない。Run19/20へ進む前にRun18の正確な閉鎖条件を維持する。
+
+## 2026-11-15：ユーザー指示によるRun18再開
+
+Run18未完のままRun19指令を渡した判断は訂正した。最新work88dbd04をRun18 branchへfast-forwardで保持し、Run19は着手保留。残るRun18全契約の完成が現在の目的であり、今回の内部checkpointをRun18完了としない。
+
+Ruling: 一欠落幅は実二次blockの完全rank等式を先に作る代わりに、元のKoszul微分で構成した符号付き単位minorの下界と、実chain dimension/Eulerから十分な全行評価を導く。凍結W_EDGEの元の型を変更しない。誤っていれば原稿の厳密式も証明済みと誤認されるため、厳密式は独立有限検算のみに留め、一般Lean exportは実下界と比較とする。
+
+W_EDGEの元の凍結受入がGREEN。q3..9の12 actual sourceでQ/標数2/3の全行比較、d3,m=du+2、両端/内部の欠落をfocused検証。実推移公理依存はedge_closed/actual_boundary_rank/lex raiseで許容三公理のみ。独立checkerは22 actual coreと10290整数補正検査を通過。root6062jobs成功。各失敗・成功ログを新しいedge_20261115/lex_20261115へ保存。
+
+Ruling: 新規productionがHomologicalへ追加されたため、cold verifierはLex/Width directoryだけでなく、それ以外の新規productionのlib/IR各fileも退避して再構築する。誤っていれば既存oleanをcoldと誤表示するため、退避対象をfresh_cache.jsonに記録し、全source/evidenceをgit bytesへ束縛する。
+
+残る障害は一般の任意標数BHP/Pardue/EKと、それを使うdense閉鎖・全域合成。固定mathlib/既存sourceに必要な一般比較は確認できていない。arXivの指定原典PDF/HTMLもこの環境でCONNECT403となった。未取得の本文や未構成の解消/圧縮を供給済みとはしない。読める原典URLの有無をユーザーへ非同期で照会し、独立な証明/検証を継続する。

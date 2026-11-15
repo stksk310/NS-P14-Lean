@@ -1,0 +1,44 @@
+✔ [5622/5625] Built NSP14.Width.EdgeHoleMinor (2.3s)
+✖ [5624/5625] Building NSP14.Width.EdgeHoleWedgeCount (5.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleWedgeCount.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleWedgeCount.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleWedgeCount.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleWedgeCount.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleWedgeCount.setup.json --json
+error: NSP14/Width/EdgeHoleWedgeCount.lean:38:12: unexpected token 'then'; expected term
+error: NSP14/Width/EdgeHoleWedgeCount.lean:57:92: No goals to be solved
+error: NSP14/Width/EdgeHoleWedgeCount.lean:57:26: unsolved goals
+D : Data
+H : D.OneHole
+j : ℕ
+a : H.MinorIndex j
+he : ¬(↑a).1 = false
+he' : (↑a).1 = true
+⊢ ¬H.block true ⊆ ↑(↑a).2
+error: NSP14/Width/EdgeHoleWedgeCount.lean:94:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  i ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + g ≥ 0
+  e ≥ 0
+  c ≥ 0
+  c + e ≥ 0
+  b ≥ 0
+  b - 2*c - e + i + k ≤ -1
+  b - c - e ≤ 0
+where
+ b := ↑(Width.containingBlock (H.block false).card (H.block true).card j)
+ c := ↑(Fintype.card { F // ¬H.block true ⊆ ↑F })
+ e := ↑(Width.containingBlock (H.block true).card (H.block false).card j)
+ f := ↑(D.q - (H.block false).card)
+ g := ↑(D.q - (H.block true).card)
+ i := ↑(Fintype.card { F // ¬H.block false ⊆ ↑F })
+ k := ↑(Fintype.card { F // ¬H.block true ⊆ ↑F })
+warning: NSP14/Width/EdgeHoleWedgeCount.lean:96:8: declaration uses `sorry`
+warning: NSP14/Width/EdgeHoleWedgeCount.lean:96:33: Variable name `hi` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hi
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleWedgeCount
+error: build failed
