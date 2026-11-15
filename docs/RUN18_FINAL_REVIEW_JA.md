@@ -146,3 +146,9 @@ The review’s positive PARTIAL verdict is not a claim that future publication a
 
 R14 cold全回帰成功：証明source 22cbb0ed5b6a2f48b66d35b2aee34f9f488bef57、264 command/251 fixture、10334宣言・新規2093宣言、1882 source hash・280 evidence hash、6523既存証跡のbyte保持。全宣言の推移公理は許容三公理のみ、自己依存なし。五production module/新audit/凍結BHPEK acceptanceをcold再構築/検査。独立レビュアーは全raw/processed宣言、normal/explicit型、全source/Git blobs、manifest、旧6523/前6213/baselineとR05–R13 manifestを照合し、Critical/Important/Minorすべて0、pending/declinedなし。report verification/run18/general_bhp_review_20261115.md、decision review_snapshot_general_bhp_20261115.json。summary SHA256 bfac554d8da937049de88c0ae1bd55d2e1667ac969605ef67dc221f48b9d4a81。
 一般任意標数の全positive行/全Int次数のactual BHPと凍結X_BHP_EKを認証。六IDはW_SPARSE/W_FIVE/W_EDGE/X_BHP_EKの4閉鎖、W_DENSE/W_CLOSE未完。一般whole-Hilbert lex存在・残るTask2 concrete acceptanceはこのsourceでは未完。後続/tmpのLexExistence/TotalBHP/LexCorrection等は認証対象外。Run18継続、Run19保留。
+
+## 2026-11-15 R15：一般lex存在とK計数認証
+
+
+R15 cold全回帰成功：証明source 6074994621ca5b57be28d44729a8ebab46f700a6、273 command/260 fixture、10461宣言・新規2220宣言、1931 source hash・289 evidence hash、6838既存証跡のbyte保持。全宣言の推移公理は許容三公理のみ、自己依存なし。八production module/九fixtureをcold再構築/検査。独立レビュアーは全raw/processed宣言、normal/explicit型、全source/Git blobs、manifest、旧6838/前6523/baselineとR05–R14 manifestを照合し、Critical/Important/Minorすべて0、pending/declinedなし。report verification/run18/lex_existence_correction_review_20261115.md、decision review_snapshot_lex_existence_correction_20261115.json。summary SHA256 fe8e7927f8251a05efff2c7dcf7533eee9156f89460e50a8790abef80e8b1186。
+一般whole-Hilbert lex存在、actual total BHP、有限standard K identity/全行bound、actual suffixの高次Hilbert/K一致と三変数nonlex actual Q/F2/F3 acceptanceを認証。一般lex存在は以後の未完理由ではない。四ID閉鎖/二ID未完を維持。dense harmonic支払いとactual QCへの適用/global閉鎖はこのsourceでは未完。後続/tmpのgeneric cyclic kernel/presentation/relabel、actual core lex、K harmonic/dense resource、numeric paymentは認証対象外。Run18継続、Run19保留。
