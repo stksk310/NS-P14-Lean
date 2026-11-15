@@ -1,0 +1,24 @@
+{
+  "status": "PASS_REVIEW_FOR_ACTUAL_GENERIC_STABILIZATION_AND_STRONG_STABILITY",
+  "run18_complete": false,
+  "proof_snapshot_commit": "f50e1d2e5fd1965e543f93569206ac52ac3a6a97",
+  "reviewed_source_commit": "f50e1d2e5fd1965e543f93569206ac52ac3a6a97",
+  "verification": "verification/run18/runs/release_candidate_20261115_r12/verification.json",
+  "verification_sha256": "e011ef90b9db91b90cc5972859218a953f1e9f6d1c3b0b92e48f7d397c45fbc9",
+  "report": "verification/run18/generic_stability_review_20261115.md",
+  "report_sha256": "6a50fd7e45193876674cc97773e405fee5f457f4bf9cb0d68ff52629c2810d63",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": [
+    "general lex comparison beyond strong stability",
+    "general common-whole-Hilbert lex existence",
+    "general BHP",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}
