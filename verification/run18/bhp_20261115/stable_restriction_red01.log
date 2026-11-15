@@ -1,0 +1,1 @@
+tests/StrongStableRestriction.lean:18:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsStronglyStable.last_zero_count_le`

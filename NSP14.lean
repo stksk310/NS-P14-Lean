@@ -694,3 +694,6 @@ public import NSP14.Lex.DegreeSeparator
 public import NSP14.Lex.ColexRestriction
 public import NSP14.Lex.StrongStableOperations
 public import NSP14.Lex.DegreeFamily
+public import NSP14.Lex.PrefixDominance
+public import NSP14.Lex.StrongStableRestriction
+public import NSP14.Lex.StrongStableEK

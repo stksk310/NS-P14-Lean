@@ -1,0 +1,38 @@
+'NSP14.Lex.degreeIdealFamily_zero_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.last_zero_count_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.predecessor_colon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.predecessor_graded_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.graded_ek' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.degreeIdealFamily_zero_shift : ∀ (k : Type) [inst : Field k] (q d : ℕ)
+  (I : Ideal (MvPolynomial (Fin (q + 2)) k)),
+  NSP14.Lex.IsStronglyStable k (q + 2) I →
+    ∀ B ∈ NSP14.Lex.degreeIdealFamily k (q + 1) d I,
+      0 ∉ B → ∀ x ∈ B, insert 0 (B.erase x) ∈ NSP14.Lex.degreeIdealFamily k (q + 1) d I
+NSP14.Lex.IsStronglyStable.last_zero_count_le : ∀ (k : Type) [inst : Field k] (q d : ℕ)
+  (I L : Ideal (MvPolynomial (Fin (q + 2)) k)),
+  NSP14.Lex.IsStronglyStable k (q + 2) I →
+    NSP14.Lex.IsLex k (q + 2) L →
+      Fintype.card { α // (MvPolynomial.monomial ↑α) 1 ∈ L } ≤ Fintype.card { α // (MvPolynomial.monomial ↑α) 1 ∈ I } →
+        {α | (MvPolynomial.monomial ↑α) 1 ∈ L ∧ ↑α (Fin.last (q + 1)) = 0}.card ≤
+          {α | (MvPolynomial.monomial ↑α) 1 ∈ I ∧ ↑α (Fin.last (q + 1)) = 0}.card
+NSP14.Lex.IsStronglyStable.predecessor_colon : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  {L : Ideal (MvPolynomial (Fin q) k)},
+  NSP14.Lex.IsStronglyStable k q L →
+    ∀ (w : Fin q →₀ ℕ),
+      NSP14.Lex.MinimalGenerator k q L w →
+        ∀ (r : Fin q),
+          0 < w r →
+            (∀ (i : Fin q), r < i → w i = 0) →
+              Submodule.colon (NSP14.Lex.predecessorIdeal k q L w) {(MvPolynomial.monomial w) 1} =
+                Ideal.span (MvPolynomial.X '' {i | i < r})
+NSP14.Lex.IsStronglyStable.graded_ek : ∀ (k : Type) [inst : Field k] (q : ℕ) {L : Ideal (MvPolynomial (Fin q) k)},
+  NSP14.Lex.IsStronglyStable k q L →
+    L ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L) (g : Finset (Fin q →₀ ℕ)),
+        (∀ (v : Fin q →₀ ℕ), v ∈ g ↔ NSP14.Lex.MinimalGenerator k q L v) →
+          ∀ (i : ℕ),
+            1 ≤ i →
+              ∀ (t : ℤ),
+                NSP14.Lex.quotientGradedBetti k q L hHom i t =
+                  ∑ v ∈ g,
+                    if ↑(Finsupp.degree v) + ↑i - 1 = t then (NSP14.Lex.maxVariable q v - 1).choose (i - 1) else 0
