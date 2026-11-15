@@ -1,0 +1,65 @@
+'NSP14.Lex.IsStronglyStable.cumulative_le_lex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.binomial_degree_sum_le_lex_of_hilbert' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Lex.degreeDecompositionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.degree_binomial_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.graded_betti_binomial_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.graded_betti_le_lex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.quotientGradedBetti_le_lex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.bhp_ek' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.IsStronglyStable.cumulative_le_lex : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I L : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    NSP14.Lex.IsLex k q L →
+      ∀ (d : ℕ),
+        NSP14.Lex.idealDegreeCard k q L d ≤ NSP14.Lex.idealDegreeCard k q I d →
+          ∀ (r : ℕ), NSP14.Lex.cumulativeDegreeCard k q L d r ≤ NSP14.Lex.cumulativeDegreeCard k q I d r
+NSP14.Lex.IsStronglyStable.binomial_degree_sum_le_lex_of_hilbert : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I L : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    NSP14.Lex.IsLex k q L →
+      ∀ (hHomI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+        (hHomL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L) (d i : ℕ),
+        NSP14.Lex.quotientHilbert k q I hHomI d = NSP14.Lex.quotientHilbert k q L hHomL d →
+          NSP14.Lex.degreeBinomialSum k q I d i ≤ NSP14.Lex.degreeBinomialSum k q L d i
+NSP14.Lex.degreeDecompositionEquiv : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (I : Ideal (MvPolynomial (Fin q) k)) →
+        NSP14.Lex.IsStronglyStable k q I →
+          (d : ℕ) →
+            NSP14.Lex.MinimalDegreeMonomial k q I (d + 1) ⊕ NSP14.Lex.AdjoinDegreeIndex k q I d ≃
+              NSP14.Lex.IdealDegreeMonomial k q I (d + 1)
+NSP14.Lex.IsStronglyStable.degree_binomial_identity : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    ∀ (d i : ℕ),
+      NSP14.Lex.degreeBinomialSum k q I (d + 1) i + NSP14.Lex.degreeBinomialSum k q I d (i + 1) =
+        ∑ α, (NSP14.Lex.maxVariable q ↑↑α - 1).choose i + NSP14.Lex.idealDegreeCard k q I d * q.choose (i + 1)
+NSP14.Lex.IsStronglyStable.graded_betti_binomial_identity : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (d i : ℕ),
+        NSP14.Lex.quotientGradedBetti k q I hHom (i + 1) (↑(d + 1) + ↑i) +
+            NSP14.Lex.idealDegreeCard k q I d * q.choose (i + 1) =
+          NSP14.Lex.degreeBinomialSum k q I (d + 1) i + NSP14.Lex.degreeBinomialSum k q I d (i + 1)
+NSP14.Lex.IsStronglyStable.graded_betti_le_lex : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I L : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    NSP14.Lex.IsLex k q L →
+      ∀ (hHomI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+        (hHomL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+        (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hHomI n = NSP14.Lex.quotientHilbert k q L hHomL n) →
+          ∀ (i : ℕ),
+            1 ≤ i →
+              ∀ (t : ℤ), NSP14.Lex.quotientGradedBetti k q I hHomI i t ≤ NSP14.Lex.quotientGradedBetti k q L hHomL i t
+NSP14.Lex.quotientGradedBetti_le_lex : ∀ (k : Type) [inst : Field k] (q : ℕ) (I L : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+  NSP14.Lex.IsLex k q L →
+    (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert k q L hL n) →
+      ∀ (i : ℕ),
+        1 ≤ i → ∀ (t : ℤ), NSP14.Lex.quotientGradedBetti k q I hI i t ≤ NSP14.Lex.quotientGradedBetti k q L hL i t
+NSP14.Lex.bhp_ek : NSP14.Run18.Requested.X_BHP_EK

@@ -34,7 +34,7 @@ def main():
     for f in append_only:assert(ROOT/f).read_bytes().startswith(git('show',BASE+':'+f)),f
     retained={str(p.relative_to(ROOT)):sha(p)for d in ['verification','artifacts']for p in(ROOT/d).rglob('*')if p.is_file()and not p.is_relative_to(out)}
     new_sources=sorted(str(p.relative_to(ROOT))for d in ['NSP14','tests','audit/run18']for p in(ROOT/d).rglob('*.lean')if str(p.relative_to(ROOT))not in old)
-    open_acceptances=[f for f in new_sources if '/acceptance/'in f and Path(f).stem not in {'W_FIVE','W_EDGE'}]
+    open_acceptances=[f for f in new_sources if '/acceptance/'in f and Path(f).stem not in {'W_FIVE','W_EDGE','BHPEK'}]
     valid_new=[f for f in new_sources if f not in open_acceptances]
     bound=sorted([str(p.relative_to(ROOT))for d in ['NSP14','tests','audit']for p in(ROOT/d).rglob('*.lean')]+[
         'NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json','scripts/verify_run18.py',
@@ -168,7 +168,8 @@ set_option maxHeartbeats 0
     assert all('type'in d and'explicit_type'in d for d in newdecls)
     names={d['name']for d in declarations}
     assert {'NSP14.Run18.edge_closed','NSP14.Run18.five_closed','NSP14.NumericalSemigroup.narrow_five_comparison','NSP14.Run18.sparse_closed','NSP14.NumericalSemigroup.narrow_sparse_comparison','Run15Closed.all_original_goals_closed','NSP14.Run17.kneser_closed','NSP14.Run17.savchevChen_closed'}<=names
-    assert not {'NSP14.Lex.bhp_ek','NSP14.Run18.dense_closed','NSP14.Run18.width_closed'}&names
+    assert 'NSP14.Lex.bhp_ek' in names
+    assert not {'NSP14.Run18.dense_closed','NSP14.Run18.width_closed'}&names
     assert git('rev-parse','HEAD').decode().strip()==source_snapshot,'HEAD changed during verification'
     assert {f:sha(ROOT/f)for f in bound}==initial,'source changed during verification'
     assert {f:sha(ROOT/f)for f in retained}==retained,'inherited evidence changed'
@@ -180,8 +181,8 @@ set_option maxHeartbeats 0
         fresh_new_production_cache=args.fresh_test_cache,evidence_directory=str(rel),checks=records,
         fixture_order=ordered,expected_open_acceptances=open_acceptances,allowed_axioms=sorted(ALLOWED),
         environment_declarations=len(declarations),new_environment_declarations=len(newdecls),
-        sources=valid_new,preserved_evidence_count=len(retained),closed_ids=['W_SPARSE','W_FIVE','W_EDGE'],
-        unproved_ids=['X_BHP_EK','W_DENSE','W_CLOSE'],frozen_requested_goals_sha256=FROZEN)
+        sources=valid_new,preserved_evidence_count=len(retained),closed_ids=['W_SPARSE','W_FIVE','W_EDGE','X_BHP_EK'],
+        unproved_ids=['W_DENSE','W_CLOSE'],frozen_requested_goals_sha256=FROZEN)
     (out/'verification.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
     manifest={str(p.relative_to(ROOT)):sha(p)for p in sorted(out.rglob('*'))if p.is_file()and p.name!='MANIFEST_SHA256.json'}
     (out/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')

@@ -697,3 +697,8 @@ public import NSP14.Lex.DegreeFamily
 public import NSP14.Lex.PrefixDominance
 public import NSP14.Lex.StrongStableRestriction
 public import NSP14.Lex.StrongStableEK
+public import NSP14.Lex.PrefixVariableRestriction
+public import NSP14.Lex.StableBinomialWeights
+public import NSP14.Lex.StableDegreeDecomposition
+public import NSP14.Lex.StableBettiComparison
+public import NSP14.Lex.BettiComparison

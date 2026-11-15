@@ -1,0 +1,27 @@
+[
+  {
+    "file": "verification/run18/bhp_20261115/prefix_variable_restriction_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/stable_binomial_weights_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/stable_degree_decomposition_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/stable_betti_comparison_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/general_bhp_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  }
+]
