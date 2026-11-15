@@ -1,0 +1,13 @@
+{
+  "verification/run18/runs/v06_alignment_review_20261116_r01/actual_cli_controls.json": "d43f00caeb22c3dc89b5ba65da13cdc8d8d97d73cceb99116784d998037274f3",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/decision.json": "b9687b73a13163d1c0a7dc9fb82b3c100c4ec26d45e29f2bed02cfc36b04b757",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/independent_check.json": "1e556d016c8b45ee56fd2db490f2a8b8e75fe6ead0d42ea793e18def0cd61e14",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/independent_check.py": "1833f09038500ae33729f216c60ec7d1df99262be279734287bf43735cc5c9e1",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/infrastructure_review.md": "5433e2bca2367a48db2dbe807777fa0b7eb9bc4c9f0478c136acfbab83edc0a1",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/math_review.md": "0b2fa162804ad1a1d873739ef3aa110109d87dc47df6a650d9ee2f2c64b8915f",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/report.md": "b55c3503bd9b3999428b26dec0fc12abaf8aa3a9234b2b67cbfaf82ac5ff9be4",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/runtime_audit.py": "387c737f023ae38f7291a22f4f198bdceb9d63dcbb818b99ef6175b1bda7a3b7",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/runtime_result.json": "ea00fa43c1a71d1e772827269fccde2819184249ebdff8faa97b09ee72a13fa6",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/runtime_review.md": "5cf916a68bcd6c05b948da2ce737c53264091be038aea3a793dd0b0f1413a7bb",
+  "verification/run18/runs/v06_alignment_review_20261116_r01/validation_stdout.log": "51ce5f4d15809ef351eacf13088d3fff06b4174c23ef7e91a20223ea24071fa0"
+}
