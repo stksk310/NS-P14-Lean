@@ -1,0 +1,21 @@
+{
+  "status": "PASS_REVIEW_FOR_GRADED_EK_AND_THREE_WIDTH_IDS_ONLY",
+  "run18_complete": false,
+  "proof_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c",
+  "reviewed_source_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c",
+  "verification": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+  "verification_sha256": "b6e72f9dedc2476112c89bd6732c04ebc6873fe40945605069516ed0cd7fe388",
+  "report": "verification/run18/graded_ek_review_20261115.md",
+  "report_sha256": "e767f30bd91b8c7ed14aa4aa9bd8c88c66d1c4e580df6ecb7954239b2aa0dd69",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "remaining": [
+    "BHP/Pardue",
+    "common-Hilbert lex existence",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}
