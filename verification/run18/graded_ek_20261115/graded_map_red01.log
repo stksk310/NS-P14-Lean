@@ -1,0 +1,2 @@
+tests/GradedKoszulRestriction.lean:20:17: error(lean.unknownIdentifier): Unknown identifier `Homological.gradedKoszulMap`
+tests/GradedKoszulRestriction.lean:21:2: error(lean.unknownIdentifier): Unknown identifier `Homological.gradedKoszulMap_homology_zero`

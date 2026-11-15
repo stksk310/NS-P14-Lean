@@ -119,3 +119,8 @@ R06 cold検証成功：source `62c30ae798871d4eb55703df29e2897a770d29b9`、全18
 focused03：8 named consumer fixtureと公理probeの9 command個別exit0/警告0、root build成功。実lex ideal(X0,X1²)の極小生成元集合を証明し、実ordinary行(2,1,0)をQ/F2/F3で適用。主要ordinary EK exportの推移公理は許容三公理のみ。追加後のcold全回帰はまだで、R06は以前の62c30ae sourceに対する内部記録として保持。既存verification/artifactに変更なし、凍結契約hash不変。
 元のRequested.EKは内部次数deg(v)+i−1まで要求するため、このordinary公式をEK/六IDの閉鎖と数えない。次は実graded map/完全列と内部次数を接続。BHP/Pardue・lex存在・dense/globalも未完。R06をRun18完了とせず継続する。
 通常atomic Push dd36b20をwork/実装branch両方で実測し、両remote SHA一致・clean checkoutを確認済み。以後のordinary EK追加はこの公開後の継続であり、公開済み証跡の書換えではない。
+
+2026-11-15 graded infrastructure：DirectSumSplit/GradedKoszulSplit/GradedKoszulMap/GradedKoszulExactを構成。actual degree inclusionのchain retractionと交差零を構成、actual内部homology単射、実斉次Koszul mapとdegree projection自然性を証明。各degreeの完全列はtotalの実前像を自然射影して構成（有限chainを仮定せず）。全体のactual left homology mapが零という実入力から、全internal degreeで実Betti加法性を証明。これは一般のgraded SES補題であり、比較結論付き証明書でBHP/EKを置換したものではない。
+3 named fixture＋公理/公開型probeの4 command個別exit0/警告0、root build成功。主要5exportは許容三公理のみ。公開型にhf/hg/hS/hzが正しく残ることを#checkで確認。最初のred1件は≫のopen不足だったためREDに数えず、open修正後のunknown-name REDを保持した。暗黙のcoefficientFunctor.obj展開でrwが失敗する箇所はcongrArgとtransで実等式を接続し、前提を追加していない。公開済みverification/artifactは無変更。
+ordinary EK source ae7da74はwork/実装branchへ通常atomicPush済み、両remote実測SHA一致・cleanを確認。最新追加4moduleはfocused検証済みだがR06 cold snapshotには含まれない。六IDは引き続き3閉鎖/3未完。
+次の具体的証明：artinGradingのactual homogeneous monomial像/quotient maps、actual shifted gradingとdegree補正、coordinate quotientのgraded集中（ordinary C(r,i)は完成）、graded EK有限生成元帰納。一般BHP/Pardue/lex存在の形式証明は依然未構成。ユーザー依頼は全Run18完了であり、内部milestoneを完了/Run19移行に変えず継続。

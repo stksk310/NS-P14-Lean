@@ -1,0 +1,8 @@
+module
+import NSP14.Homological.GradedKoszulExact
+#print axioms NSP14.Homological.gradedKoszulHomologyInclusion_injective
+#print axioms NSP14.Homological.gradedKoszulMap_homology_zero
+#print axioms NSP14.Homological.gradedKoszulMap_retraction
+#print axioms NSP14.Homological.gradedKoszulSequence_shortExact
+#print axioms NSP14.Homological.graded_quotient_betti_additivity
+#check NSP14.Homological.graded_quotient_betti_additivity

@@ -185,5 +185,19 @@
     "root_build": "verification/run18/lex_linear_quotients_20261115/root_build03.log",
     "axioms": "verification/run18/lex_linear_quotients_20261115/Axioms03_green04.log",
     "export": "NSP14.Lex.IsLex.ordinary_ek"
+  },
+  "post_r06_graded_infrastructure": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "modules": [
+      "NSP14.Homological.DirectSumSplit",
+      "NSP14.Homological.GradedKoszulSplit",
+      "NSP14.Homological.GradedKoszulMap",
+      "NSP14.Homological.GradedKoszulExact"
+    ],
+    "proved": "Actual summand retractions at chain level; injection of internal-degree homology; actual homogeneous Koszul maps and projection naturality; actual degreewise short exact sequences; actual graded quotient Betti additivity when the actual total left homology map is proved zero.",
+    "not_proved": "Coordinate quotient graded concentration, shifted graded EK recursion/induction and Requested.EK; BHP/Pardue and common-Hilbert lex existence; dense/global closure.",
+    "focused_evidence": "verification/run18/graded_ek_20261115/focused01.json",
+    "root_build": "verification/run18/graded_ek_20261115/root_build01.log",
+    "axioms_and_public_type": "verification/run18/graded_ek_20261115/Axioms_green01.log"
   }
 }

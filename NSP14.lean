@@ -636,3 +636,7 @@ public import NSP14.Homological.IdealScalarQuotient
 public import NSP14.Homological.VariableIdealReduction
 public import NSP14.Homological.VariableIdealBetti
 public import NSP14.Lex.EliahouKervaireOrdinary
+public import NSP14.Homological.DirectSumSplit
+public import NSP14.Homological.GradedKoszulSplit
+public import NSP14.Homological.GradedKoszulMap
+public import NSP14.Homological.GradedKoszulExact

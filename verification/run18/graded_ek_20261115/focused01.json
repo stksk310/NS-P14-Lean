@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/DirectSumSplit.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.544
+  },
+  {
+    "file": "tests/GradedKoszulRestriction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.866
+  },
+  {
+    "file": "tests/GradedKoszulExact.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.734
+  },
+  {
+    "file": "verification/run18/graded_ek_20261115/Axioms.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.484
+  }
+]

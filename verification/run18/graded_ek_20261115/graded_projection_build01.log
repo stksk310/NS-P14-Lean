@@ -1,0 +1,46 @@
+✔ [4688/4691] Built NSP14.Homological.GradedKoszulSplit (1.3s)
+✖ [4690/4691] Building NSP14.Homological.GradedKoszulMap (1.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/GradedKoszulMap.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulMap.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulMap.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulMap.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulMap.setup.json --json
+error: NSP14/Homological/GradedKoszulMap.lean:88:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  𝟙 ?m.232 ≫ ?f
+in the target expression
+  gradedKoszulMap k σ G H f s ⋯ xs u.as = gradedKoszulMap k σ G H f s hf xs u.as
+
+case pos
+k σ : Type u
+inst✝ : Field k
+M N : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+H : GradedPolynomialModule k σ N
+f : M ⟶ N
+s : ℤ
+hf : ∀ (q : ℤ), ∀ a ∈ G.degreeSpace q, (ConcreteCategory.hom f) a ∈ H.degreeSpace (q + s)
+xs : List σ
+i : ℕ
+u : Discrete ℤ
+⊢ gradedKoszulMap k σ G H f s ⋯ xs u.as = gradedKoszulMap k σ G H f s hf xs u.as
+error: NSP14/Homological/GradedKoszulMap.lean:83:47: unsolved goals
+case hf
+k σ : Type u
+inst✝ : Field k
+M N : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+H : GradedPolynomialModule k σ N
+f : M ⟶ N
+s : ℤ
+hf : ∀ (q : ℤ), ∀ a ∈ G.degreeSpace q, (ConcreteCategory.hom f) a ∈ H.degreeSpace (q + s)
+xs : List σ
+t : ℤ
+i : ℕ
+u : Discrete ℤ
+⊢ ∀ (q : ℤ), ∀ a ∈ G.degreeSpace q, (ConcreteCategory.hom f) a ∈ H.degreeSpace (q + s)
+warning: NSP14/Homological/GradedKoszulMap.lean:78:20: This simp argument is unused:
+  Category.assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [comp_f]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Homological.GradedKoszulMap
+error: build failed

@@ -1,0 +1,2 @@
+tests/GradedKoszulExact.lean:15:5: error(lean.unknownIdentifier): Unknown identifier `Homological.gradedKoszulSequence`
+tests/GradedKoszulExact.lean:16:2: error(lean.unknownIdentifier): Unknown identifier `Homological.gradedKoszulSequence_shortExact`

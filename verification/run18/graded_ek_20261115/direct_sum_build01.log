@@ -1,0 +1,14 @@
+⚠ [4602/4603] Built NSP14.Homological.DirectSumSplit (1.5s)
+warning: NSP14/Homological/DirectSumSplit.lean:29:24: `CategoryTheory.Limits.Sigma.ι_desc` has been deprecated: Use `CategoryTheory.Limits.Sigma.ι_comp_desc` instead
+
+Hint: Replace the deprecated name:
+  Sigma.ι_c̲o̲m̲p̲_̲desc
+warning: NSP14/Homological/DirectSumSplit.lean:29:37: `CategoryTheory.Limits.Sigma.ι_desc` has been deprecated: Use `CategoryTheory.Limits.Sigma.ι_comp_desc` instead
+
+Hint: Replace the deprecated name:
+  Sigma.ι_c̲o̲m̲p̲_̲desc
+warning: NSP14/Homological/DirectSumSplit.lean:39:9: `CategoryTheory.Limits.Sigma.ι_desc` has been deprecated: Use `CategoryTheory.Limits.Sigma.ι_comp_desc` instead
+
+Hint: Replace the deprecated name:
+  Sigma.ι_c̲o̲m̲p̲_̲desc
+Build completed successfully (4603 jobs).
