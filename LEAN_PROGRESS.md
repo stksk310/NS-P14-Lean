@@ -277,3 +277,7 @@ denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成
 ## 2026-11-16 V06主証明経路の同期
 
 base a7504ee。endpointの全j高さによる停止非依存、二つの整数slack第一行、同じ有理資源Bの第二行から全高次行への共通化、同一lex商Kによるdense二枝を実装した。既存公開型とRun18六契約を維持する。認証結果は新規v06_alignment証跡に固定proof commitとともに保存し、旧Run18証跡を再ラベルしない。詳細はdocs/V06_ALIGNMENT_LEDGER_JA.md。N4/Run19/全P14合成は対象外。
+
+
+## Run19 — narrow four and small embeddings
+Ten frozen mathematical contracts now have actual arbitrary-field all-row proofs in new NarrowFour/SmallEmbedding modules. Final validation/publication status is in docs/RUN19_HANDOFF_JA.md and the immutable Run19 completion receipt; mathematical closure is distinguished from whole-P14 composition (Run20). No old proof source/public type is edited.

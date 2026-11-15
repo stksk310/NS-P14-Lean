@@ -796,3 +796,7 @@ V03 W_SPARSE / V02 §13.4 W17–W21をactual source/targetの全行へ接続し�
 ## 2026-11-16 V06経路同期
 
 V06の五変更をLeanのactual consumerへ接続：competitorMin_height/competitor_zero_columnの全j高さ証明、antipodal_integer_payment/nonAntipodal_integer_paymentによる第一行、actual_higher_from_secondによる同一Bの全高次行、dense_core_lex_bound_two_branchとdense_payment_ge_threeによる二枝化。公開型・任意体・元source/literal target・各自の最小変数・全行は保存する。旧停止の有限計算API、厳密antipodal成果、choose_quadratic_*も保持する。原稿の具体的な式、代替経路、consumer、保存範囲はdocs/V06_ALIGNMENT_LEDGER_JA.mdに記録。新経路のLean認証は新規verification/run18/runs/v06_alignment_*とproof/evidence/review bindingによって示し、V06紙上監査や旧Run18 COMPLETEで代用しない。ordinary一般export/N4/Run19/全P14完成は今回の対象外。
+
+
+## Run19 の原稿対応
+新cubicから元のactual資源・全行への接続を形式化。SCによる純語の統一証明、u≤5で元R=0、幅4の直接actual kernel表示、三生成元の一変数端点資源による直接比較を採用した。詳細・保持した条件・原稿へ戻す差分は RUN19_PAPER_CORRESPONDENCE_JA.md。LTVの強い三つの線形数値上界および一般initial-ideal等式は形式化済みと主張しない。

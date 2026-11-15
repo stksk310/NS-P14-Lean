@@ -724,3 +724,25 @@ public import NSP14.Lex.PrefixGeneratorCorrection
 -- V06 route synchronization; all previously published imports remain above.
 public import NSP14.Width.IntegerPayment
 public import NSP14.Width.HigherFromSecond
+
+-- Run19: actual narrow-four and one-to-three-generator closures.
+public import NSP14.NarrowFour.CoreWords
+public import NSP14.NarrowFour.SocleTriangle
+public import NSP14.NarrowFour.Distance
+public import NSP14.NarrowFour.StandardWords
+public import NSP14.NarrowFour.CubicPayment
+public import NSP14.NarrowFour.HigherRows
+public import NSP14.NarrowFour.Relations
+public import NSP14.NarrowFour.FirstCount
+public import NSP14.NarrowFour.FirstLarge
+public import NSP14.NarrowFour.SmallWidths
+public import NSP14.NarrowFour.WidthFourCore
+public import NSP14.NarrowFour.WidthFourCompetitors
+public import NSP14.NarrowFour.WidthFourInitial
+public import NSP14.NarrowFour.WidthFourComparison
+public import NSP14.NarrowFour.Comparison
+public import NSP14.SmallEmbedding.Base
+public import NSP14.SmallEmbedding.ThreePresentation
+public import NSP14.SmallEmbedding.LanTuVu
+public import NSP14.SmallEmbedding.ThreeComparison
+public import NSP14.Semigroup.IntervalCompletionAll

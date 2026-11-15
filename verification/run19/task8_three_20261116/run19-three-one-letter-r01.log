@@ -1,0 +1,53 @@
+NSP14/SmallEmbedding/LanTuVu.lean:19:7: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => ↑b ∈ _a
+Error: Application type mismatch: The argument
+  b
+has type
+  ↥D.a
+but is expected to have type
+  ↥_a
+in the application
+  ↑b
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+D : ThreeData
+hq : D.q = 1
+a : ℕ
+ha : D.a = {a}
+b : ↥D.a
+hb : ↑b ∈ D.a
+⊢ ↑b = ↑⟨a, ⋯⟩
+NSP14/SmallEmbedding/LanTuVu.lean:36:10: error: unsolved goals
+case nil
+D : ThreeData
+a : ↥D.a
+ha : ∀ (b : ↥D.a), b = a
+p : D.CoreMinimalIndex
+w : List D.Variables
+hw : D.coreWord w = ↑p
+hm : Minimal (fun x => x ∈ D.coreFiber (D.coreCoordinates (D.coreWord w)).1) (D.coreCoordinates (D.coreWord w)).2
+hall : ∀ b ∈ w, b = D.internalVariable a
+⊢ (∀ b ∈ [], b = D.internalVariable a) → True
+NSP14/SmallEmbedding/LanTuVu.lean:71:60: error: unexpected token ')'; expected term
+NSP14/SmallEmbedding/LanTuVu.lean:84:30: error: Application type mismatch: The argument
+  k
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  D.q = 1
+of sort `Prop` in the application
+  QCore_one_betti_above D k
+NSP14/SmallEmbedding/LanTuVu.lean:79:60: error: unsolved goals
+D : ThreeData
+k : Type
+inst✝ : Field k
+hq : D.q = 1
+h1 : totalBetti k D.Variables (D.fullG k) 1 ≤ 1 + D.coreRemainder k 1
+h2 : totalBetti k D.Variables (D.fullG k) 2 ≤ totalBetti k (↥D.a) (D.QCoreModule k) 2 + D.coreRemainder k 2
+h3 : totalBetti k D.Variables (D.fullG k) (D.q + 2) ≤ D.actualR k
+⊢ totalBetti k D.Variables (D.fullG k) 1 ≤ D.coreP k + D.actualR k + 1 ∧
+    totalBetti k D.Variables (D.fullG k) 2 ≤ D.coreP k + 2 * D.actualR k ∧
+      totalBetti k D.Variables (D.fullG k) 3 ≤ D.actualR k

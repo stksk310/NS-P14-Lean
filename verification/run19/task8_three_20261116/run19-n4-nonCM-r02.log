@@ -1,0 +1,13 @@
+tests/N4ActualClosure.lean:36:18: error: Tactic `decide` proved that the proposition
+  D.competitorTest ((fun i => i) ⟨0, ⋯⟩) (0, 2)
+is false
+tests/N4ActualClosure.lean:40:28: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+tests/N4ActualClosure.lean:37:78: error: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

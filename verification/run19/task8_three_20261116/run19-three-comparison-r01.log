@@ -1,0 +1,16 @@
+NSP14/SmallEmbedding/ThreeComparison.lean:167:38: error: mod_cast has type
+  u - 3 + 3 = u
+but is expected to have type
+  u - 3 = u - 3
+NSP14/SmallEmbedding/ThreeComparison.lean:178:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  u - 1 + 1
+in the target expression
+  (u - 1).succ.choose (Nat.succ 2) = (u - 1).choose 2 + (u - 1).choose (Nat.succ 2)
+
+case neg
+u : ℕ
+hu : 3 ≤ u
+hpas : (u - 1).succ.choose (Nat.succ 2) = (u - 1).choose 2 + (u - 1).choose (Nat.succ 2)
+h : ¬u = 3
+hm : (u - 3).choose 2 ≤ (u - 1).choose 2
+⊢ (u - 3).choose 2 ≤ u.choose 3
