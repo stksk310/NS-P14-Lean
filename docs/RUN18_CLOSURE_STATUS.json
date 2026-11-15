@@ -17,8 +17,21 @@
   "closed_goal": "NSP14.Run18.sparse_closed",
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
-    "status": "PENDING_INTERNAL_COLD_VALIDATION",
-    "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json"
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json",
+    "commands": 188,
+    "fixtures": 174,
+    "environment_declarations": 9203,
+    "new_environment_declarations": 962,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "62c30ae798871d4eb55703df29e2897a770d29b9",
+    "preserved_evidence_count": 3901
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
@@ -145,11 +158,12 @@
   },
   "current_goal": "Finish remaining Run18 contracts. Run19 execution is on hold by explicit user instruction of 2026-11-15.",
   "edge_closure_20261115": {
-    "status": "COMPILED_FROZEN_CONTRACT_FOCUSED_PASS_COLD_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "88dbd044ef7a8073d6d0bed6a7a4b550ed86a1bf",
     "closed_contract": "NSP14.Run18.edge_closed : Requested.W_EDGE",
     "focused_evidence": "verification/run18/edge_20261115/focused02.json",
     "paper_variant": "Actual signed-unit minor lower bounds suffice; no universal exact QC Betti formula is claimed.",
-    "lex_preparation": "Characteristic-free lex stability, finite actual minimal monomial generators and actual ideal span are proved; BHP/EK itself remains open."
+    "lex_preparation": "Characteristic-free lex stability, finite actual minimal monomial generators and actual ideal span are proved; BHP/EK itself remains open.",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json"
   }
 }

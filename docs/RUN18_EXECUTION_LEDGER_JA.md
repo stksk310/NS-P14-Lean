@@ -109,3 +109,5 @@ W_EDGEの元の凍結受入がGREEN。q3..9の12 actual sourceでQ/標数2/3の�
 Ruling: 新規productionがHomologicalへ追加されたため、cold verifierはLex/Width directoryだけでなく、それ以外の新規productionのlib/IR各fileも退避して再構築する。誤っていれば既存oleanをcoldと誤表示するため、退避対象をfresh_cache.jsonに記録し、全source/evidenceをgit bytesへ束縛する。
 
 残る障害は一般の任意標数BHP/Pardue/EKと、それを使うdense閉鎖・全域合成。固定mathlib/既存sourceに必要な一般比較は確認できていない。arXivの指定原典PDF/HTMLもこの環境でCONNECT403となった。未取得の本文や未構成の解消/圧縮を供給済みとはしない。読める原典URLの有無をユーザーへ非同期で照会し、独立な証明/検証を継続する。
+
+R06 cold検証成功：source `62c30ae798871d4eb55703df29e2897a770d29b9`、全188 command・174 fixture、9203宣言・新規962宣言。許容三公理のみ、3901既存証跡をbyte保持。新規Homologicalもcold再構築。閉鎖W_SPARSE/W_FIVE/W_EDGE、未完X_BHP_EK/W_DENSE/W_CLOSE。これは内部checkpointであり、ユーザーのRun18完了要求を満たしたとは扱わない。
