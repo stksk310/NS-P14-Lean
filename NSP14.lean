@@ -702,3 +702,11 @@ public import NSP14.Lex.StableBinomialWeights
 public import NSP14.Lex.StableDegreeDecomposition
 public import NSP14.Lex.StableBettiComparison
 public import NSP14.Lex.BettiComparison
+public import NSP14.Lex.LexDegreeIdeal
+public import NSP14.Lex.LexCompatibleDegrees
+public import NSP14.Lex.LexExistence
+public import NSP14.Lex.TotalBettiComparison
+public import NSP14.Lex.StandardBettiWeights
+public import NSP14.Lex.SuffixVariableRestriction
+public import NSP14.Lex.LexTailSupport
+public import NSP14.Lex.LexTailCorrection

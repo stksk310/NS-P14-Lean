@@ -1,0 +1,42 @@
+[
+  {
+    "file": "verification/run18/bhp_20261115/lex_degree_ideal_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/lex_compatible_degrees_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/lex_existence_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/total_bhp_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/standard_betti_weights_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/suffix_variable_restriction_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/lex_tail_support_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  },
+  {
+    "file": "verification/run18/bhp_20261115/lex_tail_correction_red01.lean",
+    "exit_code": 1,
+    "named_missing_only": true
+  }
+]

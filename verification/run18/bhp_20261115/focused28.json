@@ -1,0 +1,62 @@
+[
+  {
+    "file": "tests/LexDegreeIdeal.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.304
+  },
+  {
+    "file": "tests/LexCompatibleDegrees.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.946
+  },
+  {
+    "file": "tests/LexHilbert.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.83
+  },
+  {
+    "file": "tests/TotalLexBetti.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.927
+  },
+  {
+    "file": "tests/StandardBettiWeights.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.983
+  },
+  {
+    "file": "tests/SuffixVariableRestriction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.663
+  },
+  {
+    "file": "tests/LexTailSupport.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.797
+  },
+  {
+    "file": "tests/LexTailCorrection.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.706
+  },
+  {
+    "file": "tests/LexHilbertExamples.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.98
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms26.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.635
+  }
+]
