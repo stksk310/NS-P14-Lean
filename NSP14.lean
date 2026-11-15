@@ -647,3 +647,7 @@ public import NSP14.Homological.GradedKoszulPieces
 public import NSP14.Endpoint.ArtinGradedZero
 public import NSP14.Endpoint.VariableIdealGraded
 public import NSP14.Lex.EliahouKervaire
+public import NSP14.Lex.InitialIdeal
+public import NSP14.Homological.TriangularBlockRank
+public import NSP14.Homological.NormalTriangular
+public import NSP14.Endpoint.InitialAction

@@ -75,3 +75,8 @@ Run18全体は未完である。現時点で閉じた担当IDは **W_SPARSE・W_
 focused02は7 fixture＋公理probeの8 commandが個別exit0/警告0。実lex ideal(X0,X1²)の全positive row/全internal degreeの式をQ/F2/F3で検査し、生成元の異なる次数と商の一段ずれを確認。root6102jobs成功。主要5exportの推移公理はpropext/Classical.choice/Quot.soundだけ。元のRequestedGoals hash不変、旧verification/artifactのbyte変更なし。以前のR06 coldは新規追加前の記録で、現在追加の全回帰はまだ。
 
 BHP/Pardueと全Hilbert関数lex存在は未証明。X_BHP_EKを閉鎖と数えない。
+
+## 2026-11-15：実初期idealと三角作用の準備
+InitialIdealはすべての非零ideal要素の実leading exponentから構成し、元のstandard exponent集合との一致と元の斉次商の全Hilbert関数保存を証明。任意非零pのprincipal idealの実initial idealも同定。NormalTriangularは実商の一意なnormal代表のleading termが増えず、nonstandard単項式のnormal代表は厳密に低いtermだけを持つと証明。InitialActionは同じ実商/基底の変数作用へ接続。nonstandardの実作用を0と誤認せず、同じblock以上の係数0を証明した。
+TriangularBlockRankは元の写像の各対角block rangeの実基底と実前像・射影から、全体の実微分の単位三角minorを構成し、対角rankの和≤全rankを証明。有限性はtargetのみで、非Artin商のfull coefficient chainを有限k次元とはしない（後でinternal-degree chainへ適用）。4 named fixture＋公理probeの5command全exit0/警告0、root6110jobs成功。主要6exportの推移公理は許容三公理のみ。
+これらは初期idealへのactual graded Betti比較そのものには未接続で、BHP/EK全体の閉鎖ではない。最後のcold R07は8b1921d sourceのEKまでを認証し、この4moduleは含まない。追加後cold全回帰は未実行。次はactual graded chain基底/augmented exponent blockと実initial quotientのblock一致を構成し、三角rankから全β_{i,j}(I)≤β_{i,j}(in(I))を閉じる。BHP/Pardueのlexへの変形・全Hilbert lex存在・dense/globalも未完、Run19は保留で継続する。

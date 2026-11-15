@@ -34,3 +34,8 @@ GitHub検索の `"Bigatti" "language:Lean"` と `"Eliahou" "language:Lean"` も�
 `audit/run18/RequestedGoals.lean` は証明を含まないProp定義である。`X_BHP_EK`、`W_EDGE`、`W_DENSE`、`W_SPARSE`、`W_FIVE`、`W_CLOSE` の意味を最終台帳の閉鎖判定に使う。BHPは任意体・一般の斉次商・同じ全Hilbert関数・全graded正行。EKはproperなlex商の実極小生成元、内部次数 `deg(v)+i−1`。全域比較は元のSとliteral completionの各最小変数列を直接参照する。
 
 `acceptance/BHPEK.lean` は未証明の公開宣言 `NSP14.Lex.bhp_ek` を要求する受入で、現時点ではその未実装だけを理由に失敗する。失敗を成功扱いせず、通常の通過fixtureとは区別する。
+
+## 2026-11-15 原典PDFのユーザー提供を受領
+
+2026-11-15 BHP原典到着後：BHP1210.5562v2、Clark EK0812.0594v2、Pardue原論文PDFをユーザー添付からローカル読解。URL/hash/byte/pages/読んだ節の正確な範囲をbhp_20261115/source_receipts01.jsonに記録し、PDF全文は公開repoに含めない。以前のCONNECT403ログは失敗履歴としてbyte保持し、現在の本文入手済みと区別する。
+Caviglia–Kummini Theorem3.1はz-stable化とCK13の埋込み/制限定理を使う。Pardue Theorem31は初期idealのBetti非減少、極化の正則切断によるBetti保存、generic initialの反復がlexへ到達するProp30を使う。いずれも引用しただけではLean証明にならない。まず両経路に必要な実初期idealへの比較を、有限internal-degree Koszul行列の三角性から証明する。

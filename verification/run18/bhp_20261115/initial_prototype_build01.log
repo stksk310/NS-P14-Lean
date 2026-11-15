@@ -1,0 +1,28 @@
+/tmp/run18-paper-text/InitialIdeal.lean:26:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+/tmp/run18-paper-text/InitialIdeal.lean:67:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (MvPolynomial.monomial ?v) 1 ∈ initialIdeal ?k ?q ?m ?I
+in the target expression
+  v ∈
+      {v |
+        (MvPolynomial.monomial v) 1 ∈
+          initialIdeal k q m
+            (Ideal.span ((fun v => (MvPolynomial.monomial v) 1) '' {v | (MvPolynomial.monomial v) 1 ∈ I}))} ↔
+    v ∈ {v | (MvPolynomial.monomial v) 1 ∈ I}
+
+case e_s
+k : Type
+inst✝ : Field k
+q : ℕ
+I : Ideal (MvPolynomial (Fin q) k)
+hI : IsMonomial k q I
+m : MonomialOrder (Fin q)
+v : Fin q →₀ ℕ
+⊢ v ∈
+      {v |
+        (MvPolynomial.monomial v) 1 ∈
+          initialIdeal k q m
+            (Ideal.span ((fun v => (MvPolynomial.monomial v) 1) '' {v | (MvPolynomial.monomial v) 1 ∈ I}))} ↔
+    v ∈ {v | (MvPolynomial.monomial v) 1 ∈ I}

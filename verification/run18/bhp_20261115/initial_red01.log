@@ -1,0 +1,4 @@
+/tmp/run18-paper-text/InitialIdealRed.lean:13:9: error(lean.unknownIdentifier): Unknown constant `Lex.initialIdeal`
+/tmp/run18-paper-text/InitialIdealRed.lean:14:4: error(lean.unknownIdentifier): Unknown constant `Lex.initialIdeal_homogeneous`
+/tmp/run18-paper-text/InitialIdealRed.lean:15:4: error(lean.unknownIdentifier): Unknown constant `Lex.initialIdeal_isMonomial`
+/tmp/run18-paper-text/InitialIdealRed.lean:16:4: error(lean.unknownIdentifier): Unknown constant `Lex.initialIdeal_sameHilbert`

@@ -241,5 +241,20 @@
     "fresh_new_production_cache": true,
     "source_snapshot_commit": "62c30ae798871d4eb55703df29e2897a770d29b9",
     "preserved_evidence_count": 3901
+  },
+  "post_r07_bhp_initial_foundations": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "modules": [
+      "NSP14.Lex.InitialIdeal",
+      "NSP14.Homological.TriangularBlockRank",
+      "NSP14.Homological.NormalTriangular",
+      "NSP14.Endpoint.InitialAction"
+    ],
+    "proved": "Actual leading-monomial ideal and unchanged entire Hilbert function; actual normal-form leading-term bounds; actual quotient-variable triangularity and literal monomial action; diagonal-block rank lower bound by actual unit triangular minor.",
+    "not_proved": "Actual initial-ideal Betti comparison is not yet assembled; general BHP/Pardue, common-Hilbert lex existence, dense/global closure remain open.",
+    "focused_evidence": "verification/run18/bhp_20261115/focused01.json",
+    "root_build": "verification/run18/bhp_20261115/root_build02.log",
+    "source_receipts": "verification/run18/bhp_20261115/source_receipts01.json",
+    "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c"
   }
 }

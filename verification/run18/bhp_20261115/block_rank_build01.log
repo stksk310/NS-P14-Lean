@@ -1,0 +1,35 @@
+✖ [3796/3797] Building NSP14.Homological.TriangularBlockRank (1.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/TriangularBlockRank.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/TriangularBlockRank.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/TriangularBlockRank.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/TriangularBlockRank.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/TriangularBlockRank.setup.json --json
+error: NSP14/Homological/TriangularBlockRank.lean:28:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (P (Sigma.fst ?j)) (d (columns ?j))
+in the target expression
+  ((basis a).coord i) ((B a).range.subtype.leftInverse ((P a) (d (columns ⟨a, j⟩)))) = if j = i then 1 else 0
+
+k : Type
+inst✝⁷ : Field k
+ι X Y : Type
+inst✝⁶ : Fintype ι
+inst✝⁵ : LinearOrder ι
+inst✝⁴ : AddCommGroup X
+inst✝³ : Module k X
+inst✝² : AddCommGroup Y
+inst✝¹ : Module k Y
+inst✝ : Module.Finite k Y
+d : X →ₗ[k] Y
+U : ι → Submodule k X
+P : ι → Y →ₗ[k] Y
+htri : ∀ (a b : ι), b < a → ∀ (x : ↥(U b)), (P a) (d ↑x) = 0
+B : (a : ι) → ↥(U a) →ₗ[k] Y := fun a => P a ∘ₗ d ∘ₗ (U a).subtype
+basis : (a : ι) → Module.Basis (Fin (Module.finrank k ↥(B a).range)) k ↥(B a).range :=
+  fun a => Module.finBasis k ↥(B a).range
+J : Type := (a : ι) × Fin (Module.finrank k ↥(B a).range)
+columns : J → X := fun j => ↑(Exists.choose ⋯)
+rows : J → Y →ₗ[k] k := fun j => (basis j.fst).coord j.snd ∘ₗ (B j.fst).range.subtype.leftInverse ∘ₗ P j.fst
+hcol : ∀ (j : J), (P j.fst) (d (columns j)) = ↑((basis j.fst) j.snd)
+a : ι
+i j : Fin (Module.finrank k ↥(B a).range)
+⊢ ((basis a).coord i) ((B a).range.subtype.leftInverse ((P a) (d (columns ⟨a, j⟩)))) = if j = i then 1 else 0
+error: NSP14/Homological/TriangularBlockRank.lean:49:8: `dsimp` made no progress
+Some required targets logged failures:
+- NSP14.Homological.TriangularBlockRank
+error: build failed
