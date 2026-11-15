@@ -1,6 +1,6 @@
 module
 public import audit.run19.RequestedGoals
-public import NSP14.NarrowFour.FirstLarge
+public import NSP14.NarrowFour.SmallWidths
 @[expose] public section
 namespace NSP14.Run19
 
@@ -33,4 +33,10 @@ theorem first_closed : Requested.N_FIRST := by
     exact NarrowFour.first_count D k hq a b hab
   · intro S k _ he hw hu
     exact NarrowFour.narrow_four_first_large k S he hw hu
+
+theorem small_closed : Requested.N_SMALL := by
+  intro S k _ he hw
+  dsimp only
+  intro hu
+  exact NarrowFour.narrow_four_small S k he hw hu
 end NSP14.Run19

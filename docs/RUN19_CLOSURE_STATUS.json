@@ -6,13 +6,13 @@
     "N_DISTANCE",
     "N_WORDS",
     "N_HIGH",
-    "N_FIRST"
+    "N_FIRST",
+    "N_SMALL",
+    "I_BASE"
   ],
   "unproved_ids": [
-    "N_SMALL",
     "N_WIDTH4",
     "N_CLOSE",
-    "I_BASE",
     "X_LTV",
     "I_THREE"
   ],

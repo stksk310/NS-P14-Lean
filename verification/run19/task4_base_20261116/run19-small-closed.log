@@ -1,0 +1,13 @@
+audit/run19/ClosedN4Goals.lean:39:47: error: Application type mismatch: The argument
+  hu
+has type
+  Endpoint.Data
+of sort `Type` but is expected to have type
+  (S.endpointData ⋯ hw).u = 3 ∨
+    (S.endpointData ⋯ hw).u = 5 ∨
+      (S.endpointData ⋯ hw).u = 6 ∨
+        (S.endpointData ⋯ hw).u = 7 ∨
+          (S.endpointData ⋯ hw).u = 8 ∨
+            (S.endpointData ⋯ hw).u = 4 ∧ ((S.endpointData ⋯ hw).d ≠ 1 ∨ (S.endpointData ⋯ hw).a ≠ {1, 3})
+of sort `Prop` in the application
+  NarrowFour.narrow_four_small S k he hw hu

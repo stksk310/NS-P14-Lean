@@ -1,0 +1,8 @@
+NSP14/SmallEmbedding/Base.lean:38:43: error: Application type mismatch: The argument
+  ih
+has type
+  n ∈ ⊤ → n ∈ S.carrier
+but is expected to have type
+  n ∈ S.carrier
+in the application
+  AddSubmonoid.add_mem S.carrier ih
