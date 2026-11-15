@@ -1,0 +1,3 @@
+tests/CoreLexPresentation.lean:5:0: warning: Definition `one_actual_core_lex` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

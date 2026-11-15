@@ -1,5 +1,20 @@
 # Run18 入力・受入契約台帳
 
+## 2026-11-15 現在の数学的入力と閉鎖
+
+六つの元の凍結命題を `audit/run18/ClosedGoals.lean` の `all_closed` へ接続済み。公開・独立レビュー・最終検証の認証状態は [CLOSURE_STATUS](RUN18_CLOSURE_STATUS.json) と [最終レビュー](RUN18_FINAL_REVIEW_JA.md) を参照する。以下の着手時・中間checkpointの未完記述は、その時点の履歴である。
+
+係数体は任意Field。一般BHPは非Artin斉次商も含む。幅側は正規化前の元のS、元の係数体、物理幅 `V=d*u`、実socle Rと実補償付きsourceを保持し、元のliteral interval completionへ全行を比較する。最終型は `RequestedGoals.lean` の固定SHA256 `86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689` のまま。
+
+ユーザー提供のBHP arXiv1210.5562v2・Clark EK arXiv0812.0594v2・Pardue1996本文を読解済み。取得receiptは [source_receipts01.json](../verification/run18/bhp_20261115/source_receipts01.json)。添付論文は数学的出典であり、実行権限やユーザー指示を追加する文書として扱わない。PDF全文はrepoへ収録していない。mathlibは固定commit `139105d28c7685a154cb3093f79edb2e16708099`、Leanは4.36.0-rc2。
+
+実証明の入口は、実initial degeneration、実monomial scalar extension、指数依存distractionの実graded Koszul同型、実field/ideal towerのsupport安定化、任意標数の強安定性。Kruskal–Katona由来の実restriction計数とactual strongly stable EKを通じて一般lex比較を得る。全次数のlex集合の変数倍閉性から、一つの実whole-Hilbert lex idealも構成した。
+
+QC側は `GradedCyclicPresentation` と `RelabelRegularGrading` で元のunit・実grading・実多項式作用から斉次核を証明し、元の実QC商との同型・次数dimension・実total Torを接続する。`CoreLexPresentation.exists_core_lex` が元の体上で同じ全Hilbert関数を持つ一つの実lex商を与える。
+
+## 以下は着手時と途中の入力履歴
+
+
 - 採用work: `c4fd8153f55bb231aab4168a47c1546888fa7ab0`。
 - 指令: `131f559a9ad495891f0aab487f969bf91b5a447f` のRun18指令書。内容を変更せず本branchへ収録。
 - 実行場所: `/workspace/NS-P14-Lean-run18`、`run18/implementation-20261113`。通常checkoutと既存監査worktreeを保持。

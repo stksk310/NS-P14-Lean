@@ -1,5 +1,5 @@
 {
-  "status": "PARTIAL",
+  "status": "PROOFS_CLOSED_FINAL_VALIDATION_PENDING",
   "run18_complete": false,
   "baseline_commit": "c4fd8153f55bb231aab4168a47c1546888fa7ab0",
   "order_commit": "131f559a9ad495891f0aab487f969bf91b5a447f",
@@ -7,36 +7,20 @@
     "W_SPARSE",
     "W_FIVE",
     "W_EDGE",
-    "X_BHP_EK"
-  ],
-  "unproved_ids": [
+    "X_BHP_EK",
     "W_DENSE",
     "W_CLOSE"
   ],
+  "unproved_ids": [],
   "frozen_requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
   "closed_goal": "NSP14.Run18.sparse_closed",
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
-    "status": "PASS_RUN18_PARTIAL_VALIDATION",
-    "environment_declarations": 10461,
-    "new_environment_declarations": 2220,
-    "allowed_axioms": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "fresh_project_test_cache": true,
-    "fresh_new_production_cache": true,
-    "preserved_evidence_count": 6838,
-    "evidence": "verification/run18/runs/release_candidate_20261115_r15/verification.json",
-    "commands": 273,
-    "fixtures": 260,
-    "source_snapshot_commit": "6074994621ca5b57be28d44729a8ebab46f700a6"
+    "status": "PENDING_FINAL_COLD_VALIDATION_AND_REVIEW",
+    "last_certified_snapshot": "previous_successful_verification_20261115_r15",
+    "focused": "verification/run18/bhp_20261115/focused30.json"
   },
-  "unproved_assigned_declarations": [
-    "NSP14.Run18.dense_closed",
-    "NSP14.Run18.width_closed"
-  ],
+  "unproved_assigned_declarations": [],
   "continuation_20261114": {
     "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "aa29347b261633e5a9db4c8467a1831ec69e2d81",
@@ -82,12 +66,17 @@
     "NSP14.Run18.sparse_closed",
     "NSP14.Run18.five_closed",
     "NSP14.Run18.edge_closed",
-    "NSP14.Lex.bhp_ek"
+    "NSP14.Lex.bhp_ek",
+    "NSP14.Run18.dense_closed",
+    "NSP14.Run18.width_closed",
+    "NSP14.Run18.all_closed"
   ],
   "public_actual_comparisons": [
     "NSP14.NumericalSemigroup.narrow_sparse_comparison",
     "NSP14.NumericalSemigroup.narrow_five_comparison",
-    "NSP14.NumericalSemigroup.narrow_oneHole_comparison"
+    "NSP14.NumericalSemigroup.narrow_oneHole_comparison",
+    "NSP14.NumericalSemigroup.narrow_dense_comparison",
+    "NSP14.NumericalSemigroup.narrow_width_comparison"
   ],
   "previous_successful_verification_20261114_r04": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
@@ -160,7 +149,7 @@
     "source_snapshot_commit": "bc554ffc0231c0e83fdf4c62673e438cc123c417",
     "preserved_evidence_count": 3653
   },
-  "current_goal": "Run18: actual QC lex application and dense harmonic payment, then dense/global closure; Run19 HOLD",
+  "current_goal": "Run18: all six proofs compiled; final cold verification, independent review, COMPLETE archive and ordinary Push pending",
   "edge_closure_20261115": {
     "status": "PASS_COLD_PARTIAL_VALIDATION",
     "base_commit": "88dbd044ef7a8073d6d0bed6a7a4b550ed86a1bf",
@@ -479,10 +468,32 @@
     "concrete_acceptance": "tests/LexHilbertExamples.lean",
     "review": "verification/run18/lex_existence_correction_review_20261115.md",
     "decision": "verification/run18/review_snapshot_lex_existence_correction_20261115.json",
-    "remaining": [
-      "actual QC dense lex application and harmonic payment",
-      "W_DENSE",
-      "W_CLOSE"
-    ]
+    "remaining": "Resolved mathematically by dense_global_proof_candidate; final validation pending"
+  },
+  "previous_successful_verification_20261115_r15": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 10461,
+    "new_environment_declarations": 2220,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 6838,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r15/verification.json",
+    "commands": 273,
+    "fixtures": 260,
+    "source_snapshot_commit": "6074994621ca5b57be28d44729a8ebab46f700a6"
+  },
+  "dense_global_proof_candidate": {
+    "actual_QC": "NSP14.Endpoint.Data.exists_core_lex",
+    "harmonic": "NSP14.Lex.IsLex.correction_tail_harmonic_bound",
+    "dense": "NSP14.Run18.dense_closed : Requested.W_DENSE",
+    "global": "NSP14.Run18.width_closed : Requested.W_CLOSE",
+    "all_six": "NSP14.Run18.all_closed",
+    "frozen_goals_unchanged": true,
+    "review_status": "PENDING_FINAL_COLD_VALIDATION_AND_REVIEW"
   }
 }

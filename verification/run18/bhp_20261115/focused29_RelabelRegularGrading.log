@@ -1,0 +1,3 @@
+tests/RelabelRegularGrading.lean:5:0: warning: Definition `actual_relabelled_total` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

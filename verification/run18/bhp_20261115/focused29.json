@@ -1,0 +1,86 @@
+[
+  {
+    "file": "tests/GradedCyclicPresentation.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 1.883
+  },
+  {
+    "file": "tests/RelabelRegularGrading.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 1.81
+  },
+  {
+    "file": "tests/CoreLexPresentation.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 1.977
+  },
+  {
+    "file": "tests/CorrectionHarmonic.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 2.07
+  },
+  {
+    "file": "tests/TailHarmonic.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 1.863
+  },
+  {
+    "file": "tests/DenseLexResources.lean",
+    "exit_code": 0,
+    "warning_free": false,
+    "seconds": 1.936
+  },
+  {
+    "file": "tests/DensePayment.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.77
+  },
+  {
+    "file": "tests/WidthDense.lean",
+    "exit_code": 1,
+    "warning_free": true,
+    "seconds": 1.745
+  },
+  {
+    "file": "tests/WidthActualClosure.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 5.671
+  },
+  {
+    "file": "audit/run18/DenseClosedGoals.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.602
+  },
+  {
+    "file": "audit/run18/ClosedGoals.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.547
+  },
+  {
+    "file": "audit/run18/acceptance/W_DENSE.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.941
+  },
+  {
+    "file": "audit/run18/acceptance/W_CLOSE.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.698
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms27.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.809
+  }
+]

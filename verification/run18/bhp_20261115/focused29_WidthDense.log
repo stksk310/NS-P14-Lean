@@ -1,0 +1,9 @@
+tests/WidthDense.lean:10:86: error: unexpected token '*'; expected term
+tests/WidthDense.lean:13:96: error: unexpected token '*'; expected term
+tests/WidthDense.lean:16:96: error: unexpected token '*'; expected term
+tests/WidthDense.lean:19:86: error: unexpected token '*'; expected term
+tests/WidthDense.lean:22:96: error: unexpected token '*'; expected term
+tests/WidthDense.lean:25:96: error: unexpected token '*'; expected term
+tests/WidthDense.lean:28:86: error: unexpected token '*'; expected term
+tests/WidthDense.lean:31:96: error: unexpected token '*'; expected term
+tests/WidthDense.lean:34:96: error: unexpected token '*'; expected term

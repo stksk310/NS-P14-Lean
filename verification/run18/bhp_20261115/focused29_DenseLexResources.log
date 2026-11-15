@@ -1,0 +1,3 @@
+tests/DenseLexResources.lean:5:0: warning: Definition `actual_QC_all_rows_and_K` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

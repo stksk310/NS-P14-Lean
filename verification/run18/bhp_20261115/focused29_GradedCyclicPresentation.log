@@ -1,0 +1,3 @@
+tests/GradedCyclicPresentation.lean:5:0: warning: Definition `actual_homogeneous_kernel` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

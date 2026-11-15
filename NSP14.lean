@@ -710,3 +710,13 @@ public import NSP14.Lex.StandardBettiWeights
 public import NSP14.Lex.SuffixVariableRestriction
 public import NSP14.Lex.LexTailSupport
 public import NSP14.Lex.LexTailCorrection
+public import NSP14.Homological.GradedCyclicPresentation
+public import NSP14.Homological.RelabelRegularGrading
+public import NSP14.Width.CoreLexPresentation
+public import NSP14.Lex.CorrectionHarmonic
+public import NSP14.Lex.TailHarmonic
+public import NSP14.Width.DenseLexResources
+public import NSP14.Width.DensePayment
+public import NSP14.Width.DenseComparison
+public import NSP14.Width.Closure
+public import NSP14.Lex.PrefixGeneratorCorrection

@@ -271,3 +271,5 @@ denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成
 2026-11-15 Run18継続：任意体の元のgraded EK conjunct、実初期idealへの全graded Betti比較に続き、generic coefficient field上の実distraction多項式/商/全次数pieceの線形同型と実ideal性・全Hilbert関数保存まで証明。R09 cold 224 command/210 fixture・9753宣言/新規1512宣言、公理依存・公開型・旧5037証跡保持が通過、独立レビュー0/0/0。認証source abf2dad5369509b3893a54eda25cce446b435a79。Betti保存、元の基礎体への接続、一般BHP/lex存在/停止、dense/globalは未完。閉鎖IDはW_SPARSE/W_FIVE/W_EDGEの3件、Run18継続、Run19保留。
 
 2026-11-15 Run18継続：generic係数体上の実monomial ideal→実distraction idealのactual full/内部次数別Koszul chain同型を構成し、全ordinary/graded Betti保存を証明。R10 cold237検証/223fixture、9932宣言/新規1691、公理依存・normal/explicit型・旧5342証跡保持が通過。独立レビュー0/0/0、認証source6bcd0259b84b61614d3e6f5ed14f30aa935717e2。元のk-idealへの係数拡大/下降、lex存在/反復/停止、一般BHP、dense/globalは未完。閉鎖三IDを維持、Run18継続、Run19保留。
+
+2026-11-15 Run18数学的閉鎖：元の六IDをaudit/run18/ClosedGoals.leanのall_closedへ接続。任意標数BHP/EKと一般whole-Hilbert lex存在、actual QC/suffix harmonic K評価、dense全行支払いを経て、元のSの全物理狭幅のactual completion比較narrow_width_comparisonを証明。最終検証・独立レビュー・公開状態はdocs/RUN18_CLOSURE_STATUS.json参照。既存全証跡とfrozen RequestedGoalsは保持。

@@ -790,3 +790,5 @@ V03 W_SPARSE / V02 §13.4 W17–W21をactual source/targetの全行へ接続し�
 2026-11-15 Run18 R09：Pardueのdistractionに必要な実多項式線形同型・実monomial ideal像のideal性・全Hilbert関数保存をgeneric coefficient field上で構成。原典のBetti保存やlex停止を引用だけで形式証明済みと数えない。元のgraded EK conjunctと実initial Betti比較は既証明、assigned三IDのみ閉鎖。R09 cold/独立レビューはabf2dad sourceの新規六moduleを含む範囲で成功し、一般BHP・lex存在・dense/globalの未完は維持。
 
 2026-11-15 Run18 R10：Pardueのgeneric distraction段階に対し、引用を仮定にすることなく実Koszul chain同型から全graded Betti保存を構成。原典の極化/正則切断の代わりに、実selected coefficient matrixの指数依存外積変換と実収縮の可換性を証明した。scopeはGenericDistractionField上の実monomial ideal。任意の元の基礎体idealへの接続・lexへの反復と停止・lex存在・dense/globalは未完。cold全回帰と独立レビューは6bcd0259b84b61614d3e6f5ed14f30aa935717e2までの実装を認証し、Run18全体の完了ではない。
+
+2026-11-15 Run18数学的閉鎖：元の六IDをaudit/run18/ClosedGoals.leanのall_closedへ接続。任意標数BHP/EKと一般whole-Hilbert lex存在、actual QC/suffix harmonic K評価、dense全行支払いを経て、元のSの全物理狭幅のactual completion比較narrow_width_comparisonを証明。最終検証・独立レビュー・公開状態はdocs/RUN18_CLOSURE_STATUS.json参照。既存全証跡とfrozen RequestedGoalsは保持。

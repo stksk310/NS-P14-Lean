@@ -46,6 +46,29 @@ def main():
             try:pkg.safe(r,bad)
             except ValueError:count+=1
             else:raise AssertionError('unsafe path accepted')
+        # Synthetic complete-scope publication fixture, not a mathematical proof.
+        complete_summary=dict(json.loads(summary_original),status='PASS_RUN18_COMPLETE_VALIDATION',run18_complete=True,
+            closed_ids=list(pkg.FULL_IDS),unproved_ids=[])
+        write('verification/run18/runs/guard/verification.json',json.dumps(complete_summary))
+        manifest={str(p.relative_to(r)):sha(p)for p in v.iterdir()if p.name!='MANIFEST_SHA256.json'}
+        write('verification/run18/runs/guard/MANIFEST_SHA256.json',json.dumps(manifest))
+        git('add','verification');git('-c','user.name=Run18 Guard','-c','user.email=guard@example.invalid','commit','-qm','complete evidence fixture')
+        complete_review=dict(review,minor=0,closed_ids=list(pkg.FULL_IDS),run18_complete=True,pending=[],declined=[],
+            reviewed_commit=git('rev-parse','HEAD'),verification_summary_sha256=sha(v/'verification.json'),
+            verification_manifest_sha256=sha(v/'MANIFEST_SHA256.json'))
+        write('review.json',json.dumps(complete_review))
+        pkg.checked_payload(r,'verification/run18/runs/guard','review.json');count+=1
+        complete_bytes=(v/'verification.json').read_bytes()
+        for key,value,fragment in [('run18_complete',False,'not a validated snapshot'),
+                ('unproved_ids',['W_CLOSE'],'closure scope differs'),
+                ('closed_ids',pkg.FULL_IDS[:-1],'closure scope differs')]:
+            changed=dict(complete_summary);changed[key]=value
+            write('verification/run18/runs/guard/verification.json',json.dumps(changed));fails(fragment)
+            (v/'verification.json').write_bytes(complete_bytes)
+        for key,value in [('minor',1),('pending',['unreviewed']),('declined',['unknown']),('closed_ids',pkg.FULL_IDS[:-1])]:
+            changed=dict(complete_review);changed[key]=value
+            write('review.json',json.dumps(changed));fails('complete review scope mismatch')
+            write('review.json',json.dumps(complete_review))
     for args,marker in [(['--output-dir','verification/run17/final'],'new directory'),(['--output-dir','verification/run18/runs/../bad'],'new directory'),(['--output-dir','/tmp/run18-test'],'new directory')]:
         r=subprocess.run(['python3','scripts/verify_run18.py',*args],cwd=ROOT,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         assert r.returncode==2 and marker in r.stdout,r.stdout;count+=1

@@ -1,4 +1,32 @@
-# Run18 原稿対応（PARTIAL）
+# Run18 原稿・実証明対応
+
+## 2026-11-15 数学的閉鎖
+
+六IDの元の型をすべて証明した。最終cold検証、独立レビュー、ZIPと通常Pushの認証記録は [最終状態](RUN18_CLOSURE_STATUS.json) と [レビュー](RUN18_FINAL_REVIEW_JA.md) を参照する。
+
+| 凍結ID | 実証明の公開入口 | 凍結consumer |
+|---|---|---|
+| X_BHP_EK | `Lex.quotientGradedBetti_le_lex`、`IsLex.graded_ek` | `Lex.bhp_ek` |
+| W_EDGE | `narrow_fullAP_comparison`、`narrow_oneHole_comparison` | `Run18.edge_closed` |
+| W_DENSE | `narrow_dense_firstterm`、`narrow_dense_comparison` | `Run18.dense_closed` |
+| W_SPARSE | `narrow_sparse_comparison` | `Run18.sparse_closed` |
+| W_FIVE | `narrow_five_comparison` | `Run18.five_closed` |
+| W_CLOSE | `narrow_width_comparison` | `Run18.width_closed`、`Run18.all_closed` |
+
+一般BHP/EK：実initial idealへの全graded比較、実係数拡大とdistractionの全graded保存、有限Hilbert-profile上の実反復と強安定化、KK/実prefix restriction、二項係数重み付き比較を接続した。強安定な停止点からの比較を別の実組合せ定理で証明する経路を採用した。全Hilbert lex存在は、実次数集合の変数倍閉性・ideal membership等式を先に証明して一つのidealとして構成し、元の体へsupportを戻す。
+
+Denseのg/K：`StableDegreeDecomposition` の実最小生成元/次数単項式全単射とactual EKから、加法形のweighted generator identityを直接telescopeする。`StandardBettiWeights` は実total Betti、次数0/1の寄与、実高次standard monomialの同じKを同定する。Kは `Σ_{n≥2}Σ_standard(q-maxVariable)` で、`PrefixGeneratorCorrection` が原稿の `Σ_{n≥2}Σ_{j=1}^q S_(j-1)(n)` との一致と、任意prefix変数数での実gの加法形再帰を記録する。
+
+Denseのharmonic評価：二次Hilbert値から高次standard語の末尾r変数支持を実Option単射で証明。実suffix comap商は高次Hilbert関数と同じKを保存する。その実商のfirst-row harmonic boundと実first BettiのK等式により、原稿の重み付きK評価と `K≤2t(r−1)/3` を得る。係数の1/3は有理計数に属する。
+
+`DenseLexResources` は同じ実QCからKを構成し、t=2でK≤2・元のR=0、t=3でK≤4、t≥4で3K≤2t(t−1)を得る。`DensePayment` はPascal帰納による二項の増分下界で全行を払う。t=2は隣接二項係数の正確な比、t=3とt≥4は非負係数の評価を使う。原稿の差D_iと同じ結論を加法形で証明し、`β_i(actual full G)≤i*C(u,i+1)` を `actual_core_endpoint_bound` へ接続する。
+
+全物理幅：e=5の既存の全場合と、e≥6のu=q+1、q+2、q+3..2q+1、u≥2q+2を合成した。各環自身の実最小変数を持つ元の完備接錐とliteral completionの比較であり、d=1/d>1、R>0、P_C≠P_G、i=0とsource消滅後の行も含む。
+
+`tests/WidthActualClosure.lean` は物理最小m=du+2、d=1/3、edge/dense/sparse両境界、五生成元、sourceの0/e/e+1とtargetの実上端をQ/F2/F3で適用する。既存の実nonCM sourceのP_C=15、P_G=10、R=1も保持する。独立dense checkerは176946行と六つの実QC/lexケースを各標数で別々に計算する。全称性はLeanの証明が担う。
+
+## 以下は以前のcheckpointにおける対応履歴
+
 
 Run18全体は未完である。現時点で閉じた担当IDは **W_SPARSE・W_FIVE** の二つ。残るX_BHP_EK・W_EDGE・W_DENSE・W_CLOSEを完了扱いしない。以下の11月13日/第1継続時点の記録は履歴として残し、最新の証明経路を末尾に示す。
 
