@@ -1,0 +1,39 @@
+{
+  "status": "PASS_INDEPENDENT_PUBLISHED_EVIDENCE_CHECK",
+  "head": "58a0f54651916a4f7d6aa2e172d9250d91fd25f4",
+  "source_manifest": 1226,
+  "evidence_manifest": 198,
+  "frozen_baseline_files": 3857,
+  "preserved_before_R05": 3653,
+  "raw_declarations": 8942,
+  "new_declarations": 701,
+  "requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+  "first_contract_commit": "cdce65ad0678170b80d6a91e75913d9b39b65f86",
+  "archives": [
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_AUDIT_20261113.zip",
+      "entries": 1286,
+      "sha256": "4b348dd53e94458f2991ac55dcd9aca77f98f8e6d3a1d15afe5493bddcf92428",
+      "closed_ids": [
+        "W_SPARSE"
+      ]
+    },
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_CONTINUATION_20261114.zip",
+      "entries": 1340,
+      "sha256": "34e931fe6e9c0d83cd81a34ec0dbafa655fac433abe396d15513f5bd025f3305",
+      "closed_ids": [
+        "W_SPARSE"
+      ]
+    },
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_FIVE_CLOSURE_20261114.zip",
+      "entries": 1432,
+      "sha256": "13b8f7b94c7e294558f9a6fc91c2782e9e34385b7c9f7cb6a8aa90c0ab03c271",
+      "closed_ids": [
+        "W_SPARSE",
+        "W_FIVE"
+      ]
+    }
+  ]
+}
