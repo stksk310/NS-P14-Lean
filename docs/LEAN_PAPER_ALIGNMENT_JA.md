@@ -788,3 +788,5 @@ See [Run17 paper ledger](RUN17_PAPER_CORRESPONDENCE_JA.md) for all exports and t
 V03 W_SPARSE / V02 §13.4 W17–W21をactual source/targetの全行へ接続した。`NSP14.Run18.sparse_closed`が凍結契約を証明する。Run18全体は未完であり、X_BHP_EK・W_EDGE・W_DENSE・W_FIVE・W_CLOSEはopenのまま。詳細・範囲・原稿との差は`docs/RUN18_PAPER_CORRESPONDENCE_JA.md`、検証は新規排他的ディレクトリ`verification/run18/runs/`を参照。
 
 2026-11-15 Run18 R09：Pardueのdistractionに必要な実多項式線形同型・実monomial ideal像のideal性・全Hilbert関数保存をgeneric coefficient field上で構成。原典のBetti保存やlex停止を引用だけで形式証明済みと数えない。元のgraded EK conjunctと実initial Betti比較は既証明、assigned三IDのみ閉鎖。R09 cold/独立レビューはabf2dad sourceの新規六moduleを含む範囲で成功し、一般BHP・lex存在・dense/globalの未完は維持。
+
+2026-11-15 Run18 R10：Pardueのgeneric distraction段階に対し、引用を仮定にすることなく実Koszul chain同型から全graded Betti保存を構成。原典の極化/正則切断の代わりに、実selected coefficient matrixの指数依存外積変換と実収縮の可換性を証明した。scopeはGenericDistractionField上の実monomial ideal。任意の元の基礎体idealへの接続・lexへの反復と停止・lex存在・dense/globalは未完。cold全回帰と独立レビューは6bcd0259b84b61614d3e6f5ed14f30aa935717e2までの実装を認証し、Run18全体の完了ではない。

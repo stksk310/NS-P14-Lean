@@ -18,8 +18,8 @@
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
-    "environment_declarations": 9753,
-    "new_environment_declarations": 1512,
+    "environment_declarations": 9932,
+    "new_environment_declarations": 1691,
     "allowed_axioms": [
       "Classical.choice",
       "Quot.sound",
@@ -27,11 +27,11 @@
     ],
     "fresh_project_test_cache": true,
     "fresh_new_production_cache": true,
-    "preserved_evidence_count": 5037,
-    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
-    "commands": 224,
-    "fixtures": 210,
-    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79"
+    "preserved_evidence_count": 5342,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+    "commands": 237,
+    "fixtures": 223,
+    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2"
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
@@ -367,5 +367,69 @@
     "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms08_focused09.log",
     "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
     "review": "verification/run18/review_snapshot_distraction_20261115.json"
+  },
+  "previous_successful_verification_20261115_r09": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9753,
+    "new_environment_declarations": 1512,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 5037,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+    "commands": 224,
+    "fixtures": 210,
+    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79"
+  },
+  "post_r09_distraction_graded": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2",
+    "exports": [
+      "NSP14.Lex.genericDistractionChainIso",
+      "NSP14.Lex.genericDistractionGradedChainIso",
+      "NSP14.Lex.genericDistraction_totalBetti",
+      "NSP14.Lex.genericDistraction_gradedBetti"
+    ],
+    "modules": [
+      "NSP14.Homological.ExteriorContraction",
+      "NSP14.Homological.KoszulExteriorBasis",
+      "NSP14.Homological.KoszulExterior",
+      "NSP14.Homological.KoszulExteriorMap",
+      "NSP14.Homological.BasiswiseTensor",
+      "NSP14.Homological.KoszulExteriorGrading",
+      "NSP14.Lex.GenericDistractionExterior",
+      "NSP14.Lex.GenericDistractionBoundary",
+      "NSP14.Lex.DistractionTensor",
+      "NSP14.Lex.DistractionChain",
+      "NSP14.Lex.DistractionGraded"
+    ],
+    "proved": "Actual full and all-integer-internal-degree Koszul chain isomorphisms; actual ordinary and graded Betti preservation for every actual homogeneous monomial ideal over GenericDistractionField k q, every Field k, q and all homological rows, without proper/Artin/global finite-k assumptions.",
+    "construction": "True slot-ordered exterior basis and actual contraction; actual exponent-dependent wedge equivalences and missing-column stability; all-monomial quotient tensor images including ideal zeros; actual boundary commutation; real grading image equality using actual basis images and preimages; restricted actual graded complexes and homology.",
+    "field_scope": "Input ideal is over GenericDistractionField k q. Connection to an arbitrary original k-ideal remains open.",
+    "fixtures": "Actual all-row/all-Int graded consumer; transformed mixed ideal(X0,X1²) graded rows over generic fields from Q/F2/F3; actual full Koszul and tensor consumers.",
+    "not_proved": [
+      "original-field monomial ideal scalar extension and descent",
+      "general BHP lex iteration and termination",
+      "common-Hilbert lex existence",
+      "W_DENSE closure",
+      "W_CLOSE"
+    ],
+    "closure_id_effect": "No new assigned closed ID. W_SPARSE/W_FIVE/W_EDGE are closed; EK conjunct separately closed; X_BHP_EK remains open.",
+    "focused_evidence": [
+      "verification/run18/bhp_20261115/focused10.json",
+      "verification/run18/bhp_20261115/focused11.json",
+      "verification/run18/bhp_20261115/focused12.json",
+      "verification/run18/bhp_20261115/focused13.json",
+      "verification/run18/bhp_20261115/focused14.json",
+      "verification/run18/bhp_20261115/focused15.json",
+      "verification/run18/bhp_20261115/focused16.json"
+    ],
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms15_focused16.log",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+    "review": "verification/run18/review_snapshot_graded_distraction_20261115.json"
   }
 }
