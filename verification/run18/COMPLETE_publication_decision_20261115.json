@@ -1,0 +1,24 @@
+{
+  "status": "PASS_COMPLETE_PUBLICATION_INPUTS_REVIEWED",
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "pending": [],
+  "declined": [],
+  "source_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+  "reviewed_commit": "c97fa324d90277bcae20a88863366bff6ba7a35b",
+  "verification_summary_sha256": "99b1c1d68b87d1e39bb94bfe93aa4a0d7ccd6fac8097f588c5a3722ac600c557",
+  "verification_manifest_sha256": "1c5decbddcb9100223dfd9332dcdcf2d757b8240f7a6635b2abb2f3543b8d0d6",
+  "review_report": "docs/RUN18_FINAL_REVIEW_JA.md",
+  "review_report_sha256": "8c13a3a84d9969ecfb8069cce10e032d59994295a3a0a256b98f4da0b1f04bd2",
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE",
+    "W_EDGE",
+    "X_BHP_EK",
+    "W_DENSE",
+    "W_CLOSE"
+  ],
+  "run18_complete": true
+}
