@@ -1,0 +1,17 @@
+✖ [4992/4993] Building NSP14.Lex.GenericDistractionExterior (2.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/GenericDistractionExterior.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GenericDistractionExterior.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GenericDistractionExterior.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GenericDistractionExterior.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GenericDistractionExterior.setup.json --json
+error: NSP14/Lex/GenericDistractionExterior.lean:48:2: Type mismatch
+  Eq.symm (genericFieldLinearEquiv_step_other k q a i r hr)
+has type
+  (genericFieldLinearEquiv k q a)
+      (@Pi.single (Fin q) (fun a => GenericDistractionField k q) (fun i => OreLocalization.instZero)
+        (instDecidableEqFin q) r 1) =
+    (genericFieldLinearEquiv k q (a + Finsupp.single i 1)) (Pi.single r 1)
+but is expected to have type
+  (genericFieldLinearEquiv k q a)
+      (@Pi.single (Fin q) (fun a => GenericDistractionField k q) (fun i => instMulZeroClassOfSemiring.toZero)
+        (fun a b => Classical.propDecidable (a = b)) r 1) =
+    (genericFieldLinearEquiv k q (a + Finsupp.single i 1)) (Pi.single r 1)
+Some required targets logged failures:
+- NSP14.Lex.GenericDistractionExterior
+error: build failed

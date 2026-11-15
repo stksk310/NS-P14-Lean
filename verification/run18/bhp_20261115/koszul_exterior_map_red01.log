@@ -1,0 +1,10 @@
+tests/KoszulExteriorMap.lean:12:2: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorContraction_naturality`
+tests/KoszulExteriorMap.lean:16:25: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidableEq σ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/KoszulExteriorMap.lean:16:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidableEq σ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/KoszulExteriorMap.lean:20:2: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorMap_coordinate_contraction_eq`

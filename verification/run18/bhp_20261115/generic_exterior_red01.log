@@ -1,0 +1,1 @@
+tests/GenericDistractionExterior.lean:16:2: error(lean.unknownIdentifier): Unknown constant `Lex.genericDistractionWedge_step_contraction`

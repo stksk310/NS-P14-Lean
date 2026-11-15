@@ -669,3 +669,6 @@ public import NSP14.Lex.DistractionHilbert
 public import NSP14.Homological.ExteriorContraction
 public import NSP14.Homological.KoszulExteriorBasis
 public import NSP14.Homological.KoszulExterior
+public import NSP14.Homological.KoszulExteriorMap
+public import NSP14.Lex.GenericDistractionExterior
+public import NSP14.Lex.GenericDistractionBoundary
