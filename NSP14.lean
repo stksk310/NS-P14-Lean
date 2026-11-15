@@ -631,3 +631,8 @@ public import NSP14.Lex.LinearQuotients
 public import NSP14.Homological.IdealAdjoining
 public import NSP14.Homological.IdealAdjoiningKoszul
 public import NSP14.Lex.EliahouKervaireStep
+public import NSP14.Lex.GeneratorOrder
+public import NSP14.Homological.IdealScalarQuotient
+public import NSP14.Homological.VariableIdealReduction
+public import NSP14.Homological.VariableIdealBetti
+public import NSP14.Lex.EliahouKervaireOrdinary

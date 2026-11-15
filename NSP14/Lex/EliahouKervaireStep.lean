@@ -1,6 +1,8 @@
 module
 public import NSP14.Lex.LinearQuotients
+public import NSP14.Lex.GeneratorOrder
 public import NSP14.Homological.IdealAdjoiningKoszul
+public import NSP14.Homological.VariableIdealBetti
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open scoped Classical
@@ -55,5 +57,32 @@ theorem IsLex.predecessor_betti_step {L : Ideal (MvPolynomial (Fin q) k)}
     (exponent_remove_max_factor k q w r hr) (hL.predecessor_factor_colon k q w hw r hr hmax) i
   rw [hL.predecessor_colon k q w hw r hr hmax] at h
   exact h
+
+/-- The complete ordinary contribution of a single actual minimal lex
+generator, including the quotient/ideal shift. Graded EK is separate. -/
+theorem IsLex.predecessor_betti_binomial {L : Ideal (MvPolynomial (Fin q) k)}
+    (hL : IsLex k q L) (hproper : L ≠ ⊤) (w : Fin q →₀ ℕ)
+    (hw : MinimalGenerator k q L w) (i : ℕ) :
+    let J := predecessorIdeal k q L w
+    totalBetti k (Fin q)
+      (ModuleCat.of (MvPolynomial (Fin q) k) ((MvPolynomial (Fin q) k) ⧸ (J ⊔ Ideal.span {MvPolynomial.monomial w (1:k)}))) (i+1)=
+      totalBetti k (Fin q)
+        (ModuleCat.of (MvPolynomial (Fin q) k) ((MvPolynomial (Fin q) k) ⧸ J)) (i+1)+
+      (maxVariable q w-1).choose i := by
+  obtain ⟨r,hr,hmaxvar,hmax⟩ := maxVariable_spec q w (minimalGenerator_ne_zero q k L hproper w hw)
+  let vs := (Finset.Iio r).toList
+  have hset : {j : Fin q | j ∈ vs}={j | j < r} := by ext j; simp [vs]
+  have hvs : variablesIdeal k (Fin q) vs=
+      Ideal.span ((MvPolynomial.X : Fin q → MvPolynomial (Fin q) k) '' {j : Fin q | j < r}) := by
+    unfold variablesIdeal
+    rw [hset]
+  have hn : vs.Nodup := Finset.nodup_toList _
+  have hlen : vs.length=r.val := by simp [vs]
+  have hb := variable_ideal_betti k (Fin q) vs hn i
+  rw [hvs,hlen] at hb
+  have h := hL.predecessor_betti_step k q w hw r hr hmax i
+  dsimp only at h ⊢
+  rw [hb] at h
+  simpa only [hmaxvar,Nat.add_sub_cancel] using h
 
 end NSP14.Lex

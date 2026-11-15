@@ -1,0 +1,24 @@
+✖ [4640/4641] Building NSP14.Lex.GeneratorOrder (1.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/GeneratorOrder.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GeneratorOrder.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GeneratorOrder.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GeneratorOrder.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GeneratorOrder.setup.json --json
+error: NSP14/Lex/GeneratorOrder.lean:90:49: Type mismatch: After simplification, term
+  hv.left
+ has type
+  @Membership.mem (MvPolynomial (Fin q) k) (Ideal (MvPolynomial (Fin q) k)) SetLike.instMembership L
+    ((MvPolynomial.monomial 0) 1)
+but is expected to have type
+  @Membership.mem (MvPolynomial (Fin q) k) (Ideal (MvPolynomial (Fin q) k)) SetLike.instMembership L 1
+error: NSP14/Lex/GeneratorOrder.lean:91:12: Unknown constant `Ideal.eq_top_iff_one.mpr`
+error: NSP14/Lex/GeneratorOrder.lean:103:81: Invalid field `pairwise`: The environment does not contain `List.Pairwise.pairwise`, so it is not possible to project the field `pairwise` from an expression
+  Finset.sort_nodup (minimalGeneratorFinset k q L) (precedesOrEq q)
+of type
+  List.Pairwise (fun x1 x2 => x1 ≠ x2) ((minimalGeneratorFinset k q L).sort (precedesOrEq q))
+error: NSP14/Lex/GeneratorOrder.lean:101:51: unsolved goals
+q : ℕ
+k : Type
+inst✝ : Field k
+L : Ideal (MvPolynomial (Fin q) k)
+hp : List.Pairwise (precedesOrEq q) ((minimalGeneratorFinset k q L).sort (precedesOrEq q))
+⊢ List.Pairwise (precedes q) (generatorList q k L)
+Some required targets logged failures:
+- NSP14.Lex.GeneratorOrder
+error: build failed

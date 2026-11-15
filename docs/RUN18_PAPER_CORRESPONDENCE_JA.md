@@ -66,3 +66,5 @@ Run18全体は未完である。現時点で閉じた担当IDは **W_SPARSE・W_
 `SourceNormalization` は任意Dの実sourceのoffsetGcd=d、normalizedWidth=uを証明し、m=du+2,d=3のactual source fixtureへ適用した。
 
 `Lex/Stable` は元のlex条件から同次数の変数引上げ閉性を任意標数で導く。`Lex/MonomialGenerators` は実monomial membershipから最小divisorを構成し、Dicksonにより実極小生成元集合の有限性とideal span等式を証明する。これはEK解消や一般BHP比較の代用ではなく、X_BHP_EKは閉じていない。
+
+2026-11-15 ordinary EK追加：IsLex.ordinary_ekは実極小生成元の全ordinary寄与を証明。実colon/完全列/変数null-homotopyと補変数の正則除去を使う。内部次数付きEKとBHP比較は未証明であり、この追加をRequested.X_BHP_EKの閉鎖とはしない。

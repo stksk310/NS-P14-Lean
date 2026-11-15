@@ -1,5 +1,5 @@
 module
-public import NSP14.Lex.EliahouKervaireStep
+public import NSP14.Lex.EliahouKervaireOrdinary
 public import Mathlib.Algebra.Field.ZMod
 public import Mathlib.Tactic.FinCases
 @[expose] public section
@@ -79,4 +79,65 @@ theorem mixed_y_square_colon : MixedColon k := by
 theorem mixed_y_square_colon_char2 : MixedColon (ZMod 2) := mixed_y_square_colon (ZMod 2)
 theorem mixed_y_square_colon_char3 : MixedColon (ZMod 3) := mixed_y_square_colon (ZMod 3)
 theorem mixed_y_square_colon_char0 : MixedColon ℚ := mixed_y_square_colon ℚ
+
+theorem mixed_x_minimal : Lex.MinimalGenerator k 2 (mixedIdeal k) (Finsupp.single (0:Fin 2) 1) := by
+  refine ⟨(mixed_monomial k _).mpr (Or.inl (by simp)),?_⟩
+  intro v hv hm
+  have h0 := hv 0
+  have h1 := hv 1
+  simp only [Finsupp.single_eq_same] at h0
+  simp only [Finsupp.single_eq_of_ne (by decide : (1:Fin 2) ≠ 0)] at h1
+  rw [mixed_monomial] at hm
+  have hz : v 0=1 := by omega
+  have ho : v 1=0 := by omega
+  ext i
+  fin_cases i <;> simp [hz,ho]
+
+theorem mixed_proper : mixedIdeal k ≠ ⊤ := by
+  intro he
+  have hm : MvPolynomial.monomial (0 : Fin 2 →₀ ℕ) (1:k) ∈ mixedIdeal k := by rw [he]; trivial
+  have h := (mixed_monomial k _).mp hm
+  simp only [Finsupp.zero_apply,lt_self_iff_false,Nat.reduceLeDiff,or_self] at h
+
+theorem mixed_minimal_set (v : Fin 2 →₀ ℕ) :
+    v ∈ ({Finsupp.single (0:Fin 2) 1,Finsupp.single (1:Fin 2) 2} : Finset (Fin 2 →₀ ℕ)) ↔
+      Lex.MinimalGenerator k 2 (mixedIdeal k) v := by
+  constructor
+  · intro h
+    simp only [Finset.mem_insert,Finset.mem_singleton] at h
+    rcases h with rfl|rfl
+    · exact mixed_x_minimal k
+    · exact mixed_y_square_minimal k
+  · intro h
+    have hm := (mixed_monomial k v).mp h.1
+    rcases hm with hx|hy
+    · have he := h.2 (Finsupp.single 0 1) (Finsupp.single_le_iff.mpr (by omega)) (mixed_x_minimal k).1
+      simp only [Finset.mem_insert,Finset.mem_singleton]
+      exact Or.inl he.symm
+    · have he := h.2 (Finsupp.single 1 2) (Finsupp.single_le_iff.mpr hy) (mixed_y_square_minimal k).1
+      simp only [Finset.mem_insert,Finset.mem_singleton]
+      exact Or.inr he.symm
+
+def MixedOrdinaryRows : Prop :=
+  Homological.totalBetti k (Fin 2)
+    (ModuleCat.of (MvPolynomial (Fin 2) k) ((MvPolynomial (Fin 2) k) ⧸ mixedIdeal k)) 1=2 ∧
+  Homological.totalBetti k (Fin 2)
+    (ModuleCat.of (MvPolynomial (Fin 2) k) ((MvPolynomial (Fin 2) k) ⧸ mixedIdeal k)) 2=1 ∧
+  Homological.totalBetti k (Fin 2)
+    (ModuleCat.of (MvPolynomial (Fin 2) k) ((MvPolynomial (Fin 2) k) ⧸ mixedIdeal k)) 3=0
+
+theorem mixed_ordinary_rows : MixedOrdinaryRows k := by
+  have h1 := (mixed_lex k).ordinary_ek k 2 (mixed_proper k) _ (mixed_minimal_set k) 1 (by omega)
+  have h2 := (mixed_lex k).ordinary_ek k 2 (mixed_proper k) _ (mixed_minimal_set k) 2 (by omega)
+  have h3 := (mixed_lex k).ordinary_ek k 2 (mixed_proper k) _ (mixed_minimal_set k) 3 (by omega)
+  have hne : Finsupp.single (0:Fin 2) 1 ≠ Finsupp.single (1:Fin 2) 2 := by
+    intro he
+    have h := congrArg (fun v : Fin 2 →₀ ℕ => v 0) he
+    norm_num at h
+  norm_num [Lex.maxVariable,hne] at h1 h2 h3
+  exact ⟨h1,h2,h3⟩
+
+theorem mixed_ordinary_rows_char2 : MixedOrdinaryRows (ZMod 2) := mixed_ordinary_rows (ZMod 2)
+theorem mixed_ordinary_rows_char3 : MixedOrdinaryRows (ZMod 3) := mixed_ordinary_rows (ZMod 3)
+theorem mixed_ordinary_rows_char0 : MixedOrdinaryRows ℚ := mixed_ordinary_rows ℚ
 end NSP14.Tests.LexLinearQuotientExamples

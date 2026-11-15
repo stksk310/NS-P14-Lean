@@ -172,12 +172,18 @@
       "NSP14.Lex.LinearQuotients",
       "NSP14.Homological.IdealAdjoining",
       "NSP14.Homological.IdealAdjoiningKoszul",
-      "NSP14.Lex.EliahouKervaireStep"
+      "NSP14.Lex.EliahouKervaireStep",
+      "NSP14.Lex.GeneratorOrder",
+      "NSP14.Homological.IdealScalarQuotient",
+      "NSP14.Homological.VariableIdealReduction",
+      "NSP14.Homological.VariableIdealBetti",
+      "NSP14.Lex.EliahouKervaireOrdinary"
     ],
-    "proved": "Actual lex predecessor colon; actual colon-adjoining short exact sequence; actual variable null-homotopy; actual ordinary Tor one-generator additivity.",
-    "not_proved": "Graded colon Betti computation, finite-generator EK induction, complete EK formula, BHP/Pardue, lex existence, dense closure and global closure.",
-    "focused_evidence": "verification/run18/lex_linear_quotients_20261115/focused01.json",
-    "root_build": "verification/run18/lex_linear_quotients_20261115/root_build01.log",
-    "axioms": "verification/run18/lex_linear_quotients_20261115/axioms01.log"
+    "proved": "Actual ordinary quotient EK formula over every field for the actual finite minimal generator set, via actual colon sequence, variable contraction, complementary regular-variable homology reduction and finite generator induction.",
+    "not_proved": "Internal-degree graded EK, general BHP/Pardue, common-Hilbert lex existence, dense closure and global closure.",
+    "focused_evidence": "verification/run18/lex_linear_quotients_20261115/focused03.json",
+    "root_build": "verification/run18/lex_linear_quotients_20261115/root_build03.log",
+    "axioms": "verification/run18/lex_linear_quotients_20261115/Axioms03_green04.log",
+    "export": "NSP14.Lex.IsLex.ordinary_ek"
   }
 }

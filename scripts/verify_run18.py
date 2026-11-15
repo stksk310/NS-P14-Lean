@@ -48,7 +48,8 @@ def main():
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/continuation_20261114').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/antipodal_20261114').iterdir()if p.is_file()]+
         [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/edge_20261115').iterdir()if p.is_file()]+
-        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/lex_20261115').iterdir()if p.is_file()])
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/lex_20261115').iterdir()if p.is_file()]+
+        [str(p.relative_to(ROOT))for p in(ROOT/'verification/run18/lex_linear_quotients_20261115').iterdir()if p.is_file()])
     initial={f:sha(ROOT/f)for f in bound}
     source_snapshot=git('rev-parse','HEAD').decode().strip()
     (out/'SOURCE_SHA256.json').write_text(json.dumps(initial,indent=2)+'\n')

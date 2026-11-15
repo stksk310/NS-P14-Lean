@@ -114,3 +114,8 @@ R06 cold検証成功：source `62c30ae798871d4eb55703df29e2897a770d29b9`、全18
 
 2026-11-15 EK証明継続：実colon等式、一般可換環の実短完全列、変数倍のactual Koszul homology零写像、lex一生成元追加のordinary Tor加法性を新規4 moduleで証明。3 consumerを個別exit0/警告0で確認し、次数1/2生成元を持つ実lex ideal (X0,X1²) の標数0/2/3例もGREEN。root6070jobs成功。4主要exportの実公理依存は許容三公理のみ。REDログは対象公開宣言の不在、失敗elaborationログも同じ新規directoryに保持。R06はこれらの追加前の内部snapshotで、新規4module全回帰は未実行。X_BHP_EKを閉じたと数えず、graded colon計算/有限生成元帰納/BHP比較/lex存在/dense/globalを引き続き実装する。
 新着独立監査47aeeb4を読み、208 manifest entryのhashを照合してmerge84d7655で保持。修正必須0件、認証対象は以前の58a0f54の二閉鎖のみ。今回R06のfresh reviewerは三閉鎖のみを承認、9203宣言・全source/evidence/旧bytes束縛を確認（report verification/run18/edge_review_20261115.md）。どちらもRun18全体を認証していない。
+
+2026-11-15 ordinary EK milestone：NSP14.Lex.IsLex.ordinary_ek はproperな実lex ideal、任意体、実極小生成元の任意有限集合g、全i≥1について商のordinary β_i=Σ_g C(max(v)−1,i−1)を証明。実predecessor idealと有限生成元順、実colon短完全列、実変数null-homotopy、実座標商の全行C(r,i)計算を接続。座標商は補変数の各正則作用を証明してactual Koszul homology同型で除去し、finite k-chainを非Artin商に仮定しない。empty/all coordinate idealsと全homological rowsも同じ定理に含む。
+focused03：8 named consumer fixtureと公理probeの9 command個別exit0/警告0、root build成功。実lex ideal(X0,X1²)の極小生成元集合を証明し、実ordinary行(2,1,0)をQ/F2/F3で適用。主要ordinary EK exportの推移公理は許容三公理のみ。追加後のcold全回帰はまだで、R06は以前の62c30ae sourceに対する内部記録として保持。既存verification/artifactに変更なし、凍結契約hash不変。
+元のRequested.EKは内部次数deg(v)+i−1まで要求するため、このordinary公式をEK/六IDの閉鎖と数えない。次は実graded map/完全列と内部次数を接続。BHP/Pardue・lex存在・dense/globalも未完。R06をRun18完了とせず継続する。
+通常atomic Push dd36b20をwork/実装branch両方で実測し、両remote SHA一致・clean checkoutを確認済み。以後のordinary EK追加はこの公開後の継続であり、公開済み証跡の書換えではない。

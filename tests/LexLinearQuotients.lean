@@ -23,4 +23,15 @@ theorem actual_betti_step (k : Type) [Field k] (q : ℕ)
         (ModuleCat.of (MvPolynomial (Fin q) k)
           ((MvPolynomial (Fin q) k) ⧸ Ideal.span ((MvPolynomial.X : Fin q → MvPolynomial (Fin q) k) '' {j : Fin q | j < r}))) i :=
   Lex.IsLex.predecessor_betti_step k q hL w hw r hr hmax i
+
+theorem actual_ordinary_binomial_step (k : Type) [Field k] (q : ℕ)
+    (L : Ideal (MvPolynomial (Fin q) k)) (hproper : L ≠ ⊤) (hL : Lex.IsLex k q L)
+    (w : Fin q →₀ ℕ) (hw : Lex.MinimalGenerator k q L w) (i : ℕ) :
+    let J := Lex.predecessorIdeal k q L w
+    Homological.totalBetti k (Fin q)
+      (ModuleCat.of (MvPolynomial (Fin q) k) ((MvPolynomial (Fin q) k) ⧸ (J ⊔ Ideal.span {MvPolynomial.monomial w (1:k)}))) (i+1)=
+      Homological.totalBetti k (Fin q)
+        (ModuleCat.of (MvPolynomial (Fin q) k) ((MvPolynomial (Fin q) k) ⧸ J)) (i+1)+
+      (Lex.maxVariable q w-1).choose i :=
+  Lex.IsLex.predecessor_betti_binomial k q hL hproper w hw i
 end NSP14.Tests.LexLinearQuotients

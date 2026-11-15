@@ -1,0 +1,8 @@
+⚠ [4636/4637] Built NSP14.Homological.VariableIdealBetti (1.6s)
+warning: NSP14/Homological/VariableIdealBetti.lean:12:0: automatically included section variable(s) unused in theorem `NSP14.Homological.residue_list_homology_finrank`:
+  [Fintype σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (4637 jobs).

@@ -265,3 +265,5 @@ denseの実W/P/R/Hx資源（q=3を含む）、u=q+1のAP全行比較、五生成
 ## Run18 再開：2026年11月15日（UTC）
 
 一般一欠落幅の任意標数actual Koszul minorから全行比較を構成し、凍結W_EDGEを閉じた。closed IDはW_SPARSE,W_FIVE,W_EDGEの3件。BHP/EK、dense閉鎖、全域幅合成は未完でRun18は継続中。ユーザー指示によりRun19の実行は保留。内部検証checkpointを全Run18の完了と数えない。
+
+2026-11-15 Run18継続：元のW_EDGE閉鎖＋R06全188検証成功。追加で任意体の実ordinary EK公式を証明・focused8fixture/root検証。graded EKとBHP/Pardueは未証明、六IDは3閉鎖/3未完。Run19保留。

@@ -1,0 +1,12 @@
+✖ [4782/4783] Building NSP14.Lex.EliahouKervaireOrdinary (1.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/EliahouKervaireOrdinary.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/EliahouKervaireOrdinary.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/EliahouKervaireOrdinary.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/EliahouKervaireOrdinary.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/EliahouKervaireOrdinary.setup.json --json
+error: NSP14/Lex/EliahouKervaireOrdinary.lean:132:2: Type mismatch: After simplification, term
+  hh
+ has type
+  @Eq ℕ (totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ L)) (j + 1)) (∑ v ∈ g, (maxVariable q v - 1).choose j)
+but is expected to have type
+  @Eq ℕ (totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ L)) j.succ)
+    (∑ v ∈ g, (maxVariable q v - 1).choose (j.succ - 1))
+Some required targets logged failures:
+- NSP14.Lex.EliahouKervaireOrdinary
+error: build failed

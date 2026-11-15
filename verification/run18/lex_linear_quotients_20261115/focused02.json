@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/LexGeneratorOrder.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.844
+  },
+  {
+    "file": "tests/IdealScalarQuotient.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.447
+  },
+  {
+    "file": "tests/VariableIdealBetti.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.477
+  },
+  {
+    "file": "verification/run18/lex_linear_quotients_20261115/Axioms02.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.593
+  }
+]
