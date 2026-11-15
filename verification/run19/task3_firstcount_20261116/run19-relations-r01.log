@@ -1,0 +1,8 @@
+NSP14/NarrowFour/Relations.lean:17:19: error: Application type mismatch: The argument
+  hd
+has type
+  s + t = r + w + L + K
+but is expected to have type
+  (s + t, s * ↑a + t * ↑b).1 = ((r + w, r * ↑a + w * ↑b) + ((L, K).1 + (L, K).2, D.u * (L, K).2)).1
+in the application
+  Prod.ext hd

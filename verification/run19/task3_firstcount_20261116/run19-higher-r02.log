@@ -1,0 +1,14 @@
+NSP14/NarrowFour/HigherRows.lean:44:44: error: unexpected token '*'; expected term
+NSP14/NarrowFour/HigherRows.lean:96:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 3
+  e + f ≥ 6
+  d ≥ 0
+  0 ≤ c ≤ 5
+  c - d ≥ 0
+where
+ c := ↑(D.coreP k)
+ d := ↑((D.internalSigma k hq + 1).choose 2)
+ e := ↑(D.internalSigma k hq)
+ f := ↑((D.internalSigma k hq).choose 2)

@@ -1,0 +1,76 @@
+NSP14/NarrowFour/HigherRows.lean:120:7: error: failed to synthesize
+  Module ((S.intervalCompletion ?m.33).FullPolynomialRing k) ((S.intervalCompletion ?m.36).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+NSP14/NarrowFour/HigherRows.lean:171:9: error: failed to synthesize
+  Module ((S.intervalCompletion ?m.20).FullPolynomialRing k) ((S.intervalCompletion ?m.23).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+NSP14/NarrowFour/HigherRows.lean:178:4: error: 'change' tactic failed, pattern
+  S.offsetGcd * (S.endpointData he hw).u = S.width
+is not definitionally equal to target
+  S.normalizedWidth * S.offsetGcd = S.width
+NSP14/NarrowFour/HigherRows.lean:180:46: error(lean.unknownIdentifier): Unknown identifier `k`
+NSP14/NarrowFour/HigherRows.lean:172:75: error: unsolved goals
+case refine_1
+S : NumericalSemigroup
+he : 4 ≤ S.embeddingDimension
+hw : S.width ≤ S.multiplicity - 2
+i : ℕ
+hi : 1 ≤ i
+hu : (S.endpointData he hw).u ≤ S.width
+⊢ Field sorry
+NSP14/NarrowFour/HigherRows.lean:190:9: error: failed to synthesize
+  Module ((S.intervalCompletion ?m.27).FullPolynomialRing k) ((S.intervalCompletion ?m.30).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+NSP14/NarrowFour/HigherRows.lean:193:73: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 2
+  0 ≤ c ≤ 1
+  b ≥ 2
+  a ≥ 0
+  a - d ≤ -2
+where
+ a := ↑S.width
+ b := ↑i
+ c := ↑D.q
+ d := ↑S.multiplicity
+NSP14/NarrowFour/HigherRows.lean:203:38: error: Application type mismatch: The argument
+  k
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  4 ≤ S.embeddingDimension
+of sort `Prop` in the application
+  physical_capacity S k
+NSP14/NarrowFour/HigherRows.lean:191:75: error: unsolved goals
+case neg
+S : NumericalSemigroup
+k : Type
+inst✝ : Field k
+he : S.embeddingDimension = 4
+hw : S.width ≤ S.multiplicity - 2
+i : ℕ
+hi : 2 ≤ i
+D : Endpoint.Data := S.endpointData ⋯ hw
+hq : D.q = 2
+hu : 3 ≤ D.u
+h3 : ¬D.u = 3
+hsource : totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i = totalBetti k D.Variables (D.fullG k) i
+⊢ totalBetti k D.Variables (D.fullG k) i ≤ sorry

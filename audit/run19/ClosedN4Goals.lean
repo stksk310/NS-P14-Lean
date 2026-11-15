@@ -1,6 +1,6 @@
 module
 public import audit.run19.RequestedGoals
-public import NSP14.NarrowFour.StandardWords
+public import NSP14.NarrowFour.FirstLarge
 @[expose] public section
 namespace NSP14.Run19
 
@@ -22,4 +22,15 @@ theorem words_closed : Requested.N_WORDS := by
     fun s t hs ht hp => NarrowFour.standard_mixed_bound D a b hne s t hs ht hp,
     NarrowFour.coreHeight_two_bound D hq a b hab,
     fun hu => NarrowFour.actualR_zero_small D k hq a b hab (by omega)⟩
+
+theorem high_closed : Requested.N_HIGH := by
+  intro S k _ he hw i hi
+  exact NarrowFour.narrow_four_higher S k he hw i hi
+
+theorem first_closed : Requested.N_FIRST := by
+  constructor
+  · intro D k _ hq a b hab
+    exact NarrowFour.first_count D k hq a b hab
+  · intro S k _ he hw hu
+    exact NarrowFour.narrow_four_first_large k S he hw hu
 end NSP14.Run19

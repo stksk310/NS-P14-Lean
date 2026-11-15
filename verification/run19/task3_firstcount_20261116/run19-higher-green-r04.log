@@ -1,0 +1,7 @@
+tests/N4Higher.lean:25:45: error: No goals to be solved
+tests/N4Higher.lean:27:72: error: No goals to be solved
+tests/N4Higher.lean:31:0: warning: declaration uses `sorry`
+tests/N4Higher.lean:32:0: warning: declaration uses `sorry`
+tests/N4Higher.lean:33:0: warning: declaration uses `sorry`
+tests/N4Higher.lean:34:0: warning: declaration uses `sorry`
+tests/N4Higher.lean:35:0: warning: declaration uses `sorry`

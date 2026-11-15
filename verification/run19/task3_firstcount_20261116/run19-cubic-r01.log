@@ -1,0 +1,49 @@
+NSP14/NarrowFour/CubicPayment.lean:47:2: warning: Unused tactic linter: `norm_num only [Nat.cast_ofNat, Nat.reduceAdd]` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+NSP14/NarrowFour/CubicPayment.lean:56:59: error: unsolved goals
+u : ℕ
+⊢ ↑(u.choose 4) * 24 = ↑u * ↑(u.choose 3) * 6 - ↑(u.choose 3) * 18
+NSP14/NarrowFour/CubicPayment.lean:57:15: warning: This simp argument is unused:
+  Width.choose_three_rat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [T, choose_four_rat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/CubicPayment.lean:57:38: warning: This simp argument is unused:
+  choose_four_rat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [T, Width.choose_three_rat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+NSP14/NarrowFour/CubicPayment.lean:61:67: error: unsolved goals
+u : ℕ
+⊢ ↑(u.choose 5) * 40 = -(↑u * ↑(u.choose 3) * 14) + ↑u ^ 2 * ↑(u.choose 3) * 2 + ↑(u.choose 3) * 24
+NSP14/NarrowFour/CubicPayment.lean:62:15: warning: This simp argument is unused:
+  Width.choose_three_rat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [T, choose_five_rat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/CubicPayment.lean:62:38: warning: This simp argument is unused:
+  choose_five_rat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [T, Width.choose_three_rat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

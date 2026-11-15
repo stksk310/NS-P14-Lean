@@ -1,0 +1,21 @@
+NSP14/NarrowFour/HigherRows.lean:43:71: error: unexpected token ')'; expected term
+NSP14/NarrowFour/HigherRows.lean:69:40: error: Invalid argument name `k` for function `Nat.div_le_div_right`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `a`: k̵a̲
+  • `b`: k̵b̲
+  • `c`: k̵c̲
+  • `h`: k̵h̲
+NSP14/NarrowFour/HigherRows.lean:96:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 3
+  d ≥ 0
+  d - f ≥ 0
+  0 ≤ c ≤ 5
+  c - d ≥ 0
+where
+ c := ↑(D.coreP k)
+ d := ↑((D.internalSigma k hq + 1).choose 2)
+ e := ↑(D.internalSigma k hq)
+ f := ↑(Nat.choose 4 2)
