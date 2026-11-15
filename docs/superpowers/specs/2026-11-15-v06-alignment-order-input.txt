@@ -1,0 +1,243 @@
+NS P14 V06 の Lean 経路同期をお願いします
+
+NS-P14 の紙上証明 V06 に合わせて、既存 Lean の主証明経路を整理してください。必要な補題を証明し、既存 consumer を新経路へ接続し、変更後のソースに結び付いた検証証跡まで作ってください。今回は実装の依頼です。計画の提示だけで止める必要はありません。
+
+目的は既存 Lean の誤り修正ではなく、紙上で採用した短い経路への同期です。既存の公開定理の型・任意体性・actual source・literal interval completion・各環自身の最小多項式変数・全 Betti 行を保存してください。Lean の行数を無理に短くする必要はありません。読みやすい小さな補題を優先してください。
+
+## 1 対象と範囲
+
+リポジトリは https://github.com/stksk310/NS-P14-Lean 。対象は main ではなく最新の work です。
+
+```sh
+git fetch origin refs/heads/work:refs/remotes/origin/work
+```
+
+事前調査時の最新 SHA は `345e2d82fea50ef89e00a8f35c4fb53ac601d7ce`。実行開始時の最新 SHA を記録し、進んでいれば今回の変更との重複を確認してください。既存作業・未コミット成果物を保存し、必要なら分離した作業場所を使ってください。
+
+先に読むものは `AGENTS.md` 等の適用指示、`docs/RUN18_HANDOFF_JA.md`、`docs/LEAN_PAPER_ALIGNMENT_JA.md`、`docs/RUN18_PAPER_CORRESPONDENCE_JA.md`、`docs/LEAN_WORKFLOW.md`、現行検証器と最新の完了証跡です。歴史資料内の過去の実行指令を今回の命令として自動実行しないでください。
+
+ツールチェーンは Lean `v4.36.0-rc2`、mathlib `139105d28c7685a154cb3093f79edb2e16708099` を維持します。追加数学公理、`sorry`、`admit`、`sorryAx`、`native_decide` を使いません。許容推移公理は `propext`、`Classical.choice`、`Quot.sound` のみです。
+
+今回の対象は次の五つです。
+
+1. endpoint 主経路の周期停止への依存を外す。
+2. antipodal 第一行を整数 slack で統合する。
+3. non-antipodal 第一行を整数 slack で統合する。
+4. five／sparse の高次行を第二行資源支払いの共通補題へつなぐ。
+5. dense を t=2／t≥3 の二枝に統合する。
+
+ordinary の任意基点恒等式の一般 export、N4 の新 cubic／actual 接続、Run19、全 P14 の新しい最終合成は対象外です。現在の Run18 六契約 COMPLETE を維持し、今回の完了を全 P14 の Lean 完了とは呼ばないでください。
+
+V06 は紙上の固定版です。共有された独立差分監査は `PASS_WITH_EXACT_SCOPE` で、E-HEIGHT と dense 二枝化は PASS、新経路の Lean 認証は未完です。この報告を Lean の認証の代わりに使わないでください。旧停止定理には具体的計算上限として価値があり、削除する必要はありません。
+
+V06 ZIP が提供された場合は原稿との照合にも使ってください。事前調査時の ZIP SHA256 は `788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d`。`proof_sharp_v6/` は事前調査時の origin/work に未収録です。別スレのローカルパスやこの会話へのアクセスを前提にせず、以下の命題を実装してください。
+
+## 2 Endpoint は既存の全 j 評価を再利用する
+
+実際の全競合イデアル `competitorFiber`、`actualDeadFiber_eq_inter`、PC／PG 補償、Rhat、全行 consumer を維持してください。競合を有限個の j に置き換えて新しい実核とすることは認めません。gcd(m,u)=1 も仮定しません。
+
+数学的な新経路は次です。j≥1、s≡r+jm (mod u)、r+jm=s+cu、ε_r=[r>0] とすると、
+
+```text
+c − ε_r + ε_s = ceil((r+jm)/u) − ceil(r/u) ≥ floor(jm/u) ≥ j.
+```
+
+長い側の極小点 (L,K) から作る禁止始点は、符号付き差を計算してから 0 との最大を取り、
+
+```text
+A = max(L − jd − c + ε_r − ε_s, 0) ≤ max(Hx − 2j, 0).
+```
+
+全 j で第一座標が有界になり、各第一座標で第二座標の最小値を選べば有限生成性が得られます。十分大きい j で第一座標が 0 になり、各競合イデアルに純粋な v 冪も得られます。
+
+現行 Lean には必要な結論が既にあります。`Carry.lean` の `carry_epsilon_lower`、`floor_jm_ge`、`forbiddenStart_height` は全 j の評価です。`CompetitorBounds.competitorMin_finite` は `Antichains.minimal_finite_of_mem` を使い、停止計算を必要としません。新しい ceiling ライブラリや一般二変数有限生成 wrapper の新設は、今回の最小改修には不要です。
+
+次の四箇所を修正してください。
+
+- `NSP14/Endpoint/CompetitorBounds.lean` の `competitorMin_height` は公開型を保ち、`competitorFiber` の全 j witness から直接証明する。長い側点に `exists_minimalFiber_le`、始点に `forbiddenStart_le`、対象の極小性に `Minimal.eq_of_le`、最後に `minimalPoint_height` と `forbiddenStart_height` を使う。Stopping 内の `forbiddenStart_mono` を再利用して依存を戻さない。
+- `NSP14/Endpoint/CarrySums.lean` の Stopping import を ActualKernel import へ替え、Volume import は維持する。
+- `NSP14/Endpoint/FiniteSocleBounds.lean` の `competitor_zero_column : (0,m+u)∈competitorFiber r` を同じ型で再証明する。`forbiddenStart_tail_zero`／`stoppingStart` の代わりに `forbiddenStart_height` の j=u と `coreHeight≤u−2` を使い、残りは既存の `carry_u`、`minimalFiber_budget` 等でつなぐ。
+- `NSP14/Endpoint/FiniteCompetitors.lean` に Stopping の明示 import を追加する。有限計算 API は従来の停止上限を使ってよい。
+
+`CarrySums`／`CompetitorBounds` へ `FiniteMinima`・`SocleInjection`・`FiniteSocleBounds` を import すると循環します。高層の計算モジュールを新証明のために低層へ取り込まないでください。
+
+完了後は `RowPackage`、`SocleBounds`、`Width.Closure` の個別 import 閉包に Stopping が入らないことを検査してください。umbrella の `NSP14` は旧成果も意図的に import するため、この判定の入口には使いません。停止定理の有限計算枝は引き続き動作させてください。
+
+## 3 第一行の整数 slack
+
+新しい純算術補題は、例えば `NSP14/Width/IntegerPayment.lean` に置けます。名前は提案であり、公開 consumer の型を保存すれば整理方法は調整可能です。変数は Nat、算術評価は ℚ に cast して行ってください。
+
+### Antipodal
+
+証明する補題は次です。
+
+```text
+h,b : ℕ, 4≤h,
+(6:ℚ)*b + 7*h ≤ 11*h^2 + 30
+  ⇒ b ≤ Nat.choose (2*h) 2 + 1.
+```
+
+A=choose(2h,2)+1、B=(11h²−7h+30)/6 とすると、
+
+```text
+A+1−B = (h²+h−18)/6
+       = ((h−4)²+9(h−4)+2)/6 > 0.
+```
+
+b が整数なので b<A+1 から結論を得ます。h−4 は ℚ 上の差として扱うか、h=4+z として飽和減算を避けてください。
+
+`NSP14/Width/AntipodalComparison.lean` の `actual_antipodal_first` を同じ型でこの補題へつないでください。既存 `antipodal_coreP_bound` による P≤choose(h+1,2)+1、`QCore_first_third`、`actual_core_endpoint_bound`、元の R と R+2h≤W、粗い W≤h² から上の仮定が得られます。
+
+第一行の proof から h=4／h≥5 分岐と `five_wordVolume_eight` への依存を外します。厳密 antipodal presentation・厳密 P／W・Betti 輸送を新経路の前提にしません。独立の既存厳密結果は保存してください。`five_wordVolume_eight` は高次第二行では使うので、リポジトリ全体から削除しません。
+
+### Non antipodal
+
+証明する補題は次です。
+
+```text
+u,b : ℕ, 8≤u,
+(12:ℚ)*b + 7*u ≤ 5*u^2 + 90
+  ⇒ b ≤ Nat.choose u 2 + 1.
+```
+
+A=choose(u,2)+1、B=(5u²−7u+90)/12 とすると、
+
+```text
+A+1−B = (u²+u−66)/12
+       = ((u−8)²+17(u−8)+6)/12 > 0.
+```
+
+`NSP14/Width/FiveNonAntipodal.lean` の `actual_five_nonAntipodal_first` を同じ型で置換します。既存 `five_nonAntipodal_volume_remainder : 6*W≤u²+u+6` と `actual_first_volume_fourth` の第一行評価から仮定を導き、u=8,9,10,11／u≥12 の場合分けを外してください。体積上界の既存 mod 3 算術補題を削除する必要はありません。
+
+## 4 資源の第二行支払いから全高次行へ進む
+
+**actual β₂≤target₂ だけでは共通補題の仮定として不十分です。** 同じ資源包絡 B を第二行で支払えることを仮定にしてください。
+
+まず純算術補題を証明してください。e,u は Nat、B は ℚ、e≥2、u≥e とし、
+
+```text
+B * choose(e,2)
+  ≤ 2*choose(u,3) + u*(e−1) + choose(e−1,3)
+```
+
+ならば、2≤i≤e の全てで
+
+```text
+B * choose(e,i)
+  ≤ i*choose(u,i+1) + u*choose(e−1,i−1) + choose(e−1,i+1).
+```
+
+既存 `NSP14.Width.normalized_capacity_monotone` を再利用できます。choose(e,i)>0 は i≤e から確保し、e−i を割らないでください。
+
+さらに e=D.q+2 として、P_C≤B、Rhat+u≤B、上の第二行資源比較から、任意体 k、2≤i≤e で actual β_i≤i*choose(u,i+1) を得る共通 wrapper を作ります。`actual_positive_rows_add` と Pascal の式を使って、同じ B に対する加法形
+
+```text
+β_i + u*choose(e−1,i−1) + choose(e−1,i+1) ≤ B*choose(e,i)
+```
+
+を経由してください。引算は ℚ 上の通常の引算か、この加法形を用います。B=u²/4 も渡すため B を Nat に限定しません。体 k 上で数値除算しないでください。
+
+配置例は新しい `NSP14/Width/HigherFromSecond.lean`。`Endpoint/PositiveRows.lean` へ `Width/NormalizedCapacity` を import すると、`NormalizedCapacity → SparseSecond → FirstResources → PositiveRows` と循環します。新 wrapper は下層を import し、`SparseHigher`／`FiveHigher` を import しないでください。
+
+- `NSP14/Width/FiveHigher.lean` の `actual_five_higher` の型を保ち、i>5 の source 消滅処理も保存する。i≤5 は新 wrapper へ接続する。u=8 は既存 W≤14 を用いて B=14、第二行の包絡は U₂=104≤112。u≥9 は B=u²/4 とし、z=u−9≥0 に対して第二行の差が `(2*z^3+33*z^2+136*z+33)/6>0` となることを証明する。高次行ごとの `choose_quadratic_step`／`choose_quadratic_from_eight` を呼ばない。これらの一般定理自体は保存する。
+- `NSP14/Width/SparseHigher.lean` の `actual_sparse_higher` の型を保ち、既存 `sparse_second_payment` と同じ資源 B=W を新 wrapper へ接続する。既存 `actual_sparse_resource_add` 等の公開定理も保存する。
+
+この共通化は既存資源の使い回しです。最終 comparison や既存の actual 高次結論を wrapper の証明へ呼び戻さないでください。
+
+## 5 Dense を t=2 と t≥3 にまとめる
+
+対象は q≥4、u=q+1+t、2≤t≤q の既存 dense 範囲です。q=3 の別資源は変更しません。
+
+`NSP14/Width/DenseLexResources.lean` で、一つの lex 商から得る同じ K について、既存の core Betti 上界と
+
+```text
+t=2 → K≤2,
+3≤t → 3*K≤2*t*(t−1)
+```
+
+を同時に得る helper を作ってください。既存 `dense_lex_correction_bound` に、t=2 では r=3、t≥3 では r=t を渡せます。後者の `2*t≤choose(t+1,2)` は t=3 から成立します。t=3 専用の補正評価を主経路に残す必要はありません。
+
+既存 `dense_core_lex_bound` の型は保持し、必要なら新 helper から旧条件を導く互換 wrapper にします。旧定理は t=0,1 も量化しているため、新 helper も t≤q の同じ範囲で条件付きの二評価を返し、全体仮定へ t≥2 を追加しないでください。新 helper の statement は、同じ ∃K の中に全行 core 上界と上の二条件を含めてください。別々の lex 商で K を選び直さないでください。
+
+`NSP14/Width/DensePayment.lean` では、次の新しい係数補題が使えます。
+
+```text
+q,t,K,c₀ : ℕ,
+4≤q, 3≤t, t≤q,
+3*K≤2*t*(t−1), 2*c₀=t*(t−1)
+  ⇒ q+1+3*t+K ≤ t*(q+1)+c₀.
+```
+
+紙上で用いる有理数係数 γ は、次の恒等式で非負です。上の c₀=choose(t,2) とは別の記号です。
+
+```text
+γ = (5*t²−17*t−6)/6 + (t−1)*(q−t),
+6*γ = 12*(q−4) + 5*(t−3)² + (t−3) + 6*(t−3)*(q−t) ≥ 0.
+```
+
+新しい `dense_payment_ge_three` 等は、q≥4、3≤t≤q、j≤q+1、P≤q+1+2t、R≤t、3K≤2t(t−1) から、現行と同じ結論
+
+```text
+(j+1)*choose(q+1,j+2) + P*choose(q,j)
+  + R*choose(q+1,j) + K*choose(q−1,j)
+  ≤ (j+1)*choose(q+t+1,j+2)
+```
+
+を証明してください。旧 `dense_payment`／旧 `dense_large_coeff` を呼んで従来の三枝へ戻らないでください。旧定理の型は互換 wrapper 等で保存します。t=2 では従来の R=0、K≤2 の支払いを維持し、既存 `dense_payment` の proof も t=2／t≥3 へ整理できます。
+
+`NSP14/Width/DenseComparison.lean` の actual consumer を、新しい同一 lex 資源と支払いへ接続してください。旧型の h3 条件を経由するだけで新 helper が未使用、という状態で完了としないでください。
+
+境界 q=4,t=3 では γ=0 です。第1行での容量差は 0 になり得るので、必要な不等号は ≤ です。最上位 i=q+2、すなわち j=q+1 も保存し、0 になる二項係数で割らないでください。
+
+## 6 変更管理と検証器
+
+`audit/run18/RequestedGoals.lean` は不変です。SHA256 は `86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689`。W_SPARSE／W_FIVE／W_EDGE／X_BHP_EK／W_DENSE／W_CLOSE の六契約、既存 acceptance・Run15–17 の受理済み export の型を弱めません。公開定理を削除せず、新補題と proof 本文差替えを中心に進めてください。
+
+旧 `scripts/verify_run18.py` は BASE=`c4fd8153f55bb231aab4168a47c1546888fa7ab0` の既存ソース不変を要求するため、今回の Endpoint 編集後にそのまま PASS する設計ではありません。**このガードを削除・緩和して既存 Run18 の認証を書き換えないでください。** 今回用に `scripts/verify_v06_alignment.py` 等の別検証器を追加してください。
+
+新検証器には次の条件を持たせてください。
+
+- 実行開始時の base SHA と有限の変更許可リストを固定する。上記対象ファイル、新補題、必要な import、新テスト・新監査・新検証器・新台帳だけを許可し、他の inherited source は byte／fileset 不変とする。許可リストは差分を追認して無制限に広げず、レビュー対象として明記する。
+- 既存 verifier・checker・frozen acceptance・`verification/`／`artifacts/` の過去全ファイルと hash を保存する。新しい証拠・ZIP だけを一意な新規先へ追加する。旧 `verify_run16.py` は出力先固定なので直接再実行しない。
+- 新しい production module が `lake build NSP14` から到達するよう、必要なら `NSP14.lean` の旧 prefix を保存して末尾に import を追加する。`LEAN_PROGRESS.md`／`docs/LEAN_PAPER_ALIGNMENT_JA.md` も過去記述を保持し、今回分を追記する。
+- 調査時の最新の完了 R16 は `verification/run18/runs/release_candidate_20261115_r16/verification.json`、proof source は `a5f480c5136042597fceae23ad06d2ef3923ed02`、268 fixtures／280 checks。ここから既存検証を欠落なく再実行し、新規 fixture を依存順に加える。最新 work で完了証跡が増えている場合は、それも継承対象に含める。
+- **旧 280 コマンドを文字列のまま実行しない。** model の `--output`、公理 control の `--output-dir`、EnvironmentAudit 等が旧 R16 を指すため、新規先へ写像する。old-command／new-command 対応を保存し、新 EnvironmentAudit は変更された既存 module と新 module を含めて生成する。
+- 互換性のため、新証拠先は `verification/run18/runs/v06_alignment_<UTC>_<unique>/` 等の未存在ディレクトリが使える。既存 axiom control は出力 prefix に制約があるため、この範囲内で安全に再利用する。旧ソース不変ガードと今回の変更許可検査は区別し、実質的な受入・計算検査を省略しない。
+- 新設ファイルだけでなく、**改変した既存 module に属する宣言も**型・推移公理・自己依存を監査する。normal／explicit 型を保存し、既存 export は base と照合する。`collectAxioms` の結果を検査し、public module の `axiomInfo` 表示だけでは新公理と誤判定しない。禁止トークン検査も改変ソースを含める。
+- 公理検査と、採用した証明経路の依存検査は別に行う。下記の根別依存条件を、新しいソース・import 閉包・使用宣言の読解または適切な probe と対応付ける。
+- fresh cache の対象には、改変した既存 Endpoint module とその下流も含める。旧検証器の「新設ファイルと Lex／Width だけ cold」では今回の証拠として不十分。分離した作業場所で対象 cache を退避し、再構築範囲を記録する。mathlib 全体の再ビルドまでは要求しない。
+- ソース・検証器・対応台帳を固定した proof commit を作り、その状態で検証する。検証中は HEAD と対象ソースを変更しない。全対象 Lean、変更管理ルール、新検証器、使用 checker、対応台帳、toolchain／mathlib pin を source manifest に収録する。従来の scripts／docs の列挙だけを流用して新ファイルを漏らさない。
+- 成否を生のログ・exit code・コマンド・環境とともに保存する。fixture は従来同様、必要に応じて `lake env lean -j1 -M12288 ...` を使う。古い証拠を新ソースへ後付け認証せず、proof commit・新証拠 commit／hash・独立レビュー scope を結び付ける。
+- 新 alignment 検証器そのものの negative controls も追加する。少なくとも、既存／危険な出力先、許可外既存ソースの改変、source／evidence の改変、改変旧 module の型／公理監査 coverage の欠落を拒否することを、使い捨ての分離環境で確かめる。旧 publication guards の PASS だけを新検証器のテストとして数えない。
+
+旧 `package_run18_audit.py` の COMPLETE メタデータを無条件流用せず、新 alignment 用の report／package を作ってください。既存の immutable receipt を緩めず、source と evidence と review が一致した場合だけ新しい ZIP を作ります。検証器自体も独立レビューの対象です。
+
+## 7 最小の追加確認と完了条件
+
+既存の EndpointCarry、CompetitorBounds、Rhat、RowPackage、Stopping、BoundaryExamples、ComputedExamples、WidthFiveHigher、WidthFiveNonAntipodal、DensePayment、WidthDense、WidthDenseResources、WidthActualClosure および凍結受入を再利用してください。新補題の意味を確かめる境界として、少なくとも次を確認します。
+
+- APD h=4、および h=5,t=2 の nonunit ケースの actual 第一行。u=10 で t=2 を unit と仮定しない。
+- 共通 capacity の e=2,u=2,B=2、e=5,u=8,B=14、e=5,u=9,B=81/4。top i=e まで含める。
+- dense q=4,t=3,j=0 の等号、および j=q+1 の最上位行。
+- endpoint の全 j 定義と、主経路の Stopping 非依存、旧有限計算枝の稼働。
+
+依存の条件は根ごとに区別してください。
+
+| 根 | 新経路で呼ばないもの |
+|---|---|
+| `actual_antipodal_first` | `five_wordVolume_eight`、厳密 antipodal P／W・presentation・Betti 輸送成果 |
+| `actual_five_nonAntipodal_first` | 旧 u=8–11 個別払い戻しへの依存 |
+| `actual_five_higher` | `choose_quadratic_step`／`choose_quadratic_from_eight` |
+| 新共通 higher wrapper | 旧 actual five／sparse higher、最終 comparison |
+| 新 dense t≥3 helper／payment | t=3 専用の旧分岐、旧 payment への逆依存 |
+| endpoint 主経路の個別 module | Stopping への import／定理依存 |
+
+最後に以下を報告してください。
+
+1. 取得 base SHA、変更したファイル、追加した補題、保存した公開型。
+2. 五項目について「新補題→actual consumer→既存凍結受入」の接続を示す対応表。
+3. fresh build、全既存検証＋追加検証、normal／explicit 型、公理、依存、証拠保存の結果と生ログの場所。
+4. proof commit と新 evidence／review の対応、変更管理 verifier のレビュー結果、新しい配布 ZIP。
+5. 未達があれば対象を明示する。五項目すべてが consumer まで接続されて初めて `V06_ALIGNMENT_COMPLETE` とする。既存 Run18 COMPLETE の記録は保存し、N4／Run19／全 P14 完了の宣言へ広げない。
+
+途中で既存証明の本当の欠陥が見つかった場合は、今回の経路同期と区別し、正確な型・反例または破綻箇所を報告してください。無関係な経路や紙上証明まで広く書き換える必要はありません。
