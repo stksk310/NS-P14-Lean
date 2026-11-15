@@ -1,0 +1,325 @@
+{
+  "base": "04906ede0e9e3a04b9c07c791c1e1c49834dd3e1",
+  "sources": [
+    {
+      "module": "NSP14.Endpoint.Data",
+      "path": "NSP14/Endpoint/Data.lean",
+      "sha256": "2a3b13d265a54a68ba7234933fe9b97214bdfdae973a50eb4ad04c4368f04547",
+      "base_git_blob": "3076532941af0086802439f8573e22c9a85a9250"
+    },
+    {
+      "module": "NSP14.Endpoint.Presentation",
+      "path": "NSP14/Endpoint/Presentation.lean",
+      "sha256": "b872cf60ec7cfca61c28e5bd7dcd714e8b834bc2677ad89593e21e823af0eaec",
+      "base_git_blob": "771abcc2f21c7a3f9e9390beeaab6ab31980dc0c"
+    },
+    {
+      "module": "NSP14.Endpoint.Core",
+      "path": "NSP14/Endpoint/Core.lean",
+      "sha256": "71d86ba9ee508e849329628c8c76d38e66281a3aa07925da97db7cb01c1b524c",
+      "base_git_blob": "efcfae9bd4e3475955ac874b906923e43444e5f7"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreMap",
+      "path": "NSP14/Endpoint/CoreMap.lean",
+      "sha256": "496e0413b459c8eb9b4942ef66458e6fc05468a8dfa93197d5118783fcd22c28",
+      "base_git_blob": "207e2cf5bd89ea1925730369dbec27efdc76e97d"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreKernel",
+      "path": "NSP14/Endpoint/CoreKernel.lean",
+      "sha256": "398055ad9e11f3f8b724185135e3ae79494fa5348515713e632f2adb6761f49e",
+      "base_git_blob": "71b79c5d4d117afc604df764de35f0e12c9ddecb"
+    },
+    {
+      "module": "NSP14.Endpoint.Coordinates",
+      "path": "NSP14/Endpoint/Coordinates.lean",
+      "sha256": "1a5f332c3dc4026f9da8697778ca67f96aac02d9441b3581715da23ee1cd2226",
+      "base_git_blob": "7ce0f20e55ba3800a62c69328c110a0d54aeb516"
+    },
+    {
+      "module": "NSP14.Endpoint.Competitors",
+      "path": "NSP14/Endpoint/Competitors.lean",
+      "sha256": "f1e07912286b16ac29977bddb339a965b0028d983f6434e24468dfd4f4d7d2b0",
+      "base_git_blob": "af5c9ca453db1e13103af682009403725cd415ad"
+    },
+    {
+      "module": "NSP14.Endpoint.Fibers",
+      "path": "NSP14/Endpoint/Fibers.lean",
+      "sha256": "6890dd7116c9412d962902e5a376af3ee9b9fa4fb770fcbba1e42c88b874057e",
+      "base_git_blob": "fc0091ef4499c25cefa5f425d99c613e7f469b31"
+    },
+    {
+      "module": "NSP14.Endpoint.Carry",
+      "path": "NSP14/Endpoint/Carry.lean",
+      "sha256": "95ba789f8bcdb85db4e7cec6072cf197f1eec1ba532163180d0c8e932d9d0702",
+      "base_git_blob": "663262c147e850ec7d1e77c3fc973463f011078c"
+    },
+    {
+      "module": "NSP14.Endpoint.ActualKernel",
+      "path": "NSP14/Endpoint/ActualKernel.lean",
+      "sha256": "9fcb8b751d540d92bd3d0c729109ad1001af913fc44a410d6b74150ad78c9c43",
+      "base_git_blob": "0e89cdd32c15b63c889722c64923ae7f857b97fc"
+    },
+    {
+      "module": "NSP14.Endpoint.KernelIdeals",
+      "path": "NSP14/Endpoint/KernelIdeals.lean",
+      "sha256": "b6984115f41354acb0338743aa4857c8c8e55f2b212e30aebe9bbb490decae96",
+      "base_git_blob": "dc54deca842628ab8d1daaf3a47dbc141f87e4fa"
+    },
+    {
+      "module": "NSP14.Endpoint.IdealCoordinates",
+      "path": "NSP14/Endpoint/IdealCoordinates.lean",
+      "sha256": "068719e19892d289589ce4b3bc34df6e7b16e1c6f544d2e3f1f62b8a858d7dbf",
+      "base_git_blob": "7ad96db0c256e918b878bfb8786daaaf71029070"
+    },
+    {
+      "module": "NSP14.Endpoint.FiberIndices",
+      "path": "NSP14/Endpoint/FiberIndices.lean",
+      "sha256": "e74715f81dc8dce79c979ade81ebe5e24d327ded349a16b1d48d742a34ba04e4",
+      "base_git_blob": "7e4e98106c169818a1f7de1b62e2b351b80e3ed3"
+    },
+    {
+      "module": "NSP14.Endpoint.IdealBasis",
+      "path": "NSP14/Endpoint/IdealBasis.lean",
+      "sha256": "8fe6dbeda4e9baa9c322e0800ba735c8f6312999e2925f3550da3a0719bdacc7",
+      "base_git_blob": "0494fe49528922b5aba63656c128ca89b0818844"
+    },
+    {
+      "module": "NSP14.Endpoint.Modules",
+      "path": "NSP14/Endpoint/Modules.lean",
+      "sha256": "24bfcc996db37a5c43bddad1f2bcf509ce6fb64f71bd800e702173d1919c59b3",
+      "base_git_blob": "4cabb5e24be4af8d117e2a9c948bbd45a05257db"
+    },
+    {
+      "module": "NSP14.Endpoint.FiberAssembly",
+      "path": "NSP14/Endpoint/FiberAssembly.lean",
+      "sha256": "a58bb8899bb88c51a4792db91762eaa1296624ba583eccc91d6a50e47d51d28d",
+      "base_git_blob": "9234756d81acba8f579db1b45a65e2a8182aef5f"
+    },
+    {
+      "module": "NSP14.Endpoint.FiberAction",
+      "path": "NSP14/Endpoint/FiberAction.lean",
+      "sha256": "ab09bb63d0952ce28369c013a7e513f62aab49b18795a67e79bafd8250a7e64b",
+      "base_git_blob": "2891483ba54e6cb1c0addee924abe8ba52828214"
+    },
+    {
+      "module": "NSP14.Endpoint.FiberModule",
+      "path": "NSP14/Endpoint/FiberModule.lean",
+      "sha256": "1bd33e9c405b7e6d28c1868a6acc927d9fee86b1abf05676fd43124701a20382",
+      "base_git_blob": "4db02367f5aa2d54ebf91495bd2e7e2641ca4b41"
+    },
+    {
+      "module": "NSP14.Endpoint.HomologyFinite",
+      "path": "NSP14/Endpoint/HomologyFinite.lean",
+      "sha256": "b154965a4eb69f27967bef50a6d486047a55894d5087e731e9b8c73503a33810",
+      "base_git_blob": "b573ca95c63e6d4ebb549b84de1888c47e535ac8"
+    },
+    {
+      "module": "NSP14.Endpoint.ArtinQuotient",
+      "path": "NSP14/Endpoint/ArtinQuotient.lean",
+      "sha256": "0ba1f2dc561865b715ba9c5bd1864708f5434d79d68b9b0f30a8aab7e1ff2f44",
+      "base_git_blob": "4f7691bf1bcd1c2070652fe0ab1525140ab52c29"
+    },
+    {
+      "module": "NSP14.Endpoint.XHomology",
+      "path": "NSP14/Endpoint/XHomology.lean",
+      "sha256": "dea50a0633a6901a0285a58e0221f34dc1612ca33bb276387303eec31d0411d0",
+      "base_git_blob": "d924a5d00d69819fd3e8ae23dbe1134661c98f72"
+    },
+    {
+      "module": "NSP14.Endpoint.HomologyBalance",
+      "path": "NSP14/Endpoint/HomologyBalance.lean",
+      "sha256": "79caa0213e233ef3834c8db66130c361565eae60d1fbeb1d74f85fafc4b4210e",
+      "base_git_blob": "7893298712bb3b44002dcf5e72a6cddcb0f290d0"
+    },
+    {
+      "module": "NSP14.Endpoint.ArtinTransport",
+      "path": "NSP14/Endpoint/ArtinTransport.lean",
+      "sha256": "428f095a759b2818b3944a7732a922ee244b2f9126e179802ec656917dbb83e2",
+      "base_git_blob": "a4ff9bc0476c939f3c59ac85d8d7e359f2a88c71"
+    },
+    {
+      "module": "NSP14.Endpoint.VariableOrder",
+      "path": "NSP14/Endpoint/VariableOrder.lean",
+      "sha256": "90791667c74272d929ca109343c15e5e77d90f0b6219df8e083cd3cfc55f0a8d",
+      "base_git_blob": "92f7c6271f8d3536e483bdbf67945d6253f99305"
+    },
+    {
+      "module": "NSP14.Endpoint.H0Internal",
+      "path": "NSP14/Endpoint/H0Internal.lean",
+      "sha256": "ff9b66eb8a34dec6b90cc5cd6f272879081515da3f4fb4380d7d44a8a4e61570",
+      "base_git_blob": "e9fac192de165e6b38fca30d85ea9c3f2fbdb5a6"
+    },
+    {
+      "module": "NSP14.Endpoint.NativeTransfer",
+      "path": "NSP14/Endpoint/NativeTransfer.lean",
+      "sha256": "27d310e4152248ab0fd5a05c5d2cc3510832181b2f96a5ff0fc3e38b320afa76",
+      "base_git_blob": "4118ed8e6f59124f706502317e71933e0f131a89"
+    },
+    {
+      "module": "NSP14.Endpoint.AssemblyCoefficients",
+      "path": "NSP14/Endpoint/AssemblyCoefficients.lean",
+      "sha256": "c56a16daa5ec3baf27b918df04848ee5d3815ed5461b4fbfe278d55ccb60a1f9",
+      "base_git_blob": "4fc6da3292f21e769c0006ce3e23306688f7cffa"
+    },
+    {
+      "module": "NSP14.Endpoint.AssembledKernel",
+      "path": "NSP14/Endpoint/AssembledKernel.lean",
+      "sha256": "2fb1b13a189b104fd46c73ae56b6a5f3a46010ac148f05eed7d7b9795d6753ce",
+      "base_git_blob": "dc5082d429de8e3f08937c45a4332a0783780603"
+    },
+    {
+      "module": "NSP14.Endpoint.Quotient",
+      "path": "NSP14/Endpoint/Quotient.lean",
+      "sha256": "fb32cb8eee7b99a2e0a7a722e18106a4d688e727d8d26f6a89974df63a669133",
+      "base_git_blob": "fff3e4e803edccfd32a76644468873ddba09e15e"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreWords",
+      "path": "NSP14/Endpoint/CoreWords.lean",
+      "sha256": "be6221923ed19d28cfd03e827adcb95b2edeb59fd4301eb0658b113928de34c7",
+      "base_git_blob": "1bc372202a38cecdd84676831e38ca3b437f516c"
+    },
+    {
+      "module": "NSP14.Endpoint.Minimal",
+      "path": "NSP14/Endpoint/Minimal.lean",
+      "sha256": "451f25bcda1520057a839f47e4b92773a9364e35473c68cbcae1adfe3fc36956",
+      "base_git_blob": "bf07f359786c5af82b6cd6f0e39b22acc4ac6073"
+    },
+    {
+      "module": "NSP14.Endpoint.MinimalWords",
+      "path": "NSP14/Endpoint/MinimalWords.lean",
+      "sha256": "1e31702101044849e7e627199c4279b7fad545bc61c23cb2a78c9cb466c2bb86",
+      "base_git_blob": "3b3de8cd2fb1c75a70354b468a1f6fa33a369417"
+    },
+    {
+      "module": "NSP14.Endpoint.OffsetOrder",
+      "path": "NSP14/Endpoint/OffsetOrder.lean",
+      "sha256": "c8e0accf63cbd7b149a3116c9af3ebe9f31d730c56bd959696cba28e5b2f9eda",
+      "base_git_blob": "b98f39037caacb06a4ae2672c8fe2c4292ac0454"
+    },
+    {
+      "module": "NSP14.Endpoint.MinimalBounds",
+      "path": "NSP14/Endpoint/MinimalBounds.lean",
+      "sha256": "67b62ff04a5b4c4dcafe796b3b8e9d3c9954b8ddb6a51eb8bf57d7662fe898f3",
+      "base_git_blob": "83d396b2387bc9a95e9837a0ce2238a9732387b7"
+    },
+    {
+      "module": "NSP14.Endpoint.Residues",
+      "path": "NSP14/Endpoint/Residues.lean",
+      "sha256": "c9c675e4818bcadcc49079773d79f996e0e34781585e1860fc60a6698f48153e",
+      "base_git_blob": "6e2ebde74f736dee81210257977be23c5aea203f"
+    },
+    {
+      "module": "NSP14.Endpoint.MinimalGenerators",
+      "path": "NSP14/Endpoint/MinimalGenerators.lean",
+      "sha256": "396b85f31a73381d2fd53b063e4fc8ece863207d188816752d209f111cbb705e",
+      "base_git_blob": "af833ba4fa27d26344c293ca5994cb918b2d6261"
+    },
+    {
+      "module": "NSP14.Endpoint.Volume",
+      "path": "NSP14/Endpoint/Volume.lean",
+      "sha256": "aac92e28ff1abc9f41096b2cf925fecd82d2154e57ecce0981639f1793f425ee",
+      "base_git_blob": "708c84b373bcef9b0fd5a1422e7c4e53b1d44a11"
+    },
+    {
+      "module": "NSP14.Endpoint.CarrySums",
+      "path": "NSP14/Endpoint/CarrySums.lean",
+      "sha256": "9ae46d0698db6b8222d4f01dddd4348087fff6bc722d2a7b9c863540dce90652",
+      "base_git_blob": "bd872d98766323439e315ee76ed705c388644a10"
+    },
+    {
+      "module": "NSP14.Endpoint.CompetitorBounds",
+      "path": "NSP14/Endpoint/CompetitorBounds.lean",
+      "sha256": "5265a086da0725401d61e5bf53224e1ebc3a05b006be4503bb6b83c62b6c8434",
+      "base_git_blob": "75d63d796e2018856e383165e1e7ed872edd54c1"
+    },
+    {
+      "module": "NSP14.Endpoint.FiberInjection",
+      "path": "NSP14/Endpoint/FiberInjection.lean",
+      "sha256": "114150ff14c26bb0893c6dad7c3d2b0b1dad3b3b3ceb0507fd46495cc07818e8",
+      "base_git_blob": "f36dbbc14666c8c23e50f05ff0125a15c8ada6ac"
+    },
+    {
+      "module": "NSP14.Endpoint.Socle",
+      "path": "NSP14/Endpoint/Socle.lean",
+      "sha256": "4bf1eb5bfd26faf05313ffea58da157141bd0470df7ebf4fcf592e56ddee68e6",
+      "base_git_blob": "aca4a79fd5f797523306f7121a93d88b5173b757"
+    },
+    {
+      "module": "NSP14.Endpoint.SocleInjection",
+      "path": "NSP14/Endpoint/SocleInjection.lean",
+      "sha256": "530ed62a7f5ba4235a92a52e9db22c2dfc2e381175135e6266923425b21223ed",
+      "base_git_blob": "ebdf6a749c0f4a234e5f433a6ce9955bf33d3467"
+    },
+    {
+      "module": "NSP14.Endpoint.Compensation",
+      "path": "NSP14/Endpoint/Compensation.lean",
+      "sha256": "935daef24217f33f074757c8c6c3b20c5007216b506e596b5d26b35e2076e555",
+      "base_git_blob": "cd419c8ef8384feb4adfee3573d0d9724d1d7cee"
+    },
+    {
+      "module": "NSP14.Endpoint.FullTransfer",
+      "path": "NSP14/Endpoint/FullTransfer.lean",
+      "sha256": "dbe038aa0960263c5008666a5f64dd184220af04a907b019baf37139b2f784f1",
+      "base_git_blob": "ff7cc75a8e970a6e71f40775820b8317ad0b52f9"
+    },
+    {
+      "module": "NSP14.Endpoint.SocleBounds",
+      "path": "NSP14/Endpoint/SocleBounds.lean",
+      "sha256": "229ec4d9a23ae5bc614ba4475f94b26ca6e422b0490faa7431f7d6f352c44613",
+      "base_git_blob": "cd5054b7fe2213ba0789a2bc0f779f58575bdcce"
+    },
+    {
+      "module": "NSP14.Endpoint.MinimalPredecessors",
+      "path": "NSP14/Endpoint/MinimalPredecessors.lean",
+      "sha256": "6afd6024d97b602022ba98d07034e7b7525799b2a2b3078bdccc6f1f08ffbf83",
+      "base_git_blob": "df3f7a27811bd94cd21cb4e29c9dda48d6009e18"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreArtinIdeal",
+      "path": "NSP14/Endpoint/CoreArtinIdeal.lean",
+      "sha256": "22f582b292db3434a60d7de5786b97d9703512a99fc5e7b96c26024b6467142a",
+      "base_git_blob": "4fc7064a6e49967baaf834abc592835cc9fce565"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreArtinBasis",
+      "path": "NSP14/Endpoint/CoreArtinBasis.lean",
+      "sha256": "a6fbea72468e2217453ea93e510ee70a5c3eeeb82ec245c806b83fa016940d48",
+      "base_git_blob": "bccc26aca4723e5f61ad1683d575675f14ab2af7"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreInternalAction",
+      "path": "NSP14/Endpoint/CoreInternalAction.lean",
+      "sha256": "410fdb5d77a3b3f830f7a50d68326afa68f56bb12a45f5d0f2c0c41afd6cef1e",
+      "base_git_blob": "da9f749898cde73e2d7c65702a62866d81c31081"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreInternalPresentation",
+      "path": "NSP14/Endpoint/CoreInternalPresentation.lean",
+      "sha256": "60d1a97c6331ee2ceb46a4706c932161fd71e8c4974196a29a9da3172c8d8427",
+      "base_git_blob": "80eda8c2dea2dcf0f37507d36b72348eea78cb0a"
+    },
+    {
+      "module": "NSP14.Endpoint.CoreAugmentation",
+      "path": "NSP14/Endpoint/CoreAugmentation.lean",
+      "sha256": "00ef7d60213354ba2106d12452f2c82e646926264ef3232caac166891b1c04cb",
+      "base_git_blob": "aae0d9189508a58420efc5825a12a43d9fc417cf"
+    },
+    {
+      "module": "NSP14.Width.EdgeAP",
+      "path": "NSP14/Width/EdgeAP.lean",
+      "sha256": "72f33fd2cc4b0644cf92613cbc01eb99689f98956619087c82a95b514be5b277",
+      "base_git_blob": "0d16ec645888f7cb90806c98f3723a8fbb71bbc2"
+    }
+  ],
+  "adaptation": [
+    "New namespace NSP14.SmallEmbedding.ThreeData",
+    "Only structure lower bound q_one : 1 \u2264 a.card (old q_two was used only for nonemptiness)",
+    "Replay all common actual endpoint proofs with the weaker positive-alphabet structure",
+    "Generic Endpoint/ArithmeticSequence library declarations are reused, not duplicated",
+    "Old Endpoint files and their public types remain unchanged"
+  ],
+  "scope": "Foundations only; no claim that the two remaining Run19 contracts are closed."
+}
