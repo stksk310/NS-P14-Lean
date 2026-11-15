@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "target": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "checks": 280,
+  "fixtures": 268,
+  "fresh_built_production_modules": 141,
+  "declarations_identical_to_published_r16": 10662,
+  "explicit_new_types": 2421,
+  "prior_audit_files_preserved": 10,
+  "prior_evidence_preserved_by_verifier": 7516,
+  "command_seconds": 1379.479,
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE",
+    "W_EDGE",
+    "X_BHP_EK",
+    "W_DENSE",
+    "W_CLOSE"
+  ],
+  "unproved_ids": [],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audit_status": "PASS_INDEPENDENT_RUN18_COMPLETE",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "audit_branch": "audit/run18-final-20261115",
+  "audit_date_utc": "2026-11-15",
+  "source_changes": false,
+  "scope": "Run18 six frozen goals; not all NS-P14",
+  "publication_zip_sha256": "1acfe35915b20c4c870a148a6a39d833a1f796de4f62f3f83ba280ca894c774d",
+  "review_reports": [
+    "BHP_REVIEW.md",
+    "LEX_REVIEW.md",
+    "EK_EDGE_REVIEW.md",
+    "DENSE_REVIEW.md"
+  ],
+  "verification_directory": "verification/run18/runs/independent_final_audit_20261115_r01"
+}

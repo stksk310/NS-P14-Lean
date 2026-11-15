@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "target": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "checks": 280,
+  "fixtures": 268,
+  "fresh_built_production_modules": 141,
+  "declarations_identical_to_published_r16": 10662,
+  "explicit_new_types": 2421,
+  "prior_audit_files_preserved": 10,
+  "prior_evidence_preserved_by_verifier": 7516,
+  "command_seconds": 1379.479,
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE",
+    "W_EDGE",
+    "X_BHP_EK",
+    "W_DENSE",
+    "W_CLOSE"
+  ],
+  "unproved_ids": [],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

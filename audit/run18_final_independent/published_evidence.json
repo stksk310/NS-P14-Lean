@@ -1,0 +1,151 @@
+{
+  "status": "PASS_INDEPENDENT_COMPLETE_PUBLISHED_EVIDENCE",
+  "audited_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "proof_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+  "reviewed_commit": "c97fa324d90277bcae20a88863366bff6ba7a35b",
+  "source_entries": 2033,
+  "evidence_entries": 297,
+  "baseline_files": 3857,
+  "prior_evidence_preserved": 7212,
+  "raw_declarations": 10662,
+  "new_declarations": 2421,
+  "frozen_requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+  "first_contract_commit": "cdce65ad0678170b80d6a91e75913d9b39b65f86",
+  "original_complete_archive_overwrite_rejected": true,
+  "exports": {
+    "NSP14.Lex.bhp_ek": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.X_BHP_EK",
+      "kind": "axiom",
+      "module": "audit.run18.BHPEKClosedGoals",
+      "name": "NSP14.Lex.bhp_ek",
+      "type": "NSP14.Run18.Requested.X_BHP_EK"
+    },
+    "NSP14.Run18.edge_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.W_EDGE",
+      "kind": "axiom",
+      "module": "audit.run18.EdgeClosedGoals",
+      "name": "NSP14.Run18.edge_closed",
+      "type": "NSP14.Run18.Requested.W_EDGE"
+    },
+    "NSP14.Run18.dense_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.W_DENSE",
+      "kind": "axiom",
+      "module": "audit.run18.DenseClosedGoals",
+      "name": "NSP14.Run18.dense_closed",
+      "type": "NSP14.Run18.Requested.W_DENSE"
+    },
+    "NSP14.Run18.sparse_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.W_SPARSE",
+      "kind": "axiom",
+      "module": "audit.run18.PartialClosedGoals",
+      "name": "NSP14.Run18.sparse_closed",
+      "type": "NSP14.Run18.Requested.W_SPARSE"
+    },
+    "NSP14.Run18.five_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.W_FIVE",
+      "kind": "axiom",
+      "module": "audit.run18.FiveClosedGoals",
+      "name": "NSP14.Run18.five_closed",
+      "type": "NSP14.Run18.Requested.W_FIVE"
+    },
+    "NSP14.Run18.width_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "NSP14.Run18.Requested.W_CLOSE",
+      "kind": "axiom",
+      "module": "audit.run18.ClosedGoals",
+      "name": "NSP14.Run18.width_closed",
+      "type": "NSP14.Run18.Requested.W_CLOSE"
+    },
+    "NSP14.Run18.all_closed": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "And NSP14.Run18.Requested.X_BHP_EK\n  (And NSP14.Run18.Requested.W_EDGE\n    (And NSP14.Run18.Requested.W_DENSE\n      (And NSP14.Run18.Requested.W_SPARSE (And NSP14.Run18.Requested.W_FIVE NSP14.Run18.Requested.W_CLOSE))))",
+      "kind": "axiom",
+      "module": "audit.run18.ClosedGoals",
+      "name": "NSP14.Run18.all_closed",
+      "type": "NSP14.Run18.Requested.X_BHP_EK ∧\n  NSP14.Run18.Requested.W_EDGE ∧\n    NSP14.Run18.Requested.W_DENSE ∧\n      NSP14.Run18.Requested.W_SPARSE ∧ NSP14.Run18.Requested.W_FIVE ∧ NSP14.Run18.Requested.W_CLOSE"
+    },
+    "NSP14.Lex.exists_lex_sameHilbert": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "∀ (k : Type) [inst : Field k] (q : Nat)\n  (I :\n    @Ideal (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n      (@AddMonoidAlgebra.semiring k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n        (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@Finsupp.instAddMonoid (Fin q) Nat Nat.instAddMonoid)))\n  (hHom :\n    @Ideal.IsHomogeneous Nat\n      (@Submodule k (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@AddMonoidAlgebra.instAddCommMonoid k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))\n        (@AddMonoidAlgebra.instModule k k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@Semiring.toModule k\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))))\n      (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n      (@AddMonoidAlgebra.semiring k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n        (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@Finsupp.instAddMonoid (Fin q) Nat Nat.instAddMonoid))\n      (@Submodule.setLike k (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@AddMonoidAlgebra.instAddCommMonoid k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))\n        (@AddMonoidAlgebra.instModule k k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@Semiring.toModule k\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))))\n      ⋯ (@MvPolynomial.homogeneousSubmodule (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n      instDecidableEqNat Nat.instAddMonoid\n      (@MvPolynomial.gradedAlgebra (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))) I),\n  ∃ L,\n    ∃ (hL :\n      @Ideal.IsHomogeneous Nat\n        (@Submodule k (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@AddMonoidAlgebra.instAddCommMonoid k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))\n          (@AddMonoidAlgebra.instModule k k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n            (@Semiring.toModule k\n              (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))))\n        (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        (@AddMonoidAlgebra.semiring k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@Finsupp.instAddMonoid (Fin q) Nat Nat.instAddMonoid))\n        (@Submodule.setLike k (@MvPolynomial (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n          (@AddMonoidAlgebra.instAddCommMonoid k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))\n          (@AddMonoidAlgebra.instModule k k (@Finsupp (Fin q) Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n            (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n            (@Semiring.toModule k\n              (@CommSemiring.toSemiring k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))))))\n        ⋯ (@MvPolynomial.homogeneousSubmodule (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst)))\n        instDecidableEqNat Nat.instAddMonoid\n        (@MvPolynomial.gradedAlgebra (Fin q) k (@Semifield.toCommSemiring k (@Field.toSemifield k inst))) L),\n      And (@NSP14.Lex.IsLex k inst q L)\n        (∀ (n : Nat),\n          @Eq Nat (@NSP14.Lex.quotientHilbert k inst q I hHom n) (@NSP14.Lex.quotientHilbert k inst q L hL n))",
+      "kind": "axiom",
+      "module": "NSP14.Lex.LexExistence",
+      "name": "NSP14.Lex.exists_lex_sameHilbert",
+      "type": "∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))\n  (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),\n  ∃ L,\n    ∃ (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),\n      NSP14.Lex.IsLex k q L ∧ ∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hHom n = NSP14.Lex.quotientHilbert k q L hL n"
+    },
+    "NSP14.NumericalSemigroup.narrow_width_comparison": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "explicit_type": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @LE.le Nat instLENat (@OfNat.ofNat Nat (nat_lit 5) (instOfNatNat (nat_lit 5))) S.embeddingDimension),\n  @LE.le Nat instLENat S.width\n      (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) S.multiplicity\n        (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →\n    ∀ (i : Nat),\n      @LE.le Nat instLENat\n        (@NSP14.Homological.totalBetti k S.AtomExponent inst S.atomExponentFintype\n          (@ModuleCat.of (@NSP14.NumericalSemigroup.FullPolynomialRing S k (@Field.toCommRing k inst))\n            (@AddMonoidAlgebra.ring k (@Finsupp S.AtomExponent Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n              (@DivisionRing.toRing k (@Field.toDivisionRing k inst))\n              (@Finsupp.instAddMonoid S.AtomExponent Nat Nat.instAddMonoid))\n            (@NSP14.NumericalSemigroup.FormalTangentAlgebra S k (@Field.toCommRing k inst))\n            (@DirectSum.instAddCommGroup Nat\n              (fun n => @NSP14.NumericalSemigroup.FormalGradedPiece S k (@Field.toCommRing k inst) n)\n              (@NSP14.NumericalSemigroup.formalPieceAddCommGroup S k (@Field.toCommRing k inst)))\n            (@Algebra.toModule (@NSP14.NumericalSemigroup.FullPolynomialRing S k (@Field.toCommRing k inst))\n              (@NSP14.NumericalSemigroup.FormalTangentAlgebra S k (@Field.toCommRing k inst))\n              (@AddMonoidAlgebra.commSemiring k\n                (@Finsupp S.AtomExponent Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n                (@Semifield.toCommSemiring k (@Field.toSemifield k inst))\n                (@Finsupp.instAddCommMonoid S.AtomExponent Nat Nat.instAddCommMonoid))\n              (@DirectSum.semiring Nat instDecidableEqNat\n                (@NSP14.NumericalSemigroup.FormalGradedPiece S k (@Field.toCommRing k inst))\n                (fun i =>\n                  @Submodule.Quotient.addCommMonoid k\n                    (↥(@NSP14.NumericalSemigroup.formalPowerModule S k (@Field.toCommRing k inst) i))\n                    (@CommRing.toRing k (@Field.toCommRing k inst))\n                    (@Submodule.addCommGroup k\n                      (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                      (@CommRing.toRing k (@Field.toCommRing k inst))\n                      (@Ring.toAddCommGroup\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                        (@CommRing.toRing (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                          (@NSP14.NumericalSemigroup.formalSemigroupCommRing S k (@Field.toCommRing k inst))))\n                      (@Algebra.toModule k\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                        (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra S k (@Field.toCommRing k inst)))\n                        (@NSP14.NumericalSemigroup.formalSemigroupAlgebra S k (@Field.toCommRing k inst)))\n                      (@NSP14.NumericalSemigroup.formalPowerModule S k (@Field.toCommRing k inst) i))\n                    (@Submodule.module k (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                      (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                      (@Semiring.toAddCommMonoid\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra S k (@Field.toCommRing k inst))))\n                      (@Algebra.toModule k\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing S k (@Field.toCommRing k inst))\n                        (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra S k (@Field.toCommRing k inst)))\n                        (@NSP14.NumericalSemigroup.formalSemigroupAlgebra S k (@Field.toCommRing k inst)))\n                      (@NSP14.NumericalSemigroup.formalPowerModule S k (@Field.toCommRing k inst) i))\n                    (@NSP14.NumericalSemigroup.formalNextPower S k (@Field.toCommRing k inst) i))\n                Nat.instAddMonoid\n                (@DirectSum.GRing.toGSemiring Nat\n                  (@NSP14.NumericalSemigroup.FormalGradedPiece S k (@Field.toCommRing k inst)) Nat.instAddMonoid\n                  (@NSP14.NumericalSemigroup.formalPieceAddCommGroup S k (@Field.toCommRing k inst))\n                  (@DirectSum.GCommRing.toGRing Nat\n                    (@NSP14.NumericalSemigroup.FormalGradedPiece S k (@Field.toCommRing k inst)) Nat.instAddCommMonoid\n                    (@NSP14.NumericalSemigroup.formalPieceAddCommGroup S k (@Field.toCommRing k inst))\n                    (@NSP14.NumericalSemigroup.formalPieceGCommRing S k (@Field.toCommRing k inst)))))\n              (@NSP14.NumericalSemigroup.fullPolynomialAlgebraFormalG S k (@Field.toCommRing k inst))))\n          ⋯ i)\n        (@NSP14.Homological.totalBetti k (S.intervalCompletion ⋯).AtomExponent inst\n          (S.intervalCompletion ⋯).atomExponentFintype\n          (@ModuleCat.of\n            (@NSP14.NumericalSemigroup.FullPolynomialRing (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n            (@AddMonoidAlgebra.ring k\n              (@Finsupp (S.intervalCompletion ⋯).AtomExponent Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n              (@DivisionRing.toRing k (@Field.toDivisionRing k inst))\n              (@Finsupp.instAddMonoid (S.intervalCompletion ⋯).AtomExponent Nat Nat.instAddMonoid))\n            (@NSP14.NumericalSemigroup.FormalTangentAlgebra (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n            (@DirectSum.instAddCommGroup Nat\n              (fun n =>\n                @NSP14.NumericalSemigroup.FormalGradedPiece (S.intervalCompletion ⋯) k (@Field.toCommRing k inst) n)\n              (@NSP14.NumericalSemigroup.formalPieceAddCommGroup (S.intervalCompletion ⋯) k (@Field.toCommRing k inst)))\n            (@Algebra.toModule\n              (@NSP14.NumericalSemigroup.FullPolynomialRing (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n              (@NSP14.NumericalSemigroup.FormalTangentAlgebra (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n              (@AddMonoidAlgebra.commSemiring k\n                (@Finsupp (S.intervalCompletion ⋯).AtomExponent Nat (@MulZeroClass.toZero Nat Nat.instMulZeroClass))\n                (@Semifield.toCommSemiring k (@Field.toSemifield k inst))\n                (@Finsupp.instAddCommMonoid (S.intervalCompletion ⋯).AtomExponent Nat Nat.instAddCommMonoid))\n              (@DirectSum.semiring Nat instDecidableEqNat\n                (@NSP14.NumericalSemigroup.FormalGradedPiece (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n                (fun i =>\n                  @Submodule.Quotient.addCommMonoid k\n                    (↥(@NSP14.NumericalSemigroup.formalPowerModule (S.intervalCompletion ⋯) k (@Field.toCommRing k inst)\n                        i))\n                    (@CommRing.toRing k (@Field.toCommRing k inst))\n                    (@Submodule.addCommGroup k\n                      (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                        (@Field.toCommRing k inst))\n                      (@CommRing.toRing k (@Field.toCommRing k inst))\n                      (@Ring.toAddCommGroup\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst))\n                        (@CommRing.toRing\n                          (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                            (@Field.toCommRing k inst))\n                          (@NSP14.NumericalSemigroup.formalSemigroupCommRing (S.intervalCompletion ⋯) k\n                            (@Field.toCommRing k inst))))\n                      (@Algebra.toModule k\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst))\n                        (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra (S.intervalCompletion ⋯) k\n                            (@Field.toCommRing k inst)))\n                        (@NSP14.NumericalSemigroup.formalSemigroupAlgebra (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst)))\n                      (@NSP14.NumericalSemigroup.formalPowerModule (S.intervalCompletion ⋯) k (@Field.toCommRing k inst)\n                        i))\n                    (@Submodule.module k\n                      (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                        (@Field.toCommRing k inst))\n                      (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                      (@Semiring.toAddCommMonoid\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra (S.intervalCompletion ⋯) k\n                            (@Field.toCommRing k inst))))\n                      (@Algebra.toModule k\n                        (@NSP14.NumericalSemigroup.FormalSemigroupRing (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst))\n                        (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                        (@Subalgebra.toSemiring k (PowerSeries k)\n                          (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                          (@MvPowerSeries.instSemiring Unit k\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@MvPowerSeries.instAlgebra Unit k k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))\n                            (@CommSemiring.toSemiring k (@CommRing.toCommSemiring k (@Field.toCommRing k inst)))\n                            (@Algebra.id k (@CommRing.toCommSemiring k (@Field.toCommRing k inst))))\n                          (@NSP14.NumericalSemigroup.formalSeriesAlgebra (S.intervalCompletion ⋯) k\n                            (@Field.toCommRing k inst)))\n                        (@NSP14.NumericalSemigroup.formalSemigroupAlgebra (S.intervalCompletion ⋯) k\n                          (@Field.toCommRing k inst)))\n                      (@NSP14.NumericalSemigroup.formalPowerModule (S.intervalCompletion ⋯) k (@Field.toCommRing k inst)\n                        i))\n                    (@NSP14.NumericalSemigroup.formalNextPower (S.intervalCompletion ⋯) k (@Field.toCommRing k inst) i))\n                Nat.instAddMonoid\n                (@DirectSum.GRing.toGSemiring Nat\n                  (@NSP14.NumericalSemigroup.FormalGradedPiece (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n                  Nat.instAddMonoid\n                  (@NSP14.NumericalSemigroup.formalPieceAddCommGroup (S.intervalCompletion ⋯) k\n                    (@Field.toCommRing k inst))\n                  (@DirectSum.GCommRing.toGRing Nat\n                    (@NSP14.NumericalSemigroup.FormalGradedPiece (S.intervalCompletion ⋯) k (@Field.toCommRing k inst))\n                    Nat.instAddCommMonoid\n                    (@NSP14.NumericalSemigroup.formalPieceAddCommGroup (S.intervalCompletion ⋯) k\n                      (@Field.toCommRing k inst))\n                    (@NSP14.NumericalSemigroup.formalPieceGCommRing (S.intervalCompletion ⋯) k\n                      (@Field.toCommRing k inst)))))\n              (@NSP14.NumericalSemigroup.fullPolynomialAlgebraFormalG (S.intervalCompletion ⋯) k\n                (@Field.toCommRing k inst))))\n          ⋯ i)",
+      "kind": "axiom",
+      "module": "NSP14.Width.Closure",
+      "name": "NSP14.NumericalSemigroup.narrow_width_comparison",
+      "type": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : 5 ≤ S.embeddingDimension),\n  S.width ≤ S.multiplicity - 2 →\n    ∀ (i : ℕ),\n      NSP14.Homological.totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤\n        NSP14.Homological.totalBetti k (S.intervalCompletion ⋯).AtomExponent\n          (↧((S.intervalCompletion ⋯).FormalTangentAlgebra k)) i"
+    }
+  },
+  "archives": [
+    {
+      "path": "artifacts/NS_P14_LEAN_RUN18_COMPLETE_20261115.zip",
+      "entries": 2338,
+      "sha256": "1acfe35915b20c4c870a148a6a39d833a1f796de4f62f3f83ba280ca894c774d",
+      "complete": true
+    },
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_AUDIT_20261113.zip",
+      "entries": 1286,
+      "sha256": "4b348dd53e94458f2991ac55dcd9aca77f98f8e6d3a1d15afe5493bddcf92428",
+      "complete": false
+    },
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_CONTINUATION_20261114.zip",
+      "entries": 1340,
+      "sha256": "34e931fe6e9c0d83cd81a34ec0dbafa655fac433abe396d15513f5bd025f3305",
+      "complete": false
+    },
+    {
+      "path": "artifacts/NS_P14_RUN18_PARTIAL_FIVE_CLOSURE_20261114.zip",
+      "entries": 1432,
+      "sha256": "13b8f7b94c7e294558f9a6fc91c2782e9e34385b7c9f7cb6a8aa90c0ab03c271",
+      "complete": false
+    }
+  ]
+}
