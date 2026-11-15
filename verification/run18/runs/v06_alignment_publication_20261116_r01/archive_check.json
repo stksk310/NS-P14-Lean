@@ -1,0 +1,12 @@
+{
+  "status": "PASS_INDEPENDENT_V06_ARCHIVE_CHECK",
+  "archive": "artifacts/NS_P14_V06_ALIGNMENT_20261116_R01.zip",
+  "sha256": "b397bccb046d98458095353c039c27cc5e86b82628e20603eee09fff2def2670",
+  "bytes": 11368725,
+  "entries": 1819,
+  "payload_bytes_equal_repository": true,
+  "crc": "PASS",
+  "existing_archive_refused": true,
+  "refusal_exit_code": 1,
+  "refusal_output": "new artifacts/NS_P14_V06_ALIGNMENT_*.zip required\n"
+}
