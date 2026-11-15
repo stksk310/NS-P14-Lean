@@ -680,3 +680,7 @@ public import NSP14.Lex.DistractionGraded
 public import NSP14.Homological.BasisGradedScalarComparison
 public import NSP14.Lex.MonomialExtension
 public import NSP14.Lex.MonomialExtensionGraded
+public import NSP14.Lex.GenericDistractionStep
+public import NSP14.Lex.Uniqueness
+public import NSP14.Lex.GenericDistractionPrincipal
+public import NSP14.Lex.FiniteHilbertProfiles

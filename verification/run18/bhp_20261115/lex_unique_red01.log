@@ -1,0 +1,2 @@
+tests/LexUniqueness.lean:14:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsLex.eq_of_sameHilbert`
+tests/LexUniqueness.lean:23:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsLex.monomial_mem_iff_of_sameHilbert`

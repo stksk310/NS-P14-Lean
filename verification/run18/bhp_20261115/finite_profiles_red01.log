@@ -1,0 +1,2 @@
+tests/FiniteHilbertProfiles.lean:12:2: error(lean.unknownIdentifier): Unknown constant `Lex.finite_monomialIdeals_sameHilbert`
+tests/FiniteHilbertProfiles.lean:20:2: error(lean.unknownIdentifier): Unknown constant `Lex.uniform_monomialGenerator_degree_bound`
