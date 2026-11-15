@@ -1,0 +1,21 @@
+{
+  "status": "PASS_REVIEW_FOR_ACTUAL_INITIAL_BETTI_COMPARISON_AND_PREVIOUS_RESULTS",
+  "run18_complete": false,
+  "proof_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0",
+  "reviewed_source_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0",
+  "verification": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+  "verification_sha256": "6b869a53424b528cdca6c069ce27036206128f8e4b9c96c0540605ea23f5cadd",
+  "report": "verification/run18/initial_betti_review_20261115.md",
+  "report_sha256": "01e029aff8a54d7a6ffd70b558b8533b9042674284830a1be7a11f0a0cc41622",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "remaining": [
+    "general BHP monomial-to-lex deformation and termination",
+    "common-Hilbert lex existence",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

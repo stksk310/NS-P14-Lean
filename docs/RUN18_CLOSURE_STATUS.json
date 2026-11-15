@@ -18,8 +18,8 @@
   "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_sparse_comparison",
   "verification": {
     "status": "PASS_RUN18_PARTIAL_VALIDATION",
-    "environment_declarations": 9470,
-    "new_environment_declarations": 1229,
+    "environment_declarations": 9626,
+    "new_environment_declarations": 1385,
     "allowed_axioms": [
       "Classical.choice",
       "Quot.sound",
@@ -27,11 +27,11 @@
     ],
     "fresh_project_test_cache": true,
     "fresh_new_production_cache": true,
-    "preserved_evidence_count": 4438,
-    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
-    "commands": 206,
-    "fixtures": 192,
-    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+    "preserved_evidence_count": 4768,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "commands": 218,
+    "fixtures": 204,
+    "source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
   },
   "unproved_assigned_declarations": [
     "NSP14.Lex.bhp_ek",
@@ -245,7 +245,7 @@
     "preserved_evidence_count": 3901
   },
   "post_r07_bhp_initial_foundations": {
-    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "modules": [
       "NSP14.Lex.InitialIdeal",
       "NSP14.Homological.TriangularBlockRank",
@@ -258,10 +258,12 @@
     "root_build": "verification/run18/bhp_20261115/root_build02.log",
     "source_receipts": "verification/run18/bhp_20261115/source_receipts01.json",
     "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c",
-    "as_of_commit": "adc4e32e71ee8d567015b503f46dd83aa11d84e3"
+    "as_of_commit": "adc4e32e71ee8d567015b503f46dd83aa11d84e3",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
   },
   "post_r07_bhp_graded_basis": {
-    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "modules": [
       "NSP14.Homological.KoszulSlotGrading",
       "NSP14.Homological.HomogeneousBasisPieces",
@@ -272,10 +274,12 @@
     "axioms": "verification/run18/bhp_20261115/Axioms03_focused03.log",
     "root_build": "verification/run18/bhp_20261115/root_build04.log",
     "not_proved": "Initial-ideal graded Betti comparison is not yet assembled. BHP/Pardue, common-Hilbert lex existence, dense/global remain open.",
-    "as_of_commit": "15ede63f456d96d3195568d58bcbdff38c4a3cb4"
+    "as_of_commit": "15ede63f456d96d3195568d58bcbdff38c4a3cb4",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
   },
   "post_r07_initial_betti": {
-    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
     "export": "NSP14.Lex.quotientGradedBetti_initial_le",
     "proved": "Actual graded Betti inequality for every homogeneous quotient and its actual degLex initial ideal, every field, all homological rows and integer internal degrees, including non-Artinian quotients.",
     "modules": [
@@ -295,6 +299,25 @@
       "dense closure",
       "global width closure"
     ],
-    "closure_id_effect": "No new assigned closed ID. X_BHP_EK remains open; EK conjunct alone is closed."
+    "closure_id_effect": "No new assigned closed ID. X_BHP_EK remains open; EK conjunct alone is closed.",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "previous_successful_verification_20261115_r07": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9470,
+    "new_environment_declarations": 1229,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 4438,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+    "commands": 206,
+    "fixtures": 192,
+    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
   }
 }
