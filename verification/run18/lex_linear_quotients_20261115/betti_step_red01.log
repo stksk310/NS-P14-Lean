@@ -1,0 +1,5 @@
+tests/LexLinearQuotients.lean:24:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HasQuotient (MvPolynomial (Fin q) k) (Ideal (MvPolynomial (Fin q) ?m.76))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tests/LexLinearQuotients.lean:25:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsLex.predecessor_betti_step`

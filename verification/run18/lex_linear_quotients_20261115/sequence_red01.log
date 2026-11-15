@@ -1,0 +1,2 @@
+tests/IdealAdjoining.lean:6:5: error(lean.unknownIdentifier): Unknown identifier `Homological.idealAdjoinSequence`
+tests/IdealAdjoining.lean:7:2: error(lean.unknownIdentifier): Unknown identifier `Homological.idealAdjoinSequence_shortExact`

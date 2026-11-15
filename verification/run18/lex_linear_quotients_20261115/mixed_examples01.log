@@ -1,0 +1,3 @@
+tests/LexLinearQuotientExamples.lean:77:34: error: unexpected token ':='; expected ':'
+tests/LexLinearQuotientExamples.lean:78:34: error: unexpected token ':='; expected ':'
+tests/LexLinearQuotientExamples.lean:79:34: error: unexpected token ':='; expected ':'

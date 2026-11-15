@@ -111,3 +111,6 @@ Ruling: 新規productionがHomologicalへ追加されたため、cold verifier�
 残る障害は一般の任意標数BHP/Pardue/EKと、それを使うdense閉鎖・全域合成。固定mathlib/既存sourceに必要な一般比較は確認できていない。arXivの指定原典PDF/HTMLもこの環境でCONNECT403となった。未取得の本文や未構成の解消/圧縮を供給済みとはしない。読める原典URLの有無をユーザーへ非同期で照会し、独立な証明/検証を継続する。
 
 R06 cold検証成功：source `62c30ae798871d4eb55703df29e2897a770d29b9`、全188 command・174 fixture、9203宣言・新規962宣言。許容三公理のみ、3901既存証跡をbyte保持。新規Homologicalもcold再構築。閉鎖W_SPARSE/W_FIVE/W_EDGE、未完X_BHP_EK/W_DENSE/W_CLOSE。これは内部checkpointであり、ユーザーのRun18完了要求を満たしたとは扱わない。
+
+2026-11-15 EK証明継続：実colon等式、一般可換環の実短完全列、変数倍のactual Koszul homology零写像、lex一生成元追加のordinary Tor加法性を新規4 moduleで証明。3 consumerを個別exit0/警告0で確認し、次数1/2生成元を持つ実lex ideal (X0,X1²) の標数0/2/3例もGREEN。root6070jobs成功。4主要exportの実公理依存は許容三公理のみ。REDログは対象公開宣言の不在、失敗elaborationログも同じ新規directoryに保持。R06はこれらの追加前の内部snapshotで、新規4module全回帰は未実行。X_BHP_EKを閉じたと数えず、graded colon計算/有限生成元帰納/BHP比較/lex存在/dense/globalを引き続き実装する。
+新着独立監査47aeeb4を読み、208 manifest entryのhashを照合してmerge84d7655で保持。修正必須0件、認証対象は以前の58a0f54の二閉鎖のみ。今回R06のfresh reviewerは三閉鎖のみを承認、9203宣言・全source/evidence/旧bytes束縛を確認（report verification/run18/edge_review_20261115.md）。どちらもRun18全体を認証していない。

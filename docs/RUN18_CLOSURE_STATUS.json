@@ -165,5 +165,19 @@
     "paper_variant": "Actual signed-unit minor lower bounds suffice; no universal exact QC Betti formula is claimed.",
     "lex_preparation": "Characteristic-free lex stability, finite actual minimal monomial generators and actual ideal span are proved; BHP/EK itself remains open.",
     "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json"
+  },
+  "post_r06_ek_foundations": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "modules": [
+      "NSP14.Lex.LinearQuotients",
+      "NSP14.Homological.IdealAdjoining",
+      "NSP14.Homological.IdealAdjoiningKoszul",
+      "NSP14.Lex.EliahouKervaireStep"
+    ],
+    "proved": "Actual lex predecessor colon; actual colon-adjoining short exact sequence; actual variable null-homotopy; actual ordinary Tor one-generator additivity.",
+    "not_proved": "Graded colon Betti computation, finite-generator EK induction, complete EK formula, BHP/Pardue, lex existence, dense closure and global closure.",
+    "focused_evidence": "verification/run18/lex_linear_quotients_20261115/focused01.json",
+    "root_build": "verification/run18/lex_linear_quotients_20261115/root_build01.log",
+    "axioms": "verification/run18/lex_linear_quotients_20261115/axioms01.log"
   }
 }

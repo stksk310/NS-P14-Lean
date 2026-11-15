@@ -627,3 +627,7 @@ public import NSP14.Width.EdgeHoleComparison
 public import NSP14.Width.SourceNormalization
 public import NSP14.Lex.Stable
 public import NSP14.Lex.MonomialGenerators
+public import NSP14.Lex.LinearQuotients
+public import NSP14.Homological.IdealAdjoining
+public import NSP14.Homological.IdealAdjoiningKoszul
+public import NSP14.Lex.EliahouKervaireStep
