@@ -55,4 +55,31 @@ theorem triangular_block_rank (d : X →ₗ[k] Y) (U : ι → Submodule k X)
     · intro a
       exact Or.inl (by rw [heq]; exact ite_eq_left rfl)
   simpa only [J,Fintype.card_sigma,Fintype.card_fin] using hr
+omit [Fintype ι] [LinearOrder ι] in
+theorem linearMap_sum_range_finrank_le (s : Finset ι) (f : ι → X →ₗ[k] Y) :
+    Module.finrank k (∑ a ∈ s,f a).range ≤ ∑ a ∈ s,Module.finrank k (f a).range := by
+  induction s using Finset.induction_on with
+  | empty =>
+    simp only [Finset.sum_empty]
+    change Module.finrank k (LinearMap.range (0 : X →ₗ[k] Y)) ≤ 0
+    erw [LinearMap.range_zero,finrank_bot]
+  | @insert a s ha ih =>
+    rw [Finset.sum_insert ha,Finset.sum_insert ha]
+    have hl := (Submodule.finrank_mono (LinearMap.range_add_le (f a) (∑ a ∈ s,f a))).trans
+      (Submodule.finrank_add_le_finrank_add_finrank (f a).range (∑ a ∈ s,f a).range)
+    exact hl.trans (Nat.add_le_add_left ih _)
+
+/-- Keeping only diagonal blocks cannot increase the rank of an actual
+upper triangular map. The diagonal is the literal sum of projected maps. -/
+theorem triangular_diagonal_rank (d : X →ₗ[k] Y) (U : ι → Submodule k X)
+    (P : ι → Y →ₗ[k] Y) (Q : ι → X →ₗ[k] X) (hQ : ∀ a x,Q a x ∈ U a)
+    (htri : ∀ a b,b<a → ∀ x : U b,P a (d x)=0) :
+    Module.finrank k (∑ a,(P a).comp (d.comp (Q a))).range ≤ Module.finrank k d.range := by
+  apply (linearMap_sum_range_finrank_le k Finset.univ (fun a => (P a).comp (d.comp (Q a)))).trans
+  apply le_trans _ (triangular_block_rank k d U P htri)
+  apply Finset.sum_le_sum
+  intro a _
+  apply Submodule.finrank_mono
+  rintro _ ⟨x,rfl⟩
+  exact ⟨⟨Q a x,hQ a x⟩,rfl⟩
 end NSP14.Homological

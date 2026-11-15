@@ -1,0 +1,19 @@
+✖ [4610/4611] Building NSP14.Homological.HomogeneousBasisPieces (1.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/HomogeneousBasisPieces.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/HomogeneousBasisPieces.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/HomogeneousBasisPieces.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/HomogeneousBasisPieces.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/HomogeneousBasisPieces.setup.json --json
+error: NSP14/Homological/HomogeneousBasisPieces.lean:40:2: Type mismatch
+  he
+has type
+  ↑((G.rangeEquiv q)
+        ((G.rangeEquiv q).symm
+          ((LinearEquiv.ofEq (Submodule.span k (Set.range fun a => b ↑a)) (G.degreeSpace q) ⋯)
+            ((Module.Basis.span ⋯) a)))) =
+    ↑((LinearEquiv.ofEq (Submodule.span k (Set.range fun a => b ↑a)) (G.degreeSpace q) ⋯) ((Module.Basis.span ⋯) a))
+but is expected to have type
+  (G.inclusion q)
+      ((G.rangeEquiv q).symm
+        ((LinearEquiv.ofEq (Submodule.span k (Set.range (⇑b ∘ Subtype.val))) (G.degreeSpace q) ⋯)
+          ((Module.Basis.span ⋯) a))) =
+    b ↑a
+Some required targets logged failures:
+- NSP14.Homological.HomogeneousBasisPieces
+error: build failed

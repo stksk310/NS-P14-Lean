@@ -1,0 +1,8 @@
+⚠ [3796/3797] Built NSP14.Homological.TriangularBlockRank (1.5s)
+warning: NSP14/Homological/TriangularBlockRank.lean:58:0: automatically included section variable(s) unused in theorem `NSP14.Homological.linearMap_sum_range_finrank_le`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3797 jobs).

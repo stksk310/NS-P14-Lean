@@ -1,0 +1,25 @@
+✖ [4714/4717] Building NSP14.Homological.KoszulSlotGrading (3.8s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/KoszulSlotGrading.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.setup.json --json
+error: NSP14/Homological/KoszulSlotGrading.lean:126:4: Unknown constant `ModuleCat.zero_apply`
+error: NSP14/Homological/KoszulSlotGrading.lean:126:4: Unknown constant `ModuleCat.zero_apply`
+error: NSP14/Homological/KoszulSlotGrading.lean:122:95: unsolved goals
+case neg
+k σ : Type
+inst✝ : Field k
+M : ModuleCat (VariableRing k σ)
+xs : List σ
+i : ℕ
+s t : KoszulSlot xs.length i
+a : ↑(coefficientModule k σ M)
+he : ¬s = t
+⊢ (ConcreteCategory.hom 0) a = 0
+warning: NSP14/Homological/KoszulSlotGrading.lean:137:15: This simp argument is unused:
+  ite_eq_right he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, Finsupp.zero_apply, Finsupp.single_apply, Prod.mk.injEq, he, false_and, ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Homological.KoszulSlotGrading
+error: build failed

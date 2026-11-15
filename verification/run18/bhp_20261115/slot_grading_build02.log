@@ -1,0 +1,37 @@
+✖ [4614/4615] Building NSP14.Homological.KoszulSlotGrading (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/KoszulSlotGrading.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.setup.json --json
+error: NSP14/Homological/KoszulSlotGrading.lean:58:45: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X i)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:58:45: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X (i + 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:58:77: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X i)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:58:77: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X (i + 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:63:45: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X i)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:63:45: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X (i + 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:63:77: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X i)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/KoszulSlotGrading.lean:63:77: failed to synthesize instance of type class
+  Module k ↑((koszulList k σ xs M).X (i + 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Some required targets logged failures:
+- NSP14.Homological.KoszulSlotGrading
+error: build failed

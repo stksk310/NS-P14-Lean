@@ -1,0 +1,17 @@
+'NSP14.Homological.koszulSlotBasis_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulSlotBasis_repr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulSlotBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.homogeneous_piece_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulSpaceBasis_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulSpaceBasis_repr' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.gradedKoszulSpace_finite_of_basis : ∀ (k σ : Type) [inst : Field k] {J : Type}
+  (M : ModuleCat (NSP14.Homological.VariableRing k σ)) (G : NSP14.Homological.GradedPolynomialModule k σ M)
+  (b : Module.Basis J k ↑(NSP14.Homological.coefficientModule k σ M)) (deg : J → ℤ),
+  (∀ (a : J), b a ∈ G.degreeSpace (deg a)) →
+    ∀ (xs : List σ) (t : ℤ) (i : ℕ) [Finite { a // deg a.2 = t - ↑i }],
+      Module.Finite k ↥(NSP14.Homological.gradedKoszulSpace k σ M G xs t i)
+NSP14.Homological.homogeneous_piece_finrank : ∀ (k σ : Type) [inst : Field k] {J : Type}
+  (M : ModuleCat (NSP14.Homological.VariableRing k σ)) (G : NSP14.Homological.GradedPolynomialModule k σ M)
+  (b : Module.Basis J k ↑(NSP14.Homological.coefficientModule k σ M)) (deg : J → ℤ),
+  (∀ (a : J), b a ∈ G.degreeSpace (deg a)) →
+    ∀ (q : ℤ) [Finite { a // deg a = q }], Module.finrank k ↑(G.piece q) = Nat.card { a // deg a = q }

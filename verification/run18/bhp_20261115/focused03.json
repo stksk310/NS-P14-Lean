@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/KoszulSlotGrading.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.955
+  },
+  {
+    "file": "tests/HomogeneousBasisPieces.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.576
+  },
+  {
+    "file": "tests/GradedKoszulBasis.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.703
+  },
+  {
+    "file": "tests/TriangularBlockRank.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.512
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms03.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.544
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/KoszulSlotGrading.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.919
+  },
+  {
+    "file": "tests/HomogeneousBasisPieces.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.595
+  },
+  {
+    "file": "tests/GradedKoszulBasis.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.659
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms02.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.468
+  }
+]

@@ -1,0 +1,103 @@
+✖ [4614/4615] Building NSP14.Homological.KoszulSlotGrading (1.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/KoszulSlotGrading.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.setup.json --json
+error: NSP14/Homological/KoszulSlotGrading.lean:34:14: Type mismatch
+  hb a.2
+has type
+  b a.2 ∈ G.degreeSpace (deg a.2)
+but is expected to have type
+  (koszulSlotBasis k σ M b [] 0) a ∈ (koszulChainGrading k σ M G [] 0).degreeSpace (deg a.2)
+error: NSP14/Homological/KoszulSlotGrading.lean:53:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Module.Basis.reindex ?b ?e) ?i'
+in the target expression
+  (((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+      (Sum.inl s, j) ∈
+    ((koszulChainGrading k σ M G xs i).prod (koszulChainGrading k σ M G xs (i + 1))).degreeSpace (deg (Sum.inl s, j).2)
+
+case inl
+k σ : Type
+inst✝ : Field k
+J : Type
+M : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+b : Module.Basis J k ↑(coefficientModule k σ M)
+deg : J → ℤ
+hb : ∀ (a : J), b a ∈ G.degreeSpace (deg a)
+x : σ
+xs : List σ
+ih :
+  ∀ (i : ℕ) (a : KoszulSlot xs.length i × J),
+    (koszulSlotBasis k σ M b xs i) a ∈ (koszulChainGrading k σ M G xs i).degreeSpace (deg a.2)
+i : ℕ
+a : KoszulSlot (x :: xs).length (i + 1) × J
+j : J
+s : KoszulSlot xs.length i
+⊢ (((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+      (Sum.inl s, j) ∈
+    ((koszulChainGrading k σ M G xs i).prod (koszulChainGrading k σ M G xs (i + 1))).degreeSpace (deg (Sum.inl s, j).2)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+      (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm
+  has type
+    Module.Basis ((KoszulSlot xs.length i ⊕ KoszulSlot xs.length (i + 1)) × J) k
+      (↑(coefficientModule k σ ((koszulList k σ xs M).X i)) ×
+        ↑(coefficientModule k σ ((koszulList k σ xs M).X (i + 1))))
+  but is expected to have type
+    Module.Basis ((KoszulSlot xs.length i ⊕ KoszulSlot xs.length (i + 1)) × J) k
+      ↑(coefficientModule k σ ↧(↑((koszulList k σ xs M).X i) × ↑((koszulList k σ xs M).X (i + 1))))
+  in the application
+    ⇑(((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+error: NSP14/Homological/KoszulSlotGrading.lean:58:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Module.Basis.reindex ?b ?e) ?i'
+in the target expression
+  (((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+      (Sum.inr s, j) ∈
+    ((koszulChainGrading k σ M G xs i).prod (koszulChainGrading k σ M G xs (i + 1))).degreeSpace (deg (Sum.inr s, j).2)
+
+case inr
+k σ : Type
+inst✝ : Field k
+J : Type
+M : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+b : Module.Basis J k ↑(coefficientModule k σ M)
+deg : J → ℤ
+hb : ∀ (a : J), b a ∈ G.degreeSpace (deg a)
+x : σ
+xs : List σ
+ih :
+  ∀ (i : ℕ) (a : KoszulSlot xs.length i × J),
+    (koszulSlotBasis k σ M b xs i) a ∈ (koszulChainGrading k σ M G xs i).degreeSpace (deg a.2)
+i : ℕ
+a : KoszulSlot (x :: xs).length (i + 1) × J
+j : J
+s : KoszulSlot xs.length (i + 1)
+⊢ (((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+      (Sum.inr s, j) ∈
+    ((koszulChainGrading k σ M G xs i).prod (koszulChainGrading k σ M G xs (i + 1))).degreeSpace (deg (Sum.inr s, j).2)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+      (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm
+  has type
+    Module.Basis ((KoszulSlot xs.length i ⊕ KoszulSlot xs.length (i + 1)) × J) k
+      (↑(coefficientModule k σ ((koszulList k σ xs M).X i)) ×
+        ↑(coefficientModule k σ ((koszulList k σ xs M).X (i + 1))))
+  but is expected to have type
+    Module.Basis ((KoszulSlot xs.length i ⊕ KoszulSlot xs.length (i + 1)) × J) k
+      ↑(coefficientModule k σ ↧(↑((koszulList k σ xs M).X i) × ↑((koszulList k σ xs M).X (i + 1))))
+  in the application
+    ⇑(((koszulSlotBasis k σ M b xs i).prod (koszulSlotBasis k σ M b xs (i + 1))).reindex
+        (Equiv.sumProdDistrib (KoszulSlot xs.length i) (KoszulSlot xs.length (i + 1)) J).symm)
+Some required targets logged failures:
+- NSP14.Homological.KoszulSlotGrading
+error: build failed

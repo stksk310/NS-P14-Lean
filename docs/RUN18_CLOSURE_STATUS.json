@@ -256,5 +256,18 @@
     "root_build": "verification/run18/bhp_20261115/root_build02.log",
     "source_receipts": "verification/run18/bhp_20261115/source_receipts01.json",
     "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "post_r07_bhp_graded_basis": {
+    "status": "FOCUSED_PASS_FULL_REGRESSION_PENDING",
+    "modules": [
+      "NSP14.Homological.KoszulSlotGrading",
+      "NSP14.Homological.HomogeneousBasisPieces",
+      "NSP14.Homological.GradedKoszulBasis"
+    ],
+    "proved": "Actual homogeneous recursive slot basis; exact coordinate/projection/inclusion formulas; actual basis of every internal-degree chain without global finite-k module assumptions; actual diagonal rank bound using literal projected-map sum.",
+    "focused_evidence": "verification/run18/bhp_20261115/focused03.json",
+    "axioms": "verification/run18/bhp_20261115/Axioms03_focused03.log",
+    "root_build": "verification/run18/bhp_20261115/root_build04.log",
+    "not_proved": "Initial-ideal graded Betti comparison is not yet assembled. BHP/Pardue, common-Hilbert lex existence, dense/global remain open."
   }
 }

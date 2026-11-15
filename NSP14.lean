@@ -651,3 +651,6 @@ public import NSP14.Lex.InitialIdeal
 public import NSP14.Homological.TriangularBlockRank
 public import NSP14.Homological.NormalTriangular
 public import NSP14.Endpoint.InitialAction
+public import NSP14.Homological.KoszulSlotGrading
+public import NSP14.Homological.HomogeneousBasisPieces
+public import NSP14.Homological.GradedKoszulBasis

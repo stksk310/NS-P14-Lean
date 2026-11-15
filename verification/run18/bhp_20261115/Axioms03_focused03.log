@@ -1,0 +1,11 @@
+'NSP14.Homological.gradedKoszulSpaceBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulSpaceBasis_repr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulSlotBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.triangular_diagonal_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.triangular_diagonal_rank : ∀ (k : Type) [inst : Field k] {ι X Y : Type} [inst_1 : Fintype ι]
+  [inst_2 : LinearOrder ι] [inst_3 : AddCommGroup X] [inst_4 : Module k X] [inst_5 : AddCommGroup Y]
+  [inst_6 : Module k Y] [Module.Finite k Y] (d : X →ₗ[k] Y) (U : ι → Submodule k X) (P : ι → Y →ₗ[k] Y)
+  (Q : ι → X →ₗ[k] X),
+  (∀ (a : ι) (x : X), (Q a) x ∈ U a) →
+    (∀ (a b : ι), b < a → ∀ (x : ↥(U b)), (P a) (d ↑x) = 0) →
+      Module.finrank k ↥(∑ a, P a ∘ₗ d ∘ₗ Q a).range ≤ Module.finrank k ↥d.range

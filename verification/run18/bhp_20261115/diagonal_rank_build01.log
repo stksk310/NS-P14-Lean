@@ -1,0 +1,34 @@
+✖ [3796/3797] Building NSP14.Homological.TriangularBlockRank (1.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/TriangularBlockRank.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/TriangularBlockRank.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/TriangularBlockRank.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/TriangularBlockRank.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/TriangularBlockRank.setup.json --json
+error: NSP14/Homological/TriangularBlockRank.lean:61:62: Unknown constant `Submodule.finrank_bot`
+error: NSP14/Homological/TriangularBlockRank.lean:61:10: unsolved goals
+case empty
+k : Type
+inst✝⁷ : Field k
+ι X Y : Type
+inst✝⁶ : Fintype ι
+inst✝⁵ : LinearOrder ι
+inst✝⁴ : AddCommGroup X
+inst✝³ : Module k X
+inst✝² : AddCommGroup Y
+inst✝¹ : Module k Y
+inst✝ : Module.Finite k Y
+f : ι → X →ₗ[k] Y
+⊢ Module.finrank k ↥(LinearMap.range 0) ≤ 0
+warning: NSP14/Homological/TriangularBlockRank.lean:61:41: This simp argument is unused:
+  LinearMap.range_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_empty, Submodule.finrank_bot, le_refl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Homological/TriangularBlockRank.lean:61:84: This simp argument is unused:
+  le_refl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_empty, LinearMap.range_zero, Submodule.finrank_bot]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Homological.TriangularBlockRank
+error: build failed
