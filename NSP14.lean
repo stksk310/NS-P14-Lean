@@ -666,3 +666,6 @@ public import NSP14.Lex.GenericDistractionField
 public import NSP14.Lex.DistractionLinearEquiv
 public import NSP14.Lex.DistractionIdeal
 public import NSP14.Lex.DistractionHilbert
+public import NSP14.Homological.ExteriorContraction
+public import NSP14.Homological.KoszulExteriorBasis
+public import NSP14.Homological.KoszulExterior

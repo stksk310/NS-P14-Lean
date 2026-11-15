@@ -1,0 +1,31 @@
+'NSP14.Homological.koszulExteriorContraction_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulExteriorTensorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulExteriorTensorEquiv_slot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulExteriorBoundary_tmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.koszulExteriorContraction_coe : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ] (j : ℕ)
+  (φ : Module.Dual k (σ → k)) (w : ↥(⋀[k]^(j + 1) (σ → k))),
+  ↑((NSP14.Homological.koszulExteriorContraction k σ j φ) w) = (CliffordAlgebra.contractLeft φ) ↑w
+NSP14.Homological.koszulExteriorTensorEquiv : (k σ : Type) →
+  [inst : Field k] →
+    [inst_1 : Fintype σ] →
+      (M : ModuleCat (NSP14.Homological.VariableRing k σ)) →
+        {J : Type} →
+          Module.Basis J k ↑(NSP14.Homological.coefficientModule k σ M) →
+            (j : ℕ) →
+              ↑(NSP14.Homological.coefficientModule k σ
+                    ((NSP14.Homological.koszulList k σ (NSP14.Homological.variableList k σ) M).X j)) ≃ₗ[k]
+                TensorProduct k ↑(NSP14.Homological.coefficientModule k σ M) ↥(⋀[k]^j (σ → k))
+NSP14.Homological.koszulExteriorTensorEquiv_slot : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ]
+  (M : ModuleCat (NSP14.Homological.VariableRing k σ)) {J : Type}
+  (b : Module.Basis J k ↑(NSP14.Homological.coefficientModule k σ M)) (j : ℕ)
+  (s : NSP14.Homological.KoszulSlot (NSP14.Homological.variableList k σ).length j)
+  (a : ↑(NSP14.Homological.coefficientModule k σ M)),
+  (NSP14.Homological.koszulExteriorTensorEquiv k σ M b j)
+      ((NSP14.Homological.coefficientSlotIn k σ M (NSP14.Homological.variableList k σ) j s) a) =
+    a ⊗ₜ[k] (NSP14.Homological.koszulExteriorBasis k j) s
+NSP14.Homological.koszulExteriorBoundary_tmul : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ]
+  (M : ModuleCat (NSP14.Homological.VariableRing k σ)) {J : Type}
+  (b : Module.Basis J k ↑(NSP14.Homological.coefficientModule k σ M)) (j : ℕ)
+  (a : ↑(NSP14.Homological.coefficientModule k σ M)) (w : ↥(⋀[k]^(j + 1) (σ → k))),
+  (NSP14.Homological.koszulExteriorBoundary k σ M b j) (a ⊗ₜ[k] w) =
+    ∑ x, (MvPolynomial.X x • a) ⊗ₜ[k] (NSP14.Homological.koszulExteriorContraction k σ j (LinearMap.proj x)) w
