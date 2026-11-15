@@ -1,0 +1,13 @@
+{
+  "audit/run19/RequestedGoals.lean": "18641d021db548f04d2129d7ea9e827f30d1229fb78adbcf1e54e43e76f93cc6",
+  "audit/run19/acceptance/I_BASE.lean": "ddcd3fa5e2fee532241404e4b99c0e2cbe30ce270bb1a6f8213ee625fb7afd49",
+  "audit/run19/acceptance/N_SMALL.lean": "b351a63a7855a952781eba61b0a89114ee78c3e9d18914abd44d621e3edc62a8",
+  "audit/run19/acceptance/N_HIGH.lean": "9dba72080abf4d5809675fb4887f3806b3b1c44044f6bf83b6ee49913d172980",
+  "audit/run19/acceptance/I_THREE.lean": "7d529e644c57db95b6401199d10bc16f8989474cf8d200dd74436017946095a1",
+  "audit/run19/acceptance/N_WORDS.lean": "103b0cbc8bd5381122fa46ef0e983310935d90858cf3bb64ef35359509733c0a",
+  "audit/run19/acceptance/N_CLOSE.lean": "e49cba7b1a87845dc3044d0f5d8e582044e43b3a0867873b1b6642ccbced31d6",
+  "audit/run19/acceptance/X_LTV.lean": "3fdd5f021d5667dd0c8f1ef53f097386635cdf075c03333522a615b7bf400740",
+  "audit/run19/acceptance/N_DISTANCE.lean": "1f4c2c59b82127dd121684fa5adbaf2e5021917b9f6213daafd227e3319f363c",
+  "audit/run19/acceptance/N_WIDTH4.lean": "f3d26285ffdc54265092da866803f41e5a89e373feff82f9c811fde7cb585eeb",
+  "audit/run19/acceptance/N_FIRST.lean": "474cb1df3c726ca86aa35dd0868182f8814fe776b512aa61afbbb7baaaf8e876"
+}

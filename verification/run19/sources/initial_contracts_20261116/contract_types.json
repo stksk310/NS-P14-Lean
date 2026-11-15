@@ -1,0 +1,112 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k] (hq : D.q = 2) (a b : ↥D.a),\n  NSP14.NarrowFour.OrderedPair D a b →\n    4 * (D.wordVolume - 1) ≤ D.u ^ 2 ∧\n      (D.internalSigma k hq + 1).choose 2 ≤ D.coreP k ∧\n        D.internalSigma k hq ≤ D.u - 1 ∧\n          D.coreP k = (NSP14.NarrowFour.standardWords D a b).card ∧\n            (∀ (p q : ℕ × ℕ), NSP14.NarrowFour.Standard D a b p → q ≤ p → NSP14.NarrowFour.Standard D a b q) ∧\n              ∀ (s t : ℕ), s + t ≤ D.internalSigma k hq - 1 → NSP14.NarrowFour.Standard D a b (s, t)",
+    "explicit_body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k]\n  (hq : @Eq Nat D.q (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (a b : ↥D.a),\n  NSP14.NarrowFour.OrderedPair D a b →\n    And\n      (@LE.le Nat instLENat\n        (@HMul.hMul Nat Nat Nat (@instHMul Nat instMulNat) (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))\n          (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) D.wordVolume\n            (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))\n        (@HPow.hPow Nat Nat Nat (@instHPow Nat Nat (@NPow.toPow Nat (@Monoid.toNPow Nat Nat.instMonoid))) D.u\n          (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))\n      (And\n        (@LE.le Nat instLENat\n          ((@HAdd.hAdd Nat Nat Nat (@instHAdd Nat instAddNat) (@NSP14.Endpoint.Data.internalSigma D k inst hq)\n                (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))).choose\n            (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))\n          (@NSP14.Endpoint.Data.coreP D k inst))\n        (And\n          (@LE.le Nat instLENat (@NSP14.Endpoint.Data.internalSigma D k inst hq)\n            (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) D.u\n              (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))\n          (And\n            (@Eq Nat (@NSP14.Endpoint.Data.coreP D k inst)\n              (@Finset.card (Prod Nat Nat) (NSP14.NarrowFour.standardWords D a b)))\n            (And\n              (∀ (p q : Prod Nat Nat),\n                NSP14.NarrowFour.Standard D a b p →\n                  @LE.le (Prod Nat Nat) (@Prod.instLE_mathlib Nat Nat instLENat instLENat) q p →\n                    NSP14.NarrowFour.Standard D a b q)\n              (∀ (s t : Nat),\n                @LE.le Nat instLENat (@HAdd.hAdd Nat Nat Nat (@instHAdd Nat instAddNat) s t)\n                    (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) (@NSP14.Endpoint.Data.internalSigma D k inst hq)\n                      (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →\n                  NSP14.NarrowFour.Standard D a b (@Prod.mk Nat Nat s t))))))",
+    "name": "NSP14.Run19.Requested.N_DISTANCE",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k],\n  D.q = 2 →\n    ∀ (a b : ↥D.a),\n      NSP14.NarrowFour.OrderedPair D a b →\n        (∀ (s : ℕ), NSP14.NarrowFour.Standard D a b (s, 0) → s ≤ D.u - 2) ∧\n          (∀ (t : ℕ), NSP14.NarrowFour.Standard D a b (0, t) → t ≤ D.u - 2) ∧\n            (∀ (s t : ℕ), 0 < s → 0 < t → NSP14.NarrowFour.Standard D a b (s, t) → 2 * (s + t) ≤ D.u) ∧\n              D.coreHeight ≤ D.u - 3 ∧ (D.u ≤ 4 → D.actualR k = 0)",
+    "explicit_body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k],\n  @Eq Nat D.q (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →\n    ∀ (a b : ↥D.a),\n      NSP14.NarrowFour.OrderedPair D a b →\n        And\n          (∀ (s : Nat),\n            NSP14.NarrowFour.Standard D a b\n                (@Prod.mk Nat Nat s (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))) →\n              @LE.le Nat instLENat s\n                (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) D.u\n                  (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))\n          (And\n            (∀ (t : Nat),\n              NSP14.NarrowFour.Standard D a b\n                  (@Prod.mk Nat Nat (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) t) →\n                @LE.le Nat instLENat t\n                  (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) D.u\n                    (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))\n            (And\n              (∀ (s t : Nat),\n                @LT.lt Nat instLTNat (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) s →\n                  @LT.lt Nat instLTNat (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) t →\n                    NSP14.NarrowFour.Standard D a b (@Prod.mk Nat Nat s t) →\n                      @LE.le Nat instLENat\n                        (@HMul.hMul Nat Nat Nat (@instHMul Nat instMulNat)\n                          (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))\n                          (@HAdd.hAdd Nat Nat Nat (@instHAdd Nat instAddNat) s t))\n                        D.u)\n              (And\n                (@LE.le Nat instLENat D.coreHeight\n                  (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) D.u\n                    (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))))\n                (@LE.le Nat instLENat D.u (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →\n                  @Eq Nat (@NSP14.Endpoint.Data.actualR D k inst)\n                    (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))",
+    "name": "NSP14.Run19.Requested.N_WORDS",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 4),\n  S.width ≤ S.multiplicity - 2 → ∀ (i : ℕ), 2 ≤ i → NSP14.Run19.Requested.Row S k ⋯ i",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))),\n  @LE.le Nat instLENat S.width\n      (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) S.multiplicity\n        (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →\n    ∀ (i : Nat),\n      @LE.le Nat instLENat (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) i →\n        @NSP14.Run19.Requested.Row S k inst ⋯ i",
+    "name": "NSP14.Run19.Requested.N_HIGH",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "NSP14.Run19.Requested.FirstCount ∧\n  ∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 4),\n    S.width ≤ S.multiplicity - 2 → S.normalizedWidth = 5 ∨ 9 ≤ S.normalizedWidth → NSP14.Run19.Requested.Row S k ⋯ 1",
+    "explicit_body": "And NSP14.Run19.Requested.FirstCount\n  (∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n    (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))),\n    @LE.le Nat instLENat S.width\n        (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) S.multiplicity\n          (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →\n      Or (@Eq Nat S.normalizedWidth (@OfNat.ofNat Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))\n          (@LE.le Nat instLENat (@OfNat.ofNat Nat (nat_lit 9) (instOfNatNat (nat_lit 9))) S.normalizedWidth) →\n        @NSP14.Run19.Requested.Row S k inst ⋯ (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))",
+    "name": "NSP14.Run19.Requested.N_FIRST",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 4)\n  (hw : S.width ≤ S.multiplicity - 2),\n  have D := S.endpointData ⋯ hw;\n  D.u = 3 ∨ D.u = 5 ∨ D.u = 6 ∨ D.u = 7 ∨ D.u = 8 ∨ D.u = 4 ∧ (D.d ≠ 1 ∨ D.a ≠ {1, 3}) →\n    NSP14.Run18.Requested.Comparison S k ⋯",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))\n  (hw :\n    @LE.le Nat instLENat S.width\n      (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) S.multiplicity\n        (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))),\n  have D := S.endpointData ⋯ hw;\n  Or (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))\n      (Or (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))\n        (Or (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))\n          (Or (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))\n            (Or (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))\n              (And (@Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))\n                (Or (@Ne Nat D.d (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))\n                  (@Ne (Finset Nat) D.a\n                    (@insert Nat (Finset Nat) (@Finset.instInsert Nat instDecidableEqNat)\n                      (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))\n                      (@singleton Nat (Finset Nat) (@Finset.instSingleton Nat)\n                        (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))))))))))) →\n    @NSP14.Run18.Requested.Comparison S k inst ⋯",
+    "name": "NSP14.Run19.Requested.N_SMALL",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k] (hq : D.q = 2),\n  D.d * D.u + 2 ≤ D.m → D.d = 1 → D.u = 4 → D.a = {1, 3} → NSP14.Run18.Requested.Comparison D.source k ⋯",
+    "explicit_body": "∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k]\n  (hq : @Eq Nat D.q (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))),\n  @LE.le Nat instLENat\n      (@HAdd.hAdd Nat Nat Nat (@instHAdd Nat instAddNat) (@HMul.hMul Nat Nat Nat (@instHMul Nat instMulNat) D.d D.u)\n        (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))\n      D.m →\n    @Eq Nat D.d (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) →\n      @Eq Nat D.u (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →\n        @Eq (Finset Nat) D.a\n            (@insert Nat (Finset Nat) (@Finset.instInsert Nat instDecidableEqNat)\n              (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))\n              (@singleton Nat (Finset Nat) (@Finset.instSingleton Nat)\n                (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))) →\n          @NSP14.Run18.Requested.Comparison D.source k inst ⋯",
+    "name": "NSP14.Run19.Requested.N_WIDTH4",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 4),\n  S.width ≤ S.multiplicity - 2 → NSP14.Run18.Requested.Comparison S k ⋯",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))),\n  @LE.le Nat instLENat S.width\n      (@HSub.hSub Nat Nat Nat (@instHSub Nat instSubNat) S.multiplicity\n        (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →\n    @NSP14.Run18.Requested.Comparison S k inst ⋯",
+    "name": "NSP14.Run19.Requested.N_CLOSE",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k],\n  S.embeddingDimension ≤ 2 → NSP14.Run19.Requested.ComparisonAll S k",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k],\n  @LE.le Nat instLENat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →\n    @NSP14.Run19.Requested.ComparisonAll S k inst",
+    "name": "NSP14.Run19.Requested.I_BASE",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 3) (i : ℕ),\n  NSP14.Run19.Requested.Row S k ⋯ (i + 1)",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (i : Nat),\n  @NSP14.Run19.Requested.Row S k inst ⋯\n    (@HAdd.hAdd Nat Nat Nat (@instHAdd Nat instAddNat) i (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))",
+    "name": "NSP14.Run19.Requested.X_LTV",
+    "type": "Prop"
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k] (he : S.embeddingDimension = 3),\n  NSP14.Run18.Requested.Comparison S k ⋯",
+    "explicit_body": "∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]\n  (he : @Eq Nat S.embeddingDimension (@OfNat.ofNat Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))),\n  @NSP14.Run18.Requested.Comparison S k inst ⋯",
+    "name": "NSP14.Run19.Requested.I_THREE",
+    "type": "Prop"
+  }
+]
