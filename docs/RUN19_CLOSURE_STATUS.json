@@ -2,10 +2,11 @@
   "status": "RUN19_IN_PROGRESS",
   "run19_complete": false,
   "base_commit": "04906ede0e9e3a04b9c07c791c1e1c49834dd3e1",
-  "closed_ids": [],
-  "unproved_ids": [
+  "closed_ids": [
     "N_DISTANCE",
-    "N_WORDS",
+    "N_WORDS"
+  ],
+  "unproved_ids": [
     "N_HIGH",
     "N_FIRST",
     "N_SMALL",
