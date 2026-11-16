@@ -1,0 +1,31 @@
+{
+  "status": "PASS_INDEPENDENT_RUN20_COLD_EVIDENCE_CROSSCHECK",
+  "proof_snapshot_commit": "a5e122a4d09536b1609c5faa8d419f8faf81671f",
+  "checks": 335,
+  "fixtures": 311,
+  "declarations": 15774,
+  "all_typed_modules": 1019,
+  "declaration_owning_modules": 986,
+  "import_only_modules": 33,
+  "private_declarations": 3679,
+  "base_declarations": 15542,
+  "preserved_public_type_and_universe_pairs": 11928,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_entries": 1674,
+  "evidence_entries": 488,
+  "retained_bytes_and_fileset_entries": 10731,
+  "source_manifest_equals_published_R03": true,
+  "saved_declaration_GZIP_bytes_identical_to_published_R03": true,
+  "all_raw_part_rows_equal_saved_rows": true,
+  "negative_controls": 61,
+  "actual_Lean_codec_controls": 13,
+  "verification_sha256": "29243c606c91138d53214e8893cea4bd65a40b25ba6d8877c2134353f9e1b54d",
+  "manifest_sha256": "1eacb2e906496de1f0086d91f44ad33f3f406c6d7131468225a9d908c7717c8a",
+  "source_manifest_sha256": "54cef31e8bbb8772031bd469b19203700aa848efbdcd03bddeb3881499c9282a",
+  "fresh_whole_project_cache": true,
+  "baseline_cache_source_identity_receipt": "/tmp/run20-baseline-donor-receipt.json"
+}

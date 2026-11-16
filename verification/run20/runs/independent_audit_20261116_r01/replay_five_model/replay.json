@@ -1,0 +1,23 @@
+{
+  "name": "five_model",
+  "old_command": [
+    "python3",
+    "scripts/replay_run19_inherited.py",
+    "--name",
+    "five_model",
+    "--output-dir",
+    "verification/run19/runs/release_20261116_r03/replay_five_model"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run18_five.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_run20_disposable/five_checks.json"
+  ],
+  "source_commit": "a5e122a4d09536b1609c5faa8d419f8faf81671f",
+  "current_mathematical_source": true,
+  "historical_policy_scope": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "old_evidence_written": false
+}

@@ -1,0 +1,18 @@
+{
+  "verification/run20/independent_audit_20261116_r01/fresh_environment_byte_equality.json": "88927ef645d9a9a10ac1606c6e8a59869430b10e304e88618738712d37d9b9d5",
+  "verification/run20/independent_audit_20261116_r01/audit.json": "f5f225bb0a917987bbc3aac7dcc8ddede62984cc4e07b6da8e61ebc8ab419a4a",
+  "verification/run20/independent_audit_20261116_r01/MAIN_MATH_REVIEW.md": "37cca3a749e0319daef45bf1a336ac525b372c3000217bd003eddd57298e254f",
+  "verification/run20/independent_audit_20261116_r01/fresh_validation_check.py": "1eff0fd304b084c3e9b4c4b20fd342a0aff4b2d1e898ffff80610795f60b6b1a",
+  "verification/run20/independent_audit_20261116_r01/published_bindings.json": "716953202e9d5c25013e71c449299c1998a3893a49bb91aefdd0d0c22731ab21",
+  "verification/run20/independent_audit_20261116_r01/type_codec_probe.stdout": "58c4c4b5ac9c493e28943ae6b91b136c47c69749b2771f7812b2d74972d531ec",
+  "verification/run20/independent_audit_20261116_r01/type_codec_probe.py": "8201a776d7ed256e489d371daa230522ae284088ec84119508ace404fe3e3d17",
+  "verification/run20/independent_audit_20261116_r01/fresh_validation_check.stdout": "0d5eb7fcb70deb7655c9b22adda69c0d336f21a66adf332a1498066e0746b00d",
+  "verification/run20/independent_audit_20261116_r01/published_binding_check.stdout": "716953202e9d5c25013e71c449299c1998a3893a49bb91aefdd0d0c22731ab21",
+  "verification/run20/independent_audit_20261116_r01/baseline_donor_receipt.json": "b4695949cefa2a54592bc576649e6c882b7d4b4fb4391a1670996c2de1122845",
+  "verification/run20/independent_audit_20261116_r01/DEPENDENCY_PAPER_REVIEW.md": "cfad7939e35b74ed9d1b3f94c89e5f2435f5ea4cc79c6c487e1a1eaeb8a79d57",
+  "verification/run20/independent_audit_20261116_r01/fresh_crosscheck.json": "0d5eb7fcb70deb7655c9b22adda69c0d336f21a66adf332a1498066e0746b00d",
+  "verification/run20/independent_audit_20261116_r01/AUDIT_JA.md": "d95342eb9eb73504482b4294c45c48d75dbe96430e4591f956fcd806ac8e743e",
+  "verification/run20/independent_audit_20261116_r01/published_binding_check.py": "ca31252b8bc08b3861353bc675507f4e6b38b2935bc16fcdd01a5c6f201096d8",
+  "verification/run20/independent_audit_20261116_r01/cold_validation_stdout.log": "2eb5be536a8005f1d3290f4ac8e7214a3d505975e88c77a5ae984724b56476c4",
+  "verification/run20/independent_audit_20261116_r01/TYPE_CODEC_REVIEW.md": "912b9c559a36b225dbdba90147d04fcfe109802562545f49c53e73afed8c01da"
+}

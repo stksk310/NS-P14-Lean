@@ -1,0 +1,21 @@
+{
+  "name": "run19_routes",
+  "old_command": [
+    "python3",
+    "scripts/check_run19_routes.py",
+    "--output",
+    "verification/run19/runs/release_20261116_r03/routes.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run19_routes.py",
+    "--output",
+    "verification/run19/runs/run20_disposable/routes.json"
+  ],
+  "source_commit": "a5e122a4d09536b1609c5faa8d419f8faf81671f",
+  "current_mathematical_source": true,
+  "historical_policy_scope": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "old_evidence_written": false
+}

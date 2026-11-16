@@ -1,0 +1,12 @@
+modules 1019 {'NSP14': 708, 'tests': 261, 'audit': 50}
+rows 15774 module_counts {'tests': 2523, 'NSP14': 13078, 'audit': 173} private 3679 owning_modules 986 import_only 33
+kinds {'def': 2548, 'theorem': 13170, 'inductive': 18, 'constructor': 20, 'recursor': 18} axioms {'propext': 15140, 'Classical.choice': 13152, 'Quot.sound': 14700}
+two independent stored name inventories and their logs match all rows; both import all modules
+fixed named fixture helpers 28 all present
+base rows 15542 public rows 11928 all names retained; type/explicit_type/universe_parameters match; stored replay exactly matches golden
+eight saved parts have exact current codec, import all modules, disjoint full selection, recorded exit 0
+all saved DAG shapes, constructor arities, Name/Level shapes, child<parent references, binder kinds, let flags, metadata references passed
+all 15774 original-to-canonical structural hashes match (including metadata snapshot strings)
+node_totals {'kernel_type': 2643755, 'metadata_rows': 959, 'explicit_type': 2646175} constructor_counts {'kernel_type': {'const': 426011, 'app': 2005877, 'nat': 16666, 'bvar': 74699, 'lambda': 34981, 'forall': 74492, 'let': 162, 'sort': 9876, 'metadata': 990, 'proj': 1}, 'explicit_type': {'const': 426011, 'app': 2007898, 'nat': 16666, 'bvar': 74699, 'lambda': 35292, 'forall': 74580, 'let': 162, 'sort': 9876, 'metadata': 990, 'proj': 1}}
+binder_kinds {0: 90553, 1: 6928, 3: 11807, 2: 185} metadata_snapshot_values {'{ entries := [(`borrowed, Lean.DataValue.ofBool true)] }': 87, '{ entries := [(`noImplicitLambda, Lean.DataValue.ofBool true)] }': 860, '{ entries := [(`noindex, Lean.DataValue.ofBool true)] }': 43}
+PASS_READ_ONLY_SAVED_R03_INDEPENDENT_PROBE; no Lean/Lake/checker/packager invoked

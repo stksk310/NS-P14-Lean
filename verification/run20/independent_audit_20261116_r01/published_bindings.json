@@ -1,0 +1,27 @@
+{
+  "status": "PASS_PUBLISHED_RUN20_GIT_RAW_DECLARATIONS_REVIEW_AND_ZIP",
+  "proof_snapshot_commit": "1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e",
+  "reviewed_commit": "041adc1024109644378b2be5aed95276da6b65f2",
+  "source_entries": 1674,
+  "evidence_entries": 488,
+  "checks": 335,
+  "fixtures": 311,
+  "declarations": 15774,
+  "typed_modules": 1019,
+  "declaration_owning_modules": 986,
+  "private_declarations": 3679,
+  "base_declarations": 15542,
+  "preserved_public_type_pairs": 11928,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_raw_stream_rows_equal_saved_rows": true,
+  "reviewed_commit_source_entries_all_match": true,
+  "zip_entries": 2168,
+  "zip_sha256": "7145c7302a7267041897a6f0993d8b2c82b9755b44412efd6f4dfe064c473d94",
+  "zip_safe_paths_CRC_and_all_payload_hashes": true,
+  "archive_Git_bytes_at_package_commit_match": true,
+  "all_P14_completion_receipt": true
+}
