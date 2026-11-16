@@ -89,6 +89,30 @@ def main():
         reject('inherited_fixture_omitted',lambda:v.validate_coverage(prior,prior['checks'],prior['fixture_order'][1:]),'fixture coverage')
         for name in ['v06_routes','environment_axioms','base_environment_types','run19_routes','run19_negative_controls']:
             reject('inherited_check_omitted_'+name,lambda name=name:v.validate_coverage(prior,[c for c in prior['checks'] if c['name']!=name],prior['fixture_order']),'check coverage')
+        table=r/'docs/RUN20_DEPENDENCY_COVERAGE.json';table_bytes=table.read_bytes();coverage=json.loads(table_bytes)
+        mapped=[{'module':g['module'],'name':g['module']+'.'+n} for entry in coverage['entries'] for g in entry['exports'] for n in g['declarations']]
+        v.validate_dependency_map(r,mapped)
+        bad=copy.deepcopy(coverage);bad['entries']=bad['entries'][1:];table.write_text(json.dumps(bad))
+        reject('original_ID_omitted',lambda:v.validate_dependency_map(r,mapped),'50-ID map coverage')
+        bad=copy.deepcopy(coverage);bad['entries'][0]['original_quantifiers']='only characteristic zero';table.write_text(json.dumps(bad))
+        reject('original_ID_quantifiers_changed',lambda:v.validate_dependency_map(r,mapped),'original ID meaning')
+        table.write_bytes(table_bytes)
+        # Actual Lean collectAxioms on an isolated injected axiom. It is never
+        # imported into production or the project environment being certified.
+        probe=r/'Run20NegativeAxiom.lean';probe.write_text('''import Lean
+axiom Run20Negative.bad : False
+theorem Run20Negative.consumer : False := Run20Negative.bad
+#eval show Lean.MetaM Unit from do
+ let axs ← Lean.collectAxioms `Run20Negative.consumer
+ IO.println ((Lean.Json.mkObj [("axioms", Lean.toJson (axs.map Lean.Name.toString))]).compress)
+''')
+        command=['lake','env','lean','-j1','-M12288',str(probe)]
+        process=subprocess.run(command,cwd=ROOT,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        if process.returncode or 'warning:' in process.stdout:raise ValueError('actual axiom probe failed to execute: '+process.stdout)
+        actual=json.loads(next(line for line in process.stdout.splitlines() if line.startswith('{')))
+        row={'name':'Run20Negative.consumer','module':'Run20Negative','type':'False','explicit_type':'False','axioms':actual['axioms']}
+        reject('real_lean_additional_axiom',lambda:v.v06.validate_audit([row],{'Run20Negative'}),'unapproved or self axiom')
+        results[-1]['command']=command;results[-1]['raw_output']=process.stdout
     # Exercise the real packager's source/evidence/review Git-byte binding.
     with tempfile.TemporaryDirectory(prefix='run20-package-controls-') as tmp:
         r=Path(tmp)
