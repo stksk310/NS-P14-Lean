@@ -27,6 +27,16 @@ def main():
         v.validate_changes(r);results.append({'control':'unaltered_source','passed':True})
         arrived=r/'scripts/package_run19_audit.py';original=arrived.read_bytes();arrived.write_bytes(original+b'\n')
         reject('arrived_audit_source_substitution',lambda:v.validate_changes(r),'arrived audit Git bytes differ');arrived.write_bytes(original)
+        partition=r/'NSP14/Main/Partition.lean';original_partition=partition.read_text()
+        start=original_partition.index('def cutParameters ');end=original_partition.index('/-- The edge',start)
+        partition.write_text(original_partition[:start]+'def cutParameters (S : NumericalSemigroup) : Prop := True\n\n'+original_partition[end:])
+        reject('frozen_cut_predicate_weakened_to_True',lambda:v.validate_changes(r),'frozen partition predicate bodies changed')
+        partition.write_text(original_partition)
+        start=original_partition.index('def narrowParameters ');end=original_partition.index('end NSP14.NumericalSemigroup',start)
+        weakened='def narrowParameters (S : NumericalSemigroup) (he : 4 ≤ S.embeddingDimension) (hw : S.width ≤ S.multiplicity-2) : Prop := True\n'
+        partition.write_text(original_partition[:start]+weakened+original_partition[end:])
+        reject('frozen_narrow_predicate_weakened_to_True',lambda:v.validate_changes(r),'frozen partition predicate bodies changed')
+        partition.write_text(original_partition)
         for name in ['/tmp/run20-escape','verification/run20/runs/../escape','verification/run19/runs/old']:
             reject('unsafe_output_'+name,lambda name=name:v.validate_output(r,name),'unsafe relative path' if name.startswith('/') or '..' in name else 'unique verification')
         existing='verification/run20/runs/existing';(r/existing).mkdir(parents=True)
