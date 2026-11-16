@@ -1,0 +1,75 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "pending": [],
+  "declined": [],
+  "closed_ids": [
+    "I_MAIN",
+    "I_PARTITION"
+  ],
+  "source_snapshot_commit": "1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e",
+  "reviewed_commit": "041adc1024109644378b2be5aed95276da6b65f2",
+  "verification_summary_sha256": "ddd4944e0512299a2b882a2b1f15e40ae3c158654b5496d9c25dc911fd4ff7f0",
+  "source_manifest_sha256": "54cef31e8bbb8772031bd469b19203700aa848efbdcd03bddeb3881499c9282a",
+  "verification_manifest_sha256": "255f35df59d29bdedda826144ac70a05b20827be9fa0e5866012279f9890c2fd",
+  "review_report": "verification/run20/review/final_20261116_r03.md",
+  "review_report_sha256": "76e42ff358af8f4f96bf7b1306623c57fec6952cbc4030ac6bd4b16d1ae31c07",
+  "independent_original_report_sha256": "57dc1d871c924a6d0098a7e08060a3880df8ce8a942c5df22de92009865c2620",
+  "reviewer": "/root/run20_final_review",
+  "fresh_whole_branch_review": true,
+  "necessary_unproved_mathematical_inputs": [],
+  "resolved_findings": [
+    {
+      "id": "F1",
+      "original_severity": "Important",
+      "status": "resolved and reverified",
+      "scope": "freeze referenced Partition predicate definitions"
+    },
+    {
+      "id": "F2",
+      "original_severity": "Important",
+      "status": "resolved and reverified",
+      "scope": "clean-clone incidental bytecode retention; all tracked bytes remain bound"
+    }
+  ],
+  "appendices": [
+    {
+      "executed_path": "/tmp/run20-independent-final-crosscheck.py",
+      "sha256": "4ae4dab08f345d5110b67db24f830a38cc88ddc9ef834d683ee8e6a806d261fb",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-final-review-r03-20261116.process.json",
+      "sha256": "b093f7479ddb070171f496a5a8cded0ca40e1a0f53ead1d2bf1c246965409150",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-final-review-r03-20261116.stdout.json",
+      "sha256": "aceba5d7c6134f88ca974bc8f90c96d5b2440c35d6b7d49977e33e977772aa58",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-final-review-r03-20261116.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-review-f2-reproduction.py",
+      "sha256": "e23acf50aadd1608a9af6cbd981ddc07cbb5d96b3cdfb0e0ba863af573c1ac51",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-review-f2-reproduction-process.json",
+      "sha256": "7b9ef827b1825a3abc00529d2a1eaffec5c43639d4a0a19c53e05e0dee0b2676",
+      "embedded_verbatim_in_review_report": true
+    },
+    {
+      "executed_path": "/tmp/run20-review-f2-reproduction-executed.json",
+      "sha256": "592a932607aa2db680b402d6e8111a42f23fe3827bde272c62c7975eeaeb68e1",
+      "embedded_verbatim_in_review_report": true
+    }
+  ],
+  "publication_not_yet_claimed": true
+}
