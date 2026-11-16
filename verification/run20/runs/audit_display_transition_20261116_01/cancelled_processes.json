@@ -1,0 +1,36 @@
+{
+  "date_utc": "2026-11-16T03:33:03.409186+00:00",
+  "reason": "Full normal/type and collectAxioms scope retained; explicit pp mode is changing to Lean pp.all for fully explicit types. Prior display attempts get no validation credit. Sources/partial logs retained.",
+  "processes": [
+    {
+      "pid": 244723,
+      "command": "python3 verification/run20/sources/audit_parts.py --source-root /tmp/ns-p14-run19-20261116 --parts 4 --workers 2 --output-dir verification/run20/runs/base_parts_preflight_20261116_01",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 235824,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/sources/BaseEnvironmentAudit.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 243686,
+      "command": "lean -j1 -M12288 verification/run20/runs/preflight_20261116_02/EnvironmentAudit.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 244861,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_parts_preflight_20261116_01/Part00.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 244862,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_parts_preflight_20261116_01/Part01.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    }
+  ]
+}

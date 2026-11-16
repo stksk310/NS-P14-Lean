@@ -1,0 +1,28 @@
+{
+  "controls": [
+    "actual alpha-equivalence",
+    "binder renaming",
+    "bound-variable order",
+    "explicit/implicit binder",
+    "instance binder",
+    "universe levels",
+    "exact metadata preservation",
+    "all 200 nested applications",
+    "no display ellipses",
+    "exact JSON DAG reconstruction for all cases",
+    "numeric Name segments and universe AST",
+    "reject forward DAG references",
+    "shared-subexpression memoization"
+  ],
+  "status": "PASS_COMPLETE_KERNEL_TYPE_ENCODING",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M12288",
+    "/tmp/ns-p14-run20-20261116/verification/run20/runs/dag_controls_preflight_20261116_02/Controls.lean"
+  ],
+  "exit_code": 0,
+  "source_sha256": "4a5dcae0f0a1077fe91e231efdc3fc4816272be849f06247ce83bfd2c205c891"
+}

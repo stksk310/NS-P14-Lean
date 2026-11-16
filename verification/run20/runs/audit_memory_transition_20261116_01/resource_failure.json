@@ -1,0 +1,44 @@
+{
+  "date_utc": "2026-11-16T04:07:41.266984+00:00",
+  "memory_limit_bytes": 17179869184,
+  "memory_events": "low 0\nhigh 0\nmax 90633\noom 11\noom_kill 4\noom_group_kill 0\n",
+  "observed_SIGKILL_exit_137": "base Part01/02; current Part00/01; partial raw/kernel preflight, not accepted validation",
+  "stopped_remaining_processes": [
+    {
+      "pid": 248067,
+      "command": "python3 verification/run20/sources/audit_parts.py --source-root /tmp/ns-p14-run19-20261116 --parts 4 --workers 3 --output-dir verification/run20/runs/base_kernel_preflight_20261116_02",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    },
+    {
+      "pid": 248288,
+      "command": "python3 verification/run20/sources/audit_parts.py --parts 4 --workers 2 --output-dir verification/run20/runs/whole_kernel_preflight_20261116_02",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    },
+    {
+      "pid": 248254,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_kernel_preflight_20261116_02/Part00.lean",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    },
+    {
+      "pid": 248962,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_kernel_preflight_20261116_02/Part02.lean",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    },
+    {
+      "pid": 248968,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_kernel_preflight_20261116_02/Part03.lean",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    },
+    {
+      "pid": 249264,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_kernel_preflight_20261116_02/Part03.lean",
+      "signal": "SIGTERM",
+      "status": "FAILED_RESOURCE_ATTEMPT_REMAINDER_STOPPED_NOT_PASS"
+    }
+  ]
+}

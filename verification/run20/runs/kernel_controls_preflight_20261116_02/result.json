@@ -1,0 +1,24 @@
+{
+  "controls": [
+    "actual alpha-equivalence",
+    "binder renaming",
+    "bound-variable order",
+    "explicit/implicit binder",
+    "instance binder",
+    "universe levels",
+    "exact metadata preservation",
+    "all 200 nested applications",
+    "no display ellipses"
+  ],
+  "status": "PASS_COMPLETE_KERNEL_TYPE_ENCODING",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M12288",
+    "/tmp/ns-p14-run20-20261116/verification/run20/runs/kernel_controls_preflight_20261116_02/Controls.lean"
+  ],
+  "exit_code": 0,
+  "source_sha256": "bd877a6dbaf91c4c8952201be1efb5a6b818aa96061bc6f01e51f59ef1843a67"
+}

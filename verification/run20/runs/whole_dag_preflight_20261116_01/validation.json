@@ -1,0 +1,12 @@
+{
+  "status": "PASS_COMPLETE_PREFLIGHT_NOT_COLD_CERTIFICATION",
+  "declarations": 15774,
+  "base_declarations": 15542,
+  "modules": 1019,
+  "dependency_coverage": {
+    "original_IDs": 50,
+    "mapped_declaration_occurrences": 1650,
+    "original_statements_and_quantifiers_preserved": true,
+    "necessary_inputs_unproved": []
+  }
+}

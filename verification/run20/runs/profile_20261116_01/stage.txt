@@ -1,0 +1,1 @@
+NSP14.NumericalSemigroup.monomialClass.congr_simp: printing types
