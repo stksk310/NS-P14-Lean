@@ -8,6 +8,7 @@ BASE='07fe1ed952ae31ce01255ce53df538bf0a76d5cc'
 PROOF='7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7'
 EVIDENCE='c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe'
 REVIEW='1533762c276df346350a382ba452d73a5ae219ad'
+UPSTREAM_AUDIT='342fbdda072fc5d6aa5e8f2d8968456cc54c12a6'
 RUN='verification/run19/runs/release_20261116_r03'
 def sha(b):return hashlib.sha256(b).hexdigest()
 def blob(ref,name):return subprocess.check_output(['git','show',ref+':'+name],cwd=ROOT)
@@ -20,10 +21,12 @@ def main():
     assert not summary['unproved_ids'] and len(summary['closed_ids'])==10 and summary['proof_snapshot_commit']==PROOF
     source=json.loads((out/'SOURCE_SHA256.json').read_text())
     append_only={'NSP14.lean','LEAN_PROGRESS.md','docs/LEAN_PAPER_ALIGNMENT_JA.md'}
+    adopted=set(subprocess.check_output(['git','diff','--name-only',BASE,UPSTREAM_AUDIT],cwd=ROOT,text=True).splitlines())
+    for n in adopted:assert (ROOT/n).read_bytes()==blob(UPSTREAM_AUDIT,n),n
     for n,h in source.items():
         old=blob(PROOF,n);assert sha(old)==h,n
         now=(ROOT/n).read_bytes()
-        assert (now.startswith(old) if n in append_only else sha(now)==h),n
+        assert (now.startswith(old) if n in append_only else now==blob(UPSTREAM_AUDIT,n) if n in adopted else sha(now)==h),n
     manifest=json.loads((out/'MANIFEST_SHA256.json').read_text())
     actual={str(p.relative_to(ROOT)):sha(p.read_bytes()) for p in out.rglob('*') if p.is_file() and p.name!='MANIFEST_SHA256.json'}
     assert actual==manifest

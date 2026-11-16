@@ -7,6 +7,7 @@ from pathlib import Path
 import argparse, datetime, gzip, importlib.util, json, os, re, shutil, subprocess, tempfile, time
 ROOT=Path(__file__).resolve().parents[1]
 BASE='07fe1ed952ae31ce01255ce53df538bf0a76d5cc'
+UPSTREAM_AUDIT='342fbdda072fc5d6aa5e8f2d8968456cc54c12a6'
 RUN19_PROOF='7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7'
 PRIOR='verification/run19/runs/release_20261116_r03'
 POLICY='docs/RUN20_CHANGE_POLICY.json'
@@ -43,14 +44,19 @@ def validate_changes(root,require_new=True):
     if policy['base']!=BASE or policy['modified_files']:raise ValueError('fixed policy base differs')
     allowed=set().union(*(set(policy[g]) for g in ['new_production','new_fixtures','new_audits','new_infrastructure']))
     inherited={l.split('\t',1)[1]:l.split()[2] for l in git(root,'ls-tree','-r',BASE).decode().splitlines()}
+    # Arrived independent Run19 audit: exact immutable upstream bytes only.
+    # This supplements, and does not rewrite, the preimplementation policy.
+    adopted=set(git(root,'diff','--name-only',BASE,UPSTREAM_AUDIT).decode().splitlines())
+    for name in adopted:
+        if safe(root,name).read_bytes()!=git(root,'show',UPSTREAM_AUDIT+':'+name):raise ValueError('arrived audit Git bytes differ: '+name)
     actual=v06.current_files(root)
     if not set(inherited)<=actual:raise ValueError('inherited files missing')
     for name,oid in inherited.items():
         data=safe(root,name).read_bytes()
         if name in policy['append_only']:
             if not data.startswith(git(root,'show',BASE+':'+name)):raise ValueError('append-only prefix changed: '+name)
-        elif v06.blob_oid(data)!=oid:raise ValueError('forbidden inherited edit: '+name)
-    extra={p for p in actual-set(inherited)-allowed if not p.startswith('verification/run20/') and not
+        elif name not in adopted and v06.blob_oid(data)!=oid:raise ValueError('forbidden inherited edit: '+name)
+    extra={p for p in actual-set(inherited)-allowed-adopted if not p.startswith('verification/run20/') and not
       (p.startswith('artifacts/NS_P14_LEAN_RUN20_') and p.endswith('.zip'))}
     if extra:raise ValueError('files outside finite allowlist: '+repr(sorted(extra)))
     if require_new and not allowed<=actual:raise ValueError('required files missing: '+repr(sorted(allowed-actual)))
