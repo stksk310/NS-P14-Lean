@@ -1,0 +1,127 @@
+\section{Introduction}
+\label{sec:introduction}
+Let $S=\langle m=g_1<g_2<\cdots<g_e=M\rangle$ be a numerical
+semigroup, written with its minimal generators. Over a field $k$, its
+completed semigroup ring has tangent cone
+\[
+ G_S=\gr_{\mathfrak m} k[[t^S]],\qquad
+ \mathfrak m=(t^{g_1},\ldots,t^{g_e}).
+\]
+The initial forms of the minimal generators give a surjection
+$P_S=k[X_1,\ldots,X_e]\twoheadrightarrow G_S$.
+We write
+\[
+ \beta_i(G_S;k)=\dim_k\Tor_i^{P_S}(G_S,k)
+\]
+for its total Betti numbers. Thus $\beta_0=1$, and the positive rows
+measure the numbers of generators and higher syzygies of the defining
+ideal, with a shift of one in the homological index.
+
+The interval completion of $S$ is
+\[
+ \widetilde S=\langle m,m+1,\ldots,M\rangle.
+\]
+Its listed generators need not be minimal. Throughout, Betti numbers
+on the right are computed over the polynomial ring on the minimal
+generators of $\widetilde S$, independently of the presentation of $S$.
+
+\begin{theorem}\label{thm:main}
+For every numerical semigroup $S$, every field $k$, and every $i\ge0$,
+\[
+ \beta_i(G_S;k)\le\beta_i(G_{\widetilde S};k).
+\]
+\end{theorem}
+
+No restriction is imposed on the characteristic of $k$ or on the
+Cohen--Macaulayness of $G_S$. The use of different minimal polynomial
+rings is essential: the interval completion may have many more minimal
+generators than the original semigroup. The theorem concerns the total
+Betti numbers; it does not assert a comparison in each internal degree.
+
+Theorem~\ref{thm:main} resolves Problem~14 in the problem list of
+Moscariello--Sammartano \cite{ProblemList}. Herzog--Stamate had
+formulated the first-row comparison and discussed its higher-syzygy
+extension \cite{APCone}; the problem list states the all-row form used
+here.
+
+The target has an explicit Betti table. Put $w=M-m$. If $m\ge2$, its
+minimal generators are $m,m+1,\ldots,m+v$, where
+$v=\min\{w,m-1\}$. The arithmetic-sequence formula of
+Gimenez--Sengupta--Srinivasan, together with the tangent-cone comparison
+of Herzog--Stamate, determines its Betti numbers
+\cite{APFormula,APCone}. We use that formula as a numerical capacity
+against which to compare the source.
+
+The comparison also yields a sharp bound in terms of width alone,
+settling Conjecture~1.3 of Caviglia--Moscariello--Sammartano
+\cite{CMSBounds}. For the complete local ring
+$R_S=k[[t^S]]$, let $\beta_i(R_S;k)$ denote its Betti numbers over
+the minimal regular presentation $k[[X_1,\ldots,X_e]]$.
+\begin{corollary}\label{cor:width-bound}
+For every numerical semigroup $S$ of width $w$, every field $k$, and
+every $i\ge1$,
+\[
+ \beta_i(R_S;k)\le\beta_i(G_S;k)
+                 \le i\binom{w+1}{i+1}.
+\]
+For each $w\ge1$ these bounds are attained simultaneously by
+$S=\langle w+1,w+2,\ldots,2w+1\rangle$.
+\end{corollary}
+The proof, including the local-ring comparison, is given at the end of
+Section~\ref{sec:preliminaries}.
+
+The proof separates at $w=m-1$. For $w\ge m-1$, the completion is
+the ordinary semigroup $\{0\}\cup[m,\infty)$, and its $i$th positive
+Betti number is $i\binom{m}{i+1}$. An Ap\'ery quotient of length $m$
+organizes both the regular part and the torsion of $G_S$. One sequence
+of linear cuts yields a single resource profile controlling all rows.
+The estimates are numerical after that construction; low cut ranks and
+large cut ranks require different inequalities.
+
+For $w\le m-2$, divide the offsets $g_j-m$ by their common divisor
+$d$. This gives a normalized width $u=w/d$, but leaves the original
+semigroup and its physical width $du$ unchanged. Keeping the two endpoint
+generators separates the proof into a finite internal core and an
+endpoint kernel. The kernel is determined by all competing
+representations, and its socle supplies the correction to the core Betti
+bound. Estimates for finite cyclic groups and lex quotients then close
+the wide normalized ranges. The remaining cases involve one or two
+internal variables and are handled directly.
+
+Lan--Tu--Vu proved the interval-completion comparison for three
+generators \cite{LanTuVu}. The proof below includes a compatible
+one-internal-variable argument, so that the small-generator boundary
+uses the same mechanism as the general narrow case. Our use of Green's
+restriction theorem, lex Betti bounds, Kneser's theorem, and the
+Savchev--Chen theorem is stated where each enters the argument.
+
+The accompanying Lean development verifies the theorem for the actual
+completed tangent cones and their minimal presentations. The mathematical
+proof is given in Sections~\ref{sec:preliminaries}--\ref{sec:synthesis};
+Appendix~\ref{sec:formalization} identifies the formal statement and the
+source version used here.
+
+\subsection*{AI Declaration}
+Generative AI was used substantially in the mathematical research and
+preparation of this manuscript. OpenAI ChatGPT 6 Astra Pro was used to
+explore and construct candidate proofs. OpenAI GPT-6, with the
+\emph{extra high} reasoning setting, was used to audit the proposed
+arguments, look for errors, and check exceptional cases. OpenAI ChatGPT
+Work, using GPT-6.1 Sol with the \emph{Ultra} reasoning setting, was
+used for later-stage mathematical proof construction, refinement,
+integration, and audit. OpenAI Codex
+with GPT-6.1 Sol, using the \emph{high} and \emph{Ultra} reasoning
+settings, was used to refine and simplify the proofs, develop the Lean
+formalization, draft the English manuscript, and revise its exposition.
+The model and setting names identify the interfaces used during the work.
+
+The author's contribution was supervisory: he selected the problem,
+designed and supervised an iterative workflow of AI proof construction
+and separate AI audit, and directed the organization, simplification,
+and presentation of the resulting arguments. The AI contributions
+included mathematical reasoning and proof development as well as
+writing. Audit rounds within this workflow are AI-assisted checks,
+rather than independent human referee reports. The author is responsible
+for the content and accuracy of the manuscript. The role of Lean and
+the verification code is described separately in
+Appendix~\ref{sec:formalization}.

@@ -1,0 +1,93 @@
+\section{Small embedding dimension and conclusion}
+\label{sec:synthesis}
+We complete the argument at the small-generator boundary, then collect
+the cases. All Betti numbers below use the original coefficient field.
+
+\subsection{One, two, and three generators}
+If $e=1$, the gcd condition forces $S=\N$. Its interval completion
+is the literal semigroup $\langle1\rangle=\N$, and both Betti sequences
+are $(1,0,0,\ldots)$.
+
+If $e=2$, write $S=\langle m,n\rangle$, with $m<n$ and
+$\gcd(m,n)=1$. The completed semigroup ring is
+$k[[X,Y]]/(Y^m-X^n)$, and its tangent cone is
+$k[X,Y]/(Y^m)$. Indeed, the least-degree form of any nonzero multiple
+of $Y^m-X^n$ is the corresponding least-degree form times $Y^m$.
+The source Betti sequence is therefore $(1,1,0,\ldots)$.
+The target has at least two minimal generators and
+$F_1(m,v)\ge1$, proving the comparison.
+
+For $e=3$, the comparison also follows from
+\cite[Theorem~1.1]{LanTuVu}. We give the one-letter version of the
+endpoint argument to record the proof used in the formal development.
+In the ordinary-width case Section~\ref{sec:ordinary} applies.
+Otherwise normalize as in \eqref{eq:normalization}, now with $q=1$.
+If $u=2$ the source is a full arithmetic sequence, covered by the
+full-progression comparison in Section~\ref{sec:width}.
+Suppose $u\ge3$.
+
+Use the endpoint core and its invariants $P_C,R$ from
+Section~\ref{sec:endpoint}. Every minimal internal word is a pure
+power $Y^n$ with $n<u$, and its degree determines it. Hence $P_C\le u$.
+For each minimal competitor of positive first coordinate, choose a
+minimal core point below its predecessor and record the positive jump
+$j$. The competitor is recovered from that point and $j$, so the
+assignment is injective. If the core word has degree $n$, the number of
+permitted jumps is at most $(n-3)_+$, where $(x)_+=\max\{x,0\}$.
+Competitors of first coordinate zero contribute at most one per
+residue and cancel the one-per-residue term in the socle count.
+Consequently,
+\[
+ R\le\sum_{n=0}^{u-1}(n-3)_+=\binom{u-3}{2}.
+\]
+The one-variable core has Betti sequence $(1,1)$; its Euler
+characteristic, or its presentation as a nonzero finite-length cyclic
+$k[Y]$-module, gives the positive row. The compensated endpoint bound
+therefore yields
+\[
+ (\beta_1,\beta_2,\beta_3)(G_S;k)
+ \le (P_C+R+1,\;P_C+2R,\;R)
+\]
+componentwise. The first two rows are paid for by
+\[
+ u+\binom{u-3}{2}\le\binom u2,\qquad
+ \binom{u-3}{2}\le\binom u3
+\]
+and \eqref{eq:low-capacities}. For the third row, $R=0$ if $u=3,4$;
+if $u\ge5$, use $\binom{u-3}{2}\le\binom u2$ and the third-row
+capacity. Monotonicity transfers these normalized bounds to the
+physical width $du$.
+
+\subsection{Exhaustion of the parameter space}
+For $e\ge4$, the integer width satisfies exactly one of
+$w\ge m-1$ and $w\le m-2$. The first case is proved in
+Section~\ref{sec:ordinary}. In the second, the normalization retains
+the same semigroup and the same multiplicity. The narrow-width proof
+in Section~\ref{sec:width} applies for $e\ge5$ and for $e=4$ by
+its two-internal-variable analysis. Thus the cases are disjoint and
+exhaustive:
+\[
+\begin{array}{c|l}
+\text{source parameters}&\text{argument}\\\hline
+e=1,2,3&\text{small-generator comparison above}\\
+e\ge4,\;w\ge m-1&\text{ordinary completion}\\
+e=4,\;w\le m-2&\text{two internal variables}\\
+e\ge5,\;w\le m-2&\text{general narrow-width comparison}.
+\end{array}
+\]
+Each case proves all potentially nonzero positive source rows, including
+the row $i=e$. The zeroth Betti number is one on both sides. For $i>e$
+the source Koszul complex is zero, so the comparison is automatic,
+regardless of the target's embedding dimension. Completion and any
+temporary scalar extension are removed by Proposition~\ref{prop:bridge}.
+This proves Theorem~\ref{thm:main}.
+
+\begin{remark}
+The two resolutions can have different lengths. For example,
+$S=\langle6,7,9,11\rangle$ has four minimal generators, so
+$\beta_5(G_S;k)=0$. Its completion is $\langle6,7,8,9,10,11\rangle$,
+whose Betti sequence is
+$(1,15,40,45,24,5)$ by \eqref{eq:ordinary-capacity}.
+Thus the comparison continues beyond the source's last possible row;
+one does not identify the source and target polynomial rings.
+\end{remark}

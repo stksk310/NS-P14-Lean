@@ -1,0 +1,155 @@
+\section{Common reductions and the interval target}
+\label{sec:preliminaries}
+We use $\binom ab=0$ when $b<0$ or $b>a$, for $a\ge0$.
+Unless expressly indicated otherwise, differences in numerical
+inequalities are ordinary integer or rational differences. Rational
+weights in the proof are counting coefficients, and impose no condition
+on the characteristic of $k$.
+
+\subsection{Orders, completion, and scalar extension}
+For $s\in S$, let $\ord(s)$ be the largest length of an expression of
+$s$ as a sum of minimal generators. If $m$ is the multiplicity, the
+Ap\'ery set $\Ap(S,m)=\{s\in S:s-m\notin S\}$ contains one element
+in each residue class modulo $m$. Every $s\in S$ has a unique expression
+$s=b+\ell m$ with $b\in\Ap(S,m)$ and $\ell\ge0$.
+
+\begin{proposition}\label{prop:bridge}
+The following operations preserve the objects needed in
+Theorem~\ref{thm:main}.
+\begin{enumerate}
+\item The associated graded rings of $k[t^S]$ and $k[[t^S]]$ at their
+positive monomial ideals are naturally isomorphic, preserving the
+initial form of every minimal generator.
+\item For every field extension $K/k$,
+$\beta_i(G_S;k)=\beta_i(G_S\otimes_k K;K)$ for all $i$.
+\item If $w\le m-2$ and $e\ge3$, there are integers $d\ge1$,
+$u\ge e-1$, and $0<a_1<\cdots<a_q<u$, with $q=e-2$, such that
+\begin{gather}\label{eq:normalization}
+ S=\langle m,m+da_1,\ldots,m+da_q,m+du\rangle,\\
+ \gcd(a_1,\ldots,a_q,u)=\gcd(m,d)=1,\qquad m\ge du+2.\nonumber
+\end{gather}
+Here $du=w$ is the physical width.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The $n$th power of the positive monomial ideal consists exactly of the
+elements supported on exponents $s$ with $\ord(s)\ge n$. This holds
+also for formal series: assign each such exponent to one of the finitely
+many length-$n$ products that divides it, and group its coefficient into
+the corresponding formal series. The degree-$n$ quotient consequently
+has basis the exponents of order exactly $n$. This set is finite, since
+$s=b+\ell m$ of order $n$ has $\ell\le n$. Both associated graded
+rings have these bases, and multiplication agrees: a product survives
+exactly when orders add. This proves the first assertion, including
+compatibility with the polynomial-ring action.
+
+Tensor a minimal graded free resolution with $K$. Flatness preserves
+exactness, and all differential entries remain in the homogeneous
+maximal ideal, so minimality and ranks are preserved. The preceding
+monomial bases also identify the scalar extension of the tangent cone.
+
+For the last assertion, take
+$d=\gcd(g_2-m,\ldots,g_e-m)$ and $u=(g_e-m)/d$.
+Dividing the internal offsets by $d$ gives the $a_j$. Their common gcd
+with $u$ is one, while $\gcd(m,d)=1$ follows from $\gcd(S)=1$.
+There are $q$ distinct internal positive integers below $u$, giving
+$u\ge q+1=e-1$. The narrow-width hypothesis gives $m\ge du+2$.
+\end{proof}
+
+In particular, an infinite extension may be used for a general linear
+cut and then removed. We never assume that the whole ring $G_S$ is
+finite dimensional over $k$; finiteness is used for its graded pieces,
+Artinian quotients, and Koszul homology.
+
+\subsection{Exact target and uniform capacity}
+Suppose $m\ge2$, and put
+\[
+ v=\min\{M-m,m-1\},\qquad
+ D=v-((m-1)\bmod v),\quad 1\le D\le v.
+\]
+The minimal generators of $\widetilde S$ are precisely
+$m,m+1,\ldots,m+v$. If $M<2m$, all listed generators are
+indecomposable. Otherwise $m,\ldots,2m-1$ generate every integer
+at least $m$, by induction after subtraction of $m$; generators above
+$2m-1$ are redundant.
+
+\begin{proposition}\label{prop:capacity}
+For every $i\ge1$, the target Betti number equals
+\begin{equation}\label{eq:capacity}
+ F_i(m,v)=i\binom v{i+1}+
+ \begin{cases}
+ (D+1-i)\binom v{i-1},&i\le D,\\
+ (i-D)\binom vi,&i>D.
+ \end{cases}
+\end{equation}
+For $1\le i\le v$, it satisfies
+\begin{equation}\label{eq:mincapacity}
+ F_i(m,v)\ge F_i^{\min}(v):=
+ i\binom v{i+1}+\min\left\{\binom v{i-1},\binom vi\right\}.
+\end{equation}
+For fixed $i$, $F_i^{\min}(v)$ is nondecreasing on $v\ge i$.
+If $v=m-1$, then
+\begin{equation}\label{eq:ordinary-capacity}
+ F_i(m,m-1)=i\binom m{i+1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The arithmetic-sequence Betti formula \cite[Theorem~4.1]{APFormula}
+and equality of semigroup-ring and tangent-cone Betti numbers
+\cite[Proposition~2.5]{APCone} apply to the minimal interval generators.
+Writing $m=av+b$ with $1\le b\le v$ gives $D=v-b+1$ and yields
+\eqref{eq:capacity}, with the quotient-ring homological indexing.
+On the branch $D\ge i$ the correction is at least $\binom v{i-1}$;
+on $D<i$ it is at least $\binom vi$. This proves
+\eqref{eq:mincapacity}, including $i=1$ and $i=v=1$.
+Each binomial coefficient increases with $v$, proving monotonicity.
+For $v=m-1$ one has $D=v$; Pascal's identity gives
+\eqref{eq:ordinary-capacity}.
+\end{proof}
+
+Some useful consequences, with their necessary width ranges, are
+\begin{align}\label{eq:low-capacities}
+ F_1(m,v)&\ge\binom v2+1 &&(v\ge1),\nonumber\\
+ F_2(m,v)&\ge2\binom v3+v &&(v\ge3),\\
+ F_3(m,v)&\ge3\binom v4+\binom v2 &&(v\ge5),\nonumber\\
+ F_4(m,v)&\ge4\binom v5 &&(v\ge4).\nonumber
+\end{align}
+We do not extend the third-row estimate to $v=4$.
+In the narrow case $v=du\ge u$. Consequently, whenever $u\ge i$,
+an upper bound $\beta_i(G_S;k)\le F_i^{\min}(u)$ pays for the
+actual target by monotonicity. At the smallest normalized widths, it is
+sometimes more efficient to use the physical width directly or to
+identify source and target.
+
+\subsection{The width bound for the local ring}
+\begin{proof}[Proof of Corollary~\ref{cor:width-bound}]
+Put $\widehat P_S=k[[X_1,\ldots,X_e]]$. The standard filtered
+Koszul comparison gives
+$\beta_i(R_S;k)\le\beta_i(G_S;k)$. Indeed, filter the Koszul
+complex on the images of $X_1,\ldots,X_e$ by powers of the maximal
+ideal, shifting the filtration by the exterior degree. Its associated
+graded complex is the Koszul complex of the initial forms on $G_S$.
+The resulting convergent spectral sequence starts with
+$\Tor^{P_S}(G_S,k)$ and abuts to the associated graded of
+$\Tor^{\widehat P_S}(R_S,k)$. Completeness and the finite-dimensional
+first-page homology give the dimension inequality in each homological
+degree. This argument works over every field.
+
+If $w=0$, then $S=\N$ and all positive Betti numbers vanish.
+Otherwise use Theorem~\ref{thm:main} and put
+$v=\min\{w,m-1\}$. In \eqref{eq:capacity}, the correction for
+$i\le D$ is at most
+\[
+ (v+1-i)\binom v{i-1}=i\binom vi;
+\]
+for $i>D$ it is also at most $i\binom vi$. Hence
+\[
+ \beta_i(G_{\widetilde S};k)=F_i(m,v)
+ \le i\binom{v+1}{i+1}\le i\binom{w+1}{i+1}.
+\]
+For the stated ordinary semigroup, $m=w+1$ and
+\eqref{eq:ordinary-capacity} is equality in the width bound.
+The arithmetic-sequence semigroup ring and its tangent cone have the
+same total Betti numbers \cite{APFormula,APCone}, giving equality also
+for $R_S$.
+\end{proof}

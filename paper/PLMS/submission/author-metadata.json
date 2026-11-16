@@ -1,0 +1,28 @@
+{
+  "author_count": 1,
+  "author": "Keisuke Sato",
+  "affiliation": "Independent researcher, Japan",
+  "email": "stksk310@gmail.com",
+  "orcid": "0009-0005-4230-0268",
+  "corresponding_author": true,
+  "external_funding": false,
+  "conflicts_of_interest": false,
+  "submitted_elsewhere": false,
+  "author_reports_prior_preprint_or_related_paper": false,
+  "journal": "Proceedings of the London Mathematical Society",
+  "msc2020_primary": "13D02",
+  "msc2020_secondary": ["13F65", "20M14"],
+  "editor_suggestion": "Osamu Iyama",
+  "editor_suggestion_status": "Candidate based on the journal's listed algebra/ring-theory remit; not an author-confirmed or submitted selection",
+  "author_contribution": "Problem selection; design and supervision of iterative AI proof construction and AI audit; direction of proof organization, simplification and exposition",
+  "ai_use_source": "Author-provided model names, settings, and roles in this chat",
+  "additional_ai_use": {
+    "interface": "OpenAI ChatGPT Work",
+    "model": "GPT-6.1 Sol",
+    "reasoning_setting": "Ultra",
+    "roles": ["later-stage mathematical proof construction", "refinement", "integration", "audit"],
+    "author_reported_research_rounds": "P14 R50–R57",
+    "distinct_from": "Codex GPT-6.1 Sol use"
+  },
+  "submission_performed": false
+}

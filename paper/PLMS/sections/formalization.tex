@@ -1,0 +1,84 @@
+\section{Formal Verification and Reproducibility}
+\label{sec:formalization}
+The formal theorem is
+\begin{center}
+\texttt{NSP14.NumericalSemigroup.}\\
+\texttt{p14\_totalBetti\_le\_intervalCompletion}.
+\end{center}
+Its parameters are a numerical semigroup $S$, an arbitrary field $k$,
+and a natural number $i$. The source and target are the associated
+graded algebras of the actual supported formal-power-series semigroup
+rings. The presentation variables are their respective minimal atoms.
+The invariant \texttt{totalBetti} is defined as the dimension of the
+full-variable Koszul homology, and a proved isomorphism identifies this
+homology with ordinary $\Tor$ over that polynomial ring.
+
+The source used for this manuscript is the repository
+\href{https://github.com/stksk310/NS-P14-Lean}{\texttt{stksk310/NS-P14-Lean}},
+at commit
+\begin{center}\small
+\texttt{a5e122a4d09536b1609c5faa8d419f8faf81671f}.
+\end{center}
+The compiler is Lean \texttt{v4.36.0-rc2}. The mathlib revision is
+\begin{center}\small
+\texttt{139105d28c7685a154cb3093f79edb2e16708099}.
+\end{center}
+The principal interfaces are organized as follows.
+\begin{center}\small
+\begin{tabular}{p{.28\linewidth}p{.62\linewidth}}
+\toprule
+Mathematical role&Lean module\\\midrule
+Completed-ring bridge&\raggedright\arraybackslash
+\texttt{Semigroup.FormalTangentAlgebra},
+\texttt{Homological.ActualCoefficientBaseChange}\\
+Exact target&\texttt{ArithmeticSequence.BettiFormula},
+\texttt{Main.IntervalTarget}\\
+Ordinary comparison&\texttt{Ordinary.Closure}\\
+Endpoint mechanism&\texttt{Endpoint} and its homological consumers\\
+Narrow-width comparison&\texttt{Width.Closure}, \texttt{NarrowFour.Comparison}\\
+Small generators&\texttt{SmallEmbedding.Base},
+\texttt{SmallEmbedding.ThreeComparison}\\
+Exhaustion and assembly&\texttt{Main.Partition}, \texttt{Main.Branches},
+\texttt{Main}\\\bottomrule
+\end{tabular}
+\end{center}
+All module names have prefix \texttt{NSP14}.
+The released completion record is
+\path{verification/run20/RUN20_COMPLETE_20261116_R03.json}; it binds
+the proof snapshot, validation evidence, and a separate AI-assisted audit.
+The recorded transitive axioms are Lean's standard
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+Published mathematical inputs used in the proof of
+Theorem~\ref{thm:main} are proved, in the forms required there, in the
+formal development. Corollary~\ref{cor:width-bound} additionally uses
+the standard filtered-Koszul comparison with the complete local ring.
+The repository's original fifty-entry dependency index and its final
+paper-correspondence ledger give finer declaration-level references.
+
+Lean kernel checking is distinct from the generative-AI audit workflow:
+the formal theorem is checked against its definitions and proof terms.
+The accompanying Python scripts orchestrate compilation, declaration
+and axiom checks, and the preservation of verification evidence.
+Finite arithmetic checks supplement the general proofs and are not
+used to extrapolate an unbounded assertion from sampled cases.
+
+To reproduce the released verification, retain the repository's Git
+history and check out the proof snapshot identified by the completion
+record, rather than the later commit that packages the release:
+\begin{center}\small
+\texttt{1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e}.
+\end{center}
+Install the pinned compiler and dependencies, including their build
+caches. With the pinned Lean executables on \texttt{PATH}, run
+\begin{small}
+\begin{verbatim}
+python3 scripts/verify_run20.py \
+  --fresh-project-cache \
+  --output-dir verification/run20/runs/independent_new_id
+\end{verbatim}
+\end{small}
+Choose a new output directory for each run. The verifier rebuilds the
+project library, intermediate code, tests, and audits while retaining
+the fixed dependency cache. The audit archive does not contain an
+offline compiler and dependency installation. The archived release
+evidence and a new execution of these instructions are distinct records.

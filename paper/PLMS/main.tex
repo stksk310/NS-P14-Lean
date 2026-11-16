@@ -1,0 +1,62 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,mathtools,amssymb,booktabs,array}
+\usepackage[margin=30mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Betti numbers of numerical semigroup tangent cones and interval completion},
+pdfauthor={Keisuke Sato},pdfkeywords={numerical semigroup, tangent cone, Betti numbers, interval completion}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Soc}{\operatorname{Soc}}
+\newcommand{\Ap}{\operatorname{Ap}}
+\newcommand{\reg}{\operatorname{reg}}
+\DeclareMathOperator{\im}{im}
+\title[Betti numbers and interval completion]{Betti numbers of numerical semigroup tangent cones\texorpdfstring{\\}{ }and interval completion}
+\author[Keisuke Sato]{Keisuke Sato}
+\address{Independent researcher, Japan}
+\email{stksk310@gmail.com}
+\urladdr{https://orcid.org/0009-0005-4230-0268}
+\subjclass[2020]{Primary 13D02; Secondary 13F65, 20M14}
+\keywords{Numerical semigroup, tangent cone, Betti numbers, interval completion,
+formal verification}
+\date{}
+\begin{document}
+\raggedbottom
+\begin{abstract}
+Let $S$ be a numerical semigroup with smallest and largest minimal
+generators $m$ and $M$, and let $\widetilde S$ be the semigroup generated
+by all integers in $[m,M]$. We prove that, over every field, each total
+Betti number of the tangent cone of $k[[t^S]]$ is at most the corresponding
+Betti number for $k[[t^{\widetilde S}]]$. Each tangent cone is presented
+over its own minimal polynomial ring. The proof combines an Ap\'ery
+filtration for ordinary interval completions with an endpoint reduction
+for narrow intervals. The latter retains the torsion contribution and
+therefore applies without a Cohen--Macaulay hypothesis. A Lean
+formalization establishes the comparison for every numerical semigroup,
+every field, and every homological degree. As a consequence, we obtain
+the sharp width bound $\beta_i(k[[t^S]];k)\le i\binom{w+1}{i+1}$
+for $i\ge1$, where $w=M-m$.
+\end{abstract}
+\maketitle
+\input{sections/introduction}
+\input{sections/preliminaries}
+\input{sections/ordinary}
+\input{sections/endpoint}
+\input{sections/width}
+\input{sections/synthesis}
+\appendix
+\input{sections/formalization}
+\input{sections/declarations}
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,19 @@
+Dear Editors,
+
+I submit "Betti numbers of numerical semigroup tangent cones and interval completion" for consideration in the Proceedings of the London Mathematical Society.
+
+The paper proves that, over any field, each total Betti number of a numerical semigroup tangent cone is bounded by the corresponding Betti number of its interval completion, with each ring presented on its own minimal generators. This resolves Problem 14 in the problem list of Moscariello and Sammartano. It also implies the sharp width bound for the Betti numbers of the complete local semigroup ring stated in Conjecture 1.3 of Caviglia, Moscariello and Sammartano.
+
+The argument connects Apéry filtrations and homological estimates with additive combinatorics in finite cyclic groups. It retains the torsion contribution, applies in arbitrary characteristic, and gives one comparison for all homological degrees. The manuscript includes the mathematical proof and an accompanying Lean verification of the tangent-cone theorem. The proof source and verification evidence are publicly accessible at a fixed GitHub commit, with the precise scope of the formalization stated in the paper.
+
+Generative AI made substantial mathematical and writing contributions under my supervision; the manuscript's AI Declaration describes the tools, models, and their roles. Lean and the verification scripts are explained separately. I take responsibility for the submitted work.
+
+I am the sole author, and the manuscript is not under consideration by another journal. The public repository contains the supporting proof materials and verification records described in the manuscript. I have no external research funding or conflicts of interest to declare.
+
+Thank you for considering the manuscript.
+
+Yours sincerely,
+Keisuke Sato
+Independent researcher, Japan
+stksk310@gmail.com
+ORCID: https://orcid.org/0009-0005-4230-0268

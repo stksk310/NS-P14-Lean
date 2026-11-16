@@ -1,0 +1,114 @@
+{
+  "repository": "stksk310/NS-P14-Lean",
+  "commit": "a5e122a4d09536b1609c5faa8d419f8faf81671f",
+  "files": {
+    "README.md": {
+      "git_blob_sha1": "39139bc29e2ba7432649a1ea8555e2446ab261fc",
+      "bytes": 13987
+    },
+    "docs/RUN20_PAPER_CORRESPONDENCE_JA.md": {
+      "git_blob_sha1": "8746ef9b620cc3f6a34dca7289b4f9803106a9b0",
+      "bytes": 10770
+    },
+    "NSP14/Main.lean": {
+      "git_blob_sha1": "6aa99e72c5fd050c5cc6b4d9ada53f16f5ee2b77",
+      "bytes": 1879
+    },
+    "NSP14/Main/IntervalTarget.lean": {
+      "git_blob_sha1": "3df6dbac680aa65024dd165ffc866f71b4b17d8c",
+      "bytes": 1718
+    },
+    "NSP14/Main/Branches.lean": {
+      "git_blob_sha1": "5f2cffae674d7105ba0bbb4c2a28a8d7c66e9f7f",
+      "bytes": 2040
+    },
+    "NSP14/Main/Partition.lean": {
+      "git_blob_sha1": "d17cc6975c20447a84316fc15debec6a7cd592ef",
+      "bytes": 4295
+    },
+    "proof_sharp_v6/chapters/06_SYNTHESIS_JA.md": {
+      "git_blob_sha1": "8766f655f0afc5d0a5a12f73c373e17c408bfc42",
+      "bytes": 3245
+    },
+    "proof_sharp_v6/chapters/01_COMMON_JA.md": {
+      "git_blob_sha1": "537d352c719e892ef520561ff83cce39e66672bf",
+      "bytes": 8685
+    },
+    "proof_sharp_v6/chapters/02_ORDINARY_JA.md": {
+      "git_blob_sha1": "14a8995ee7081090015eb18ad55c708133df362c",
+      "bytes": 29576
+    },
+    "proof_sharp_v6/chapters/03_ENDPOINT_JA.md": {
+      "git_blob_sha1": "7f2c8e2f548f65c596ee204b161e8d768956aa60",
+      "bytes": 18375
+    },
+    "proof_sharp_v6/chapters/04_WIDTH_JA.md": {
+      "git_blob_sha1": "13ac7e261b8950e53a75ca2635f6802ebe37337a",
+      "bytes": 20844
+    },
+    "proof_sharp_v6/chapters/04A_ANTIPODAL_JA.md": {
+      "git_blob_sha1": "1cc6512c9137e420178c1fb456be89acf4b7b001",
+      "bytes": 4191
+    },
+    "proof_sharp_v6/chapters/05_N4_JA.md": {
+      "git_blob_sha1": "87fa1a524e18b22df92b16a4a4f6c3ba47f80256",
+      "bytes": 16479
+    },
+    "docs/RUN16_PAPER_CORRESPONDENCE_JA.md": {
+      "git_blob_sha1": "abc36babaf991c99e8a04a67961fe020ad084052",
+      "bytes": 5311
+    },
+    "docs/RUN17_PAPER_CORRESPONDENCE_JA.md": {
+      "git_blob_sha1": "a9cd353657c791820bcef7e0a9b275baa5b02897",
+      "bytes": 5020
+    },
+    "docs/RUN18_PAPER_CORRESPONDENCE_JA.md": {
+      "git_blob_sha1": "74b9777904c2500459be0520a115bf407189bd38",
+      "bytes": 22323
+    },
+    "docs/RUN19_PAPER_CORRESPONDENCE_JA.md": {
+      "git_blob_sha1": "535fd8ef3cbd12ba1f0712c82102c9f09323459a",
+      "bytes": 2911
+    },
+    "NSP14/Ordinary/Closure.lean": {
+      "git_blob_sha1": "afdeaad99299ba152a529309fa1c659c34819356",
+      "bytes": 1373
+    },
+    "NSP14/Width/Closure.lean": {
+      "git_blob_sha1": "ba78c1e2a3b21df7dbbcd3c046540bcf7fb8571f",
+      "bytes": 1994
+    },
+    "NSP14/NarrowFour/Comparison.lean": {
+      "git_blob_sha1": "22d8df322a239520c61f16900ca19f691b9d3e74",
+      "bytes": 4009
+    },
+    "docs/LEAN_WORKFLOW.md": {
+      "git_blob_sha1": "9a8f8bc4a4639852a312e2d7453a6d044e09133e",
+      "bytes": 2408
+    },
+    "verification/run20/RUN20_COMPLETE_20261116_R03.json": {
+      "git_blob_sha1": "0f91d22283b06be45188000cf0d7c3ec7feb1685",
+      "bytes": 5270
+    },
+    "NSP14/ArithmeticSequence/BettiFormula.lean": {
+      "git_blob_sha1": "2524a1aabe6b3e486df10e76236acfee30b28c45",
+      "bytes": 3730
+    },
+    "NSP14/ArithmeticSequence/Interval.lean": {
+      "git_blob_sha1": "207bb79f7f483516ce0d282e21757f1ec341af9d",
+      "bytes": 1914
+    },
+    "NSP14/SmallEmbedding/ThreeComparison.lean": {
+      "git_blob_sha1": "502861271380b5eea560db29460a4a97bbafb75b",
+      "bytes": 11727
+    },
+    "NSP14/SmallEmbedding/LanTuVu.lean": {
+      "git_blob_sha1": "6de732cafb56d037000b4fbf7d150235742bcc64",
+      "bytes": 10327
+    },
+    "NSP14/Homological/Betti.lean": {
+      "git_blob_sha1": "114524e600e2d1dfa10484f67a9355ecb8a2dc81",
+      "bytes": 2399
+    }
+  }
+}

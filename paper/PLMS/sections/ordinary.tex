@@ -1,0 +1,473 @@
+\section{The ordinary target}
+\label{sec:ordinary}
+
+Throughout this section, let $S=\langle m=g_1<\cdots<g_e\rangle$
+be minimally generated, with $e\ge3$, and put
+\[
+ G=G_S,\qquad \delta=m-e,\qquad B=m-1,\qquad
+ \mathcal V=e+\frac\delta2-\frac32.
+\]
+The number $\mathcal V$ is a resource bound, not the width of $S$.
+We prove the following assertion.
+
+\begin{proposition}\label{prop:ordinary}
+If $g_e-m\ge m-1$, then, over every field $k$,
+\[
+ \beta_i(G_S;k)\le\beta_i(G_{\widetilde S};k)
+   =i\binom m{i+1}\quad(i\ge1).
+\]
+The zeroth Betti numbers on both sides are one.
+\end{proposition}
+
+\subsection{Coordinates, one cut, and one resource sequence}
+
+The degree-$n$ monomial basis of $G$ consists
+of $[v]$ with $\operatorname{ord}(v)=n$; multiplication survives precisely
+when orders add.  Set
+\[
+ x=[m],\quad A=G/xG,\quad T=(0:_Gx),\quad
+ S_0=k[Y_2,\ldots,Y_e].
+\]
+A basis element of $A$ is a \emph{head}: its coordinate has no surviving
+incoming $x$-arrow.  Non-Ap\'ery heads span an $S_0$-ideal $N$ in $A$.
+The quotient $Q=A/N$ has basis $\operatorname{Ap}(S,m)$ and is standard
+graded.  For $q_s=\dim_kQ_s$, $a=q_2$, and
+$\nu=\max\{s:q_s\ne0\}$, we have
+\begin{equation}\label{eq:ordinary-apery}
+ q_0=1,\quad q_1=e-1,\quad \sum_{s\ge2}q_s=\delta,
+ \qquad A_2=Q_2,\quad \nu\le\delta+1.
+\end{equation}
+Indeed, Ap\'ery elements have maximal expressions without $m$, and every
+prefix of such an expression realizes its order.  This proves standard
+generation and the displayed counts; absence of gaps in the Hilbert
+function gives the last inequality.
+
+The monomial basis of $T$ consists of \emph{terminals} $\tau$ whose
+outgoing $x$-arrow dies.  Their jumps
+$d(\tau)=\operatorname{ord}(\tau+m)-\operatorname{ord}(\tau)$ satisfy
+$2\le d(\tau)\le\nu$.  Translation $\tau\mapsto\tau+m$ bijects terminals
+with non-Ap\'ery heads.  The appropriate module comparison uses the
+opposite filtrations
+\[
+ D_sT=\langle\tau:d(\tau)\ge s\rangle,\qquad
+ F_sN=\langle\tau+m:d(\tau)\le s\rangle.
+\]
+Both are $S_0$-filtrations, and their equal-jump strata are isomorphic:
+\begin{equation}\label{eq:ordinary-strata}
+ D_sT/D_{s+1}T\simeq F_sN/F_{s-1}N,
+ \qquad\text{with degree shift }s.
+\end{equation}
+In fact, a surviving terminal action can only increase the jump, whereas
+a surviving head action can only decrease it.  When the jumps agree, the
+two actions survive together and have coefficient one.  To bound jumps,
+write $Q=S_0/I_Q$ and $A=S_0/I_A$.  Since $Q_{\nu+1}=0$, $I_Q$, and hence
+$N=I_Q/I_A$, is generated in degrees at most $\nu+1$.  A minimal head has
+a positive-degree terminal, so its jump is at most $\nu$; head actions
+propagate this bound.  A non-Ap\'ery head has degree at least three, which
+also proves $A_2=Q_2$.
+
+Let $p=\max\{u\ge0:\binom{u+1}{2}\le a\}$ and $r=\max(2,p)$.
+We may replace $k$ by an infinite purely transcendental extension of the
+same characteristic.  Green's degree-two restriction theorem
+\cite{GreenRestriction} supplies independent linear forms
+$E=(\lambda_1,\ldots,\lambda_r)$ such that $(A/EA)_{\ge2}=0$.
+Indeed, if $a=\binom{p+1}{2}+b$, $0\le b\le p$, successive restrictions
+bound the quadratic dimension after $u\le p$ cuts by
+$\binom{p+1-u}{2}+\max(b-u,0)$, which vanishes at $u=p$.
+If $p<2$, extend the cut to two forms.  Thus
+\begin{equation}\label{eq:ordinary-cut-rank}
+ 2\le r\le e-1,\qquad
+ r\ge3\Longrightarrow a_r:=\binom{r+1}{2}\le a\le\delta.
+\end{equation}
+Fix these forms once and put $P=k[\lambda_1,\ldots,\lambda_r]$.
+
+For $2\le s\le\nu$, abbreviate $F_s=F_sN$ and define
+\[
+ U_s=A/F_{s-1},\quad X_s=(U_s)_{\ge s},\quad
+ M_s=(U_s)_{\ge s+1},\quad K_s=F_s/F_{s-1}.
+\]
+Here $F_1=0$, $F_\nu=N$.  Jump-$s$ heads have degree at least $s+1$,
+so these are actual exact sequences over the fixed ring $P$:
+\begin{equation}\label{eq:ordinary-tower}
+ 0\longrightarrow K_s\longrightarrow M_s\longrightarrow X_{s+1}
+ \longrightarrow0,\qquad X_{\nu+1}=0.
+\end{equation}
+The square-zero cut makes $U_s$ generated over $P$ in degrees zero and
+one.  Its truncations $X_s,M_s$ are consequently generated only in
+degrees $s,s+1$, respectively; their numbers of generators are $q_s$
+and $\dim_k(X_s)_{s+1}$.
+More explicitly, $(U_s)_n=E(U_s)_{n-1}$ for every $n\ge2$.
+Iteration proves generation of each truncation in its bottom degree.
+The degree-$s$ piece of $U_s$ agrees with $Q_s$, because every head
+remaining outside $Q$ has jump at least $s$ and degree at least $s+1$.
+When $\delta=0$, take $X_2=0$ in the formulas below.
+
+\begin{lemma}\label{lem:ordinary-resources}
+The finite sequence
+$H_t=\sum_{s=2}^\nu\dim_k(X_s)_{s+t}$ satisfies, simultaneously,
+\begin{equation}\label{eq:ordinary-resources}
+ \begin{gathered}
+ H_0=\delta,\qquad 0\le H_t\le B,\qquad
+ S_H:=\sum_{t\ge0}H_t\le\delta\mathcal V,\\
+ H_1=\delta-a+\ell\le B-a,\qquad H_1\le r\delta,
+ \qquad \ell=\dim_kT_1.
+ \end{gathered}
+\end{equation}
+For $\delta=0$ the tower and resource sequence are empty.
+\end{lemma}
+
+\begin{proof}
+For a residue $\rho$ modulo $m$, let $b_\rho$ be the least sum of positive
+offsets $g_i-m$ in that residue, and let $l_\rho$ be the shortest length
+realizing $b_\rho$.  Write $\omega_\rho$ for the Ap\'ery representative,
+$s_\rho=\operatorname{ord}(\omega_\rho)$, and
+$L_\rho=(\omega_\rho-b_\rho)/m$.  Then
+$1\le s_\rho\le L_\rho\le l_\rho$ for $\rho\ne0$.
+Prefixes of a least-offset word are least-offset words and visit distinct
+residues.  Along this path $L$ increases by at most one at each step,
+and, after the first edge, cannot increase on arrival at an atom residue:
+an increase there would decompose that atom. There are $e-1$ atom residues and $\delta$ other
+nonzero residues.  Ordering nonzero residues by increasing $b_\rho$ gives
+\[
+ L_{\rho_j}-1\le\min(\delta,j-1),\qquad
+ \sum_{\rho\ne0}(L_\rho-1)\le
+ \sum_{j=1}^{m-1}\min(\delta,j-1)=\delta\mathcal V.
+\]
+Moreover, $v(q)=\operatorname{ord}(\omega_\rho+qm)$ eventually equals
+$L_\rho+q$: the least-offset word gives this expression, and a longer
+one would have smaller offset.  Telescoping therefore yields
+\begin{equation}\label{eq:ordinary-terminal-budget}
+ \sum_{\tau\equiv\rho\ (m)}(d(\tau)-1)=L_\rho-s_\rho.
+\end{equation}
+In $H$, an Ap\'ery coordinate contributes on $[0,s_\rho-2]$; a terminal
+of degree $u$ and jump $d$ contributes its head on $[u,u+d-2]$.
+These intervals are disjoint within each residue, since the next terminal
+has degree at least $u+d$.  The zero residue contributes nothing.
+Thus $H_t\le m-1$ and
+$S_H=\sum_{\rho\ne0}(L_\rho-1)$.
+At $t=0$ we count the $\delta$ Ap\'ery coordinates of degree at least two;
+at $t=1$ we count $\delta-a$ higher Ap\'ery coordinates and $\ell$ linear
+terminals.  Finally $\ell\le e-1$, and summing
+$\dim_k(X_s)_{s+1}\le rq_s$ gives $H_1\le r\delta$.
+\end{proof}
+
+\subsection{From the tower to every relative row}
+
+For a polynomial ring $\Lambda$, write
+$b_i^\Lambda(Z)=\dim_k\operatorname{Tor}_i^\Lambda(Z,k)$ and
+$c_j^\Lambda(Z)=\sum_{i=0}^j(-1)^{j-i}b_i^\Lambda(Z)$.
+For a rank-zero module this is a syzygy rank and is nonnegative.
+
+\begin{lemma}\label{lem:ordinary-harmonic}
+If a finite-length $P$-module $Z$ is generated only in degree $b$ and
+$h_t=\dim_kZ_{b+t}$, then
+\[
+ c_j^P(Z)\le\binom{r-1}{j}\sum_{t\ge0}\frac{j}{t+j}h_t
+ \quad(1\le j<r),\qquad c_0^P(Z)=\mu_P(Z),\quad c_r^P(Z)=0.
+\]
+\end{lemma}
+
+\begin{proof}
+Shift to $b=0$ and take a homogeneous presentation
+$P^q\twoheadrightarrow Z$. Choose a monomial order on its free module;
+the monomials outside the initial module of the kernel give a basis of
+$Z$, closed under divisors within each generator component. Label a
+Koszul basis vector $m e_F$ by its augmented module monomial
+$m\prod_{v\in F}x_v$. Reduction to standard monomials never increases
+this label. Thus, in each internal degree, the actual differential is
+block triangular in these labels, and its diagonal blocks are the
+differential for the initial-module quotient. Choosing a maximal
+nonsingular minor in each diagonal block and combining them gives a
+block triangular minor of the actual matrix. Consequently its rank is
+at least the sum of the diagonal ranks. The chain dimensions are
+unchanged, so the identity for $c_j$ below reduces the desired upper
+bound to standard monomials of monomial quotients.
+
+In multidegree $\alpha$, $|\alpha|=t+j$, fix a variable $v$ in its support.
+Every target row $(m,F)$ with $|F|=j$ and $v\notin F$ pairs with the
+source column $(m/x_v,F\cup\{v\})$; divisors of standard monomials are
+standard.  The selected minor is diagonal with entries $\pm1$.
+Averaging these integer rank bounds with rational weights
+$\alpha_v/(t+j)$ and summing gives
+\[
+ \operatorname{rank}\partial_{j+1}\big|_t\ge
+ \binom{r-1}{j}\frac{t}{t+j}h_t.
+\]
+For $\lambda=\operatorname{length}Z$ and total boundary ranks $R_i$,
+$c_j^P(Z)=\binom{r-1}{j}\lambda-R_{j+1}$, proving the claim.
+The averaging uses rational numbers as numerical weights and hence
+works in every characteristic.  The endpoint identities are the
+generator count and the rank Euler identity.
+\end{proof}
+
+Set $R=k[x,E]$ and use $c_j(G)=c_j^R(G)$ from now on. The two-row $x$-Koszul
+spectral sequence gives
+$c_j(G)\le c_j^P(A)+c_{j-1}^P(T)$; its possible subsequent differential
+subtracts a nonnegative rank.  For any exact sequence
+$0\to K\to\mathcal M\to L\to0$, the Tor long exact sequence gives
+\[
+ c_j(\mathcal M)\le c_j(K)+c_j(L),\qquad
+ c_j(K)\le c_j(\mathcal M)+c_{j+1}(L).
+\]
+For the first assertion, if $\rho_i$ denotes the rank of
+$\operatorname{Tor}_i^P(A,k)\to\operatorname{Tor}_{i-2}^P(T,k)$, then
+\[
+ b_i^R(G)=b_i^P(A)+b_{i-1}^P(T)-\rho_i-\rho_{i+1},\qquad
+ c_j(G)=c_j^P(A)+c_{j-1}^P(T)-\rho_{j+1}.
+\]
+For the second assertion, alternating the long exact sequence subtracts
+either a connecting-map rank or its nonnegative complement in the
+corresponding Tor group.  Thus all three comparisons preserve the
+direction needed for an upper bound.
+Apply these successively to $A$, the strata
+\eqref{eq:ordinary-strata}, and \eqref{eq:ordinary-tower}.
+Since $A/X_2\simeq P/P_+^2\oplus k(-1)^{e-r-1}$, we obtain
+\begin{equation}\label{eq:ordinary-row}
+ c_j(G)\le L_j+\sum_{t\ge0}W_j(t)H_t\quad(1\le j\le r),\qquad
+ L_j=(e-1)\binom{r-1}{j}-\binom{r-1}{j+1},
+\end{equation}
+where
+\[
+ \begin{array}{ll}
+ W_1(0)=r-1,&W_1(1)=(r+1)/2,\quad
+ W_1(t)=(r-1)/(t+1)\quad(t\ge2),\\[2pt]
+ W_j(0)=\binom{r-1}{j},&
+ W_j(t)=\displaystyle\frac{j\binom{r-1}{j}}{t+j}
+       +\frac{(j-1)\binom{r-1}{j-1}}{t+j-2}
+       \quad(j\ge2,\ t\ge1).
+ \end{array}
+\]
+Here the $X_s$ terms telescope, with last term $X_{\nu+1}=0$.
+Lemma~\ref{lem:ordinary-harmonic} applies to $X_s$ and $M_s$;
+for $j=1$ use the exact identity $\sum_s\mu_P(M_s)=H_1$.
+The second denominator is shifted because $M_s$ starts one degree
+later.  This also proves \eqref{eq:ordinary-row} at $j=r$.
+
+\subsection{The target margin and the zeroth-homology correction}
+
+Put $q=e-r$ and, with $e,r$ fixed, define
+\[
+ R_j(d)=(q+j)\binom{d+r-1}{j}
+          +j\binom{d+r-1}{j+1},\qquad
+ T_u(z)=1+\sum_{i\ge1}i\binom u{i+1}z^i.
+\]
+Pascal's identity gives
+\[
+ R_j(0)=L_j,\qquad
+ R_j(d+1)-R_j(d)=(e+d)\binom{d+r-1}{j-1}.
+\]
+Consequently
+\begin{equation}\label{eq:ordinary-margin}
+ R_j(\delta)-L_j\ge
+ \delta(\mathcal V+1)\binom{r-1}{j-1}.
+\end{equation}
+To explain why these are the required margins, extend $E$ to a basis
+of the non-$x$ linear space, with $q-1$ remaining variables $Z$.
+As a module over $R=k[x,E]$, $G$ has rank zero and $q$ generators.
+Thus, writing $C(z)=\sum_{j=1}^rc_j(G)z^j$, its relative Betti polynomial
+is $(1+z)(q+C(z))$.  Moreover
+$G/(x,E)G\simeq k[Z]/(Z)^2$, whose Betti polynomial is $T_q$.
+In the iterated Koszul complex, evaluate this zeroth homology row
+exactly and bound the positive rows by their chain dimensions.  With
+$\preceq$ denoting coefficientwise comparison, this gives
+\begin{equation}\label{eq:ordinary-full-transfer}
+ \mathcal B_G\preceq T_q+(1+z)^{q-1}
+       \bigl((1+z)(q+C(z))-q\bigr)
+       =T_{q+1}+(1+z)^qC(z).
+\end{equation}
+Here the relative degree-zero homology has dimension $q$, but the
+remaining variables act on it: it is the square-zero quotient
+$k[Z]/(Z)^2$, not a trivial $q$-dimensional coefficient space. Its
+contribution must therefore be $T_q$, rather than
+$q(1+z)^{q-1}$. Subtracting $q$ inside the parentheses removes the
+degree-zero term before the positive relative rows are bounded by
+chain dimensions. This prevents double counting and gives the exact
+zeroth row $1$. No spectral-sequence degeneration is used.
+Summing $T_{u+1}-T_u=uz(1+z)^{u-1}$ yields
+\begin{equation}\label{eq:ordinary-target-difference}
+ T_m-T_{q+1}=(1+z)^q
+       \sum_{j=1}^{\delta+r-1}R_j(\delta)z^j.
+\end{equation}
+It therefore suffices to prove $c_j(G)\le R_j(\delta)$ for $1\le j\le r$;
+the additional target coefficients are nonnegative.
+Indeed the coefficient before factoring out $(1+z)^q$ is obtained from
+$\sum_{u=0}^{\delta+r-2}(q+1+u)\binom{u}{j-1}$.
+The hockey-stick identity and
+$u\binom{u}{j-1}=(j-1)\binom{u}{j-1}+j\binom{u}{j}$ evaluate it as
+$R_j(\delta)$.  This calculation includes $\delta=0$: out-of-range
+binomial coefficients vanish, and the relative top margin is zero.
+
+\subsection{The numerical inequalities}
+
+For $r=2$, \eqref{eq:ordinary-row} and
+$H_1\le\min(S_H-\delta,2\delta)$ give
+\[
+ c_1-L_1\le\min\{\tfrac32S_H-\tfrac12\delta,
+                         \tfrac52\delta+\tfrac12S_H\}
+ \le\delta(\mathcal V+1).
+\]
+Use the first estimate for $\mathcal V\le3$ and the second for
+$\mathcal V\ge3$.  The top row satisfies $c_2\le S_H-\delta$.
+For $r=3$, $e\ge4$, $\delta\ge6$, and $\mathcal V\ge11/2$.
+The first row is at most
+$L_1+\frac43\delta+\frac43H_1+\frac23S_H$.
+Using $H_1\le B-6$, three times its margin is bounded below by
+\[
+ \delta(\mathcal V-1)-4(B-6)
+ =zs+\tfrac12z^2+\tfrac72z+2s+15>0,
+ \quad z=\delta-6,\ s=e-4.
+\]
+The second row is at most
+$L_2+\frac32S_H-\frac12\delta+\frac76H_1
+ \le L_2+\frac32S_H+3\delta
+ \le L_2+2\delta(\mathcal V+1)$;
+the top row is again at most $S_H-\delta$.
+Thus \eqref{eq:ordinary-margin} proves all low-rank comparisons.
+
+For $r\ge4$ define the single scalar
+\[
+ F_r=(r-1)\delta+\frac{r+1}{2}H_1
+              +\sum_{t\ge2}\frac{r-1}{t+1}H_t.
+\]
+Dividing $W_j(t)$ by $\binom{r-1}{j-1}$ bounds it by the corresponding
+coefficient of $F_r$.  At $t\ge2$ the normalized weight is
+$(r-j)/(t+j)+(j-1)/(t+j-2)$.
+For $j\ge3$ both denominators are at least $t+1$; for $j=2$ its difference
+from $(r-1)/(t+1)$ is
+$[2-(r-3)t]/[t(t+1)(t+2)]\le0$.
+The cases $t=0,1$ follow directly from the binomial identities.
+These estimates depend only on the displayed resource inequalities.
+Hence all rows, including the top, follow once
+\begin{equation}\label{eq:ordinary-scalar}
+ F_r\le\delta(\mathcal V+1).
+\end{equation}
+
+Here is a common cutoff argument for this last inequality.
+Set $a_*=a_r$ and choose an integer $n\ge r$; write
+$\alpha=(r-1)/(n+1)$, $\beta=1-\alpha$,
+$c=(r+1)/2-\alpha$, and $\mathsf h_n=\sum_{j=1}^n1/j$.
+Subtracting $\alpha$ from every weight and using
+\eqref{eq:ordinary-resources} gives
+\begin{equation}\label{eq:ordinary-cutoff}
+ \begin{split}
+ F_r\le U(e,\delta):={}&\alpha\delta\mathcal V
+ +(r-1-\alpha)\delta+c(B-a_*)\\
+ &+B\sum_{j=2}^{n-1}\left(\frac{r-1}{j+1}-\alpha\right).
+ \end{split}
+\end{equation}
+The omitted residual weights for $j\ge n$ are nonpositive; no support
+bound is assumed.  Define $\Delta(e,d)=d(e+d/2-1/2)-U(e,d)$.
+For any base $e_0$, put $g=\Delta(e_0,a_*)$,
+$A_*=\Delta(e_0+1,a_*)-g$, and $b=\Delta(e_0,a_*+1)-g$.
+Summing the finite harmonic expression gives
+\begin{equation}\label{eq:ordinary-gap-shift}
+ \begin{gathered}
+ A_*=a_*-1-(r-1)\left(\mathsf h_n-2+\frac{a_*+2}{n+1}\right),\\
+ \Delta(e_0+s,a_*+t)
+ =g+sA_*+tb+\beta\left(\frac{t(t-1)}2+st\right).
+ \end{gathered}
+\end{equation}
+This is an identity in rational $s,t$.
+
+For $4\le r\le8$ use $e_0=r+1$ and the following exact values:
+\[
+ \begin{array}{c|r|r|r|r|r|r}
+ r&a_*&n&L&Lg&LA_*&Lb\\\hline
+ 4&10&7&280&2443&762&1007\\
+ 5&15&10&6930&39380&28429&32209\\
+ 6&21&13&72072&-7479&424147&439591\\
+ 7&28&17&2042040&-12196485&17076937&17076937\\
+ 8&36&21&739024&-5070732&8418651&8250691
+ \end{array}
+\]
+All $A_*,b,\beta$ are positive.  The first two seeds are positive;
+in the last three rows $g+A_*,g+b>0$.  Thus
+\eqref{eq:ordinary-gap-shift} is positive for nonnegative integer $s,t$,
+except possibly $s=t=0$ in the last three rows.
+Those corners cannot occur.  Indeed, if $r=e-1\ge3$, then
+$a=\binom e2$, so all quadratic products of the non-$m$ atoms give
+distinct nonzero degree-two Ap\'ery coordinates.  The residues of
+$\{0,g_2,\ldots,g_e\}$ consequently form a Sidon set modulo $m$.
+Its $e(e-1)$ ordered nonzero differences are distinct, giving
+$m\ge e(e-1)+1$ and $\delta\ge(e-1)^2>a_*$.
+This proves \eqref{eq:ordinary-scalar} in these ranks.
+
+For completeness, the unbounded range has a uniform argument.
+Let $r\ge9$, $a_*=r(r+1)/2$, and $D=\lfloor a_*/2\rfloor+1$;
+use $n=D$ in \eqref{eq:ordinary-cutoff}.  Then
+$a_*+1\le2D\le a_*+2$ and $D\ge r$.
+For $\mathsf b(r)=r/4+1+9/(2r)$,
+\[
+ \mathsf h_{D_{r+1}}-\mathsf h_{D_r}
+ \le\frac{r+2}{a_r+3}<\mathsf b(r+1)-\mathsf b(r)\quad(r\ge10).
+\]
+The strict inequality follows on putting $x=r-10$ from the positive
+numerator $x^4+34x^3+385x^2+1472x+112$ over
+$4r(r+1)(r^2+r+6)$.
+Together with
+$\mathsf b(10)-\mathsf h_{28}=1833472237/80313433200>0$, this proves
+$\mathsf h_D<\mathsf b(r)$ for every $r\ge10$.
+Define
+\[
+ T_r=\frac{a_*(a_*+22-r)}{2(r-1)(a_*+9)}
+       +\frac{2r-3}{r-1}
+       -\frac{a_*(a_*+21)+36}{2(D+1)(a_*+9)}.
+\]
+Direct summation in \eqref{eq:ordinary-cutoff} gives
+$g_0:=\Delta(10,a_*)=(r-1)(a_*+9)(T_r-\mathsf h_D)$.
+Replace the last denominator of $T_r$ by $(a_*+3)(a_*+9)$ to obtain
+$T_-\le T_r$.  Its difference from $\mathsf b(r)$ is
+\[
+ T_--\mathsf b(r)=
+ \frac{r^3[(r-10)(2r+15)+2]+r[111(r-10)+210]+972}
+ {2r(r-1)(r^2+r+6)(r^2+r+18)}>0.
+\]
+Thus $g_0>0$ for $r\ge10$; for $r=9$, direct substitution gives
+$g_0=5845533/7436429>0$.
+
+It remains to extend this seed in both parameters.
+With $A_*=\Delta(11,a_*)-g_0$, $b_0=\Delta(10,a_*+1)-g_0$, put
+\[
+ C_*=\frac{a_*[-a_*(D-r+2)-D(r-4)+3]}{2(D+1)}.
+\]
+The identities $g_0=(a_*+9)A_*+C_*$ and
+$b_0=A_*+11-r-8\alpha$ give $A_*>-C_* /(a_*+9)>0$.
+For $F(D)=-C_* /(a_*+9)+11-r-8\alpha$, set
+\[
+ F_{\min}=\frac{a_*}2-\frac{3r}2+\frac{11}2
+       +\frac{3(5r+31)}{2(a_*+9)}-\frac{17(r-1)}{a_*+3}.
+\]
+The floor comparison is the identity
+\[
+ F(D)-F_{\min}=
+ \frac{(2D-a_*-1)(r-1)(a_*^2+17a_*+144)}
+ {2(a_*+9)(D+1)(a_*+3)}\ge0.
+\]
+Since $a_*\ge4r$, $F_{\min}>11/2-17/4=5/4$;
+hence $b_0>5/4$.  Finally $0<\beta<1$, and
+\eqref{eq:ordinary-gap-shift}, recentered at $e_0=10$, reads
+\[
+ \Delta(10+s,a_*+t)=g_0+sA_*+t(b_0-\beta/2)
+                       +\beta(t^2/2+st)>0
+ \qquad(s,t\ge0).
+\]
+This proves the scalar inequality for all rational $e\ge10$,
+$\delta\ge a_*$, and therefore for every actual cut with $r\ge9$.
+
+\begin{proof}[Proof of Proposition~\ref{prop:ordinary}]
+The low-rank estimates and the scalar inequality, combined with
+\eqref{eq:ordinary-row} and \eqref{eq:ordinary-margin}, give
+$c_j(G)\le R_j(\delta)$ for every $1\le j\le r$.
+Equations~\eqref{eq:ordinary-full-transfer}--\eqref{eq:ordinary-target-difference}
+yield $\beta_i(G;k)\le i\binom m{i+1}$.
+The width assumption identifies the minimal generators of the interval
+completion as $m,m+1,\ldots,2m-1$; its Betti numbers are those in
+\eqref{eq:ordinary-capacity}, by \cite{APFormula,APCone}.
+Finally, scalar extension preserves the original monomial coordinates
+and the ranks in a minimal graded free resolution.  Thus the bound
+proved after the purely transcendental extension descends to the
+original field.  The algebraic and completed tangent cones have the
+same graded coordinates by Proposition~\ref{prop:bridge}; the conclusion
+therefore concerns the stated completed semigroup rings and their own
+minimal presentations.
+\end{proof}
