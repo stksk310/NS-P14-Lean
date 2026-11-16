@@ -63,6 +63,14 @@ def validate_changes(root,require_new=True):
     if (root/FROZEN).read_bytes()!=git(root,'show','996d982:'+FROZEN):raise ValueError('frozen receipt changed')
     for name,digest in json.loads((root/FROZEN).read_text()).items():
         if sha(safe(root,name).read_bytes())!=digest:raise ValueError('frozen contract changed: '+name)
+    # Requested.I_PARTITION refers to these five predicates by name. Freeze
+    # their original definitions and context, not merely the wrapper's type.
+    # The only pre-proof addition is this explicitly enumerated needed import.
+    partition='NSP14/Main/Partition.lean'
+    initial_partition=git(root,'show','996d982:'+partition)
+    initial_partition=initial_partition.replace(b'public import NSP14.Semigroup.WidthNormalization\n',
+      b'public import NSP14.Semigroup.WidthNormalization\npublic import NSP14.Endpoint.OffsetOrder\n',1)
+    if not safe(root,partition).read_bytes().startswith(initial_partition):raise ValueError('frozen partition predicate bodies changed')
     for name in policy['new_production']+policy['new_fixtures']+policy['new_audits']:
         if (root/name).exists() and v06.TOKEN.search((root/name).read_text()):raise ValueError('forbidden proof token: '+name)
     return policy
