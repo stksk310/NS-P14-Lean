@@ -1,0 +1,14 @@
+{
+  "archive": "artifacts/NS_P14_LEAN_RUN19_COMPLETE_20261116_R03.zip",
+  "sha256": "e14c8616cb0379a4f0063da6f329580fd13cca6f0644f637bca0f7ace890a6bc",
+  "entries": 1959,
+  "CRC_and_all_payload_hashes": true,
+  "proof_snapshot_commit": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "reviewed_evidence_commit": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "review_commit": "1533762c276df346350a382ba452d73a5ae219ad",
+  "evidence": "verification/run19/runs/release_20261116_r03",
+  "review": "verification/run19/review/final_20261116_r03.json",
+  "review_report": "verification/run19/review/final_20261116_r03.md",
+  "complete_offline_checkout": false,
+  "scope": "Run19 ten contracts; Run20 whole-P14 composition remains"
+}
