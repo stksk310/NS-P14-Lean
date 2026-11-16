@@ -1,6 +1,7 @@
 module
-import NSP14.NarrowFour.WidthFourComparison
-import Mathlib.Algebra.Field.ZMod
+public import NSP14.NarrowFour.WidthFourComparison
+public import Mathlib.Algebra.Field.ZMod
+@[expose] public section
 open NSP14 NSP14.NarrowFour.WidthFour
 namespace NSP14.Tests.Run19WidthFour
 

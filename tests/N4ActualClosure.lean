@@ -1,7 +1,8 @@
 module
-import NSP14.NarrowFour.Comparison
-import Mathlib.Algebra.Field.ZMod
-import NSP14.Endpoint.FiniteSocleWindow
+public import NSP14.NarrowFour.Comparison
+public import Mathlib.Algebra.Field.ZMod
+public import NSP14.Endpoint.FiniteSocleWindow
+@[expose] public section
 set_option maxRecDepth 4096
 set_option maxHeartbeats 0
 open NSP14

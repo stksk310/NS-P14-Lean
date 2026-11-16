@@ -1,0 +1,22 @@
+{
+  "name": "width_model",
+  "old_command": [
+    "python3",
+    "scripts/check_run18_width.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_20261115T152000Z_r01/width_checks.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run18_width.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_run19_disposable/width_checks.json"
+  ],
+  "source_commit": "56857d82596e3e29a26a44ac774113fa2d907edf",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-x0wuzk6y",
+  "old_evidence_written": false
+}

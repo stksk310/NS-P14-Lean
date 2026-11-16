@@ -1,5 +1,6 @@
 module
-import NSP14.NarrowFour.FirstLarge
+public import NSP14.NarrowFour.FirstLarge
+@[expose] public section
 open NSP14
 example (D : Endpoint.Data) (a b : D.a) (hab : a.val<b.val) :
     ¬NarrowFour.Standard D a b (b.val,0) := NarrowFour.first_pure_relation D a b hab

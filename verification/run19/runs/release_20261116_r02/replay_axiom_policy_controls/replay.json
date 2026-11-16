@@ -1,0 +1,22 @@
+{
+  "name": "axiom_policy_controls",
+  "old_command": [
+    "python3",
+    "scripts/check_run18_axiom_policy.py",
+    "--output-dir",
+    "verification/run18/runs/v06_alignment_20261115T152000Z_r01/axiom_policy_controls"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run18_axiom_policy.py",
+    "--output-dir",
+    "verification/run18/runs/v06_alignment_run19_disposable/axiom_policy_controls"
+  ],
+  "source_commit": "56857d82596e3e29a26a44ac774113fa2d907edf",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-ns8gw0tf",
+  "old_evidence_written": false
+}

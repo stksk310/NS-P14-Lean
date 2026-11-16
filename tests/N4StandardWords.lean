@@ -1,6 +1,7 @@
 module
-import NSP14.NarrowFour.StandardWords
-import Mathlib.Algebra.Field.ZMod
+public import NSP14.NarrowFour.StandardWords
+public import Mathlib.Algebra.Field.ZMod
+@[expose] public section
 open NSP14
 example (D : Endpoint.Data) (a b : D.a) (hab : a≠b) (s t : ℕ)
     (hs : 0<s) (ht : 0<t) (hp : NarrowFour.Standard D a b (s,t)) :

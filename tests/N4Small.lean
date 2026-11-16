@@ -1,6 +1,7 @@
 module
-import NSP14.NarrowFour.SmallWidths
-import Mathlib.Algebra.Field.ZMod
+public import NSP14.NarrowFour.SmallWidths
+public import Mathlib.Algebra.Field.ZMod
+@[expose] public section
 open NSP14 NSP14.Homological
 namespace NSP14.Tests.Run19Small
 

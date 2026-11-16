@@ -13,6 +13,18 @@ PRIOR='verification/run18/runs/v06_alignment_20261115T152000Z_r01'
 POLICY='docs/RUN19_CHANGE_POLICY.json'
 FROZEN='verification/run19/sources/initial_contracts_20261116/FROZEN_SHA256.json'
 FULL_IDS={'N_DISTANCE','N_WORDS','N_HIGH','N_FIRST','N_SMALL','N_WIDTH4','N_CLOSE','I_BASE','X_LTV','I_THREE'}
+# Independent source-declaration inventory, confirmed by the whole-branch reviewer.
+# A generated equation row alone must not satisfy an entire fixture's coverage.
+FIXTURE_HELPERS={
+ 'tests.N4StandardWords':('NSP14.Tests.Run19Words',['collective','ca','cb','collective_pair','neither_unit','collective_triangle','mixed_both_orders','small_height_and_socle']),
+ 'tests.N4Higher':('NSP14.Tests.Run19Higher',['heTwo','all_fields']),
+ 'tests.N4Small':('NSP14.Tests.Run19Small',['six','seven','eight']),
+ 'tests.N4WidthFour':('NSP14.Tests.Run19WidthFour',['data']),
+ 'tests.N4ActualClosure':('NSP14.Tests.Run19N4NonCM',['D','cap']),
+ 'tests.SmallEmbeddingBase':('NSP14.Tests.Run19Base',['naturals','naturals_atoms','naturals_embedding','naturals_width_zero','twoThree','threeFive']),
+ 'tests.LTVActual':('NSP14.Tests.Run19Three',['narrowNonCM','cm','boundaryWide','nonCM_embedding']),
+ 'tests.SmallEmbeddingThree':('NSP14.Tests.Run19ThreeFullAP',['unitStep','nonunitStep']),
+}
 spec=importlib.util.spec_from_file_location('v06_helpers',ROOT/'scripts/verify_v06_alignment.py')
 v06=importlib.util.module_from_spec(spec);spec.loader.exec_module(v06)
 sha=v06.sha;git=v06.git;safe=v06.safe;write_json=v06.write_json
@@ -90,6 +102,20 @@ def validate_coverage(prior,records,fixtures):
     if not {'v06_routes','v06_alignment_controls','environment_axioms','base_build','base_environment_types'} <= {r['name'] for r in records}:
         raise ValueError('V06 route/type coverage missing')
 
+def validate_named_helpers(rows):
+    actual={(r['module'],r['name']) for r in rows if 'type' in r and 'explicit_type' in r and 'axioms' in r}
+    required={(m,prefix+'.'+name) for m,(prefix,names) in FIXTURE_HELPERS.items() for name in names}
+    if required-actual:raise ValueError('named fixture helper coverage missing: '+repr(sorted(required-actual)))
+
+def audit_source(imports,typed_modules):
+    # Lean's module system hides private/generated declarations from ordinary
+    # imports. Import each audited module's full view explicitly; genuine empty
+    # import-only modules keep their ordinary import/metadata coverage.
+    text=v06.audit_source(set(imports)|set(typed_modules),typed_modules)
+    for module in typed_modules:
+        text=text.replace('import '+module+'\n','import all '+module+'\n')
+    return text
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output-dir');p.add_argument('--fresh-test-cache',action='store_true')
     p.add_argument('--preflight',action='store_true');p.add_argument('--baseline-cache');a=p.parse_args();created=False
@@ -136,7 +162,7 @@ def main():
         import_only={m for m in typed if not re.search(r'^(?:private |noncomputable )*(?:def|theorem|lemma|instance|structure|inductive|abbrev)\b',
             (ROOT/(m.replace('.','/')+'.lean')).read_text(),re.M)}
         typed-=import_only
-        (out/'EnvironmentAudit.lean').write_text(v06.audit_source(['NSP14']+[n[:-5].replace('/','.') for n in fixtures],typed))
+        (out/'EnvironmentAudit.lean').write_text(audit_source(['NSP14']+[n[:-5].replace('/','.') for n in fixtures],typed))
         mapping=[];raw_environment=None
         for old in prior['checks']:
             name=old['name']
@@ -170,13 +196,19 @@ def main():
         old_rows=json.loads(gzip.decompress((ROOT/PRIOR/'declarations.json.gz').read_bytes()))
         old_typed=[r for r in old_rows if 'explicit_type' in r]
         validate_audit(rows,typed,old_typed)
+        validate_named_helpers(rows)
         write_json(out/'environment_import_coverage.json',metadata)
         for r in rows:
             r['source_sha256']=initial[r['module'].replace('.','/')+'.lean']
         (out/'declarations.json.gz').write_bytes(gzip.compress(json.dumps(rows,ensure_ascii=False).encode(),mtime=0))
         write_json(out/'audit_coverage.json',{'typed_modules':sorted(typed),'import_only_modules':sorted(import_only),
             'declarations':len(rows),'typed_declarations':sum('type'in r for r in rows),'base_public_types_preserved':True,
-            'v06_public_types_preserved':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS)})
+            'v06_public_types_preserved':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS),
+            'direct_import_all_for_each_typed_module':True,'private_and_generated_support_included':True})
+        write_json(out/'named_helper_coverage.json',{'required':{m:[prefix+'.'+n for n in names]
+          for m,(prefix,names) in FIXTURE_HELPERS.items()},'count':sum(len(names) for _,names in FIXTURE_HELPERS.values()),
+          'all_present_with_normal_explicit_types_and_axioms':True,
+          'generated_support_declarations_also_enumerated_by_environment_audit':True})
         run('run19_routes',['python3','scripts/check_run19_routes.py','--output',str(Path(rel)/'routes.json')])
         run('run19_exact_models',['python3','scripts/check_run19_n4.py','--output',str(Path(rel)/'models.json')])
         run('run19_negative_controls',['python3','scripts/check_run19_guards.py','--output',str(Path(rel)/'guards.json')])

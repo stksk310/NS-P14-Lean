@@ -1,6 +1,7 @@
 module
-import NSP14.NarrowFour.HigherRows
-import Mathlib.Algebra.Field.ZMod
+public import NSP14.NarrowFour.HigherRows
+public import Mathlib.Algebra.Field.ZMod
+@[expose] public section
 set_option synthInstance.maxHeartbeats 200000
 set_option backward.isDefEq.respectTransparency false
 open NSP14 NSP14.Homological

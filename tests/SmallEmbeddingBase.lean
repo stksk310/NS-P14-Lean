@@ -1,6 +1,7 @@
 module
-import NSP14.SmallEmbedding.Base
-import Mathlib.Algebra.Field.ZMod
+public import NSP14.SmallEmbedding.Base
+public import Mathlib.Algebra.Field.ZMod
+@[expose] public section
 open NSP14 NSP14.Homological
 open scoped Classical
 namespace NSP14.Tests.Run19Base

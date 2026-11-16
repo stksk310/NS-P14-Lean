@@ -1,5 +1,6 @@
 module
-import NSP14.NarrowFour.CubicPayment
+public import NSP14.NarrowFour.CubicPayment
+@[expose] public section
 open NSP14 NSP14.NarrowFour
 example (z : ℕ) :
     12*((2:ℚ)*((6+z).choose 3:ℚ)-(5*((6+z:ℕ):ℚ)^2/4-2*((6+z:ℕ):ℚ)+4))=

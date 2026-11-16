@@ -1,5 +1,6 @@
 module
-import audit.run19.RequestedGoals
+public import audit.run19.RequestedGoals
+@[expose] public section
 #check NSP14.Run19.Requested.N_DISTANCE
 #check NSP14.Run19.Requested.N_WORDS
 #check NSP14.Run19.Requested.N_HIGH

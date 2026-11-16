@@ -59,6 +59,13 @@ def main():
         bad=copy.deepcopy(rows);bad[1]['axioms']=['Control.badAxiom']
         reject('additional_axiom',lambda:v.validate_audit(bad,required),'unapproved or self axiom')
         reject('helper_omitted',lambda:v.validate_audit(rows[:1],{endpoint},expected_names={r['name'] for r in rows}),'fileset coverage')
+        helpers=[{'module':m,'name':prefix+'.'+n,'type':'True','explicit_type':'True','axioms':[]}
+          for m,(prefix,names) in v.FIXTURE_HELPERS.items() for n in names]
+        v.validate_named_helpers(helpers)
+        reject('named_helper_omitted_despite_other_module_rows',lambda:v.validate_named_helpers(helpers[1:]),'named fixture helper coverage')
+        audit=v.audit_source(['NSP14'],required)
+        if any('import all '+m+'\n' not in audit for m in required):raise ValueError('private module import coverage missing')
+        results.append({'control':'each_typed_module_imported_all_directly','passed':True})
         reject('empty_import_missing',lambda:v.validate_import_coverage({'imported_modules':[endpoint]},required),'imported-module coverage')
         prior=json.loads((ROOT/v.PRIOR/'verification.json').read_text())
         v.validate_coverage(prior,prior['checks'],prior['fixture_order'])

@@ -1,5 +1,6 @@
 module
-import tests.LTVActual
+public import tests.LTVActual
+@[expose] public section
 open NSP14 NSP14.Tests.Run19Three
 example (k : Type) [Field k] (i : ℕ) :=
   SmallEmbedding.three_comparison narrowNonCM.source k nonCM_embedding i
