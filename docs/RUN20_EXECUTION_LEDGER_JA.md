@@ -52,3 +52,5 @@ pp.allでも複雑な型の表示に秒単位を要したため、全宣言のex
 展開文字列版の並列preflightは16GiB上限に達し、4プロセスがexit137で終了した。memory.eventsと全command、継続中jobの停止をaudit_memory_transitionに保存し、成功へ数えない。型は共有部分を参照するLean.Expr.DAG.v1へ変更。Nameのstr/num成分、全universe、全binderInfo、bvar index、let依存フラグ、literal、projection、metadata参照を保持する。各JSON nodeを実際にdecodeして元Exprとの厳密ExprStructEqを検査し、canonical型はさらに元型とalpha同値を検査する。metadataの診断snapshotも同梱する。
 
 通常型はMeta.ppExpr + fresh cache、Mainは標準pretty-explicitも併記。出力は逐次JSONLへ保存し、完全なbytesをgzipへ移す（未圧縮SHAも記録）。一つの監査は8part/最大2workerとする。DAG版は約5GiBで複数partがPASSし、全プロジェクトのscopeは保持した。旧失敗出力を変更せず、新一意出力先で最終coldへ進む。
+
+基準07fe1edの全1003 module・15542宣言が、通常型/完全explicit DAG/実collectAxiomsでPASSした。source SHAはGit base bytesへ全件再照合。golden recordをsource provenanceへ固定し、最終coldでは隔離base再実行との一致も検査する。Rootの全708 production moduleがumbrellaから到達することも確認した。現在は新Mainを含む全1019 moduleの同じ監査へ進む。
