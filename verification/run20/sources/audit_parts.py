@@ -8,7 +8,7 @@ No declaration, body, private view, or mathematical check is sampled or omitted.
 """
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-import argparse,gzip,hashlib,importlib.util,json,os,subprocess,time
+import argparse,gzip,hashlib,importlib.util,json,os,shutil,subprocess,time
 ROOT=Path(__file__).resolve().parents[3]
 s=importlib.util.spec_from_file_location('run20_part_verify',ROOT/'scripts/verify_run20.py');v=importlib.util.module_from_spec(s);s.loader.exec_module(v)
 
@@ -31,10 +31,10 @@ def validate_parts(parts,modules):
     return sorted(combined,key=lambda r:r['name']),meta
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output-dir',required=True);p.add_argument('--source-root');p.add_argument('--parts',type=int,default=4);p.add_argument('--workers',type=int,default=3);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output-dir',required=True);p.add_argument('--source-root');p.add_argument('--parts',type=int,default=8);p.add_argument('--workers',type=int,default=2);a=p.parse_args()
     out=v.safe(ROOT,a.output_dir)
     if out.exists() or Path(a.output_dir).parts[:3]!=('verification','run20','runs'):p.error('new Run20 audit output required')
-    if not 1<=a.workers<=a.parts<=8:p.error('one to eight parts, bounded workers required')
+    if not 1<=a.workers<=min(a.parts,2) or not 1<=a.parts<=16:p.error('at most two concurrent workers and sixteen parts required')
     root=Path(a.source_root).resolve() if a.source_root else ROOT
     modules=v.project_modules(root);ordered=sorted(modules);selections=[ordered[i::a.parts] for i in range(a.parts)]
     out.mkdir(parents=True,exist_ok=False)
@@ -44,22 +44,31 @@ def main():
     v.write_json(out/'snapshot.json',snapshot)
     def worker(pair):
         index,selection=pair;source=out/('Part'+str(index).zfill(2)+'.lean')
-        code=v.audit_source(modules,selection)
+        row_stream=out/(source.stem+'.rows.jsonl');row_stream.touch(exist_ok=False)
+        code=v.audit_source(modules,selection,row_output=row_stream)
         code=code.replace(' for (n,ci) in env.constants.toList do',
           ' let started ← IO.monoMsNow\n let mut completedCount : Nat := 0\n for (n,ci) in env.constants.toList do',1)
         progress=json.dumps(str(out/(source.stem+'.progress.json')))
-        code=code.replace('   IO.println ((Json.mkObj fields).compress)',
-          '   IO.println ((Json.mkObj fields).compress)\n   completedCount := completedCount+1\n   if completedCount%100==0 then\n'+
+        emit='   IO.FS.withFile '+json.dumps(str(row_stream))+' .append fun h => h.putStrLn ((Json.mkObj fields).compress)'
+        code=code.replace(emit,
+          emit+'\n   completedCount := completedCount+1\n   if completedCount%100==0 then\n'+
           '    let elapsed ← IO.monoMsNow\n    IO.FS.writeFile '+progress+' ((Json.mkObj [("completed_declarations",toJson completedCount),("last_name",toJson n.toString),("elapsed_ms",toJson (elapsed-started))]).compress)',1)
         source.write_text(code)
         command=['lake','env','lean','-j1','-M12288',str(source)];start=time.monotonic()
         q=subprocess.run(command,cwd=root,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         (out/(source.stem+'.log.gz')).write_bytes(gzip.compress(q.stdout.encode(),mtime=0))
+        stream_digest=v.sha(row_stream.read_bytes())
+        packed_stream=row_stream.with_suffix(row_stream.suffix+'.gz')
+        with row_stream.open('rb') as inp,packed_stream.open('xb') as dest:
+            with gzip.GzipFile(fileobj=dest,mode='wb',mtime=0) as zipped:shutil.copyfileobj(inp,zipped)
+        row_stream.unlink()
         record={'command':command,'cwd':str(root),'exit_code':q.returncode,'seconds':round(time.monotonic()-start,3),'selected_modules':selection,'passed':q.returncode==0 and 'warning:' not in q.stdout}
+        record['row_stream_uncompressed_sha256']=stream_digest;record['row_stream_encoding']='gzip; exact streamed bytes preserved'
         v.write_json(out/(source.stem+'.process.json'),record)
         print(source.stem,record['exit_code'],'PASS' if record['passed'] else 'FAIL',flush=True)
         if not record['passed']:raise ValueError('audit part failed: '+source.stem)
-        rows,meta=v.parse_audit(q.stdout)
+        _,meta=v.parse_audit(q.stdout)
+        with gzip.open(packed_stream,'rt') as stream:rows=[json.loads(line) for line in stream]
         return {'selected_modules':selection,'rows':rows,'metadata':meta}
     with ThreadPoolExecutor(max_workers=a.workers) as pool:parts=list(pool.map(worker,enumerate(selections)))
     rows,meta=validate_parts(parts,modules)

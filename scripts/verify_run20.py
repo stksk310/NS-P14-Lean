@@ -75,7 +75,7 @@ def dependency_snapshot(root):
         result[item['name']]={'commit':head,'tracked_clean':True,'untracked_Lean_sources':[]}
     return result
 
-def audit_source(modules,selected=None):
+def audit_source(modules,selected=None,row_output=None):
     text=old.audit_source(modules,modules)
     selected=set(modules) if selected is None else set(selected)
     if not selected<=set(modules):raise ValueError('audited modules outside full imports')
@@ -85,23 +85,15 @@ def audit_source(modules,selected=None):
     # Full kernel rendering retains every argument and universe without the
     # pretty-printer's deep-term/proof elisions. Alpha-normalize binder names
     # for reproducible base comparison; all binder kinds and constants remain.
-    canonical='''namespace Run20TypeEncoding
-partial def canonical (depth : Nat) : Lean.Expr → Lean.Expr
- | .forallE _ d b bi => .forallE (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth d) (canonical (depth+1) b) bi
- | .lam _ d b bi => .lam (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth d) (canonical (depth+1) b) bi
- | .letE _ t v b nd => .letE (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth t) (canonical depth v) (canonical (depth+1) b) nd
- | .app f a => .app (canonical depth f) (canonical depth a)
- | .proj n i e => .proj n i (canonical depth e)
- | .mdata d e => .mdata d (canonical depth e)
- | e => e
-end Run20TypeEncoding
-'''
+    canonical=(ROOT/'verification/run20/sources/kernel_type_codec.inc').read_text()
     text=text.replace('open Lean\n','open Lean\n'+canonical,1)
     text=text.replace('let explicitType ← withOptions (fun opts => opts.setBool `pp.explicit true) (Lean.Meta.ppExpr ci.type)',
       'let canonicalType := Run20TypeEncoding.canonical 0 ci.type\n    unless canonicalType == ci.type do throwError "kernel type alpha roundtrip failed: {n}"\n    if ci.type.getUsedConstants.any (fun c => c.toString.startsWith "__run20_binder_") then throwError "kernel binder namespace collision: {n}"\n    let explicitType := toString canonicalType')
+    text=text.replace('let type ← Lean.Meta.ppExpr ci.type','let type ← Lean.Meta.withFreshCache (Lean.Meta.ppExpr ci.type)')
+    text=text.replace('let explicitType := toString canonicalType', 'let (explicitDag,explicitMetadata) ← ofExcept (Run20TypeEncoding.pack canonicalType)\n    let (originalDag,originalMetadata) ← ofExcept (Run20TypeEncoding.pack ci.type)\n    let explicitType := explicitDag.compress')
     text=text.replace('toJson explicitType.pretty','toJson explicitType')
     text=text.replace('("explicit_type",toJson explicitType)]',
-      '("explicit_type",toJson explicitType),("kernel_type",toJson (toString ci.type)),("kernel_alpha_roundtrip",toJson true),("universe_parameters",toJson (ci.levelParams.map Name.toString))]')
+      '("explicit_type",toJson explicitType),("kernel_type",toJson originalDag.compress),("kernel_metadata",originalMetadata),("explicit_metadata",explicitMetadata),("kernel_dag_roundtrip",toJson true),("kernel_alpha_roundtrip",toJson true),("universe_parameters",toJson (ci.levelParams.map Name.toString))]')
     text=text.replace('   IO.println ((Json.mkObj fields).compress)',
       '''   if #["NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion","NSP14.Run20.partition_closed","NSP14.Run20.main_closed"].contains n.toString then
     let pretty ← withOptions (fun o => o.setBool `pp.all true |>.setBool `pp.tagAppFns false) (Lean.Meta.ppExpr ci.type)
@@ -118,7 +110,11 @@ end Run20TypeEncoding
   if typedSet.contains modName then inventory := inventory.push n.toString
  IO.println ((Json.mkObj [("declaration_inventory",toJson inventory)]).compress)
 '''
-    return text.replace(marker,inventory+marker,1)
+    text=text.replace(marker,inventory+marker,1)
+    if row_output is not None:
+        text=text.replace('   IO.println ((Json.mkObj fields).compress)',
+          '   IO.FS.withFile '+json.dumps(str(row_output))+' .append fun h => h.putStrLn ((Json.mkObj fields).compress)',1)
+    return text
 
 def parse_audit(raw):
     lines=raw.splitlines();inventories=[json.loads(s) for s in lines if s.startswith('{') and '"declaration_inventory"' in s]
@@ -136,7 +132,7 @@ def validate_full_audit(rows,meta,modules,base_rows=None,expected_names=None):
     if {r['module'] for r in rows}-modules:raise ValueError('unrequested project declaration module')
     for r in rows:
         if not {'type','explicit_type','axioms'}<=r.keys():raise ValueError('full declaration type/axiom coverage missing')
-        if base_rows is not None and (not r.get('kernel_alpha_roundtrip') or 'kernel_type' not in r):raise ValueError('full kernel explicit type coverage missing')
+        if base_rows is not None and (not r.get('kernel_alpha_roundtrip') or 'kernel_type' not in r or not r.get('kernel_dag_roundtrip')):raise ValueError('full kernel explicit type coverage missing')
     old.validate_named_helpers(rows)
 
 def validate_coverage(prior,records,fixtures):
@@ -274,7 +270,7 @@ def main():
         for r in rows:r['source_sha256']=initial[r['module'].replace('.','/')+'.lean']
         (out/'declarations.json.gz').write_bytes(gzip.compress(json.dumps(rows,ensure_ascii=False).encode(),mtime=0))
         write_json(out/'environment_import_coverage.json',meta)
-        write_json(out/'audit_coverage.json',{'modules':sorted(modules),'declarations':len(rows),'typed_declarations':len(rows),'base_public_types_preserved':True,'private_and_generated_support_included':True,'direct_import_all_for_every_project_module':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS),'normal_type':'Lean.Meta.ppExpr default','explicit_type':'complete Lean.Expr.dbgToString; uniquely alpha-normalized binder names, all binder kinds/arguments/universes retained','kernel_alpha_roundtrips':sum(r.get('kernel_alpha_roundtrip') is True for r in rows),'original_kernel_type_also_recorded':True,'Main_standard_pretty_explicit_also_recorded':True})
+        write_json(out/'audit_coverage.json',{'modules':sorted(modules),'declarations':len(rows),'typed_declarations':len(rows),'base_public_types_preserved':True,'private_and_generated_support_included':True,'direct_import_all_for_every_project_module':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS),'normal_type':'Lean.Meta.ppExpr default','explicit_type':'Lean.Expr.DAG.v1; all arguments/universes/binder kinds, exact JSON-node reconstruction, unique alpha-normalized binder names; metadata snapshots retained','kernel_alpha_roundtrips':sum(r.get('kernel_alpha_roundtrip') is True for r in rows),'exact_kernel_DAG_roundtrips':sum(r.get('kernel_dag_roundtrip') is True for r in rows),'original_kernel_type_also_recorded':True,'Main_standard_pretty_explicit_also_recorded':True})
         run('run20_inputs',['python3','verification/run20/sources/check_prior_run19.py'])
         run('run20_kernel_encoding_controls',['python3','verification/run20/sources/check_kernel_type_encoding.py','--output-dir',str(Path(rel)/'kernel_encoding_controls')])
         run('run20_routes',['python3','scripts/check_run20_routes.py','--output',str(Path(rel)/'routes.json')])

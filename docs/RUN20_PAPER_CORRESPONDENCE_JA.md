@@ -78,3 +78,5 @@ V06同期五項目は改変せず、N4は新cubic 4z^3+45z^2+140z+36、SC復帰�
 ## 認証境界
 
 このsource-bound台帳は数学的接続を記録する。fresh検証・全private宣言監査・独立レビュー・ZIP・実Pushの完了状態は後で作成する `verification/run20/` の別receiptに束縛する。旧失敗ログやPARTIAL台帳を遡及改変しない。
+
+型の最終認証形式は通常Meta.ppExprと完全な共有DAGのexplicit型。各JSON nodeから実Exprを再構築し、全型を検査する。Sourceのmathematical proof/前提は変更せず、型表示の展開による時間・メモリだけを削減した。Source/baseline比較では同じencoderを使い、Mainには標準pretty-explicitも併記する。

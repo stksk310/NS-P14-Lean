@@ -19,3 +19,5 @@ PATH=/path/to/pinned/lean/bin:$PATH python3 scripts/verify_run20.py --fresh-proj
 
 
 型監査のexplicit欄は、全argument/universeを含むLeanの完全kernel表示（binder名のみ一意にalpha正規化）である。元kernel型と通常Meta.ppExpr型も全宣言に併記し、各宣言でalpha同値を検査する。Main三出口は標準pretty-explicitも保持する。九つの実Lean encoding controlsと、固定15,774名の被覆/全private importにより表示負荷を数学的被覆の削減へ置き換えない。
+
+最終のexplicit記録はLean.Expr.DAG.v1へ圧縮し、共有subexpressionを参照する。表示省略はせず、JSONから各nodeを実際に再構築し、全宣言で厳密な型一致を検査する。Name成分・universe・binderInfo・変数index・let・literal・projectionを保持、metadata snapshotも同梱。通常型/標準Main pretty表示はそのまま保持。逐次記録・fresh printer cache・最大2workerでメモリ上限を守る。

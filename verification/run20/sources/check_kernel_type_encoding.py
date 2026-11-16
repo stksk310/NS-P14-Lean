@@ -38,9 +38,20 @@ set_option maxRecDepth 4000
  let raw := toString (norm deep)
  unless (raw.splitOn "Nat.succ").length==201 do throwError "deep kernel term was elided"
  if raw.contains '⋯' || raw.contains '…' then throwError "kernel display omission"
+ let cases := #[first,renamed,swapped,explicit,implicit,instanceBinder,deep,.mdata {} first,
+   mkConst (Name.num (Name.str .anonymous "numeric_namespace") 7) [.max (.param `u) (.succ .zero)]]
+ for e in cases do
+  let (_,_) ← ofExcept (Run20TypeEncoding.pack e)
+ let mut shared := mkNatLit 0
+ for _ in [:20] do shared := mkApp2 (mkConst ``Nat.add) shared shared
+ let (_,memo) := (Run20TypeEncoding.canonicalM 0 shared).run {}
+ unless 40<=memo.size && memo.size<=150 do throwError "normalizer did not preserve shared subexpressions"
+ let bad := Run20TypeEncoding.decodeNode (.arr #[toJson "app",toJson (99:Nat),toJson (0:Nat)]) #[] #[]
+ if bad.isOk then throwError "forward DAG reference accepted"
  let controls := #["actual alpha-equivalence", "binder renaming", "bound-variable order",
    "explicit/implicit binder", "instance binder", "universe levels", "exact metadata preservation",
-   "all 200 nested applications", "no display ellipses"]
+   "all 200 nested applications", "no display ellipses", "exact JSON DAG reconstruction for all cases",
+   "numeric Name segments and universe AST", "reject forward DAG references", "shared-subexpression memoization"]
  IO.println ((Json.mkObj [("status",toJson "PASS_COMPLETE_KERNEL_TYPE_ENCODING"),("controls",toJson controls)]).compress)
 '''
     path=out/'Controls.lean';path.write_text(code);command=['lake','env','lean','-j1','-M12288',str(path)]
