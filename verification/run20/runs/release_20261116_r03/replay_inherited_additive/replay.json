@@ -1,0 +1,23 @@
+{
+  "name": "inherited_additive",
+  "old_command": [
+    "python3",
+    "scripts/replay_run19_inherited.py",
+    "--name",
+    "inherited_additive",
+    "--output-dir",
+    "verification/run19/runs/release_20261116_r03/replay_inherited_additive"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run17_additive.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_run20_disposable/inherited_additive.json"
+  ],
+  "source_commit": "1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e",
+  "current_mathematical_source": true,
+  "historical_policy_scope": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "old_evidence_written": false
+}
