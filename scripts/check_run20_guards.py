@@ -46,6 +46,8 @@ def main():
         reject('auxiliary_checker_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
         helper=r/'verification/run20/sources/audit_parts.py';old=helper.read_bytes();helper.write_bytes(old+b'\n')
         reject('parallel_audit_helper_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
+        helper=r/'verification/run20/sources/kernel_type_codec.inc';old=helper.read_bytes();helper.write_bytes(old+b'\n')
+        reject('kernel_DAG_codec_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
         ev=r/existing;(ev/'sample').write_text('bound');em=v.evidence_manifest(r,ev);(ev/'sample').write_text('changed')
         reject('evidence_substitution',lambda:v.check_evidence_manifest(r,ev,em),'evidence manifest')
         endpoint='NSP14.Endpoint.CompetitorBounds';fresh='NSP14.SmallEmbedding.LanTuVu'
