@@ -1,0 +1,4 @@
+tests/MainTargetTransport.lean:13:46: error: unexpected token ':='; expected ':'
+tests/MainTargetTransport.lean:15:19: error: unexpected token ':='; expected ':'
+tests/MainTargetTransport.lean:20:8: error(lean.unknownIdentifier): Unknown constant `NSP14.NumericalSemigroup.interval_embeddingDimension`
+tests/MainTargetTransport.lean:22:58: error: unexpected token ':='; expected ':'

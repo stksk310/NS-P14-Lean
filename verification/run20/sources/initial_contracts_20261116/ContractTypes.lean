@@ -13,7 +13,7 @@ set_option maxHeartbeats 0
   let ci ← getConstInfo n
   let ty ← Meta.ppExpr ci.type
   let ety ← withOptions (fun o => o.setBool `pp.explicit true) (Meta.ppExpr ci.type)
-  let expanded ← Meta.forallTelescopeReducing ci.type fun xs body => do
+  let expanded ← Meta.forallTelescopeReducing (mkConst n) fun xs body => do
    let body ← Meta.whnf body
    let full ← Meta.mkForallFVars xs body
    return (← Meta.ppExpr full).pretty

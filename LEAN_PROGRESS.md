@@ -281,3 +281,7 @@ base a7504ee。endpointの全j高さによる停止非依存、二つの整数sl
 
 ## Run19 — narrow four and small embeddings
 Ten frozen mathematical contracts now have actual arbitrary-field all-row proofs in new NarrowFour/SmallEmbedding modules. Final validation/publication status is in docs/RUN19_HANDOFF_JA.md and the immutable Run19 completion receipt; mathematical closure is distinguished from whole-P14 composition (Run20). No old proof source/public type is edited.
+
+## Run20 / unconditional Main connection
+
+All S, arbitrary original Field k and all rows i are connected in NSP14.Main. The literal interval target uses its own minimal variables. Frozen I_PARTITION/I_MAIN acceptances are proved; final certification/review/publication is tracked by new verification/run20 receipts, not this source-bound entry. See docs/RUN20_HANDOFF_JA.md.

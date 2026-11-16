@@ -1,0 +1,18 @@
+# Run20 / P14最終統合 引継ぎ
+
+採用base: `07fe1ed952ae31ce01255ce53df538bf0a76d5cc` (Run19通常公開)。原workspaceの.gitはread-onlyのため `/tmp/ns-p14-run20-20261116` に独立clone、borrowed objectなし、既存Run19 source/cacheは不変。
+
+公開入口: `NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion`。
+引数はS・k・[Field k]・iのみ。双方のFormalTangentAlgebra、双方独自のAtomExponent/FullPolynomialRing、literal intervalCompletionAllを使う。最小importは `NSP14.Main`。全域排他的分割は `parameter_partition`。凍結受入は `audit/run20/acceptance/I_PARTITION.lean` と `I_MAIN.lean`。
+
+数学・原稿対応は `RUN20_PAPER_CORRESPONDENCE_JA.md` と50-ID JSON。認証は新規 `verification/run20/runs/*/verification.json`、同source/evidence manifest、review本文/decision、配布ZIP/publication receiptを一つのproof SHAへ照合する。このhandoffやstatusの文字列だけではCOMPLETEではない。
+
+再現:
+
+```sh
+PATH=/path/to/pinned/lean/bin:$PATH python3 scripts/verify_run20.py --fresh-project-cache --output-dir verification/run20/runs/independent_unique
+```
+
+固定Lean/mathlibとGit履歴が必要。project lib/IR/tests/auditsはcold、mathlib package cacheは保持。任意 `--baseline-cache <base checkout>/.lake/build` は元sourceの同一性を検査して隔離先へコピーする。依存cacheを含まない監査bundleを完全offline checkoutとは呼ばない。
+
+最終独立レビューは全差分・Main意味・Run19/V06必要入力・全private宣言・verifier/guards/packager・全raw証跡を対象とする。修正後は必要な再検証と新snapshotに戻る。source-bound台帳は凍結後変更しない。最終status/review/Pushは別Git bytesに束縛する。

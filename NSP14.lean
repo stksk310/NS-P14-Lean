@@ -746,3 +746,6 @@ public import NSP14.SmallEmbedding.ThreePresentation
 public import NSP14.SmallEmbedding.LanTuVu
 public import NSP14.SmallEmbedding.ThreeComparison
 public import NSP14.Semigroup.IntervalCompletionAll
+
+-- Run20: unconditional P14 in each completed algebra's own minimal variables.
+public import NSP14.Main

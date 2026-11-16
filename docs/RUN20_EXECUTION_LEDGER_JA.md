@@ -13,3 +13,18 @@ Task1 in progress: 最新work 07fe1ed、AGENTSなし、dirtyなし、追加監�
 
 ## Task 2 / frozen contract
 I_PARTITION includes six regions, actual cut facts (the stronger all-e≥4 scope), and actual narrow normalization. Predicate definitions were introduced before their proofs to freeze the precise statement. I_MAIN is all S/k/i and the literal all-S target. Both named acceptances failed only for the absent closure export; definitions/target contracts passed. The immutable policy commit is bcadd3b.
+
+## Tasks 3–7 / mathematical connection
+
+- Six-region exhaustive and exclusive partition, actual rank facts including r2/delta0, and physical narrow normalization are proved in Main.Partition. Predicate definitions preceded proofs only to freeze the contract; no comparison was placed in a partition premise.
+- Carrier equality transports actual Betti with each ring's own variables, then completed_totalBetti on both sides. A different conductor fixture tests this distinction.
+- Five production branch consumers and a six-region Main proof close all S/k/i; e1 is the literal [1,1] closure. The old target has a separate he>=2 compatibility corollary.
+- Frozen RED exports became GREEN. Actual examples cover Q/F2/F3 and physical/nonCM/five/edge/dense/sparse boundaries. <6,7,9,11> has source beta5=0 and target beta5=5 by the actual AP formula.
+- Early preflight failures (proof elaboration of Nat subtraction/let aliases, missing explicit theorem types, missing AP-width import, and fixture instance heartbeats) were repaired without changing mathematical scope; failed logs remain in provenance. Named proof types are explicit, no defProp warnings are accepted in final validation.
+- Fifty original ID statements/quantifiers are retained in the coverage JSON with production declaration groups and actual consumer modules. Sufficient alternative proofs and unnecessary stronger assertions are explicitly distinguished. No required mathematical input remains assumed.
+
+## Tasks 8–9 / frozen publication protocol
+
+Full current and immutable-base audits import all every production/test/audit module directly. An independent environment name inventory detects even one dropped private declaration. All Run19 318 checks/299 fixtures remain, historical policy guards replay at their own immutable snapshots, while mathematics and new Main tests use current source. Normal/explicit types and collectAxioms cover every project declaration; allowed axioms are exactly propext/Classical.choice/Quot.sound.
+
+The final source snapshot must be committed before cold verification. Validation is not publication completion. Review, package, normal Push, actual remote SHA and clean status are separately observed and bound as post-validation Git bytes. Source-bound docs stay unchanged after verification.

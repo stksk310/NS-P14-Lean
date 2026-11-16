@@ -800,3 +800,7 @@ V06の五変更をLeanのactual consumerへ接続：competitorMin_height/competi
 
 ## Run19 の原稿対応
 新cubicから元のactual資源・全行への接続を形式化。SCによる純語の統一証明、u≤5で元R=0、幅4の直接actual kernel表示、三生成元の一変数端点資源による直接比較を採用した。詳細・保持した条件・原稿へ戻す差分は RUN19_PAPER_CORRESPONDENCE_JA.md。LTVの強い三つの線形数値上界および一般initial-ideal等式は形式化済みと主張しない。
+
+## Run20 / V06 synthesis
+
+The six exclusive regions and common literal-target transports close the public all-S/all-field/all-row completed tangent-cone comparison. See RUN20_PAPER_CORRESPONDENCE_JA.md and the 50-ID coverage JSON for exact statements, actual production consumers, sufficient alternative proofs and unused stronger assertions. Source/target top rows differ, as the actual beta5=0 versus5 fixture verifies. No publication claim is inferred from this ledger.

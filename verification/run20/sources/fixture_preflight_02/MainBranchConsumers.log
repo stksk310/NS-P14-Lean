@@ -1,0 +1,35 @@
+tests/MainBranchConsumers.lean:7:47: error(lean.inferDefTypeFailed): Failed to infer type of theorem `base`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainBranchConsumers.lean:7:78: error(lean.unknownIdentifier): Unknown identifier `k`
+tests/MainBranchConsumers.lean:7:83: error(lean.unknownIdentifier): Unknown identifier `i`
+tests/MainBranchConsumers.lean:7:0: error: type of theorem `NSP14.Tests.Run20Branches.base` is not a proposition
+  (S : NumericalSemigroup) → (he : S.embeddingDimension ≤ 2) → ?m.8 S he
+tests/MainBranchConsumers.lean:8:46: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainBranchConsumers.lean:8:78: error(lean.unknownIdentifier): Unknown identifier `k`
+tests/MainBranchConsumers.lean:8:83: error(lean.unknownIdentifier): Unknown identifier `i`
+tests/MainBranchConsumers.lean:8:0: error: type of theorem `NSP14.Tests.Run20Branches.three` is not a proposition
+  (S : NumericalSemigroup) → (he : S.embeddingDimension = 3) → ?m.7 S he
+tests/MainBranchConsumers.lean:9:85: error(lean.inferDefTypeFailed): Failed to infer type of theorem `ordinary`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainBranchConsumers.lean:10:32: error(lean.unknownIdentifier): Unknown identifier `k`
+tests/MainBranchConsumers.lean:10:40: error(lean.unknownIdentifier): Unknown identifier `i`
+tests/MainBranchConsumers.lean:9:0: error: type of theorem `NSP14.Tests.Run20Branches.ordinary` is not a proposition
+  (S : NumericalSemigroup) → (he : 4 ≤ S.embeddingDimension) → (hw : S.multiplicity - 1 ≤ S.width) → ?m.16 S he hw
+tests/MainBranchConsumers.lean:11:79: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainBranchConsumers.lean:12:35: error(lean.unknownIdentifier): Unknown identifier `k`
+tests/MainBranchConsumers.lean:12:43: error(lean.unknownIdentifier): Unknown identifier `i`
+tests/MainBranchConsumers.lean:11:0: error: type of theorem `NSP14.Tests.Run20Branches.four` is not a proposition
+  (S : NumericalSemigroup) → (he : S.embeddingDimension = 4) → (hw : S.width ≤ S.multiplicity - 2) → ?m.15 S he hw
+tests/MainBranchConsumers.lean:13:81: error(lean.inferDefTypeFailed): Failed to infer type of theorem `many`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainBranchConsumers.lean:14:35: error(lean.unknownIdentifier): Unknown identifier `k`
+tests/MainBranchConsumers.lean:14:43: error(lean.unknownIdentifier): Unknown identifier `i`
+tests/MainBranchConsumers.lean:13:0: error: type of theorem `NSP14.Tests.Run20Branches.many` is not a proposition
+  (S : NumericalSemigroup) → (he : 5 ≤ S.embeddingDimension) → (hw : S.width ≤ S.multiplicity - 2) → ?m.16 S he hw
