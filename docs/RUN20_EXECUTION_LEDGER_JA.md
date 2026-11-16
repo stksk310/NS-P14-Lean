@@ -64,3 +64,5 @@ pp.allでも複雑な型の表示に秒単位を要したため、全宣言のex
 F1修正後は59 controlsすべてexit0/PASS。独立レビューはexact prefix fixと実REDの特異性を確認済みで、他の数学・経路・全50項目・全preflight raw監査に追加指摘なし。証明sourceは不変。最終判定は次の新snapshot/cold証拠と最終レビューまで留保する。
 
 最終再現性チェックF2（Important）: 旧v06.preserve_evidenceのraw rglobは未追跡__pycache__/*.pycも数える。新規cloneでguardがaudit_partsを初importすると、数学・過去証拠が不変でも最後のfileset比較が失敗し得た。親の検出後、fresh reviewerが実Python importで独立再現。旧helperは改変せず、Run20に限り未追跡の__pycache__/*.pycだけを除外し、trackedな全path/bytesは拡張子を問わず保持するwrapperを追加する。実clean importのpositive不変検査とtracked pyc改変拒否を追加し、修正前の特異的REDを保存した。R02はrootと全311受入・初期継承検査がPASS後、全宣言監査途中でSIGTERM。部分streamはuncompressed SHA付きでlossless gzip保存し、成功へ数えない。新snapshot/R03で改めて全件を認証する。数学Lean source/凍結契約の差分は0。
+
+F2修正後の全61 controlsがexit0/PASS。実clean importの不変性とtracked pyc改変拒否を確認、fresh reviewerも有限な除外条件と旧helper非改変を確認した。数学ソースは初回freezeから不変。次のP3/R03を最終認証snapshotとし、raw全証拠まで同じfresh reviewerが再照合する。

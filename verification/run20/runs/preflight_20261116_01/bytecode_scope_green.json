@@ -1,0 +1,323 @@
+{
+  "status": "PASS_RUN20_NEGATIVE_CONTROLS",
+  "count": 61,
+  "controls": [
+    {
+      "control": "unaltered_source",
+      "passed": true
+    },
+    {
+      "control": "real_clean_import_bytecode_inventory_stable",
+      "passed": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-c",
+        "import importlib.util,sys; sys.dont_write_bytecode=False; s=importlib.util.spec_from_file_location(\"run20_runtime_bytecode_probe\",sys.argv[1]); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)",
+        "/tmp/run20-controls-gxw9cngu/repo/verification/run20/sources/audit_parts.py"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "control": "tracked_bytecode_tamper_still_rejected",
+      "passed": true,
+      "rejection": "retained evidence bytes/fileset changed"
+    },
+    {
+      "control": "arrived_audit_source_substitution",
+      "passed": true,
+      "rejection": "arrived audit Git bytes differ: scripts/package_run19_audit.py"
+    },
+    {
+      "control": "frozen_cut_predicate_weakened_to_True",
+      "passed": true,
+      "rejection": "frozen partition predicate bodies changed"
+    },
+    {
+      "control": "frozen_narrow_predicate_weakened_to_True",
+      "passed": true,
+      "rejection": "frozen partition predicate bodies changed"
+    },
+    {
+      "control": "unsafe_output_/tmp/run20-escape",
+      "passed": true,
+      "rejection": "unsafe relative path: /tmp/run20-escape"
+    },
+    {
+      "control": "unsafe_output_verification/run20/runs/../escape",
+      "passed": true,
+      "rejection": "unsafe relative path: verification/run20/runs/../escape"
+    },
+    {
+      "control": "unsafe_output_verification/run19/runs/old",
+      "passed": true,
+      "rejection": "unique verification/run20/runs/<id> required"
+    },
+    {
+      "control": "existing_output",
+      "passed": true,
+      "rejection": "output already exists"
+    },
+    {
+      "control": "symlink_output",
+      "passed": true,
+      "rejection": "symlink path is forbidden: verification/run20/runs/alias"
+    },
+    {
+      "control": "replay_symlink_output",
+      "passed": true
+    },
+    {
+      "control": "inherited_source",
+      "passed": true,
+      "rejection": "forbidden inherited edit: NSP14/Endpoint/CompetitorBounds.lean"
+    },
+    {
+      "control": "inherited_evidence",
+      "passed": true,
+      "rejection": "forbidden inherited edit: verification/run19/runs/release_20261116_r03/verification.json"
+    },
+    {
+      "control": "unlisted_source",
+      "passed": true,
+      "rejection": "files outside finite allowlist: ['NSP14/UnlistedRun20Control.lean']"
+    },
+    {
+      "control": "source_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "auxiliary_checker_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "parallel_audit_helper_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "kernel_DAG_codec_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "evidence_substitution",
+      "passed": true,
+      "rejection": "evidence manifest content or fileset changed"
+    },
+    {
+      "control": "changed_old_module_omitted",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_explicit_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_axioms",
+      "passed": true,
+      "rejection": "axiom audit coverage missing: Control.old"
+    },
+    {
+      "control": "old_public_type_changed",
+      "passed": true,
+      "rejection": "base export type changed: Control.old (explicit_type)"
+    },
+    {
+      "control": "additional_axiom",
+      "passed": true,
+      "rejection": "unapproved or self axiom dependency: Control.new"
+    },
+    {
+      "control": "helper_omitted",
+      "passed": true,
+      "rejection": "environment declaration fileset coverage differs"
+    },
+    {
+      "control": "named_helper_omitted_despite_other_module_rows",
+      "passed": true,
+      "rejection": "named fixture helper coverage missing: [('tests.N4StandardWords', 'NSP14.Tests.Run19Words.collective')]"
+    },
+    {
+      "control": "each_typed_module_imported_all_directly",
+      "passed": true
+    },
+    {
+      "control": "single_private_name_omitted_with_module_remaining",
+      "passed": true,
+      "rejection": "environment declaration fileset coverage differs"
+    },
+    {
+      "control": "private_name_omitted_from_both_rows_and_metadata",
+      "passed": true,
+      "rejection": "independent frozen declaration-name coverage differs"
+    },
+    {
+      "control": "complete_kernel_type_omitted",
+      "passed": true,
+      "rejection": "full kernel explicit type coverage missing"
+    },
+    {
+      "control": "kernel_alpha_roundtrip_failed",
+      "passed": true,
+      "rejection": "full kernel explicit type coverage missing"
+    },
+    {
+      "control": "kernel_DAG_roundtrip_failed",
+      "passed": true,
+      "rejection": "full kernel explicit type coverage missing"
+    },
+    {
+      "control": "audit_part_omitted",
+      "passed": true,
+      "rejection": "part module coverage missing"
+    },
+    {
+      "control": "audit_part_duplicated",
+      "passed": true,
+      "rejection": "duplicate part module coverage"
+    },
+    {
+      "control": "private_explicit_type_omitted",
+      "passed": true,
+      "rejection": "declaration type coverage missing: NSP14.Tests.Run19Words.collective"
+    },
+    {
+      "control": "whole_project_import_omitted",
+      "passed": true,
+      "rejection": "environment imported-module coverage missing"
+    },
+    {
+      "control": "main_scope_shrunk",
+      "passed": true,
+      "rejection": "main universal scope/type differs: NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion"
+    },
+    {
+      "control": "frozen_scope",
+      "passed": true,
+      "rejection": "frozen contract changed: audit/run20/RequestedGoals.lean"
+    },
+    {
+      "control": "frozen_acceptance",
+      "passed": true,
+      "rejection": "frozen contract changed: audit/run20/acceptance/I_MAIN.lean"
+    },
+    {
+      "control": "empty_import_missing",
+      "passed": true,
+      "rejection": "environment imported-module coverage missing"
+    },
+    {
+      "control": "inherited_fixture_omitted",
+      "passed": true,
+      "rejection": "inherited fixture coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_v06_routes",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_environment_axioms",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_base_environment_types",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_run19_routes",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_run19_negative_controls",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "command_mapping_omitted",
+      "passed": true,
+      "rejection": "command map coverage missing/duplicate"
+    },
+    {
+      "control": "command_mapping_substituted",
+      "passed": true,
+      "rejection": "command map binding differs: build"
+    },
+    {
+      "control": "original_ID_omitted",
+      "passed": true,
+      "rejection": "50-ID map coverage differs"
+    },
+    {
+      "control": "original_ID_quantifiers_changed",
+      "passed": true,
+      "rejection": "original ID meaning changed: X_BASIC"
+    },
+    {
+      "control": "real_lean_additional_axiom",
+      "passed": true,
+      "rejection": "unapproved or self axiom dependency: Run20Negative.consumer",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M12288",
+        "/tmp/run20-controls-gxw9cngu/repo/Run20NegativeAxiom.lean"
+      ],
+      "raw_output": "{\"axioms\":[\"Run20Negative.bad\"]}\n"
+    },
+    {
+      "control": "valid_synthetic_publication_binding",
+      "passed": true
+    },
+    {
+      "control": "packager_auxiliary_checker_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "review_mismatch_source_snapshot_commit",
+      "passed": true,
+      "rejection": "review snapshot/scope mismatch"
+    },
+    {
+      "control": "review_mismatch_verification_summary_sha256",
+      "passed": true,
+      "rejection": "review evidence mismatch"
+    },
+    {
+      "control": "review_mismatch_review_report_sha256",
+      "passed": true,
+      "rejection": "review body mismatch"
+    },
+    {
+      "control": "review_mismatch_minor",
+      "passed": true,
+      "rejection": "review gate failed"
+    },
+    {
+      "control": "existing_zip",
+      "passed": true,
+      "rejection": "archive already exists"
+    },
+    {
+      "control": "reviewed_source_git_substitution",
+      "passed": true,
+      "rejection": "reviewed source Git bytes mismatch: src.lean"
+    }
+  ]
+}
