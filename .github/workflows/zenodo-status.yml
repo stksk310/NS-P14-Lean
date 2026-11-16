@@ -1,0 +1,28 @@
+name: Inspect public Zenodo release status
+on:
+  push:
+    branches: [diagnostics/zenodo-v1.0.0]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read the public record search response
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.parse, urllib.error
+          query=urllib.parse.urlencode({'q':'"NS-P14-Lean"','size':10,'sort':'mostrecent'})
+          req=urllib.request.Request('https://zenodo.org/api/records?'+query,headers={'User-Agent':'NS-P14-Lean-release-verification/1.0'})
+          try:
+              with urllib.request.urlopen(req,timeout=90) as response:
+                  data=json.load(response)
+              print('TOTAL',data.get('hits',{}).get('total'))
+              for record in data.get('hits',{}).get('hits',[]):
+                  print(json.dumps(record,ensure_ascii=False)[:30000])
+          except urllib.error.HTTPError as error:
+              print('HTTP_STATUS',error.code)
+              print(error.read(4000).decode(errors='replace'))
+              raise
+          PY
