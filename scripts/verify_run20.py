@@ -18,7 +18,13 @@ def load(name,path):
 old=load('run20_helpers',ROOT/'scripts/verify_run19.py');v06=old.v06
 sha=old.sha;git=old.git;safe=old.safe;write_json=old.write_json
 evidence_manifest=old.evidence_manifest;check_evidence_manifest=old.check_evidence_manifest
-preserve_evidence=v06.preserve_evidence
+
+def preserve_evidence(root,excluded):
+    # Imports may create interpreter caches in a clean reproduction. They are
+    # not historical evidence. Every tracked path remains bound, even a .pyc.
+    tracked=set(git(root,'ls-files','-z','--cached').decode().split('\0'))
+    return {n:h for n,h in v06.preserve_evidence(root,excluded).items()
+      if n in tracked or not ('__pycache__' in Path(n).parts and n.endswith('.pyc'))}
 
 def source_manifest(root):
     result=v06.source_manifest(root)
@@ -196,7 +202,7 @@ def main():
         rel=a.output_dir or 'verification/run20/runs/release_'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
         out=validate_output(ROOT,rel);proof=git(ROOT,'rev-parse','HEAD').decode().strip()
         initial=source_manifest(ROOT);check_source_manifest(ROOT,initial,proof)
-        prior=json.loads((ROOT/PRIOR/'verification.json').read_text());retained=v06.preserve_evidence(ROOT,out)
+        prior=json.loads((ROOT/PRIOR/'verification.json').read_text());retained=preserve_evidence(ROOT,out)
         out.mkdir(parents=True,exist_ok=False);created=True;records=[]
         write_json(out/'SOURCE_SHA256.json',initial);write_json(out/'INHERITED_EVIDENCE_SHA256.json',retained)
         snapshot={'proof_snapshot_commit':proof,'base':BASE,'lean':subprocess.check_output(['lean','--version'],text=True).strip(),'mathlib':git(ROOT/'.lake/packages/mathlib','rev-parse','HEAD').decode().strip()}
@@ -293,7 +299,7 @@ def main():
         run('run20_negative_controls',['python3','scripts/check_run20_guards.py','--output',str(Path(rel)/'guards.json')])
         validate_coverage(prior,records,fixtures);invariant();validate_changes(ROOT)
         if dependency_snapshot(ROOT)!=snapshot['dependency_sources']:raise ValueError('dependency sources changed during validation')
-        if v06.preserve_evidence(ROOT,out)!=retained:raise ValueError('inherited evidence bytes/fileset changed')
+        if preserve_evidence(ROOT,out)!=retained:raise ValueError('inherited evidence bytes/fileset changed')
         # Derive the complete map from the commands that actually executed,
         # including both base checks and all newly added certification checks.
         prior_by_name={r['name']:r for r in prior['checks']}

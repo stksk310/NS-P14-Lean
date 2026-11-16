@@ -30,7 +30,7 @@ def main():
         excluded=r/'verification/run20/runs/current_runtime_probe'
         before=v.preserve_evidence(r,excluded)
         helper=r/'verification/run20/sources/audit_parts.py'
-        command=[sys.executable,'-c','import importlib.util,sys; s=importlib.util.spec_from_file_location("run20_runtime_bytecode_probe",sys.argv[1]); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)',str(helper)]
+        command=[sys.executable,'-c','import importlib.util,sys; sys.dont_write_bytecode=False; s=importlib.util.spec_from_file_location("run20_runtime_bytecode_probe",sys.argv[1]); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)',str(helper)]
         probe=subprocess.run(command,cwd=r,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         if probe.returncode:raise ValueError('real bytecode import failed: '+probe.stdout)
         cache=Path(importlib.util.cache_from_source(str(helper)))
