@@ -1,0 +1,32 @@
+name: Publish audited release and verify Zenodo
+
+on:
+  push:
+    tags: [v1.0.0]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-v1.0.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'stksk310/NS-P14-Lean'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out the fixed release tag and full audit history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: v1.0.0
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Test publication identity and archive guards
+        run: python3 -m unittest discover -s docs/publication -p 'test_publish_release.py' -v
+      - name: Publish release and verify preserved source bytes and DOI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 docs/publication/publish_release.py --publish

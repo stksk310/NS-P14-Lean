@@ -1,53 +1,70 @@
 # NS-P14-Lean
 
-Lean formalization of NS-P14: total Betti-number comparisons for tangent cones
-of numerical semigroup rings and their interval completions over arbitrary fields.
+Lean formalization of the interval-completion comparison for total Betti numbers
+of numerical semigroup tangent cones (NS-P14).
 
-**Work in progress — the whole-P14 formalization is not yet complete.**
-**公開準備中。全P14のLean化は未完成です。**
+**P14 formalization and final independent audit: complete.**
+**全P14のLean形式化・最終独立監査は完了しています。**
 
 Author: **Keisuke Sato** · [ORCID 0009-0005-4230-0268](https://orcid.org/0009-0005-4230-0268)
 
-## Current status / 現在の状態
+## Main theorem / 主定理
 
-2026-11-16 JST、公開準備の基準は開発・監査ブランチ`work`の
-`342fbdda072fc5d6aa5e8f2d8968456cc54c12a6`。
-[Run19完了記録](verification/run19/RUN19_COMPLETE_20261116_R03.json)と
-[その後の独立監査記録](verification/run19/publication/independent_audit_push_20261116_r01.json)は
-Run19の完了と`all_P14_complete: false`を記録しています。
-**Run20の全域分割・主定理合成（`I_PARTITION` / `I_MAIN`）は残っています。**
-紙上の全域証明や個々の検証成功を、全P14のLean完成とは扱いません。
-上記は保存された検証記録の説明であり、今回新しくLean検証を行ったという表示ではありません。
+For every numerical semigroup `S`, every field `k`, and every homological degree
+`i`, the total Betti number of the completed tangent cone of `S` is bounded by
+that of its literal interval completion. Source and target each use their own
+actual minimal atom variables and polynomial ring. No characteristic or
+Cohen–Macaulay hypothesis is imposed.
 
-GitHub・Zenodoでの公開を準備しています。今回の準備ではリポジトリを非公開のまま保ち、
-Release・タグ・DOIを新規発行しません。
-調査時のdefault branch `main`は初期化時点のため、実装を見る際は`work`を参照してください。
-[公開準備と未実施の項目](docs/publication/README_JA.md)を参照してください。
+最小importは`NSP14.Main`、公開定理は
+[`NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion`](NSP14/Main.lean)です。
+引数は`S`・`k`・`[Field k]`・`i`のみです。
 
-## Start here / 最初に読むもの
+```lean
+import NSP14.Main
+
+#check NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion
+```
+
+## Verified provenance / 検証と監査の根拠
+
+公開版v1.0.0のコード基準は、最終監査後の
+`e72713965716d7f93f672034c6332a79b59b1c53`です。
+[Run20完了receipt](verification/run20/RUN20_COMPLETE_20261116_R03.json)と
+[最終独立監査](verification/run20/independent_audit_20261116_r01/AUDIT_JA.md)・
+[監査後push receipt](verification/run20/publication/independent_audit_push_20261116_r01.json)が
+全P14の完了、必要な未証明入力なし、未解決指摘なしを記録しています。
+
+- 保存されたcold検証：335 checks、311 fixtures、15,774 declarations、1,019 modules。
+- 許容公理：`propext`、`Classical.choice`、`Quot.sound`。
+- 正本proof commit：`1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e`。
+- 最終独立cold検証対象：`a5e122a4d09536b1609c5faa8d419f8faf81671f`。
+
+これらは保存済みのLean検証・監査記録です。今回の公開作業では、監査済みファイル・
+配布ZIPのハッシュとGit bytesを照合し、公開用文書を整備しています。
+**公開用文書の追加を、新たなLean buildや数学的監査の実行とは表示しません。**
+
+## Start here / 読む順序
 
 | 対象 | 入口 |
 |---|---|
-| 数学的な主張と紙上証明 | [V06単一原稿](proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md)・[読解案内](proof_sharp_v6/README_JA.md) |
-| 現在のLean到達範囲 | [Run19完了receipt](verification/run19/RUN19_COMPLETE_20261116_R03.json)・[Run19/20引継ぎ](docs/RUN19_HANDOFF_JA.md) |
-| 原稿とLeanの対応 | [全体の変更台帳](docs/LEAN_PAPER_ALIGNMENT_JA.md)・[Run19対応](docs/RUN19_PAPER_CORRESPONDENCE_JA.md) |
-| 実装 | [Leanライブラリ入口](NSP14.lean)・[NSP14](NSP14/) |
-| 公開・引用 | [公開準備](docs/publication/README_JA.md)・[引用情報](CITATION.cff)・[release notes draft](docs/publication/RELEASE_NOTES_DRAFT.md) |
+| 公開主定理 | [Main.lean](NSP14/Main.lean)・[全域分割](NSP14/Main/Partition.lean) |
+| 検証結果・再現範囲 | [Run20 README](verification/run20/README.md)・[監査引継ぎ](docs/RUN20_HANDOFF_JA.md) |
+| 原稿と実装の対応 | [Run20対応](docs/RUN20_PAPER_CORRESPONDENCE_JA.md)・[50 IDの被覆](docs/RUN20_DEPENDENCY_COVERAGE.json) |
+| 日本語の歴史的証明稿 | [V06原稿](proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md)・[V06案内](proof_sharp_v6/README_JA.md) |
+| 公開・引用情報 | [v1.0.0説明](docs/publication/RELEASE_NOTES_v1.0.0.md)・[引用情報](CITATION.cff)・[公開記録の案内](docs/publication/README_JA.md) |
 
-原稿や下記の過去の進捗節は、それぞれの固定SHA・時点の状態を記録したものです。
-最新の状態と過去のPARTIAL記録を混同しないでください。
+V06原稿と下記の過去の進捗節は、その時点の固定SHAを対象とする歴史資料です。
+過去の「未完」表示を現在の到達範囲と混同せず、Run20の完了receiptと合わせて読んでください。
 
 ## Reproduction / 再現
 
 Pinned Lean: `v4.36.0-rc2`; mathlib:
 `139105d28c7685a154cb3093f79edb2e16708099`。
-[lean-toolchain](lean-toolchain)、[Lake設定](lakefile.toml)、
-[依存lock](lake-manifest.json)を保持しています。
-
-Git・Python・elanによる固定Leanの利用環境が必要です。検証スクリプトには
-Python 3.12以降を推奨します（`tarfile`の`filter="data"`等を使います）。
-リポジトリのルートで実行します。
-依存取得にはネットワークと十分なディスク容量が必要です。
+[lean-toolchain](lean-toolchain)・[Lake設定](lakefile.toml)・
+[依存lock](lake-manifest.json)を固定しています。
+Git・elanと、検証スクリプト用にPython 3.12以降を推奨します。
+リポジトリのルートで次を実行します。依存取得にはネットワークと十分なディスク容量が必要です。
 
 ```sh
 lake update
@@ -55,32 +72,28 @@ lake exe cache get
 lake build
 ```
 
-`lake build`はライブラリのビルドです。Run19の検証器はREADME等も過去の内容に
-凍結照合するため、公開用文書を追加したツリーではそのまま通りません。
-過去のRun19結果を再現する場合は、固定commitの**別チェックアウト**を使い、
-[引継ぎ](docs/RUN19_HANDOFF_JA.md)に従い**未使用の出力先**を指定します。
-次は現在のリポジトリのルートから実行する例です。別checkoutの依存は別途取得されます。
-これは長時間の検証であり、今回の公開準備では実行していません。
+`lake build`はライブラリのビルドです。全受入型・公理依存等を含む保存済みRun20検証を
+再現する場合、検証器が旧READMEとfilesetも凍結照合するため、**監査済みcommitの別checkout**を使います。
 
 ```sh
-git worktree add --detach ../NS-P14-Run19-recheck \
-  342fbdda072fc5d6aa5e8f2d8968456cc54c12a6
-cd ../NS-P14-Run19-recheck
+git worktree add --detach ../NS-P14-Run20-recheck \
+  e72713965716d7f93f672034c6332a79b59b1c53
+cd ../NS-P14-Run20-recheck
 lake update
 lake exe cache get
-python3 scripts/verify_run19.py --fresh-test-cache \
-  --output-dir verification/run19/runs/local_publication_recheck_01
+python3 scripts/verify_run20.py --fresh-project-cache \
+  --output-dir verification/run20/runs/local_publication_recheck_01
 ```
 
-既存証跡・ZIPを上書きしないでください。監査ZIPはコンパイラ・依存を含む
-完全なoffline checkoutではありません。Run20追加後は、その公開commitに対応する
-全域の検証入口を改めて明記します。固定commitの再検証は、公開用変更を加えた
-新しいcommit自体の認証にはなりません。
+未使用の出力先を選び、古い証跡・ZIPを上書きしないでください。
+project lib/IR/tests/auditsはcold再構築し、固定mathlib cacheは保持する検証です。
+監査ZIPはコンパイラ・全依存・Git履歴を含む完全offline checkoutではありません。
+公開用変更を含むツリー自体のfresh Lean認証とは区別します。
 
 ## Citation and licenses / 引用・ライセンス
 
-引用情報は[CITATION.cff](CITATION.cff)にあります。公開版番号・公開日・DOIは未確定のため
-記載していません。特定の成果を参照する際はcommit SHAと検証範囲を併記してください。
+公開版はv1.0.0です。[CITATION.cff](CITATION.cff)に著者・ORCID・版番号を記載しています。
+Zenodo DOIは登録の実測結果を確認してから追記します。
 
 - オリジナルのコード・検証スクリプト：**[Apache-2.0](LICENSE)**
 - オリジナルの論文・説明文：**[CC-BY-4.0](LICENSES/CC-BY-4.0.txt)**
