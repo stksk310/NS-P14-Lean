@@ -1,0 +1,438 @@
+{
+  "registry_sha256": "bc0c33189b28ad2ec0f27da023df52f22ea0ad816474e1103d907ee6ddfecd8b",
+  "scope": "V03 original statements mapped individually to actual exports and V06 usage; not proof by DAG",
+  "entries": [
+    {
+      "id": "X_BASIC",
+      "original_statement": "Koszul複体は多項式環上のTorを計算する。短完全列のTor長完全列、有界二重複体のスペクトル系列、Hilbert syzygy、分数体上のEuler式、同次Gröbner除法を使う。",
+      "original_quantifiers": "本稿で指定する各体k、有限生成次数付き加群、有界Koszul二重複体。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_NORMALIZE",
+      "original_statement": "e≥4かつw≤m−2ならd=gcd(g2−m,...,ge−m),u=w/d,q=e−2として端点模型E1の仮定とm≥du+2を満たす。",
+      "original_quantifiers": "全真正なe≥4数値半群、整数幅w≤m−2。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_PARTITION",
+      "original_statement": "e≤3を先に処理し、e≥4では整数幅によりw≤m−2又はw≥m−1。狭幅はe=4とe≥5、ordinaryはr=2,3/4..8/≥9へ分ける。",
+      "original_quantifiers": "全真正な数値半群、任意体。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_BASE",
+      "original_statement": "e=1ならΓ=Nでsource=target。e=2ならG=k[x,y]/(y^m)、Betti列(1,1)でactual targetが支払う。",
+      "original_quantifiers": "真正な数値半群、任意体、e=1又は2、全i≥0。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_LTV",
+      "original_statement": "三生成元数値半群の接錐Betti数はactual interval completionの対応Betti数以下。",
+      "original_quantifiers": "真正な三生成元数値半群、任意体、全total Betti行。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_THREE",
+      "original_statement": "e=3のP14比較。ordinaryはO_CLOSEでも処理できるが、全域合成では公刊三生成元定理を使って一度だけ処理する。",
+      "original_quantifiers": "真正な三生成元数値半群、任意体、全i≥0。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_COORD",
+      "original_statement": "x=[m], A=G/xG, T=(0:_G x), N⊂A を非 Apéry head の S0-斉次イデアルとする。actual Q=A/N は Apéry 基底を持ち length Q=m, q0=1,q1=e−1,Σ_{s≥2}q_s=δ, A2=Q2, ν≤δ+1。terminal τ↦τ+m は基底全単射。2≤d(τ)≤ν。同 jump のみ gr_s^D(T)≅F_sN/F_{s−1}N（次数差 s）。",
+      "original_quantifiers": "任意体 k、真正な最小生成系 Γ=<m=g1<…<ge>, e≥2。各 s、全生きた非 x 作用。Part II の cut 以後は e≥3。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_GREEN",
+      "original_statement": "標準次数付き代数の一般超平面切断の次数2 Hilbert関数をMacaulay下降で上から評価できる。反復によりr=max(2,p(a))本で二次以上を消せる。",
+      "original_quantifiers": "無限体k上の標準次数付き代数、一般一次形式、a=dim A2。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_FIELD",
+      "original_statement": "多項式環上のgraded/total Betti数は体拡大で不変。有限体から無限な純超越拡大へ移り、一般cutを選んだ後に元の体へ戻せる。",
+      "original_quantifiers": "任意体k、体拡大K/k、本稿の有限生成次数付き代数G。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_CUT",
+      "original_statement": "a=q2、p(a)=max{p≥0:C(p+1,2)≤a}、r=max(2,p(a)) と置く。2≤r≤e−1 で、独立な非 x 一次形式 E=(λ1,…,λr) を一度固定して (A/EA)_{≥2}=0 とできる。P=k[E] に全 strata と完全列を制限する。",
+      "original_quantifiers": "任意体 k、e≥3、actual a。有限体は同標数の純超越拡大後に一般形式を選ぶ。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_VOLUME",
+      "original_statement": "bρ は剰余 ρ の最小正 offset 和、lρ はその最短語長、sρ=ord(ωρ), Lρ=(ωρ−bρ)/m。非零剰余では 1≤sρ≤Lρ≤lρ。bρ 昇順 ρ_k について Lρ_k−1≤min(δ,k−1)、Σ_{ρ≠0}(Lρ−1)≤δV。Σ_{τ≡ρ}(d(τ)−1)=Lρ−sρ。order は q≥lρ−Lρ で ord(ωρ+qm)=Lρ+q に安定する。",
+      "original_quantifiers": "任意真正な Γ、各非零剰余 ρ、1≤k≤m−1、各整数 q≥lρ−Lρ。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_TOWER",
+      "original_statement": "F_s は jump≤s の head ideal、U_s=A/F_{s−1},X_s=(U_s)_{≥s},M_s=(U_s)_{≥s+1},K_s=F_s/F_{s−1}。0→K_s→M_s→X_{s+1}→0、X_{ν+1}=0。X_s,M_s はそれぞれ次数 s,s+1 のみで生成。H_t=Σ_s dim(X_s)_{s+t} は有限台、H0=δ,0≤H_t≤M,S=ΣH_t=Σ_{ρ≠0}(Lρ−1)≤δV,H1=δ−a+ℓ≤M−a,H1≤rδ。r≥3 なら a≥a_r=C(r+1,2) なので H1≤M−a_r。",
+      "original_quantifiers": "一つの Γ・体・cut を固定し、2≤s≤ν、全 t≥0。δ=0 は空塔と零資源列。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_HARMONIC",
+      "original_statement": "P=k[x1,…,xr]、単一次数 b のみで極小生成される有限長 Z、h_t=dim Z_{b+t} に対し c_j^P(Z)≤C(r−1,j)Σ_{t≥0} j h_t/(t+j) (1≤j<r)。c0=μ_P(Z),c_r=0。",
+      "original_quantifiers": "任意体、r≥2、全有限長の単一次数生成 P-加群 Z、1≤j<r。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_TOR",
+      "original_statement": "R=k[x,E]。c_j^R(G)=c_j^P(A)+c_{j−1}^P(T)−ρ_{j+1}。B=A/X2、L_j=(e−1)C(r−1,j)−C(r−1,j+1)。c_j(G)≤L_j+Σ_t W_j(t)H_t (1≤j≤r)。W1(0)=r−1,W1(1)=(r+1)/2,W1(t)=(r−1)/(t+1) (t≥2)。j≥2: W_j(0)=C(r−1,j), W_j(t)=jC(r−1,j)/(t+j)+(j−1)C(r−1,j−1)/(t+j−2) (t≥1)。",
+      "original_quantifiers": "同じ Γ、k、P、全 1≤j≤r（top rank 含む）。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_AP_BETTI",
+      "original_statement": "真正な最小算術列生成系の半群環に対し、Gimenez–Sengupta–Srinivasan Theorem4.1のBetti公式を使用する。",
+      "original_quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系である算術列数値半群。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_AP_CONE",
+      "original_statement": "算術列生成系では定義理想とその接錐理想のBetti数が一致する。",
+      "original_quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_TARGET",
+      "original_statement": "v=min(w,m−1)のactual completionのBetti数はTAR。剰余別最小値TMINはvについて非減少。ordinaryではFi=iC(m,i+1)。",
+      "original_quantifiers": "m≥2、w≥1、全i≥1。第0行1、i>vは0。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_TARGET",
+      "original_statement": "ordinary target T_m=1+Σ_{i≥1}iC(m,i+1)z^i。f=e−r−1,C(z)=Σ_{j=1}^r c_j(G)z^j に対し B_G≼T_{f+1}+(1+z)^f[B_G^R−(f+1)]=T_{e−r+1}+(1+z)^{e−r}C(z)。q=e−r,N*=δ+r−1 とすると T_m−T_{q+1}=(1+z)^qΣ_{j=1}^{N*}R_j z^j、R_j=(q+j)C(N*,j)+jC(N*,j+1)。全 j≤r の c_j≤R_j が全 Betti 行に十分。また R_j−L_j≥δ(V+1)C(r−1,j−1)。",
+      "original_quantifiers": "actual ordinary completion を持つ source、同体、全1≤j≤r、全 Betti i≥0。δ=0 も含む。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_LOW",
+      "original_statement": "r=2,3 の全 actual ordinary source で c_j(G)≤R_j (1≤j≤r)。r=2: c1−L1≤min(3S/2−δ/2,5δ/2+S/2)≤δ(V+1),c2≤S−δ。r=3: c1−L1≤4δ/3+4H1/3+2S/3,c2−L2≤3δ+3S/2,c3≤S−δ。",
+      "original_quantifiers": "同一資源列の actual cut r∈{2,3}、全e≥r+1、全δ（r=3ではδ≥6）。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_SCALAR",
+      "original_statement": "r≥4 で F_r=(r−1)δ+(r+1)H1/2+Σ_{t≥2}(r−1)H_t/(t+1)。全1≤j≤rで c_j(G)≤L_j+C(r−1,j−1)F_r。従って F_r≤δ(V+1) は全 Betti 行の十分条件。",
+      "original_quantifiers": "任意 actual cut r≥4、同一H_t、全相対1≤j≤r。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_SIDON",
+      "original_statement": "actual Q の q2=C(e,2) なら m≥e(e−1)+1, δ≥(e−1)^2。actual cut が r=e−1 かつ r≥3 の場合は q2=C(e,2) が強制されるので、e=r+1,δ=a_r は不可能。特に r=6,7,8 の負基点 (e,δ)=(7,21),(8,28),(9,36) は actual source を持たない。",
+      "original_quantifiers": "任意体、真正な最小生成系 e≥2。cut の系は r=e−1 かつ r≥3 のときのみ。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_SMALL",
+      "original_statement": "4≤r≤8、actual e≥r+1,δ≥a_r に対し F_r<δ(V+1)。固定整数 n≥r、α=(r−1)/(n+1),c=(r+1)/2−α による U=αδV+(r−1−α)δ+c(M−a)+MΣ_{j=2}^{n−1}((r−1)/(j+1)−α)、G=δ(V+1)−U とする。e=r+1+s,δ=a+t に対し G=g+sA+tb+(1−α)(C(t,2)+st)、A=a−1−(r−1)(H_n−2+(a+2)/(n+1)),b=A+2−α(r−1)。",
+      "original_quantifiers": "r∈{4,5,6,7,8}、整数s,t≥0、actual同一資源列。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_LARGE",
+      "original_statement": "actual cut r≥9 はe≥r+1≥10,δ≥a=r(r+1)/2 を満たし F_r<δ(V+1)。D=floor(a/2)+1、α=(r−1)/(D+1) を固定。G_r(e,δ)=G_r(10,δ)+(e−10)A_r(δ)。g0=G_r(10,a)>0,A0=A_r(a)>0,b0=A0+11−r−8α>1/4。整数t=δ−a≥0 で A_r(a+t)=A0+(1−α)t、G_r(10,a+t)=g0+t b0+(1−α)C(t,2)>0。",
+      "original_quantifiers": "r≥9,e≥10,整数δ≥a_r（actual適用はe≥r+1）。同一資源列。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "O_CLOSE",
+      "original_statement": "任意体 k、真正な e≥3 source、w≥m−1 なら β0(G)=1、全i≥1で β_i(G;k)≤iC(m,i+1)=β_i(G_actual completion;k)。",
+      "original_quantifiers": "全任意体、全真正な数値半群 e≥3,w≥m−1、全Betti行i≥0。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_CORE",
+      "original_statement": "表示された生成元は最小で Γ は数値半群。C=k[s,st^{a₁},…,st^{a_q},st^u] から G へ、sⁿtᴮ↦(t^{nm+dB})*（ν(nm+dB)>n なら 0）の次数付き環全射 φ があり、ker φ は C の単項式基底の一部で張られる。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "C の全単項式 sⁿtᴮ、n≥0"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_COORD",
+      "original_statement": "B=r+uK、n=L+K+ε_r の一意座標で C≅⊕_{r=0}^{u−1}M_r[ε_r,r]。M_r は |α|≤u−1 の内部語からの有限単項式リストで生成され、全 M_r≠0、M₀=E、H_x≤u−2。この分解は E-加群同型である。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "0≤r<u",
+        "α∈ℕ^q、|α|≤u−1"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_KERNEL",
+      "original_statement": "長い表示は (n,B)↦(n+jd,B−jm)、j≥1 に尽くされる。r+jm=s+cu の下で Min M_r の点 (L,K) からの禁止領域の始点は (max{0,L−jd−c+ε_r−ε_s},K+c)。全競合で生成する T_s に対して actual 核は N_s=M_s∩T_s であり、G≅⊕_s M_s/N_s[ε_s,s] は E-加群同型。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "j≥1、0≤r,s<u、(L,K)∈Min M_r"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_STOP",
+      "original_statement": "c−ε_r+ε_s≥⌊jm/u⌋、競合始点の第一座標≤max{0,H_x−2j}。J₀=⌊(u−2)/2⌋、p=u/gcd(m,u) なら T_s=Σ_{j=1}^{J₀+p}T_{s,j}。G は有限生成 E-加群で、v^m=0、rank_E G=0。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全 s と全 j≥1"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_BOUNDS",
+      "original_statement": "内部ステップの mod u 最短語長を ℓ_r、ℓ₀=0、W=1+Σ_rℓ_r とすると、P_C≤W、R≤R̂=min{W−u,u max(H_x−2,0)}。これは m,d に一様で、gcd(m,u)=1 や Cohen–Macaulay 性を要求しない。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "同じ向きの core の全剰余 r,s"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_HOMOLOGY",
+      "original_statement": "Q_C=C/(x,v)C は (Q_C)₁≅k^q、(Q_C)_n=0 (n≥u) の Artin T-商。P_C=dim Q_C、P_G=dim G/(x,v)G、R=dim(0:_G(x,v)) とすると、dim H_•(x,v;G)=(P_G,P_G+R,R)。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "端点 homology の次数 0,1,2"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_TRANSFER",
+      "original_statement": "全 i≥0 に対し β_i^S(G)≤b_i^T(Q_C)+P_C binom(q,i−1)+R binom(q+1,i−1)。R は R̂ に置換できる。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全 i≥0（範囲外二項係数・負添字 Betti 数は 0）"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "W_EDGE",
+      "original_statement": "For e=q+2>=5 and u=q+1 or q+2, beta_i(G;k)<=F_i(m,du) for every i>=0. For u=q+2, internal and edge missing offsets are both included; the edge formula retains the indicators at i=q and i=q+1.",
+      "original_quantifiers": "All k,e,q,d,m and ordered primitive offsets in scopeW, with u in {q+1,q+2}; all i>=0.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_BHP_EK",
+      "original_statement": "同じHilbert関数を持つlex商のgraded Betti数が一般商を支配する。lex理想の生成元vは商のi行へC(max(v)-1,i-1)を寄与する。",
+      "original_quantifiers": "任意体k、同じ標準次数付き多項式環上の斉次商、全graded Betti行i≥1。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "W_DENSE",
+      "original_statement": "Resource clause: for q>=3 and 0<=t=u-1-q<=q, W=q+1+2t, P_C<=q+1+2t, R<=t, and t<=2 implies R=0. Closure clause: for q>=4 and 2<=t<=q, every positive source row is at most the target's first term i*C(u,i+1), hence actual P14 holds.",
+      "original_quantifiers": "All parameters in scopeW. The resource clause allows q>=3 and 0<=t<=q; the closure clause requires q>=4 and 2<=t<=q; every 1<=i<=q+2, with i>q+2 zero.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_KNESER",
+      "original_statement": "有限非空A,BとH=stab(A+B)に対し|A+B|≥|A+H|+|B+H|-|H|。反復版も用いる。",
+      "original_quantifiers": "有限巡回群。素数位数に限定しない。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_ARTIN",
+      "original_statement": "I₁=0 の標準次数付き Artin 商 A=T/I、h_n=dim A_n、P=Σh_n に対し、b₁≤q+Σ_{n≥1}(q−1)h_n/(n+1)≤(q−1)P/3+(q+1)(q+2)/6。h₂ を保持した E26 と q=5 の b₁−P≤14 が成立し、全 i≥1 で b_i≤P binom(q,i)−binom(q+1,i+1)。",
+      "original_quantifiers": [
+        "任意の体 k、任意の整数 q≥2",
+        "すべての標準次数付き Artin 商 A=T/I、I₁=0",
+        "全 i≥1"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_ROW",
+      "original_statement": "h_n=dim(Q_C)_n とすると β₁(G)≤P_C+floor(q+Σ_{n≥1}(q−1)h_n/(n+1))+R̂。2≤i≤q+2 では β_i(G)≤P_C binom(q+1,i)+R̂ binom(q+1,i−1)−binom(q+1,i+1)。β₀=1、i>q+2 で β_i=0、上端 β_{q+2}≤R̂。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全行 i≥0、特に 2≤i≤q+2"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "W_SPARSE",
+      "original_statement": "For e>=6 and u>=2e-2, beta_i(G;k)<=F_i(m,du) for every i>=0. The comparison includes i=e and all first-row subranges e=6,7,8,9 and e>=10.",
+      "original_quantifiers": "All parameters in scopeW with e>=6,u>=2e-2; every i>=0.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "W_FIVE",
+      "original_statement": "For e=5,q=3 and all u>=4, beta_i(G;k)<=F_i(m,du) for every i>=0. At u=7, the integral improvement b1<=9 is asserted only when R>0.",
+      "original_quantifiers": "All parameters in scopeW with e=5,q=3,u>=4; all i>=0. Subbranches u=4,5; u=6; u=7 with R=0 or R>0; u>=8 with antipodal or non-antipodal A.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "W_CLOSE",
+      "original_statement": "For every numerical semigroup in the normalized physical narrow scope with e>=5, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0.",
+      "original_quantifiers": "All fields k; all integers e=q+2>=5,d>=1,u>=q+1,m>=du+2 and all primitive ordered q-tuples of internal offsets; all i>=0.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "E_TWO",
+      "original_statement": "q=2 のとき Q_C は k[y,z] の単項式 Artin 商。σ_C=dim(0:_{Q_C}(y,z)) なら b^T(Q_C)=(1,σ_C+1,σ_C)。β₁≤P_C+σ_C+1+R、β₂≤2P_C+σ_C+3R、β₃≤P_C+3R、β₄≤R、β₀=1、i>4 で β_i=0。",
+      "original_quantifiers": [
+        "(EH) のうち q=2、a₁=a、a₂=b の全パラメータ",
+        "全 Betti 行 i≥0"
+      ],
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_DISTANCE",
+      "original_statement": "For q=2, |n{0,a,b}|>=min(u,2n+1) for n>=0, W<=1+floor(u^2/4), C(sigma+1,2)<=P<=W and sigma<=u-1. Moreover every degree sigma-1 monomial and its divisors are standard in Q_C.",
+      "original_quantifiers": "All parameters in scopeN and every n>=0; the core inequalities themselves are independent of m,d.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "X_SC",
+      "original_statement": "位数uの巡回群の零和自由列の長さがu/2を超えるなら、あるunitで移した正の代表値の総和をu未満にできる。",
+      "original_quantifiers": "有限巡回群Z/u、長さ>u/2の零和自由列。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_WORDS",
+      "original_statement": "For all standard words y^s z^t in Q_C, s+t<=u-2; if st>0 then s+t<=floor(u/2). Hence P<=2u-3+C(floor(u/2),2), H_x<=u-3, and u=3,4 implies the original actual R=0.",
+      "original_quantifiers": "All parameters in scopeN and all (s,t) in the core standard-word downset D.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_HIGH",
+      "original_statement": "For every q=2 physical narrow source and all 2<=i<=4, beta_i(G;k)<=F_i(m,du). All widths u=3,4,5 and u>=6 are covered, including top rank i=4.",
+      "original_quantifiers": "All parameters in scopeN; all i=2,3,4.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_FIRST",
+      "original_statement": "For every q=2 core, with h=floor(u/2),k0=u-b+a and E_h(k0)=C(h-k0+2,2) if k0<=h and 0 otherwise, P<=2u-k0-1+C(h,2)-E_h(k0)<=2u-h-2+C(h,2), sigma<=min(h+1,k0). These bounds close beta1(G)<=F1(m,du) for u=5 and every u>=9.",
+      "original_quantifiers": "Universal core estimates: all parameters in scopeN, 2<=k0<=u-1. First-row closure: u=5 or u>=9 only; all m,d in scopeN.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_SMALL",
+      "original_statement": "The first-row actual target comparison holds for u=6,7,8, for all u=3, and for u=4 except the family d=1,(a,b)=(1,3). Width 3 or 4 with d>=2 is paid by physical target width, never by replacing it with u.",
+      "original_quantifiers": "All scopeN parameters with u in {3,4,6,7,8}, except u=4,d=1,(a,b)=(1,3). Explicit branches: u=6 H_x<=2 or H_x=3; u=7 k0=2,3,4 or >=5; u=8 k0=2,3,4,5,6 or >=7.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_WIDTH4",
+      "original_statement": "For d=1,u=4,(a,b)=(1,3), every m>=6 and every field, in(I_G)=J0+(b*v^theta_n:b=1,y,y^2,z,z^2), where J0=(y^3,yz,xz^2,z^3), (c,n) is the base degree/offset and theta_n=max(ceil((m-n)/4),0). Consequently beta1(G)<=F1(m,4) for all m>=6.",
+      "original_quantifiers": "All fields k and all integers m>=6, including m=6 and every residue class m=4Q+rho>6, rho=0,1,2,3.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "N_CLOSE",
+      "original_statement": "For every four-generator numerical semigroup in physical narrow scope, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0, without a required finite offset-core certificate.",
+      "original_quantifiers": "All parameters in scopeN; every i>=0.",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    },
+    {
+      "id": "I_MAIN",
+      "original_statement": "β_i(GΓ;k)≤β_i(G_completion;k) が全i≥0、全真正な数値半群、任意体で成立するという証明経路を組む。",
+      "original_quantifiers": "任意体k、全真正な数値半群Γ、全total Betti行i≥0。",
+      "status": "UNDER_REVIEW",
+      "exports": [],
+      "v06_usage": null
+    }
+  ]
+}

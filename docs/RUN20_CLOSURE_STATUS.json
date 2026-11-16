@@ -1,0 +1,12 @@
+{
+  "status": "RUN20_IN_PROGRESS",
+  "run20_complete": false,
+  "all_P14_complete": false,
+  "base_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "closed_ids": [],
+  "unproved_ids": [
+    "I_PARTITION",
+    "I_MAIN"
+  ],
+  "final_status_receipt": "verification/run20 publication receipt after validated review and actual Push"
+}
