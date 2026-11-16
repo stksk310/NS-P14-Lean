@@ -1,0 +1,5 @@
+{
+  "removed_disposable_cache_backup": "/tmp/run20-cold-cache-7hu_53bb",
+  "scope": "Run20 own superseded warm cache only; no source/evidence/Run19 donor/package cache deleted",
+  "source_receipt": "verification/run20/runs/release_20261116_r01/fresh_cache.json"
+}

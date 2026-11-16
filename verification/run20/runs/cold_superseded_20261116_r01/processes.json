@@ -1,0 +1,21 @@
+{
+  "status": "SUPERSEDED_PREPUBLICATION_ATTEMPT_NOT_CERTIFICATION",
+  "reason": "Independent final review F1 requires immutable initial Partition predicate-body binding and source-weakening rejection before final certification",
+  "source_proof": "2303452dfc4672e41d057bd4d6ec1eec9c600914",
+  "attempt": "verification/run20/runs/release_20261116_r01",
+  "observed_root_build_pass": true,
+  "signal": "SIGTERM",
+  "processes": [
+    {
+      "pid": 262982,
+      "ppid": 262981,
+      "command": "python3 scripts/verify_run20.py --fresh-project-cache --output-dir verification/run20/runs/release_20261116_r01 "
+    },
+    {
+      "pid": 275008,
+      "ppid": 262982,
+      "command": "lake env lean -j1 -M12288 tests/SemigroupRing.lean -o .lake/build/lib/lean/tests/SemigroupRing.olean "
+    }
+  ],
+  "time": "2026-11-16T05:08:30.527316+00:00"
+}
