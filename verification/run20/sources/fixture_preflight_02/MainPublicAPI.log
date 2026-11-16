@@ -1,0 +1,9 @@
+tests/MainPublicAPI.lean:14:52: error(lean.inferDefTypeFailed): Failed to infer type of theorem `rational`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainPublicAPI.lean:15:52: error(lean.inferDefTypeFailed): Failed to infer type of theorem `char_two`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainPublicAPI.lean:16:54: error(lean.inferDefTypeFailed): Failed to infer type of theorem `char_three`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be

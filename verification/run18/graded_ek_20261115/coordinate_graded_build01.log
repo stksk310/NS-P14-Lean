@@ -1,0 +1,78 @@
+✖ [4804/4805] Building NSP14.Endpoint.VariableIdealGraded (1.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Endpoint/VariableIdealGraded.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/VariableIdealGraded.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/VariableIdealGraded.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/VariableIdealGraded.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/VariableIdealGraded.setup.json --json
+warning: NSP14/Endpoint/VariableIdealGraded.lean:13:0: automatically included section variable(s) unused in theorem `NSP14.Endpoint.variablesIdeal_homogeneous`:
+  [Fintype σ]
+  [LinearOrder σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype σ] [LinearOrder σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NSP14/Endpoint/VariableIdealGraded.lean:20:0: automatically included section variable(s) unused in theorem `NSP14.Endpoint.variablesIdeal_colon`:
+  [Fintype σ]
+  [LinearOrder σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype σ] [LinearOrder σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: NSP14/Endpoint/VariableIdealGraded.lean:68:4: No goals to be solved
+error: NSP14/Endpoint/VariableIdealGraded.lean:72:11: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  gradedBetti k σ (artinModule k σ (Submodule.colon J {g})) (artinGrading k σ (Submodule.colon J {g}) hC) i (t - 1)
+in the target expression
+  gradedBetti k σ (artinModule k σ (variablesIdeal k σ (x :: xs))) (artinGrading k σ (variablesIdeal k σ (x :: xs)) ⋯)
+      (i + 1) t =
+    gradedBetti k σ (artinModule k σ J) (artinGrading k σ J hJ) (i + 1) t +
+      gradedBetti k σ (artinModule k σ (Submodule.colon J {g})) (artinGrading k σ (Submodule.colon J {g}) hC) i (t - ↑1)
+
+k σ : Type
+inst✝² : Field k
+inst✝¹ : Fintype σ
+inst✝ : LinearOrder σ
+xs : List σ
+x : σ
+hx : x ∉ xs
+i : ℕ
+t : ℤ
+J : Ideal (VariableRing k σ) := variablesIdeal k σ xs
+g : MvPolynomial σ k := MvPolynomial.X x
+hJ : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule σ k) (variablesIdeal k σ xs)
+hK : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule σ k) (J ⊔ Ideal.span {g})
+hcol : Submodule.colon J {g} = J
+hC : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule σ k) (Submodule.colon J {g})
+hc : Submodule.colon J {g} ≤ Submodule.colon J {1}
+hh :
+  gradedBetti k σ (artinModule k σ (variablesIdeal k σ (x :: xs))) (artinGrading k σ (variablesIdeal k σ (x :: xs)) ⋯)
+      (i + 1) t =
+    gradedBetti k σ (artinModule k σ J) (artinGrading k σ J hJ) (i + 1) t +
+      gradedBetti k σ (artinModule k σ (Submodule.colon J {g})) (artinGrading k σ (Submodule.colon J {g}) hC) i (t - ↑1)
+he : J ⊔ Ideal.span {g} = variablesIdeal k σ (x :: xs)
+hnew :
+  gradedBetti k σ (artinModule k σ (J ⊔ Ideal.span {g})) (artinGrading k σ (J ⊔ Ideal.span {g}) hK) (i + 1) t =
+    gradedBetti k σ (artinModule k σ (variablesIdeal k σ (x :: xs))) (artinGrading k σ (variablesIdeal k σ (x :: xs)) ⋯)
+      (i + 1) t
+hold :
+  gradedBetti k σ (artinModule k σ (Submodule.colon J {g})) (artinGrading k σ (Submodule.colon J {g}) hC) i (t - 1) =
+    gradedBetti k σ (artinModule k σ J) (artinGrading k σ J hJ) i (t - 1)
+⊢ coordinateGradedBetti k σ (x :: xs) (i + 1) t =
+    coordinateGradedBetti k σ xs (i + 1) t + coordinateGradedBetti k σ xs i (t - 1)
+error: NSP14/Endpoint/VariableIdealGraded.lean:106:8: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c - d ≥ 1
+  a ≥ 1
+where
+ a := t
+ b := ↑(if t - 1 + 1 = t then xs.length.choose i + xs.length.choose i.succ else 0)
+ c := ↑(if t - 1 + 1 = t then xs.length.choose (i + 1) else 0)
+ d := ↑(xs.length.choose i)
+warning: NSP14/Endpoint/VariableIdealGraded.lean:104:45: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.cast_add, Nat.cast_one, h', ite_true, List.length_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Endpoint.VariableIdealGraded
+error: build failed

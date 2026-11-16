@@ -1,0 +1,39 @@
+✖ [4714/4715] Building NSP14.Endpoint.ArtinGradedZero (1.0s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Endpoint/ArtinGradedZero.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedZero.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedZero.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedZero.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedZero.setup.json --json
+warning: NSP14/Endpoint/ArtinGradedZero.lean:13:0: automatically included section variable(s) unused in theorem `NSP14.Endpoint.artin_totalBetti_zero_general`:
+  [LinearOrder σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: NSP14/Endpoint/ArtinGradedZero.lean:81:4: 'change' tactic failed, pattern
+  C.d 1 0 = 0
+is not definitionally equal to target
+  (sc C 0).f = 0
+error: NSP14/Endpoint/ArtinGradedZero.lean:84:4: 'change' tactic failed, pattern
+  C.d 0 0 = 0
+is not definitionally equal to target
+  (sc C 0).g = 0
+warning: NSP14/Endpoint/ArtinGradedZero.lean:101:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: NSP14/Endpoint/ArtinGradedZero.lean:103:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+error: NSP14/Endpoint/ArtinGradedZero.lean:113:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 1
+where
+ a := t
+error: NSP14/Endpoint/ArtinGradedZero.lean:126:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 1
+  a ≥ 1
+where
+ a := ↑(gradedBetti k σ (artinModule k σ I) (artinGrading k σ I hI) 0 t)
+ b := t
+Some required targets logged failures:
+- NSP14.Endpoint.ArtinGradedZero
+error: build failed

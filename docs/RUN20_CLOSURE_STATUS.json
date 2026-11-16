@@ -1,0 +1,19 @@
+{
+  "status": "MATHEMATICAL_CONTRACTS_CLOSED_VALIDATION_PENDING",
+  "run20_complete": false,
+  "all_P14_complete": false,
+  "base_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "closed_ids": [
+    "I_PARTITION",
+    "I_MAIN"
+  ],
+  "unproved_ids": [],
+  "final_status_receipt": "verification/run20 publication receipt after validated review and actual Push",
+  "mathematical_contracts_closed": true,
+  "publication_pending": [
+    "fresh_project_validation",
+    "independent_review",
+    "audit_package",
+    "normal_push"
+  ]
+}

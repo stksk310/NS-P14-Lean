@@ -1,0 +1,9 @@
+{
+  "status": "PASS_BASE_DONOR_SOURCE_IDENTITY",
+  "base_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "donor": "/tmp/run20-independent-base-donor-hi_lzrtc",
+  "baseline_cache": "/tmp/run20-independent-base-donor-hi_lzrtc/.lake/build",
+  "source_files_verified": 1006,
+  "cache_origin": "Existing worktree cache from independent Run19 cold verification; all Run20 project caches will be retired separately. Baseline copied into source-exact old checkout, then verifier rebuilds/checks its own isolated copy.",
+  "source_archive_sha256": "212182456f66a99cac2447c8289075dfdd07e4672320a73d25b1e3d2258b3813"
+}

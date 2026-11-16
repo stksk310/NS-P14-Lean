@@ -1,0 +1,16 @@
+'NSP14.Lex.hilbertProfiles_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.finite_monomialIdeals_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.uniform_monomialGenerator_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.hilbertProfiles_finite : ∀ (q : ℕ) (H : ℕ → ℕ), (NSP14.Lex.hilbertProfiles q H).Finite
+NSP14.Lex.finite_monomialIdeals_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ) (H : ℕ → ℕ),
+  {I |
+      NSP14.Lex.IsMonomial k q I ∧
+        ∃ (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+          ∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = H n}.Finite
+NSP14.Lex.uniform_monomialGenerator_degree_bound : ∀ (q : ℕ) (H : ℕ → ℕ),
+  ∃ B,
+    ∀ (k : Type) [inst : Field k] (I : Ideal (MvPolynomial (Fin q) k))
+      (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+      NSP14.Lex.IsMonomial k q I →
+        (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = H n) →
+          ∀ (a : Fin q →₀ ℕ), NSP14.Lex.MinimalGenerator k q I a → Finsupp.degree a ≤ B

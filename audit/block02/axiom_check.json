@@ -1,0 +1,132 @@
+{
+  "tests_and_axioms": {
+    "count": 14,
+    "declarations": {
+      "NSP14.sidon_difference_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.sidon_card_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.apery_min_unique": [
+        "propext"
+      ],
+      "NSP14.AperyPairData.residue_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.residues_card": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.residues_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.multiplicity_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.AperyPairData.deficit_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.corner_condition_of_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.corner_condition_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.scalar_lt_of_boundary_sidon": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos_of_apery_pairs": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "matches_submitted_log": true
+  },
+  "block01_regression": {
+    "count": 10,
+    "declarations": {
+      "NSP14.Ordinary.SmallScalar.gap_shift": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.dStep_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row4": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row5": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row6": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row7": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.row8": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.cutoff_admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.small_gap_pos": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "NSP14.Ordinary.SmallScalar.scalar_lt_of_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "matches_submitted_log": true
+  }
+}

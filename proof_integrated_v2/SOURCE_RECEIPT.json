@@ -1,0 +1,50 @@
+{
+  "input_files": [
+    {
+      "path": "artifacts/NS_P14_COMPLETE_PROOF_WITH_N4_AUDIT_20261109.zip",
+      "bytes": 669302,
+      "sha256": "69b8040c7d9331b311ad47db57ef66114a7cd78f3167750e630b3e550d403387",
+      "zip_crc_verified": true
+    },
+    {
+      "path": "artifacts/NS_P14_SIMPLIFICATION_SEARCH_20261109.zip",
+      "bytes": 42679,
+      "sha256": "874e46fca224422c6dcb78a7e4150d412b8fa4d90d8d32b74e4bd99d5a0cd02f",
+      "zip_crc_verified": true
+    },
+    {
+      "path": "attachments/7134b083-c0e2-479a-9c1a-076258288d8f/NS_P14_SIMPLIFICATION_COMMANDER_AUDIT_20261109.zip",
+      "bytes": 5896,
+      "sha256": "b214d62076f25f5f1a69e98ada334bc368a9fbb62baf8e051cc1b31ccd67f326",
+      "zip_crc_verified": true,
+      "member_sha256": {
+        "SIMPLIFICATION_COMMANDER_AUDIT_JA.md": "13929b91e53880ae66ac6f0729b69d5dd42d1a4f5752ead63c691daa27ddb1fc",
+        "compare_historical_offsets.py": "47ec3d51a4b12166445f630ed816b26b2b3f02f8295edc228db02469de501207"
+      }
+    },
+    {
+      "path": "attachments/4abf1c10-d953-45b7-a387-51ed9feb2a47/貼り付けたテキスト.txt",
+      "bytes": 14774,
+      "sha256": "f453464aa9bead38f1f6ea0346174d37b6cfb2784f51b9567dc0aaf9336e449e"
+    }
+  ],
+  "original_manuscript_sha256": "dbf3ad99073b2d7ccac29b9c1f84c0878c62868e2911c5446bfc84eb947c98c3",
+  "original_complete_manifest_unchanged": true,
+  "original_simplification_manifest_unchanged": true,
+  "attachment_policy": "Attached prose is reference material; the user authorized integration. Audit labels are not mathematical premises.",
+  "mathematical_source_sections": [
+    "old §§2–10 and AppendixB retained/reformatted",
+    "new scalar, endpoint, width, N4 chunks from audited replacement derivations"
+  ],
+  "checker_policy": "Copied computational functions match original ASTs; n4 output path and docstrings adapted. verify_width is new standard-library coefficient arithmetic.",
+  "fresh_public_statement_checks": [
+    "BHP/EK: Juhnke-Kubitzke–Venturello §2.2 Lemmas2–3",
+    "Kneser: DeVos Theorem1"
+  ],
+  "earlier_primary_statement_checks_retained": [
+    "Green degree2",
+    "GSS Theorem4.1 and HS Proposition2.5",
+    "Lan–Tu–Vu Theorem1.1",
+    "Savchev–Chen §4 Theorem8"
+  ]
+}

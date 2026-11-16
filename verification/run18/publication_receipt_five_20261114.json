@@ -1,0 +1,24 @@
+{
+  "status": "PUSHED_REVIEWED_PARTIAL_FIVE_CLOSURE",
+  "run18_complete": false,
+  "release_commit": "01eff9b500cb2596b5971c75213c7a157241dae9",
+  "verified_at_utc": "2026-11-14T11:58:39.725689+00:00",
+  "remote_refs": {
+    "refs/heads/run18/implementation-20261113": "01eff9b500cb2596b5971c75213c7a157241dae9",
+    "refs/heads/work": "01eff9b500cb2596b5971c75213c7a157241dae9"
+  },
+  "clean_after_release_push": true,
+  "verification": "verification/run18/runs/release_candidate_20261114_r05/verification.json",
+  "bundle_receipt": "verification/run18/bundle_receipt_five_20261114.json",
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_CLOSE"
+  ],
+  "note": "W_FIVE and W_SPARSE are closed. General BHP/EK, q>=4 one-missing edge, dense lex closure and full width synthesis remain unproved."
+}

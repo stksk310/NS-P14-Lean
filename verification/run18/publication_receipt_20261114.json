@@ -1,0 +1,24 @@
+{
+  "status": "PUSHED_REVIEWED_PARTIAL_CONTINUATION",
+  "run18_complete": false,
+  "release_commit": "155a49e493f8a9348480b60d79dc90a5601c4324",
+  "verified_at_utc": "2026-11-14T03:50:09.427393+00:00",
+  "remote_refs": {
+    "refs/heads/run18/implementation-20261113": "155a49e493f8a9348480b60d79dc90a5601c4324",
+    "refs/heads/work": "155a49e493f8a9348480b60d79dc90a5601c4324"
+  },
+  "clean_after_release_push": true,
+  "verification": "verification/run18/runs/release_candidate_20261114_r04/verification.json",
+  "bundle_receipt": "verification/run18/bundle_receipt_20261114.json",
+  "closed_ids": [
+    "W_SPARSE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_FIVE",
+    "W_CLOSE"
+  ],
+  "note": "DenseResources conjunct and several actual comparison branches added; full assigned-ID closure is not claimed."
+}

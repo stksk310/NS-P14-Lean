@@ -1,0 +1,44 @@
+[
+  {
+    "file": "tests/PrefixVariableRestriction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.089
+  },
+  {
+    "file": "tests/StableBinomialWeights.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.743
+  },
+  {
+    "file": "tests/StableDegreeDecomposition.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.002
+  },
+  {
+    "file": "tests/StableBettiComparison.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.762
+  },
+  {
+    "file": "tests/LexBetti.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.699
+  },
+  {
+    "file": "audit/run18/acceptance/BHPEK.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.728
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms25.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.655
+  }
+]

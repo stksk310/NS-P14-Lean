@@ -1,0 +1,58 @@
+{
+  "lean-toolchain": {
+    "expected": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+    "actual": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3"
+  },
+  "lakefile.toml": {
+    "expected": "d299bae852fc9a3b5cc9fe04742b35037654d195b34c2a91464aa5615b72f4cb",
+    "actual": "d299bae852fc9a3b5cc9fe04742b35037654d195b34c2a91464aa5615b72f4cb"
+  },
+  "lake-manifest.json": {
+    "expected": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766",
+    "actual": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766"
+  },
+  "NSP14.lean": {
+    "expected": "652d061dfb00bd59c849fb6043f9cb1e780fb3d1d3ff52e11301e152cd611ec0",
+    "actual": "652d061dfb00bd59c849fb6043f9cb1e780fb3d1d3ff52e11301e152cd611ec0"
+  },
+  "NSP14/Ordinary/SmallScalar.lean": {
+    "expected": "6cc071462bec3c574fad8c0bd32bdfd8ddf8ee0442028357cc853dce261aa784",
+    "actual": "6cc071462bec3c574fad8c0bd32bdfd8ddf8ee0442028357cc853dce261aa784"
+  },
+  "tests/SmallScalar.lean": {
+    "expected": "0c356868eaf685976c3999cc8d34dfe147aca31485b703c619a4329790173209",
+    "actual": "0c356868eaf685976c3999cc8d34dfe147aca31485b703c619a4329790173209"
+  },
+  "scripts/verify_block01.py": {
+    "expected": "6e284a3965f40dddb96ea677645c9b72256e65ecebea1b00120076fe783cc9b5",
+    "actual": "6e284a3965f40dddb96ea677645c9b72256e65ecebea1b00120076fe783cc9b5"
+  },
+  "LEAN_PROGRESS.md": {
+    "expected": "1b1ec531d9ab57d1696410253c56d40093eb3d5e4426a54dcc3f984965f22244",
+    "actual": "1b1ec531d9ab57d1696410253c56d40093eb3d5e4426a54dcc3f984965f22244"
+  },
+  "verification/block01/README_JA.md": {
+    "expected": "324676c7b7e97227a610df5ea4dabe675c9393a10680a85e04049bbeee37bd21",
+    "actual": "324676c7b7e97227a610df5ea4dabe675c9393a10680a85e04049bbeee37bd21"
+  },
+  "verification/block01/build.log": {
+    "expected": "b2dad4e91509f0452bd920fd5102c99e85ab2a4a8d9c7e5dba74616a580fe99d",
+    "actual": "b2dad4e91509f0452bd920fd5102c99e85ab2a4a8d9c7e5dba74616a580fe99d"
+  },
+  "verification/block01/dependencies_build.log": {
+    "expected": "e076bf58ce007f13fccdf9024fc6478e3574c3967aeac98c22e49932b6f8c3b4",
+    "actual": "e076bf58ce007f13fccdf9024fc6478e3574c3967aeac98c22e49932b6f8c3b4"
+  },
+  "verification/block01/source_recheck.log": {
+    "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verification/block01/tests_and_axioms.log": {
+    "expected": "865fb55e37c13458871e6258bd382285a5e811396e43c7b7d02d82e8b6fe8953",
+    "actual": "865fb55e37c13458871e6258bd382285a5e811396e43c7b7d02d82e8b6fe8953"
+  },
+  "verification/block01/verification.json": {
+    "expected": "cb8245ccaa99ed81f6ae3c5232161c36d7c9128a50327ba748b23090df7d456f",
+    "actual": "cb8245ccaa99ed81f6ae3c5232161c36d7c9128a50327ba748b23090df7d456f"
+  }
+}

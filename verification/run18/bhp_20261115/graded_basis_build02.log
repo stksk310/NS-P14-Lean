@@ -1,0 +1,56 @@
+✔ [4714/4717] Built NSP14.Homological.KoszulSlotGrading (3.9s)
+✖ [4716/4717] Building NSP14.Homological.GradedKoszulBasis (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/GradedKoszulBasis.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulBasis.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulBasis.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulBasis.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulBasis.setup.json --json
+error: NSP14/Homological/GradedKoszulBasis.lean:48:4: unsolved goals
+case pos
+k σ : Type
+inst✝ : Field k
+J : Type
+M : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+b : Module.Basis J k ↑(coefficientModule k σ M)
+deg : J → ℤ
+hb : ∀ (a : J), b a ∈ G.degreeSpace (deg a)
+xs : List σ
+t : ℤ
+i : ℕ
+x : ↥(gradedKoszulSpace k σ M G xs t i)
+a : { a // deg a.2 = t - ↑i }
+B : Module.Basis { a // deg a.2 = t - ↑i } k ↥(gradedKoszulSpace k σ M G xs t i) :=
+  gradedKoszulSpaceBasis k σ M G b deg hb xs t i
+C : Module.Basis (KoszulSlot xs.length i × J) k ↑(coefficientModule k σ ((koszulList k σ xs M).X i)) :=
+  koszulSlotBasis k σ M b xs i
+⊢ 1 = (C.repr ((koszulSlotBasis k σ M b xs i) ↑a)) ↑a
+error: NSP14/Homological/GradedKoszulBasis.lean:50:4: unsolved goals
+case neg
+k σ : Type
+inst✝ : Field k
+J : Type
+M : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+b : Module.Basis J k ↑(coefficientModule k σ M)
+deg : J → ℤ
+hb : ∀ (a : J), b a ∈ G.degreeSpace (deg a)
+xs : List σ
+t : ℤ
+i : ℕ
+x : ↥(gradedKoszulSpace k σ M G xs t i)
+a : { a // deg a.2 = t - ↑i }
+B : Module.Basis { a // deg a.2 = t - ↑i } k ↥(gradedKoszulSpace k σ M G xs t i) :=
+  gradedKoszulSpaceBasis k σ M G b deg hb xs t i
+C : Module.Basis (KoszulSlot xs.length i × J) k ↑(coefficientModule k σ ((koszulList k σ xs M).X i)) :=
+  koszulSlotBasis k σ M b xs i
+j : { a // deg a.2 = t - ↑i }
+he : ¬j = a
+hv : ↑j ≠ ↑a
+⊢ 0 = (C.repr ((koszulSlotBasis k σ M b xs i) ↑j)) ↑a
+warning: NSP14/Homological/GradedKoszulBasis.lean:51:62: This simp argument is unused:
+  ite_eq_right hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Module.Basis.repr_self_apply, ite_eq_right he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Homological.GradedKoszulBasis
+error: build failed

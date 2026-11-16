@@ -1,0 +1,58 @@
+{
+  "date_utc": "2026-11-09",
+  "status": "CROSS_REVIEW_PASS_WITH_UNIVERSALLY_PROVED_INCREMENT_LEMMA",
+  "source": "User-pasted Navi report; no original Navi implementation was supplied.",
+  "main_report": "NAVI_CROSS_REVIEW_JA.md",
+  "proved_increment": {
+    "inequality": "0 <= B1(e,m+1)-B1(e,m) <= m-2",
+    "formal_count_scope": "O10 expressions with e>=3,m>=5; no dimension upper bound in increment lemma.",
+    "actual_ordinary_application": "5<=e<=9,m>=e+10, retaining actual-to-formal O9/O13.",
+    "proof": "Direct lex rank restrictions + K(m)<=floor(m/2) by counting small interior Pascal coefficients.",
+    "alternative": "For e<=9: DeltaB1<=29m/30+97/280<m, m>=11.",
+    "universal_proof_uses_finite_sampling": false
+  },
+  "review_findings": {
+    "reported_83_profiles_665_comparisons": "CONFIRMED",
+    "minimum_margin": 67,
+    "five_first_row_bases": "CONFIRMED, suffice for all rows using nonnegative slots and normalized target.",
+    "all_35_base_rows": "CONFIRMED directly as supplementary evidence.",
+    "e9_m1000_increment": 24,
+    "e9_m10000_increment": 19,
+    "endpoint_correction": "Final T_e constant decreases by1; new degree contributes1; these cancel.",
+    "scope_annotations": "NI4:1<=r<=e-1; NI10:1<=i<e; both explicit.",
+    "unresolved_findings": []
+  },
+  "recommended_main_route": "Retain previous scalar/Sidon ordinary replacement for smaller dependencies. Navi route is a valid independent alternative but retains O1-O13.",
+  "fresh_root_checks": [
+    {
+      "command": "python3 -B navi_cross_review/checks/check_navi_regression.py --max-m 200 --out /tmp/ns_p14_navi_root_regression.json",
+      "exit_code": 0,
+      "result": "83 profiles/665 rows; 920 increments/6430 slots; all35 base rows; two large tests."
+    },
+    {
+      "command": "python3 -B navi_cross_review/check_increment_lemma.py",
+      "exit_code": 0,
+      "result": "Exact rational constants; 34055 degree checks across520 pairs."
+    },
+    {
+      "command": "python3 -B navi_cross_review/checks/check_increment_referee.py",
+      "exit_code": 0,
+      "result": "100 rank cases,120 endpoint checks,all35 base rows,300 Pascal pair-count sanity cases."
+    }
+  ],
+  "preserved_manifest_members": {
+    "proof_integrated_v2": 24,
+    "n4_further_reduction": 5,
+    "auditability_search": 9
+  },
+  "preserved_file_hash_mismatches": [],
+  "new_markdown_local_links_checked": 7,
+  "new_markdown_math_delimiters": "PASS",
+  "new_python_syntax": "PASS",
+  "independent_referee": "INCREMENT_REFEREE.md",
+  "main_report_sha256": "a6b4ba1fc6f6feb106af3ffbd0f3ad5f471d607329e635debdf513bbca17068f",
+  "existing_manuscripts_modified": false,
+  "integration_into_new_single_manuscript": "NOT_PERFORMED",
+  "lean_verification": "NOT_PERFORMED",
+  "external_publication_peer_review": "NOT_CLAIMED"
+}

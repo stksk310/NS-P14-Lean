@@ -1,0 +1,28 @@
+tests/EndpointNormalization.lean:8:25: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:8:75: error(lean.invalidField): Invalid field `endpointData_carrier`: The environment does not contain `NSP14.NumericalSemigroup.endpointData_carrier`, so it is not possible to project the field `endpointData_carrier` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:10:31: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:10:73: error(lean.invalidField): Invalid field `endpointData_m`: The environment does not contain `NSP14.NumericalSemigroup.endpointData_m`, so it is not possible to project the field `endpointData_m` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:12:28: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:12:78: error(lean.invalidField): Invalid field `endpointData_embedding`: The environment does not contain `NSP14.NumericalSemigroup.endpointData_embedding`, so it is not possible to project the field `endpointData_embedding` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:14:26: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:14:51: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:14:78: error(lean.invalidField): Invalid field `endpointData`: The environment does not contain `NSP14.NumericalSemigroup.endpointData`, so it is not possible to project the field `endpointData` from an expression
+  S
+of type `NumericalSemigroup`
+tests/EndpointNormalization.lean:15:2: error(lean.unknownIdentifier): Unknown identifier `S.endpointData_narrow`

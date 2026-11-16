@@ -1,0 +1,1 @@
+tests/InitialBetti.lean:11:2: error(lean.unknownIdentifier): Unknown constant `Lex.quotientGradedBetti_initial_le`

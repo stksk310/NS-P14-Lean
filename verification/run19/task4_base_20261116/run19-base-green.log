@@ -1,0 +1,12 @@
+tests/SmallEmbeddingBase.lean:63:6: error: Type mismatch: After simplification, term
+  rfl
+ has type
+  True
+but is expected to have type
+  twoThree.v + 1 = 2
+tests/SmallEmbeddingBase.lean:65:6: error: Type mismatch: After simplification, term
+  rfl
+ has type
+  True
+but is expected to have type
+  threeFive.v + 1 = 2

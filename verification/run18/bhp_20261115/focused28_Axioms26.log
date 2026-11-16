@@ -1,0 +1,92 @@
+'NSP14.Lex.degreeGeneratedIdeal_isLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.lexDegreeSet_next_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.exists_lex_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.quotientTotalBetti_le_lex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.standard_finite_total_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.total_betti_le_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.first_betti_eq_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.suffixVariableIdeal_isLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.standard_tail_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.suffix_sameHilbert_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.suffix_sameCorrection' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.degreeGeneratedIdeal_isLex : ∀ (k : Type) [inst : Field k] (q d : ℕ)
+  (S : Finset (NSP14.Lex.PolynomialDegreeIndex q d)),
+  (∀ a ∈ S,
+      ∀ (b : NSP14.Lex.PolynomialDegreeIndex q d), MonomialOrder.lex.toSyn ↑a ≤ MonomialOrder.lex.toSyn ↑b → b ∈ S) →
+    NSP14.Lex.IsLex k q (NSP14.Lex.degreeGeneratedIdeal k q d S)
+NSP14.Lex.IsStronglyStable.lexDegreeSet_next_mem : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    ∀ (n : ℕ),
+      ∀ α ∈ NSP14.Lex.lexDegreeSet k q I n,
+        ∀ (r : Fin q), ⟨↑α + Finsupp.single r 1, ⋯⟩ ∈ NSP14.Lex.lexDegreeSet k q I (n + 1)
+NSP14.Lex.exists_lex_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+  ∃ L,
+    ∃ (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+      NSP14.Lex.IsLex k q L ∧ ∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hHom n = NSP14.Lex.quotientHilbert k q L hL n
+NSP14.Lex.quotientTotalBetti_le_lex : ∀ (k : Type) [inst : Field k] (q : ℕ) (I L : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+  NSP14.Lex.IsLex k q L →
+    (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert k q L hL n) →
+      ∀ (i : ℕ),
+        1 ≤ i →
+          NSP14.Homological.totalBetti k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) I) i ≤
+            NSP14.Homological.totalBetti k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) L) i
+NSP14.Lex.IsLex.standard_finite_total_identity : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsLex k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (N i : ℕ),
+        (∀ (n : ℕ), N < n → NSP14.Lex.quotientHilbert k q I hHom n = 0) →
+          NSP14.Homological.totalBetti k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) I) (i + 1) +
+              ∑ d ∈ Finset.range N, NSP14.Lex.standardDegreeChooseSum k q I (d + 1) (i + 1) =
+            (∑ d ∈ Finset.range (N + 1), NSP14.Lex.quotientHilbert k q I hHom d) * q.choose (i + 1)
+NSP14.Lex.IsLex.total_betti_le_correction : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsLex k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (N i : ℕ),
+        (∀ (n : ℕ), N + 1 < n → NSP14.Lex.quotientHilbert k q I hHom n = 0) →
+          NSP14.Lex.quotientHilbert k q I hHom 0 = 1 →
+            NSP14.Lex.quotientHilbert k q I hHom 1 = q →
+              NSP14.Homological.totalBetti k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) I) (i + 1) ≤
+                (i + 1) * (q + 1).choose (i + 2) + NSP14.Lex.lexCorrection k q I N * (q - 1).choose i
+NSP14.Lex.IsLex.first_betti_eq_correction : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsLex k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (N : ℕ),
+        (∀ (n : ℕ), N + 1 < n → NSP14.Lex.quotientHilbert k q I hHom n = 0) →
+          NSP14.Lex.quotientHilbert k q I hHom 0 = 1 →
+            NSP14.Lex.quotientHilbert k q I hHom 1 = q →
+              NSP14.Homological.totalBetti k (Fin q) (NSP14.Endpoint.artinModule k (Fin q) I) 1 =
+                (q + 1).choose 2 + NSP14.Lex.lexCorrection k q I N
+NSP14.Lex.suffixVariableIdeal_isLex : ∀ (k : Type) [inst : Field k] (s r : ℕ)
+  (I : Ideal (MvPolynomial (Fin (s + r)) k)),
+  NSP14.Lex.IsLex k (s + r) I → NSP14.Lex.IsLex k r (NSP14.Lex.suffixVariableIdeal k s r I)
+NSP14.Lex.IsLex.standard_tail_support : ∀ (k : Type) [inst : Field k] (s r : ℕ)
+  (I : Ideal (MvPolynomial (Fin (s + r)) k)),
+  NSP14.Lex.IsLex k (s + r) I →
+    ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin (s + r)) k) I),
+      NSP14.Lex.quotientHilbert k (s + r) I hHom 2 ≤ Fintype.card (NSP14.Lex.PolynomialDegreeIndex r 2) →
+        ∀ (α : Fin (s + r) →₀ ℕ),
+          2 ≤ Finsupp.degree α → (MvPolynomial.monomial α) 1 ∉ I → ∀ (i : Fin (s + r)), ↑i < s → α i = 0
+NSP14.Lex.IsLex.suffix_sameHilbert_high : ∀ (k : Type) [inst : Field k] (s r : ℕ)
+  (I : Ideal (MvPolynomial (Fin (s + r)) k)),
+  NSP14.Lex.IsLex k (s + r) I →
+    ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin (s + r)) k) I),
+      NSP14.Lex.quotientHilbert k (s + r) I hHom 2 ≤ Fintype.card (NSP14.Lex.PolynomialDegreeIndex r 2) →
+        ∀
+          (hHomS :
+            Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin r) k) (NSP14.Lex.suffixVariableIdeal k s r I))
+          (n : ℕ),
+          2 ≤ n →
+            NSP14.Lex.quotientHilbert k r (NSP14.Lex.suffixVariableIdeal k s r I) hHomS n =
+              NSP14.Lex.quotientHilbert k (s + r) I hHom n
+NSP14.Lex.IsLex.suffix_sameCorrection : ∀ (k : Type) [inst : Field k] (s r : ℕ)
+  (I : Ideal (MvPolynomial (Fin (s + r)) k)),
+  NSP14.Lex.IsLex k (s + r) I →
+    ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin (s + r)) k) I),
+      NSP14.Lex.quotientHilbert k (s + r) I hHom 2 ≤ Fintype.card (NSP14.Lex.PolynomialDegreeIndex r 2) →
+        ∀ (N : ℕ),
+          NSP14.Lex.lexCorrection k r (NSP14.Lex.suffixVariableIdeal k s r I) N = NSP14.Lex.lexCorrection k (s + r) I N

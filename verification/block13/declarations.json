@@ -1,0 +1,1151 @@
+{
+  "core": [
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedKoszulIso",
+      "source": "NSP14/Homological/ActualKoszulTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedKoszulHomologyIso",
+      "source": "NSP14/Homological/ActualKoszulTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedNonXKoszulHomologyIso",
+      "source": "NSP14/Homological/ActualKoszulTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpStratumKoszulIso",
+      "source": "NSP14/Homological/ActualKoszulTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpStratumKoszulHomologyIso",
+      "source": "NSP14/Homological/ActualKoszulTransport.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.formalGFullPolynomialFinite",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedTorIso",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.completed_totalBetti",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.jumpStratumTorIso",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.descendingStratumPolynomialFinite",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.ascendingStratumPolynomialFinite",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.jumpStratum_totalBetti",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.actualG_homology_finite",
+      "source": "NSP14/Homological/ActualTorTransport.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.totalBetti",
+      "source": "NSP14/Homological/Betti.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.totalBetti_eq_zero_of_gt",
+      "source": "NSP14/Homological/Betti.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomologyKIso",
+      "source": "NSP14/Homological/Betti.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.totalBetti_iso",
+      "source": "NSP14/Homological/Betti.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.torCoefficientIso",
+      "source": "NSP14/Homological/Betti.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.chain_exact_succ_iff",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.coneFirst",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.coneSecond",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.cone_element_ext",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.cone_d_first",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.cone_d_second",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.coneFirst_inl",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.coneFirst_inr",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.coneSecond_inl",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.coneSecond_inr",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.scalarCone_exact_positive",
+      "source": "NSP14/Homological/ConeExactness.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.fieldExtension",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.Homological.fieldExtension_additive",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.fieldExtension_exact",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.Homological.fieldExtension_preservesFiniteLimits",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.Homological.fieldExtension_preservesFiniteColimits",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.fieldExtensionHomologyIso",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.fieldExtension_finite",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.fieldExtension_finrank",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.polynomialFieldExtension",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.fieldExtension_homology_finrank",
+      "source": "NSP14/Homological/FieldExtension.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.exact_rank_sum",
+      "source": "NSP14/Homological/HomologyRanks.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.homology_rank_correction",
+      "source": "NSP14/Homological/HomologyRanks.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.homology_finrank_le",
+      "source": "NSP14/Homological/HomologyRanks.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.homology_rank_correction_zero",
+      "source": "NSP14/Homological/HomologyRanks.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.residueField_variable",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.polynomialVariableHomotopy",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulVariableHomotopy",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.complex_homologyMap_smul",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_homology_variable_annihilates",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomologyK",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.Homological.koszulHomologyKPolynomial",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_homology_action_reduction",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_homology_finite",
+      "source": "NSP14/Homological/KoszulAnnihilation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulVariableSubmodule",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulZeroIso_cons_inr",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulZeroDifferential_cons_left",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulZeroDifferential_cons_right",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.scalarCone_split",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_zero_boundary",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulH0Equiv",
+      "source": "NSP14/Homological/KoszulAugmentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.coefficientKoszulComplex",
+      "source": "NSP14/Homological/KoszulCoefficientBaseChange.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.coefficientKoszulHomologyIso",
+      "source": "NSP14/Homological/KoszulCoefficientBaseChange.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.Homological.coefficientKoszulHomologyFinite",
+      "source": "NSP14/Homological/KoszulCoefficientBaseChange.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.extendedCoefficientKoszulHomologyIso",
+      "source": "NSP14/Homological/KoszulCoefficientBaseChange.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.extendedCoefficientKoszul_finrank",
+      "source": "NSP14/Homological/KoszulCoefficientBaseChange.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulList",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulList_nil",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulList_cons",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_d_squared",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomology",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulConsPieceIso",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_piece_isZero_of_gt",
+      "source": "NSP14/Homological/KoszulComplex.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.scalarConeRaising",
+      "source": "NSP14/Homological/KoszulContraction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.scalarConeHomotopy",
+      "source": "NSP14/Homological/KoszulContraction.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulZeroIso",
+      "source": "NSP14/Homological/KoszulFinite.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_chain_finite",
+      "source": "NSP14/Homological/KoszulFinite.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomologyQuotientIso",
+      "source": "NSP14/Homological/KoszulFinite.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_homology_polynomial_finite",
+      "source": "NSP14/Homological/KoszulFinite.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.residueCoefficientIso",
+      "source": "NSP14/Homological/KoszulFree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulFreeH0Iso",
+      "source": "NSP14/Homological/KoszulFree.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.totalBetti_free_zero",
+      "source": "NSP14/Homological/KoszulFree.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.totalBetti_free_succ",
+      "source": "NSP14/Homological/KoszulFree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.chainH0QuotientEquiv",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulFirstProjection",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulSecondProjection",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_cons_d_first",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_cons_d_second",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulZeroDifferential",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulH0BoundaryEquiv",
+      "source": "NSP14/Homological/KoszulLowDegree.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.scalarConeFunctor",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulFunctor",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulFunctor_obj",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomologyFunctor",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulHomologyIso",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_homology_isZero_of_gt",
+      "source": "NSP14/Homological/KoszulNaturality.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.variablesIdeal",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variablesIdeal_nil",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variablesIdeal_cons",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.polynomial_variable_submodule",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variable_not_mem_variablesIdeal",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.zero_boundary_membership",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.polynomial_variable_regular",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_polynomial_exact_positive",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszul_chain_free",
+      "source": "NSP14/Homological/KoszulPolynomialResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.variableList",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variableList_nodup",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.mem_variableList",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variableList_length",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.residueField",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.augmentationLinear",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variablesIdeal_all_eq_ker",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulAugmentationZero",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulAugmentationZero_comp",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulAugmentation",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulAugmentationZero_surjective",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulAugmentationZero_exact",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.koszulAugmentation_quasiIso",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulResolution",
+      "source": "NSP14/Homological/KoszulResolution.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.koszulMapFunctorIso",
+      "source": "NSP14/Homological/KoszulTor.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.tensorKoszulIso",
+      "source": "NSP14/Homological/KoszulTor.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.torKoszulIso",
+      "source": "NSP14/Homological/KoszulTor.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.signed_unit_determinant_ne_zero",
+      "source": "NSP14/Homological/MinorRank.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.nonzero_minor_rank_lower_bound",
+      "source": "NSP14/Homological/MinorRank.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.signed_integer_minor_rank_lower_bound",
+      "source": "NSP14/Homological/MinorRank.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.finite_of_action_reduction",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialInclusion",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomial_nonX_compat",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialModuleT",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialScalarTowerT",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.removeXPolynomial",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_full_variable_action",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.terminal_removeX_action",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialGFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialAFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialQFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialToFormalG",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialAlgebraFormalG",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedNonXPolynomialLinearEquiv",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialTFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialTFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.nonXPolynomialNFinite",
+      "source": "NSP14/Homological/PolynomialModules.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.Homological.VariableRing",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.augmentation",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.augmentation_X",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.variableOperator",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.variableOperator_comm",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.AtomExponent",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.atomExponentEquivAtoms",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.atomExponentFintype",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.atomExponent_card",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.atomDegreeExponentEquiv",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.FullPolynomialRing",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialAlgebraG",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialScalarTowerG",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_X",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.allAtomSubalgebra",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_mem_allAtomSubalgebra",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.allAtom_adjoin_top",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_surjective",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.atomDegreeOneEquiv",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.atomLinearForm",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.atom_initial_linearIndependent",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_linearForm",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_linearForm_eq_zero_iff",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToFormalG",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialAlgebraFormalG",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.completedPolynomialLinearEquiv",
+      "source": "NSP14/Homological/Presentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangent_one_mem_degree_zero",
+      "source": "NSP14/Homological/PresentationGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentDegree_pow_mem",
+      "source": "NSP14/Homological/PresentationGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentDegree_prod_mem",
+      "source": "NSP14/Homological/PresentationGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_monomial_degree",
+      "source": "NSP14/Homological/PresentationGrading.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.fullPolynomialToG_homogeneous",
+      "source": "NSP14/Homological/PresentationGrading.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.StandardExponent",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.normalSpace",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.normal_form_exists",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.normal_in_ideal_eq_zero",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.normalQuotientMap",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.normalQuotientMap_injective",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.normalQuotientMap_surjective",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.standardMonomialQuotientEquiv",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.normalCoordinates",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.Homological.standardMonomialBasis",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.Homological.standardMonomialBasis_apply",
+      "source": "NSP14/Homological/StandardMonomials.lean"
+    }
+  ],
+  "test_fixtures": [
+    {
+      "kind": "instance",
+      "name": "Run13Fixtures.primeTwo",
+      "source": "tests/Run13Fixtures.lean"
+    },
+    {
+      "kind": "abbrev",
+      "name": "Run13Fixtures.P1",
+      "source": "tests/Run13Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Fixtures.squareIdeal",
+      "source": "tests/Run13Fixtures.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Fixtures.squareModule",
+      "source": "tests/Run13Fixtures.lean"
+    },
+    {
+      "kind": "instance",
+      "name": "Run13Fixtures.squareModuleFinite",
+      "source": "tests/Run13Fixtures.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Presentation.full_variables",
+      "source": "tests/KoszulPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Presentation.nonx_variables",
+      "source": "tests/KoszulPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Presentation.actual_surjection",
+      "source": "tests/KoszulPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Presentation.actual_homogeneous",
+      "source": "tests/KoszulPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Presentation.degree_one_independent",
+      "source": "tests/KoszulPresentation.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.empty_list",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.two_variables_d_squared",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.top_vanishes",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.polynomial_regular",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.square_homology_finite",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.free_betti_zero",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Complex.free_betti_succ",
+      "source": "tests/KoszulComplex.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.G_finite",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.T_finite",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.A_finite",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.N_finite",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.Q_finite",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Finite.polynomial_not_finite_over_coefficients",
+      "source": "tests/KoszulFiniteModules.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Tor.polynomial_resolution",
+      "source": "tests/KoszulTor.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Tor.square_tor",
+      "source": "tests/KoszulTor.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Tor.char_two_tor",
+      "source": "tests/KoszulTor.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Tor.char_two_contraction",
+      "source": "tests/KoszulTor.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Tor.char_two_free_betti",
+      "source": "tests/KoszulTor.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.naturals_full_variables",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.naturals_nonx_variables",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.two_full_variables",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.two_nonx_variables",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Actual.naturals_completed_tor",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Actual.two_completed_tor",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Actual.changing_completed_tor",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Actual.changing_jump_two_tor",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Actual.changing_jump_three_tor",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.changing_completed_betti",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Actual.changing_same_jump_betti",
+      "source": "tests/KoszulActual.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13BaseChange.actual_polynomial_base_change",
+      "source": "tests/BettiBaseChange.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13BaseChange.square_extended_complex_dimension",
+      "source": "tests/BettiBaseChange.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13BaseChange.char_two_infinite_extension",
+      "source": "tests/BettiBaseChange.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Standard.square_normal_form",
+      "source": "tests/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Standard.square_normal_unique",
+      "source": "tests/StandardMonomials.lean"
+    },
+    {
+      "kind": "def",
+      "name": "Run13Standard.square_basis",
+      "source": "tests/StandardMonomials.lean"
+    },
+    {
+      "kind": "theorem",
+      "name": "Run13Standard.char_two_unit_minor",
+      "source": "tests/StandardMonomials.lean"
+    }
+  ]
+}

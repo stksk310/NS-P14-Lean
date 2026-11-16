@@ -1,0 +1,11 @@
+{
+  "proof_commit": "f010c72c5f77fd0074123574bee4079f1c0b98c0",
+  "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "branch": "work",
+  "verification": "final/verification.json",
+  "review": "final_review.json",
+  "source_manifest_sha256": "5a16f70575246bc6af13593e6183280136d8ce16c5f03280deec8ede445a3474",
+  "evidence_manifest_sha256": "399ca892009a743437621e99bb219c07a34176ba3c38012545ea281adaea7a7c",
+  "scope": "Run16 eleven actual endpoint IDs; Run17-20 final synthesis remains separate",
+  "publication_confirmation": "The executor checks normal push remote HEAD and clean worktree after the release commit."
+}

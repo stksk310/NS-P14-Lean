@@ -1,0 +1,11 @@
+{
+  "status": "PUBLISHED_PARTIAL_BUNDLE",
+  "archive": "artifacts/NS_P14_RUN18_PARTIAL_AUDIT_20261113.zip",
+  "archive_sha256": "4b348dd53e94458f2991ac55dcd9aca77f98f8e6d3a1d15afe5493bddcf92428",
+  "entries": 1286,
+  "crc": "PASS",
+  "run18_complete": false,
+  "stage": "LOCAL_PARTIAL_BUNDLE_CREATED_AND_VERIFIED",
+  "source_snapshot_commit": "fa3787cff6e924690ea7abc1bc522fb43a06be02",
+  "reviewed_commit": "008b3247442e6ab5d6f2e1cf025855d629bfc542"
+}

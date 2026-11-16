@@ -1,0 +1,5 @@
+tests/LexGeneratorOrder.lean:7:5: error(lean.unknownIdentifier): Unknown constant `Lex.generatorList`
+tests/LexGeneratorOrder.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Lex.generatorList`
+tests/LexGeneratorOrder.lean:9:3: error(lean.unknownIdentifier): Unknown constant `Lex.generatorList_toFinset`
+tests/LexGeneratorOrder.lean:9:36: error(lean.unknownIdentifier): Unknown constant `Lex.generatorList_pairwise`
+tests/LexGeneratorOrder.lean:16:2: error(lean.unknownIdentifier): Unknown constant `Lex.predecessorIdeal_minimal`

@@ -1,0 +1,22 @@
+{
+  "raw_fixture_source_commit": "7cb7369a6a9c85e5bddad29dec8525c04bcb2ce7",
+  "raw_parallel_status": "SIGKILL in full validation r01",
+  "raw_single_thread_status": "FAILED_RECURSION_DEPTH_8192",
+  "raw_single_thread_exit_code": 1,
+  "raw_single_thread_max_rss_kb": 10315468,
+  "cached_fixture_exit_code": 0,
+  "cached_fixture_seconds": 64.745,
+  "cached_fixture_max_rss_kb": 2727840,
+  "cached_fixture_command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M4096",
+    "tests/WidthSparse.lean"
+  ],
+  "original_named_fixture_theorems": 43,
+  "fixture_sha256": "da182deff4bdf267d5e1fafe6d76d259015d92289b729b258adb989f7161a2c3",
+  "cache_equivalence_source_sha256": "a438833b08b5464b058e53c73388f9a3ebc4a24ac1f0596e45d5256837062e71",
+  "note": "All original 43 assertions preserved. Test-only memoization is justified by Lean equalities to actual offsetSums, computedMinima, computedOrder, computedSurvivors and computedSocleWindow."
+}

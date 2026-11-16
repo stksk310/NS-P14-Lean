@@ -1,0 +1,54 @@
+✔ [5752/5759] Built NSP14.Width.EdgeHoleResources (1.7s)
+⚠ [5754/5759] Built NSP14.Width.EdgeHoleCounting (1.8s)
+warning: NSP14/Width/EdgeHoleCounting.lean:111:40: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [5756/5759] Built NSP14.Width.EdgeHoleWedgeCount (1.5s)
+✖ [5758/5759] Building NSP14.Width.EdgeHoleComparison (6.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleComparison.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleComparison.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleComparison.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleComparison.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleComparison.setup.json --json
+error: NSP14/Width/EdgeHoleComparison.lean:27:14: Invalid field notation: Function `resources` does not have a usable parameter of type `OneHole ...` for which to substitute `H`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+error: NSP14/Width/EdgeHoleComparison.lean:18:102: unsolved goals
+D : Data
+H : D.OneHole
+k : Type
+inst✝ : Field k
+hu : D.u = D.q + 2
+delta : ℕ
+hP : D.coreP k + delta ≤ D.q + 3
+i : ℕ
+hi : 1 ≤ i
+hr0 : D.q.choose i + Fintype.card (H.MinorIndex (i - 1)) ≤ koszulBoundaryRank k (↥D.a) (D.QCoreModule k) i
+hr1 : D.q.choose (i + 1) + Fintype.card (H.MinorIndex i) ≤ koszulBoundaryRank k (↥D.a) (D.QCoreModule k) (i + 1)
+hc :
+  Fintype.card (H.MinorIndex (i - 1)) + Fintype.card (H.MinorIndex i) +
+      Width.edgeCorrection (H.block false).card (H.block true).card i =
+    2 * (D.q.choose (i - 1) + D.q.choose i)
+hchain :
+  totalBetti k (↥D.a) (D.QCoreModule k) i + koszulBoundaryRank k (↥D.a) (D.QCoreModule k) i +
+      koszulBoundaryRank k (↥D.a) (D.QCoreModule k) (i + 1) =
+    D.coreP k * D.q.choose i
+hf : totalBetti k D.Variables (D.fullG k) i ≤ totalBetti k (↥D.a) (D.QCoreModule k) i + D.coreRemainder k i
+⊢ totalBetti k D.Variables (D.fullG k) i + delta * (D.q + 1).choose i ≤
+    i * (D.q + 2).choose (i + 1) + Width.edgeCorrection (H.block false).card (H.block true).card i
+error: NSP14/Width/EdgeHoleComparison.lean:36:13: Unknown identifier `H.block_partition`
+error: NSP14/Width/EdgeHoleComparison.lean:35:82: unsolved goals
+D : Data
+k : Type
+inst✝ : Field k
+hu : D.u = D.q + 2
+hq : 3 ≤ D.q
+i : ℕ
+hi : 1 ≤ i
+⊢ totalBetti k D.Variables (D.fullG k) i ≤ Target.apLowerProfile D.u i
+error: NSP14/Width/EdgeHoleComparison.lean:88:10: Invalid field notation: Function `Endpoint.Data.OneHole.actual_positive` does not have a usable parameter of type `Endpoint.Data.OneHole ...` for which to substitute `D.oneHole
+  hu`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleComparison
+error: build failed

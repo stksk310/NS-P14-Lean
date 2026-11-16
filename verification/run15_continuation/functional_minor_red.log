@@ -1,0 +1,4 @@
+tests/FunctionalMinor.lean:9:45: error(lean.invalidField): Invalid field `det`: The environment does not contain `Function.det`, so it is not possible to project the field `det` from an expression
+  fun i j => (rows i) (d (columns j))
+of type `I → I → k`
+tests/FunctionalMinor.lean:10:49: error(lean.unknownIdentifier): Unknown identifier `functional_minor_rank_lower_bound`

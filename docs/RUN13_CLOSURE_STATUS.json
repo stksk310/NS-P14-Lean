@@ -1,0 +1,32 @@
+{
+  "run13_complete": true,
+  "mathematical_exports_complete": true,
+  "verification_complete": true,
+  "phase": "verified_release",
+  "full_P14_complete": false,
+  "X_BASIC_closed_for_Run13": true,
+  "I_FIELD_closed_for_Run13": true,
+  "required_order": "docs/superpowers/plans/2026-11-10-run13-koszul-tor-foundations-order.md",
+  "baseline_commit": "6b8d16889ea9b4d88567f0d9ac70391db2a49824",
+  "continuation_baseline": "92cbe8f875845fbcefc76c6c819780fe8776429c",
+  "independent_review": "docs/RUN13_CONTINUATION_REVIEW_JA.md",
+  "review_findings": {
+    "critical": 0,
+    "important": 2,
+    "fixed": 2,
+    "deferred_minors": []
+  },
+  "actual_L_grading_identification": "ActualGradedBaseChange: five independently constructed actual target order gradings; gradedScalarKoszulIso_commutes uses the same total comparison and actual inclusions",
+  "new_mathematical_axioms": [],
+  "axiom_audit": "Lean collectAxioms export dependency metadata; source guard; self-dependency guard; generated declarations included",
+  "verification": "verification/block13_continuation/verification.json",
+  "publication": "通常のworkコミットとしてPush。実測SHAとremote一致は最終応答で記録。",
+  "pending_Run13_mathematical_declarations": [],
+  "later_run_inputs": [
+    "actual cut/regular sequence/offset stabilization",
+    "actual harmonic initial ideal and ordinary/AP target",
+    "actual tower, localization/rank zero and specific connecting ranks",
+    "common endpoint transfer and public inputs",
+    "final P14 integration"
+  ]
+}

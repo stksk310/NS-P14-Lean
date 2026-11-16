@@ -1,0 +1,23 @@
+{
+  "qualification": "Byte-exact restored legacy checkers rerun in this session. Finite proof components reproduced; not a new independent proof of all N4 ancestors.",
+  "records": [
+    {
+      "output": "reduction_work/boundary_agent/legacy_b4_replay/r27_a01_replay.json",
+      "sha256": "2e62da819067e6f2c7f4554c792efcfdc756ce73e65a8c4059b9e0d412388fec",
+      "scope": "13,921 primitive offset bounds; eight exact offset exceptions; seven ordinary boundary controls",
+      "status": "PASS"
+    },
+    {
+      "output": "reduction_work/boundary_agent/legacy_b4_replay/r26_a01_independent_replay.json",
+      "sha256": "cbb95359418dc54020d81d55e1fd8288669ec6a0dd84a61c57e74ffe96cf46b2",
+      "scope": "4,824 actual sources and 108 proved stable-tail families for second-row upper bound",
+      "status": "PASS"
+    },
+    {
+      "output": "reduction_work/boundary_agent/legacy_b4_replay/r24_n02_replay.json",
+      "sha256": "97d9cd9ce13df7e448c5aaf44780a90ecc3d2f8f3b40b7764ec8a03baf5764d7",
+      "scope": "16 Taylor certificates after proved all-m periodicity; 308+192 actual source cases are regression only",
+      "status": "PASS"
+    }
+  ]
+}

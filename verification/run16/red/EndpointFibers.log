@@ -1,0 +1,13 @@
+tests/EndpointFibers.lean:8:51: error(lean.invalidField): Invalid field `coreFiber`: The environment does not contain `NSP14.Endpoint.Data.coreFiber`, so it is not possible to project the field `coreFiber` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointFibers.lean:8:82: error(lean.invalidField): Invalid field `coreFiber`: The environment does not contain `NSP14.Endpoint.Data.coreFiber`, so it is not possible to project the field `coreFiber` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointFibers.lean:9:4: error(lean.invalidField): Invalid field `coreFiber_upward`: The environment does not contain `NSP14.Endpoint.Data.coreFiber_upward`, so it is not possible to project the field `coreFiber_upward` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointFibers.lean:11:23: error(lean.invalidField): Invalid field `coreFiberIdeal`: The environment does not contain `NSP14.Endpoint.Data.coreFiberIdeal`, so it is not possible to project the field `coreFiberIdeal` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointFibers.lean:11:57: error(lean.unknownIdentifier): Unknown identifier `D.coreFiberIdeal_zero`

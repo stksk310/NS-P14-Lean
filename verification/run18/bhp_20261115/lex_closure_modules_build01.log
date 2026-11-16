@@ -1,0 +1,104 @@
+✔ [5650/5665] Built NSP14.Lex.SuffixVariableRestriction (1.9s)
+✖ [5652/5665] Building NSP14.Lex.TotalBettiComparison (2.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/TotalBettiComparison.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/TotalBettiComparison.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/TotalBettiComparison.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/TotalBettiComparison.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/TotalBettiComparison.setup.json --json
+error: NSP14/Lex/TotalBettiComparison.lean:12:10: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/TotalBettiComparison.lean:13:10: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/TotalBettiComparison.lean:17:73: unsolved goals
+k : Type
+inst✝ : Field k
+q : ℕ
+I L : Ideal (MvPolynomial (Fin q) k)
+hI : sorry
+hL : sorry
+hlL : IsLex k q L
+hH : ∀ (n : ℕ), quotientHilbert k q I ⋯ n = quotientHilbert k q L ⋯ n
+i : ℕ
+hi : 1 ≤ i
+s : Finset ℤ
+hs : ∀ j ∉ s, quotientGradedBetti k q I ⋯ i j = 0
+heI : totalBetti k (Fin q) (Endpoint.artinModule k (Fin q) I) i = ∑ j ∈ s, quotientGradedBetti k q I ⋯ i j
+t : Finset ℤ
+ht : ∀ j ∉ t, quotientGradedBetti k q L ⋯ i j = 0
+heL : totalBetti k (Fin q) (Endpoint.artinModule k (Fin q) L) i = ∑ j ∈ t, quotientGradedBetti k q L ⋯ i j
+hext : ∀ (u v : Finset ℤ) (f : ℤ → ℕ), (∀ j ∉ u, f j = 0) → ∑ j ∈ u, f j = ∑ j ∈ u ∪ v, f j
+⊢ ∑ j ∈ s, quotientGradedBetti k q I ⋯ i j ≤ ∑ j ∈ t, quotientGradedBetti k q L ⋯ i j
+✔ [5654/5665] Built NSP14.Lex.LexDegreeIdeal (2.8s)
+✖ [5656/5665] Building NSP14.Lex.StandardBettiWeights (3.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/StandardBettiWeights.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/StandardBettiWeights.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/StandardBettiWeights.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/StandardBettiWeights.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/StandardBettiWeights.setup.json --json
+error: NSP14/Lex/StandardBettiWeights.lean:40:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:79:10: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:90:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:112:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:151:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:154:89: unsolved goals
+k : Type
+inst✝ : Field k
+q : ℕ
+I : Ideal (MvPolynomial (Fin q) k)
+hI : IsLex k q I
+hproper : I ≠ ⊤
+hHom : sorry
+N i : ℕ
+hN : ∀ (n : ℕ), N < n → quotientHilbert k q I ⋯ n = 0
+hsI : IsStronglyStable k q I
+hp : ∀ v ∈ minimalGeneratorFinset k q I, 1 ≤ Finsupp.degree v
+d : ℕ
+a✝ : d ∈ Finset.range (N + 1)
+⊢ (∑ a ∈ minimalGeneratorFinset k q I, if Finsupp.degree a = d + 1 then (maxVariable q a - 1).choose i else 0) =
+    quotientGradedBetti k q I ⋯ (i + 1) (↑(d + 1) + ↑i)
+error: NSP14/Lex/StandardBettiWeights.lean:170:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:210:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:260:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:282:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:300:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:319:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Lex/StandardBettiWeights.lean:333:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (Fin q) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+✔ [5658/5665] Built NSP14.Lex.LexTailSupport (2.1s)
+✔ [5662/5665] Built NSP14.Lex.LexCompatibleDegrees (1.6s)
+✔ [5664/5665] Built NSP14.Lex.LexExistence (1.3s)
+Some required targets logged failures:
+- NSP14.Lex.TotalBettiComparison
+- NSP14.Lex.StandardBettiWeights
+error: build failed

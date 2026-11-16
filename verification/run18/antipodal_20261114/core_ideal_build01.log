@@ -1,0 +1,29 @@
+✔ [5484/5487] Built NSP14.Width.IdealGeneratorBound (1.6s)
+✖ [5486/5487] Building NSP14.Width.CoreIdealPresentation (1.8s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/CoreIdealPresentation.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/CoreIdealPresentation.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/CoreIdealPresentation.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/CoreIdealPresentation.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/CoreIdealPresentation.setup.json --json
+error: NSP14/Width/CoreIdealPresentation.lean:33:12: failed to synthesize instance of type class
+  GradedRing (MvPolynomial.homogeneousSubmodule (↥D.a) k)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Width/CoreIdealPresentation.lean:44:4: Type mismatch: After simplification, term
+  he
+ has type
+  1 = 0
+but is expected to have type
+  False
+error: NSP14/Width/CoreIdealPresentation.lean:35:61: unsolved goals
+D : Data
+k : Type
+inst✝¹ : Field k
+ι : Type
+inst✝ : Fintype ι
+v : ι → D.InternalRing k
+hker : RingHom.ker (D.internalToQCore k).toRingHom = Ideal.span (Set.range v)
+hhom : sorry
+I : Ideal (D.InternalRing k) := RingHom.ker (D.internalToQCore k).toRingHom
+this : Module.Finite k (D.InternalRing k ⧸ I) := Module.Finite.equiv (↑(D.coreKernelPresentation k)).symm
+hproper : I ≠ ⊤
+⊢ totalBetti k (↥D.a) (artinModule k (↥D.a) (RingHom.ker (D.internalToQCore k).toRingHom)) 1 ≤ Fintype.card ι
+Some required targets logged failures:
+- NSP14.Width.CoreIdealPresentation
+error: build failed

@@ -1,0 +1,46 @@
+✖ [5566/5567] Building NSP14.Width.AntipodalVolume (2.1s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalVolume.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalVolume.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalVolume.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalVolume.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalVolume.setup.json --json
+error: NSP14/Width/AntipodalVolume.lean:89:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  v ≥ 0
+  s ≥ 0
+  o ≥ 0
+  k ≥ 0
+  k + o ≥ 0
+  i ≥ 1
+  i - v ≥ 1
+  g ≥ 0
+  0 ≤ f ≤ 1
+  f - i ≤ 0
+  b ≥ 0
+  b - i ≥ 1
+  2*b - g ≥ 1
+where
+ b := ↑h
+ f := ↑↑e
+ g := ↑↑(D.antipodalResidue h t (n, e))
+ i := ↑l
+ k := ↑l * ↑t
+ o := ↑j * ↑h
+ s := ↑(↑n * t) % ↑h
+ v := ↑(D.shortestDegree (D.antipodalResidue h t (n, e)))
+warning: NSP14/Width/AntipodalVolume.lean:123:49: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [epsilon, Nat.ne_of_gt hh, ite_false, Prod.snd, zero_add] at hupp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/AntipodalVolume.lean:123:58: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [epsilon, Nat.ne_of_gt hh, ite_false, Prod.fst, zero_add] at hupp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/AntipodalVolume.lean:124:4: Unused tactic linter: `change D.shortestDegree ⟨h, D.a_lt _ b.property⟩ = e.val` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Some required targets logged failures:
+- NSP14.Width.AntipodalVolume
+error: build failed

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/ns-p14-run20-20261116/scripts/check_run20_guards.py", line 192, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/ns-p14-run20-20261116/scripts/check_run20_guards.py", line 33, in main
+    reject('frozen_cut_predicate_weakened_to_True',lambda:v.validate_changes(r),'frozen partition predicate bodies changed')
+  File "/tmp/ns-p14-run20-20261116/scripts/check_run20_guards.py", line 20, in reject
+    else:raise ValueError(name+': invalid input accepted')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: frozen_cut_predicate_weakened_to_True: invalid input accepted

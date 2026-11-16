@@ -1,0 +1,21 @@
+{
+  "url": "https://github.com/YaelDillies/MiscYD",
+  "commit": "f2f1d413b681dfd7a0f0e8481aee3ab7e0bae7ba",
+  "mathlib_dependency_not_adopted": "69552756cd8a2d2d48763cf7279fd814d6a1224d",
+  "files": {
+    "MulStab.lean": "8f6872914a8830fb89b8ff39fc609ef79cb16221ba4f45cc0ac0c6fee4bc7608",
+    "Kneser.lean": "7173cd8f1bc92bb620391655fa5619481fec425ad29034f26fd69a3b96bec030"
+  },
+  "adaptations": [
+    "import renamed to NSP14.Additive.KneserFinsetStabilizer",
+    "public section marked expose; no proof body changed",
+    "license filename reference changed to Kneser_SOURCE_LICENSE"
+  ],
+  "captured_web_extract_sha256": {
+    "devos_web_extract.txt": "3b98f8a691d48a645f96e287cb951c50b7af121394294701bf236208f05fdc67",
+    "savchev_chen_web_extract_1.txt": "f56bc2ce1cf64c9e23491b8ea8b9164ac4b927363d4f1d5d30689490b40219d2",
+    "savchev_chen_web_extract_2.txt": "2a9197dd40edc1be7c2263ee0c130563d4441cf6d39c28c2db0cf1f3a05ddcdf",
+    "lev_web_extract.txt": "2b24daca0eb79d39814734b6b45bc1986758b61bf0bcc0cbacfe43bd1c9a6da4"
+  },
+  "extracts_scope": "Acquired web-rendered extracts; hashes are not PDF/HTML-original hashes. Text retained in execution scratch, not distributed."
+}

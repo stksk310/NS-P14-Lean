@@ -1,0 +1,6 @@
+tests/CutBasis.lean:8:6: error(lean.invalidField): Invalid field `extendedPolynomialEquiv`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.extendedPolynomialEquiv`, so it is not possible to project the field `extendedPolynomialEquiv` from an expression
+  C
+of type `S.LinearCutData k`
+tests/CutBasis.lean:9:4: error(lean.invalidField): Invalid field `extendedPolynomialEquiv_prefix`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.extendedPolynomialEquiv_prefix`, so it is not possible to project the field `extendedPolynomialEquiv_prefix` from an expression
+  C
+of type `S.LinearCutData k`

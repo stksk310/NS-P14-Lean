@@ -1,0 +1,167 @@
+✖ [5620/5621] Building NSP14.Width.EdgeHoleMinor (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleMinor.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleMinor.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleMinor.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleMinor.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleMinor.setup.json --json
+error: NSP14/Width/EdgeHoleMinor.lean:14:61: failed to synthesize instance of type class
+  Finite (H.MinorIndex j)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Width/EdgeHoleMinor.lean:50:2: Type mismatch: After simplification, term
+  he
+ has type
+  koszulSlotWedge (variableList k ↥D.a) (j + 1) ⋯.choose = insert (H.selected a) ↑(↑a).2
+but is expected to have type
+  koszulSlotWedge (variableList k ↥D.a) (j + 1) (H.insertion k a).1 = insert (H.selected a) ↑(↑a).2
+error: NSP14/Width/EdgeHoleMinor.lean:98:49: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (insert (H.selected b) ↑(↑a).2).erase (H.selected b)
+in the target expression
+  ↑(↑b).2 = (insert (H.selected b) ↑(↑a).2).erase (H.selected b)
+
+D : Data
+H : D.OneHole
+k : Type
+inst✝ : Field k
+j : ℕ
+a b : H.MinorIndex j
+hab : a ≠ b
+sign : Bool
+hs : H.side (H.selected b) = H.side (H.selected a)
+har : koszulSlotArrow (variableList k ↥D.a) j (H.insertion k b).1 (H.target k a) = some (H.selected b, sign)
+hw : koszulSlotWedge (variableList k ↥D.a) (j + 1) (H.insertion k b).1 = insert (H.selected b) ↑(↑a).2
+hn : H.selected b ∉ ↑(↑a).2
+right✝ : H.selected b ∈ variableList k ↥D.a
+he : ↑(↑b).2 = (insert (H.selected b) ↑(↑a).2).erase (H.selected b)
+⊢ False
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    p.2
+  has type
+    KoszulWedge (↥D.a) j
+  but is expected to have type
+    { F // F.card = j }
+  in the application
+    ↑p.2
+error: NSP14/Width/EdgeHoleMinor.lean:134:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (D.QCoreLinearFunctional k (koszulSlotSelectedVariable k (↥D.a) j s))
+    ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (koszulDeleteData k (↥D.a) j s).1)
+      ((ConcreteCategory.hom
+          (((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).d (j + 1) j))
+        ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+          (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a))))))))
+in the target expression
+  (D.QCoreLinearFunctional k (koszulSlotSelectedVariable k (↥D.a) j s))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (koszulDeleteData k (↥D.a) j s).1)
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+            (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a)))))))) =
+    0
+
+D : Data
+H : D.OneHole
+k : Type
+inst✝ : Field k
+j : ℕ
+s : KoszulSlot (variableList k ↥D.a).length (j + 1)
+a : H.MinorIndex j
+he :
+  (D.QCoreLinearFunctional k (koszulSlotSelectedVariable k (↥D.a) j s))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (koszulDeleteData k (↥D.a) j s).1)
+        ((ConcreteCategory.hom
+            (((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+            (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a)))))))) =
+    (D.QCoreLinearFunctional k (koszulSlotSelectedVariable k (↥D.a) j s))
+      ((ModuleCat.Hom.hom
+          (koszulSignedVariable k (↥D.a) (D.QCoreModule k)
+            (koszulSlotArrow (variableList k ↥D.a) j (H.insertion k a).1 (koszulDeleteData k (↥D.a) j s).1)))
+        (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a))))))
+⊢ (D.QCoreLinearFunctional k (koszulSlotSelectedVariable k (↥D.a) j s))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (koszulDeleteData k (↥D.a) j s).1)
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+            (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a)))))))) =
+    0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+      (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a)))))
+  has type
+    ↑(((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).X (j + 1))
+  but is expected to have type
+    ↑((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).X (j + 1))
+  in the application
+    (ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+      ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) (H.insertion k a).1)
+        (D.coreColumn k (D.coreGeneratorPoint (D.internalVariable (H.mate (H.selected a))))))
+error: NSP14/Width/EdgeHoleMinor.lean:149:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (D.coreRow k (H.quadraticIndex (H.selected a)))
+    ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (H.target k a))
+      ((ConcreteCategory.hom
+          (((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).d (j + 1) j))
+        ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k))))
+in the target expression
+  (D.coreRow k (H.quadraticIndex (H.selected a)))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (H.target k a))
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k)))) =
+    0
+
+D : Data
+H : D.OneHole
+k : Type
+inst✝ : Field k
+j : ℕ
+a : H.MinorIndex j
+s : KoszulSlot (variableList k ↥D.a).length (j + 1)
+he :
+  (D.coreRow k (H.quadraticIndex (H.selected a)))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (H.target k a))
+        ((ConcreteCategory.hom
+            (((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k)))) =
+    (D.coreRow k (H.quadraticIndex (H.selected a)))
+      ((ModuleCat.Hom.hom
+          (koszulSignedVariable k (↥D.a) (D.QCoreModule k) (koszulSlotArrow (variableList k ↥D.a) j s (H.target k a))))
+        (D.QCoreUnit k))
+⊢ (D.coreRow k (H.quadraticIndex (H.selected a)))
+      ((coefficientSlotOut k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) j (H.target k a))
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+          ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k)))) =
+    0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k)
+  has type
+    ↑(((coefficientKoszulListFunctor k (↥D.a) (variableList k ↥D.a)).obj (D.QCoreModule k)).X (j + 1))
+  but is expected to have type
+    ↑((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).X (j + 1))
+  in the application
+    (ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) (D.QCoreModule k)).d (j + 1) j))
+      ((coefficientSlotIn k (↥D.a) (D.QCoreModule k) (variableList k ↥D.a) (j + 1) s) (D.QCoreUnit k))
+error: NSP14/Width/EdgeHoleMinor.lean:159:48: Application type mismatch: The argument
+  QCore_linear_functionals D k
+has type
+  ∀ (v w : ↥D.a),
+    (D.QCoreLinearFunctional k v) (MvPolynomial.X w • D.QCoreUnit k) = @ite k (v = w) (v.instDecidableEq w) 1 0
+but is expected to have type
+  ∀ (v w : ↥D.a),
+    (D.QCoreLinearFunctional k v) (MvPolynomial.X w • D.QCoreUnit k) =
+      @ite k (v = w) (Classical.propDecidable (v = w)) 1 0
+in the application
+  @koszulBoundaryRank_ge_choose_add k (↥D.a) inst✝ ?m.27 (D.QCoreModule k) ?m.29 (D.QCoreUnit k)
+    (D.QCoreLinearFunctional k) (QCore_linear_functionals D k)
+error: NSP14/Width/EdgeHoleMinor.lean:161:2: Type mismatch: After simplification, term
+  h
+ has type
+  @LE.le ℕ instLENat (D.a.card.choose (j + 1) + Fintype.card (H.MinorIndex j))
+    (koszulBoundaryRank k (↥D.a) (D.QCoreModule k) (j + 1))
+but is expected to have type
+  @LE.le ℕ instLENat (D.q.choose (j + 1) + Fintype.card (H.MinorIndex j))
+    (koszulBoundaryRank k (↥D.a) (D.QCoreModule k) (j + 1))
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleMinor
+error: build failed

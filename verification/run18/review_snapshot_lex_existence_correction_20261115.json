@@ -1,0 +1,22 @@
+{
+  "status": "PASS_REVIEW_FOR_GENERAL_LEX_EXISTENCE_TOTAL_BHP_AND_STANDARD_CORRECTION",
+  "run18_complete": false,
+  "proof_snapshot_commit": "6074994621ca5b57be28d44729a8ebab46f700a6",
+  "reviewed_source_commit": "6074994621ca5b57be28d44729a8ebab46f700a6",
+  "verification": "verification/run18/runs/release_candidate_20261115_r15/verification.json",
+  "verification_sha256": "fe8e7927f8251a05efff2c7dcf7533eee9156f89460e50a8790abef80e8b1186",
+  "report": "verification/run18/lex_existence_correction_review_20261115.md",
+  "report_sha256": "fb91b73af80d0768f9864fe22c31238dc7d8ad1f6249cd5093fd4c5d4a9ee0fa",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": [
+    "actual QC dense lex application and harmonic payment",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

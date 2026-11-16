@@ -1,0 +1,3 @@
+tests/MainPublicAPI.lean:14:49: error: unexpected token ':='; expected ':'
+tests/MainPublicAPI.lean:15:49: error: unexpected token ':='; expected ':'
+tests/MainPublicAPI.lean:16:51: error: unexpected token ':='; expected ':'

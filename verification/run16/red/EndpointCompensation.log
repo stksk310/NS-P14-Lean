@@ -1,0 +1,3 @@
+tests/EndpointCompensation.lean:9:4: error(lean.invalidField): Invalid field `actual_kernel_compensation`: The environment does not contain `NSP14.Endpoint.Data.actual_kernel_compensation`, so it is not possible to project the field `actual_kernel_compensation` from an expression
+  D
+of type `Data`

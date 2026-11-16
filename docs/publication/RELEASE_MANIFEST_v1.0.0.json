@@ -1,0 +1,19 @@
+{
+  "release": "v1.0.0",
+  "audited_commit": "e72713965716d7f93f672034c6332a79b59b1c53",
+  "completion_receipt": "verification/run20/RUN20_COMPLETE_20261116_R03.json",
+  "assets": {
+    "artifacts/NS_P14_LEAN_RUN20_COMPLETE_20261116_R03.zip": "7145c7302a7267041897a6f0993d8b2c82b9755b44412efd6f4dfe064c473d94"
+  },
+  "evidence": {
+    "verification/run20/RUN20_COMPLETE_20261116_R03.json": "53b571bdc562a879c69a791354edb33dfbfaeba07d6a04a1ccfc75d455a6480b",
+    "verification/run20/publication/independent_audit_push_20261116_r01.json": "ea2d692323a346d81eca1fdf1e38b2414b9376a0682e85d7a707ceb6697901b1",
+    "verification/run20/independent_audit_20261116_r01/audit.json": "f5f225bb0a917987bbc3aac7dcc8ddede62984cc4e07b6da8e61ebc8ab419a4a",
+    "verification/run20/runs/release_20261116_r03/verification.json": "ddd4944e0512299a2b882a2b1f15e40ae3c158654b5496d9c25dc911fd4ff7f0",
+    "verification/run20/runs/release_20261116_r03/SOURCE_SHA256.json": "54cef31e8bbb8772031bd469b19203700aa848efbdcd03bddeb3881499c9282a",
+    "verification/run20/runs/release_20261116_r03/MANIFEST_SHA256.json": "255f35df59d29bdedda826144ac70a05b20827be9fa0e5866012279f9890c2fd",
+    "verification/run20/review/final_20261116_r03.json": "bbdfe7933db28dc99ca34c3fb821b60fd5979245ffa34d3e2128c5bff6cc3962",
+    "verification/run20/review/final_20261116_r03.md": "76e42ff358af8f4f96bf7b1306623c57fec6952cbc4030ac6bd4b16d1ae31c07"
+  },
+  "scope": "All audited files remain byte-identical except the publication README. New publication documents do not constitute a new Lean run."
+}

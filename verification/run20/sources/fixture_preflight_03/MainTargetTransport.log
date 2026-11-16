@@ -1,0 +1,9 @@
+tests/MainTargetTransport.lean:14:0: warning: Definition `transport` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tests/MainTargetTransport.lean:16:0: warning: Definition `literal_one` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tests/MainTargetTransport.lean:23:0: warning: Definition `target_identification` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

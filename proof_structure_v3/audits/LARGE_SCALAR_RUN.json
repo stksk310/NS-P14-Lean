@@ -1,0 +1,42 @@
+{
+  "new_barrier_identity": "all polynomial coefficients match",
+  "rank_4_to_9_margins": [
+    {
+      "rank": 4,
+      "rational_margin": "17587/79800"
+    },
+    {
+      "rank": 5,
+      "rational_margin": "143/1200"
+    },
+    {
+      "rank": 6,
+      "rational_margin": "23/350"
+    },
+    {
+      "rank": 7,
+      "rational_margin": "2993/96200"
+    },
+    {
+      "rank": 8,
+      "rational_margin": "321/60200"
+    },
+    {
+      "rank": 9,
+      "rational_margin": "1/900"
+    }
+  ],
+  "new_rank_10_anchor_margin": "181/8400",
+  "frozen_cutoff_diagnostics": 351,
+  "diagnostic_rank_range": [
+    4,
+    30
+  ],
+  "diagnostic_delta_minus_a_range": [
+    0,
+    12
+  ],
+  "minimum_gap": "5845533/7436429",
+  "minimum_forward_gap_difference": "3791/630",
+  "scope": "Universal derivations in manuscript section 11; finite diagnostics are supplementary."
+}

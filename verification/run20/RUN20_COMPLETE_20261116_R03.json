@@ -1,0 +1,119 @@
+{
+  "status": "RUN20_COMPLETE",
+  "run20_complete": true,
+  "all_P14_complete": true,
+  "recorded_UTC": "2026-11-16T07:07:53.716319+00:00",
+  "closed_ids": [
+    "I_MAIN",
+    "I_PARTITION"
+  ],
+  "unproved_ids": [],
+  "necessary_unproved_mathematical_inputs": [],
+  "main_theorem": "NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion",
+  "universal_scope": {
+    "semigroup": "every S : NumericalSemigroup",
+    "field": "original arbitrary k : Type with [Field k]",
+    "row": "every i : Nat, including H0 and all upper rows",
+    "source_and_target": "actual completed tangent algebras, each in its own AtomExponent and FullPolynomialRing",
+    "target_carrier": "AddSubmonoid.closure (Set.Icc S.multiplicity S.maxAtom)",
+    "e_one": "literal [1,1] completion"
+  },
+  "proof_snapshot_commit": "1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e",
+  "evidence_commit": "041adc1024109644378b2be5aed95276da6b65f2",
+  "evidence_directory": "verification/run20/runs/release_20261116_r03",
+  "verification_summary_sha256": "ddd4944e0512299a2b882a2b1f15e40ae3c158654b5496d9c25dc911fd4ff7f0",
+  "source_manifest_sha256": "54cef31e8bbb8772031bd469b19203700aa848efbdcd03bddeb3881499c9282a",
+  "evidence_manifest_sha256": "255f35df59d29bdedda826144ac70a05b20827be9fa0e5866012279f9890c2fd",
+  "verification": {
+    "checks": 335,
+    "fixtures": 311,
+    "declarations": 15774,
+    "direct_private_import_modules": 1019,
+    "private_declarations": 3679,
+    "baseline_declarations": 15542,
+    "baseline_modules": 1003,
+    "baseline_public_type_pairs_preserved": 11928,
+    "current_negative_controls": 61,
+    "arrived_Run19_controls": 35,
+    "historical_V06_controls": 24,
+    "actual_Lean_codec_controls": 13,
+    "original_IDs_mapped": 50,
+    "mapped_declaration_occurrences": 1650,
+    "retained_prior_files": 10236,
+    "all_passed": true,
+    "whole_project_lib_IR_cold": true,
+    "fixed_dependency_cache_retained": true,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "review": {
+    "commit": "dd77e23d92217bf143b111ffd75e9f07706fdfd8",
+    "decision": "verification/run20/review/final_20261116_r03.json",
+    "decision_sha256": "bbdfe7933db28dc99ca34c3fb821b60fd5979245ffa34d3e2128c5bff6cc3962",
+    "body": "verification/run20/review/final_20261116_r03.md",
+    "body_sha256": "76e42ff358af8f4f96bf7b1306623c57fec6952cbc4030ac6bd4b16d1ae31c07",
+    "independent_original_report_sha256": "57dc1d871c924a6d0098a7e08060a3880df8ce8a942c5df22de92009865c2620",
+    "unresolved": {
+      "critical": 0,
+      "important": 0,
+      "minor": 0
+    },
+    "pending": [],
+    "declined": [],
+    "resolved_findings": [
+      {
+        "id": "F1",
+        "original_severity": "Important",
+        "status": "resolved and reverified",
+        "scope": "freeze referenced Partition predicate definitions"
+      },
+      {
+        "id": "F2",
+        "original_severity": "Important",
+        "status": "resolved and reverified",
+        "scope": "clean-clone incidental bytecode retention; all tracked bytes remain bound"
+      }
+    ],
+    "executed_independent_crosscheck_DAG_nodes": 10553762,
+    "executed_programs_and_raw_results_embedded_in_body": true
+  },
+  "archive": {
+    "archive": "artifacts/NS_P14_LEAN_RUN20_COMPLETE_20261116_R03.zip",
+    "sha256": "7145c7302a7267041897a6f0993d8b2c82b9755b44412efd6f4dfe064c473d94",
+    "entries": 2168,
+    "CRC_and_all_payload_hashes": true,
+    "proof_snapshot_commit": "1a5c6bac9a4fd38a8bc5d13b4c7372e654466e6e",
+    "reviewed_evidence_commit": "041adc1024109644378b2be5aed95276da6b65f2",
+    "review_commit": "dd77e23d92217bf143b111ffd75e9f07706fdfd8",
+    "evidence": "verification/run20/runs/release_20261116_r03",
+    "review": "verification/run20/review/final_20261116_r03.json",
+    "review_report": "verification/run20/review/final_20261116_r03.md",
+    "complete_offline_checkout": false,
+    "scope": "unconditional all-S all-field all-row P14; actual completed tangent algebras; literal interval completion"
+  },
+  "archive_bytes": 92570092,
+  "archive_Git_bytes_at_package_commit_match": true,
+  "normal_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:refs/heads/work"
+    ],
+    "pushed_package_commit": "f5f89080d76f86ed155ab0b17b00353ee8be03a2",
+    "observed_remote_work": "f5f89080d76f86ed155ab0b17b00353ee8be03a2",
+    "local_HEAD_observed": "f5f89080d76f86ed155ab0b17b00353ee8be03a2",
+    "clean_before_completion_receipt": true,
+    "force": false,
+    "upstream_before_publish": "342fbdda072fc5d6aa5e8f2d8968456cc54c12a6",
+    "observation_scope": "Published proof/evidence/review/ZIP commit. This receipt is committed and normally pushed afterwards; its final SHA is observed separately to avoid a self-reference."
+  },
+  "paper_correspondence": "docs/RUN20_PAPER_CORRESPONDENCE_JA.md",
+  "original_fifty_ID_coverage": "docs/RUN20_DEPENDENCY_COVERAGE.json",
+  "historical_status_scope": "Source-bound docs/RUN20_CLOSURE_STATUS.json and validation summary preserve their prepublication phase. This postpublication receipt is authoritative for completion. Earlier failed/superseded attempts remain unchanged and receive no final PASS credit.",
+  "remaining_required_work": [],
+  "complete_offline_checkout": false
+}

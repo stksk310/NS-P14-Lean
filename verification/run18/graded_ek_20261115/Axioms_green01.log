@@ -1,0 +1,17 @@
+'NSP14.Homological.gradedKoszulHomologyInclusion_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulMap_homology_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulMap_retraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.gradedKoszulSequence_shortExact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.graded_quotient_betti_additivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.graded_quotient_betti_additivity.{u} (k σ : Type u) [Field k]
+  (S : CategoryTheory.ShortComplex (ModuleCat (NSP14.Homological.VariableRing k σ)))
+  (G1 : NSP14.Homological.GradedPolynomialModule k σ S.X₁) (G2 : NSP14.Homological.GradedPolynomialModule k σ S.X₂)
+  (G3 : NSP14.Homological.GradedPolynomialModule k σ S.X₃)
+  (hf : ∀ (q : ℤ), ∀ a ∈ G1.degreeSpace q, (CategoryTheory.ConcreteCategory.hom S.f) a ∈ G2.degreeSpace q)
+  (hg : ∀ (q : ℤ), ∀ a ∈ G2.degreeSpace q, (CategoryTheory.ConcreteCategory.hom S.g) a ∈ G3.degreeSpace q) [Fintype σ]
+  [Module.Finite (NSP14.Homological.VariableRing k σ) ↑S.X₁] [Module.Finite (NSP14.Homological.VariableRing k σ) ↑S.X₂]
+  [Module.Finite (NSP14.Homological.VariableRing k σ) ↑S.X₃] (hS : S.ShortExact)
+  (hz : ∀ (j : ℕ), HomologicalComplex.homologyMap ((NSP14.Homological.coefficientKoszulFunctor k σ).map S.f) j = 0)
+  (i : ℕ) (t : ℤ) :
+  NSP14.Homological.gradedBetti k σ S.X₃ G3 (i + 1) t =
+    NSP14.Homological.gradedBetti k σ S.X₂ G2 (i + 1) t + NSP14.Homological.gradedBetti k σ S.X₁ G1 i t

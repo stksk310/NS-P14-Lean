@@ -1,0 +1,6 @@
+tests/EndpointCoreArtin.lean:7:38: error(lean.invalidField): Invalid field `coreP_le_wordVolume`: The environment does not contain `NSP14.Endpoint.Data.coreP_le_wordVolume`, so it is not possible to project the field `coreP_le_wordVolume` from an expression
+  D
+of type `Data`
+tests/EndpointCoreArtin.lean:8:64: error(lean.invalidField): Invalid field `coreP_minimalCount`: The environment does not contain `NSP14.Endpoint.Data.coreP_minimalCount`, so it is not possible to project the field `coreP_minimalCount` from an expression
+  D
+of type `Data`

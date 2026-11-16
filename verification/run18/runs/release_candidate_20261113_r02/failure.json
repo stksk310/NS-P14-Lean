@@ -1,0 +1,10 @@
+{
+  "status": "FAILED_VERIFIER_EXPORTED_STUB_CLASSIFICATION",
+  "run18_complete": false,
+  "recorded_after_failure": true,
+  "source_snapshot_commit": "2dd15b6490729ebb8fcce4c27fe0a2ffa84b45f5",
+  "environment_declarations": 8429,
+  "bad_transitive_dependency_sets": 0,
+  "exported_axiom_info": 6258,
+  "note": "All 159 fixtures and numeric/guard/replay commands passed. The validator incorrectly rejected ConstantInfo.axiomInfo for proven exported theorem interfaces; this attempt remains FAILED, not a closure certificate."
+}

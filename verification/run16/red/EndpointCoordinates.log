@@ -1,0 +1,12 @@
+tests/EndpointCoordinates.lean:8:50: error(lean.invalidField): Invalid field `decodeCoordinate`: The environment does not contain `NSP14.Endpoint.Data.decodeCoordinate`, so it is not possible to project the field `decodeCoordinate` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointCoordinates.lean:9:4: error(lean.invalidField): Invalid field `decode_coreCoordinates`: The environment does not contain `NSP14.Endpoint.Data.decode_coreCoordinates`, so it is not possible to project the field `decode_coreCoordinates` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointCoordinates.lean:11:70: error(lean.invalidField): Invalid field `CoordinatePoint`: The environment does not contain `NSP14.Endpoint.Data.CoordinatePoint`, so it is not possible to project the field `CoordinatePoint` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointCoordinates.lean:12:5: error(lean.invalidField): Invalid field `coreCoordinateEquiv`: The environment does not contain `NSP14.Endpoint.Data.coreCoordinateEquiv`, so it is not possible to project the field `coreCoordinateEquiv` from an expression
+  D
+of type `Endpoint.Data`

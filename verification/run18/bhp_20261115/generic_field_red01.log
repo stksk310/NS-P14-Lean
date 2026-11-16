@@ -1,0 +1,2 @@
+tests/GenericDistractionField.lean:11:2: error(lean.unknownIdentifier): Unknown constant `Lex.genericFieldMatrix_det_ne_zero`
+tests/GenericDistractionField.lean:17:2: error(lean.unknownIdentifier): Unknown constant `Lex.genericFieldDegreeMatrix_det_ne_zero`

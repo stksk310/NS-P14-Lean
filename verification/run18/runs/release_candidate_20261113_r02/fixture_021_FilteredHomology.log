@@ -1,0 +1,9 @@
+NSP14.Homological.boundedFilteredComparison.{u} (k : Type u) [Field k] (C : ℕ → ChainComplex (ModuleCat k) ℕ)
+  (f : (j : ℕ) → C j ⟶ C (j + 1)) [∀ (j : ℕ), CategoryTheory.Mono (f j)] (i : ℕ)
+  (hzero : CategoryTheory.Limits.IsZero (HomologicalComplex.homology (C 0) i))
+  (hfinite : ∀ (j : ℕ), Module.Finite k ↑(HomologicalComplex.homology (NSP14.Homological.filteredQuotient k (f j)) i))
+  (n : ℕ) :
+  Module.Finite k ↑(HomologicalComplex.homology (C n) i) ∧
+    Module.finrank k ↑(HomologicalComplex.homology (C n) i) ≤
+      ∑ j ∈ Finset.range n,
+        Module.finrank k ↑(HomologicalComplex.homology (NSP14.Homological.filteredQuotient k (f j)) i)

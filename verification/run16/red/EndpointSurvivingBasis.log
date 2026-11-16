@@ -1,0 +1,3 @@
+tests/EndpointSurvivingBasis.lean:8:4: error(lean.invalidField): Invalid field `actualEndpointQuotient_coeff_zero`: The environment does not contain `NSP14.Endpoint.Data.actualEndpointQuotient_coeff_zero`, so it is not possible to project the field `actualEndpointQuotient_coeff_zero` from an expression
+  D
+of type `Data`

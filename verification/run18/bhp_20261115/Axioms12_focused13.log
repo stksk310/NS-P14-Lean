@@ -1,0 +1,34 @@
+'NSP14.Lex.genericFieldLinear_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionContraction_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionBoundary_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericFieldLinear_smul : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (M : ModuleCat (NSP14.Homological.VariableRing (NSP14.Lex.GenericDistractionField k q) (Fin q))) (a : Fin q →₀ ℕ)
+  (i : Fin q) (m : ↑(NSP14.Homological.coefficientModule (NSP14.Lex.GenericDistractionField k q) (Fin q) M)),
+  NSP14.Lex.genericFieldLinear k q i (a i) • m = ∑ r, NSP14.Lex.genericFieldMatrix k q a r i • MvPolynomial.X r • m
+NSP14.Lex.genericDistractionContraction_row : ∀ (k : Type) [inst : Field k] (q j : ℕ) (a : Fin q →₀ ℕ) (r : Fin q)
+  (w : ↥(⋀[NSP14.Lex.GenericDistractionField k q]^(j + 1) (Fin q → NSP14.Lex.GenericDistractionField k q))),
+  (NSP14.Homological.koszulExteriorContraction (NSP14.Lex.GenericDistractionField k q) (Fin q) j
+        (LinearMap.proj r ∘ₗ ↑(NSP14.Lex.genericFieldLinearEquiv k q a)))
+      w =
+    ∑ i,
+      NSP14.Lex.genericFieldMatrix k q a r i •
+        (NSP14.Homological.koszulExteriorContraction (NSP14.Lex.GenericDistractionField k q) (Fin q) j
+            (LinearMap.proj i))
+          w
+NSP14.Lex.genericDistractionBoundary_monomial : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (M : ModuleCat (NSP14.Homological.VariableRing (NSP14.Lex.GenericDistractionField k q) (Fin q))) {J : Type}
+  (b :
+    Module.Basis J (NSP14.Lex.GenericDistractionField k q)
+      ↑(NSP14.Homological.coefficientModule (NSP14.Lex.GenericDistractionField k q) (Fin q) M))
+  (j : ℕ) (a : Fin q →₀ ℕ)
+  (m : ↑(NSP14.Homological.coefficientModule (NSP14.Lex.GenericDistractionField k q) (Fin q) M))
+  (w : ↥(⋀[NSP14.Lex.GenericDistractionField k q]^(j + 1) (Fin q → NSP14.Lex.GenericDistractionField k q))),
+  (NSP14.Homological.koszulExteriorBoundary (NSP14.Lex.GenericDistractionField k q) (Fin q) M b j)
+      ((NSP14.Lex.genericFieldDistraction k q a • m) ⊗ₜ[NSP14.Lex.GenericDistractionField k q]
+        (NSP14.Lex.genericDistractionWedgeEquiv k q (j + 1) a) w) =
+    ∑ i,
+      (NSP14.Lex.genericFieldDistraction k q (a + Finsupp.single i 1) • m) ⊗ₜ[NSP14.Lex.GenericDistractionField k q]
+        (NSP14.Lex.genericDistractionWedgeEquiv k q j (a + Finsupp.single i 1))
+          ((NSP14.Homological.koszulExteriorContraction (NSP14.Lex.GenericDistractionField k q) (Fin q) j
+              (LinearMap.proj i))
+            w)

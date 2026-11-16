@@ -1,0 +1,2 @@
+tests/ArithmeticSequence.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `ArithmeticSequence.Data`
+tests/ArithmeticSequence.lean:7:63: error(lean.unknownIdentifier): Unknown identifier `D.embeddingDimension`

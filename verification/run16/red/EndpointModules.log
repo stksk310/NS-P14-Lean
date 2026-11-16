@@ -1,0 +1,10 @@
+tests/EndpointModules.lean:8:60: error(lean.invalidField): Invalid field `coreToGEndpoint`: The environment does not contain `NSP14.Endpoint.Data.coreToGEndpoint`, so it is not possible to project the field `coreToGEndpoint` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointModules.lean:9:2: error(lean.unknownIdentifier): Unknown identifier `D.coreToGEndpoint_surjective`
+tests/EndpointModules.lean:12:26: error(lean.invalidField): Invalid field `endpointToCore`: The environment does not contain `NSP14.Endpoint.Data.endpointToCore`, so it is not possible to project the field `endpointToCore` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointModules.lean:12:65: error(lean.invalidField): Invalid field `coreToG_endpointToCore`: The environment does not contain `NSP14.Endpoint.Data.coreToG_endpointToCore`, so it is not possible to project the field `coreToG_endpointToCore` from an expression
+  D
+of type `Endpoint.Data`

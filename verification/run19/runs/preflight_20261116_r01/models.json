@@ -1,0 +1,10994 @@
+{
+  "status": "PASS_RUN19_EXACT_REGRESSIONS_NOT_UNIVERSAL_PROOF",
+  "cubic_coefficients": [
+    36,
+    140,
+    45,
+    4
+  ],
+  "arithmetic_cases": 9880,
+  "width_four": [
+    {
+      "m": 6,
+      "theta": [
+        2,
+        2,
+        1,
+        1,
+        0
+      ],
+      "source_bound": 6,
+      "target_first": 9
+    },
+    {
+      "m": 7,
+      "theta": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 8,
+      "theta": [
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 9,
+      "theta": [
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 10,
+      "theta": [
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 11,
+      "theta": [
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 12,
+      "theta": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 13,
+      "theta": [
+        4,
+        3,
+        3,
+        3,
+        2
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 14,
+      "theta": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 15,
+      "theta": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 16,
+      "theta": [
+        4,
+        4,
+        4,
+        4,
+        3
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 17,
+      "theta": [
+        5,
+        4,
+        4,
+        4,
+        3
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 18,
+      "theta": [
+        5,
+        5,
+        4,
+        4,
+        3
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 19,
+      "theta": [
+        5,
+        5,
+        5,
+        4,
+        4
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 20,
+      "theta": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 21,
+      "theta": [
+        6,
+        5,
+        5,
+        5,
+        4
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 22,
+      "theta": [
+        6,
+        6,
+        5,
+        5,
+        4
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 23,
+      "theta": [
+        6,
+        6,
+        6,
+        5,
+        5
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 24,
+      "theta": [
+        6,
+        6,
+        6,
+        6,
+        5
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 25,
+      "theta": [
+        7,
+        6,
+        6,
+        6,
+        5
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 26,
+      "theta": [
+        7,
+        7,
+        6,
+        6,
+        5
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 27,
+      "theta": [
+        7,
+        7,
+        7,
+        6,
+        6
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 28,
+      "theta": [
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 29,
+      "theta": [
+        8,
+        7,
+        7,
+        7,
+        6
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 30,
+      "theta": [
+        8,
+        8,
+        7,
+        7,
+        6
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 31,
+      "theta": [
+        8,
+        8,
+        8,
+        7,
+        7
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 32,
+      "theta": [
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 33,
+      "theta": [
+        9,
+        8,
+        8,
+        8,
+        7
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 34,
+      "theta": [
+        9,
+        9,
+        8,
+        8,
+        7
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 35,
+      "theta": [
+        9,
+        9,
+        9,
+        8,
+        8
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 36,
+      "theta": [
+        9,
+        9,
+        9,
+        9,
+        8
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 37,
+      "theta": [
+        10,
+        9,
+        9,
+        9,
+        8
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 38,
+      "theta": [
+        10,
+        10,
+        9,
+        9,
+        8
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 39,
+      "theta": [
+        10,
+        10,
+        10,
+        9,
+        9
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 40,
+      "theta": [
+        10,
+        10,
+        10,
+        10,
+        9
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 41,
+      "theta": [
+        11,
+        10,
+        10,
+        10,
+        9
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 42,
+      "theta": [
+        11,
+        11,
+        10,
+        10,
+        9
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 43,
+      "theta": [
+        11,
+        11,
+        11,
+        10,
+        10
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 44,
+      "theta": [
+        11,
+        11,
+        11,
+        11,
+        10
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 45,
+      "theta": [
+        12,
+        11,
+        11,
+        11,
+        10
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 46,
+      "theta": [
+        12,
+        12,
+        11,
+        11,
+        10
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 47,
+      "theta": [
+        12,
+        12,
+        12,
+        11,
+        11
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 48,
+      "theta": [
+        12,
+        12,
+        12,
+        12,
+        11
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 49,
+      "theta": [
+        13,
+        12,
+        12,
+        12,
+        11
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 50,
+      "theta": [
+        13,
+        13,
+        12,
+        12,
+        11
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 51,
+      "theta": [
+        13,
+        13,
+        13,
+        12,
+        12
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 52,
+      "theta": [
+        13,
+        13,
+        13,
+        13,
+        12
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 53,
+      "theta": [
+        14,
+        13,
+        13,
+        13,
+        12
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 54,
+      "theta": [
+        14,
+        14,
+        13,
+        13,
+        12
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 55,
+      "theta": [
+        14,
+        14,
+        14,
+        13,
+        13
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 56,
+      "theta": [
+        14,
+        14,
+        14,
+        14,
+        13
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 57,
+      "theta": [
+        15,
+        14,
+        14,
+        14,
+        13
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 58,
+      "theta": [
+        15,
+        15,
+        14,
+        14,
+        13
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 59,
+      "theta": [
+        15,
+        15,
+        15,
+        14,
+        14
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 60,
+      "theta": [
+        15,
+        15,
+        15,
+        15,
+        14
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 61,
+      "theta": [
+        16,
+        15,
+        15,
+        15,
+        14
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 62,
+      "theta": [
+        16,
+        16,
+        15,
+        15,
+        14
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 63,
+      "theta": [
+        16,
+        16,
+        16,
+        15,
+        15
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 64,
+      "theta": [
+        16,
+        16,
+        16,
+        16,
+        15
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 65,
+      "theta": [
+        17,
+        16,
+        16,
+        16,
+        15
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 66,
+      "theta": [
+        17,
+        17,
+        16,
+        16,
+        15
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 67,
+      "theta": [
+        17,
+        17,
+        17,
+        16,
+        16
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 68,
+      "theta": [
+        17,
+        17,
+        17,
+        17,
+        16
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 69,
+      "theta": [
+        18,
+        17,
+        17,
+        17,
+        16
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 70,
+      "theta": [
+        18,
+        18,
+        17,
+        17,
+        16
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 71,
+      "theta": [
+        18,
+        18,
+        18,
+        17,
+        17
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 72,
+      "theta": [
+        18,
+        18,
+        18,
+        18,
+        17
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 73,
+      "theta": [
+        19,
+        18,
+        18,
+        18,
+        17
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 74,
+      "theta": [
+        19,
+        19,
+        18,
+        18,
+        17
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 75,
+      "theta": [
+        19,
+        19,
+        19,
+        18,
+        18
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 76,
+      "theta": [
+        19,
+        19,
+        19,
+        19,
+        18
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 77,
+      "theta": [
+        20,
+        19,
+        19,
+        19,
+        18
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 78,
+      "theta": [
+        20,
+        20,
+        19,
+        19,
+        18
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 79,
+      "theta": [
+        20,
+        20,
+        20,
+        19,
+        19
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 80,
+      "theta": [
+        20,
+        20,
+        20,
+        20,
+        19
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 81,
+      "theta": [
+        21,
+        20,
+        20,
+        20,
+        19
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 82,
+      "theta": [
+        21,
+        21,
+        20,
+        20,
+        19
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 83,
+      "theta": [
+        21,
+        21,
+        21,
+        20,
+        20
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 84,
+      "theta": [
+        21,
+        21,
+        21,
+        21,
+        20
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 85,
+      "theta": [
+        22,
+        21,
+        21,
+        21,
+        20
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 86,
+      "theta": [
+        22,
+        22,
+        21,
+        21,
+        20
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 87,
+      "theta": [
+        22,
+        22,
+        22,
+        21,
+        21
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 88,
+      "theta": [
+        22,
+        22,
+        22,
+        22,
+        21
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 89,
+      "theta": [
+        23,
+        22,
+        22,
+        22,
+        21
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 90,
+      "theta": [
+        23,
+        23,
+        22,
+        22,
+        21
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 91,
+      "theta": [
+        23,
+        23,
+        23,
+        22,
+        22
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 92,
+      "theta": [
+        23,
+        23,
+        23,
+        23,
+        22
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 93,
+      "theta": [
+        24,
+        23,
+        23,
+        23,
+        22
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 94,
+      "theta": [
+        24,
+        24,
+        23,
+        23,
+        22
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 95,
+      "theta": [
+        24,
+        24,
+        24,
+        23,
+        23
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 96,
+      "theta": [
+        24,
+        24,
+        24,
+        24,
+        23
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 97,
+      "theta": [
+        25,
+        24,
+        24,
+        24,
+        23
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 98,
+      "theta": [
+        25,
+        25,
+        24,
+        24,
+        23
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 99,
+      "theta": [
+        25,
+        25,
+        25,
+        24,
+        24
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 100,
+      "theta": [
+        25,
+        25,
+        25,
+        25,
+        24
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 101,
+      "theta": [
+        26,
+        25,
+        25,
+        25,
+        24
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 102,
+      "theta": [
+        26,
+        26,
+        25,
+        25,
+        24
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 103,
+      "theta": [
+        26,
+        26,
+        26,
+        25,
+        25
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 104,
+      "theta": [
+        26,
+        26,
+        26,
+        26,
+        25
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 105,
+      "theta": [
+        27,
+        26,
+        26,
+        26,
+        25
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 106,
+      "theta": [
+        27,
+        27,
+        26,
+        26,
+        25
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 107,
+      "theta": [
+        27,
+        27,
+        27,
+        26,
+        26
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 108,
+      "theta": [
+        27,
+        27,
+        27,
+        27,
+        26
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 109,
+      "theta": [
+        28,
+        27,
+        27,
+        27,
+        26
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 110,
+      "theta": [
+        28,
+        28,
+        27,
+        27,
+        26
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 111,
+      "theta": [
+        28,
+        28,
+        28,
+        27,
+        27
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 112,
+      "theta": [
+        28,
+        28,
+        28,
+        28,
+        27
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 113,
+      "theta": [
+        29,
+        28,
+        28,
+        28,
+        27
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 114,
+      "theta": [
+        29,
+        29,
+        28,
+        28,
+        27
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 115,
+      "theta": [
+        29,
+        29,
+        29,
+        28,
+        28
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 116,
+      "theta": [
+        29,
+        29,
+        29,
+        29,
+        28
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 117,
+      "theta": [
+        30,
+        29,
+        29,
+        29,
+        28
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 118,
+      "theta": [
+        30,
+        30,
+        29,
+        29,
+        28
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 119,
+      "theta": [
+        30,
+        30,
+        30,
+        29,
+        29
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 120,
+      "theta": [
+        30,
+        30,
+        30,
+        30,
+        29
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 121,
+      "theta": [
+        31,
+        30,
+        30,
+        30,
+        29
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 122,
+      "theta": [
+        31,
+        31,
+        30,
+        30,
+        29
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 123,
+      "theta": [
+        31,
+        31,
+        31,
+        30,
+        30
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 124,
+      "theta": [
+        31,
+        31,
+        31,
+        31,
+        30
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 125,
+      "theta": [
+        32,
+        31,
+        31,
+        31,
+        30
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 126,
+      "theta": [
+        32,
+        32,
+        31,
+        31,
+        30
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 127,
+      "theta": [
+        32,
+        32,
+        32,
+        31,
+        31
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 128,
+      "theta": [
+        32,
+        32,
+        32,
+        32,
+        31
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 129,
+      "theta": [
+        33,
+        32,
+        32,
+        32,
+        31
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 130,
+      "theta": [
+        33,
+        33,
+        32,
+        32,
+        31
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 131,
+      "theta": [
+        33,
+        33,
+        33,
+        32,
+        32
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 132,
+      "theta": [
+        33,
+        33,
+        33,
+        33,
+        32
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 133,
+      "theta": [
+        34,
+        33,
+        33,
+        33,
+        32
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 134,
+      "theta": [
+        34,
+        34,
+        33,
+        33,
+        32
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 135,
+      "theta": [
+        34,
+        34,
+        34,
+        33,
+        33
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 136,
+      "theta": [
+        34,
+        34,
+        34,
+        34,
+        33
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 137,
+      "theta": [
+        35,
+        34,
+        34,
+        34,
+        33
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 138,
+      "theta": [
+        35,
+        35,
+        34,
+        34,
+        33
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 139,
+      "theta": [
+        35,
+        35,
+        35,
+        34,
+        34
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 140,
+      "theta": [
+        35,
+        35,
+        35,
+        35,
+        34
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 141,
+      "theta": [
+        36,
+        35,
+        35,
+        35,
+        34
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 142,
+      "theta": [
+        36,
+        36,
+        35,
+        35,
+        34
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 143,
+      "theta": [
+        36,
+        36,
+        36,
+        35,
+        35
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 144,
+      "theta": [
+        36,
+        36,
+        36,
+        36,
+        35
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 145,
+      "theta": [
+        37,
+        36,
+        36,
+        36,
+        35
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 146,
+      "theta": [
+        37,
+        37,
+        36,
+        36,
+        35
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 147,
+      "theta": [
+        37,
+        37,
+        37,
+        36,
+        36
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 148,
+      "theta": [
+        37,
+        37,
+        37,
+        37,
+        36
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 149,
+      "theta": [
+        38,
+        37,
+        37,
+        37,
+        36
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 150,
+      "theta": [
+        38,
+        38,
+        37,
+        37,
+        36
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 151,
+      "theta": [
+        38,
+        38,
+        38,
+        37,
+        37
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 152,
+      "theta": [
+        38,
+        38,
+        38,
+        38,
+        37
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 153,
+      "theta": [
+        39,
+        38,
+        38,
+        38,
+        37
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 154,
+      "theta": [
+        39,
+        39,
+        38,
+        38,
+        37
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 155,
+      "theta": [
+        39,
+        39,
+        39,
+        38,
+        38
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 156,
+      "theta": [
+        39,
+        39,
+        39,
+        39,
+        38
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 157,
+      "theta": [
+        40,
+        39,
+        39,
+        39,
+        38
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 158,
+      "theta": [
+        40,
+        40,
+        39,
+        39,
+        38
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 159,
+      "theta": [
+        40,
+        40,
+        40,
+        39,
+        39
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 160,
+      "theta": [
+        40,
+        40,
+        40,
+        40,
+        39
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 161,
+      "theta": [
+        41,
+        40,
+        40,
+        40,
+        39
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 162,
+      "theta": [
+        41,
+        41,
+        40,
+        40,
+        39
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 163,
+      "theta": [
+        41,
+        41,
+        41,
+        40,
+        40
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 164,
+      "theta": [
+        41,
+        41,
+        41,
+        41,
+        40
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 165,
+      "theta": [
+        42,
+        41,
+        41,
+        41,
+        40
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 166,
+      "theta": [
+        42,
+        42,
+        41,
+        41,
+        40
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 167,
+      "theta": [
+        42,
+        42,
+        42,
+        41,
+        41
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 168,
+      "theta": [
+        42,
+        42,
+        42,
+        42,
+        41
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 169,
+      "theta": [
+        43,
+        42,
+        42,
+        42,
+        41
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 170,
+      "theta": [
+        43,
+        43,
+        42,
+        42,
+        41
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 171,
+      "theta": [
+        43,
+        43,
+        43,
+        42,
+        42
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 172,
+      "theta": [
+        43,
+        43,
+        43,
+        43,
+        42
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 173,
+      "theta": [
+        44,
+        43,
+        43,
+        43,
+        42
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 174,
+      "theta": [
+        44,
+        44,
+        43,
+        43,
+        42
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 175,
+      "theta": [
+        44,
+        44,
+        44,
+        43,
+        43
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 176,
+      "theta": [
+        44,
+        44,
+        44,
+        44,
+        43
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 177,
+      "theta": [
+        45,
+        44,
+        44,
+        44,
+        43
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 178,
+      "theta": [
+        45,
+        45,
+        44,
+        44,
+        43
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 179,
+      "theta": [
+        45,
+        45,
+        45,
+        44,
+        44
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 180,
+      "theta": [
+        45,
+        45,
+        45,
+        45,
+        44
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 181,
+      "theta": [
+        46,
+        45,
+        45,
+        45,
+        44
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 182,
+      "theta": [
+        46,
+        46,
+        45,
+        45,
+        44
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 183,
+      "theta": [
+        46,
+        46,
+        46,
+        45,
+        45
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 184,
+      "theta": [
+        46,
+        46,
+        46,
+        46,
+        45
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 185,
+      "theta": [
+        47,
+        46,
+        46,
+        46,
+        45
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 186,
+      "theta": [
+        47,
+        47,
+        46,
+        46,
+        45
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 187,
+      "theta": [
+        47,
+        47,
+        47,
+        46,
+        46
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 188,
+      "theta": [
+        47,
+        47,
+        47,
+        47,
+        46
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 189,
+      "theta": [
+        48,
+        47,
+        47,
+        47,
+        46
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 190,
+      "theta": [
+        48,
+        48,
+        47,
+        47,
+        46
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 191,
+      "theta": [
+        48,
+        48,
+        48,
+        47,
+        47
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 192,
+      "theta": [
+        48,
+        48,
+        48,
+        48,
+        47
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 193,
+      "theta": [
+        49,
+        48,
+        48,
+        48,
+        47
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 194,
+      "theta": [
+        49,
+        49,
+        48,
+        48,
+        47
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 195,
+      "theta": [
+        49,
+        49,
+        49,
+        48,
+        48
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 196,
+      "theta": [
+        49,
+        49,
+        49,
+        49,
+        48
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 197,
+      "theta": [
+        50,
+        49,
+        49,
+        49,
+        48
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 198,
+      "theta": [
+        50,
+        50,
+        49,
+        49,
+        48
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 199,
+      "theta": [
+        50,
+        50,
+        50,
+        49,
+        49
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 200,
+      "theta": [
+        50,
+        50,
+        50,
+        50,
+        49
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 201,
+      "theta": [
+        51,
+        50,
+        50,
+        50,
+        49
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 202,
+      "theta": [
+        51,
+        51,
+        50,
+        50,
+        49
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 203,
+      "theta": [
+        51,
+        51,
+        51,
+        50,
+        50
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 204,
+      "theta": [
+        51,
+        51,
+        51,
+        51,
+        50
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 205,
+      "theta": [
+        52,
+        51,
+        51,
+        51,
+        50
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 206,
+      "theta": [
+        52,
+        52,
+        51,
+        51,
+        50
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 207,
+      "theta": [
+        52,
+        52,
+        52,
+        51,
+        51
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 208,
+      "theta": [
+        52,
+        52,
+        52,
+        52,
+        51
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 209,
+      "theta": [
+        53,
+        52,
+        52,
+        52,
+        51
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 210,
+      "theta": [
+        53,
+        53,
+        52,
+        52,
+        51
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 211,
+      "theta": [
+        53,
+        53,
+        53,
+        52,
+        52
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 212,
+      "theta": [
+        53,
+        53,
+        53,
+        53,
+        52
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 213,
+      "theta": [
+        54,
+        53,
+        53,
+        53,
+        52
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 214,
+      "theta": [
+        54,
+        54,
+        53,
+        53,
+        52
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 215,
+      "theta": [
+        54,
+        54,
+        54,
+        53,
+        53
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 216,
+      "theta": [
+        54,
+        54,
+        54,
+        54,
+        53
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 217,
+      "theta": [
+        55,
+        54,
+        54,
+        54,
+        53
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 218,
+      "theta": [
+        55,
+        55,
+        54,
+        54,
+        53
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 219,
+      "theta": [
+        55,
+        55,
+        55,
+        54,
+        54
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 220,
+      "theta": [
+        55,
+        55,
+        55,
+        55,
+        54
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 221,
+      "theta": [
+        56,
+        55,
+        55,
+        55,
+        54
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 222,
+      "theta": [
+        56,
+        56,
+        55,
+        55,
+        54
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 223,
+      "theta": [
+        56,
+        56,
+        56,
+        55,
+        55
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 224,
+      "theta": [
+        56,
+        56,
+        56,
+        56,
+        55
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 225,
+      "theta": [
+        57,
+        56,
+        56,
+        56,
+        55
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 226,
+      "theta": [
+        57,
+        57,
+        56,
+        56,
+        55
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 227,
+      "theta": [
+        57,
+        57,
+        57,
+        56,
+        56
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 228,
+      "theta": [
+        57,
+        57,
+        57,
+        57,
+        56
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 229,
+      "theta": [
+        58,
+        57,
+        57,
+        57,
+        56
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 230,
+      "theta": [
+        58,
+        58,
+        57,
+        57,
+        56
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 231,
+      "theta": [
+        58,
+        58,
+        58,
+        57,
+        57
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 232,
+      "theta": [
+        58,
+        58,
+        58,
+        58,
+        57
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 233,
+      "theta": [
+        59,
+        58,
+        58,
+        58,
+        57
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 234,
+      "theta": [
+        59,
+        59,
+        58,
+        58,
+        57
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 235,
+      "theta": [
+        59,
+        59,
+        59,
+        58,
+        58
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 236,
+      "theta": [
+        59,
+        59,
+        59,
+        59,
+        58
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 237,
+      "theta": [
+        60,
+        59,
+        59,
+        59,
+        58
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 238,
+      "theta": [
+        60,
+        60,
+        59,
+        59,
+        58
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 239,
+      "theta": [
+        60,
+        60,
+        60,
+        59,
+        59
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 240,
+      "theta": [
+        60,
+        60,
+        60,
+        60,
+        59
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 241,
+      "theta": [
+        61,
+        60,
+        60,
+        60,
+        59
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 242,
+      "theta": [
+        61,
+        61,
+        60,
+        60,
+        59
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 243,
+      "theta": [
+        61,
+        61,
+        61,
+        60,
+        60
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 244,
+      "theta": [
+        61,
+        61,
+        61,
+        61,
+        60
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 245,
+      "theta": [
+        62,
+        61,
+        61,
+        61,
+        60
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 246,
+      "theta": [
+        62,
+        62,
+        61,
+        61,
+        60
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 247,
+      "theta": [
+        62,
+        62,
+        62,
+        61,
+        61
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 248,
+      "theta": [
+        62,
+        62,
+        62,
+        62,
+        61
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 249,
+      "theta": [
+        63,
+        62,
+        62,
+        62,
+        61
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 250,
+      "theta": [
+        63,
+        63,
+        62,
+        62,
+        61
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 251,
+      "theta": [
+        63,
+        63,
+        63,
+        62,
+        62
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 252,
+      "theta": [
+        63,
+        63,
+        63,
+        63,
+        62
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 253,
+      "theta": [
+        64,
+        63,
+        63,
+        63,
+        62
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 254,
+      "theta": [
+        64,
+        64,
+        63,
+        63,
+        62
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 255,
+      "theta": [
+        64,
+        64,
+        64,
+        63,
+        63
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 256,
+      "theta": [
+        64,
+        64,
+        64,
+        64,
+        63
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 257,
+      "theta": [
+        65,
+        64,
+        64,
+        64,
+        63
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 258,
+      "theta": [
+        65,
+        65,
+        64,
+        64,
+        63
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 259,
+      "theta": [
+        65,
+        65,
+        65,
+        64,
+        64
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 260,
+      "theta": [
+        65,
+        65,
+        65,
+        65,
+        64
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 261,
+      "theta": [
+        66,
+        65,
+        65,
+        65,
+        64
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 262,
+      "theta": [
+        66,
+        66,
+        65,
+        65,
+        64
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 263,
+      "theta": [
+        66,
+        66,
+        66,
+        65,
+        65
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 264,
+      "theta": [
+        66,
+        66,
+        66,
+        66,
+        65
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 265,
+      "theta": [
+        67,
+        66,
+        66,
+        66,
+        65
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 266,
+      "theta": [
+        67,
+        67,
+        66,
+        66,
+        65
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 267,
+      "theta": [
+        67,
+        67,
+        67,
+        66,
+        66
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 268,
+      "theta": [
+        67,
+        67,
+        67,
+        67,
+        66
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 269,
+      "theta": [
+        68,
+        67,
+        67,
+        67,
+        66
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 270,
+      "theta": [
+        68,
+        68,
+        67,
+        67,
+        66
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 271,
+      "theta": [
+        68,
+        68,
+        68,
+        67,
+        67
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 272,
+      "theta": [
+        68,
+        68,
+        68,
+        68,
+        67
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 273,
+      "theta": [
+        69,
+        68,
+        68,
+        68,
+        67
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 274,
+      "theta": [
+        69,
+        69,
+        68,
+        68,
+        67
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 275,
+      "theta": [
+        69,
+        69,
+        69,
+        68,
+        68
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 276,
+      "theta": [
+        69,
+        69,
+        69,
+        69,
+        68
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 277,
+      "theta": [
+        70,
+        69,
+        69,
+        69,
+        68
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 278,
+      "theta": [
+        70,
+        70,
+        69,
+        69,
+        68
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 279,
+      "theta": [
+        70,
+        70,
+        70,
+        69,
+        69
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 280,
+      "theta": [
+        70,
+        70,
+        70,
+        70,
+        69
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 281,
+      "theta": [
+        71,
+        70,
+        70,
+        70,
+        69
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 282,
+      "theta": [
+        71,
+        71,
+        70,
+        70,
+        69
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 283,
+      "theta": [
+        71,
+        71,
+        71,
+        70,
+        70
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 284,
+      "theta": [
+        71,
+        71,
+        71,
+        71,
+        70
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 285,
+      "theta": [
+        72,
+        71,
+        71,
+        71,
+        70
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 286,
+      "theta": [
+        72,
+        72,
+        71,
+        71,
+        70
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 287,
+      "theta": [
+        72,
+        72,
+        72,
+        71,
+        71
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 288,
+      "theta": [
+        72,
+        72,
+        72,
+        72,
+        71
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 289,
+      "theta": [
+        73,
+        72,
+        72,
+        72,
+        71
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 290,
+      "theta": [
+        73,
+        73,
+        72,
+        72,
+        71
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 291,
+      "theta": [
+        73,
+        73,
+        73,
+        72,
+        72
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 292,
+      "theta": [
+        73,
+        73,
+        73,
+        73,
+        72
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 293,
+      "theta": [
+        74,
+        73,
+        73,
+        73,
+        72
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 294,
+      "theta": [
+        74,
+        74,
+        73,
+        73,
+        72
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 295,
+      "theta": [
+        74,
+        74,
+        74,
+        73,
+        73
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 296,
+      "theta": [
+        74,
+        74,
+        74,
+        74,
+        73
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    },
+    {
+      "m": 297,
+      "theta": [
+        75,
+        74,
+        74,
+        74,
+        73
+      ],
+      "source_bound": 8,
+      "target_first": 10
+    },
+    {
+      "m": 298,
+      "theta": [
+        75,
+        75,
+        74,
+        74,
+        73
+      ],
+      "source_bound": 8,
+      "target_first": 9
+    },
+    {
+      "m": 299,
+      "theta": [
+        75,
+        75,
+        75,
+        74,
+        74
+      ],
+      "source_bound": 6,
+      "target_first": 8
+    },
+    {
+      "m": 300,
+      "theta": [
+        75,
+        75,
+        75,
+        75,
+        74
+      ],
+      "source_bound": 6,
+      "target_first": 7
+    }
+  ],
+  "one_letter_actual_cores": [
+    {
+      "m": 5,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 1,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 1,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 3,
+      "PC": 3,
+      "PG": 3,
+      "R": 0,
+      "W": 4,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 2,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 3,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 4,
+      "PC": 4,
+      "PG": 4,
+      "R": 0,
+      "W": 7,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 3,
+      "Rhat": 5,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 3,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 3,
+      "R": 0,
+      "W": 11,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 3,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 3,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 3,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 2,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 2,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 5,
+      "PC": 5,
+      "PG": 5,
+      "R": 0,
+      "W": 11,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 2,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 4,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 4,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 16,
+      "Hx": 4,
+      "Rhat": 10,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 4,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 4,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 3,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 4,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 3,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 4,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 2,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 2,
+      "R": 0,
+      "W": 16,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 2,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 2,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 3,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 5,
+      "Rhat": 15,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 1,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 1,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 2,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 4,
+      "Rhat": 14,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 1,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 6,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 6,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 6,
+      "R": 0,
+      "W": 22,
+      "Hx": 3,
+      "Rhat": 7,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 4,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 4,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 7,
+      "R": 0,
+      "W": 22,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 2,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 2,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 5,
+      "R": 0,
+      "W": 22,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 1,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "d": 2,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 4,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 4,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        6
+      ],
+      "u": 7,
+      "PC": 7,
+      "PG": 3,
+      "R": 0,
+      "W": 22,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 9,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 2,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 2,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 3,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 3,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 0,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 4,
+      "W": 29,
+      "Hx": 6,
+      "Rhat": 21,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 1,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 1,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 8,
+      "R": 0,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        3
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 4,
+      "R": 0,
+      "W": 29,
+      "Hx": 4,
+      "Rhat": 16,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 2,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 2,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 6,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 4,
+      "R": 0,
+      "W": 29,
+      "Hx": 2,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 4,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 10,
+      "d": 3,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 4,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 7,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 5,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 5,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 5,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 11,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 8,
+      "PC": 8,
+      "PG": 4,
+      "R": 0,
+      "W": 29,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 5,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 3,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 4,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 4,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        1
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 0,
+      "W": 37,
+      "Hx": 7,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 1,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 1,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 6,
+      "R": 0,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        2
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 2,
+      "W": 37,
+      "Hx": 6,
+      "Rhat": 28,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 3,
+      "R": 0,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 1,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 1,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        4
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 9,
+      "R": 0,
+      "W": 37,
+      "Hx": 4,
+      "Rhat": 18,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 4,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 4,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 4,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 6,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 7,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 7,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        5
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 7,
+      "R": 0,
+      "W": 37,
+      "Hx": 3,
+      "Rhat": 9,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 6,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 6,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 6,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 3,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        7
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 2,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 3,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 12,
+      "d": 1,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 3,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 6,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 1,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 2,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 13,
+      "d": 3,
+      "a": [
+        8
+      ],
+      "u": 9,
+      "PC": 9,
+      "PG": 5,
+      "R": 0,
+      "W": 37,
+      "Hx": 0,
+      "Rhat": 0,
+      "stop": 12,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "n4_actual_cores": [
+    {
+      "m": 6,
+      "d": 1,
+      "a": [
+        1,
+        3
+      ],
+      "u": 4,
+      "PC": 5,
+      "PG": 4,
+      "R": 0,
+      "W": 5,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 3,
+      "sigma": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          3,
+          2
+        ],
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "d": 1,
+      "a": [
+        1,
+        5
+      ],
+      "u": 6,
+      "PC": 9,
+      "PG": 6,
+      "R": 1,
+      "W": 10,
+      "Hx": 3,
+      "Rhat": 4,
+      "stop": 5,
+      "sigma": 2,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          3,
+          2
+        ],
+        "2": [
+          1,
+          3,
+          2
+        ],
+        "3": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "m": 20,
+      "d": 3,
+      "a": [
+        2,
+        3
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 5,
+      "sigma": 1,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          2,
+          1
+        ],
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "m": 11,
+      "d": 1,
+      "a": [
+        2,
+        3
+      ],
+      "u": 6,
+      "PC": 6,
+      "PG": 6,
+      "R": 0,
+      "W": 10,
+      "Hx": 1,
+      "Rhat": 0,
+      "stop": 8,
+      "sigma": 1,
+      "QC_Betti_by_characteristic": {
+        "0": [
+          1,
+          2,
+          1
+        ],
+        "2": [
+          1,
+          2,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1
+        ]
+      }
+    }
+  ],
+  "actual_graded_G_koszul": [
+    {
+      "generators": [
+        6,
+        7,
+        9,
+        10
+      ],
+      "degrees_through": 7,
+      "graded_rows": [
+        {
+          "degree": 0,
+          "chain_dimensions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 1,
+          "chain_dimensions": [
+            4,
+            4,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 2,
+          "chain_dimensions": [
+            6,
+            16,
+            6,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              6,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              6,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              6,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              4,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 3,
+          "chain_dimensions": [
+            6,
+            24,
+            24,
+            4,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              16,
+              4,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              16,
+              4,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              16,
+              4,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              2,
+              4,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              2,
+              4,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              2,
+              4,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 4,
+          "chain_dimensions": [
+            6,
+            24,
+            36,
+            16,
+            1
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              18,
+              14,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              18,
+              14,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              18,
+              14,
+              1,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              4,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              4,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              4,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 5,
+          "chain_dimensions": [
+            6,
+            24,
+            36,
+            24,
+            4
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              18,
+              18,
+              4,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              18,
+              18,
+              4,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              18,
+              18,
+              4,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 6,
+          "chain_dimensions": [
+            6,
+            24,
+            36,
+            24,
+            6
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 7,
+          "chain_dimensions": [
+            6,
+            24,
+            36,
+            24,
+            6
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              18,
+              18,
+              6,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "not_claimed": "no infinite-degree vanishing is inferred from this finite computation"
+    },
+    {
+      "generators": [
+        8,
+        9,
+        13,
+        14
+      ],
+      "degrees_through": 7,
+      "graded_rows": [
+        {
+          "degree": 0,
+          "chain_dimensions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 1,
+          "chain_dimensions": [
+            4,
+            4,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 2,
+          "chain_dimensions": [
+            7,
+            16,
+            6,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              7,
+              6,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              7,
+              6,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              7,
+              6,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 3,
+          "chain_dimensions": [
+            7,
+            28,
+            24,
+            4,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              7,
+              18,
+              4,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              7,
+              18,
+              4,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              7,
+              18,
+              4,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              3,
+              2,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              2,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              2,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 4,
+          "chain_dimensions": [
+            8,
+            28,
+            42,
+            16,
+            1
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              20,
+              15,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              20,
+              15,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              20,
+              15,
+              1,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              7,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              7,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              7,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 5,
+          "chain_dimensions": [
+            8,
+            32,
+            42,
+            28,
+            4
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              23,
+              19,
+              4,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              23,
+              19,
+              4,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              23,
+              19,
+              4,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            "2": [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            "3": [
+              0,
+              1,
+              0,
+              5,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 6,
+          "chain_dimensions": [
+            8,
+            32,
+            48,
+            28,
+            7
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              24,
+              22,
+              6,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              24,
+              22,
+              6,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              24,
+              22,
+              6,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              2,
+              0,
+              1
+            ],
+            "2": [
+              0,
+              0,
+              2,
+              0,
+              1
+            ],
+            "3": [
+              0,
+              0,
+              2,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "degree": 7,
+          "chain_dimensions": [
+            8,
+            32,
+            48,
+            32,
+            7
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              24,
+              24,
+              7,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              24,
+              24,
+              7,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              24,
+              24,
+              7,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "not_claimed": "no infinite-degree vanishing is inferred from this finite computation"
+    },
+    {
+      "generators": [
+        8,
+        9,
+        14
+      ],
+      "degrees_through": 7,
+      "graded_rows": [
+        {
+          "degree": 0,
+          "chain_dimensions": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 1,
+          "chain_dimensions": [
+            3,
+            3,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 2,
+          "chain_dimensions": [
+            6,
+            9,
+            3,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              6,
+              3,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              6,
+              3,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              6,
+              3,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 3,
+          "chain_dimensions": [
+            7,
+            18,
+            9,
+            1
+          ],
+          "ranks": {
+            "0": [
+              0,
+              7,
+              8,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              7,
+              8,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              7,
+              8,
+              1,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              3,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 4,
+          "chain_dimensions": [
+            7,
+            21,
+            18,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              7,
+              14,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              7,
+              14,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              7,
+              14,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 5,
+          "chain_dimensions": [
+            8,
+            21,
+            21,
+            6
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              13,
+              6,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              13,
+              6,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              13,
+              6,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 6,
+          "chain_dimensions": [
+            8,
+            24,
+            21,
+            7
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              15,
+              6,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              15,
+              6,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              15,
+              6,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "2": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "3": [
+              0,
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "degree": 7,
+          "chain_dimensions": [
+            8,
+            24,
+            24,
+            7
+          ],
+          "ranks": {
+            "0": [
+              0,
+              8,
+              16,
+              7,
+              0
+            ],
+            "2": [
+              0,
+              8,
+              16,
+              7,
+              0
+            ],
+            "3": [
+              0,
+              8,
+              16,
+              7,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "not_claimed": "no infinite-degree vanishing is inferred from this finite computation"
+    },
+    {
+      "generators": [
+        5,
+        6,
+        8
+      ],
+      "degrees_through": 7,
+      "graded_rows": [
+        {
+          "degree": 0,
+          "chain_dimensions": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 1,
+          "chain_dimensions": [
+            3,
+            3,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 2,
+          "chain_dimensions": [
+            5,
+            9,
+            3,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              3,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              3,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              3,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 3,
+          "chain_dimensions": [
+            5,
+            15,
+            9,
+            1
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              8,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              8,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              8,
+              1,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              2,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              2,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              2,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 4,
+          "chain_dimensions": [
+            5,
+            15,
+            15,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              10,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              10,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              10,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 5,
+          "chain_dimensions": [
+            5,
+            15,
+            15,
+            5
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 6,
+          "chain_dimensions": [
+            5,
+            15,
+            15,
+            5
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 7,
+          "chain_dimensions": [
+            5,
+            15,
+            15,
+            5
+          ],
+          "ranks": {
+            "0": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "2": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ],
+            "3": [
+              0,
+              5,
+              10,
+              5,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "not_claimed": "no infinite-degree vanishing is inferred from this finite computation"
+    },
+    {
+      "generators": [
+        3,
+        4,
+        5
+      ],
+      "degrees_through": 7,
+      "graded_rows": [
+        {
+          "degree": 0,
+          "chain_dimensions": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 1,
+          "chain_dimensions": [
+            3,
+            3,
+            0,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 2,
+          "chain_dimensions": [
+            3,
+            9,
+            3,
+            0
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              3,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              3,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              3,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 3,
+          "chain_dimensions": [
+            3,
+            9,
+            9,
+            1
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              6,
+              1,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              6,
+              1,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              6,
+              1,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              2,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 4,
+          "chain_dimensions": [
+            3,
+            9,
+            9,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 5,
+          "chain_dimensions": [
+            3,
+            9,
+            9,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 6,
+          "chain_dimensions": [
+            3,
+            9,
+            9,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "degree": 7,
+          "chain_dimensions": [
+            3,
+            9,
+            9,
+            3
+          ],
+          "ranks": {
+            "0": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "2": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ],
+            "3": [
+              0,
+              3,
+              6,
+              3,
+              0
+            ]
+          },
+          "betti": {
+            "0": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "not_claimed": "no infinite-degree vanishing is inferred from this finite computation"
+    }
+  ],
+  "characteristics_independently_computed": [
+    0,
+    2,
+    3
+  ]
+}

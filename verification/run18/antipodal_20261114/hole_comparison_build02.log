@@ -1,0 +1,37 @@
+✔ [5748/5751] Built NSP14.Width.FiveHoleClassification (1.7s)
+✖ [5750/5751] Building NSP14.Width.FiveHoleComparison (5.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveHoleComparison.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleComparison.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleComparison.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleComparison.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleComparison.setup.json --json
+error: NSP14/Width/FiveHoleComparison.lean:63:21: unexpected token ')'; expected term
+error: NSP14/Width/FiveHoleComparison.lean:98:15: unexpected token ':='; expected term
+error: NSP14/Width/FiveHoleComparison.lean:93:7: failed to synthesize
+  Module ((S.intervalCompletion ?m.26).FullPolynomialRing k) ((S.intervalCompletion ?m.29).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: NSP14/Width/FiveHoleComparison.lean:98:12: failed to synthesize instance of type class
+  OfNat (Type ?u.42) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  Type ?u.42
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Width/FiveHoleComparison.lean:98:7: Missing cases:
+error: NSP14/Width/FiveHoleComparison.lean:94:73: unsolved goals
+case neg
+S : NumericalSemigroup
+k : Type
+inst✝ : Field k
+he : S.embeddingDimension = 5
+hw : S.width ≤ S.multiplicity - 2
+hu : S.normalizedWidth = 5
+i : ℕ
+hi0 : ¬i = 0
+hi : InitialSeg (fun x1 x2 => sorry) fun x1 x2 => sorry
+⊢ totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤ sorry
+Some required targets logged failures:
+- NSP14.Width.FiveHoleComparison
+error: build failed

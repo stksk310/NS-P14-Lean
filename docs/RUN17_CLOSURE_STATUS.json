@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETE",
+  "run17_complete": true,
+  "proof_goals_complete": true,
+  "consumer_goals_complete": true,
+  "closed_ids": [
+    "X_KNESER",
+    "X_SC"
+  ],
+  "unproved_ids": [],
+  "unproved_assigned_declarations": [],
+  "baseline_commit": "584f92d8c1a7fc1e2413f606b661fc9b81f472cd",
+  "order_commit": "845b9c2ff3a047e62d53f639901452a030ca7981",
+  "run16_audit_commit": "5ced6cc564e5c69bebcd7a852463091e2e276661",
+  "requested_goals_sha256": "54dc3a2a4f0f204388751deaaffb7d77d673ac80444b646d1794a2b984891888",
+  "verification": {
+    "status": "PASS_RUN17_PROOF_CLOSURE",
+    "commands": 160,
+    "environment_declarations": 8241,
+    "new_environment_declarations": 406,
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "evidence": "verification/run17/runs/release_candidate_20261113_r02/verification.json"
+  },
+  "review": {
+    "gate": "PASS",
+    "head_commit": "857777397c2c063f03cc6c8edb6e5e50bf1c41bd",
+    "report": "docs/RUN17_FINAL_REVIEW_JA.md",
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "publication": {
+    "stage": "published",
+    "archive": "artifacts/NS_P14_RUN17_COMPLETE_AUDIT_20261113.zip",
+    "archive_sha256": "eeffe5df963b007dfb57c7a1b0ba4b9907b9441074de1bff364205235a01e543",
+    "entries": 600,
+    "crc": "PASS",
+    "published_release_commit": "b85438dd46bfdd920c7b6117c5541b2078094b09",
+    "remote_work_at_release_check": "b85438dd46bfdd920c7b6117c5541b2078094b09",
+    "release_worktree_clean": true,
+    "release_checked_at_utc": "2026-11-13T09:43:36.963285+00:00"
+  },
+  "remaining_scope": [
+    "Run18 BHP/EK, sparse polynomial, width target payment",
+    "Run19 socle triangle, R<c0, mixed word counting, N4/LTV",
+    "Run20 global P14 synthesis and manuscript alignment"
+  ]
+}

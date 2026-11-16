@@ -1,0 +1,26 @@
+{
+  "status": "PUBLISHED_PARTIAL_CHECKPOINT",
+  "run18_complete": false,
+  "closed_ids": [
+    "W_SPARSE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_FIVE",
+    "W_CLOSE"
+  ],
+  "published_release_commit": "c30450682c84d2ee1e14bc0cb2e78890e82a7ca0",
+  "remote_work_at_release_check": "c30450682c84d2ee1e14bc0cb2e78890e82a7ca0",
+  "remote_implementation_at_release_check": "c30450682c84d2ee1e14bc0cb2e78890e82a7ca0",
+  "release_worktree_clean": true,
+  "checked_at_utc": "2026-11-13T15:22:02.790799+00:00",
+  "archive": "artifacts/NS_P14_RUN18_PARTIAL_AUDIT_20261113.zip",
+  "archive_sha256": "4b348dd53e94458f2991ac55dcd9aca77f98f8e6d3a1d15afe5493bddcf92428",
+  "archive_entries": 1286,
+  "archive_crc": "PASS",
+  "source_snapshot_commit": "fa3787cff6e924690ea7abc1bc522fb43a06be02",
+  "reviewed_commit": "008b3247442e6ab5d6f2e1cf025855d629bfc542",
+  "verification": "verification/run18/runs/release_candidate_20261113_r03/verification.json"
+}

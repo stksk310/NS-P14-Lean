@@ -1,0 +1,11 @@
+{
+  "status": "PASS_ISOLATED_PUBLICATION_GUARDS",
+  "full": false,
+  "cases": [
+    "verifier refuses existing evidence directory before any replay",
+    "check_run17_additive.py refuses existing numeric output",
+    "replay_run17_inherited.py refuses existing numeric output",
+    "packager refuses existing archive",
+    "packager refuses existing checksum"
+  ]
+}

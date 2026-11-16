@@ -1,0 +1,95 @@
+✖ [3338/3339] Building NSP14.Width.BinaryMonomialPower (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/BinaryMonomialPower.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/BinaryMonomialPower.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/BinaryMonomialPower.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/BinaryMonomialPower.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/BinaryMonomialPower.setup.json --json
+error: NSP14/Width/BinaryMonomialPower.lean:37:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d - e ≥ 1
+where
+ c := ↑n
+ d := ↑(β a - 1)
+ e := ↑(β b)
+warning: NSP14/Width/BinaryMonomialPower.lean:41:12: `MvPolynomial.monomial_mul` has been deprecated: Use `MvPolynomial.monomial_mul_monomial` instead
+
+Hint: Replace the deprecated name:
+  MvPolynomial.monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
+error: NSP14/Width/BinaryMonomialPower.lean:43:8: Type mismatch
+  add_tsub_cancel_of_le hs
+has type
+  Finsupp.single a 1 + (β - Finsupp.single a 1) = β
+but is expected to have type
+  MvPolynomial.monomial (Finsupp.single a 1 + δ) = MvPolynomial.monomial β
+error: NSP14/Width/BinaryMonomialPower.lean:44:32: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+error: NSP14/Width/BinaryMonomialPower.lean:50:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+where
+ c := ↑n
+ d := ↑(β b - 1)
+warning: NSP14/Width/BinaryMonomialPower.lean:54:12: `MvPolynomial.monomial_mul` has been deprecated: Use `MvPolynomial.monomial_mul_monomial` instead
+
+Hint: Replace the deprecated name:
+  MvPolynomial.monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
+error: NSP14/Width/BinaryMonomialPower.lean:56:8: Type mismatch
+  add_tsub_cancel_of_le hs
+has type
+  Finsupp.single b 1 + (β - Finsupp.single b 1) = β
+but is expected to have type
+  MvPolynomial.monomial (Finsupp.single b 1 + δ) = MvPolynomial.monomial β
+warning: NSP14/Width/BinaryMonomialPower.lean:62:12: `MvPolynomial.monomial_mul` has been deprecated: Use `MvPolynomial.monomial_mul_monomial` instead
+
+Hint: Replace the deprecated name:
+  MvPolynomial.monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
+warning: NSP14/Width/BinaryMonomialPower.lean:65:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+error: NSP14/Width/BinaryMonomialPower.lean:66:8: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d - e ≥ 1
+where
+ c := ↑n
+ d := ↑(β a)
+ e := ↑(β b)
+warning: NSP14/Width/BinaryMonomialPower.lean:68:12: `MvPolynomial.monomial_mul` has been deprecated: Use `MvPolynomial.monomial_mul_monomial` instead
+
+Hint: Replace the deprecated name:
+  MvPolynomial.monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
+warning: NSP14/Width/BinaryMonomialPower.lean:71:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+error: NSP14/Width/BinaryMonomialPower.lean:72:8: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d - e ≥ 1
+where
+ c := ↑n
+ d := ↑(β a)
+ e := ↑(β b)
+warning: NSP14/Width/BinaryMonomialPower.lean:36:21: This simp argument is unused:
+  Finsupp.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finsupp.single_eq_same, Finsupp.single_eq_of_ne hab.symm, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/BinaryMonomialPower.lean:49:21: This simp argument is unused:
+  Finsupp.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finsupp.single_eq_same, Finsupp.single_eq_of_ne hab, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Width.BinaryMonomialPower
+error: build failed

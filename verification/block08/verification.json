@@ -1,0 +1,298 @@
+{
+  "status": "PASS_COMPILED_BLOCK08",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 0.895
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Basic.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.47
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Apery.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.693
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Atoms.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.345
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Order.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.567
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyGrading.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.536
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/Heads.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.391
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.022
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.382
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.425
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.554
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.724
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.609
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.522
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.615
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.425
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.505
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 86,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15,
+    "block07_regression": 25
+  },
+  "block08_declarations": [
+    "NSP14.NumericalSemigroup.add_mem",
+    "NSP14.NumericalSemigroup.apery_add_multiple",
+    "NSP14.NumericalSemigroup.apery_card",
+    "NSP14.NumericalSemigroup.apery_injective",
+    "NSP14.NumericalSemigroup.apery_le",
+    "NSP14.NumericalSemigroup.apery_mem",
+    "NSP14.NumericalSemigroup.apery_min",
+    "NSP14.NumericalSemigroup.apery_mod",
+    "NSP14.NumericalSemigroup.apery_no_predecessor",
+    "NSP14.NumericalSemigroup.apery_order_bound",
+    "NSP14.NumericalSemigroup.apery_predecessor_order",
+    "NSP14.NumericalSemigroup.apery_spec",
+    "NSP14.NumericalSemigroup.apery_summands",
+    "NSP14.NumericalSemigroup.atom_apery",
+    "NSP14.NumericalSemigroup.atom_length_bound",
+    "NSP14.NumericalSemigroup.atom_mem_of_generates",
+    "NSP14.NumericalSemigroup.atom_order",
+    "NSP14.NumericalSemigroup.atomic_length_le",
+    "NSP14.NumericalSemigroup.atoms_mem",
+    "NSP14.NumericalSemigroup.closure_atoms",
+    "NSP14.NumericalSemigroup.decomposition",
+    "NSP14.NumericalSemigroup.decomposition_unique",
+    "NSP14.NumericalSemigroup.degree_exists_le",
+    "NSP14.NumericalSemigroup.degree_one",
+    "NSP14.NumericalSemigroup.degree_one_card",
+    "NSP14.NumericalSemigroup.degree_two_le_deficit",
+    "NSP14.NumericalSemigroup.degree_zero",
+    "NSP14.NumericalSemigroup.degree_zero_card",
+    "NSP14.NumericalSemigroup.embeddingDimension_le_multiplicity",
+    "NSP14.NumericalSemigroup.embeddingDimension_pos",
+    "NSP14.NumericalSemigroup.head_predecessor",
+    "NSP14.NumericalSemigroup.head_sub_terminal",
+    "NSP14.NumericalSemigroup.highSet_card",
+    "NSP14.NumericalSemigroup.highSet_eq_sdiff",
+    "NSP14.NumericalSemigroup.jump_le_of_live_base",
+    "NSP14.NumericalSemigroup.jump_le_of_live_head",
+    "NSP14.NumericalSemigroup.length_add",
+    "NSP14.NumericalSemigroup.length_exists",
+    "NSP14.NumericalSemigroup.length_le",
+    "NSP14.NumericalSemigroup.length_le_order",
+    "NSP14.NumericalSemigroup.length_multiplicity_bound",
+    "NSP14.NumericalSemigroup.length_one",
+    "NSP14.NumericalSemigroup.length_zero",
+    "NSP14.NumericalSemigroup.live_iff_of_equal_jump",
+    "NSP14.NumericalSemigroup.longest_factors_atoms",
+    "NSP14.NumericalSemigroup.lowSet_card",
+    "NSP14.NumericalSemigroup.lowSet_subset",
+    "NSP14.NumericalSemigroup.mem_aperySet_iff",
+    "NSP14.NumericalSemigroup.mem_apery_iff_no_predecessor",
+    "NSP14.NumericalSemigroup.mem_atoms_iff",
+    "NSP14.NumericalSemigroup.mem_closure_atoms",
+    "NSP14.NumericalSemigroup.multiple_mem",
+    "NSP14.NumericalSemigroup.multiplicity_atom",
+    "NSP14.NumericalSemigroup.multiplicity_eq",
+    "NSP14.NumericalSemigroup.multiplicity_eq_embedding_add_deficit",
+    "NSP14.NumericalSemigroup.multiplicity_le",
+    "NSP14.NumericalSemigroup.multiplicity_le_conductor",
+    "NSP14.NumericalSemigroup.multiplicity_mem",
+    "NSP14.NumericalSemigroup.multiplicity_mem_atoms",
+    "NSP14.NumericalSemigroup.multiplicity_not_apery",
+    "NSP14.NumericalSemigroup.multiplicity_pos",
+    "NSP14.NumericalSemigroup.multiplicity_spec",
+    "NSP14.NumericalSemigroup.nonmultiplicity_atoms_apery",
+    "NSP14.NumericalSemigroup.nonmultiplicity_atoms_card",
+    "NSP14.NumericalSemigroup.order_add",
+    "NSP14.NumericalSemigroup.order_add_multiplicity",
+    "NSP14.NumericalSemigroup.order_bound",
+    "NSP14.NumericalSemigroup.order_eq_zero_iff",
+    "NSP14.NumericalSemigroup.order_length",
+    "NSP14.NumericalSemigroup.order_multiplicity",
+    "NSP14.NumericalSemigroup.order_one_iff_atom",
+    "NSP14.NumericalSemigroup.order_pos",
+    "NSP14.NumericalSemigroup.order_realized_by_atoms",
+    "NSP14.NumericalSemigroup.order_sum",
+    "NSP14.NumericalSemigroup.order_zero",
+    "NSP14.NumericalSemigroup.positive_exists",
+    "NSP14.NumericalSemigroup.residue_exists",
+    "NSP14.NumericalSemigroup.sum_mem",
+    "NSP14.NumericalSemigroup.terminalHeadEquiv",
+    "NSP14.NumericalSemigroup.terminal_head_degree",
+    "NSP14.NumericalSemigroup.terminal_iff_head",
+    "NSP14.NumericalSemigroup.terminal_jump",
+    "NSP14.NumericalSemigroup.terminal_pos",
+    "NSP14.NumericalSemigroup.zero_mem",
+    "NSP14.NumericalSemigroup.zero_mem_apery",
+    "NSP14.NumericalSemigroup.zero_min"
+  ],
+  "block08_theorem_count": 85,
+  "proof_bearing_definition_count": 1,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block07": true,
+  "sources": [
+    "NSP14/Semigroup/Basic.lean",
+    "NSP14/Semigroup/Apery.lean",
+    "NSP14/Semigroup/Atoms.lean",
+    "NSP14/Semigroup/Order.lean",
+    "NSP14/Semigroup/AperyGrading.lean",
+    "NSP14/Semigroup/Heads.lean"
+  ],
+  "paper_source": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, section2 actual numerical Apery coordinates; V03 O_COORD numerical foundations; SO1 atom input",
+  "scope": "Cofinite additive submonoids yield actual multiplicity, unique finite Apery decomposition, minimal atom generators, maximal atomic order, degree counts and numerical terminal/head bijection. No actual tangent-cone ring identification yet.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A10-A11",
+  "remaining": [
+    "actual semigroup-ring/completion tangent-cone identification",
+    "Q=A/N and equal-jump module isomorphisms, jump upper bound",
+    "actual offset-volume/cut/tower resource construction",
+    "maximal Q2 to pair data, Tor/Betti and full P14"
+  ]
+}

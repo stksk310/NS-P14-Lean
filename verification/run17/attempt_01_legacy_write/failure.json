@@ -1,0 +1,10 @@
+{
+  "status": "FAIL_BASELINE_BYTE_CHECK",
+  "changed_file": "verification/run16/coordinate_model.json",
+  "difference": "seconds only (1.068 -> 1.158)",
+  "cause": "legacy checker hard-coded its old evidence output path",
+  "original_restored_sha256": "289ef55241179beac821b828c72f0694ab4b1eaa025ae3190210fbcbd2313a47",
+  "all_Lean_acceptances_exit_zero": 154,
+  "environment_axioms_command_exit_zero": true,
+  "fix": "Execute exact inherited scripts and inputs in a temporary root; copy only new Run17 results."
+}

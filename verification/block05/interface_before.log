@@ -1,0 +1,30 @@
+tests/LargeSeed.lean:5:32: error: unknown namespace `NSP14.Ordinary.LargeSeed`
+tests/LargeSeed.lean:7:32: error: Function expected at
+  harmonic
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (largeCutoff r)
+
+Hint: The identifier `harmonic` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LargeSeed.lean:7:59: error: Function expected at
+  barrier
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  r
+
+Hint: The identifier `barrier` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LargeSeed.lean:8:2: error(lean.unknownIdentifier): Unknown identifier `harmonic_lt_barrier`
+tests/LargeSeed.lean:11:8: error: Function expected at
+  gap
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  r
+
+Hint: The identifier `gap` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/LargeSeed.lean:12:2: error(lean.unknownIdentifier): Unknown identifier `large_seed_pos`

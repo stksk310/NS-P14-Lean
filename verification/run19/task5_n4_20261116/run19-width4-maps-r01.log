@@ -1,0 +1,47 @@
+NSP14/NarrowFour/WidthFourInitial.lean:258:2: error: Type mismatch
+  AlgHom.congr_fun (Endpoint.Data.coreToG_fullToCore D k) ((renameVariables D k hu ha) ↑↑f)
+has type
+  ((D.coreToG k).comp (D.fullToCore k)) ((renameVariables D k hu ha) ↑↑f) =
+    (D.fullToG k) ((renameVariables D k hu ha) ↑↑f)
+but is expected to have type
+  ((toActual D k hu ha) (MvPolynomial.X f)) i✝ =
+    (((D.fullToG k).comp ↑(renameVariables D k hu ha)) (MvPolynomial.X f)) i✝
+NSP14/NarrowFour/WidthFourInitial.lean:264:2: error: Tactic `rfl` failed: The left-hand side
+  (MvPolynomial.aeval fun b => D.coreMonomial k (D.coreGeneratorPoint b))
+    (↑(MvPolynomial.renameEquiv k (variableEquiv D hu ha)) (MvPolynomial.X i))
+is not definitionally equal to the right-hand side
+  D.coreMonomial k (D.coreGeneratorPoint (routedVariable D hu ha i))
+
+D : Endpoint.Data
+k : Type
+inst✝ : Field k
+hu : D.u = 4
+ha : D.a = {1, 3}
+i : Fin 4
+⊢ (MvPolynomial.aeval fun b => D.coreMonomial k (D.coreGeneratorPoint b))
+      (↑(MvPolynomial.renameEquiv k (variableEquiv D hu ha)) (MvPolynomial.X i)) =
+    D.coreMonomial k (D.coreGeneratorPoint (routedVariable D hu ha i))
+NSP14/NarrowFour/WidthFourInitial.lean:262:54: warning: This simp argument is unused:
+  MvPolynomial.renameEquiv_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [toCore, AlgHom.comp_apply, renameVariables, MvPolynomial.rename_X, Endpoint.Data.fullToCore,
+    MvPolynomial.aeval_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/WidthFourInitial.lean:263:4: warning: This simp argument is unused:
+  MvPolynomial.rename_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [toCore, AlgHom.comp_apply, renameVariables, MvPolynomial.renameEquiv_apply,
+    Endpoint.Data.fullToCore, MvPolynomial.aeval_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/WidthFourInitial.lean:263:51: warning: This simp argument is unused:
+  MvPolynomial.aeval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [toCore, AlgHom.comp_apply, renameVariables, MvPolynomial.renameEquiv_apply, MvPolynomial.rename_X,
+    Endpoint.Data.fullToCore]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

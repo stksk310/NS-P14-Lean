@@ -1,0 +1,2 @@
+tests/InitialTransport.lean:10:22: error(lean.unknownIdentifier): Unknown identifier `Endpoint.initialBoundaryTransport`
+tests/InitialTransport.lean:15:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.initialBoundaryTransport_rank`

@@ -1,0 +1,16 @@
+{
+  "source": {
+    "storage": "byte_range",
+    "path": "04_HISTORICAL_THEOREMS/R27_LITERAL_PROOFS.md",
+    "offset": 217209,
+    "size_bytes": 19077,
+    "representative": {
+      "role": "R27",
+      "member": "research/a/R27_A01_PRIMITIVE_FOUR_ALL_ROWS_SUPPORT_CAPACITY_JA.md",
+      "archive_sha256": "4a3c3714f6b48bfad6f4cce90098effb499b79b2b9e2f75f4b2c3df87ec97e0d"
+    },
+    "kind": "proof_document"
+  },
+  "verified_sha256": "defb8fb07b36c3de12b2df5fe4c0645cffc58759a6eb0934c98fa6c124c6f276",
+  "extracted_bytes": 19077
+}

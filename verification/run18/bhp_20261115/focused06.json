@@ -1,0 +1,38 @@
+[
+  {
+    "file": "tests/BasisBlocks.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.81
+  },
+  {
+    "file": "tests/ArtinGradedChain.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.824
+  },
+  {
+    "file": "tests/InitialBoundary.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.931
+  },
+  {
+    "file": "tests/InitialTransport.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.799
+  },
+  {
+    "file": "tests/InitialBetti.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.727
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms05.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.622
+  }
+]

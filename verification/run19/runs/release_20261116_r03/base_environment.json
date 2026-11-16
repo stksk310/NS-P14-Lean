@@ -1,0 +1,8 @@
+{
+  "base_commit": "a7504eea25f02728d1be6cd0082e8484d639dbe2",
+  "isolated_workspace": "/tmp/nsp14-v06-base-r_uesr72",
+  "cache_donor": "/tmp/nsp14-v06-base-bzmlfrkr/.lake/build",
+  "shared_packages": "/workspace/NS-P14-Lean/.lake/packages",
+  "source_identity_checked": true,
+  "declarations": 70
+}

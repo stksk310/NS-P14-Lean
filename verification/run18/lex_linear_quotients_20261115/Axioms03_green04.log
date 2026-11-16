@@ -1,0 +1,4 @@
+'NSP14.Lex.IsLex.predecessor_betti_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.ordinary_ek_accum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.ordinary_ek' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.variable_ideal_betti' depends on axioms: [propext, Classical.choice, Quot.sound]

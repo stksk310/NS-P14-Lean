@@ -1,0 +1,15 @@
+tests/ActualGradedBaseChange.lean:1:0: error: unknown module prefix 'tests'
+
+No directory 'tests' or file 'tests.olean' in the search path entries:
+/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean
+/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean
+/workspace/NS-P14-Lean-run13-fix/.lake/build/lib/lean
+/workspace/audit-tools/lean-4.36.0-rc2-linux/lib/lean
+/workspace/audit-tools/lean-4.36.0-rc2-linux/lib/lean

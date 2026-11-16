@@ -1,0 +1,60 @@
+{
+  "typed_modules": [
+    "NSP14.Endpoint.CarrySums",
+    "NSP14.Endpoint.CompetitorBounds",
+    "NSP14.Endpoint.FiniteCompetitors",
+    "NSP14.Endpoint.FiniteSocleBounds",
+    "NSP14.Width.AntipodalComparison",
+    "NSP14.Width.DenseComparison",
+    "NSP14.Width.DenseLexResources",
+    "NSP14.Width.DensePayment",
+    "NSP14.Width.FiveHigher",
+    "NSP14.Width.FiveNonAntipodal",
+    "NSP14.Width.HigherFromSecond",
+    "NSP14.Width.IntegerPayment",
+    "NSP14.Width.SparseHigher",
+    "tests.V06Dense",
+    "tests.V06Endpoint",
+    "tests.V06HigherFromSecond",
+    "tests.V06IntegerPayment"
+  ],
+  "verified_import_only_modules": [
+    "NSP14",
+    "audit.v06_alignment.RouteChecks"
+  ],
+  "base_export_modules": [
+    "NSP14.Endpoint.CarrySums",
+    "NSP14.Endpoint.CompetitorBounds",
+    "NSP14.Endpoint.FiniteCompetitors",
+    "NSP14.Endpoint.FiniteSocleBounds",
+    "NSP14.Width.AntipodalComparison",
+    "NSP14.Width.DenseComparison",
+    "NSP14.Width.DenseLexResources",
+    "NSP14.Width.DensePayment",
+    "NSP14.Width.FiveHigher",
+    "NSP14.Width.FiveNonAntipodal",
+    "NSP14.Width.SparseHigher"
+  ],
+  "normal_and_explicit_types": true,
+  "all_project_transitive_axioms": true,
+  "base_public_exports_compared": 70,
+  "module_declaration_counts": {
+    "NSP14.Endpoint.CarrySums": 10,
+    "NSP14.Endpoint.CompetitorBounds": 16,
+    "NSP14.Endpoint.FiniteCompetitors": 5,
+    "NSP14.Endpoint.FiniteSocleBounds": 6,
+    "NSP14.Width.AntipodalComparison": 5,
+    "NSP14.Width.DenseComparison": 7,
+    "NSP14.Width.DenseLexResources": 4,
+    "NSP14.Width.DensePayment": 9,
+    "NSP14.Width.FiveHigher": 5,
+    "NSP14.Width.FiveNonAntipodal": 6,
+    "NSP14.Width.HigherFromSecond": 3,
+    "NSP14.Width.IntegerPayment": 2,
+    "NSP14.Width.SparseHigher": 2,
+    "tests.V06Dense": 6,
+    "tests.V06Endpoint": 19,
+    "tests.V06HigherFromSecond": 3,
+    "tests.V06IntegerPayment": 13
+  }
+}

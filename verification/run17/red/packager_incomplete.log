@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/NS-P14-Lean/scripts/package_run17_audit.py", line 7, in <module>
+    assert status['status']=='COMPLETE'and status['run17_complete']and status['unproved_ids']==[]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

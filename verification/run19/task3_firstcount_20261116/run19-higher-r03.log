@@ -1,0 +1,12 @@
+NSP14/NarrowFour/HigherRows.lean:48:4: error: mod_cast has type
+  ↑(totalBetti k D.Variables (D.fullG k) 2) ≤ T 2 D.u
+but is expected to have type
+  totalBetti k D.Variables (D.fullG k) 2 ≤ 2 * D.u.choose (2 + 1)
+NSP14/NarrowFour/HigherRows.lean:51:4: error: mod_cast has type
+  ↑(totalBetti k D.Variables (D.fullG k) 3) ≤ T 3 D.u
+but is expected to have type
+  totalBetti k D.Variables (D.fullG k) 3 ≤ 3 * D.u.choose (3 + 1)
+NSP14/NarrowFour/HigherRows.lean:54:4: error: mod_cast has type
+  ↑(totalBetti k D.Variables (D.fullG k) 4) ≤ T 4 D.u
+but is expected to have type
+  totalBetti k D.Variables (D.fullG k) 4 ≤ 4 * D.u.choose (4 + 1)

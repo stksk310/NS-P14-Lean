@@ -1,0 +1,1 @@
+audit/run20/acceptance/I_PARTITION.lean:4:47: error(lean.unknownIdentifier): Unknown identifier `NSP14.Run20.partition_closed`

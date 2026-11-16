@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE",
+  "baseline_commit": "8040c90138bf1aa76cc99d9a5e7df7b2c1a8a206",
+  "integrated_remote_commit": "aa6bf4ced7ea308686066e377ba1e5bc992a098e",
+  "run13": "COMPLETE_AND_PUSHED",
+  "goals": {
+    "1_offset_stabilization_volume": "COMPLETE",
+    "2_green_degree_two": "COMPLETE",
+    "3_same_characteristic_one_cut": "COMPLETE",
+    "4_actual_tower": "COMPLETE",
+    "5_one_resource_sequence": "COMPLETE",
+    "6_actual_numerical_data": "COMPLETE",
+    "7_actual_sidon_boundary": "COMPLETE",
+    "8_actual_all_rows": "COMPLETE"
+  },
+  "historical_remaining_types": "audit/run14/RemainingGoals.lean (preserved)",
+  "historical_goal_proofs": "audit/run14_continuation/ClosedGoals.lean",
+  "next_required_run": "RUN15_ACTUAL_TOR_AND_TARGET_BETTI",
+  "run15_actual_tor_and_target_betti": "DEFERRED_AS_REQUESTED",
+  "evidence": "verification/run14_continuation/verification.json"
+}

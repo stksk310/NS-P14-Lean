@@ -1,0 +1,52 @@
+NSP14.Homological.correctedActionComparison.{u} (k R : Type u) [Field k] [CommRing R] [Algebra k R]
+  (K : ChainComplex (ModuleCat R) ℕ)
+  [∀ (i : ℕ), Module.Finite k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R K) i)] (rs : List R)
+  (h0finite :
+    ∀ (i : ℕ),
+      Module.Finite k
+        ↑(HomologicalComplex.homology
+            (nativeCoefficientComplex k R
+              ((actionOnComplex R rs).obj ((ChainComplex.single₀ (ModuleCat R)).obj (HomologicalComplex.homology K 0))))
+            i))
+  (i : ℕ) :
+  Module.finrank k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R ((actionOnComplex R rs).obj K)) i) ≤
+    Module.finrank k
+        ↑(HomologicalComplex.homology
+            (nativeCoefficientComplex k R
+              ((actionOnComplex R rs).obj ((ChainComplex.single₀ (ModuleCat R)).obj (HomologicalComplex.homology K 0))))
+            i) +
+      binomialTransform rs.length
+        (fun j =>
+          if j = 0 then 0 else Module.finrank k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R K) j))
+        i
+NSP14.Homological.coefficientKoszulHomologyIso.{u} (k σ : Type u) [Field k] [Fintype σ]
+  (M : ModuleCat (VariableRing k σ)) (i : ℕ) :
+  HomologicalComplex.homology (coefficientKoszulComplex k σ M) i ≅ koszulHomologyK k σ M i
+NSP14.Homological.nativeCoefficientComplex.{u} (k R : Type u) [Field k] [CommRing R] [Algebra k R]
+  (K : ChainComplex (ModuleCat R) ℕ) : ChainComplex (ModuleCat k) ℕ
+NSP14.Homological.actionOnComplex_coefficient_bound.{u} (k R : Type u) [Field k] [CommRing R] [Algebra k R]
+  (K : ChainComplex (ModuleCat R) ℕ)
+  [∀ (i : ℕ), Module.Finite k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R K) i)] (rs : List R) (i : ℕ) :
+  Module.finrank k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R ((actionOnComplex R rs).obj K)) i) ≤
+    pascalIter (fun j => Module.finrank k ↑(HomologicalComplex.homology (nativeCoefficientComplex k R K) j)) rs.length i
+NSP14.NumericalSemigroup.completedGradedAlgEquiv.{u_1} (S : NumericalSemigroup) (k : Type u_1) [CommRing k] :
+  S.TangentAlgebra k ≃ₐ[k] S.FormalTangentAlgebra k
+NSP14.NumericalSemigroup.nativeFullAtom_betti (S : NumericalSemigroup) (k : Type) [Field k] (i : ℕ) :
+  Module.finrank k
+      ↑(HomologicalComplex.homology
+          (regularPartialCoefficientComplex k (S.TangentAlgebra k) (S.xElement k :: S.nonXNativeVariables k)) i) =
+    totalBetti k S.AtomExponent (↧(S.TangentAlgebra k)) i
+NSP14.Homological.standardMonomialBasis.{u_1, u_2, u_3} {k : Type u_1} {σ : Type u_2} [Field k] (m : MonomialOrder σ)
+  (I : Ideal (MvPolynomial σ k)) : Module.Basis (↑(StandardExponent m I)) k (MvPolynomial σ k ⧸ I)
+NSP14.Homological.bettiEuler_shortExact.{u} (k σ : Type u) [Field k] [Fintype σ]
+  (S : CategoryTheory.ShortComplex (ModuleCat (VariableRing k σ))) [Module.Finite (VariableRing k σ) ↑S.X₁]
+  [Module.Finite (VariableRing k σ) ↑S.X₂] [Module.Finite (VariableRing k σ) ↑S.X₃] (hS : S.ShortExact) (j : ℕ) :
+  bettiEuler k σ S.X₂ j = bettiEuler k σ S.X₁ j + bettiEuler k σ S.X₃ j - ↑(koszulCorrectionRank k σ S hS j)
+NSP14.NumericalSemigroup.order_realized_by_atoms (S : NumericalSemigroup) {x : ℕ} (hx : x ∈ S) :
+  ∃ f, (∀ (i : Fin (S.order x)), S.IsAtom (f i)) ∧ ∑ i, f i = x
+AddMonoidAlgebra.lift.{u_1, u_4, u_7} (R : Type u_1) (A : Type u_4) (M : Type u_7) [CommSemiring R] [AddMonoid M]
+  [Semiring A] [Algebra R A] : (Multiplicative M →* A) ≃ (AddMonoidAlgebra R M →ₐ[R] A)
+AddMonoidAlgebra.liftNC.{u₁, u₂, u_1} {k : Type u₁} {G : Type u₂} {R : Type u_1} [Semiring k]
+  [NonUnitalNonAssocSemiring R] (f : k →+ R) (g : Multiplicative G → R) : AddMonoidAlgebra k G →+ R
+AddMonoidAlgebra.of.{u_8, u_9} (R : Type u_8) (M : Type u_9) [Semiring R] [AddZeroClass M] :
+  Multiplicative M →* AddMonoidAlgebra R M

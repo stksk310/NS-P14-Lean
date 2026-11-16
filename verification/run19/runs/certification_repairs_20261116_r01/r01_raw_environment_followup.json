@@ -1,0 +1,14 @@
+{
+  "status": "PASS_R01_RAW_ENVIRONMENT_FOLLOWUP_NOT_COMPLETE_CERTIFICATION",
+  "source_snapshot": "c002983bf657b07200c5d50f1d653c95f1682c7e",
+  "raw_sha256": "7aea5ee3d90a1a9ab741a4fd24257def591009467473f79af7ba68d66cb3a00b",
+  "declarations": 11909,
+  "typed_modules": 43,
+  "only_allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "v06_and_base_public_types_preserved": true,
+  "remaining": "R01 failed old V06 isolated guard because nested Git alternates; new full certification required"
+}

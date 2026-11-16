@@ -1,0 +1,64 @@
+✖ [5578/5579] Building NSP14.Width.AntipodalPresentation (3.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalPresentation.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalPresentation.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalPresentation.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalPresentation.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalPresentation.setup.json --json
+error: NSP14/Width/AntipodalPresentation.lean:21:8: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => ↑b ∈ _a
+Error: Application type mismatch: The argument
+  b
+has type
+  ↥D.a
+but is expected to have type
+  ↥_a
+in the application
+  ↑b
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+D : Data
+h t : ℕ
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+b : ↥D.a
+hb : ↑b ∈ D.a
+⊢ ∃ a, D.antipodalVariable h t ha a = b
+error: NSP14/Width/AntipodalPresentation.lean:13:18: unknown free variable `_fvar.2307`
+error: NSP14/Width/AntipodalPresentation.lean:31:6: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.45` is a value of type
+  ?m.44
+error: NSP14/Width/AntipodalPresentation.lean:44:10: don't know how to synthesize implicit argument `a`
+  @Eq.symm ℕ
+    (D.coreDegree
+      (D.antipodalPoint h t ?m.57 (β (D.antipodalVariable h t ha 0)) (β (D.antipodalVariable h t ha 1))
+        (β (D.antipodalVariable h t ha 2))))
+    (β (D.antipodalVariable h t ha 0) + β (D.antipodalVariable h t ha 1) + β (D.antipodalVariable h t ha 2))
+    (antipodalPoint_degree D h t ?m.57 (β (D.antipodalVariable h t ha 0)) (β (D.antipodalVariable h t ha 1))
+      (β (D.antipodalVariable h t ha 2)))
+context:
+D : Data
+h t : ℕ
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+β : ↥D.a →₀ ℕ
+⊢ ℕ
+error: NSP14/Width/AntipodalPresentation.lean:44:39: don't know how to synthesize placeholder for argument `ha`
+context:
+D : Data
+h t : ℕ
+ht0 : 0 < t
+ht : t < h
+ha : D.a = {t, h, t + h}
+β : ↥D.a →₀ ℕ
+⊢ D.a = {t, h, t + h}
+error: NSP14/Width/AntipodalPresentation.lean:101:25: Invalid field `antipodalVariableEquiv`: The environment does not contain `NSP14.Endpoint.Data.antipodalVariableEquiv`, so it is not possible to project the field `antipodalVariableEquiv` from an expression
+  D
+of type `Data`
+error: NSP14/Width/AntipodalPresentation.lean:101:11: Tactic `rcases` failed: `x✝ : ?m.309` is not an inductive datatype
+error: NSP14/Width/AntipodalPresentation.lean:110:25: Invalid field `antipodalVariableEquiv`: The environment does not contain `NSP14.Endpoint.Data.antipodalVariableEquiv`, so it is not possible to project the field `antipodalVariableEquiv` from an expression
+  D
+of type `Data`
+error: NSP14/Width/AntipodalPresentation.lean:110:11: Tactic `rcases` failed: `x✝ : ?m.605` is not an inductive datatype
+Some required targets logged failures:
+- NSP14.Width.AntipodalPresentation
+error: build failed

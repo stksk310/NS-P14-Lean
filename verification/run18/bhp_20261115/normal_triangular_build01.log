@@ -1,0 +1,11 @@
+✖ [3324/3325] Building NSP14.Homological.NormalTriangular (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/NormalTriangular.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/NormalTriangular.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/NormalTriangular.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/NormalTriangular.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/NormalTriangular.setup.json --json
+error: NSP14/Homological/NormalTriangular.lean:56:24: Type mismatch: After simplification, term
+  hd
+ has type
+  d ∈ ↑((MvPolynomial.monomial v) 1).coeff.support
+but is expected to have type
+  d = v
+Some required targets logged failures:
+- NSP14.Homological.NormalTriangular
+error: build failed

@@ -1,0 +1,25 @@
+'NSP14.Homological.exterior_contract_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.exteriorPowerLinearEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulSlotExterior_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulExteriorBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulSlotWord_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.exterior_contract_map : ∀ (R : Type) [inst : CommRing R] {M N : Type} [inst_1 : AddCommGroup M]
+  [inst_2 : Module R M] [inst_3 : AddCommGroup N] [inst_4 : Module R N] (f : M →ₗ[R] N) (φ : Module.Dual R N)
+  (x : ExteriorAlgebra R M),
+  (CliffordAlgebra.contractLeft φ) ((ExteriorAlgebra.map f) x) =
+    (ExteriorAlgebra.map f) ((CliffordAlgebra.contractLeft (φ ∘ₗ f)) x)
+@NSP14.Homological.koszulSlotExterior_linearIndependent : ∀ {σ : Type} (k : Type) [inst : Field k] (xs : List σ)
+  (hxs : xs.Nodup) (j : ℕ), LinearIndependent k (NSP14.Homological.koszulSlotExterior k xs hxs j)
+@NSP14.Homological.koszulExteriorBasis : {σ : Type} →
+  (k : Type) →
+    [inst : Field k] →
+      [inst_1 : Fintype σ] →
+        (j : ℕ) →
+          Module.Basis (NSP14.Homological.KoszulSlot (NSP14.Homological.variableList k σ).length j) k ↥(⋀[k]^j (σ → k))
+@NSP14.Homological.koszulSlotWord_contraction : ∀ {σ : Type} (k : Type) [inst : Field k] {V : Type}
+  [inst_1 : AddCommGroup V] [inst_2 : Module k V] (v : σ → V) (φ : Module.Dual k V) (xs : List σ) (j : ℕ)
+  (s : NSP14.Homological.KoszulSlot xs.length (j + 1)),
+  (CliffordAlgebra.contractLeft φ) (NSP14.Homological.koszulSlotWord k v xs (j + 1) s) =
+    ∑ t,
+      NSP14.Homological.koszulArrowScalar k v φ (NSP14.Homological.koszulSlotArrow xs j s t) •
+        NSP14.Homological.koszulSlotWord k v xs j t

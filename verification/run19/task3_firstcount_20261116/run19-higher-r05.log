@@ -1,0 +1,9 @@
+NSP14/NarrowFour/HigherRows.lean:181:4: error: Type mismatch: After simplification, term
+  hmul
+ has type
+  (S.endpointData he hw).u ≤ (S.endpointData he hw).d * (S.endpointData he hw).u
+but is expected to have type
+  S.normalizedWidth ≤ S.width
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.find ↦ 4

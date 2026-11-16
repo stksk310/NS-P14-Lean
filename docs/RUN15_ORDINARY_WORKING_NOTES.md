@@ -1,0 +1,9 @@
+# Run15 ordinary checkpointからの継続（停止しない）
+
+ordinary_actual_completion_betti_leが、任意source e>=3/実幅>=m−1、各自の最小変数を持つactual完成接錐、任意元体、全行で閉じた。第0行は任意sourceのactualG/actualA/完成GのBetti0=1を実augmentationと通常Torから証明した。一般AP2目標は継続。Run15 COMPLETEではない。
+
+verification/run15_ordinaryは16数学module793行、3新規受入、元のOrdinaryActualCompletionGoalそのままのexact監査型を含む。全90コマンド、全5570宣言/新規204宣言PASS。旧原本は不変。これを通常Push後の次の固定基準にする。
+
+/tmp/APHeadMultiplication.leanと/tmp/APHeadQuotient.leanはGREENの研究途中原本。公差d>=1のまま、和が実Apéryに残るならorder加法性、headMonomialの積が常に半群積と一致、代数的半群環から実HeadAlgebraへのAlgHom、全射、核が実(t^m)と一致する証明が通っている。semigroupX_regularは任意数値半群で係数をmだけ移した実式から証明。/tmp/APConeComparison.leanは一般APConeBettiGoalを閉じるための実正則縮約の接続中で、map_smulの型明示を調整中。これらはまだ今回の検証/ZIPへ含めない。次stageとしてproductionへ移し、元のAPConeBettiGoalとactual例を先に固定し、再検証する。
+
+一般APBettiGoalは未完。自然な初期単項式加群のBetti一致を仮定するとm5,v3で誤るので採用しない。実解消又は実Koszul rank計算が必要。

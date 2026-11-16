@@ -1,0 +1,1 @@
+verification/run18/bhp_20261115/lex_compatible_degrees_red01.lean:3:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsStronglyStable.lexDegreeSet_next_mem`

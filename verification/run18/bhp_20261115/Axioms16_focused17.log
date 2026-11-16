@@ -1,0 +1,27 @@
+'NSP14.Homological.basisGradedScalarComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.monomialExtension_eq_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.monomialExtensionBaseChangeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.monomialMap_gradedBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistraction_original_gradedBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.monomialExtension_sameHilbert : ∀ (k L : Type) [inst : Field k] [inst_1 : Field L] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+  NSP14.Lex.IsMonomial k q I →
+    ∀ (n : ℕ),
+      NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert L q (NSP14.Lex.monomialExtension k L q I) ⋯ n
+NSP14.Lex.monomialExtension_eq_map : ∀ (k L : Type) [inst : Field k] [inst_1 : Field L] (q : ℕ) [inst_2 : Algebra k L]
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsMonomial k q I → NSP14.Lex.monomialExtension k L q I = Ideal.map (MvPolynomial.map (algebraMap k L)) I
+NSP14.Lex.monomialMap_gradedBetti : ∀ (k L : Type) [inst : Field k] [inst_1 : Field L] [inst_2 : Algebra k L] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hmono : NSP14.Lex.IsMonomial k q I) (i : ℕ) (t : ℤ),
+  NSP14.Lex.quotientGradedBetti L q (Ideal.map (MvPolynomial.map (algebraMap k L)) I) ⋯ i t =
+    NSP14.Lex.quotientGradedBetti k q I hI i t
+NSP14.Lex.genericDistraction_original_gradedBetti : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+  NSP14.Lex.IsMonomial k q I →
+    ∀ (i : ℕ) (t : ℤ),
+      NSP14.Lex.quotientGradedBetti (NSP14.Lex.GenericDistractionField k q) q
+          (NSP14.Lex.genericDistractionIdeal k q
+            (NSP14.Lex.monomialExtension k (NSP14.Lex.GenericDistractionField k q) q I))
+          ⋯ i t =
+        NSP14.Lex.quotientGradedBetti k q I hI i t

@@ -1,0 +1,21 @@
+{
+  "status": "PUBLISHED_PARTIAL_BUNDLE",
+  "archive": "artifacts/NS_P14_RUN18_PARTIAL_FIVE_CLOSURE_20261114.zip",
+  "archive_sha256": "13b8f7b94c7e294558f9a6fc91c2782e9e34385b7c9f7cb6a8aa90c0ab03c271",
+  "entries": 1432,
+  "crc": "PASS",
+  "run18_complete": false,
+  "review_decision": "verification/run18/review_snapshot_five_20261114.json",
+  "verification": "verification/run18/runs/release_candidate_20261114_r05/verification.json",
+  "all_entry_hashes": "PASS",
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE"
+  ],
+  "unproved_ids": [
+    "X_BHP_EK",
+    "W_EDGE",
+    "W_DENSE",
+    "W_CLOSE"
+  ]
+}

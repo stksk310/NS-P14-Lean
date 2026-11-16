@@ -1,0 +1,21 @@
+'NSP14.Lex.IsLex.eq_of_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.monomial_mem_iff_of_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericFieldDegreeMatrix_principal_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericPrincipalDegreeEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.IsLex.eq_of_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ) (I J : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hJ : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) J),
+  NSP14.Lex.IsLex k q I →
+    NSP14.Lex.IsLex k q J →
+      (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert k q J hJ n) → I = J
+NSP14.Lex.IsLex.monomial_mem_iff_of_sameHilbert : ∀ (k L : Type) [inst : Field k] [inst_1 : Field L] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (J : Ideal (MvPolynomial (Fin q) L))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hJ : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) L) J),
+  NSP14.Lex.IsLex k q I →
+    NSP14.Lex.IsLex L q J →
+      (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert L q J hJ n) →
+        ∀ (a : Fin q →₀ ℕ), (MvPolynomial.monomial a) 1 ∈ I ↔ (MvPolynomial.monomial a) 1 ∈ J
+NSP14.Lex.genericFieldDegreeMatrix_principal_det_ne_zero : ∀ (k : Type) [inst : Field k] (q n : ℕ) {ι : Type u_1}
+  [inst_1 : Fintype ι] [inst_2 : DecidableEq ι] (e : ι ↪ NSP14.Lex.PolynomialDegreeIndex q n),
+  ((NSP14.Lex.genericFieldDegreeMatrix k q n).submatrix ⇑e ⇑e).det ≠ 0

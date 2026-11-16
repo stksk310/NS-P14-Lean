@@ -1,0 +1,67 @@
+[
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeometry.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.9409094869997716,
+    "log": "verification/run18/edge_20261115/focused02_WidthEdgeGeometry.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EdgeClosedGoals.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.5393464140001925,
+    "log": "verification/run18/edge_20261115/focused02_EdgeClosedGoals.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeneral.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 3.1898936070001582,
+    "log": "verification/run18/edge_20261115/focused02_WidthEdgeGeneral.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexStable.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4650717969998368,
+    "log": "verification/run18/edge_20261115/focused02_LexStable.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "verification/run18/edge_20261115/Axioms.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4433679119997578,
+    "log": "verification/run18/edge_20261115/focused02_Axioms.log"
+  }
+]

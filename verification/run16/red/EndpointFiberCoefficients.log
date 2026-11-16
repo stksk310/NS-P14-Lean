@@ -1,0 +1,3 @@
+tests/EndpointFibers.lean:20:5: error(lean.invalidField): Invalid field `coreFiberCoefficients`: The environment does not contain `NSP14.Endpoint.Data.coreFiberCoefficients`, so it is not possible to project the field `coreFiberCoefficients` from an expression
+  D
+of type `Endpoint.Data`

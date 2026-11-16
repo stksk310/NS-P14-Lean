@@ -1,0 +1,25 @@
+tests/N4WidthFour.lean:33:56: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 5
+where
+ a := ↑(data 6 ⋯).m
+tests/N4WidthFour.lean:34:63: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 5
+where
+ a := ↑(data 7 ⋯).m
+tests/N4WidthFour.lean:35:63: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 5
+where
+ a := ↑(data 8 ⋯).m
+tests/N4WidthFour.lean:36:63: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 5
+where
+ a := ↑(data 9 ⋯).m
+tests/N4WidthFour.lean:37:57: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 5
+where
+ a := ↑(data 10 ⋯).m

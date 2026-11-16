@@ -1,0 +1,27 @@
+{
+  "backup": "/tmp/nsp14-run18-cache-z9izukaw",
+  "moved": [
+    ".lake/build/lib/lean/tests",
+    ".lake/build/lib/lean/NSP14/Lex",
+    ".lake/build/lib/lean/NSP14/Width",
+    ".lake/build/ir/NSP14/Lex",
+    ".lake/build/ir/NSP14/Width",
+    ".lake/build/lib/lean/audit/run18",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean.private.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ir.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.trace",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean.server",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean.server.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ir",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ilean.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ilean",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ir.sig",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.ir.sig.hash",
+    ".lake/build/lib/lean/NSP14/Homological/KoszulCombinedMinor.olean.private",
+    ".lake/build/ir/NSP14/Homological/KoszulCombinedMinor.setup.json",
+    ".lake/build/ir/NSP14/Homological/KoszulCombinedMinor.c.hash",
+    ".lake/build/ir/NSP14/Homological/KoszulCombinedMinor.c"
+  ]
+}

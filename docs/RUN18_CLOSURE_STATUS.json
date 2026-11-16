@@ -1,0 +1,541 @@
+{
+  "status": "COMPLETE_ALL_SIX_PROOFS_COLD_VALIDATION_AND_REVIEW",
+  "run18_complete": true,
+  "baseline_commit": "c4fd8153f55bb231aab4168a47c1546888fa7ab0",
+  "order_commit": "131f559a9ad495891f0aab487f969bf91b5a447f",
+  "closed_ids": [
+    "W_SPARSE",
+    "W_FIVE",
+    "W_EDGE",
+    "X_BHP_EK",
+    "W_DENSE",
+    "W_CLOSE"
+  ],
+  "unproved_ids": [],
+  "frozen_requested_goals_sha256": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+  "closed_goal": "NSP14.Run18.all_closed",
+  "public_actual_comparison": "NSP14.NumericalSemigroup.narrow_width_comparison",
+  "verification": {
+    "status": "PASS_RUN18_COMPLETE_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r16/verification.json",
+    "commands": 280,
+    "fixtures": 268,
+    "environment_declarations": 10662,
+    "new_environment_declarations": 2421,
+    "source_hash_count": 2033,
+    "evidence_hash_count": 297,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+    "preserved_evidence_count": 7212,
+    "verification_sha256": "99b1c1d68b87d1e39bb94bfe93aa4a0d7ccd6fac8097f588c5a3722ac600c557",
+    "source_manifest_sha256": "5b9b0ca17bcb02600b6028d1b184cb671524743c79226e3f69a1c98e6b421537",
+    "evidence_manifest_sha256": "1c5decbddcb9100223dfd9332dcdcf2d757b8240f7a6635b2abb2f3543b8d0d6",
+    "independent_review": "verification/run18/complete_review_20261115.md",
+    "review_decision": "verification/run18/review_snapshot_complete_20261115.json"
+  },
+  "unproved_assigned_declarations": [],
+  "continuation_20261114": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "base_commit": "aa29347b261633e5a9db4c8467a1831ec69e2d81",
+    "closed_subcontract": "NSP14.Run18.dense_resources_closed : Requested.DenseResources",
+    "actual_comparisons_added": [
+      "NSP14.NumericalSemigroup.narrow_fullAP_comparison",
+      "NSP14.NumericalSemigroup.narrow_five_small_comparison",
+      "NSP14.NumericalSemigroup.narrow_five_nonAntipodal_comparison"
+    ],
+    "higher_rows_added": "NSP14.Endpoint.Data.actual_five_higher",
+    "remaining": [
+      "arbitrary-characteristic BHP/Pardue and EK",
+      "one-missing-offset actual Koszul ranks",
+      "one lex quotient and dense all-row comparison",
+      "antipodal actual QC presentation and first row",
+      "full original-source width closure"
+    ],
+    "focused_evidence": "verification/run18/continuation_20261114/focused.json",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r04/verification.json"
+  },
+  "previous_successful_verification_20261113": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261113_r03/verification.json",
+    "previous_failed_attempts": [
+      "verification/run18/runs/release_candidate_20261113_r01/failure.json",
+      "verification/run18/runs/release_candidate_20261113_r02/failure.json"
+    ],
+    "commands": 172,
+    "fixtures": 159,
+    "environment_declarations": 8429,
+    "new_environment_declarations": 188,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "fa3787cff6e924690ea7abc1bc522fb43a06be02",
+    "preserved_evidence_count": 3165
+  },
+  "closed_goals": [
+    "NSP14.Run18.sparse_closed",
+    "NSP14.Run18.five_closed",
+    "NSP14.Run18.edge_closed",
+    "NSP14.Lex.bhp_ek",
+    "NSP14.Run18.dense_closed",
+    "NSP14.Run18.width_closed",
+    "NSP14.Run18.all_closed"
+  ],
+  "public_actual_comparisons": [
+    "NSP14.NumericalSemigroup.narrow_sparse_comparison",
+    "NSP14.NumericalSemigroup.narrow_five_comparison",
+    "NSP14.NumericalSemigroup.narrow_oneHole_comparison",
+    "NSP14.NumericalSemigroup.narrow_dense_comparison",
+    "NSP14.NumericalSemigroup.narrow_width_comparison"
+  ],
+  "previous_successful_verification_20261114_r04": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r04/verification.json",
+    "previous_failed_attempts": [
+      "verification/run18/runs/release_candidate_20261113_r01/failure.json",
+      "verification/run18/runs/release_candidate_20261113_r02/failure.json"
+    ],
+    "commands": 179,
+    "fixtures": 165,
+    "environment_declarations": 8594,
+    "new_environment_declarations": 353,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "f1732ce45500a191df2b76780f5feddd3d87adfa",
+    "preserved_evidence_count": 3388
+  },
+  "five_closure_20261114": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "base_commit": "e4bb337900e75bdb15e609b2518e8a02009565ca",
+    "closed_contract": "NSP14.Run18.five_closed : Requested.W_FIVE",
+    "presentation": "NSP14.Endpoint.Data.antipodalPresentation",
+    "exact_resources": [
+      "NSP14.Endpoint.Data.antipodal_coreP",
+      "NSP14.Endpoint.Data.antipodal_wordVolume"
+    ],
+    "focused_evidence": "verification/run18/antipodal_20261114/focused02.json",
+    "remaining": [
+      "arbitrary-characteristic BHP/Pardue and EK",
+      "one-missing-offset actual Koszul ranks for q>=4",
+      "one lex quotient and dense all-row comparison",
+      "full original-source width closure"
+    ],
+    "paper_variant": "Exact antipodal b1=h+4 is not proved as a universal Lean export. The first-row comparison uses proved P upper bound and actual transfer instead.",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r05/verification.json"
+  },
+  "historical_sections": [
+    "continuation_20261114",
+    "previous_successful_verification_20261113",
+    "previous_successful_verification_20261114_r04",
+    "five_closure_20261114",
+    "previous_successful_verification_20261114_r05",
+    "edge_closure_20261115",
+    "post_r06_ek_foundations",
+    "post_r06_graded_infrastructure",
+    "post_r06_graded_ek",
+    "previous_successful_verification_20261115_r06",
+    "post_r07_bhp_initial_foundations",
+    "post_r07_bhp_graded_basis",
+    "post_r07_initial_betti",
+    "previous_successful_verification_20261115_r07",
+    "previous_successful_verification_20261115_r08",
+    "post_r08_generic_distraction",
+    "previous_successful_verification_20261115_r09",
+    "post_r09_distraction_graded",
+    "previous_successful_verification_20261115_r10",
+    "general_bhp_20261115",
+    "previous_successful_verification_20261115_r14",
+    "general_lex_existence_20261115",
+    "previous_successful_verification_20261115_r15"
+  ],
+  "previous_successful_verification_20261114_r05": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261114_r05/verification.json",
+    "previous_failed_attempts": [
+      "verification/run18/runs/release_candidate_20261113_r01/failure.json",
+      "verification/run18/runs/release_candidate_20261113_r02/failure.json"
+    ],
+    "commands": 183,
+    "fixtures": 169,
+    "environment_declarations": 8942,
+    "new_environment_declarations": 701,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "bc554ffc0231c0e83fdf4c62673e438cc123c417",
+    "preserved_evidence_count": 3653
+  },
+  "current_goal": "Run18 assigned mathematical scope complete: all six original frozen contracts, full cold validation and independent review passed. Publication is measured separately in its receipt.",
+  "edge_closure_20261115": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "base_commit": "88dbd044ef7a8073d6d0bed6a7a4b550ed86a1bf",
+    "closed_contract": "NSP14.Run18.edge_closed : Requested.W_EDGE",
+    "focused_evidence": "verification/run18/edge_20261115/focused02.json",
+    "paper_variant": "Actual signed-unit minor lower bounds suffice; no universal exact QC Betti formula is claimed.",
+    "lex_preparation": "Characteristic-free lex stability, finite actual minimal monomial generators and actual ideal span are proved; BHP/EK itself remains open.",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json"
+  },
+  "post_r06_ek_foundations": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "modules": [
+      "NSP14.Lex.LinearQuotients",
+      "NSP14.Homological.IdealAdjoining",
+      "NSP14.Homological.IdealAdjoiningKoszul",
+      "NSP14.Lex.EliahouKervaireStep",
+      "NSP14.Lex.GeneratorOrder",
+      "NSP14.Homological.IdealScalarQuotient",
+      "NSP14.Homological.VariableIdealReduction",
+      "NSP14.Homological.VariableIdealBetti",
+      "NSP14.Lex.EliahouKervaireOrdinary"
+    ],
+    "proved": "Actual ordinary quotient EK formula over every field for the actual finite minimal generator set, via actual colon sequence, variable contraction, complementary regular-variable homology reduction and finite generator induction.",
+    "not_proved": "Internal-degree graded EK, general BHP/Pardue, common-Hilbert lex existence, dense closure and global closure.",
+    "focused_evidence": "verification/run18/lex_linear_quotients_20261115/focused03.json",
+    "root_build": "verification/run18/lex_linear_quotients_20261115/root_build03.log",
+    "axioms": "verification/run18/lex_linear_quotients_20261115/Axioms03_green04.log",
+    "export": "NSP14.Lex.IsLex.ordinary_ek",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "post_r06_graded_infrastructure": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "modules": [
+      "NSP14.Homological.DirectSumSplit",
+      "NSP14.Homological.GradedKoszulSplit",
+      "NSP14.Homological.GradedKoszulMap",
+      "NSP14.Homological.GradedKoszulExact"
+    ],
+    "proved": "Actual summand retractions at chain level; injection of internal-degree homology; actual homogeneous Koszul maps and projection naturality; actual degreewise short exact sequences; actual graded quotient Betti additivity when the actual total left homology map is proved zero.",
+    "not_proved": "Coordinate quotient graded concentration, shifted graded EK recursion/induction and Requested.EK; BHP/Pardue and common-Hilbert lex existence; dense/global closure.",
+    "focused_evidence": "verification/run18/graded_ek_20261115/focused01.json",
+    "root_build": "verification/run18/graded_ek_20261115/root_build01.log",
+    "axioms_and_public_type": "verification/run18/graded_ek_20261115/Axioms_green01.log",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "post_r06_graded_ek": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "closed_subcontract": "NSP14.Run18.ek_closed : Requested.EK",
+    "export": "NSP14.Lex.IsLex.graded_ek",
+    "proved": "Frozen graded EK over arbitrary fields, all positive homological rows and all integer internal degrees; actual coordinate quotient concentration and shifted actual colon sequences; finite actual minimal-generator induction.",
+    "focused_evidence": "verification/run18/graded_ek_20261115/focused02.json",
+    "root_build": "verification/run18/graded_ek_20261115/graded_ek_root02.log",
+    "axioms_and_public_type": "verification/run18/graded_ek_20261115/Axioms02_focused02.log",
+    "not_proved": [
+      "BHP/Pardue over arbitrary fields",
+      "common-Hilbert lex existence",
+      "dense closure",
+      "global width closure"
+    ],
+    "closure_id_effect": "X_BHP_EK remains open because its BHP conjunct is unproved; closed_ids unchanged.",
+    "source_fetch": "verification/run18/graded_ek_20261115/source_fetch01.json",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "previous_successful_verification_20261115_r06": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r06/verification.json",
+    "commands": 188,
+    "fixtures": 174,
+    "environment_declarations": 9203,
+    "new_environment_declarations": 962,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "source_snapshot_commit": "62c30ae798871d4eb55703df29e2897a770d29b9",
+    "preserved_evidence_count": 3901
+  },
+  "post_r07_bhp_initial_foundations": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "modules": [
+      "NSP14.Lex.InitialIdeal",
+      "NSP14.Homological.TriangularBlockRank",
+      "NSP14.Homological.NormalTriangular",
+      "NSP14.Endpoint.InitialAction"
+    ],
+    "proved": "Actual leading-monomial ideal and unchanged entire Hilbert function; actual normal-form leading-term bounds; actual quotient-variable triangularity and literal monomial action; diagonal-block rank lower bound by actual unit triangular minor.",
+    "not_proved": "Actual initial-ideal Betti comparison is not yet assembled; general BHP/Pardue, common-Hilbert lex existence, dense/global closure remain open.",
+    "focused_evidence": "verification/run18/bhp_20261115/focused01.json",
+    "root_build": "verification/run18/bhp_20261115/root_build02.log",
+    "source_receipts": "verification/run18/bhp_20261115/source_receipts01.json",
+    "last_cold_snapshot": "8b1921d005347c43b7772fa6670a3fd5b563461c",
+    "as_of_commit": "adc4e32e71ee8d567015b503f46dd83aa11d84e3",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "post_r07_bhp_graded_basis": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "modules": [
+      "NSP14.Homological.KoszulSlotGrading",
+      "NSP14.Homological.HomogeneousBasisPieces",
+      "NSP14.Homological.GradedKoszulBasis"
+    ],
+    "proved": "Actual homogeneous recursive slot basis; exact coordinate/projection/inclusion formulas; actual basis of every internal-degree chain without global finite-k module assumptions; actual diagonal rank bound using literal projected-map sum.",
+    "focused_evidence": "verification/run18/bhp_20261115/focused03.json",
+    "axioms": "verification/run18/bhp_20261115/Axioms03_focused03.log",
+    "root_build": "verification/run18/bhp_20261115/root_build04.log",
+    "not_proved": "Initial-ideal graded Betti comparison is not yet assembled. BHP/Pardue, common-Hilbert lex existence, dense/global remain open.",
+    "as_of_commit": "15ede63f456d96d3195568d58bcbdff38c4a3cb4",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "post_r07_initial_betti": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "export": "NSP14.Lex.quotientGradedBetti_initial_le",
+    "proved": "Actual graded Betti inequality for every homogeneous quotient and its actual degLex initial ideal, every field, all homological rows and integer internal degrees, including non-Artinian quotients.",
+    "modules": [
+      "NSP14.Homological.BasisBlocks",
+      "NSP14.Endpoint.ArtinGradedChain",
+      "NSP14.Endpoint.InitialBoundary",
+      "NSP14.Endpoint.InitialTransport",
+      "NSP14.Endpoint.InitialDiagonal",
+      "NSP14.Lex.InitialBetti"
+    ],
+    "focused_evidence": "verification/run18/bhp_20261115/focused06.json",
+    "root_build": "verification/run18/bhp_20261115/root_build06.log",
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms05_focused06.log",
+    "not_proved": [
+      "general initial-monomial-to-lex BHP deformation and termination",
+      "common-Hilbert lex ideal existence",
+      "dense closure",
+      "global width closure"
+    ],
+    "closure_id_effect": "No new assigned closed ID. X_BHP_EK remains open; EK conjunct alone is closed.",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "cold_source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "previous_successful_verification_20261115_r07": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9470,
+    "new_environment_declarations": 1229,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 4438,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r07/verification.json",
+    "commands": 206,
+    "fixtures": 192,
+    "source_snapshot_commit": "8b1921d005347c43b7772fa6670a3fd5b563461c"
+  },
+  "previous_successful_verification_20261115_r08": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9626,
+    "new_environment_declarations": 1385,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 4768,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r08/verification.json",
+    "commands": 218,
+    "fixtures": 204,
+    "source_snapshot_commit": "ed7f5cda20f054142bc9d5eb04574707bda9d8a0"
+  },
+  "post_r08_generic_distraction": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79",
+    "modules": [
+      "NSP14.Lex.DistractionMonomial",
+      "NSP14.Lex.GenericDistraction",
+      "NSP14.Lex.GenericDistractionField",
+      "NSP14.Lex.DistractionLinearEquiv",
+      "NSP14.Lex.DistractionIdeal",
+      "NSP14.Lex.DistractionHilbert"
+    ],
+    "proved": "Actual generic-coefficient fraction field; invertible selected-linear-form and per-degree coefficient matrices; genuine polynomial linear equivalence with exact distraction monomial images; actual homogeneous ideal image of a monomial ideal; actual quotient and all integer-degree piece linear equivalences; actual entire quotientHilbert equality.",
+    "field_scope": "Input monomial ideal is over GenericDistractionField k q. Original k-ideal extension/descent is not yet supplied.",
+    "not_proved": [
+      "distraction actual graded Betti preservation",
+      "original-field scalar extension and descent",
+      "general BHP monomial-to-lex iteration and termination",
+      "common-Hilbert lex existence",
+      "W_DENSE closure",
+      "W_CLOSE"
+    ],
+    "closure_id_effect": "No new assigned closed ID. EK conjunct alone remains closed; X_BHP_EK remains open.",
+    "focused_evidence": [
+      "verification/run18/bhp_20261115/focused07.json",
+      "verification/run18/bhp_20261115/focused08.json",
+      "verification/run18/bhp_20261115/focused09.json"
+    ],
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms08_focused09.log",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+    "review": "verification/run18/review_snapshot_distraction_20261115.json"
+  },
+  "previous_successful_verification_20261115_r09": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9753,
+    "new_environment_declarations": 1512,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 5037,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r09/verification.json",
+    "commands": 224,
+    "fixtures": 210,
+    "source_snapshot_commit": "abf2dad5369509b3893a54eda25cce446b435a79"
+  },
+  "post_r09_distraction_graded": {
+    "status": "PASS_COLD_PARTIAL_VALIDATION",
+    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2",
+    "exports": [
+      "NSP14.Lex.genericDistractionChainIso",
+      "NSP14.Lex.genericDistractionGradedChainIso",
+      "NSP14.Lex.genericDistraction_totalBetti",
+      "NSP14.Lex.genericDistraction_gradedBetti"
+    ],
+    "modules": [
+      "NSP14.Homological.ExteriorContraction",
+      "NSP14.Homological.KoszulExteriorBasis",
+      "NSP14.Homological.KoszulExterior",
+      "NSP14.Homological.KoszulExteriorMap",
+      "NSP14.Homological.BasiswiseTensor",
+      "NSP14.Homological.KoszulExteriorGrading",
+      "NSP14.Lex.GenericDistractionExterior",
+      "NSP14.Lex.GenericDistractionBoundary",
+      "NSP14.Lex.DistractionTensor",
+      "NSP14.Lex.DistractionChain",
+      "NSP14.Lex.DistractionGraded"
+    ],
+    "proved": "Actual full and all-integer-internal-degree Koszul chain isomorphisms; actual ordinary and graded Betti preservation for every actual homogeneous monomial ideal over GenericDistractionField k q, every Field k, q and all homological rows, without proper/Artin/global finite-k assumptions.",
+    "construction": "True slot-ordered exterior basis and actual contraction; actual exponent-dependent wedge equivalences and missing-column stability; all-monomial quotient tensor images including ideal zeros; actual boundary commutation; real grading image equality using actual basis images and preimages; restricted actual graded complexes and homology.",
+    "field_scope": "Input ideal is over GenericDistractionField k q. Connection to an arbitrary original k-ideal remains open.",
+    "fixtures": "Actual all-row/all-Int graded consumer; transformed mixed ideal(X0,X1²) graded rows over generic fields from Q/F2/F3; actual full Koszul and tensor consumers.",
+    "not_proved": [
+      "original-field monomial ideal scalar extension and descent",
+      "general BHP lex iteration and termination",
+      "common-Hilbert lex existence",
+      "W_DENSE closure",
+      "W_CLOSE"
+    ],
+    "closure_id_effect": "No new assigned closed ID. W_SPARSE/W_FIVE/W_EDGE are closed; EK conjunct separately closed; X_BHP_EK remains open.",
+    "focused_evidence": [
+      "verification/run18/bhp_20261115/focused10.json",
+      "verification/run18/bhp_20261115/focused11.json",
+      "verification/run18/bhp_20261115/focused12.json",
+      "verification/run18/bhp_20261115/focused13.json",
+      "verification/run18/bhp_20261115/focused14.json",
+      "verification/run18/bhp_20261115/focused15.json",
+      "verification/run18/bhp_20261115/focused16.json"
+    ],
+    "axioms_and_public_types": "verification/run18/bhp_20261115/Axioms15_focused16.log",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+    "review": "verification/run18/review_snapshot_graded_distraction_20261115.json"
+  },
+  "previous_successful_verification_20261115_r10": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 9932,
+    "new_environment_declarations": 1691,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 5342,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+    "commands": 237,
+    "fixtures": 223,
+    "source_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2"
+  },
+  "general_bhp_20261115": {
+    "proof": "NSP14.Lex.quotientGradedBetti_le_lex",
+    "frozen_closure": "NSP14.Lex.bhp_ek : Requested.X_BHP_EK",
+    "review": "verification/run18/general_bhp_review_20261115.md",
+    "decision": "verification/run18/review_snapshot_general_bhp_20261115.json",
+    "remaining_task2": "Resolved by general_lex_existence_20261115; historical R14 scope retained"
+  },
+  "previous_successful_verification_20261115_r14": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 10334,
+    "new_environment_declarations": 2093,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 6523,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r14/verification.json",
+    "commands": 264,
+    "fixtures": 251,
+    "source_snapshot_commit": "22cbb0ed5b6a2f48b66d35b2aee34f9f488bef57"
+  },
+  "general_lex_existence_20261115": {
+    "proof": "NSP14.Lex.exists_lex_sameHilbert",
+    "actual_total_bhp": "NSP14.Lex.quotientTotalBetti_le_lex",
+    "concrete_acceptance": "tests/LexHilbertExamples.lean",
+    "review": "verification/run18/lex_existence_correction_review_20261115.md",
+    "decision": "verification/run18/review_snapshot_lex_existence_correction_20261115.json",
+    "remaining": "Historical R15 remainder resolved by the final dense/global proofs and R16 PASS cold validation with independent review; no current Run18 mathematical or validation remainder."
+  },
+  "previous_successful_verification_20261115_r15": {
+    "status": "PASS_RUN18_PARTIAL_VALIDATION",
+    "environment_declarations": 10461,
+    "new_environment_declarations": 2220,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "fresh_project_test_cache": true,
+    "fresh_new_production_cache": true,
+    "preserved_evidence_count": 6838,
+    "evidence": "verification/run18/runs/release_candidate_20261115_r15/verification.json",
+    "commands": 273,
+    "fixtures": 260,
+    "source_snapshot_commit": "6074994621ca5b57be28d44729a8ebab46f700a6"
+  },
+  "dense_global_proof_candidate": {
+    "actual_QC": "NSP14.Endpoint.Data.exists_core_lex",
+    "harmonic": "NSP14.Lex.IsLex.correction_tail_harmonic_bound",
+    "dense": "NSP14.Run18.dense_closed : Requested.W_DENSE",
+    "global": "NSP14.Run18.width_closed : Requested.W_CLOSE",
+    "all_six": "NSP14.Run18.all_closed",
+    "frozen_goals_unchanged": true,
+    "review_status": "PASS_FINAL_COLD_VALIDATION_AND_INDEPENDENT_REVIEW",
+    "status": "PASS_FINAL_COLD_VALIDATION_AND_INDEPENDENT_REVIEW",
+    "source_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+    "evidence": "verification/run18/runs/release_candidate_20261115_r16/verification.json",
+    "focused": "verification/run18/bhp_20261115/focused33.json"
+  },
+  "publication_scope_notes": [
+    "The unchanged legacy note in fresh five_checks.json describes the retained finite five-checker checkpoint; R16 all-six COMPLETE validation supersedes that historical scope.",
+    "The ZIP is a reviewed proof/evidence bundle, not an independently runnable full repository checkout. The proof_snapshot_commit Git checkout supplies retained inherited scripts and dependencies."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "INTERRUPTED_KNOWN_FOCUSED_FIXTURE_FAILURE",
+  "cause": "Concrete full ZMod8 sumset in the new fixture exceeded elaborator recursion depth. Generalized the same full-group acceptance uniformly to every positive u; no proof runtime limits raised.",
+  "mathematical_production_changed": false,
+  "all_focused_kneser_examples_pass_after_fix": true
+}

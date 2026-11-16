@@ -1,0 +1,16 @@
+{
+  "status": "PASS_EXPOSED_FIXTURE_PREFLIGHT",
+  "declarations": 11990,
+  "typed_modules": 48,
+  "named_helpers": 28,
+  "generated_rows": {
+    "tests.N4StandardWords": 19,
+    "tests.N4Higher": 2,
+    "tests.N4Small": 20,
+    "tests.N4WidthFour": 8,
+    "tests.N4ActualClosure": 9,
+    "tests.SmallEmbeddingBase": 15,
+    "tests.LTVActual": 19,
+    "tests.SmallEmbeddingThree": 10
+  }
+}

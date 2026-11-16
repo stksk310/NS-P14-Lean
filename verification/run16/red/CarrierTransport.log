@@ -1,0 +1,6 @@
+tests/CarrierTransport.lean:9:11: error(lean.invalidField): Invalid field `carrierTangentEquiv`: The environment does not contain `NSP14.NumericalSemigroup.carrierTangentEquiv`, so it is not possible to project the field `carrierTangentEquiv` from an expression
+  S
+of type `NumericalSemigroup`
+tests/CarrierTransport.lean:14:4: error(lean.invalidField): Invalid field `carrier_totalBetti`: The environment does not contain `NSP14.NumericalSemigroup.carrier_totalBetti`, so it is not possible to project the field `carrier_totalBetti` from an expression
+  S
+of type `NumericalSemigroup`

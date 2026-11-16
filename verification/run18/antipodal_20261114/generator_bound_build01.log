@@ -1,0 +1,5 @@
+⚠ [5484/5485] Built NSP14.Width.IdealGeneratorBound (1.5s)
+warning: NSP14/Width/IdealGeneratorBound.lean:25:4: Unused tactic linter: `change (f c).val = a.val` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (5485 jobs).

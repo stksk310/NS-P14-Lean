@@ -1,0 +1,2 @@
+tests/DistractionIdeal.lean:11:3: error(lean.unknownIdentifier): Unknown constant `Lex.genericDistractionIdeal`
+tests/DistractionIdeal.lean:11:38: error(lean.unknownIdentifier): Unknown constant `Lex.mem_genericDistractionIdeal`

@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""Package the complete Run15 closure after full verification."""
+from pathlib import Path
+import hashlib,json,zipfile
+root=Path(__file__).resolve().parents[1]
+out=root/'verification/run15_closure'
+verified=json.loads((out/'verification.json').read_text())
+assert verified['status']=='PASS_RUN15_PROOF_CLOSURE'
+assert verified['fresh_project_test_cache'] is True
+status=json.loads((root/'docs/RUN15_CLOSURE_STATUS.json').read_text())
+assert status['status']=='COMPLETE' and status['run15_complete'] is True
+assert verified['all_original_goals_closed'] is True and status['unresolved_run15_goals']==[]
+review=json.loads((root/'docs/RUN15_CLOSURE_REVIEW_STATUS.json').read_text())
+assert review['verdict']=='PASS' and review['critical']==0 and review['important']==0
+for name,digest in json.loads((out/'SOURCE_SHA256.json').read_text()).items():
+    assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+paths=set()
+for directory in ['NSP14','tests','audit']:
+    paths.update(str(p.relative_to(root)) for p in (root/directory).rglob('*.lean'))
+paths.update(json.loads((out/'SOURCE_SHA256.json').read_text()))
+paths.update(['NSP14.lean','lean-toolchain','lakefile.toml','lake-manifest.json',
+    'scripts/verify_run15_closure.py','scripts/package_run15_closure_audit.py','docs/LEAN_PAPER_ALIGNMENT_JA.md'])
+paths.update(str(p.relative_to(root)) for p in (root/'docs').glob('RUN15*') if p.is_file())
+paths.add('docs/superpowers/plans/2026-11-10-run15-actual-tor-target-ordinary-order.md')
+paths.update(str(p.relative_to(root)) for p in out.rglob('*') if p.is_file() and p.name!='MANIFEST_SHA256.json')
+manifest={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in sorted(paths)}
+(out/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+paths.add('verification/run15_closure/MANIFEST_SHA256.json')
+artifact=root/'artifacts/NS_P14_LEAN_RUN15_COMPLETE_20261110.zip'
+artifact.parent.mkdir(parents=True,exist_ok=True)
+with zipfile.ZipFile(artifact,'w',zipfile.ZIP_DEFLATED) as z:
+    for path in sorted(paths):z.write(root/path,path)
+with zipfile.ZipFile(artifact) as z:
+    assert z.testzip() is None
+    for path,digest in manifest.items():assert hashlib.sha256(z.read(path)).hexdigest()==digest,path
+sha=hashlib.sha256(artifact.read_bytes()).hexdigest()
+artifact.with_suffix('.sha256').write_text(sha+'  '+artifact.name+'\n')
+print(json.dumps(dict(status='PACKAGED_RUN15_COMPLETE',files=len(paths),zip=str(artifact.relative_to(root)),bytes=artifact.stat().st_size,sha256=sha),indent=2))

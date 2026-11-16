@@ -1,0 +1,107 @@
+[
+  {
+    "source": "tests/Run19Contracts.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/Run19Contracts.olean",
+      "tests/Run19Contracts.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.761
+  },
+  {
+    "source": "tests/N4CoreWords.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CoreWords.olean",
+      "tests/N4CoreWords.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.971
+  },
+  {
+    "source": "tests/N4Distance.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Distance.olean",
+      "tests/N4Distance.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.349
+  },
+  {
+    "source": "tests/N4StandardWords.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4StandardWords.olean",
+      "tests/N4StandardWords.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.773
+  },
+  {
+    "source": "tests/N4CubicPayment.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CubicPayment.olean",
+      "tests/N4CubicPayment.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.107
+  },
+  {
+    "source": "tests/N4First.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4First.olean",
+      "tests/N4First.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.7
+  },
+  {
+    "source": "tests/SmallEmbeddingBase.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingBase.olean",
+      "tests/SmallEmbeddingBase.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.139
+  }
+]

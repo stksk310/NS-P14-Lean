@@ -1,0 +1,11 @@
+NSP14/NarrowFour/FirstCount.lean:41:33: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/FirstCount.lean:41:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/FirstCount.lean:207:8: error: 'change' tactic failed, pattern
+  ?m.353 = (D.u / 2 - (D.u - ↑b + ↑a) + 2).choose 2
+is not definitionally equal to target
+  (D.u / 2 - (D.u - ↑b + ↑a) + 1).succ.choose (Nat.succ 1) =
+    D.u / 2 - (D.u - ↑b + ↑a) + 1 + (D.u / 2 - (D.u - ↑b + ↑a) + 1).choose (Nat.succ 1)

@@ -1,0 +1,2 @@
+tests/BasiswiseTensor.lean:11:3: error(lean.unknownIdentifier): Unknown identifier `Homological.basiswiseTensorEquiv`
+tests/BasiswiseTensor.lean:11:40: error(lean.unknownIdentifier): Unknown identifier `Homological.basiswiseTensorEquiv_tmul`

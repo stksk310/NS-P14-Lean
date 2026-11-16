@@ -1,0 +1,10 @@
+tests/EndpointPresentation.lean:8:36: error(lean.invalidField): Invalid field `Variables`: The environment does not contain `NSP14.Endpoint.Data.Variables`, so it is not possible to project the field `Variables` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointPresentation.lean:8:57: error(lean.invalidField): Invalid field `variables_card`: The environment does not contain `NSP14.Endpoint.Data.variables_card`, so it is not possible to project the field `variables_card` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointPresentation.lean:10:34: error(lean.invalidField): Invalid field `FullRing`: The environment does not contain `NSP14.Endpoint.Data.FullRing`, so it is not possible to project the field `FullRing` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointPresentation.lean:11:3: error(lean.unknownIdentifier): Unknown identifier `D.fullPolynomialEquiv`

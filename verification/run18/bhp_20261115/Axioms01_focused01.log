@@ -1,0 +1,17 @@
+'NSP14.Lex.initialIdeal_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.initialIdeal_span_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.triangular_block_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.actualNormalForm_coeff_zero_ge_nonstandard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Endpoint.artin_variable_triangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.artin_variable_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.triangular_block_rank : ∀ (k : Type) [inst : Field k] {ι X Y : Type} [inst_1 : Fintype ι]
+  [inst_2 : LinearOrder ι] [inst_3 : AddCommGroup X] [inst_4 : Module k X] [inst_5 : AddCommGroup Y]
+  [inst_6 : Module k Y] [Module.Finite k Y] (d : X →ₗ[k] Y) (U : ι → Submodule k X) (P : ι → Y →ₗ[k] Y),
+  (∀ (a b : ι), b < a → ∀ (x : ↥(U b)), (P a) (d ↑x) = 0) →
+    ∑ a, Module.finrank k ↥(P a ∘ₗ d ∘ₗ (U a).subtype).range ≤ Module.finrank k ↥d.range
+NSP14.Lex.initialIdeal_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (n : ℕ),
+  NSP14.Lex.quotientHilbert k q I hI n =
+    NSP14.Lex.quotientHilbert k q (NSP14.Lex.initialIdeal k q MonomialOrder.degLex I) ⋯ n

@@ -1,0 +1,191 @@
+{
+  "status": "PASS_COMPILED_BLOCK07",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.176
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/Scalarization.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.275
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/TargetMargin.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.603
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/NumericalClosure.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.194
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.664
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.602
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.731
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.76
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.757
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.751
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.661
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.617
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.658
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 25,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15
+  },
+  "block07_theorems": [
+    "NSP14.Ordinary.NumericalClosure.Data.all_rows",
+    "NSP14.Ordinary.NumericalClosure.Data.all_rows_of_apery_pairs",
+    "NSP14.Ordinary.NumericalClosure.Data.deficit_nat_lower",
+    "NSP14.Ordinary.NumericalClosure.Data.parameterization",
+    "NSP14.Ordinary.NumericalClosure.Data.relative_rows",
+    "NSP14.Ordinary.NumericalClosure.Data.row_capacity",
+    "NSP14.Ordinary.NumericalClosure.Data.scalar_lt",
+    "NSP14.Ordinary.NumericalClosure.Data.small_corner",
+    "NSP14.Ordinary.Scalarization.binomial_balance",
+    "NSP14.Ordinary.Scalarization.choose_balance",
+    "NSP14.Ordinary.Scalarization.factor_nonneg",
+    "NSP14.Ordinary.Scalarization.factor_pos",
+    "NSP14.Ordinary.Scalarization.head_weight_eq",
+    "NSP14.Ordinary.Scalarization.normalized_tail_le",
+    "NSP14.Ordinary.Scalarization.row_le_scalar",
+    "NSP14.Ordinary.Scalarization.second_tail_identity",
+    "NSP14.Ordinary.Scalarization.tail_weight_eq",
+    "NSP14.Ordinary.Scalarization.weight_head_le",
+    "NSP14.Ordinary.Scalarization.weight_tail_le",
+    "NSP14.Ordinary.Scalarization.weight_zero_le",
+    "NSP14.Ordinary.TargetMargin.capacity_step",
+    "NSP14.Ordinary.TargetMargin.choose_succ_cast",
+    "NSP14.Ordinary.TargetMargin.target_margin",
+    "NSP14.Ordinary.TargetMargin.target_step",
+    "NSP14.Ordinary.TargetMargin.target_zero"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block06": true,
+  "sources": [
+    "NSP14/Ordinary/Scalarization.lean",
+    "NSP14/Ordinary/TargetMargin.lean",
+    "NSP14/Ordinary/NumericalClosure.lean"
+  ],
+  "paper_source": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, sections 7.3,8.2-8.4,9-11; V03 ordinary numerical chain",
+  "scope": "Common finite resource data plus explicit small-boundary Sidon or numerical Apery data imply L_k+weighted_row<=R_k for all 1<=k<=r and every cut rank r>=2. No actual tower/Tor/Betti construction.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A07-A09",
+  "remaining": [
+    "actual common tower and simultaneous resource caps",
+    "maximal actual Q2 to Apery data",
+    "actual Koszul/Tor row bounds and ordinary target Betti formula",
+    "actual Betti transfer, other branches, and full P14"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/LexUniqueness.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.909
+  },
+  {
+    "file": "tests/GenericDistractionPrincipal.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.542
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms18.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.544
+  }
+]

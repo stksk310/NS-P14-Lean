@@ -1,0 +1,3 @@
+tests/CutFinite.lean:11:4: error(lean.invalidField): Invalid field `cutHigh_coefficientFinite`: The environment does not contain `NSP14.NumericalSemigroup.LinearCutData.cutHigh_coefficientFinite`, so it is not possible to project the field `cutHigh_coefficientFinite` from an expression
+  C
+of type `S.LinearCutData k`

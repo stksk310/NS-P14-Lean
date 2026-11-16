@@ -1,0 +1,14 @@
+{
+  "status": "FAILED_FIXTURE_PROCESS_SIGKILL",
+  "run18_complete": false,
+  "source_snapshot_commit": "7cb7369a6a9c85e5bddad29dec8525c04bcb2ce7",
+  "fixture": "tests/WidthSparse.lean",
+  "exit_code": -9,
+  "recorded_after_failure": true,
+  "observed_cgroup": {
+    "memory_limit_bytes": 17179869184,
+    "memory_peak_bytes": 17179881472,
+    "oom_kill_counter": 4
+  },
+  "note": "The counters are cumulative; the fixture process exited -9. This directory is a failed verification attempt, never a closure certificate."
+}

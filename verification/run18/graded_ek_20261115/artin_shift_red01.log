@@ -1,0 +1,2 @@
+tests/ArtinGradedMaps.lean:39:7: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinShiftedGrading`
+tests/ArtinGradedMaps.lean:42:2: error(lean.unknownIdentifier): Unknown identifier `Endpoint.artinShifted_gradedBetti`

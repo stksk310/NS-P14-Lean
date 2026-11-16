@@ -1,0 +1,2 @@
+tests/PolynomialBaseChange.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Homological.koszulPolynomialBaseChangeIso`
+tests/PolynomialBaseChange.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Homological.totalBetti_baseChange`

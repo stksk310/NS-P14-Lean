@@ -1,0 +1,21 @@
+{
+  "name": "run19_negative_controls",
+  "old_command": [
+    "python3",
+    "scripts/check_run19_guards.py",
+    "--output",
+    "verification/run19/runs/release_20261116_r03/guards.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run19_guards.py",
+    "--output",
+    "verification/run19/runs/run20_disposable/guards.json"
+  ],
+  "source_commit": "342fbdda072fc5d6aa5e8f2d8968456cc54c12a6",
+  "current_mathematical_source": false,
+  "historical_policy_scope": true,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "old_evidence_written": false
+}

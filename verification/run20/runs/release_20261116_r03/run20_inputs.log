@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ADOPTED_RUN19_V06_BINDINGS_NOT_RUN20_CERTIFICATION",
+  "adopted_base": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "proof": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "evidence": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "review": "1533762c276df346350a382ba452d73a5ae219ad",
+  "source_files": 1581,
+  "evidence_files": 373,
+  "preserved_prior_files": 8754,
+  "checks": 318,
+  "fixtures": 299,
+  "all_frozen_ten_contract_files": 11,
+  "archive_entries": 1959,
+  "manuscript_hashes": {
+    "proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md": "fe8271bbaabf6b3d31243628c3a5a5a305b82361c794f03c6e13a2fe98c72791",
+    "proof_sharp_v6/chapters/06_SYNTHESIS_JA.md": "67a10b00ab51ab1836fc071bb1c03b9fa2898ec470e84762151aeba032316f4d"
+  },
+  "v06_checks": 289,
+  "v06_fixtures": 273
+}

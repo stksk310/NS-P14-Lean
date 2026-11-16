@@ -1,0 +1,72 @@
+{
+  "status": "PASS_EXACT_COEFFICIENT_IDENTITIES",
+  "method": "Sparse polynomials over Fraction; no parameter sampling",
+  "sparse_first_rows": [
+    {
+      "e": 6,
+      "gap_coefficients_ascending_in_shift": [
+        "1/2",
+        "43/24",
+        "1/24"
+      ]
+    },
+    {
+      "e": 7,
+      "gap_coefficients_ascending_in_shift": [
+        "1",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "e": 8,
+      "gap_coefficients_ascending_in_shift": [
+        "211/32",
+        "63/16",
+        "3/32"
+      ]
+    },
+    {
+      "e": 9,
+      "gap_coefficients_ascending_in_shift": [
+        "29/4",
+        "17/4",
+        "1/16"
+      ]
+    }
+  ],
+  "small_width_capacities": [
+    {
+      "width": 6,
+      "bounds_rows_2_to_5": [
+        40,
+        31,
+        8,
+        0
+      ],
+      "minimum_target_rows_2_to_5": [
+        46,
+        60,
+        39,
+        11
+      ]
+    },
+    {
+      "width": 7,
+      "bounds_rows_2_to_5": [
+        62,
+        57,
+        22,
+        3
+      ],
+      "minimum_target_rows_2_to_5": [
+        77,
+        126,
+        119,
+        56
+      ]
+    }
+  ],
+  "generic_first_and_retained_higher_identities": "PASS",
+  "logical_role": "Arithmetic supplement to manuscript section 13"
+}

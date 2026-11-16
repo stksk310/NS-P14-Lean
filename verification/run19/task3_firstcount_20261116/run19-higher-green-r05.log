@@ -1,0 +1,3 @@
+tests/N4Higher.lean:21:0: warning: Definition `heTwo` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

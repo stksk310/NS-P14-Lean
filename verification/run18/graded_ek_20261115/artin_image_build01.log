@@ -1,0 +1,27 @@
+✖ [4632/4633] Building NSP14.Endpoint.ArtinGradedMaps (1.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Endpoint/ArtinGradedMaps.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedMaps.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedMaps.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedMaps.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedMaps.setup.json --json
+error: NSP14/Endpoint/ArtinGradedMaps.lean:38:13: Unknown constant `Finsupp.mem_supported'.mp`
+error: NSP14/Endpoint/ArtinGradedMaps.lean:21:68: unsolved goals
+k σ A B : Type
+inst✝ : Field k
+M N : ModuleCat (VariableRing k σ)
+c : ↑(coefficientModule k σ M) ≃ₗ[k] A →₀ k
+d : ↑(coefficientModule k σ N) ≃ₗ[k] B →₀ k
+degA : A → ℤ
+degB : B → ℤ
+f : M ⟶ N
+s : ℤ
+hb : ∀ (p : A) (j : B), degB j ≠ degA p + s → (d ((ConcreteCategory.hom f) (c.symm (Finsupp.single p 1)))) j = 0
+q : ℤ
+a : ↑(coefficientModule k σ M)
+ha : a ∈ (coordinateDegreeInclusion k A degA σ M c q).range
+L : (A →₀ k) →ₗ[k] B →₀ k := ↑d ∘ₗ coefficientMap k σ f ∘ₗ ↑c.symm
+hmap : Finsupp.supported k k {p | degA p = q} ≤ Submodule.comap L (Finsupp.supported k k {j | degB j = q + s})
+hin : c a ∈ Finsupp.supported k k {p | degA p = q}
+hout : c a ∈ Submodule.comap L (Finsupp.supported k k {j | degB j = q + s})
+j : B
+hj : degB j ≠ q + s
+⊢ (d ((ConcreteCategory.hom f) a)) j = 0
+Some required targets logged failures:
+- NSP14.Endpoint.ArtinGradedMaps
+error: build failed

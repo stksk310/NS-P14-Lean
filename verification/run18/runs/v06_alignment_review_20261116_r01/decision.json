@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "v06_alignment_complete": true,
+  "scope": [
+    "endpoint",
+    "antipodal_integer_payment",
+    "nonantipodal_integer_payment",
+    "higher_from_second",
+    "dense_two_branches"
+  ],
+  "pending": [],
+  "declined": [],
+  "verifier_independently_reviewed": true,
+  "proof_snapshot_commit": "d446fc2f18f7a8603d1eedd446e93810dc44d01c",
+  "evidence_commit": "0880f6f30836873036b4d9908b7dcef50125d2c8",
+  "reviewed_commit": "0880f6f30836873036b4d9908b7dcef50125d2c8",
+  "verification_summary_sha256": "6deca563b36fd2378b38dced54ecd68e561f761a31aaded95eb4050a5eb292fb",
+  "verification_manifest_sha256": "9cacc74ddaa57d3b4fec633870faf2487fd2dae3c147e8e99bd49234266a5a6c",
+  "source_manifest_sha256": "e7a238cd011c3969bcaa61517d9ad2f402ff69057cbdfa2c2c387891ddc465f3",
+  "review_report": "verification/run18/runs/v06_alignment_review_20261116_r01/report.md",
+  "review_report_sha256": "b55c3503bd9b3999428b26dec0fc12abaf8aa3a9234b2b67cbfaf82ac5ff9be4"
+}

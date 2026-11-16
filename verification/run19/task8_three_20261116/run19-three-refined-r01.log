@@ -1,0 +1,76 @@
+NSP14/SmallEmbedding/LanTuVu.lean:143:10: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:143:21: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:145:6: error: Tactic `subst` failed: did not find equation for eliminating 't'
+
+case pos
+D : ThreeData
+s : Fin D.u
+c : { c // Minimal (fun x => x ∈ D.competitorFiber s) c }
+t : Fin D.u
+d : { c // Minimal (fun x => x ∈ D.competitorFiber t) c }
+he : Sum.inl ⟨s, c⟩.fst = Sum.inl ⟨t, d⟩.fst
+hx : (↑c).1 = 0
+hy : (↑d).1 = 0
+hst : ⟨s, c⟩.fst = ⟨t, d⟩.fst
+⊢ ⟨s, c⟩ = ⟨t, d⟩
+NSP14/SmallEmbedding/LanTuVu.lean:150:10: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:150:21: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:154:10: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:154:21: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:157:10: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:157:21: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+NSP14/SmallEmbedding/LanTuVu.lean:159:56: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  b ≥ 1
+where
+ b := ↑(↑d).1
+ e := ↑(↑c).1
+NSP14/SmallEmbedding/LanTuVu.lean:160:56: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  b ≥ 1
+where
+ b := ↑(↑d).1
+ e := ↑(↑c).1
+NSP14/SmallEmbedding/LanTuVu.lean:164:6: error: Tactic `subst` failed: did not find equation for eliminating 't'
+
+case neg
+D : ThreeData
+s : Fin D.u
+c : { c // Minimal (fun x => x ∈ D.competitorFiber s) c }
+t : Fin D.u
+d : { c // Minimal (fun x => x ∈ D.competitorFiber t) c }
+hx : ¬(↑c).1 = 0
+hy : ¬(↑d).1 = 0
+he : Sum.inr ⋯.choose = Sum.inr ⋯.choose
+hw : ⋯.choose = ⋯.choose
+hwx : D.budgetImage ⋯.choose = (⟨s, c⟩.fst, ↑⟨s, c⟩.snd)
+hwy : D.budgetImage ⋯.choose = (⟨t, d⟩.fst, ↑⟨t, d⟩.snd)
+hxy : (s, ↑c) = (t, ↑d)
+hst : (s, ↑c).1 = (t, ↑d).1
+⊢ ⟨s, c⟩ = ⟨t, d⟩

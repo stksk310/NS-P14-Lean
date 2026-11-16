@@ -1,0 +1,3 @@
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/HigherRed.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Width.sparse_second_payment`
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/HigherRed.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Width.normalized_capacity_monotone`
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/HigherRed.lean:5:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Endpoint.Data.actual_sparse_higher`

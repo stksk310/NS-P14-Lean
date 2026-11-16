@@ -1,0 +1,78 @@
+NSP14/NarrowFour/WidthFourCore.lean:39:22: error: Tactic `rfl` failed: The left-hand side
+  { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ }
+is not definitionally equal to the right-hand side
+  { anchor := (fun i => i) ⟨4, ⋯⟩, L := 0, K := K, restricted := hs }
+
+case «4».«4»
+L K : ℕ
+hr✝ : (fun i => i) ⟨4, ⋯⟩ = 4 → L = 0
+hr : L = 0
+hs : (fun i => i) ⟨4, ⋯⟩ = 4 → 0 = 0
+hL : L = 0
+hK : K = K
+he :
+  (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ } =
+    (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨4, ⋯⟩, L := 0, K := K, restricted := hs }
+hd : L + K = 0 + K
+⊢ { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ } =
+    { anchor := (fun i => i) ⟨4, ⋯⟩, L := 0, K := K, restricted := hs }
+NSP14/NarrowFour/WidthFourCore.lean:51:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:52:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:54:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:55:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:58:41: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:59:41: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:61:41: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:62:41: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:64:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:65:39: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourCore.lean:51:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:52:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:54:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:55:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:58:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:59:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:61:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:62:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:64:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+NSP14/NarrowFour/WidthFourCore.lean:65:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

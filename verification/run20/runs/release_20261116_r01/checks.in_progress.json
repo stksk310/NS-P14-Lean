@@ -1,0 +1,151 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 791.563
+  },
+  {
+    "name": "fixture_000_SmallScalar",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallScalar.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.22
+  },
+  {
+    "name": "fixture_001_Sidon",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Sidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Sidon.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.91
+  },
+  {
+    "name": "fixture_002_Resources",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Resources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Resources.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.194
+  },
+  {
+    "name": "fixture_003_LowRank",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LowRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LowRank.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.229
+  },
+  {
+    "name": "fixture_004_LargeSeed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeSeed.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeSeed.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.205
+  },
+  {
+    "name": "fixture_005_LargeScalar",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeScalar.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.548
+  },
+  {
+    "name": "fixture_006_OrdinaryNumerical",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryNumerical.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.395
+  },
+  {
+    "name": "fixture_007_SemigroupFoundations",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupFoundations.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.074
+  }
+]

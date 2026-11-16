@@ -1,0 +1,22 @@
+{
+  "status": "DUPLICATE_PREVALIDATION_STOPPED_NOT_CREDITED",
+  "date_utc": "2026-11-16T04:38:18.866258+00:00",
+  "continuing": "whole_dag_preflight_20261116_01",
+  "processes": [
+    {
+      "pid": 252447,
+      "command": "python3 verification/run20/sources/audit_parts.py --output-dir verification/run20/runs/whole_dag_preflight_20261116_02",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 252613,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_dag_preflight_20261116_02/Part00.lean",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 252615,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_dag_preflight_20261116_02/Part01.lean",
+      "signal": "SIGTERM"
+    }
+  ]
+}

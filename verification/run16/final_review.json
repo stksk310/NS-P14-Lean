@@ -1,0 +1,36 @@
+{
+  "gate": "PASS",
+  "verdict": "Ready",
+  "fresh_context": true,
+  "model": "gpt-6-astra",
+  "reviewer_task": "/root/run16_final_review",
+  "baseline_commit": "447b7ae782414b739968a2a3009dd3a52ae230d0",
+  "reviewed_proof_commit": "f010c72c5f77fd0074123574bee4079f1c0b98c0",
+  "critical": [],
+  "important": [],
+  "minor": [],
+  "deferred_minors": [],
+  "production_files_examined": 116,
+  "acceptance_files_examined": 47,
+  "independent_lean_reruns": {
+    "audit/run16/ClosedGoals.lean": 0,
+    "tests/EndpointStandardArtin.lean": 0,
+    "tests/EndpointRowPackage.lean": 0,
+    "tests/EndpointComputedExamples.lean": 0,
+    "tests/EndpointBoundaryExamples.lean": 0,
+    "tests/EndpointNonmonomial.lean": 0,
+    "tests/EndpointOrientation.lean": 0
+  },
+  "source_hashes_checked": 664,
+  "evidence_hashes_checked": 155,
+  "frozen_predecessor_files_checked": 2160,
+  "environment_declarations_checked": 7835,
+  "allowed_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "declined_to_judge": [
+    "Future Run17-20 mathematics and final P14 synthesis",
+    "An arbitrary nonhomogeneous global minimal-generating-set algorithm, not claimed here",
+    "A completed manuscript revision or publication",
+    "Final archive creation, remote push and clean publication state, pending at the reviewed commit"
+  ],
+  "coordinator_regrading": "No Critical, Important or Minor findings; no mathematical fix pass required. All declined items explicitly ruled on in the execution ledger. Publication artifacts are independently checked by the executor after this proof review."
+}

@@ -1,0 +1,1 @@
+tests/LexEKOrdinary.lean:11:2: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsLex.ordinary_ek`

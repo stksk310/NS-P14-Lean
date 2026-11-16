@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/StrongStableRestriction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.678
+  },
+  {
+    "file": "tests/StrongStableEK.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.623
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms24.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.942
+  }
+]

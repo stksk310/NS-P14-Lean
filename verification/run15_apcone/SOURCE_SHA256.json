@@ -1,0 +1,15 @@
+{
+  "NSP14/ArithmeticSequence/ConeBetti.lean": "273c5253ce312ecda899ca6cafddf574f1f841478d599f2c48441287820bd04a",
+  "NSP14/ArithmeticSequence/HeadMultiplication.lean": "e1914100ea385c17f7a184cd82cc8ce081a2cdd4074814a262a1e7a78b1c351e",
+  "NSP14/ArithmeticSequence/HeadQuotientMap.lean": "72c49904db695f57efe13e13ed59c261780706337f5f13bd0806703047a5b49a",
+  "NSP14/Semigroup/AlgebraHeadQuotient.lean": "cb39ed63cf8b96a191e9d12f3fd52fb12a4758d440cf414a9f645eab43705420",
+  "NSP14/Semigroup/AlgebraVariableOrder.lean": "32ed4f028ea04eabb20d9e0723c355646424d51298cbd09f35d13b816729d405",
+  "tests/ArithmeticSequenceConeBetti.lean": "88d60ef519dbd2fdb9f592c2c8e6ae949f7fedcbad0af2da9bd7f31d70b3205f",
+  "audit/run15_apcone/ClosedGoals.lean": "85ced20f5b2ca70551f0669edbdf57df058e5ecdab839beb61ef5e9dbe29370e",
+  "NSP14.lean": "166ac7976fe97a5f490b8516904e0cd6e823f5ed6342c5466442793bad5b75b1",
+  "lean-toolchain": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+  "lakefile.toml": "d299bae852fc9a3b5cc9fe04742b35037654d195b34c2a91464aa5615b72f4cb",
+  "lake-manifest.json": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766",
+  "scripts/verify_run15_apcone.py": "3db08eaafaed1a765f46cea69a69b0b7eb370dd7f8eda2412613cfc9de735de2",
+  "docs/RUN15_CLOSURE_STATUS.json": "85b5bc3a9a46c8b37679d382c245cffa9a9911092f371c18b6f7113ccefad77b"
+}

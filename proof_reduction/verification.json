@@ -1,0 +1,155 @@
+{
+  "date_jst": "2026-11-09",
+  "result": "NEW_HUMAN_REDUCTION_PROVED",
+  "global_status": "CONDITIONAL_ON_N4_AND_NAMED_PUBLISHED_THEOREMS",
+  "lean_status": "NOT_STARTED",
+  "fresh_checks": [
+    {
+      "command": "python -B checks/verify_scalar.py --diagnostic 210",
+      "exit_code": 0,
+      "facts": {
+        "H23": "444316699/118982864",
+        "747/200-H23": "2107451/2974571600",
+        "seed_comparisons": [
+          {
+            "r": 4,
+            "a_r": 10,
+            "D_r": 6,
+            "threshold": "1126/399",
+            "rational_margin": "17587/79800"
+          },
+          {
+            "r": 5,
+            "a_r": 15,
+            "D_r": 8,
+            "threshold": "35/12",
+            "rational_margin": "143/1200"
+          },
+          {
+            "r": 6,
+            "a_r": 21,
+            "D_r": 11,
+            "threshold": "623/200",
+            "rational_margin": "23/350"
+          },
+          {
+            "r": 7,
+            "a_r": 28,
+            "D_r": 15,
+            "threshold": "745/222",
+            "rational_margin": "2993/96200"
+          },
+          {
+            "r": 8,
+            "a_r": 36,
+            "D_r": 19,
+            "threshold": "622/175",
+            "rational_margin": "321/60200"
+          },
+          {
+            "r": 9,
+            "a_r": 45,
+            "D_r": 23,
+            "threshold": "269/72",
+            "rational_margin": "1/900"
+          }
+        ],
+        "r9_step_margin": "293/18560",
+        "rank_polynomial_shift_10_ascending": [
+          37151424,
+          3111610752,
+          2388816952,
+          823740244,
+          167027138,
+          21934307,
+          1934237,
+          114534,
+          4392,
+          99,
+          1
+        ],
+        "number_of_harmonic_anchors": 1,
+        "number_of_elementary_rational_comparisons": 7,
+        "scope": "Arithmetic supplement only. Universal bounds are proved in the manuscript.",
+        "optional_diagnostic": {
+          "delta_range": [
+            10,
+            210
+          ],
+          "checks": 201,
+          "rank_choice": "r=p(delta), maximum rank permitted by a_r<=delta",
+          "minimum_gap": {
+            "value": "5845533/7436429",
+            "delta": 45,
+            "r": 9
+          },
+          "minimum_slope": {
+            "value": "351/140",
+            "delta": 10,
+            "r": 4
+          },
+          "minimum_delta_step": {
+            "value": "851/140",
+            "delta": 10,
+            "r": 4
+          }
+        }
+      }
+    },
+    {
+      "command": "python -B checks/verify_small_ordinary.py",
+      "exit_code": 0,
+      "profile_count": 83,
+      "scalar_comparisons": 665,
+      "raw_shortfalls": 0,
+      "minimum_scalar_margin": {
+        "e": 5,
+        "m": 15,
+        "rho": 14,
+        "row": 1,
+        "raw": 38,
+        "capacity": 105,
+        "margin": 67
+      },
+      "tail_anchors": 5,
+      "profile_sha256": "e10afc786ae3d55a1d35e65533696792ebf4ff4daea18c61806594623d09c65a"
+    },
+    {
+      "command": "python -B checks/check_width.py",
+      "exit_code": 0,
+      "status": "PASS_EXACT_WIDTH_IDENTITIES",
+      "two_variable_identity_grid_points": 24
+    },
+    {
+      "command": "python -B checks/check_harmonic.py",
+      "exit_code": 0,
+      "module_cases": 243,
+      "degreewise_rank_checks": 972,
+      "fields": [
+        2,
+        3,
+        101
+      ]
+    }
+  ],
+  "independent_mathematical_reviews": [
+    "H: full characteristic-free direct Koszul argument independently rederived.",
+    "Scalar e10: parity increments, cutoff step, threshold polynomial and all-actual-r quantifiers independently reviewed.",
+    "Ordinary r2/r3 strengthening independently checked.",
+    "W tail, e5/e6/e7 extensions and actual endpoint transfer independently read.",
+    "Small ordinary: source finite reduction, last-first-hit dominance and five tails independently reviewed."
+  ],
+  "limits": [
+    "Finite diagnostics are not the proof of universal module or source statements.",
+    "Optional scalar diagnostic tests r=p(delta), not every actual r; all-r scope follows from the displayed induction.",
+    "N4 partial legacy replays do not certify all N4 transitive ancestors.",
+    "No claim of formal verification or unconditional global P14 proof."
+  ],
+  "delivery_checks": {
+    "status": "PASS",
+    "markdown_local_links": "all resolved",
+    "json": "all parsed",
+    "source_hashes": "all input and pinned prior files matched",
+    "python_syntax": "four checkers parsed successfully"
+  }
+}

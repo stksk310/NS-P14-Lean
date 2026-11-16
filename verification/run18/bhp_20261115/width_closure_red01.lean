@@ -1,0 +1,3 @@
+module
+import NSP14.Width.SparseComparison
+#check NSP14.NumericalSemigroup.narrow_width_comparison

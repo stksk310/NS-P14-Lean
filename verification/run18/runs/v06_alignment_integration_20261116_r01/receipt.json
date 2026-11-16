@@ -1,0 +1,23 @@
+{
+  "status": "PASS_V06_DOC_ONLY_WORK_INTEGRATION",
+  "merged_commit": "4c2c1ecbba7e819c49eebddccb81905c46b87b44",
+  "concurrent_work_commit": "306df7bc605477faa7891230879ee609e469805e",
+  "certified_publication_commit": "748f2d04d269eed4ea7aed09fd1df4f013c254ab",
+  "certified_proof_commit": "d446fc2f18f7a8603d1eedd446e93810dc44d01c",
+  "certified_evidence_commit": "0880f6f30836873036b4d9908b7dcef50125d2c8",
+  "preserved_concurrent_paths": [
+    "docs/superpowers/plans/2026-11-15-run19-v06-n4-small-closure-order.md",
+    "docs/superpowers/specs/2026-11-15-run19-v06-input-scope.md",
+    "docs/superpowers/specs/2026-11-15-run19-v06-n4-checked-contracts.md",
+    "verification/run19/planning/v06_n4_publication_20261115/published_math_only.json",
+    "verification/run19/planning/v06_n4_publication_20261115/receipt.json"
+  ],
+  "certified_source_files_identical_except_concurrent_run19_docs": 1495,
+  "concurrent_existing_source_manifest_exceptions": [
+    "docs/superpowers/plans/2026-11-15-run19-v06-n4-small-closure-order.md",
+    "docs/superpowers/specs/2026-11-15-run19-v06-input-scope.md"
+  ],
+  "no_lean_test_verifier_or_pin_changes": true,
+  "certified_evidence_preserved": true,
+  "certificate_scope": "Fixed proof snapshot d446fc2. This integration preserves independent Run19 planning only; it does not recertify a new mathematical proof or claim Run19 completion. Reproduce full V06 validation by checking out certified_proof_commit."
+}

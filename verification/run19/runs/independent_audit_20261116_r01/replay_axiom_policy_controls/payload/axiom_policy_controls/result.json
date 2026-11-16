@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ACTUAL_LEAN_AXIOM_POLICY_CONTROLS",
+  "accepted_proven_interface_stub": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "kind": "axiom",
+    "name": "NSP14.Ordinary.Scalarization.weight_head_le"
+  },
+  "rejected_test_only_extra_axiom": {
+    "axioms": [
+      "_private.verification.run18.runs.v06_alignment_run19_disposable.axiom_policy_controls.ExtraAxiomProbe.0.Run18AxiomPolicyProbe.extra"
+    ],
+    "kind": "axiom",
+    "name": "_private.verification.run18.runs.v06_alignment_run19_disposable.axiom_policy_controls.ExtraAxiomProbe.0.Run18AxiomPolicyProbe.extra"
+  },
+  "production_depends_on_negative_control": false
+}

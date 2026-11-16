@@ -1,0 +1,14 @@
+{
+  "whole_project_lib_ir_tests_audits": true,
+  "moved": [
+    {
+      "from": ".lake/build/lib/lean",
+      "to": "/tmp/run20-cold-cache-taw21cik/.lake_build_lib_lean"
+    },
+    {
+      "from": ".lake/build/ir",
+      "to": "/tmp/run20-cold-cache-taw21cik/.lake_build_ir"
+    }
+  ],
+  "fixed_mathlib_cache_retained": true
+}

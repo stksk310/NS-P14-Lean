@@ -1,0 +1,1 @@
+verification/run18/bhp_20261115/prefix_variable_restriction_red01.lean:3:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsStronglyStable.cumulative_le_lex`

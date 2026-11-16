@@ -1,0 +1,88 @@
+{
+  "H23": "444316699/118982864",
+  "747/200-H23": "2107451/2974571600",
+  "seed_comparisons": [
+    {
+      "r": 4,
+      "a_r": 10,
+      "D_r": 6,
+      "threshold": "1126/399",
+      "rational_margin": "17587/79800"
+    },
+    {
+      "r": 5,
+      "a_r": 15,
+      "D_r": 8,
+      "threshold": "35/12",
+      "rational_margin": "143/1200"
+    },
+    {
+      "r": 6,
+      "a_r": 21,
+      "D_r": 11,
+      "threshold": "623/200",
+      "rational_margin": "23/350"
+    },
+    {
+      "r": 7,
+      "a_r": 28,
+      "D_r": 15,
+      "threshold": "745/222",
+      "rational_margin": "2993/96200"
+    },
+    {
+      "r": 8,
+      "a_r": 36,
+      "D_r": 19,
+      "threshold": "622/175",
+      "rational_margin": "321/60200"
+    },
+    {
+      "r": 9,
+      "a_r": 45,
+      "D_r": 23,
+      "threshold": "269/72",
+      "rational_margin": "1/900"
+    }
+  ],
+  "r9_step_margin": "293/18560",
+  "rank_polynomial_shift_10_ascending": [
+    37151424,
+    3111610752,
+    2388816952,
+    823740244,
+    167027138,
+    21934307,
+    1934237,
+    114534,
+    4392,
+    99,
+    1
+  ],
+  "number_of_harmonic_anchors": 1,
+  "number_of_elementary_rational_comparisons": 7,
+  "scope": "Arithmetic supplement only. Universal bounds are proved in the manuscript.",
+  "optional_diagnostic": {
+    "delta_range": [
+      10,
+      210
+    ],
+    "checks": 201,
+    "rank_choice": "r=p(delta), maximum rank permitted by a_r<=delta",
+    "minimum_gap": {
+      "value": "5845533/7436429",
+      "delta": 45,
+      "r": 9
+    },
+    "minimum_slope": {
+      "value": "351/140",
+      "delta": 10,
+      "r": 4
+    },
+    "minimum_delta_step": {
+      "value": "851/140",
+      "delta": 10,
+      "r": 4
+    }
+  }
+}

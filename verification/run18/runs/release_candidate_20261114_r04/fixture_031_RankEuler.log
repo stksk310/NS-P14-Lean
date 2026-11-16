@@ -1,0 +1,4 @@
+NSP14.Homological.partialEuler_syzygy.{u} (k : Type u) [Field k] (K : ChainComplex (ModuleCat k) ℕ)
+  [∀ (i : ℕ), Module.Finite k ↑(K.X i)] (hK : ∀ (i : ℕ), HomologicalComplex.ExactAt K i) (j : ℕ) :
+  NSP14.Homological.partialEuler (fun i => Module.finrank k ↑(K.X i)) j =
+    ↑(Module.finrank k ↥(ModuleCat.Hom.hom (K.d (j + 1) j)).range)

@@ -1,0 +1,6917 @@
+[
+  {
+    "name": "fixture_000_SmallScalar",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallScalar.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallScalar.olean"
+    ]
+  },
+  {
+    "name": "fixture_001_Sidon",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Sidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Sidon.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Sidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Sidon.olean"
+    ]
+  },
+  {
+    "name": "fixture_002_Resources",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Resources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Resources.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Resources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Resources.olean"
+    ]
+  },
+  {
+    "name": "fixture_003_LowRank",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LowRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LowRank.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LowRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LowRank.olean"
+    ]
+  },
+  {
+    "name": "fixture_004_LargeSeed",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeSeed.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeSeed.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeSeed.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeSeed.olean"
+    ]
+  },
+  {
+    "name": "fixture_005_LargeScalar",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeScalar.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeScalar.olean"
+    ]
+  },
+  {
+    "name": "fixture_006_OrdinaryNumerical",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryNumerical.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryNumerical.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+    ]
+  },
+  {
+    "name": "fixture_007_SemigroupFoundations",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupFoundations.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupFoundations.olean"
+    ]
+  },
+  {
+    "name": "fixture_008_SemigroupRing",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupRing.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupRing.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupRing.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupRing.olean"
+    ]
+  },
+  {
+    "name": "fixture_009_TangentAlgebra",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TangentAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TangentAlgebra.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TangentAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TangentAlgebra.olean"
+    ]
+  },
+  {
+    "name": "fixture_010_AperyQuotient",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AperyQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AperyQuotient.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AperyQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AperyQuotient.olean"
+    ]
+  },
+  {
+    "name": "fixture_011_Run12BasicExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12BasicExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12BasicExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12BasicExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12BasicExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_012_Run12Fixtures",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Fixtures.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Fixtures.olean"
+    ]
+  },
+  {
+    "name": "fixture_013_JumpBounds",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpBounds.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpBounds.olean"
+    ]
+  },
+  {
+    "name": "fixture_014_PolynomialAction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialAction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialAction.olean"
+    ]
+  },
+  {
+    "name": "fixture_015_JumpStrata",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpStrata.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpStrata.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpStrata.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpStrata.olean"
+    ]
+  },
+  {
+    "name": "fixture_016_CompletedComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CompletedComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CompletedComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CompletedComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CompletedComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_017_Run12Axioms",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Axioms.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Axioms.olean"
+    ]
+  },
+  {
+    "name": "fixture_018_Run13Fixtures",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Fixtures.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Fixtures.olean"
+    ]
+  },
+  {
+    "name": "fixture_019_ActualGradedBaseChange",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualGradedBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualGradedBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+    ]
+  },
+  {
+    "name": "fixture_020_BettiBaseChange",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiBaseChange.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiBaseChange.olean"
+    ]
+  },
+  {
+    "name": "fixture_021_FilteredHomology",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FilteredHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FilteredHomology.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FilteredHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FilteredHomology.olean"
+    ]
+  },
+  {
+    "name": "fixture_022_GradedKoszul",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszul.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszul.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszul.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszul.olean"
+    ]
+  },
+  {
+    "name": "fixture_023_KoszulActual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulActual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulActual.olean"
+    ]
+  },
+  {
+    "name": "fixture_024_KoszulComplex",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulComplex.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulComplex.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulComplex.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulComplex.olean"
+    ]
+  },
+  {
+    "name": "fixture_025_KoszulExactness",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExactness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExactness.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExactness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExactness.olean"
+    ]
+  },
+  {
+    "name": "fixture_026_KoszulFiniteModules",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulFiniteModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulFiniteModules.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulFiniteModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulFiniteModules.olean"
+    ]
+  },
+  {
+    "name": "fixture_027_KoszulPresentation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulPresentation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulPresentation.olean"
+    ]
+  },
+  {
+    "name": "fixture_028_KoszulTor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulTor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulTor.olean"
+    ]
+  },
+  {
+    "name": "fixture_029_MinimalResolution",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MinimalResolution.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MinimalResolution.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MinimalResolution.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MinimalResolution.olean"
+    ]
+  },
+  {
+    "name": "fixture_030_PolynomialBaseChange",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialBaseChange.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialBaseChange.olean"
+    ]
+  },
+  {
+    "name": "fixture_031_RankEuler",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RankEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RankEuler.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RankEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RankEuler.olean"
+    ]
+  },
+  {
+    "name": "fixture_032_Run13ClosureFixtures",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13ClosureFixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13ClosureFixtures.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13ClosureFixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13ClosureFixtures.olean"
+    ]
+  },
+  {
+    "name": "fixture_033_StandardMonomials",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardMonomials.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardMonomials.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardMonomials.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardMonomials.olean"
+    ]
+  },
+  {
+    "name": "fixture_034_TorNaturality",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TorNaturality.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TorNaturality.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TorNaturality.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TorNaturality.olean"
+    ]
+  },
+  {
+    "name": "fixture_035_DomainChecks",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/DomainChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/DomainChecks.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/DomainChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/DomainChecks.olean"
+    ]
+  },
+  {
+    "name": "fixture_036_AssumptionChecks",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/block02/AssumptionChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/block02/AssumptionChecks.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/block02/AssumptionChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/block02/AssumptionChecks.olean"
+    ]
+  },
+  {
+    "name": "fixture_037_Run14Fixtures",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Fixtures.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Fixtures.olean"
+    ]
+  },
+  {
+    "name": "fixture_038_ActualSidon",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualSidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualSidon.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualSidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualSidon.olean"
+    ]
+  },
+  {
+    "name": "fixture_039_OffsetStabilization",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OffsetStabilization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OffsetStabilization.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OffsetStabilization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OffsetStabilization.olean"
+    ]
+  },
+  {
+    "name": "fixture_040_Run14Acceptance",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Acceptance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Acceptance.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Acceptance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Acceptance.olean"
+    ]
+  },
+  {
+    "name": "fixture_041_RemainingGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14/RemainingGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14/RemainingGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_042_GreenLinearAlgebra",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GreenLinearAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GreenLinearAlgebra.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GreenLinearAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GreenLinearAlgebra.olean"
+    ]
+  },
+  {
+    "name": "fixture_043_Run14Closure",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Closure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Closure.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Closure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Closure.olean"
+    ]
+  },
+  {
+    "name": "fixture_044_Run14Volume",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Volume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Volume.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Volume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Volume.olean"
+    ]
+  },
+  {
+    "name": "fixture_045_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14_continuation/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14_continuation/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_046_ArithmeticSequenceMaximalBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceMaximalBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceMaximalBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceMaximalBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceMaximalBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_047_ArithmeticSequenceConeBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceConeBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceConeBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceConeBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceConeBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_048_APKernelWindow",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APKernelWindow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APKernelWindow.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APKernelWindow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APKernelWindow.olean"
+    ]
+  },
+  {
+    "name": "fixture_049_APLowerRows",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APLowerRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APLowerRows.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APLowerRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APLowerRows.olean"
+    ]
+  },
+  {
+    "name": "fixture_050_APResolutionFoundations",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APResolutionFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APResolutionFoundations.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APResolutionFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APResolutionFoundations.olean"
+    ]
+  },
+  {
+    "name": "fixture_051_ActualTorRow",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualTorRow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualTorRow.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualTorRow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualTorRow.olean"
+    ]
+  },
+  {
+    "name": "fixture_052_ArithmeticSequence",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequence.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequence.olean"
+    ]
+  },
+  {
+    "name": "fixture_053_ArithmeticSequenceApery",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceApery.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceApery.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceApery.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceApery.olean"
+    ]
+  },
+  {
+    "name": "fixture_054_ArithmeticSequenceBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_055_ArithmeticSequenceKernelTor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceKernelTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceKernelTor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceKernelTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceKernelTor.olean"
+    ]
+  },
+  {
+    "name": "fixture_056_ArithmeticSequenceOrder",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceOrder.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceOrder.olean"
+    ]
+  },
+  {
+    "name": "fixture_057_BettiEuler",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiEuler.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiEuler.olean"
+    ]
+  },
+  {
+    "name": "fixture_058_ChangingOrdinaryClosure",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ChangingOrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ChangingOrdinaryClosure.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ChangingOrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ChangingOrdinaryClosure.olean"
+    ]
+  },
+  {
+    "name": "fixture_059_CoefficientComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CoefficientComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CoefficientComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CoefficientComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CoefficientComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_060_CutBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_061_CutFinite",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutFinite.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutFinite.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutFinite.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutFinite.olean"
+    ]
+  },
+  {
+    "name": "fixture_062_CutPolynomialInjection",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutPolynomialInjection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutPolynomialInjection.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutPolynomialInjection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutPolynomialInjection.olean"
+    ]
+  },
+  {
+    "name": "fixture_063_TowerHarmonic",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TowerHarmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TowerHarmonic.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TowerHarmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TowerHarmonic.olean"
+    ]
+  },
+  {
+    "name": "fixture_064_CutResidual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutResidual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutResidual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutResidual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutResidual.olean"
+    ]
+  },
+  {
+    "name": "fixture_065_FiniteKoszulEuler",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteKoszulEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteKoszulEuler.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteKoszulEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteKoszulEuler.olean"
+    ]
+  },
+  {
+    "name": "fixture_066_FunctionalMinor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FunctionalMinor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FunctionalMinor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FunctionalMinor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FunctionalMinor.olean"
+    ]
+  },
+  {
+    "name": "fixture_067_GradedBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_068_Harmonic",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Harmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Harmonic.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Harmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Harmonic.olean"
+    ]
+  },
+  {
+    "name": "fixture_069_HeadFirstOrder",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HeadFirstOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HeadFirstOrder.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HeadFirstOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HeadFirstOrder.olean"
+    ]
+  },
+  {
+    "name": "fixture_070_IntervalAPBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalAPBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalAPBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalAPBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalAPBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_071_IntervalCompletion",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalCompletion.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalCompletion.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalCompletion.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalCompletion.olean"
+    ]
+  },
+  {
+    "name": "fixture_072_IntrinsicFullTransfer",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntrinsicFullTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntrinsicFullTransfer.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntrinsicFullTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntrinsicFullTransfer.olean"
+    ]
+  },
+  {
+    "name": "fixture_073_JumpEuler",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpEuler.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpEuler.olean"
+    ]
+  },
+  {
+    "name": "fixture_074_KoszulSlots",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlots.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlots.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlots.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlots.olean"
+    ]
+  },
+  {
+    "name": "fixture_075_LinearVariableBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariableBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariableBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariableBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariableBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_076_LinearVariables",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariables.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariables.olean"
+    ]
+  },
+  {
+    "name": "fixture_077_NativeCutH0",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NativeCutH0.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NativeCutH0.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NativeCutH0.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NativeCutH0.olean"
+    ]
+  },
+  {
+    "name": "fixture_078_OrderedQuotientBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrderedQuotientBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrderedQuotientBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrderedQuotientBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrderedQuotientBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_079_OrdinaryClosure",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryClosure.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryClosure.olean"
+    ]
+  },
+  {
+    "name": "fixture_080_OrdinaryTor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryTor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryTor.olean"
+    ]
+  },
+  {
+    "name": "fixture_081_RelativePresentation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativePresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativePresentation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativePresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativePresentation.olean"
+    ]
+  },
+  {
+    "name": "fixture_082_RelativeXComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativeXComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativeXComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativeXComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativeXComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_083_Run13Axioms",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Axioms.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Axioms.olean"
+    ]
+  },
+  {
+    "name": "fixture_084_Run15Actual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run15Actual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run15Actual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run15Actual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run15Actual.olean"
+    ]
+  },
+  {
+    "name": "fixture_085_SemigroupAlgebraPresentation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupAlgebraPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupAlgebraPresentation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupAlgebraPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupAlgebraPresentation.olean"
+    ]
+  },
+  {
+    "name": "fixture_086_SquareZeroEuler",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SquareZeroEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SquareZeroEuler.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SquareZeroEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SquareZeroEuler.olean"
+    ]
+  },
+  {
+    "name": "fixture_087_TwoStepActual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TwoStepActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TwoStepActual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TwoStepActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TwoStepActual.olean"
+    ]
+  },
+  {
+    "name": "fixture_088_RemainingGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15/RemainingGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15/RemainingGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_089_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_continuation/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_continuation/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_090_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_xclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_xclosure/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_xclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_xclosure/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_091_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_bclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_bclosure/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_bclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_bclosure/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_092_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_h0closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_h0closure/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_h0closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_h0closure/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_093_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_fulltransfer/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_fulltransfer/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_fulltransfer/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_fulltransfer/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_094_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_ordinary/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_ordinary/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_ordinary/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_ordinary/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_095_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apcone/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apcone/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apcone/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apcone/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_096_Scope",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apfoundations/Scope.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apfoundations/Scope.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apfoundations/Scope.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apfoundations/Scope.olean"
+    ]
+  },
+  {
+    "name": "fixture_097_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_closure/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_closure/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_098_CarrierTransport",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CarrierTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CarrierTransport.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CarrierTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CarrierTransport.olean"
+    ]
+  },
+  {
+    "name": "fixture_099_EndpointActualKernel",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointActualKernel.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointActualKernel.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointActualKernel.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointActualKernel.olean"
+    ]
+  },
+  {
+    "name": "fixture_100_EndpointArtinRank",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRank.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRank.olean"
+    ]
+  },
+  {
+    "name": "fixture_101_EndpointArtinRefinements",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRefinements.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRefinements.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRefinements.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRefinements.olean"
+    ]
+  },
+  {
+    "name": "fixture_102_EndpointBoundaryExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointBoundaryExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointBoundaryExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointBoundaryExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointBoundaryExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_103_EndpointCarry",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCarry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCarry.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCarry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCarry.olean"
+    ]
+  },
+  {
+    "name": "fixture_104_EndpointCompensation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompensation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompensation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompensation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompensation.olean"
+    ]
+  },
+  {
+    "name": "fixture_105_EndpointCompetitorBounds",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitorBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitorBounds.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitorBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitorBounds.olean"
+    ]
+  },
+  {
+    "name": "fixture_106_EndpointCompetitors",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitors.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitors.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitors.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitors.olean"
+    ]
+  },
+  {
+    "name": "fixture_107_EndpointComputedExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointComputedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointComputedExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointComputedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointComputedExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_108_EndpointConeBalance",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointConeBalance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointConeBalance.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointConeBalance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointConeBalance.olean"
+    ]
+  },
+  {
+    "name": "fixture_109_EndpointCoordinates",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoordinates.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoordinates.olean"
+    ]
+  },
+  {
+    "name": "fixture_110_EndpointCore",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCore.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCore.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCore.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCore.olean"
+    ]
+  },
+  {
+    "name": "fixture_111_EndpointCoreArtin",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreArtin.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreArtin.olean"
+    ]
+  },
+  {
+    "name": "fixture_112_EndpointCoreGrading",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreGrading.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreGrading.olean"
+    ]
+  },
+  {
+    "name": "fixture_113_EndpointData",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointData.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointData.olean"
+    ]
+  },
+  {
+    "name": "fixture_114_EndpointFiberModule",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFiberModule.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFiberModule.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFiberModule.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFiberModule.olean"
+    ]
+  },
+  {
+    "name": "fixture_115_EndpointFibers",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFibers.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFibers.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFibers.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFibers.olean"
+    ]
+  },
+  {
+    "name": "fixture_116_EndpointFirstBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFirstBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFirstBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFirstBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFirstBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_117_EndpointHomology",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointHomology.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointHomology.olean"
+    ]
+  },
+  {
+    "name": "fixture_118_EndpointIdealGenerators",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointIdealGenerators.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointIdealGenerators.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointIdealGenerators.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointIdealGenerators.olean"
+    ]
+  },
+  {
+    "name": "fixture_119_EndpointInternalCoordinates",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalCoordinates.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalCoordinates.olean"
+    ]
+  },
+  {
+    "name": "fixture_120_EndpointInternalSocle",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalSocle.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalSocle.olean"
+    ]
+  },
+  {
+    "name": "fixture_121_EndpointMinimal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimal.olean"
+    ]
+  },
+  {
+    "name": "fixture_122_EndpointMinimalBounds",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimalBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimalBounds.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimalBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimalBounds.olean"
+    ]
+  },
+  {
+    "name": "fixture_123_EndpointModules",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointModules.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointModules.olean"
+    ]
+  },
+  {
+    "name": "fixture_124_EndpointNativeTransfer",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNativeTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNativeTransfer.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNativeTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNativeTransfer.olean"
+    ]
+  },
+  {
+    "name": "fixture_125_EndpointNilpotence",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNilpotence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNilpotence.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNilpotence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNilpotence.olean"
+    ]
+  },
+  {
+    "name": "fixture_126_EndpointNonmonomial",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNonmonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNonmonomial.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNonmonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNonmonomial.olean"
+    ]
+  },
+  {
+    "name": "fixture_127_EndpointNormalization",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNormalization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNormalization.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNormalization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNormalization.olean"
+    ]
+  },
+  {
+    "name": "fixture_128_EndpointOrientation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointOrientation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointOrientation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointOrientation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointOrientation.olean"
+    ]
+  },
+  {
+    "name": "fixture_129_EndpointPresentation",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointPresentation.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointPresentation.olean"
+    ]
+  },
+  {
+    "name": "fixture_130_EndpointQuadratic",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuadratic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuadratic.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuadratic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuadratic.olean"
+    ]
+  },
+  {
+    "name": "fixture_131_EndpointQuotient",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuotient.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuotient.olean"
+    ]
+  },
+  {
+    "name": "fixture_132_EndpointResidues",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointResidues.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointResidues.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointResidues.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointResidues.olean"
+    ]
+  },
+  {
+    "name": "fixture_133_EndpointRhat",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRhat.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRhat.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRhat.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRhat.olean"
+    ]
+  },
+  {
+    "name": "fixture_134_EndpointRowPackage",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRowPackage.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRowPackage.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRowPackage.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRowPackage.olean"
+    ]
+  },
+  {
+    "name": "fixture_135_EndpointRows",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRows.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRows.olean"
+    ]
+  },
+  {
+    "name": "fixture_136_EndpointSocle",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSocle.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSocle.olean"
+    ]
+  },
+  {
+    "name": "fixture_137_EndpointSoclePoints",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSoclePoints.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSoclePoints.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSoclePoints.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSoclePoints.olean"
+    ]
+  },
+  {
+    "name": "fixture_138_EndpointStandardArtin",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStandardArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStandardArtin.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStandardArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStandardArtin.olean"
+    ]
+  },
+  {
+    "name": "fixture_139_EndpointStopping",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStopping.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStopping.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStopping.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStopping.olean"
+    ]
+  },
+  {
+    "name": "fixture_140_EndpointSurvivingBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSurvivingBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSurvivingBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSurvivingBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSurvivingBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_141_EndpointTwoMonomial",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoMonomial.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoMonomial.olean"
+    ]
+  },
+  {
+    "name": "fixture_142_EndpointTwoVariables",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoVariables.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoVariables.olean"
+    ]
+  },
+  {
+    "name": "fixture_143_EndpointVolume",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointVolume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointVolume.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointVolume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointVolume.olean"
+    ]
+  },
+  {
+    "name": "fixture_144_EndpointWords",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointWords.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointWords.olean"
+    ]
+  },
+  {
+    "name": "fixture_145_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run16/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run16/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run16/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run16/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_146_EndpointAdditive",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointAdditive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointAdditive.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointAdditive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointAdditive.olean"
+    ]
+  },
+  {
+    "name": "fixture_147_KneserActual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KneserActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KneserActual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KneserActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KneserActual.olean"
+    ]
+  },
+  {
+    "name": "fixture_148_Run17Definitions",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Definitions.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Definitions.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Definitions.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Definitions.olean"
+    ]
+  },
+  {
+    "name": "fixture_149_Run17Growth",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Growth.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Growth.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Growth.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Growth.olean"
+    ]
+  },
+  {
+    "name": "fixture_150_Run17SequenceExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17SequenceExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17SequenceExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17SequenceExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17SequenceExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_151_SavchevChen",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SavchevChen.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SavchevChen.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SavchevChen.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SavchevChen.olean"
+    ]
+  },
+  {
+    "name": "fixture_152_RequestedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/RequestedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/RequestedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_153_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_154_RequestedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/RequestedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/RequestedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_155_BHPEKClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/BHPEKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/BHPEKClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/BHPEKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/BHPEKClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_156_EdgeClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EdgeClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EdgeClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EdgeClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EdgeClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_157_DenseResourcesClosed",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseResourcesClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseResourcesClosed.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseResourcesClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseResourcesClosed.olean"
+    ]
+  },
+  {
+    "name": "fixture_158_DenseClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_159_PartialClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/PartialClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/PartialClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/PartialClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/PartialClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_160_FiveClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/FiveClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/FiveClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_161_ClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/ClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_162_EKClosedGoals",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EKClosedGoals.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EKClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "fixture_163_BHPEK",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/BHPEK.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/BHPEK.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/BHPEK.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/BHPEK.olean"
+    ]
+  },
+  {
+    "name": "fixture_164_W_CLOSE",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_CLOSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_CLOSE.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_CLOSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_CLOSE.olean"
+    ]
+  },
+  {
+    "name": "fixture_165_W_DENSE",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_DENSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_DENSE.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_DENSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_DENSE.olean"
+    ]
+  },
+  {
+    "name": "fixture_166_W_EDGE",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_EDGE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_EDGE.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_EDGE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_EDGE.olean"
+    ]
+  },
+  {
+    "name": "fixture_167_W_FIVE",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_FIVE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_FIVE.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_FIVE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_FIVE.olean"
+    ]
+  },
+  {
+    "name": "fixture_168_WidthFiveHigher",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveHigher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveHigher.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveHigher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveHigher.olean"
+    ]
+  },
+  {
+    "name": "fixture_169_AntipodalActual",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AntipodalActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AntipodalActual.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AntipodalActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AntipodalActual.olean"
+    ]
+  },
+  {
+    "name": "fixture_170_ArtinGradedChain",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedChain.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedChain.olean"
+    ]
+  },
+  {
+    "name": "fixture_171_ArtinGradedMaps",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedMaps.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedMaps.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedMaps.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedMaps.olean"
+    ]
+  },
+  {
+    "name": "fixture_172_ArtinGradedZero",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedZero.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedZero.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedZero.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedZero.olean"
+    ]
+  },
+  {
+    "name": "fixture_173_BasisBlocks",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisBlocks.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisBlocks.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisBlocks.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisBlocks.olean"
+    ]
+  },
+  {
+    "name": "fixture_174_BasisGradedScalarComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisGradedScalarComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisGradedScalarComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisGradedScalarComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisGradedScalarComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_175_BasiswiseTensor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasiswiseTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasiswiseTensor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasiswiseTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasiswiseTensor.olean"
+    ]
+  },
+  {
+    "name": "fixture_176_ColexRestriction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ColexRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ColexRestriction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ColexRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ColexRestriction.olean"
+    ]
+  },
+  {
+    "name": "fixture_177_DegreeFamily",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeFamily.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeFamily.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeFamily.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeFamily.olean"
+    ]
+  },
+  {
+    "name": "fixture_178_DegreeSeparator",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeSeparator.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeSeparator.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeSeparator.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeSeparator.olean"
+    ]
+  },
+  {
+    "name": "fixture_179_DensePayment",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DensePayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DensePayment.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DensePayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DensePayment.olean"
+    ]
+  },
+  {
+    "name": "fixture_180_DirectSumSplit",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DirectSumSplit.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DirectSumSplit.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DirectSumSplit.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DirectSumSplit.olean"
+    ]
+  },
+  {
+    "name": "fixture_181_DistractionChain",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionChain.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionChain.olean"
+    ]
+  },
+  {
+    "name": "fixture_182_DistractionGraded",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGraded.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGraded.olean"
+    ]
+  },
+  {
+    "name": "fixture_183_LexLinearQuotientExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotientExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotientExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotientExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotientExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_184_DistractionGradedExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGradedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGradedExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGradedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGradedExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_185_DistractionHilbert",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionHilbert.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionHilbert.olean"
+    ]
+  },
+  {
+    "name": "fixture_186_DistractionIdeal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionIdeal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionIdeal.olean"
+    ]
+  },
+  {
+    "name": "fixture_187_DistractionLinearEquiv",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionLinearEquiv.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionLinearEquiv.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionLinearEquiv.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionLinearEquiv.olean"
+    ]
+  },
+  {
+    "name": "fixture_188_DistractionMonomial",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionMonomial.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionMonomial.olean"
+    ]
+  },
+  {
+    "name": "fixture_189_DistractionTensor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionTensor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionTensor.olean"
+    ]
+  },
+  {
+    "name": "fixture_190_ElementaryDistraction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ElementaryDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ElementaryDistraction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ElementaryDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ElementaryDistraction.olean"
+    ]
+  },
+  {
+    "name": "fixture_191_ExteriorContraction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ExteriorContraction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ExteriorContraction.olean"
+    ]
+  },
+  {
+    "name": "fixture_192_FiniteHilbertProfiles",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteHilbertProfiles.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteHilbertProfiles.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteHilbertProfiles.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteHilbertProfiles.olean"
+    ]
+  },
+  {
+    "name": "fixture_193_GenericDistraction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistraction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistraction.olean"
+    ]
+  },
+  {
+    "name": "fixture_194_GenericDistractionBoundary",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionBoundary.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionBoundary.olean"
+    ]
+  },
+  {
+    "name": "fixture_195_GenericDistractionExterior",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionExterior.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionExterior.olean"
+    ]
+  },
+  {
+    "name": "fixture_196_GenericDistractionField",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionField.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionField.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionField.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionField.olean"
+    ]
+  },
+  {
+    "name": "fixture_197_GenericDistractionIteration",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionIteration.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionIteration.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionIteration.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionIteration.olean"
+    ]
+  },
+  {
+    "name": "fixture_198_GenericDistractionPrincipal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionPrincipal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionPrincipal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionPrincipal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionPrincipal.olean"
+    ]
+  },
+  {
+    "name": "fixture_199_GenericDistractionProgress",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionProgress.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionProgress.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionProgress.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionProgress.olean"
+    ]
+  },
+  {
+    "name": "fixture_200_GenericDistractionStable",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStable.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStable.olean"
+    ]
+  },
+  {
+    "name": "fixture_201_GenericDistractionStep",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStep.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStep.olean"
+    ]
+  },
+  {
+    "name": "fixture_202_GradedIdealAdjoining",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedIdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedIdealAdjoining.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedIdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedIdealAdjoining.olean"
+    ]
+  },
+  {
+    "name": "fixture_203_GradedKoszulBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_204_GradedKoszulExact",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulExact.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulExact.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulExact.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulExact.olean"
+    ]
+  },
+  {
+    "name": "fixture_205_GradedKoszulRestriction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulRestriction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulRestriction.olean"
+    ]
+  },
+  {
+    "name": "fixture_206_HomogeneousBasisPieces",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HomogeneousBasisPieces.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HomogeneousBasisPieces.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HomogeneousBasisPieces.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HomogeneousBasisPieces.olean"
+    ]
+  },
+  {
+    "name": "fixture_207_IdealAdjoining",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealAdjoining.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealAdjoining.olean"
+    ]
+  },
+  {
+    "name": "fixture_208_IdealScalarQuotient",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealScalarQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealScalarQuotient.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealScalarQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealScalarQuotient.olean"
+    ]
+  },
+  {
+    "name": "fixture_209_InitialAction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialAction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialAction.olean"
+    ]
+  },
+  {
+    "name": "fixture_210_InitialBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_211_InitialBoundary",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBoundary.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBoundary.olean"
+    ]
+  },
+  {
+    "name": "fixture_212_InitialIdeal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialIdeal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialIdeal.olean"
+    ]
+  },
+  {
+    "name": "fixture_213_InitialTransport",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialTransport.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialTransport.olean"
+    ]
+  },
+  {
+    "name": "fixture_214_KoszulExterior",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExterior.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExterior.olean"
+    ]
+  },
+  {
+    "name": "fixture_215_KoszulExteriorBasis",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorBasis.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorBasis.olean"
+    ]
+  },
+  {
+    "name": "fixture_216_KoszulExteriorContraction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorContraction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorContraction.olean"
+    ]
+  },
+  {
+    "name": "fixture_217_KoszulExteriorGrading",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorGrading.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorGrading.olean"
+    ]
+  },
+  {
+    "name": "fixture_218_KoszulExteriorMap",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorMap.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorMap.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorMap.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorMap.olean"
+    ]
+  },
+  {
+    "name": "fixture_219_KoszulSlotGrading",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlotGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlotGrading.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlotGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlotGrading.olean"
+    ]
+  },
+  {
+    "name": "fixture_220_KoszulVariableFactor",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulVariableFactor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulVariableFactor.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulVariableFactor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulVariableFactor.olean"
+    ]
+  },
+  {
+    "name": "fixture_221_LexBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_222_LexCompatibleDegrees",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexCompatibleDegrees.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexCompatibleDegrees.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexCompatibleDegrees.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexCompatibleDegrees.olean"
+    ]
+  },
+  {
+    "name": "fixture_223_LexDegreeIdeal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexDegreeIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexDegreeIdeal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexDegreeIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexDegreeIdeal.olean"
+    ]
+  },
+  {
+    "name": "fixture_224_LexEK",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEK.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEK.olean"
+    ]
+  },
+  {
+    "name": "fixture_225_LexEKOrdinary",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEKOrdinary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEKOrdinary.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEKOrdinary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEKOrdinary.olean"
+    ]
+  },
+  {
+    "name": "fixture_226_LexGeneratorOrder",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGeneratorOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGeneratorOrder.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGeneratorOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGeneratorOrder.olean"
+    ]
+  },
+  {
+    "name": "fixture_227_LexGradedStep",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGradedStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGradedStep.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGradedStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGradedStep.olean"
+    ]
+  },
+  {
+    "name": "fixture_228_LexHilbert",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbert.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbert.olean"
+    ]
+  },
+  {
+    "name": "fixture_229_LexHilbertExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbertExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbertExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbertExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbertExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_230_LexLinearQuotients",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotients.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotients.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotients.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotients.olean"
+    ]
+  },
+  {
+    "name": "fixture_231_LexStable",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexStable.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexStable.olean"
+    ]
+  },
+  {
+    "name": "fixture_232_LexTailCorrection",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailCorrection.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailCorrection.olean"
+    ]
+  },
+  {
+    "name": "fixture_233_LexTailSupport",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailSupport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailSupport.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailSupport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailSupport.olean"
+    ]
+  },
+  {
+    "name": "fixture_234_LexUniqueness",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexUniqueness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexUniqueness.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexUniqueness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexUniqueness.olean"
+    ]
+  },
+  {
+    "name": "fixture_235_MonomialExtension",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtension.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtension.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtension.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtension.olean"
+    ]
+  },
+  {
+    "name": "fixture_236_MonomialExtensionGraded",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtensionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtensionGraded.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtensionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtensionGraded.olean"
+    ]
+  },
+  {
+    "name": "fixture_237_MonomialScalarExamples",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialScalarExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialScalarExamples.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialScalarExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialScalarExamples.olean"
+    ]
+  },
+  {
+    "name": "fixture_238_NormalTriangular",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NormalTriangular.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NormalTriangular.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NormalTriangular.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NormalTriangular.olean"
+    ]
+  },
+  {
+    "name": "fixture_239_PrefixDominance",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixDominance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixDominance.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixDominance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixDominance.olean"
+    ]
+  },
+  {
+    "name": "fixture_240_PrefixGeneratorCorrection",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixGeneratorCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixGeneratorCorrection.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixGeneratorCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixGeneratorCorrection.olean"
+    ]
+  },
+  {
+    "name": "fixture_241_PrefixOrder",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixOrder.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixOrder.olean"
+    ]
+  },
+  {
+    "name": "fixture_242_PrefixVariableRestriction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixVariableRestriction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixVariableRestriction.olean"
+    ]
+  },
+  {
+    "name": "fixture_243_SmallVariableComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallVariableComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallVariableComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallVariableComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallVariableComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_244_StableBettiComparison",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBettiComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBettiComparison.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBettiComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBettiComparison.olean"
+    ]
+  },
+  {
+    "name": "fixture_245_StableBinomialWeights",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBinomialWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBinomialWeights.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBinomialWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBinomialWeights.olean"
+    ]
+  },
+  {
+    "name": "fixture_246_StableDegreeDecomposition",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableDegreeDecomposition.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableDegreeDecomposition.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableDegreeDecomposition.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableDegreeDecomposition.olean"
+    ]
+  },
+  {
+    "name": "fixture_247_StandardBettiWeights",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardBettiWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardBettiWeights.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardBettiWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardBettiWeights.olean"
+    ]
+  },
+  {
+    "name": "fixture_248_StrongStableEK",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableEK.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableEK.olean"
+    ]
+  },
+  {
+    "name": "fixture_249_StrongStableOperations",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableOperations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableOperations.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableOperations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableOperations.olean"
+    ]
+  },
+  {
+    "name": "fixture_250_StrongStableRestriction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableRestriction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableRestriction.olean"
+    ]
+  },
+  {
+    "name": "fixture_251_SuffixVariableRestriction",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SuffixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SuffixVariableRestriction.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SuffixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SuffixVariableRestriction.olean"
+    ]
+  },
+  {
+    "name": "fixture_252_TotalLexBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TotalLexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TotalLexBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TotalLexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TotalLexBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_253_TriangularBlockRank",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TriangularBlockRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TriangularBlockRank.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TriangularBlockRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TriangularBlockRank.olean"
+    ]
+  },
+  {
+    "name": "fixture_254_VariableIdealBetti",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealBetti.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealBetti.olean"
+    ]
+  },
+  {
+    "name": "fixture_255_VariableIdealGraded",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealGraded.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealGraded.olean"
+    ]
+  },
+  {
+    "name": "fixture_256_WidthDenseResources",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDenseResources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDenseResources.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDenseResources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDenseResources.olean"
+    ]
+  },
+  {
+    "name": "fixture_257_WidthSparseData",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseData.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseData.olean"
+    ]
+  },
+  {
+    "name": "fixture_258_WidthSparseCache",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseCache.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseCache.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseCache.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseCache.olean"
+    ]
+  },
+  {
+    "name": "fixture_259_WidthSparse",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparse.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparse.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparse.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparse.olean"
+    ]
+  },
+  {
+    "name": "fixture_260_WidthEdgeGeneral",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeneral.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeneral.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeneral.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeneral.olean"
+    ]
+  },
+  {
+    "name": "fixture_261_WidthActualClosure",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthActualClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthActualClosure.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthActualClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthActualClosure.olean"
+    ]
+  },
+  {
+    "name": "fixture_262_WidthDense",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDense.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDense.olean"
+    ]
+  },
+  {
+    "name": "fixture_263_WidthEdgeAP",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeAP.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeAP.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeAP.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeAP.olean"
+    ]
+  },
+  {
+    "name": "fixture_264_WidthEdgeGeometry",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeometry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeometry.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeometry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeometry.olean"
+    ]
+  },
+  {
+    "name": "fixture_265_WidthFive",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFive.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFive.olean"
+    ]
+  },
+  {
+    "name": "fixture_266_WidthFiveNonAntipodal",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveNonAntipodal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveNonAntipodal.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveNonAntipodal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveNonAntipodal.olean"
+    ]
+  },
+  {
+    "name": "fixture_267_WidthFiveSmall",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveSmall.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveSmall.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveSmall.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveSmall.olean"
+    ]
+  },
+  {
+    "name": "v06_fixture_268_RouteChecks",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/v06_alignment/RouteChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/v06_alignment/RouteChecks.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/v06_alignment/RouteChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/v06_alignment/RouteChecks.olean"
+    ]
+  },
+  {
+    "name": "v06_fixture_269_V06Dense",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Dense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Dense.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Dense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Dense.olean"
+    ]
+  },
+  {
+    "name": "v06_fixture_270_V06Endpoint",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Endpoint.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Endpoint.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Endpoint.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Endpoint.olean"
+    ]
+  },
+  {
+    "name": "v06_fixture_271_V06HigherFromSecond",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06HigherFromSecond.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06HigherFromSecond.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06HigherFromSecond.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06HigherFromSecond.olean"
+    ]
+  },
+  {
+    "name": "v06_fixture_272_V06IntegerPayment",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06IntegerPayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06IntegerPayment.olean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06IntegerPayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06IntegerPayment.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_273_RequestedGoals",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/RequestedGoals.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_274_ClosedN4Goals",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/ClosedN4Goals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/ClosedN4Goals.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_275_ClosedGoals",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/ClosedGoals.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_276_I_BASE",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_BASE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/I_BASE.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_277_I_THREE",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_THREE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/I_THREE.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_278_N_CLOSE",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_CLOSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_CLOSE.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_279_N_DISTANCE",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_DISTANCE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_DISTANCE.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_280_N_FIRST",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_FIRST.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_FIRST.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_281_N_HIGH",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_HIGH.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_HIGH.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_282_N_SMALL",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_SMALL.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_SMALL.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_283_N_WIDTH4",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WIDTH4.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_WIDTH4.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_284_N_WORDS",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WORDS.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_WORDS.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_285_X_LTV",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/X_LTV.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/X_LTV.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_286_LTVActual",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LTVActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LTVActual.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_287_N4ActualClosure",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4ActualClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4ActualClosure.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_288_N4CoreWords",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4CoreWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CoreWords.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_289_N4CubicPayment",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4CubicPayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CubicPayment.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_290_N4Distance",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Distance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Distance.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_291_N4First",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4First.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4First.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_292_N4Higher",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Higher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Higher.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_293_N4Small",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Small.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Small.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_294_N4StandardWords",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4StandardWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4StandardWords.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_295_N4WidthFour",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4WidthFour.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4WidthFour.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_296_Run19Contracts",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run19Contracts.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run19Contracts.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_297_SmallEmbeddingBase",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallEmbeddingBase.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingBase.olean"
+    ]
+  },
+  {
+    "name": "run19_fixture_298_SmallEmbeddingThree",
+    "old_command": null,
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallEmbeddingThree.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingThree.olean"
+    ]
+  },
+  {
+    "name": "build",
+    "old_command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ],
+    "new_command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ]
+  },
+  {
+    "name": "width_model",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_width.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/width_checks.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "width_model",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_width_model"
+    ]
+  },
+  {
+    "name": "dense_model",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_dense.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/dense_checks.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "dense_model",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_dense_model"
+    ]
+  },
+  {
+    "name": "continuation_model",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_continuation.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/continuation_checks.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "continuation_model",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_continuation_model"
+    ]
+  },
+  {
+    "name": "five_model",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_five.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/five_checks.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "five_model",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_five_model"
+    ]
+  },
+  {
+    "name": "edge_model",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_edge.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/edge_checks.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "edge_model",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_edge_model"
+    ]
+  },
+  {
+    "name": "publication_guards",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_guards.py"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "publication_guards",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_publication_guards"
+    ]
+  },
+  {
+    "name": "axiom_policy_controls",
+    "old_command": [
+      "python3",
+      "scripts/check_run18_axiom_policy.py",
+      "--output-dir",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/axiom_policy_controls"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "axiom_policy_controls",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_axiom_policy_controls"
+    ]
+  },
+  {
+    "name": "inherited_schedule",
+    "old_command": [
+      "python3",
+      "scripts/replay_run17_inherited.py",
+      "schedule",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_schedule.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "inherited_schedule",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_inherited_schedule"
+    ]
+  },
+  {
+    "name": "inherited_coordinates",
+    "old_command": [
+      "python3",
+      "scripts/replay_run17_inherited.py",
+      "coordinates",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_coordinates.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "inherited_coordinates",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_inherited_coordinates"
+    ]
+  },
+  {
+    "name": "inherited_additive",
+    "old_command": [
+      "python3",
+      "scripts/check_run17_additive.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_additive.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "inherited_additive",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_inherited_additive"
+    ]
+  },
+  {
+    "name": "environment_axioms",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/EnvironmentAudit.lean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "verification/run19/runs/release_20261116_r02/EnvironmentAudit.lean"
+    ]
+  },
+  {
+    "name": "v06_routes",
+    "old_command": [
+      "python3",
+      "scripts/check_v06_routes.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/routes.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "v06_routes",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_v06_routes"
+    ]
+  },
+  {
+    "name": "v06_alignment_controls",
+    "old_command": [
+      "python3",
+      "scripts/check_v06_alignment_controls.py",
+      "--output",
+      "verification/run18/runs/v06_alignment_20261115T152000Z_r01/alignment_controls.json"
+    ],
+    "new_command": [
+      "python3",
+      "scripts/replay_run19_inherited.py",
+      "--name",
+      "v06_alignment_controls",
+      "--output-dir",
+      "verification/run19/runs/release_20261116_r02/replay_v06_alignment_controls"
+    ]
+  },
+  {
+    "name": "base_build",
+    "old_command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ],
+    "new_command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ]
+  },
+  {
+    "name": "base_environment_types",
+    "old_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "BaseEnvironmentAudit.lean"
+    ],
+    "new_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "BaseEnvironmentAudit.lean"
+    ]
+  }
+]

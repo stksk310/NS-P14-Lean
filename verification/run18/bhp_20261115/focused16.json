@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/KoszulExteriorGrading.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.831
+  },
+  {
+    "file": "tests/DistractionGraded.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.847
+  },
+  {
+    "file": "tests/DistractionGradedExamples.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.804
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms15.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.63
+  }
+]

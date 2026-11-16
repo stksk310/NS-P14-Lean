@@ -1,0 +1,47 @@
+NSP14/SmallEmbedding/Base.lean:28:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  {1}.max' ⋯ = 1
+but is expected to have type
+  S.maxAtom = 1
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.find ↦ 1792
+NSP14/SmallEmbedding/Base.lean:32:32: error: Type mismatch: After simplification, term
+  NumericalSemigroup.multiplicity_mem S
+ has type
+  1 ∈ S
+but is expected to have type
+  1 ∈ S.carrier
+NSP14/SmallEmbedding/Base.lean:33:4: error: Type mismatch: After simplification, term
+  AddSubmonoid.nsmul_mem S.carrier h1 n
+ has type
+  @Membership.mem ℕ (AddSubmonoid ℕ) SetLike.instMembership S.carrier ↑n
+but is expected to have type
+  @Membership.mem ℕ (AddSubmonoid ℕ) SetLike.instMembership S.carrier n
+NSP14/SmallEmbedding/Base.lean:120:6: error: Type mismatch: After simplification, term
+  NumericalSemigroup.multiplicity_mem_atoms S
+ has type
+  @Membership.mem ℕ (Finset ℕ) SetLike.instMembership S.atoms S.multiplicity
+but is expected to have type
+  @Membership.mem ℕ (Finset ℕ) SetLike.instMembership S.atoms A.m
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.find ↦ 6
+NSP14/SmallEmbedding/Base.lean:130:44: error: Type mismatch: After simplification, term
+  hx
+ has type
+  x ∈ ↑{S.multiplicity, n}
+but is expected to have type
+  x = S.multiplicity ∨ x = n
+NSP14/SmallEmbedding/Base.lean:132:43: error: Application type mismatch: The argument
+  ArithmeticSequence.Data.generator_atom A 0 ?m.225
+has type
+  A.source.IsAtom (A.m + 0 * A.d)
+but is expected to have type
+  A.source.IsAtom S.multiplicity
+in the application
+  (NumericalSemigroup.mem_atoms_iff A.source S.multiplicity).mpr (ArithmeticSequence.Data.generator_atom A 0 ?m.225)
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.find ↦ 16

@@ -1,0 +1,6 @@
+tests/EndpointInternalSocle.lean:6:16: error(lean.invalidField): Invalid field `InternalSocleIndex`: The environment does not contain `NSP14.Endpoint.Data.InternalSocleIndex`, so it is not possible to project the field `InternalSocleIndex` from an expression
+  D
+of type `Data`
+tests/EndpointInternalSocle.lean:6:44: error(lean.invalidField): Invalid field `internalSigma_point_count`: The environment does not contain `NSP14.Endpoint.Data.internalSigma_point_count`, so it is not possible to project the field `internalSigma_point_count` from an expression
+  D
+of type `Data`

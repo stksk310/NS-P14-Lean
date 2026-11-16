@@ -1,0 +1,12 @@
+tests/SemigroupRing.lean:7:9: error(lean.invalidField): Invalid field `orderIdeal`: The environment does not contain `NSP14.NumericalSemigroup.orderIdeal`, so it is not possible to project the field `orderIdeal` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/SemigroupRing.lean:8:9: error(lean.invalidField): Invalid field `positiveIdeal`: The environment does not contain `NSP14.NumericalSemigroup.positiveIdeal`, so it is not possible to project the field `positiveIdeal` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/SemigroupRing.lean:9:9: error(lean.invalidField): Invalid field `orderIdeal_eq_pow`: The environment does not contain `NSP14.NumericalSemigroup.orderIdeal_eq_pow`, so it is not possible to project the field `orderIdeal_eq_pow` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/SemigroupRing.lean:10:9: error(lean.invalidField): Invalid field `gradedPieceEquiv`: The environment does not contain `NSP14.NumericalSemigroup.gradedPieceEquiv`, so it is not possible to project the field `gradedPieceEquiv` from an expression
+  S
+of type `NSP14.NumericalSemigroup`

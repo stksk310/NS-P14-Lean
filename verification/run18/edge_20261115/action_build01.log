@@ -1,0 +1,137 @@
+✔ [5614/5619] Built NSP14.Width.EdgeHoleGeometry (1.5s)
+✔ [5616/5619] Built NSP14.Homological.KoszulCombinedMinor (1.6s)
+✖ [5618/5619] Building NSP14.Width.EdgeHoleAction (1.2s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleAction.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleAction.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleAction.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleAction.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleAction.setup.json --json
+error: NSP14/Width/EdgeHoleAction.lean:19:8: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (if ↑b < h then h - ↑b else h + D.u - ↑b) ∈ _a
+Error: Application type mismatch: The argument
+  b
+has type
+  ↥D.a
+but is expected to have type
+  ↥_a
+in the application
+  ↑b
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+D : Data
+h : ℕ
+h0 : 0 < h
+hh : h < D.u
+ha : D.a = Finset.Ioo 0 D.u \ {h}
+b : ↥D.a
+⊢ (if ↑b < h then h - ↑b else h + D.u - ↑b) ∈ D.a
+error: NSP14/Width/EdgeHoleAction.lean:17:18: (kernel) declaration has metavariables 'NSP14.Endpoint.Data.holeMate'
+error: NSP14/Width/EdgeHoleAction.lean:28:53: Application type mismatch: The argument
+  h0
+has type
+  0 < h
+of sort `Prop` but is expected to have type
+  ↥D.a
+of sort `Type` in the application
+  D.holeMate h h0
+error: NSP14/Width/EdgeHoleAction.lean:32:41: Unknown identifier `ha`
+error: NSP14/Width/EdgeHoleAction.lean:36:61: Application type mismatch: The argument
+  h0
+has type
+  0 < h
+of sort `Prop` but is expected to have type
+  ↥D.a
+of sort `Type` in the application
+  D.holeMate h h0
+error: NSP14/Width/EdgeHoleAction.lean:39:41: Unknown identifier `ha`
+error: NSP14/Width/EdgeHoleAction.lean:41:2: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+D : Data
+h : ℕ
+b : ↥D.a
+hp : 0 < ↑b
+hu : ↑b < D.u
+hn : ↑b ≠ h
+⊢ decide (h < ↑(sorry ())) = decide (h < ↑b)
+error: NSP14/Width/EdgeHoleAction.lean:43:64: Application type mismatch: The argument
+  h0
+has type
+  0 < h
+of sort `Prop` but is expected to have type
+  ↥D.a
+of sort `Type` in the application
+  D.holeMate h h0
+error: NSP14/Width/EdgeHoleAction.lean:53:59: Application type mismatch: The argument
+  h0
+has type
+  0 < h
+of sort `Prop` but is expected to have type
+  ↥D.a
+of sort `Type` in the application
+  D.holeMate h h0
+error: NSP14/Width/EdgeHoleAction.lean:55:61: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+error: NSP14/Width/EdgeHoleAction.lean:57:61: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+error: NSP14/Width/EdgeHoleAction.lean:58:60: Unknown identifier `h0`
+error: NSP14/Width/EdgeHoleAction.lean:60:63: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+error: NSP14/Width/EdgeHoleAction.lean:61:12: Unknown identifier `h`
+error: NSP14/Width/EdgeHoleAction.lean:62:22: Unknown identifier `ha`
+error: NSP14/Width/EdgeHoleAction.lean:65:61: Unknown identifier `h`
+error: NSP14/Width/EdgeHoleAction.lean:66:26: Unknown identifier `h`
+error: NSP14/Width/EdgeHoleAction.lean:66:28: Unknown identifier `h0`
+error: NSP14/Width/EdgeHoleAction.lean:72:26: Unknown identifier `h`
+error: NSP14/Width/EdgeHoleAction.lean:72:28: Unknown identifier `h0`
+error: NSP14/Width/EdgeHoleAction.lean:79:14: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+error: NSP14/Width/EdgeHoleAction.lean:79:46: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  holePair_minimal D h
+error: NSP14/Width/EdgeHoleAction.lean:82:15: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+error: NSP14/Width/EdgeHoleAction.lean:82:39: Application type mismatch: The argument
+  h
+has type
+  ℕ
+but is expected to have type
+  ↥D.a
+in the application
+  D.holePair h
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleAction
+error: build failed

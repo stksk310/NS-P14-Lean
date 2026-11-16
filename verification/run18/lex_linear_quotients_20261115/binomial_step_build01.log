@@ -1,0 +1,39 @@
+✖ [4780/4781] Building NSP14.Lex.EliahouKervaireStep (1.8s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/EliahouKervaireStep.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/EliahouKervaireStep.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/EliahouKervaireStep.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/EliahouKervaireStep.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/EliahouKervaireStep.setup.json --json
+error: NSP14/Lex/EliahouKervaireStep.lean:84:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  totalBetti k (Fin q) (↧(VariableRing k (Fin q) ⧸ Ideal.span (MvPolynomial.X '' {j | j < r}))) i
+in the target expression
+  let J := predecessorIdeal k q L w;
+  totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J ⊔ Ideal.span {(MvPolynomial.monomial w) 1})) (i + 1) =
+    totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J)) (i + 1) + (maxVariable q w - 1).choose i
+
+k : Type
+inst✝ : Field k
+q : ℕ
+L : Ideal (MvPolynomial (Fin q) k)
+hL : IsLex k q L
+hproper : L ≠ ⊤
+w : Fin q →₀ ℕ
+hw : MinimalGenerator k q L w
+i : ℕ
+r : Fin q
+hr : 0 < w r
+hmaxvar : maxVariable q w = ↑r + 1
+hmax : ∀ (i : Fin q), r < i → w i = 0
+vs : List (Fin q) := (Finset.Iio r).toList
+hset : {j | j ∈ vs} = {j | j < r}
+hvs : variablesIdeal k (Fin q) vs = Ideal.span (MvPolynomial.X '' {j | j < r})
+hn : vs.Nodup
+hlen : vs.length = ↑r
+hb : totalBetti k (Fin q) (↧(VariableRing k (Fin q) ⧸ Ideal.span (MvPolynomial.X '' {j | j < r}))) i = (↑r).choose i
+h :
+  have J := predecessorIdeal k q L w;
+  totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J ⊔ Ideal.span {(MvPolynomial.monomial w) 1})) (i + 1) =
+    totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J)) (i + 1) +
+      totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ Ideal.span (MvPolynomial.X '' {j | j < r}))) i
+⊢ let J := predecessorIdeal k q L w;
+  totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J ⊔ Ideal.span {(MvPolynomial.monomial w) 1})) (i + 1) =
+    totalBetti k (Fin q) (↧(MvPolynomial (Fin q) k ⧸ J)) (i + 1) + (maxVariable q w - 1).choose i
+Some required targets logged failures:
+- NSP14.Lex.EliahouKervaireStep
+error: build failed

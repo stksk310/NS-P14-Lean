@@ -1,0 +1,142 @@
+{
+  "status": "PASS_COMPILED_BLOCK05",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.02
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.617
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.745
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.664
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.636
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.674
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.736
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.597
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.665
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 22,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13
+  },
+  "block05_theorems": [
+    "NSP14.Ordinary.LargeSeed.barrier_lt_thresholdLower",
+    "NSP14.Ordinary.LargeSeed.barrier_step_gt",
+    "NSP14.Ordinary.LargeSeed.barrier_step_identity",
+    "NSP14.Ordinary.LargeSeed.cutoff_admissible",
+    "NSP14.Ordinary.LargeSeed.cutoff_bounds",
+    "NSP14.Ordinary.LargeSeed.cutoff_step",
+    "NSP14.Ordinary.LargeSeed.harmonic_add",
+    "NSP14.Ordinary.LargeSeed.harmonic_add_le",
+    "NSP14.Ordinary.LargeSeed.harmonic_base",
+    "NSP14.Ordinary.LargeSeed.harmonic_cutoff_step",
+    "NSP14.Ordinary.LargeSeed.harmonic_lt_barrier",
+    "NSP14.Ordinary.LargeSeed.harmonic_lt_threshold",
+    "NSP14.Ordinary.LargeSeed.harmonic_tail",
+    "NSP14.Ordinary.LargeSeed.large_seed_pos",
+    "NSP14.Ordinary.LargeSeed.rank_nine_seed",
+    "NSP14.Ordinary.LargeSeed.seed_eq_threshold",
+    "NSP14.Ordinary.LargeSeed.tailWeight_eq",
+    "NSP14.Ordinary.LargeSeed.thresholdLower_le_threshold",
+    "NSP14.Ordinary.LargeSeed.threshold_gap_identity",
+    "NSP14.Ordinary.LargeSeed.triangularNat_cast",
+    "NSP14.Ordinary.LargeSeed.triangularNat_succ",
+    "NSP14.Ordinary.LargeSeed.triangular_nonneg"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block04": true,
+  "source": "NSP14/Ordinary/LargeSeed.lean",
+  "paper_source": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, section 11 S2,S6-S20; V03 III.5 O_LARGE O21",
+  "scope": "Universal harmonic barrier for r>=10 and positive base gap G_r(10,a_r) for every r>=9. No arbitrary-deficit closure yet.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A05",
+  "remaining": [
+    "positive e/d finite differences and arbitrary-deficit large-rank closure",
+    "actual common tower and its resource caps",
+    "Koszul/Tor, target margins and Betti transfer",
+    "full M12 and full P14"
+  ]
+}

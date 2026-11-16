@@ -1,0 +1,4 @@
+tests/RelativePresentation.lean:12:77: error(lean.invalidField): Invalid field `relativeToFull_injective`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeToFull_injective`, so it is not possible to project the field `relativeToFull_injective` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:18:8: error: `RelativePresentationAcceptance.actual_relative_embedding` has already been declared

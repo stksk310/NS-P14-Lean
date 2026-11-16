@@ -1,0 +1,99 @@
+✖ [4382/4383] Building NSP14.Width.EdgeHoleCounting (1.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleCounting.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleCounting.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleCounting.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleCounting.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleCounting.setup.json --json
+warning: NSP14/Width/EdgeHoleCounting.lean:30:22: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NSP14/Width/EdgeHoleCounting.lean:30:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: NSP14/Width/EdgeHoleCounting.lean:42:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 0
+  e - g ≤ 0
+  d ≥ 0
+  d + f - h ≥ 1
+  d + e - g ≤ 0
+  c ≥ 1
+  b ≥ 1
+  a ≥ 1
+where
+ a := ↑r
+ b := ↑s
+ c := ↑i
+ d := ↑(if r ≤ i then (s + 1).choose (i - r) else 0)
+ e := ↑((r + s + 1).choose (i - 1))
+ f := ↑(if s ≤ i then (r + 1).choose (i - s) else 0)
+ g := ↑((r + s + 1 + 1).choose i)
+ h := ↑((r + s + 2).choose i)
+error: NSP14/Width/EdgeHoleCounting.lean:53:30: Expected type must not contain free variables
+  r ≤ 1
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+error: NSP14/Width/EdgeHoleCounting.lean:53:55: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 2
+  a ≥ 2
+where
+ a := ↑r
+error: NSP14/Width/EdgeHoleCounting.lean:53:4: unsolved goals
+case pos
+r s : ℕ
+hr : 1 ≤ r
+hs : 1 ≤ s
+hq : 3 ≤ r + s
+hi : 1 ≤ 1
+hr1 : ¬r = 1
+hs1 : s = 1
+⊢ Nat.choose 2 (1 - r) ≤ 1
+error: NSP14/Width/EdgeHoleCounting.lean:64:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + g - h ≥ 1
+  e ≥ 0
+  e - g ≥ 0
+  d ≥ 0
+  d - f ≥ 0
+  d + e ≥ 0
+  c ≥ 2
+  b ≥ 1
+  a ≥ 2
+  a + b ≥ 3
+where
+ a := ↑r
+ b := ↑s
+ c := ↑i
+ d := ↑((r + s + 1).choose (i - 2))
+ e := ↑((r + s + 1).choose (i - 1))
+ f := ↑(if r ≤ i then (s + 1).choose (i - r) else 0)
+ g := ↑(if s ≤ i then (r + 1).choose (i - s) else 0)
+ h := ↑((r + s + 2).choose (i - 1))
+error: NSP14/Width/EdgeHoleCounting.lean:71:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  e + f - g ≥ 1
+  d ≥ 0
+  d - e ≥ 0
+  c ≥ 0
+  c - f ≥ 0
+  c + d ≥ 0
+  b ≥ 2
+  a ≥ 2
+where
+ a := ↑s
+ b := ↑i
+ c := ↑((r + s + 1).choose (i - 2))
+ d := ↑((r + s + 1).choose (i - 1))
+ e := ↑(if r ≤ i then (s + 1).choose (i - r) else 0)
+ f := ↑(if s ≤ i then (r + 1).choose (i - s) else 0)
+ g := ↑((r + s + 2).choose (i - 1))
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleCounting
+error: build failed

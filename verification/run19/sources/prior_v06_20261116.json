@@ -1,0 +1,11 @@
+{
+  "status": "PASS_PRIOR_V06_AND_RUN19_INPUTS",
+  "proof": "d446fc2f18f7a8603d1eedd446e93810dc44d01c",
+  "evidence": "0880f6f30836873036b4d9908b7dcef50125d2c8",
+  "checks": 289,
+  "fixtures": 273,
+  "source_files": 1497,
+  "evidence_files": 317,
+  "n4_and_zip_hashes": true,
+  "core_math_source_identical": true
+}

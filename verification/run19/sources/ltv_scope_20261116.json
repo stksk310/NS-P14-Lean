@@ -1,0 +1,13 @@
+{
+  "url": "https://arxiv.org/html/2307.05589v1",
+  "version": "v1, 2023-07-10",
+  "authors": [
+    "D. V. Lan",
+    "Nguyen Chanh Tu",
+    "Thanh Vu"
+  ],
+  "license": "CC BY 4.0 as displayed by arXiv",
+  "read_scope": "Theorem 1.1/5.2, surrounding proof and cited classification/initial-ideal strategy; theorem comparison scope checked against V06",
+  "implemented_scope": "necessary quotient positive-row comparison, by independent actual endpoint proof; no copied paper proof or numerical linear estimate claimed",
+  "reuse": "existing repository common endpoint proofs; exact original Git blobs and read-only deterministic replay separately supplied"
+}

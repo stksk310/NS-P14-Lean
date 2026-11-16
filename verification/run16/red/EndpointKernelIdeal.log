@@ -1,0 +1,18 @@
+tests/EndpointActualKernel.lean:9:6: error(lean.invalidField): Invalid field `actualDeadFiber`: The environment does not contain `NSP14.Endpoint.Data.actualDeadFiber`, so it is not possible to project the field `actualDeadFiber` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointActualKernel.lean:9:40: error(lean.invalidField): Invalid field `competitorFiber`: The environment does not contain `NSP14.Endpoint.Data.competitorFiber`, so it is not possible to project the field `competitorFiber` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointActualKernel.lean:9:63: error(lean.invalidField): Invalid field `actualDeadFiber_eq_inter`: The environment does not contain `NSP14.Endpoint.Data.actualDeadFiber_eq_inter`, so it is not possible to project the field `actualDeadFiber_eq_inter` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointActualKernel.lean:16:6: error(lean.invalidField): Invalid field `actualKernelIdeal`: The environment does not contain `NSP14.Endpoint.Data.actualKernelIdeal`, so it is not possible to project the field `actualKernelIdeal` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointActualKernel.lean:16:51: error(lean.invalidField): Invalid field `competitorIdeal`: The environment does not contain `NSP14.Endpoint.Data.competitorIdeal`, so it is not possible to project the field `competitorIdeal` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointActualKernel.lean:16:76: error(lean.invalidField): Invalid field `actualKernelIdeal_eq_inf`: The environment does not contain `NSP14.Endpoint.Data.actualKernelIdeal_eq_inf`, so it is not possible to project the field `actualKernelIdeal_eq_inf` from an expression
+  D
+of type `Endpoint.Data`

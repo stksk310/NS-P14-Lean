@@ -1,0 +1,22 @@
+{
+  "status": "PASS_REVIEW_FOR_ACTUAL_GENERIC_FIELD_GRADED_DISTRACTION_PRESERVATION",
+  "run18_complete": false,
+  "proof_snapshot_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2",
+  "reviewed_source_commit": "6bcd0259b84b61614d3e6f5ed14f30aa935717e2",
+  "verification": "verification/run18/runs/release_candidate_20261115_r10/verification.json",
+  "verification_sha256": "3595c5736e45c87b52768216f3d0157ec1c7b529ea7dc3d393e826d3705720fa",
+  "report": "verification/run18/graded_distraction_review_20261115.md",
+  "report_sha256": "5aaea12adaed8118231213576c12ec24a522971c63f95c17f5309ee402fb385a",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "remaining": [
+    "original-field monomial ideal scalar extension and descent",
+    "general BHP lex iteration and termination",
+    "common-Hilbert lex existence",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

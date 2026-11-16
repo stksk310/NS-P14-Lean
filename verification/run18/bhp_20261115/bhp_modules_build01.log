@@ -1,0 +1,6 @@
+✔ [5640/5649] Built NSP14.Lex.PrefixVariableRestriction (1.0s)
+✔ [5642/5649] Built NSP14.Lex.StableBinomialWeights (1.4s)
+✔ [5644/5649] Built NSP14.Lex.StableDegreeDecomposition (1.7s)
+✔ [5646/5649] Built NSP14.Lex.StableBettiComparison (1.6s)
+✔ [5648/5649] Built NSP14.Lex.BettiComparison (1.1s)
+Build completed successfully (5649 jobs).

@@ -1,0 +1,41 @@
+✖ [4696/4697] Building NSP14.Homological.KoszulSlotGrading (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/KoszulSlotGrading.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/KoszulSlotGrading.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/KoszulSlotGrading.setup.json --json
+error: NSP14/Homological/KoszulSlotGrading.lean:85:6: No goals to be solved
+error: NSP14/Homological/KoszulSlotGrading.lean:92:8: Function expected at
+  ih 0 ((ConcreteCategory.hom (scalarConeZeroIso (VariableRing k σ) (MvPolynomial.X x) (koszulList k σ xs M)).hom) a) s
+but this term has type
+  ((koszulSlotBasis k σ M b xs 0).repr
+        ((ConcreteCategory.hom (scalarConeZeroIso (VariableRing k σ) (MvPolynomial.X x) (koszulList k σ xs M)).hom) a))
+      (s, j) =
+    (b.repr
+        ((coefficientSlotOut k σ M xs 0 s)
+          ((ConcreteCategory.hom (scalarConeZeroIso (VariableRing k σ) (MvPolynomial.X x) (koszulList k σ xs M)).hom)
+            a)))
+      j
+
+Note: Expected a function because this term is being applied to the argument
+  j
+error: NSP14/Homological/KoszulSlotGrading.lean:100:10: Function expected at
+  ih i ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).1 s
+but this term has type
+  ((koszulSlotBasis k σ M b xs i).repr ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).1) (s, j) =
+    (b.repr ((coefficientSlotOut k σ M xs i s) ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).1))
+      j
+
+Note: Expected a function because this term is being applied to the argument
+  j
+error: NSP14/Homological/KoszulSlotGrading.lean:106:10: Function expected at
+  ih (i + 1) ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).2 s
+but this term has type
+  ((koszulSlotBasis k σ M b xs (i + 1)).repr ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).2)
+      (s, j) =
+    (b.repr
+        ((coefficientSlotOut k σ M xs (i + 1) s)
+          ((scalarConePieceEquiv (koszulList k σ xs M) (MvPolynomial.X x) i) a).2))
+      j
+
+Note: Expected a function because this term is being applied to the argument
+  j
+Some required targets logged failures:
+- NSP14.Homological.KoszulSlotGrading
+error: build failed

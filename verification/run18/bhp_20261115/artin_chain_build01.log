@@ -1,0 +1,14 @@
+✖ [4738/4739] Building NSP14.Endpoint.ArtinGradedChain (1.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Endpoint/ArtinGradedChain.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedChain.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Endpoint/ArtinGradedChain.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedChain.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Endpoint/ArtinGradedChain.setup.json --json
+error: NSP14/Endpoint/ArtinGradedChain.lean:41:36: Application type mismatch: The argument
+  he
+has type
+  f a = f b
+but is expected to have type
+  ↑a = ↑b
+in the application
+  congrArg Prod.fst he
+error: NSP14/Endpoint/ArtinGradedChain.lean:50:7: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'gradedKoszulSpace', which is 'noncomputable'
+Some required targets logged failures:
+- NSP14.Endpoint.ArtinGradedChain
+error: build failed

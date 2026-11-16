@@ -1,0 +1,7 @@
+{
+  "verification/run18/diagnostics_20261113/SparseOrdinaryProbe.lean": "ea88eb4ec4d8f8dba99f940b01faecbd6204e155b0e5ccde667a029c04b8bed2",
+  "verification/run18/diagnostics_20261113/diagnosis.json": "9609f9a5b388ee12ade9821308f7647b4367898cc03a8ef0a952f42bc6022416",
+  "verification/run18/diagnostics_20261113/ordinary-probe.log": "afbe9830805a08b4860a44f97447ac367ea59b19708f2d49c935c4f482c7456f",
+  "verification/run18/diagnostics_20261113/width-sparse-cached-fixture.log": "f6780d3e30089e207f331c33ff5662b7d56144c978aac0e709336471fe97b9d4",
+  "verification/run18/diagnostics_20261113/width-sparse-single-thread.log": "2eaee9d3d2c606b65c45dfe2f4d345cc88b366d0f0ee6614161758400812ac4a"
+}

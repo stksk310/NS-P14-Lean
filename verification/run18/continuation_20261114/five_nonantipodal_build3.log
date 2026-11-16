@@ -1,0 +1,65 @@
+✖ [5696/5697] Building NSP14.Width.FiveNonAntipodal (6.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveNonAntipodal.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveNonAntipodal.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveNonAntipodal.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveNonAntipodal.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveNonAntipodal.setup.json --json
+error: NSP14/Width/FiveNonAntipodal.lean:61:8: linarith failed to find a contradiction
+case «8»
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+h : D.u = 8
+hu : 8 ≤ 8
+hu12 : ¬12 ≤ 8
+hW : D.wordVolume ≤ 13
+hp : ↑D.wordVolume ≤ 13
+hβ : ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - 8 + 5
+a✝ : 30 ≤ totalBetti k D.Variables (D.fullG k) 1
+⊢ False
+failed
+error: NSP14/Width/FiveNonAntipodal.lean:61:8: linarith failed to find a contradiction
+case «9»
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+h : D.u = 9
+hu : 8 ≤ 9
+hu12 : ¬12 ≤ 9
+hW : D.wordVolume ≤ 16
+hp : ↑D.wordVolume ≤ 16
+hβ : ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - 9 + 5
+a✝ : 38 ≤ totalBetti k D.Variables (D.fullG k) 1
+⊢ False
+failed
+error: NSP14/Width/FiveNonAntipodal.lean:61:8: linarith failed to find a contradiction
+case «10»
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+h : D.u = 10
+hu : 8 ≤ 10
+hu12 : ¬12 ≤ 10
+hW : D.wordVolume ≤ 19
+hp : ↑D.wordVolume ≤ 19
+hβ : ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - 10 + 5
+a✝ : 47 ≤ totalBetti k D.Variables (D.fullG k) 1
+⊢ False
+failed
+error: NSP14/Width/FiveNonAntipodal.lean:61:8: linarith failed to find a contradiction
+case «11»
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+h : D.u = 11
+hu : 8 ≤ 11
+hu12 : ¬12 ≤ 11
+hW : D.wordVolume ≤ 23
+hp : ↑D.wordVolume ≤ 23
+hβ : ↑(totalBetti k D.Variables (D.fullG k) 1) ≤ 10 * ↑D.wordVolume / 4 - 11 + 5
+a✝ : 57 ≤ totalBetti k D.Variables (D.fullG k) 1
+⊢ False
+failed
+Some required targets logged failures:
+- NSP14.Width.FiveNonAntipodal
+error: build failed

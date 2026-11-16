@@ -1,0 +1,68 @@
+✖ [5582/5583] Building NSP14.Width.AntipodalIdeal (1.8s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalIdeal.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalIdeal.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalIdeal.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalIdeal.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalIdeal.setup.json --json
+error: NSP14/Width/AntipodalIdeal.lean:41:6: Tactic `apply` failed: could not unify the conclusion of `@le_sup_right`
+  ∀ {a b : ?α}, b ≤ a ⊔ b
+with the goal
+  (fun β => (MvPolynomial.monomial β) 1) β ∈
+    ↑(D.antipodalQuadraticIdeal k h t ha ⊔
+        Width.binaryCutoffIdeal k (D.antipodalVariable h t ha 0) (D.antipodalVariable h t ha 2) h)
+
+Note: The full type of `@le_sup_right` is
+  ∀ {α : Type ?u.91} [inst : SemilatticeSup α] {a b : α}, b ≤ a ⊔ b
+
+case pos
+D : Data
+k : Type
+inst✝ : Field k
+h t : ℕ
+ha : D.a = {t, h, t + h}
+hh : 4 ≤ h
+ht0 : 0 < t
+ht : t < h
+hyz : D.antipodalVariable h t ha 0 ≠ D.antipodalVariable h t ha 1
+hyw : D.antipodalVariable h t ha 0 ≠ D.antipodalVariable h t ha 2
+hzw : D.antipodalVariable h t ha 1 ≠ D.antipodalVariable h t ha 2
+β : ↥D.a →₀ ℕ
+hβ : β ∈ {β | ¬D.AntipodalStandard h t ha β}
+htr : h ≤ β (D.antipodalVariable h t ha 0) + β (D.antipodalVariable h t ha 2)
+⊢ (fun β => (MvPolynomial.monomial β) 1) β ∈
+    ↑(D.antipodalQuadraticIdeal k h t ha ⊔
+        Width.binaryCutoffIdeal k (D.antipodalVariable h t ha 0) (D.antipodalVariable h t ha 2) h)
+error: NSP14/Width/AntipodalIdeal.lean:43:6: Tactic `apply` failed: could not unify the conclusion of `@le_sup_left`
+  ∀ {a b : ?α}, a ≤ a ⊔ b
+with the goal
+  (fun β => (MvPolynomial.monomial β) 1) β ∈
+    ↑(D.antipodalQuadraticIdeal k h t ha ⊔
+        Width.binaryCutoffIdeal k (D.antipodalVariable h t ha 0) (D.antipodalVariable h t ha 2) h)
+
+Note: The full type of `@le_sup_left` is
+  ∀ {α : Type ?u.92} [inst : SemilatticeSup α] {a b : α}, a ≤ a ⊔ b
+
+case neg
+D : Data
+k : Type
+inst✝ : Field k
+h t : ℕ
+ha : D.a = {t, h, t + h}
+hh : 4 ≤ h
+ht0 : 0 < t
+ht : t < h
+hyz : D.antipodalVariable h t ha 0 ≠ D.antipodalVariable h t ha 1
+hyw : D.antipodalVariable h t ha 0 ≠ D.antipodalVariable h t ha 2
+hzw : D.antipodalVariable h t ha 1 ≠ D.antipodalVariable h t ha 2
+β : ↥D.a →₀ ℕ
+hβ : β ∈ {β | ¬D.AntipodalStandard h t ha β}
+htr : ¬h ≤ β (D.antipodalVariable h t ha 0) + β (D.antipodalVariable h t ha 2)
+⊢ (fun β => (MvPolynomial.monomial β) 1) β ∈
+    ↑(D.antipodalQuadraticIdeal k h t ha ⊔
+        Width.binaryCutoffIdeal k (D.antipodalVariable h t ha 0) (D.antipodalVariable h t ha 2) h)
+warning: NSP14/Width/AntipodalIdeal.lean:90:32: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [AntipodalStandard, hyz, hyz.symm, hyw, hyw.symm, hzw, hzw.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- NSP14.Width.AntipodalIdeal
+error: build failed

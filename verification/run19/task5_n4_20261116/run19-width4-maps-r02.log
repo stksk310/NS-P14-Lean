@@ -1,0 +1,24 @@
+NSP14/NarrowFour/WidthFourInitial.lean:276:41: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  D.u
+in the target expression
+  L + K + (s + t) = L + s + t + K
+
+case fst
+D : Endpoint.Data
+hu : D.u = 4
+ha : D.a = {1, 3}
+L s t K : ℕ
+⊢ L + K + (s + t) = L + s + t + K
+NSP14/NarrowFour/WidthFourInitial.lean:273:56: error: unsolved goals
+case snd
+D : Endpoint.Data
+hu : D.u = 4
+ha : D.a = {1, 3}
+L s t K : ℕ
+⊢ 4 * K + (s * 1 + t * 3) = s + 3 * t + 4 * K
+NSP14/NarrowFour/WidthFourInitial.lean:286:26: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+NSP14/NarrowFour/WidthFourInitial.lean:286:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

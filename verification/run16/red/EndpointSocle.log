@@ -1,0 +1,6 @@
+tests/EndpointSocle.lean:6:42: error(lean.invalidField): Invalid field `actualSocle`: The environment does not contain `NSP14.Endpoint.Data.actualSocle`, so it is not possible to project the field `actualSocle` from an expression
+  D
+of type `Data`
+tests/EndpointSocle.lean:6:62: error(lean.invalidField): Invalid field `actualR_socle_dimension`: The environment does not contain `NSP14.Endpoint.Data.actualR_socle_dimension`, so it is not possible to project the field `actualR_socle_dimension` from an expression
+  D
+of type `Data`

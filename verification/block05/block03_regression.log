@@ -1,0 +1,11 @@
+'NSP14.Ordinary.SmallScalar.residual_weight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.residual_weight_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.residual_tail_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.Resources.scalar_le_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.Resources.scalar_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_boundary_sidon' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Ordinary.SmallScalar.Resources.scalar_lt_of_apery_pairs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,1 @@
+All146 acceptance commands, inherited numeric/model checks and environment_axioms exited0. Postprocessing assertion expected every test module to own exported constants, but28 modules only had anonymous examples. All production modules were present in the extracted environment. The acceptance propositions are now named so the original all-module coverage assertion remains strict.

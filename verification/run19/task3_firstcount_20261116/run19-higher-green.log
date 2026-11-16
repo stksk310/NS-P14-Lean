@@ -1,0 +1,41 @@
+tests/N4Higher.lean:21:60: error: unexpected token ':='; expected ':'
+tests/N4Higher.lean:23:22: error: Application type mismatch: The argument
+  S
+has type
+  NumericalSemigroup
+of sort `Type` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  @all_fields S
+tests/N4Higher.lean:24:22: error: Application type mismatch: The argument
+  S
+has type
+  NumericalSemigroup
+of sort `Type` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  @all_fields S
+tests/N4Higher.lean:25:22: error: Application type mismatch: The argument
+  S
+has type
+  NumericalSemigroup
+of sort `Type` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  @all_fields S
+tests/N4Higher.lean:26:22: error: Application type mismatch: The argument
+  S
+has type
+  NumericalSemigroup
+of sort `Type` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  @all_fields S
+tests/N4Higher.lean:28:13: error: Application type mismatch: The argument
+  S
+has type
+  NumericalSemigroup
+of sort `Type` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  @all_fields S

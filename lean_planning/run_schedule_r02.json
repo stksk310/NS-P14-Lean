@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "date_jst": "2026-11-10",
+  "plan_status": "TARGET_NOT_COMPLETION_OR_FEASIBILITY_CERTIFICATE",
+  "repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_baseline_commit": "791a2c94eda09479d0582f30726669c6d28fbc7b",
+  "audited_completed_blocks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "execution_thread_observed": {
+    "title": "NS-P14 Lean化実行スレ",
+    "id": "01a1bdc6-dbdb-7070-8852-d3d75798f0ad",
+    "current_block": 11,
+    "status": "IN_PROGRESS_UNAUDITED",
+    "observation": "N/Q and inherited grading are being implemented; do not interrupt or count as completed."
+  },
+  "counting": {
+    "completed_runs": 10,
+    "in_progress_run": 11,
+    "target_total_runs": 20,
+    "planned_runs_including_in_progress": 10,
+    "next_new_run": 12,
+    "note": "Block01–10 are counted as ten historical logical runs; this is a planning convention, not a measurement of API turns or retries."
+  },
+  "registry_path": "proof_structure_v3/lemma_registry.json",
+  "runs": [
+    {
+      "run": 11,
+      "title": "actual N/Q・Apéry基底・次数計数",
+      "status": "IN_PROGRESS_UNAUDITED",
+      "registry_closure_ownership": [],
+      "acceptance": [
+        "NがAのactual斉次イデアル",
+        "Q=A/NのApéry基底、標準生成、Artin性",
+        "q0=1、q1=e−1、Σ高次q=δ、A2≃Q2、ν≤δ+1"
+      ]
+    },
+    {
+      "run": 12,
+      "title": "同jump加群・jump上限・完備化比較",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "O_COORD"
+      ],
+      "acceptance": [
+        "actual S0作用と上下反対のjump filtration",
+        "同jump strataの次数差s付きS0線型同型",
+        "全terminalの2≤d≤ν",
+        "代数的Gと完備半群環の接錐の次数付きk代数同値"
+      ]
+    },
+    {
+      "run": 13,
+      "title": "共有Koszul/Tor・有限性・体拡大・標準単項式基盤",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "X_BASIC",
+        "I_FIELD"
+      ],
+      "acceptance": [
+        "actual最小変数列のKoszul複体、標準Tor/Bettiとの一致",
+        "必要な完全列・有限性・有界複体次元比較",
+        "同標数体拡大でのBetti保存、分数体Eulerと必要なGröbner補題"
+      ]
+    },
+    {
+      "run": 14,
+      "title": "Green・一つのcut・offset体積・actual tower・Sidon接続",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "X_GREEN",
+        "O_CUT",
+        "O_VOLUME",
+        "O_TOWER",
+        "O_SIDON"
+      ],
+      "acceptance": [
+        "必要なGreen次数2特殊版の形式証明と有限体処理",
+        "同じsource・体・cutからactual towerと唯一の資源列",
+        "least-offset安定化、体積、全資源条件と最大Q2→AperyPairData"
+      ]
+    },
+    {
+      "run": 15,
+      "title": "算術列target・調和rank・ordinary全行閉鎖",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "X_AP_BETTI",
+        "X_AP_CONE",
+        "I_TARGET",
+        "O_HARMONIC",
+        "O_TOR",
+        "O_TARGET",
+        "O_LOW",
+        "O_SCALAR",
+        "O_SMALL",
+        "O_LARGE",
+        "O_CLOSE"
+      ],
+      "acceptance": [
+        "算術列Betti公式と接錐Betti一致の必要範囲を形式証明",
+        "実際のTor鎖・harmonic rankからBlock01–07の数値定理へ接続",
+        "ordinary全域・全行・任意体のactual Betti比較"
+      ]
+    },
+    {
+      "run": 16,
+      "title": "狭幅正規化・端点actual核・全行移行",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "I_NORMALIZE",
+        "E_CORE",
+        "E_COORD",
+        "E_KERNEL",
+        "E_STOP",
+        "E_BOUNDS",
+        "E_HOMOLOGY",
+        "E_TRANSFER",
+        "E_ARTIN",
+        "E_ROW",
+        "E_TWO"
+      ],
+      "acceptance": [
+        "整数coreのactual全射・全長い表示との競合・正確な核",
+        "停止、height、有限性、端点Koszul homologyと核補償",
+        "Artin親子計数、一般qと二内部変数の全行移行"
+      ]
+    },
+    {
+      "run": 17,
+      "title": "Kneser・Savchev–Chenの必要形",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "X_KNESER",
+        "X_SC"
+      ],
+      "acceptance": [
+        "合成数位数を含むKneserと反復形の形式証明",
+        "長零和自由列の必要なunit正規化定理の形式証明",
+        "N4・疎幅が使う正確な量化と添字でexport"
+      ]
+    },
+    {
+      "run": 18,
+      "title": "BHP/Pardue・EKと五生成元以上の狭幅閉鎖",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "X_BHP_EK",
+        "W_EDGE",
+        "W_DENSE",
+        "W_SPARSE",
+        "W_FIVE",
+        "W_CLOSE"
+      ],
+      "acceptance": [
+        "任意標数の必要なBHP/Pardue・EK比較の形式証明",
+        "edge/dense/sparse/fiveのactual target比較",
+        "五生成元以上の全物理狭幅・全Betti行の閉鎖"
+      ]
+    },
+    {
+      "run": 19,
+      "title": "N4全幅・幅4・一〜三生成元",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "N_DISTANCE",
+        "N_WORDS",
+        "N_HIGH",
+        "N_FIRST",
+        "N_SMALL",
+        "N_WIDTH4",
+        "N_CLOSE",
+        "I_BASE",
+        "X_LTV",
+        "I_THREE"
+      ],
+      "acceptance": [
+        "N4の距離・標準語・全行・小幅場合分け",
+        "幅4の全m競合と正確なinitial ideal、actual Betti接続",
+        "一・二生成元と三生成元公刊比較の必要形を形式証明"
+      ]
+    },
+    {
+      "run": 20,
+      "title": "全域合成・依存閉包・原稿照合・最終監査",
+      "status": "PLANNED",
+      "registry_closure_ownership": [
+        "I_PARTITION",
+        "I_MAIN"
+      ],
+      "acceptance": [
+        "全パラメータ分割とactual主定理への合成",
+        "全50 ID・公刊7入力・共通基礎の閉包を検証",
+        "clean build、全回帰、未証明入力ゼロ、最終Lean/原稿のhash固定"
+      ]
+    }
+  ],
+  "dependency_refinements": [
+    {
+      "consumer": "O_COORD",
+      "bundled_dependency": "X_BASIC",
+      "required_export": "coordinate_linear_algebra_and_polynomial_presentation",
+      "provider_run": 12,
+      "aggregate_closure_run": 13,
+      "reason": "X_BASIC bundles coordinate prerequisites with unrelated Koszul/Tor and Groebner theory. Run12 must prove or cite actual compiled Lean prerequisites used by O_COORD; it cannot assume X_BASIC as a proposition. If a missing Run13 export is really needed, reorder that task or leave O_COORD explicitly open."
+    }
+  ],
+  "additional_obligations": [
+    {
+      "owner_run": 12,
+      "name": "algebraic_to_completed_associated_graded_comparison"
+    },
+    {
+      "owner_run": 13,
+      "name": "actual_Koszul_Tor_Betti_identification_and_finiteness"
+    },
+    {
+      "owner_run": 20,
+      "name": "final_manuscript_Lean_statement_and_hash_alignment"
+    }
+  ],
+  "published_inputs": [
+    "X_GREEN",
+    "X_AP_BETTI",
+    "X_AP_CONE",
+    "X_KNESER",
+    "X_SC",
+    "X_BHP_EK",
+    "X_LTV"
+  ],
+  "high_uncertainty_runs": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "replan_gates": [
+    {
+      "after_run": 12,
+      "check": "Actual coordinate/ completion closure; list precisely any missing export."
+    },
+    {
+      "after_run": 13,
+      "check": "Calibrate concrete Koszul/Tor and library reuse; revise feasibility of the remaining seven runs."
+    },
+    {
+      "after_run": 17,
+      "check": "All required public inputs have named owners and proof progress; expose any unclosed input before final integration."
+    }
+  ],
+  "completion_contract": {
+    "final_statement": "Arbitrary field, every numerical semigroup with its actual minimal presentation, all Betti rows, source completed tangent cone vs actual interval completion, with source/target polynomial rings distinguished.",
+    "allowed_foundations": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "forbidden_final_dependencies": [
+      "sorryAx",
+      "new project-specific mathematical axioms",
+      "unproved published input hypotheses",
+      "unproved actual-source/resource/completion/Betti bridges"
+    ],
+    "conditional_intermediate_theorems": "Allowed when labeled, never counted as a closed run goal or unconditional P14."
+  },
+  "stop_policy": "Continue internal tasks, fixes and verification in the same run until the semantic milestone is closed. Genuine mathematical obstructions, unavailable required capabilities or user cancellation may force an honest partial report and replanning; the run-count target never overrides proof completeness.",
+  "dispatch_status": "PREPARED_NOT_SENT: no callable cross-thread send/handoff tool is available in this session."
+}

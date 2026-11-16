@@ -1,0 +1,111 @@
+{
+  "status": "PASS_RUN20_EXACT_REGRESSION",
+  "partition_cases": 81640,
+  "rank_cases": 1652,
+  "normalized_width_cases": 2484,
+  "AP_profile_rows": 41552,
+  "physical_dilations": [
+    [
+      17,
+      3,
+      5
+    ],
+    [
+      20,
+      3,
+      6
+    ],
+    [
+      23,
+      3,
+      7
+    ],
+    [
+      26,
+      3,
+      8
+    ],
+    [
+      29,
+      3,
+      9
+    ],
+    [
+      32,
+      3,
+      10
+    ]
+  ],
+  "actual_atom_fixtures": [
+    [
+      "N",
+      [
+        1
+      ],
+      1,
+      0
+    ],
+    [
+      "two",
+      [
+        2,
+        3
+      ],
+      2,
+      1
+    ],
+    [
+      "two_nonunit",
+      [
+        3,
+        5
+      ],
+      2,
+      2
+    ],
+    [
+      "three_narrow",
+      [
+        4,
+        5,
+        6
+      ],
+      3,
+      2
+    ],
+    [
+      "three_wide",
+      [
+        4,
+        5,
+        7
+      ],
+      3,
+      3
+    ],
+    [
+      "four_narrow",
+      [
+        6,
+        7,
+        9,
+        10
+      ],
+      4,
+      4
+    ],
+    [
+      "four_ordinary",
+      [
+        6,
+        7,
+        9,
+        11
+      ],
+      4,
+      5
+    ]
+  ],
+  "ordinary_target_beta5": 5,
+  "scope": "finite regression only; universal mathematical closure is Lean"
+}

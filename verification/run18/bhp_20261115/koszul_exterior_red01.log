@@ -1,0 +1,2 @@
+tests/KoszulExterior.lean:16:3: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorTensorEquiv`
+tests/KoszulExterior.lean:16:39: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorTensorEquiv_slot`

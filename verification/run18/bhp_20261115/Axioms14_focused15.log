@@ -1,0 +1,38 @@
+'NSP14.Lex.genericDistractionTensorEquiv_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionChainIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistraction_totalBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericDistractionTensorEquiv_comm : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hmono : NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I) (j : ℕ)
+  (z :
+    TensorProduct (NSP14.Lex.GenericDistractionField k q)
+      ↑(NSP14.Homological.coefficientModule (NSP14.Lex.GenericDistractionField k q) (Fin q)
+          (NSP14.Endpoint.artinModule (NSP14.Lex.GenericDistractionField k q) (Fin q) I))
+      ↥(⋀[NSP14.Lex.GenericDistractionField k q]^(j + 1) (Fin q → NSP14.Lex.GenericDistractionField k q))),
+  (NSP14.Homological.koszulExteriorBoundary (NSP14.Lex.GenericDistractionField k q) (Fin q)
+        (NSP14.Endpoint.artinModule (NSP14.Lex.GenericDistractionField k q) (Fin q)
+          (NSP14.Lex.genericDistractionIdeal k q I))
+        (NSP14.Lex.genericDistractionBasis k q I hmono) j)
+      ((NSP14.Lex.genericDistractionTensorEquiv k q I hmono (j + 1)) z) =
+    (NSP14.Lex.genericDistractionTensorEquiv k q I hmono j)
+      ((NSP14.Homological.koszulExteriorBoundary (NSP14.Lex.GenericDistractionField k q) (Fin q)
+          (NSP14.Endpoint.artinModule (NSP14.Lex.GenericDistractionField k q) (Fin q) I)
+          (NSP14.Endpoint.artinMonomialBasis (NSP14.Lex.GenericDistractionField k q) q I) j)
+        z)
+NSP14.Lex.genericDistractionChainIso : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))) →
+        NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+          (NSP14.Lex.genericCoefficientKoszulComplex k q I ≅
+            NSP14.Lex.genericCoefficientKoszulComplex k q (NSP14.Lex.genericDistractionIdeal k q I))
+NSP14.Lex.genericDistraction_totalBetti : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))),
+  NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+    ∀ (i : ℕ),
+      NSP14.Homological.totalBetti (NSP14.Lex.GenericDistractionField k q) (Fin q)
+          (NSP14.Endpoint.artinModule (NSP14.Lex.GenericDistractionField k q) (Fin q) I) i =
+        NSP14.Homological.totalBetti (NSP14.Lex.GenericDistractionField k q) (Fin q)
+          (NSP14.Endpoint.artinModule (NSP14.Lex.GenericDistractionField k q) (Fin q)
+            (NSP14.Lex.genericDistractionIdeal k q I))
+          i

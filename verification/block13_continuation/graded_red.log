@@ -1,0 +1,2 @@
+tests/GradedKoszul.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Homological.gradedKoszulComplex`
+tests/GradedKoszul.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Homological.gradedBetti_total`

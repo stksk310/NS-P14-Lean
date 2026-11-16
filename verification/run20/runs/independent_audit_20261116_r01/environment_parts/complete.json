@@ -1,0 +1,7 @@
+{
+  "status": "PASS_ALL_AUDIT_PARTS",
+  "declarations": 15774,
+  "modules": 1019,
+  "collectAxioms_each_declaration": true,
+  "normal_explicit_each_declaration": true
+}

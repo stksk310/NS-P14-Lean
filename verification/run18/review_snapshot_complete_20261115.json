@@ -1,0 +1,18 @@
+{
+  "status": "PASS_REVIEW_FOR_ALL_SIX_FROZEN_RUN18_GOALS",
+  "run18_complete": true,
+  "proof_snapshot_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+  "reviewed_source_commit": "a5f480c5136042597fceae23ad06d2ef3923ed02",
+  "verification": "verification/run18/runs/release_candidate_20261115_r16/verification.json",
+  "verification_sha256": "99b1c1d68b87d1e39bb94bfe93aa4a0d7ccd6fac8097f588c5a3722ac600c557",
+  "report": "verification/run18/complete_review_20261115.md",
+  "report_sha256": "118131fb3151fdfbec20a175344114c67831dcdecf686dc758ea8fb977447df9",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": []
+}

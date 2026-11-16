@@ -1,0 +1,49 @@
+NSP14/NarrowFour/SmallWidths.lean:25:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq ℕ ((gcd ↑a ↑b).gcd D.u) 1
+but is expected to have type
+  @Eq ℕ (((↑a).gcd ↑b).gcd D.u) 1
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.gcd ↦ 8
+NSP14/NarrowFour/SmallWidths.lean:451:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 0
+  1 ≤ h ≤ 2
+  g ≥ 30
+  0 ≤ f ≤ 3
+  e ≥ 0
+  e - i ≤ 9
+  d ≥ 0
+  d + e + f - g ≥ -1
+  0 ≤ c ≤ 17
+  c - d ≥ 8
+where
+ c := ↑D.wordVolume
+ d := ↑(D.actualR k)
+ e := ↑(D.coreP k)
+ f := ↑(D.internalSigma k hq)
+ g := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ h := ↑(D.u - ↑b)
+ i := ↑(Nat.choose 4 2)
+NSP14/NarrowFour/SmallWidths.lean:451:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 0
+  1 ≤ h ≤ 6
+  g ≥ 30
+  0 ≤ f ≤ 5
+  e ≥ 0
+  e - i ≤ 8
+  d ≥ 0
+  d + e + f - g ≥ -1
+  0 ≤ c ≤ 17
+  c - d ≥ 8
+where
+ c := ↑D.wordVolume
+ d := ↑(D.actualR k)
+ e := ↑(D.coreP k)
+ f := ↑(D.internalSigma k hq)
+ g := ↑(totalBetti k D.Variables (D.fullG k) 1)
+ h := ↑(D.u - ↑b)
+ i := ↑(Nat.choose 4 2)

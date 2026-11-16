@@ -1,0 +1,114 @@
+{
+  "status": "READ_ONLY_LEAN_ALIGNMENT_INVESTIGATION_AND_HANDOFF",
+  "generated_at_utc": "2026-11-15T14:33:11.464589+00:00",
+  "repository": "https://github.com/stksk310/NS-P14-Lean",
+  "inspected_head_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "explicitly_fetched_origin_work_commit": "345e2d82fea50ef89e00a8f35c4fb53ac601d7ce",
+  "production_lean_modified": false,
+  "lean_build_run_in_this_investigation": false,
+  "lean_axiom_probe_run_in_this_investigation": false,
+  "new_files_scope": "handoff documents and receipt only",
+  "r16_recorded_fixtures": 268,
+  "r16_recorded_checks": 280,
+  "r16_checks_rerun_in_this_investigation": false,
+  "source_sha256": {
+    "NSP14/Endpoint/Carry.lean": "95ba789f8bcdb85db4e7cec6072cf197f1eec1ba532163180d0c8e932d9d0702",
+    "NSP14/Endpoint/ActualKernel.lean": "9fcb8b751d540d92bd3d0c729109ad1001af913fc44a410d6b74150ad78c9c43",
+    "NSP14/Endpoint/CarrySums.lean": "7933e65c1a3538b73158dff09f83e78336ade3eb521bcaf5cdf903f813dae0e3",
+    "NSP14/Endpoint/CompetitorBounds.lean": "d3d966f5a41aa8c7c91e1a6edefbfa5713cadcb0a6d37b61c48f86d7cd972bee",
+    "NSP14/Endpoint/FiniteCompetitors.lean": "0e169dfe2c07a8e78e0f60ef48f5ae2a59eb730187b762425b7854c157b90fe0",
+    "NSP14/Endpoint/FiniteSocleBounds.lean": "eed8613cce7e237b5f0849054d293ee73219a3866b3c98ae0417ae2f0fce5330",
+    "NSP14/Width/AntipodalComparison.lean": "fa91a02485cb91e303f424b37ae0ead4cc94f7128932a91bd735279ecd66f9fb",
+    "NSP14/Width/FiveNonAntipodal.lean": "a4d0fce7d9dc0651f45e05d63f3b8a5c0f4e2d9adf41107ce602e394a501e5ca",
+    "NSP14/Width/FiveHigher.lean": "fbc42e5ea06de6658e56825b0590c1050355a42ebbde94f7ae07e9e13a74de54",
+    "NSP14/Width/SparseHigher.lean": "4106471bb7a4c29d898c42e06057d450ae1fcc650cb7b76e188a26cf13aafb2d",
+    "NSP14/Width/NormalizedCapacity.lean": "001e46887db4c6dfcbc42407dcaed3f27fffcb6705fe40045a6b2574a842de0a",
+    "NSP14/Width/DenseLexResources.lean": "2d3bb1f1e0393b1e713538c448b9dbc4efa81391bd1cf74fad8d5f3cf88d2bb8",
+    "NSP14/Width/DensePayment.lean": "d9098a6ce496cfce7a2298eb2c9909f58f1b365ce7d010dcfc344986bcdcaf7c",
+    "NSP14/Width/DenseComparison.lean": "4c94712316ae2b5ccee17e247704f8f51bd7cfccb8d033fe92e564c14d95d25a",
+    "NSP14/Ordinary/SmallScalar.lean": "9c933c354d0bac4797aae1b1305c6f2adfde574451a488b081bdabbe60152f06",
+    "NSP14/Ordinary/LargeScalar.lean": "eb3e3fe808f2882c5b028c4433ceae0aa27a48891dcd27468327241beb998418",
+    "audit/run18/RequestedGoals.lean": "86a0a18eff0632cb915d67748dcef47a88991cebf287ef95750f58b450bea689",
+    "scripts/verify_run18.py": "a8329ab825e2d4720f27454bbeffb0757f40ae17c2b9b00d747dae5fb0aae9b3",
+    "scripts/verify_run16.py": "b778ddb808f94965e9118b8c772893045e856a4370d99e2ac673bd08771b94f1",
+    "scripts/package_run18_audit.py": "883addb1d420fee00efb32934629a9fc544869e7255545a43992504f2adb502e",
+    "scripts/check_run18_guards.py": "b997abec047e613c7c2ef45975f7068f5831c0d817927b41571ebde06291ce1a",
+    "docs/RUN18_HANDOFF_JA.md": "bf5375f69b6cd7e2c243600b151f11c91cc5f77ebbe3029ef34a953bdace54e6",
+    "docs/LEAN_WORKFLOW.md": "7755ecaa3011604e8fd587f94a168c5b2da3b4a2120bb4008c523b1562f08c1b",
+    "docs/LEAN_PAPER_ALIGNMENT_JA.md": "3ddbc7278a2b5a2c84fbe9e0c5b564087f681e831f8a9db11469eb7c67da9937",
+    "docs/RUN18_PAPER_CORRESPONDENCE_JA.md": "cc699853e3785c5a8187ad6311529f9eab95288e5129f1f25fefea750cbc7e40",
+    "verification/run18/runs/release_candidate_20261115_r16/verification.json": "99b1c1d68b87d1e39bb94bfe93aa4a0d7ccd6fac8097f588c5a3722ac600c557",
+    "lean-toolchain": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+    "lake-manifest.json": "5358c4849cc3a4fce50598d157aa2a6363e8d475d3cdaeab811851b82f87d766",
+    "proof_sharp_v6/NS_P14_SHARP_PROOF_JA.md": "fe8271bbaabf6b3d31243628c3a5a5a305b82361c794f03c6e13a2fe98c72791",
+    "proof_sharp_v6/NS_P14_SHARP_V06.zip": "788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d"
+  },
+  "deliverable_sha256": {
+    "lean_alignment_v06_handoff/ASSESSMENT_JA.md": "ef11348f08cd81b4adf6961dd12bc89c7c53750cc719ca4a6912840b8674f4d1",
+    "lean_alignment_v06_handoff/EXECUTION_PROMPT_JA.md": "419e30630f757e6ada83c6e062580a4dd896ca1d63da3ade15f0eb7979fb02f2"
+  },
+  "handoff_arithmetic_boundary_sanity_checks": {
+    "capacity": [
+      {
+        "e": 2,
+        "u": 2,
+        "B": "2",
+        "capacity_gaps": {
+          "2": "0"
+        }
+      },
+      {
+        "e": 5,
+        "u": 8,
+        "B": "14",
+        "capacity_gaps": {
+          "2": "8",
+          "3": "119",
+          "4": "186",
+          "5": "134"
+        }
+      },
+      {
+        "e": 5,
+        "u": 9,
+        "B": "81/4",
+        "capacity_gaps": {
+          "2": "11/2",
+          "3": "461/2",
+          "4": "1755/4",
+          "5": "1635/4"
+        }
+      }
+    ],
+    "dense_gaps": {
+      "0": 0,
+      "5": 45
+    }
+  },
+  "user_supplied_v06_independent_audit": {
+    "verdict": "PASS_WITH_EXACT_SCOPE",
+    "scope": "V05 to V06 differences and their connections; not full proof rederivation",
+    "new_lean_route_certified": false,
+    "reported_cases": {
+      "carry_height": 348336,
+      "dense_all_rows": 59890,
+      "actual_core_all_competitors": 3970
+    },
+    "independently_rerun_here": false
+  },
+  "limitations": [
+    "No fresh Lean compile or axiom audit in this investigation.",
+    "No correctness repair found within inspected V04-V06 route changes; complete V06 route certification remains execution work.",
+    "Paper proof directories are local untracked artifacts at inspected origin/work."
+  ],
+  "handoff_review": {
+    "verdict": "PASS",
+    "scope": "mathematical statements, concrete consumers, verification migration, preserved evidence",
+    "reviewed_prompt_sha256": "419e30630f757e6ada83c6e062580a4dd896ca1d63da3ade15f0eb7979fb02f2",
+    "independent_read_only_reviews": [
+      "width arithmetic and consumers",
+      "endpoint consumers and import dependencies",
+      "whole prompt and maintenance verifier safeguards"
+    ]
+  }
+}

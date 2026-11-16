@@ -1,0 +1,20 @@
+tests/CoefficientComparison.lean:5:5: error: unknown namespace `NSP14.Target`
+tests/CoefficientComparison.lean:7:4: error: Function expected at
+  positiveOrdinaryCoefficient
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (q + n + 1)
+
+Hint: The identifier `positiveOrdinaryCoefficient` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/CoefficientComparison.lean:7:42: error: Function expected at
+  positiveOrdinaryCoefficient
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (q + 1)
+
+Hint: The identifier `positiveOrdinaryCoefficient` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/CoefficientComparison.lean:10:2: error(lean.unknownIdentifier): Unknown identifier `ordinary_difference_convolution`

@@ -1,0 +1,2 @@
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/LexHilbertRed.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Lex.quotient_piece_finite`
+.superpowers/sdd/2026-11-13-run18-lex-width-closure-order/LexHilbertRed.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `NSP14.Lex.quotient_total_eq_graded_sum`

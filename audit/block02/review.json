@@ -1,0 +1,154 @@
+{
+  "date_jst": "2026-11-09",
+  "verdict": "PASS_CONDITIONAL_COMBINATORIAL_AND_NUMERICAL_BLOCK",
+  "audited_repository": "https://github.com/stksk310/NS-P14-Lean.git",
+  "audited_commit": "324415fb77ba6cdca99113ec19fdc5b4e9c1919b",
+  "implementation_commit": "f11c372",
+  "source": "NSP14/Combinatorics/Sidon.lean",
+  "source_sha256": "eae445dfa155dbab58ccbbd066d40851214f3faf90c5383df408b129937c334e",
+  "lean_version": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib_commit": "139105d28c7685a154cb3093f79edb2e16708099",
+  "findings_requiring_block02_changes": [],
+  "hash_checks": {
+    "manifest_entries_matched": 19,
+    "zip_members_matched": 20,
+    "pinned_dependency_commits_matched": 9,
+    "block01_proof_source_unchanged": true
+  },
+  "replay": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 192.053
+    },
+    {
+      "name": "source_recheck",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Combinatorics/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.906
+    },
+    {
+      "name": "tests_and_axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.611
+    },
+    {
+      "name": "block01_regression",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.47
+    }
+  ],
+  "axioms": {
+    "block02_reports": 14,
+    "block01_reports": 10,
+    "exact_block02_declaration_names_checked": true,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "matches_original_logs": true,
+    "sorryAx_found": false
+  },
+  "finite_checks": {
+    "modulus_min": 1,
+    "modulus_max": 14,
+    "subsets_checked": 32766,
+    "status": "PASS",
+    "universal_proof": false
+  },
+  "assumption_checks": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "audit/block02/AssumptionChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.717,
+    "warning_count": 0,
+    "checks": [
+      "Explicit nontrivial AperyPairData for S=<3,4>, modulus 3, values 0 and 4; all repeated pair sums are minima.",
+      "The datum produces a two-point Sidon set and sharp multiplicity/deficit bounds.",
+      "Singleton Sidon set at modulus 1.",
+      "Nat triangular division agrees with rational triangular for ranks 4..8.",
+      "Dropping pair_min permits a mod-2 counterexample.",
+      "Dropping pair_unique permits a mod-5 counterexample."
+    ]
+  },
+  "paper_correspondence": [
+    {
+      "paper": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md, SO1 counting step",
+      "formal": "sidon_difference_injective, sidon_card_bound, AperyPairData.multiplicity_bound, AperyPairData.deficit_bound",
+      "status": "MATCH_UNDER_EXPLICIT_PAIR_DATA_PREMISES"
+    },
+    {
+      "paper": "auditability_search/ORDINARY_PAPER_REDUCTION_JA.md, SO2 for ranks 6..8",
+      "formal": "corner_condition_of_sidon and boundary interfaces",
+      "status": "MATCH_UNDER_EXPLICIT_WITNESS_PREMISE"
+    },
+    {
+      "paper": "auditability_search/SIDON_INDEPENDENT_AUDIT.md, section 2",
+      "formal": "AperyPairData construction from actual maximal Q2",
+      "status": "NOT_IMPLEMENTED_AS_DECLARED"
+    }
+  ],
+  "corner_counts": [
+    {
+      "rank": 6,
+      "m": 28,
+      "e": 7,
+      "ordered_distinct_pairs": 42,
+      "nonzero_residues": 27
+    },
+    {
+      "rank": 7,
+      "m": 36,
+      "e": 8,
+      "ordered_distinct_pairs": 56,
+      "nonzero_residues": 35
+    },
+    {
+      "rank": 8,
+      "m": 45,
+      "e": 9,
+      "ordered_distinct_pairs": 72,
+      "nonzero_residues": 44
+    }
+  ],
+  "scope_notes": [
+    "IsSidon includes repeated summands; no primality or oddness assumption on the positive modulus.",
+    "AperyPairData fields pair_min and pair_unique are explicit substantive premises, not added axioms or proven consequences of maximal Q2.",
+    "S is an AddSubmonoid of N; this structure does not establish m as its actual multiplicity or e as its embedding dimension.",
+    "Boundary witness is required at ranks 6..8 with s=0; t is arbitrary. Interior s>0 and ranks 4..5 do not need it.",
+    "The scalar interface still assumes the SO3 resource bound F<=upper."
+  ],
+  "unverified_remaining": [
+    "Actual tangent cone and Q=A/N construction.",
+    "Maximal actual Q2 yields pair data with zero and non-m atoms, correct embedding dimension, and cross-degree exclusions.",
+    "Actual parameters yield the required natural shifts and modulus identity.",
+    "Actual SO3 resource upper bound, Tor/Betti transfer, full M10/O_SIDON, M12, and P14."
+  ]
+}

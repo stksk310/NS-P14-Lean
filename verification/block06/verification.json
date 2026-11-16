@@ -1,0 +1,146 @@
+{
+  "status": "PASS_COMPILED_BLOCK06",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.022
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.389
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.632
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.552
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.711
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.805
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.873
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.754
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.666
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.803
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 15,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22
+  },
+  "block06_theorems": [
+    "NSP14.Ordinary.LargeScalar.alpha_bounds",
+    "NSP14.Ordinary.LargeScalar.baseSlope_lower",
+    "NSP14.Ordinary.LargeScalar.baseSlope_pos",
+    "NSP14.Ordinary.LargeScalar.baseStep_gt",
+    "NSP14.Ordinary.LargeScalar.correction_neg",
+    "NSP14.Ordinary.LargeScalar.floorStep_gt",
+    "NSP14.Ordinary.LargeScalar.floorStep_le_stepLower",
+    "NSP14.Ordinary.LargeScalar.floor_comparison_identity",
+    "NSP14.Ordinary.LargeScalar.gap_pos_shift",
+    "NSP14.Ordinary.LargeScalar.large_gap_pos",
+    "NSP14.Ordinary.LargeScalar.quadrant_identity",
+    "NSP14.Ordinary.LargeScalar.seed_slope_identity",
+    "NSP14.Ordinary.LargeScalar.step_identity",
+    "NSP14.Ordinary.LargeScalar.triangular_large",
+    "NSP14.Ordinary.SmallScalar.Resources.scalar_lt_large"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block05": true,
+  "source": "NSP14/Ordinary/LargeScalar.lean",
+  "paper_source": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, section 11 S21-S31; V03 III.5 O_LARGE O22-O23",
+  "scope": "Large-rank gap positivity and resource-derived scalar bound for every r>=9 and rational e>=10,d>=a_r. No actual Tor/Betti construction.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A06",
+  "remaining": [
+    "general all-row scalarization for ranks >=4",
+    "actual common tower and its resource caps",
+    "Koszul/Tor, target margins and Betti transfer",
+    "full M12 and full P14"
+  ]
+}

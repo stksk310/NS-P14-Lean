@@ -1,0 +1,7 @@
+tests/LexLinearQuotientExamples.lean:171:4: error: Type mismatch: After simplification, term
+  hb
+ has type
+  @Eq ℕ ((if t = 1 then 1 else 0) + if t = 2 then 1 else 0) (Lex.quotientGradedBetti k 2 (mixedIdeal k) ⋯ 1 t)
+but is expected to have type
+  @Eq ℕ (((if t = 1 then 1 else 0) + if t = 2 then 1 else 0) + if False ∧ t = 3 then 1 else 0)
+    (Lex.quotientGradedBetti k 2 (mixedIdeal k) ⋯ 1 t)

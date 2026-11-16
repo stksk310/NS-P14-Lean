@@ -1,0 +1,14 @@
+✖ [4640/4641] Building NSP14.Lex.GeneratorOrder (1.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/GeneratorOrder.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GeneratorOrder.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GeneratorOrder.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GeneratorOrder.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GeneratorOrder.setup.json --json
+error: NSP14/Lex/GeneratorOrder.lean:104:40: Invalid projection: Type of
+  hab
+is not known; cannot resolve projection `1`
+error: NSP14/Lex/GeneratorOrder.lean:104:25: Type mismatch
+  fun a b hab => ?m.35
+has type
+  (a : precedesOrEq q a✝ b✝ ∧ a✝ ≠ b✝) → (b : ?m.36 a) → (hab : ?m.37 a b) → ?m.38 a b hab
+but is expected to have type
+  precedesOrEq q a✝ b✝ ∧ a✝ ≠ b✝ → precedes q a✝ b✝
+Some required targets logged failures:
+- NSP14.Lex.GeneratorOrder
+error: build failed

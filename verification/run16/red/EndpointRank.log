@@ -1,0 +1,3 @@
+tests/EndpointNilpotence.lean:17:4: error(lean.invalidField): Invalid field `actualEndpoint_rank_zero`: The environment does not contain `NSP14.Endpoint.Data.actualEndpoint_rank_zero`, so it is not possible to project the field `actualEndpoint_rank_zero` from an expression
+  D
+of type `Endpoint.Data`

@@ -1,0 +1,49 @@
+NSP14.Endpoint.Data.competitorMin_height (D : NSP14.Endpoint.Data) (s : Fin D.u) (c : ℕ × ℕ)
+  (hc : Minimal (fun x => x ∈ D.competitorFiber s) c) : c.1 ≤ D.coreHeight - 2
+NSP14.Endpoint.Data.competitor_zero_column (D : NSP14.Endpoint.Data) (r : Fin D.u) :
+  (0, D.m + D.u) ∈ D.competitorFiber r
+NSP14.Width.antipodal_integer_payment (h b : ℕ) (hh : 4 ≤ h) (hb : 6 * ↑b + 7 * ↑h ≤ 11 * ↑h ^ 2 + 30) :
+  b ≤ (2 * h).choose 2 + 1
+NSP14.Width.nonAntipodal_integer_payment (u b : ℕ) (hu : 8 ≤ u) (hb : 12 * ↑b + 7 * ↑u ≤ 5 * ↑u ^ 2 + 90) :
+  b ≤ u.choose 2 + 1
+NSP14.Width.higher_capacity_from_second (e u : ℕ) (B : ℚ) (he : 2 ≤ e) (hu : e ≤ u)
+  (hsecond : B * ↑(e.choose 2) ≤ 2 * ↑(u.choose 3) + ↑u * (↑e - 1) + ↑((e - 1).choose 3)) (i : ℕ) (hi : 2 ≤ i)
+  (hie : i ≤ e) :
+  B * ↑(e.choose i) ≤ ↑i * ↑(u.choose (i + 1)) + ↑u * ↑((e - 1).choose (i - 1)) + ↑((e - 1).choose (i + 1))
+NSP14.Endpoint.Data.actual_higher_from_second (D : NSP14.Endpoint.Data) (k : Type) [Field k] (B : ℚ)
+  (hP : ↑(D.coreP k) ≤ B) (hR : ↑D.Rhat + ↑D.u ≤ B) (hu : D.q + 2 ≤ D.u)
+  (hsecond : B * ↑((D.q + 2).choose 2) ≤ 2 * ↑(D.u.choose 3) + ↑D.u * (↑D.q + 1) + ↑((D.q + 1).choose 3)) (i : ℕ)
+  (hi : 2 ≤ i) (hie : i ≤ D.q + 2) : NSP14.Homological.totalBetti k D.Variables (D.fullG k) i ≤ i * D.u.choose (i + 1)
+NSP14.Endpoint.Data.actual_antipodal_first (D : NSP14.Endpoint.Data) (k : Type) [Field k] (hq : D.q = 3) (hu8 : 8 ≤ D.u)
+  (ha : NSP14.Additive.CyclicAntipodal D.u D.residueAlphabet) :
+  NSP14.Homological.totalBetti k D.Variables (D.fullG k) 1 ≤ D.u.choose 2 + 1
+NSP14.Endpoint.Data.actual_five_nonAntipodal_first (D : NSP14.Endpoint.Data) (k : Type) [Field k] (hq : D.q = 3)
+  (hu : 8 ≤ D.u) (ha : ¬NSP14.Additive.CyclicAntipodal D.u D.residueAlphabet) :
+  NSP14.Homological.totalBetti k D.Variables (D.fullG k) 1 ≤ D.u.choose 2 + 1
+NSP14.Endpoint.Data.actual_five_higher (D : NSP14.Endpoint.Data) (k : Type) [Field k] (hq : D.q = 3) (hu : 8 ≤ D.u)
+  (i : ℕ) (hi : 2 ≤ i) : NSP14.Homological.totalBetti k D.Variables (D.fullG k) i ≤ i * D.u.choose (i + 1)
+NSP14.Endpoint.Data.actual_sparse_higher (D : NSP14.Endpoint.Data) (k : Type) [Field k] (he : 6 ≤ D.q + 2)
+  (hu : 2 * (D.q + 2) - 2 ≤ D.u) (i : ℕ) (hi : 2 ≤ i) (hie : i ≤ D.q + 2) :
+  NSP14.Homological.totalBetti k D.Variables (D.fullG k) i ≤ i * D.u.choose (i + 1)
+NSP14.Endpoint.Data.dense_core_lex_bound_two_branch (D : NSP14.Endpoint.Data) (k : Type) [Field k] (t : ℕ)
+  (hu : D.u = D.q + 1 + t) (ht : t ≤ D.q) (hq : 4 ≤ D.q) :
+  ∃ K,
+    (∀ (i : ℕ),
+        1 ≤ i →
+          NSP14.Homological.totalBetti k (↥D.a) (D.QCoreModule k) i ≤
+            i * (D.q + 1).choose (i + 1) + K * (D.q - 1).choose (i - 1)) ∧
+      (t = 2 → K ≤ 2) ∧ (3 ≤ t → 3 * K ≤ 2 * t * (t - 1))
+NSP14.Width.dense_coeff_ge_three (q t K c : ℕ) (hq : 4 ≤ q) (ht : 3 ≤ t) (htq : t ≤ q) (hK : 3 * K ≤ 2 * t * (t - 1))
+  (hc : 2 * c = t * (t - 1)) : q + 1 + 3 * t + K ≤ t * (q + 1) + c
+NSP14.Width.dense_payment_ge_three (q t P R K j : ℕ) (hq : 4 ≤ q) (ht : 3 ≤ t) (htq : t ≤ q) (hj : j ≤ q + 1)
+  (hP : P ≤ q + 1 + 2 * t) (hR : R ≤ t) (hK : 3 * K ≤ 2 * t * (t - 1)) :
+  (j + 1) * (q + 1).choose (j + 2) + P * q.choose j + R * (q + 1).choose j + K * (q - 1).choose j ≤
+    (j + 1) * (q + t + 1).choose (j + 2)
+NSP14.Endpoint.Data.actual_dense_firstterm (D : NSP14.Endpoint.Data) (k : Type) [Field k] (t : ℕ)
+  (hu : D.u = D.q + 1 + t) (ht2 : 2 ≤ t) (htq : t ≤ D.q) (hq : 4 ≤ D.q) (i : ℕ) (hi : 1 ≤ i) :
+  NSP14.Homological.totalBetti k D.Variables (D.fullG k) i ≤ i * D.u.choose (i + 1)
+NSP14.NumericalSemigroup.narrow_width_comparison (S : NSP14.NumericalSemigroup) (k : Type) [Field k]
+  (he : 5 ≤ S.embeddingDimension) (hw : S.width ≤ S.multiplicity - 2) (i : ℕ) :
+  NSP14.Homological.totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤
+    NSP14.Homological.totalBetti k (S.intervalCompletion ⋯).AtomExponent
+      (↧((S.intervalCompletion ⋯).FormalTangentAlgebra k)) i

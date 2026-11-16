@@ -1,0 +1,15 @@
+tests/LexLinearQuotientExamples.lean:100:2: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [Finsupp.zero_apply, lt_self_iff_false, Nat.reduceLeDiff, or_self] at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+tests/LexLinearQuotientExamples.lean:134:9: error: Application type mismatch: The argument
+  h1
+has type
+  Homological.totalBetti k (Fin 2) (↧(MvPolynomial (Fin 2) k ⧸ mixedIdeal k)) 1 =
+    {Finsupp.single 0 1, Finsupp.single 1 2}.card
+but is expected to have type
+  Homological.totalBetti k (Fin 2) (↧(MvPolynomial (Fin 2) k ⧸ mixedIdeal k)) 1 = 2
+in the application
+  And.intro h1

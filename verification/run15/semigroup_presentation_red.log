@@ -1,0 +1,4 @@
+tests/SemigroupAlgebraPresentation.lean:7:51: error(lean.invalidField): Invalid field `fullPolynomialToSemigroupRing`: The environment does not contain `NSP14.NumericalSemigroup.fullPolynomialToSemigroupRing`, so it is not possible to project the field `fullPolynomialToSemigroupRing` from an expression
+  S
+of type `NumericalSemigroup`
+tests/SemigroupAlgebraPresentation.lean:8:2: error(lean.unknownIdentifier): Unknown identifier `S.fullPolynomialToSemigroupRing_surjective`

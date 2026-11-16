@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tests/ExteriorContraction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.789
+  },
+  {
+    "file": "tests/KoszulExteriorBasis.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.499
+  },
+  {
+    "file": "tests/KoszulExteriorContraction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.045
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms09.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.715
+  }
+]

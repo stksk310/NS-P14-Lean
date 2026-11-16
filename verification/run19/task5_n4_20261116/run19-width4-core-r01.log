@@ -1,0 +1,187 @@
+NSP14/NarrowFour/WidthFourCore.lean:37:26: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 3
+  b ≥ 0
+  a ≥ 0
+  a ≥ 1
+where
+ a := ↑M
+ b := ↑H
+ c := ↑↑((fun i => i) ⟨4, ⋯⟩)
+NSP14/NarrowFour/WidthFourCore.lean:39:22: error: Tactic `rfl` failed: The left-hand side
+  { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hr }
+is not definitionally equal to the right-hand side
+  { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hs✝ }
+
+case «2».«4»
+L K : ℕ
+hr : 2 = 4 → L = 0
+hs✝ : (fun i => i) ⟨4, ⋯⟩ = 4 → L = 0
+hs : True → L = 0
+hn : 2 + 4 * K = 6 + 4 * K
+he :
+  (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hr } =
+    (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hs✝ }
+hd : L + K + 2 = L + K + 2
+⊢ { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hr } =
+    { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hs✝ }
+NSP14/NarrowFour/WidthFourCore.lean:37:26: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 3
+  b ≥ 1
+  a ≥ 0
+  a ≥ -1
+where
+ a := ↑M
+ b := ↑H
+ c := ↑↑((fun i => i) ⟨4, ⋯⟩)
+NSP14/NarrowFour/WidthFourCore.lean:39:22: error: Tactic `rfl` failed: The left-hand side
+  { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ }
+is not definitionally equal to the right-hand side
+  { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hs }
+
+case «4».«2»
+L K : ℕ
+hr✝ : (fun i => i) ⟨4, ⋯⟩ = 4 → L = 0
+hr : True → L = 0
+hs : 2 = 4 → L = 0
+hn : 6 + 4 * K = 2 + 4 * K
+he :
+  (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ } =
+    (fun p => (p.degree, p.offset)) { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hs }
+hd : L + K + 2 = L + K + 2
+⊢ { anchor := (fun i => i) ⟨4, ⋯⟩, L := L, K := K, restricted := hr✝ } =
+    { anchor := (fun i => i) ⟨2, ⋯⟩, L := L, K := K, restricted := hs }
+NSP14/NarrowFour/WidthFourCore.lean:50:43: error: Expected type must not contain free variables
+  0 = 4 → degree - offset / 4 = 0
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+NSP14/NarrowFour/WidthFourCore.lean:51:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 1
+where
+ a := ↑(match 0 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 1
+  | x => 2)
+NSP14/NarrowFour/WidthFourCore.lean:52:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 1
+  a ≥ 0
+  a ≤ 0
+where
+ a := ↑offset / 4
+ b := ↑(match 0 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 3
+  | x => 6)
+NSP14/NarrowFour/WidthFourCore.lean:53:45: error: Expected type must not contain free variables
+  1 = 4 → degree - offset / 4 - 1 = 0
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+NSP14/NarrowFour/WidthFourCore.lean:54:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 2
+  a - b ≥ 1
+where
+ a := ↑degree
+ b := ↑(degree - (offset / 4 + 1))
+NSP14/NarrowFour/WidthFourCore.lean:55:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 2
+  a ≥ 0
+  a - b ≤ -1
+where
+ a := ↑offset / 4
+ b := ↑degree
+NSP14/NarrowFour/WidthFourCore.lean:57:47: error: Expected type must not contain free variables
+  2 = 4 → degree - offset / 4 - 2 = 0
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+NSP14/NarrowFour/WidthFourCore.lean:58:38: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 1
+  b ≥ 0
+  a ≥ 2
+  a - b ≥ 2
+where
+ a := ↑degree
+ b := ↑(degree - (offset / 4 + 2))
+ c := ↑(match 2 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 1
+  | x => 2)
+NSP14/NarrowFour/WidthFourCore.lean:59:38: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 1
+  b ≥ 2
+  a ≥ 0
+  a - b ≤ -2
+where
+ a := ↑offset / 4
+ b := ↑degree
+ c := ↑(match 2 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 3
+  | x => 6)
+NSP14/NarrowFour/WidthFourCore.lean:61:38: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 1
+  a ≥ 0
+where
+ a := ↑(offset / 4 - 1)
+ b := ↑(match 4 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 1
+  | x => 2)
+NSP14/NarrowFour/WidthFourCore.lean:62:38: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a ≤ 5
+where
+ a := ↑(match 4 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 3
+  | x => 6)
+ b := ↑(offset / 4 - 1)
+NSP14/NarrowFour/WidthFourCore.lean:63:45: error: Expected type must not contain free variables
+  3 = 4 → degree - offset / 4 - 1 = 0
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+NSP14/NarrowFour/WidthFourCore.lean:64:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 2
+  a - b ≥ 1
+where
+ a := ↑degree
+ b := ↑(degree - (offset / 4 + 1))
+NSP14/NarrowFour/WidthFourCore.lean:65:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 2
+  b ≥ 2
+  a ≥ 0
+  a - b ≤ -1
+where
+ a := ↑offset / 4
+ b := ↑degree
+ c := ↑(match 3 with
+  | 0 => 0
+  | 1 => 1
+  | 2 => 2
+  | 3 => 3
+  | x => 6)

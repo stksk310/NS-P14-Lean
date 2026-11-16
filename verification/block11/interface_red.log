@@ -1,0 +1,15 @@
+tests/AperyQuotient.lean:5:9: error(lean.invalidField): Invalid field `nonAperyIdeal`: The environment does not contain `NSP14.NumericalSemigroup.nonAperyIdeal`, so it is not possible to project the field `nonAperyIdeal` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/AperyQuotient.lean:6:9: error(lean.invalidField): Invalid field `AperyAlgebra`: The environment does not contain `NSP14.NumericalSemigroup.AperyAlgebra`, so it is not possible to project the field `AperyAlgebra` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/AperyQuotient.lean:7:9: error(lean.invalidField): Invalid field `aperyQuotientEquiv`: The environment does not contain `NSP14.NumericalSemigroup.aperyQuotientEquiv`, so it is not possible to project the field `aperyQuotientEquiv` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/AperyQuotient.lean:8:9: error(lean.invalidField): Invalid field `aperyAlgebra_finrank`: The environment does not contain `NSP14.NumericalSemigroup.aperyAlgebra_finrank`, so it is not possible to project the field `aperyAlgebra_finrank` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/AperyQuotient.lean:9:9: error(lean.invalidField): Invalid field `qDegree_finrank`: The environment does not contain `NSP14.NumericalSemigroup.qDegree_finrank`, so it is not possible to project the field `qDegree_finrank` from an expression
+  S
+of type `NSP14.NumericalSemigroup`

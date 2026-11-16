@@ -1,0 +1,10 @@
+tests/EndpointCore.lean:8:51: error(lean.invalidField): Invalid field `coreToG`: The environment does not contain `NSP14.Endpoint.Data.coreToG`, so it is not possible to project the field `coreToG` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointCore.lean:8:65: error(lean.unknownIdentifier): Unknown identifier `D.coreToG_surjective`
+tests/EndpointCore.lean:11:7: error(lean.invalidField): Invalid field `coreToG`: The environment does not contain `NSP14.Endpoint.Data.coreToG`, so it is not possible to project the field `coreToG` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointCore.lean:11:57: error(lean.invalidField): Invalid field `coreToG_fullToCore`: The environment does not contain `NSP14.Endpoint.Data.coreToG_fullToCore`, so it is not possible to project the field `coreToG_fullToCore` from an expression
+  D
+of type `Endpoint.Data`

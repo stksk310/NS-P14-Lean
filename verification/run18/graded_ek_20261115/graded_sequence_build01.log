@@ -1,0 +1,123 @@
+✖ [4694/4695] Building NSP14.Homological.GradedKoszulExact (1.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/GradedKoszulExact.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulExact.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/GradedKoszulExact.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulExact.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/GradedKoszulExact.setup.json --json
+error: NSP14/Homological/GradedKoszulExact.lean:62:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom
+      ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).f)
+    b
+in the target expression
+  (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.f).f i)) b) =
+    (ModuleCat.Hom.hom ((gradedKoszulSequenceLeft k σ S G1 G2 hf xs t).f i))
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₁ G1 xs t).f i)) b)
+
+case refine_1
+k σ : Type u
+inst✝ : Field k
+S : ShortComplex (ModuleCat (VariableRing k σ))
+G1 : GradedPolynomialModule k σ S.X₁
+G2 : GradedPolynomialModule k σ S.X₂
+G3 : GradedPolynomialModule k σ S.X₃
+hf : ∀ (q : ℤ), ∀ a ∈ G1.degreeSpace q, (ConcreteCategory.hom S.f) a ∈ G2.degreeSpace q
+hg : ∀ (q : ℤ), ∀ a ∈ G2.degreeSpace q, (ConcreteCategory.hom S.g) a ∈ G3.degreeSpace q
+hS : S.ShortExact
+xs : List σ
+t : ℤ
+ht : (S.map (coefficientKoszulListFunctor k σ xs)).ShortExact
+hti :
+  ∀ (i : ℕ), ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).ShortExact
+i : ℕ
+a : ↑((gradedKoszulSequence k σ S G1 G2 G3 hf hg xs t).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).X₂
+ha :
+  (ConcreteCategory.hom
+        ((gradedKoszulSequence k σ S G1 G2 G3 hf hg xs t).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).g)
+      a =
+    0
+haz : (ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.g).f i)) ↑a = 0
+b : ↑((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).X₁
+hb :
+  (ConcreteCategory.hom
+        ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).f)
+      b =
+    ↑a
+hn :
+  (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.f).f i)) b) =
+    (ModuleCat.Hom.hom ((gradedKoszulSequenceLeft k σ S G1 G2 hf xs t).f i))
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₁ G1 xs t).f i)) b)
+⊢ (ConcreteCategory.hom
+        ((gradedKoszulSequence k σ S G1 G2 G3 hf hg xs t).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).f)
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₁ G1 xs t).f i)) b) =
+    a
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.f).f i)) b
+  has type
+    ↑(((coefficientKoszulListFunctor k σ xs).obj S.X₂).X i)
+  but is expected to have type
+    ↑((((ModuleCat.restrictScalars (algebraMap k (VariableRing k σ))).mapHomologicalComplex (ComplexShape.down ℕ)).obj
+            (koszulList k σ xs S.X₂)).X
+        i)
+  in the application
+    (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.f).f i)) b)
+error: NSP14/Homological/GradedKoszulExact.lean:82:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom
+      ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).g)
+    b
+in the target expression
+  (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₃ G3 xs (t + 0 + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.g).f i)) b) =
+    (ModuleCat.Hom.hom ((gradedKoszulSequenceRight k σ S G2 G3 hg xs t).f i))
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i)) b)
+
+case refine_3
+k σ : Type u
+inst✝ : Field k
+S : ShortComplex (ModuleCat (VariableRing k σ))
+G1 : GradedPolynomialModule k σ S.X₁
+G2 : GradedPolynomialModule k σ S.X₂
+G3 : GradedPolynomialModule k σ S.X₃
+hf : ∀ (q : ℤ), ∀ a ∈ G1.degreeSpace q, (ConcreteCategory.hom S.f) a ∈ G2.degreeSpace q
+hg : ∀ (q : ℤ), ∀ a ∈ G2.degreeSpace q, (ConcreteCategory.hom S.g) a ∈ G3.degreeSpace q
+hS : S.ShortExact
+xs : List σ
+t : ℤ
+ht : (S.map (coefficientKoszulListFunctor k σ xs)).ShortExact
+hti :
+  ∀ (i : ℕ), ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).ShortExact
+i : ℕ
+a : ↑((gradedKoszulSequence k σ S G1 G2 G3 hf hg xs t).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).X₃
+b : ↑((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).X₂
+hb :
+  (ConcreteCategory.hom
+        ((S.map (coefficientKoszulListFunctor k σ xs)).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).g)
+      b =
+    ↑a
+hn :
+  (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₃ G3 xs (t + 0 + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.g).f i)) b) =
+    (ModuleCat.Hom.hom ((gradedKoszulSequenceRight k σ S G2 G3 hg xs t).f i))
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i)) b)
+⊢ (ConcreteCategory.hom
+        ((gradedKoszulSequence k σ S G1 G2 G3 hf hg xs t).map (eval (ModuleCat k) (ComplexShape.down ℕ) i)).g)
+      ((ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₂ G2 xs (t + 0)).f i)) b) =
+    a
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.g).f i)) b
+  has type
+    ↑(((coefficientKoszulListFunctor k σ xs).obj S.X₃).X i)
+  but is expected to have type
+    ↑((((ModuleCat.restrictScalars (algebraMap k (VariableRing k σ))).mapHomologicalComplex (ComplexShape.down ℕ)).obj
+            (koszulList k σ xs S.X₃)).X
+        i)
+  in the application
+    (ModuleCat.Hom.hom ((gradedKoszulRetraction k σ S.X₃ G3 xs (t + 0 + 0)).f i))
+      ((ModuleCat.Hom.hom (((coefficientKoszulListFunctor k σ xs).map S.g).f i)) b)
+Some required targets logged failures:
+- NSP14.Homological.GradedKoszulExact
+error: build failed

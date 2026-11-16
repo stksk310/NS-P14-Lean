@@ -1,0 +1,11 @@
+{
+  "status": "PASS_FINITE_DIAGNOSTICS",
+  "module_cases": 243,
+  "degreewise_rank_checks": 972,
+  "primes": [
+    2,
+    3,
+    101
+  ],
+  "caution": "Finite diagnostics; universal proof is HUMAN_PROOF_REDUCED.md section 6"
+}

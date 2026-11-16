@@ -1,0 +1,6 @@
+{
+  "expected": "refuse publication before COMPLETE and independent review",
+  "exit_code": 1,
+  "archive_created": false,
+  "result": "PASS_EXPECTED_REJECTION"
+}

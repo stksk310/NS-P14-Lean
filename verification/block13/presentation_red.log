@@ -1,0 +1,9 @@
+tests/KoszulPresentation.lean:5:9: error(lean.invalidField): Invalid field `fullPolynomialToG_surjective`: The environment does not contain `NSP14.NumericalSemigroup.fullPolynomialToG_surjective`, so it is not possible to project the field `fullPolynomialToG_surjective` from an expression
+  S
+of type `NumericalSemigroup`
+tests/KoszulPresentation.lean:6:9: error(lean.invalidField): Invalid field `atomDegreeOneEquiv`: The environment does not contain `NSP14.NumericalSemigroup.atomDegreeOneEquiv`, so it is not possible to project the field `atomDegreeOneEquiv` from an expression
+  S
+of type `NumericalSemigroup`
+tests/KoszulPresentation.lean:7:9: error(lean.invalidField): Invalid field `completedPolynomialLinearEquiv`: The environment does not contain `NSP14.NumericalSemigroup.completedPolynomialLinearEquiv`, so it is not possible to project the field `completedPolynomialLinearEquiv` from an expression
+  S
+of type `NumericalSemigroup`

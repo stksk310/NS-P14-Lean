@@ -1,0 +1,10 @@
+module
+import NSP14.Homological.KoszulExteriorMap
+import NSP14.Lex.GenericDistractionExterior
+#print axioms NSP14.Homological.koszulExteriorContraction_naturality
+#print axioms NSP14.Homological.koszulExteriorMap_coordinate_contraction_eq
+#print axioms NSP14.Homological.koszulExteriorContraction_decompose
+#print axioms NSP14.Lex.genericDistractionWedge_step_contraction
+#check @NSP14.Homological.koszulExteriorMap_coordinate_contraction_eq
+#check @NSP14.Homological.koszulExteriorContraction_decompose
+#check @NSP14.Lex.genericDistractionWedge_step_contraction

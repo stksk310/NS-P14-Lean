@@ -1,0 +1,2 @@
+/tmp/run18-paper-text/KoszulExteriorMapRed02.lean:13:2: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorContraction_naturality`
+/tmp/run18-paper-text/KoszulExteriorMapRed02.lean:21:2: error(lean.unknownIdentifier): Unknown identifier `koszulExteriorMap_coordinate_contraction_eq`

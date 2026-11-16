@@ -1,0 +1,9 @@
+tests/EndpointStandardArtin.lean:21:29: error(lean.unknownIdentifier): Unknown identifier `hp`
+tests/EndpointStandardArtin.lean:21:35: error(lean.unknownIdentifier): Unknown identifier `h1`
+tests/EndpointStandardArtin.lean:21:38: error(lean.unknownIdentifier): Unknown identifier `hq`
+tests/EndpointStandardArtin.lean:24:67: error(lean.unknownIdentifier): Unknown identifier `hp`
+tests/EndpointStandardArtin.lean:24:70: error(lean.unknownIdentifier): Unknown identifier `hh`
+tests/EndpointStandardArtin.lean:24:73: error(lean.unknownIdentifier): Unknown identifier `h1`
+tests/EndpointStandardArtin.lean:26:77: error(lean.unknownIdentifier): Unknown identifier `hp`
+tests/EndpointStandardArtin.lean:26:80: error(lean.unknownIdentifier): Unknown identifier `hh`
+tests/EndpointStandardArtin.lean:26:83: error(lean.unknownIdentifier): Unknown identifier `h1`

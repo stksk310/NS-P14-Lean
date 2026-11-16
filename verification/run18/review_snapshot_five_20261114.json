@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "reviewer": "/root/run18_five_final_review",
+  "review_scope": "Whole Run18 branch with five-closure continuation and actual immutable R05 evidence; PARTIAL only",
+  "source_snapshot_commit": "bc554ffc0231c0e83fdf4c62673e438cc123c417",
+  "reviewed_commit": "b22600b61e013da0e3d55e5a6b0559216cc4d76f",
+  "review_report": "docs/RUN18_FINAL_REVIEW_JA.md",
+  "review_report_sha256": "d55a6d8538cdb09dec7b6b93a92196afc05d6a6f66a16e20b08cfbc089359c8b",
+  "verification_summary_sha256": "1d2f962be3ed96be2a0649c13d55396ce75dff6f1a9ae5858173e4e73570342f",
+  "verification_manifest_sha256": "b7178751b483e05f27413a4b5a3622db375b3a231814b66c00e797ff1f30fefd",
+  "run18_complete": false
+}

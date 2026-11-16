@@ -1,0 +1,1 @@
+tests/EndpointConeBalance.lean:11:2: error(lean.unknownIdentifier): Unknown identifier `endomorphismCone_balance`

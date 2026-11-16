@@ -1,0 +1,10 @@
+NSP14/SmallEmbedding/LanTuVu.lean:212:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - e ≤ -1
+where
+ b := ↑((u - 3).choose 2)
+ c := ↑(u - 3)
+ e := ↑((u - 3).choose (Nat.succ 1))

@@ -1,0 +1,12 @@
+tests/MainTargetTransport.lean:13:49: error(lean.inferDefTypeFailed): Failed to infer type of theorem `transport`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainTargetTransport.lean:15:22: error(lean.inferDefTypeFailed): Failed to infer type of theorem `literal_one`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainTargetTransport.lean:20:85: error(lean.invalidField): Invalid field `width`: The environment does not contain `NSP14.ArithmeticSequence.Data.width`, so it is not possible to project the field `width` from an expression
+  Run19Base.threeFive
+of type `ArithmeticSequence.Data`
+tests/MainTargetTransport.lean:22:61: error(lean.inferDefTypeFailed): Failed to infer type of theorem `target_identification`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be

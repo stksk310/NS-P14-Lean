@@ -1,0 +1,31 @@
+'NSP14.Homological.koszulExteriorTensorEquiv_symm_basis_homogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Lex.genericDistractionChainEquiv_map_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionGradedChainIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistraction_gradedBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericDistractionChainEquiv_map_degree : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)) I)
+  (hmono : NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I) (i : ℕ) (t : ℤ),
+  Submodule.map (↑(NSP14.Lex.genericDistractionChainEquiv k q I hmono i))
+      ((NSP14.Lex.genericKoszulChainGrading k q I hI i).degreeSpace t) =
+    (NSP14.Lex.genericKoszulChainGrading k q (NSP14.Lex.genericDistractionIdeal k q I) ⋯ i).degreeSpace t
+NSP14.Lex.genericDistractionGradedChainIso : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q))) →
+        (hI :
+            Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)) I) →
+          NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+            (t : ℤ) →
+              NSP14.Lex.genericGradedKoszulComplex k q I hI t ≅
+                NSP14.Lex.genericGradedKoszulComplex k q (NSP14.Lex.genericDistractionIdeal k q I) ⋯ t
+NSP14.Lex.genericDistraction_gradedBetti : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)) I),
+  NSP14.Lex.IsMonomial (NSP14.Lex.GenericDistractionField k q) q I →
+    ∀ (i : ℕ) (t : ℤ),
+      NSP14.Lex.quotientGradedBetti (NSP14.Lex.GenericDistractionField k q) q I hI i t =
+        NSP14.Lex.quotientGradedBetti (NSP14.Lex.GenericDistractionField k q) q
+          (NSP14.Lex.genericDistractionIdeal k q I) ⋯ i t

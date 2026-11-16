@@ -1,0 +1,3396 @@
+{
+  "schema": "N4_CORE_REFLECTION_SEARCH_V1",
+  "source": "proof_integrated_v2/certificates/n4/SHORTER_N4_CERTIFICATE.json",
+  "source_sha256": "ed1a478a590f7e4d0984d1747c9a73d651173495edb669b9a6d542f70e0d54d8",
+  "core_computations": 109,
+  "reconstructed_oriented_rows": 196,
+  "fixed_count": 22,
+  "reflection_orbits": 109,
+  "envelope_failures": [
+    [
+      3,
+      1,
+      2
+    ],
+    [
+      4,
+      1,
+      3
+    ]
+  ],
+  "refined_tail": {
+    "omitted_width": 11,
+    "oriented_count": 151,
+    "reflection_orbits": 84,
+    "explicit_small_core_types": 3,
+    "remaining_finite_representatives": 81,
+    "min_remaining_envelope_slack": 0
+  },
+  "unit_invariance_counterexample": {
+    "u": 5,
+    "offsets": [
+      1,
+      4
+    ],
+    "unit": 2,
+    "image": [
+      2,
+      3
+    ],
+    "original": {
+      "P_C": 7,
+      "sigma_C": 2,
+      "W": 7
+    },
+    "transformed": {
+      "P_C": 5,
+      "sigma_C": 2,
+      "W": 7
+    }
+  },
+  "multiplicities_enumerated": 0,
+  "by_width": [
+    {
+      "u": 3,
+      "oriented_count": 1,
+      "fixed_count": 1,
+      "orbit_count": 1,
+      "min_envelope_slack": -2
+    },
+    {
+      "u": 4,
+      "oriented_count": 3,
+      "fixed_count": 1,
+      "orbit_count": 2,
+      "min_envelope_slack": -1
+    },
+    {
+      "u": 5,
+      "oriented_count": 6,
+      "fixed_count": 2,
+      "orbit_count": 4,
+      "min_envelope_slack": 1
+    },
+    {
+      "u": 6,
+      "oriented_count": 9,
+      "fixed_count": 1,
+      "orbit_count": 5,
+      "min_envelope_slack": 0
+    },
+    {
+      "u": 7,
+      "oriented_count": 15,
+      "fixed_count": 3,
+      "orbit_count": 9,
+      "min_envelope_slack": 2
+    },
+    {
+      "u": 8,
+      "oriented_count": 18,
+      "fixed_count": 2,
+      "orbit_count": 10,
+      "min_envelope_slack": 4
+    },
+    {
+      "u": 9,
+      "oriented_count": 27,
+      "fixed_count": 3,
+      "orbit_count": 15,
+      "min_envelope_slack": 7
+    },
+    {
+      "u": 10,
+      "oriented_count": 30,
+      "fixed_count": 2,
+      "orbit_count": 16,
+      "min_envelope_slack": 8
+    },
+    {
+      "u": 11,
+      "oriented_count": 45,
+      "fixed_count": 5,
+      "orbit_count": 25,
+      "min_envelope_slack": 14
+    },
+    {
+      "u": 12,
+      "oriented_count": 42,
+      "fixed_count": 2,
+      "orbit_count": 22,
+      "min_envelope_slack": 12
+    }
+  ],
+  "orbits": [
+    {
+      "u": 3,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 3,
+      "sigma_C": 2,
+      "Hx": 0,
+      "Hv": 0,
+      "W": 3,
+      "Rhat_envelope": 0,
+      "U1_envelope": 6,
+      "L1": 4,
+      "envelope_slack": -2,
+      "oriented_slacks": [
+        -2
+      ]
+    },
+    {
+      "u": 4,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 4,
+      "sigma_C": 1,
+      "Hx": 1,
+      "Hv": 0,
+      "W": 5,
+      "Rhat_envelope": 0,
+      "U1_envelope": 6,
+      "L1": 7,
+      "envelope_slack": 1,
+      "oriented_slacks": [
+        1,
+        1
+      ]
+    },
+    {
+      "u": 4,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 5,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 5,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 7,
+      "envelope_slack": -1,
+      "oriented_slacks": [
+        -1
+      ]
+    },
+    {
+      "u": 5,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 5,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 0,
+      "W": 7,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 11,
+      "envelope_slack": 3,
+      "oriented_slacks": [
+        3,
+        3
+      ]
+    },
+    {
+      "u": 5,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 5,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 0,
+      "W": 7,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 11,
+      "envelope_slack": 3,
+      "oriented_slacks": [
+        3,
+        3
+      ]
+    },
+    {
+      "u": 5,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 7,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 11,
+      "envelope_slack": 1,
+      "oriented_slacks": [
+        1
+      ]
+    },
+    {
+      "u": 5,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 5,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 7,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 11,
+      "envelope_slack": 3,
+      "oriented_slacks": [
+        3
+      ]
+    },
+    {
+      "u": 6,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 6,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 10,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 16,
+      "envelope_slack": 8,
+      "oriented_slacks": [
+        8,
+        8
+      ]
+    },
+    {
+      "u": 6,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 6,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 10,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 16,
+      "envelope_slack": 8,
+      "oriented_slacks": [
+        8,
+        8
+      ]
+    },
+    {
+      "u": 6,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 10,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 16,
+      "envelope_slack": 5,
+      "oriented_slacks": [
+        5,
+        5
+      ]
+    },
+    {
+      "u": 6,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 3,
+      "W": 10,
+      "Rhat_envelope": 4,
+      "U1_envelope": 16,
+      "L1": 16,
+      "envelope_slack": 0,
+      "oriented_slacks": [
+        0
+      ]
+    },
+    {
+      "u": 6,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 6,
+      "sigma_C": 1,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 10,
+      "Rhat_envelope": 0,
+      "U1_envelope": 8,
+      "L1": 16,
+      "envelope_slack": 8,
+      "oriented_slacks": [
+        8,
+        8
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 13,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        12
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 12,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        12
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 13,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        12
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 12,
+      "Rhat_envelope": 5,
+      "U1_envelope": 17,
+      "L1": 22,
+      "envelope_slack": 5,
+      "oriented_slacks": [
+        5,
+        10
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 4,
+      "W": 13,
+      "Rhat_envelope": 6,
+      "U1_envelope": 20,
+      "L1": 22,
+      "envelope_slack": 2,
+      "oriented_slacks": [
+        2
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 12,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        12
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        2,
+        4
+      ],
+      "members": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 13,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        12
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 13,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 22,
+      "envelope_slack": 10,
+      "oriented_slacks": [
+        10
+      ]
+    },
+    {
+      "u": 7,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 7,
+      "sigma_C": 2,
+      "Hx": 1,
+      "Hv": 1,
+      "W": 13,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 22,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 17,
+      "Rhat_envelope": 8,
+      "U1_envelope": 18,
+      "L1": 29,
+      "envelope_slack": 11,
+      "oriented_slacks": [
+        11,
+        19
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 0,
+      "W": 15,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 29,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18,
+        18
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 17,
+      "Rhat_envelope": 8,
+      "U1_envelope": 18,
+      "L1": 29,
+      "envelope_slack": 11,
+      "oriented_slacks": [
+        11,
+        19
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 13,
+      "sigma_C": 3,
+      "Hx": 3,
+      "Hv": 2,
+      "W": 17,
+      "Rhat_envelope": 8,
+      "U1_envelope": 25,
+      "L1": 29,
+      "envelope_slack": 4,
+      "oriented_slacks": [
+        4,
+        12
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 2,
+      "W": 15,
+      "Rhat_envelope": 7,
+      "U1_envelope": 22,
+      "L1": 29,
+      "envelope_slack": 7,
+      "oriented_slacks": [
+        7,
+        14
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        1,
+        7
+      ],
+      "members": [
+        [
+          1,
+          7
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 5,
+      "Hv": 5,
+      "W": 17,
+      "Rhat_envelope": 9,
+      "U1_envelope": 25,
+      "L1": 29,
+      "envelope_slack": 4,
+      "oriented_slacks": [
+        4
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 15,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 29,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18,
+        18
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 17,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 29,
+      "envelope_slack": 19,
+      "oriented_slacks": [
+        19,
+        19
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 8,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 17,
+      "Rhat_envelope": 0,
+      "U1_envelope": 10,
+      "L1": 29,
+      "envelope_slack": 19,
+      "oriented_slacks": [
+        19,
+        19
+      ]
+    },
+    {
+      "u": 8,
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 17,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 29,
+      "envelope_slack": 17,
+      "oriented_slacks": [
+        17
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 21,
+      "Rhat_envelope": 9,
+      "U1_envelope": 21,
+      "L1": 37,
+      "envelope_slack": 16,
+      "oriented_slacks": [
+        16,
+        25
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 19,
+      "Rhat_envelope": 9,
+      "U1_envelope": 20,
+      "L1": 37,
+      "envelope_slack": 17,
+      "oriented_slacks": [
+        17,
+        26
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 9,
+      "U1_envelope": 23,
+      "L1": 37,
+      "envelope_slack": 14,
+      "oriented_slacks": [
+        14,
+        23
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 21,
+      "Rhat_envelope": 9,
+      "U1_envelope": 21,
+      "L1": 37,
+      "envelope_slack": 16,
+      "oriented_slacks": [
+        16,
+        25
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 10,
+      "U1_envelope": 25,
+      "L1": 37,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        22
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        7
+      ],
+      "members": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 5,
+      "Hv": 2,
+      "W": 19,
+      "Rhat_envelope": 10,
+      "U1_envelope": 26,
+      "L1": 37,
+      "envelope_slack": 11,
+      "oriented_slacks": [
+        11,
+        21
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        1,
+        8
+      ],
+      "members": [
+        [
+          1,
+          8
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 15,
+      "sigma_C": 2,
+      "Hx": 6,
+      "Hv": 6,
+      "W": 21,
+      "Rhat_envelope": 12,
+      "U1_envelope": 30,
+      "L1": 37,
+      "envelope_slack": 7,
+      "oriented_slacks": [
+        7
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 37,
+      "envelope_slack": 26,
+      "oriented_slacks": [
+        26,
+        26
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        2,
+        4
+      ],
+      "members": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 21,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 37,
+      "envelope_slack": 25,
+      "oriented_slacks": [
+        25,
+        25
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 9,
+      "U1_envelope": 23,
+      "L1": 37,
+      "envelope_slack": 14,
+      "oriented_slacks": [
+        14,
+        23
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        2,
+        6
+      ],
+      "members": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 37,
+      "envelope_slack": 26,
+      "oriented_slacks": [
+        26,
+        26
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        2,
+        7
+      ],
+      "members": [
+        [
+          2,
+          7
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 4,
+      "W": 21,
+      "Rhat_envelope": 12,
+      "U1_envelope": 28,
+      "L1": 37,
+      "envelope_slack": 9,
+      "oriented_slacks": [
+        9
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 37,
+      "envelope_slack": 26,
+      "oriented_slacks": [
+        26,
+        26
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 9,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 19,
+      "Rhat_envelope": 0,
+      "U1_envelope": 11,
+      "L1": 37,
+      "envelope_slack": 26,
+      "oriented_slacks": [
+        26,
+        26
+      ]
+    },
+    {
+      "u": 9,
+      "representative": [
+        4,
+        5
+      ],
+      "members": [
+        [
+          4,
+          5
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 9,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 21,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 37,
+      "envelope_slack": 25,
+      "oriented_slacks": [
+        25
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 26,
+      "Rhat_envelope": 16,
+      "U1_envelope": 28,
+      "L1": 46,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18,
+        34
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 22,
+      "Rhat_envelope": 10,
+      "U1_envelope": 23,
+      "L1": 46,
+      "envelope_slack": 23,
+      "oriented_slacks": [
+        23,
+        33
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 22,
+      "Rhat_envelope": 10,
+      "U1_envelope": 23,
+      "L1": 46,
+      "envelope_slack": 23,
+      "oriented_slacks": [
+        23,
+        33
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 26,
+      "Rhat_envelope": 16,
+      "U1_envelope": 28,
+      "L1": 46,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18,
+        34
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 18,
+      "sigma_C": 3,
+      "Hx": 4,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 16,
+      "U1_envelope": 38,
+      "L1": 46,
+      "envelope_slack": 8,
+      "oriented_slacks": [
+        8,
+        24
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        7
+      ],
+      "members": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 5,
+      "Hv": 1,
+      "W": 22,
+      "Rhat_envelope": 12,
+      "U1_envelope": 28,
+      "L1": 46,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18,
+        30
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        8
+      ],
+      "members": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 16,
+      "sigma_C": 2,
+      "Hx": 6,
+      "Hv": 3,
+      "W": 22,
+      "Rhat_envelope": 12,
+      "U1_envelope": 31,
+      "L1": 46,
+      "envelope_slack": 15,
+      "oriented_slacks": [
+        15,
+        17
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        1,
+        9
+      ],
+      "members": [
+        [
+          1,
+          9
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 17,
+      "sigma_C": 2,
+      "Hx": 7,
+      "Hv": 7,
+      "W": 26,
+      "Rhat_envelope": 16,
+      "U1_envelope": 36,
+      "L1": 46,
+      "envelope_slack": 10,
+      "oriented_slacks": [
+        10
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 22,
+      "Rhat_envelope": 0,
+      "U1_envelope": 13,
+      "L1": 46,
+      "envelope_slack": 33,
+      "oriented_slacks": [
+        33,
+        33
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 10,
+      "U1_envelope": 22,
+      "L1": 46,
+      "envelope_slack": 24,
+      "oriented_slacks": [
+        24,
+        34
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        2,
+        7
+      ],
+      "members": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 18,
+      "sigma_C": 3,
+      "Hx": 3,
+      "Hv": 3,
+      "W": 26,
+      "Rhat_envelope": 10,
+      "U1_envelope": 32,
+      "L1": 46,
+      "envelope_slack": 14,
+      "oriented_slacks": [
+        14,
+        14
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 22,
+      "Rhat_envelope": 0,
+      "U1_envelope": 13,
+      "L1": 46,
+      "envelope_slack": 33,
+      "oriented_slacks": [
+        33,
+        33
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 10,
+      "U1_envelope": 22,
+      "L1": 46,
+      "envelope_slack": 24,
+      "oriented_slacks": [
+        24,
+        34
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        3,
+        6
+      ],
+      "members": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 46,
+      "envelope_slack": 34,
+      "oriented_slacks": [
+        34,
+        34
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        3,
+        7
+      ],
+      "members": [
+        [
+          3,
+          7
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 4,
+      "W": 26,
+      "Rhat_envelope": 16,
+      "U1_envelope": 32,
+      "L1": 46,
+      "envelope_slack": 14,
+      "oriented_slacks": [
+        14
+      ]
+    },
+    {
+      "u": 10,
+      "representative": [
+        4,
+        5
+      ],
+      "members": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 10,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 12,
+      "L1": 46,
+      "envelope_slack": 34,
+      "oriented_slacks": [
+        34,
+        34
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 31,
+      "Rhat_envelope": 20,
+      "U1_envelope": 34,
+      "L1": 56,
+      "envelope_slack": 22,
+      "oriented_slacks": [
+        22,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 26,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 0,
+      "W": 26,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 15,
+      "U1_envelope": 31,
+      "L1": 56,
+      "envelope_slack": 25,
+      "oriented_slacks": [
+        25,
+        40
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ],
+        [
+          5,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 31,
+      "Rhat_envelope": 20,
+      "U1_envelope": 34,
+      "L1": 56,
+      "envelope_slack": 22,
+      "oriented_slacks": [
+        22,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        7
+      ],
+      "members": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 17,
+      "sigma_C": 3,
+      "Hx": 5,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 15,
+      "U1_envelope": 36,
+      "L1": 56,
+      "envelope_slack": 20,
+      "oriented_slacks": [
+        20,
+        35
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        8
+      ],
+      "members": [
+        [
+          1,
+          8
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 20,
+      "sigma_C": 3,
+      "Hx": 6,
+      "Hv": 4,
+      "W": 26,
+      "Rhat_envelope": 15,
+      "U1_envelope": 39,
+      "L1": 56,
+      "envelope_slack": 17,
+      "oriented_slacks": [
+        17,
+        17
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        9
+      ],
+      "members": [
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 17,
+      "sigma_C": 2,
+      "Hx": 7,
+      "Hv": 3,
+      "W": 26,
+      "Rhat_envelope": 15,
+      "U1_envelope": 35,
+      "L1": 56,
+      "envelope_slack": 21,
+      "oriented_slacks": [
+        21,
+        25
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        1,
+        10
+      ],
+      "members": [
+        [
+          1,
+          10
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 19,
+      "sigma_C": 2,
+      "Hx": 8,
+      "Hv": 8,
+      "W": 31,
+      "Rhat_envelope": 20,
+      "U1_envelope": 42,
+      "L1": 56,
+      "envelope_slack": 14,
+      "oriented_slacks": [
+        14
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        4
+      ],
+      "members": [
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        6
+      ],
+      "members": [
+        [
+          2,
+          6
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        7
+      ],
+      "members": [
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 15,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 15,
+      "U1_envelope": 33,
+      "L1": 56,
+      "envelope_slack": 23,
+      "oriented_slacks": [
+        23,
+        38
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        8
+      ],
+      "members": [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        2,
+        9
+      ],
+      "members": [
+        [
+          2,
+          9
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 17,
+      "sigma_C": 2,
+      "Hx": 6,
+      "Hv": 6,
+      "W": 31,
+      "Rhat_envelope": 20,
+      "U1_envelope": 40,
+      "L1": 56,
+      "envelope_slack": 16,
+      "oriented_slacks": [
+        16
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        3,
+        6
+      ],
+      "members": [
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        3,
+        7
+      ],
+      "members": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 11,
+      "U1_envelope": 25,
+      "L1": 56,
+      "envelope_slack": 31,
+      "oriented_slacks": [
+        31,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        3,
+        8
+      ],
+      "members": [
+        [
+          3,
+          8
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 15,
+      "sigma_C": 2,
+      "Hx": 5,
+      "Hv": 5,
+      "W": 31,
+      "Rhat_envelope": 20,
+      "U1_envelope": 38,
+      "L1": 56,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        4,
+        5
+      ],
+      "members": [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 1,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        4,
+        6
+      ],
+      "members": [
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 26,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42,
+        42
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        4,
+        7
+      ],
+      "members": [
+        [
+          4,
+          7
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 3,
+      "W": 31,
+      "Rhat_envelope": 11,
+      "U1_envelope": 27,
+      "L1": 56,
+      "envelope_slack": 29,
+      "oriented_slacks": [
+        29
+      ]
+    },
+    {
+      "u": 11,
+      "representative": [
+        5,
+        6
+      ],
+      "members": [
+        [
+          5,
+          6
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 11,
+      "sigma_C": 2,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 56,
+      "envelope_slack": 42,
+      "oriented_slacks": [
+        42
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        2
+      ],
+      "members": [
+        [
+          1,
+          2
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 5,
+      "Hv": 0,
+      "W": 37,
+      "Rhat_envelope": 25,
+      "U1_envelope": 39,
+      "L1": 67,
+      "envelope_slack": 28,
+      "oriented_slacks": [
+        28,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        3
+      ],
+      "members": [
+        [
+          1,
+          3
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 33,
+      "L1": 67,
+      "envelope_slack": 34,
+      "oriented_slacks": [
+        34,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        4
+      ],
+      "members": [
+        [
+          1,
+          4
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 4,
+      "Hv": 0,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 33,
+      "L1": 67,
+      "envelope_slack": 34,
+      "oriented_slacks": [
+        34,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        5
+      ],
+      "members": [
+        [
+          1,
+          5
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 16,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 38,
+      "L1": 67,
+      "envelope_slack": 29,
+      "oriented_slacks": [
+        29,
+        48
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        6
+      ],
+      "members": [
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 5,
+      "Hv": 0,
+      "W": 37,
+      "Rhat_envelope": 25,
+      "U1_envelope": 39,
+      "L1": 67,
+      "envelope_slack": 28,
+      "oriented_slacks": [
+        28,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        7
+      ],
+      "members": [
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 25,
+      "sigma_C": 4,
+      "Hx": 5,
+      "Hv": 3,
+      "W": 37,
+      "Rhat_envelope": 25,
+      "U1_envelope": 55,
+      "L1": 67,
+      "envelope_slack": 12,
+      "oriented_slacks": [
+        12,
+        25
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        8
+      ],
+      "members": [
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 16,
+      "sigma_C": 2,
+      "Hx": 6,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 38,
+      "L1": 67,
+      "envelope_slack": 29,
+      "oriented_slacks": [
+        29,
+        48
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        9
+      ],
+      "members": [
+        [
+          1,
+          9
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 18,
+      "sigma_C": 2,
+      "Hx": 7,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 40,
+      "L1": 67,
+      "envelope_slack": 27,
+      "oriented_slacks": [
+        27,
+        46
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        10
+      ],
+      "members": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 20,
+      "sigma_C": 2,
+      "Hx": 8,
+      "Hv": 4,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 42,
+      "L1": 67,
+      "envelope_slack": 25,
+      "oriented_slacks": [
+        25,
+        25
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        1,
+        11
+      ],
+      "members": [
+        [
+          1,
+          11
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 21,
+      "sigma_C": 2,
+      "Hx": 9,
+      "Hv": 9,
+      "W": 37,
+      "Rhat_envelope": 25,
+      "U1_envelope": 49,
+      "L1": 67,
+      "envelope_slack": 18,
+      "oriented_slacks": [
+        18
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        2,
+        3
+      ],
+      "members": [
+        [
+          2,
+          3
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 26,
+      "L1": 67,
+      "envelope_slack": 41,
+      "oriented_slacks": [
+        41,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        2,
+        5
+      ],
+      "members": [
+        [
+          2,
+          5
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 14,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 29,
+      "L1": 67,
+      "envelope_slack": 38,
+      "oriented_slacks": [
+        38,
+        50
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        2,
+        7
+      ],
+      "members": [
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 4,
+      "Hv": 1,
+      "W": 37,
+      "Rhat_envelope": 24,
+      "U1_envelope": 38,
+      "L1": 67,
+      "envelope_slack": 29,
+      "oriented_slacks": [
+        29,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        2,
+        9
+      ],
+      "members": [
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 18,
+      "sigma_C": 2,
+      "Hx": 4,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 19,
+      "U1_envelope": 40,
+      "L1": 67,
+      "envelope_slack": 27,
+      "oriented_slacks": [
+        27,
+        46
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 26,
+      "L1": 67,
+      "envelope_slack": 41,
+      "oriented_slacks": [
+        41,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 26,
+      "L1": 67,
+      "envelope_slack": 41,
+      "oriented_slacks": [
+        41,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        3,
+        7
+      ],
+      "members": [
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 15,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 30,
+      "L1": 67,
+      "envelope_slack": 37,
+      "oriented_slacks": [
+        37,
+        49
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        3,
+        8
+      ],
+      "members": [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 67,
+      "envelope_slack": 53,
+      "oriented_slacks": [
+        53,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        4,
+        5
+      ],
+      "members": [
+        [
+          4,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 1,
+      "W": 31,
+      "Rhat_envelope": 12,
+      "U1_envelope": 26,
+      "L1": 67,
+      "envelope_slack": 41,
+      "oriented_slacks": [
+        41,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        4,
+        7
+      ],
+      "members": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 2,
+      "Hv": 2,
+      "W": 31,
+      "Rhat_envelope": 0,
+      "U1_envelope": 14,
+      "L1": 67,
+      "envelope_slack": 53,
+      "oriented_slacks": [
+        53,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        5,
+        6
+      ],
+      "members": [
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "orbit_size": 2,
+      "P_C": 12,
+      "sigma_C": 1,
+      "Hx": 3,
+      "Hv": 2,
+      "W": 37,
+      "Rhat_envelope": 12,
+      "U1_envelope": 26,
+      "L1": 67,
+      "envelope_slack": 41,
+      "oriented_slacks": [
+        41,
+        53
+      ]
+    },
+    {
+      "u": 12,
+      "representative": [
+        5,
+        7
+      ],
+      "members": [
+        [
+          5,
+          7
+        ]
+      ],
+      "orbit_size": 1,
+      "P_C": 13,
+      "sigma_C": 2,
+      "Hx": 3,
+      "Hv": 3,
+      "W": 37,
+      "Rhat_envelope": 12,
+      "U1_envelope": 28,
+      "L1": 67,
+      "envelope_slack": 39,
+      "oriented_slacks": [
+        39
+      ]
+    }
+  ],
+  "qualification": "Core symmetry and symmetric all-orientations envelope; no assertion that actual tangent-cone Betti numbers or actual R are reflection invariant."
+}

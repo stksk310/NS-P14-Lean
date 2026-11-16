@@ -1,0 +1,17 @@
+✖ [4984/4985] Building NSP14.Lex.InitialBetti (2.3s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/InitialBetti.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/InitialBetti.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/InitialBetti.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/InitialBetti.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/InitialBetti.setup.json --json
+error: NSP14/Lex/InitialBetti.lean:36:8: Type mismatch
+  ChainComplex.of_d ?m.185 ?m.186 n
+has type
+  ChainComplex.of.d ?m.185 ?m.186 (n + 1) n = ?m.186 n
+but is expected to have type
+  A.d (n + 1) n = ModuleCat.ofHom (Endpoint.artinBoundaryMap k q I hI t n)
+error: NSP14/Lex/InitialBetti.lean:38:8: Type mismatch
+  ChainComplex.of_d ?m.217 ?m.218 n
+has type
+  ChainComplex.of.d ?m.217 ?m.218 (n + 1) n = ?m.218 n
+but is expected to have type
+  B.d (n + 1) n = ModuleCat.ofHom (Endpoint.artinBoundaryMap k q J hJ t n)
+Some required targets logged failures:
+- NSP14.Lex.InitialBetti
+error: build failed

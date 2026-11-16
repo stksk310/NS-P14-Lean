@@ -1,0 +1,124 @@
+'NSP14.Endpoint.gradedUnit_kernel_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.gradedUnit_quotientHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.relabeledRegular_totalBetti' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.Data.exists_core_lex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.correction_harmonic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.correction_tail_third_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.Data.dense_core_lex_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Width.dense_payment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Endpoint.Data.actual_dense_firstterm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.NumericalSemigroup.narrow_dense_firstterm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.NumericalSemigroup.narrow_dense_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.NumericalSemigroup.narrow_width_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Run18.dense_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Run18.width_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Run18.all_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Endpoint.gradedUnit_kernel_homogeneous : ∀ (k σ : Type) [inst : Field k] (A : Type) [inst_1 : CommRing A]
+  [inst_2 : Algebra k A] (φ : MvPolynomial σ k →ₐ[k] A)
+  (G : NSP14.Homological.GradedPolynomialModule k σ (NSP14.Homological.polynomialRegularModule k σ A φ)),
+  (NSP14.Homological.regularRestrictionCoefficientEquiv k σ A φ).symm 1 ∈ G.degreeSpace 0 →
+    Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule σ k) (RingHom.ker φ.toRingHom)
+NSP14.Endpoint.gradedUnit_quotientHilbert : ∀ (k σ : Type) [inst : Field k] (A : Type) [inst_1 : CommRing A]
+  [inst_2 : Algebra k A] (φ : MvPolynomial σ k →ₐ[k] A)
+  (G : NSP14.Homological.GradedPolynomialModule k σ (NSP14.Homological.polynomialRegularModule k σ A φ))
+  [inst_3 : Fintype σ] [inst_4 : LinearOrder σ] [Module.Finite k A],
+  Function.Surjective ⇑φ →
+    ∀ (hm : (NSP14.Homological.regularRestrictionCoefficientEquiv k σ A φ).symm 1 ∈ G.degreeSpace 0) (n : ℕ),
+      Module.finrank k ↑((NSP14.Endpoint.artinGrading k σ (RingHom.ker φ.toRingHom) ⋯).piece ↑n) =
+        Module.finrank k ↑(G.piece ↑n)
+NSP14.Homological.relabeledRegular_totalBetti : ∀ (k τ σ : Type) [inst : Field k] (A : Type) [inst_1 : CommRing A]
+  [inst_2 : Algebra k A] (φ : MvPolynomial σ k →ₐ[k] A) (e : τ ≃ σ) [inst_3 : Fintype τ] [inst_4 : Fintype σ]
+  [inst_5 : Module.Finite k A] (i : ℕ),
+  NSP14.Homological.totalBetti k τ
+      (NSP14.Homological.polynomialRegularModule k τ A (NSP14.Homological.relabeledRegularMap k τ σ A φ e)) i =
+    NSP14.Homological.totalBetti k σ (NSP14.Homological.polynomialRegularModule k σ A φ) i
+NSP14.Endpoint.Data.exists_core_lex : ∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k],
+  ∃ L,
+    ∃ (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin D.q) k) L),
+      NSP14.Lex.IsLex k D.q L ∧
+        (∀ (n : ℕ), NSP14.Lex.quotientHilbert k D.q L hL n = D.coreHilbert k n) ∧
+          ∀ (i : ℕ),
+            1 ≤ i →
+              NSP14.Homological.totalBetti k (↥D.a) (D.QCoreModule k) i ≤
+                NSP14.Homological.totalBetti k (Fin D.q) (NSP14.Endpoint.artinModule k (Fin D.q) L) i
+NSP14.Lex.IsLex.correction_harmonic_bound : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsLex k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (N : ℕ),
+        2 ≤ q →
+          (∀ (n : ℕ), N + 1 < n → NSP14.Lex.quotientHilbert k q I hHom n = 0) →
+            NSP14.Lex.quotientHilbert k q I hHom 0 = 1 →
+              NSP14.Lex.quotientHilbert k q I hHom 1 = q →
+                ↑(NSP14.Lex.lexCorrection k q I N) ≤
+                  ∑ d ∈ Finset.range N, ↑(q - 1) * ↑(NSP14.Lex.quotientHilbert k q I hHom (d + 2)) / (↑d + 3)
+NSP14.Lex.IsLex.correction_tail_third_bound : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsLex k q I →
+    I ≠ ⊤ →
+      ∀ (hHom : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I) (N r : ℕ),
+        r ≤ q →
+          2 ≤ r →
+            NSP14.Lex.quotientHilbert k q I hHom 2 ≤ Fintype.card (NSP14.Lex.PolynomialDegreeIndex r 2) →
+              (∀ (n : ℕ), N + 1 < n → NSP14.Lex.quotientHilbert k q I hHom n = 0) →
+                NSP14.Lex.quotientHilbert k q I hHom 0 = 1 →
+                  NSP14.Lex.quotientHilbert k q I hHom 1 = q →
+                    ↑(NSP14.Lex.lexCorrection k q I N) ≤
+                      (↑(r - 1) * ∑ d ∈ Finset.range N, ↑(NSP14.Lex.quotientHilbert k q I hHom (d + 2))) / 3
+NSP14.Endpoint.Data.dense_core_lex_bound : ∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k] (t : ℕ),
+  D.u = D.q + 1 + t →
+    t ≤ D.q →
+      4 ≤ D.q →
+        ∃ K,
+          (∀ (i : ℕ),
+              1 ≤ i →
+                NSP14.Homological.totalBetti k (↥D.a) (D.QCoreModule k) i ≤
+                  i * (D.q + 1).choose (i + 1) + K * (D.q - 1).choose (i - 1)) ∧
+            (t = 2 → K ≤ 2) ∧ (t = 3 → K ≤ 4) ∧ (4 ≤ t → 3 * K ≤ 2 * t * (t - 1))
+NSP14.Width.dense_payment : ∀ (q t P R K j : ℕ),
+  4 ≤ q →
+    2 ≤ t →
+      t ≤ q →
+        j ≤ q + 1 →
+          P ≤ q + 1 + 2 * t →
+            R ≤ t →
+              (t = 2 → R = 0 ∧ K ≤ 2) →
+                (t = 3 → K ≤ 4) →
+                  (4 ≤ t → 3 * K ≤ 2 * t * (t - 1)) →
+                    (j + 1) * (q + 1).choose (j + 2) + P * q.choose j + R * (q + 1).choose j + K * (q - 1).choose j ≤
+                      (j + 1) * (q + t + 1).choose (j + 2)
+NSP14.Endpoint.Data.actual_dense_firstterm : ∀ (D : NSP14.Endpoint.Data) (k : Type) [inst : Field k] (t : ℕ),
+  D.u = D.q + 1 + t →
+    2 ≤ t →
+      t ≤ D.q →
+        4 ≤ D.q → ∀ (i : ℕ), 1 ≤ i → NSP14.Homological.totalBetti k D.Variables (D.fullG k) i ≤ i * D.u.choose (i + 1)
+NSP14.NumericalSemigroup.narrow_dense_firstterm : ∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]
+  (he : 6 ≤ S.embeddingDimension) (hw : S.width ≤ S.multiplicity - 2) (t : ℕ),
+  (S.endpointData ⋯ hw).u = (S.endpointData ⋯ hw).q + 1 + t →
+    2 ≤ t →
+      t ≤ (S.endpointData ⋯ hw).q →
+        ∀ (i : ℕ),
+          1 ≤ i →
+            NSP14.Homological.totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤
+              i * (S.endpointData ⋯ hw).u.choose (i + 1)
+NSP14.NumericalSemigroup.narrow_dense_comparison : ∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]
+  (he : 6 ≤ S.embeddingDimension) (hw : S.width ≤ S.multiplicity - 2) (t : ℕ),
+  (S.endpointData ⋯ hw).u = (S.endpointData ⋯ hw).q + 1 + t →
+    2 ≤ t →
+      t ≤ (S.endpointData ⋯ hw).q →
+        ∀ (i : ℕ),
+          NSP14.Homological.totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤
+            NSP14.Homological.totalBetti k (S.intervalCompletion ⋯).AtomExponent
+              (↧((S.intervalCompletion ⋯).FormalTangentAlgebra k)) i
+NSP14.NumericalSemigroup.narrow_width_comparison : ∀ (S : NSP14.NumericalSemigroup) (k : Type) [inst : Field k]
+  (he : 5 ≤ S.embeddingDimension),
+  S.width ≤ S.multiplicity - 2 →
+    ∀ (i : ℕ),
+      NSP14.Homological.totalBetti k S.AtomExponent (↧(S.FormalTangentAlgebra k)) i ≤
+        NSP14.Homological.totalBetti k (S.intervalCompletion ⋯).AtomExponent
+          (↧((S.intervalCompletion ⋯).FormalTangentAlgebra k)) i
+NSP14.Run18.dense_closed : NSP14.Run18.Requested.W_DENSE
+NSP14.Run18.width_closed : NSP14.Run18.Requested.W_CLOSE
+NSP14.Run18.all_closed : NSP14.Run18.Requested.X_BHP_EK ∧
+  NSP14.Run18.Requested.W_EDGE ∧
+    NSP14.Run18.Requested.W_DENSE ∧
+      NSP14.Run18.Requested.W_SPARSE ∧ NSP14.Run18.Requested.W_FIVE ∧ NSP14.Run18.Requested.W_CLOSE

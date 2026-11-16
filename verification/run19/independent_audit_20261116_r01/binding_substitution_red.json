@@ -1,0 +1,12 @@
+{
+  "status": "REPRODUCED_REVIEWED_SOURCE_GIT_BINDING_GAP",
+  "accepted": true,
+  "proof": "f0e8f5323471b321081c91c2fe5d56546129ca0e",
+  "reviewed_commit": "370bfb35d42b88f3f8b22ba8d09661e846c971eb",
+  "head": "539731f43d1391cb4dba012329a6e9ba6c908006",
+  "certified_source_sha256": "3ba35312aa4c25726ff799e01627316f2000db2bc91f6cb5b1c4c4fa9e505f5f",
+  "reviewed_source_sha256": "02af23f7a847f89ec8ed75ebce42a1c23978006524107ba1eb49cf00fadfa6b6",
+  "reviewed_source_differs": true,
+  "rejection": null,
+  "scope": "Disposable synthetic publication control; no repository source or published evidence modified."
+}

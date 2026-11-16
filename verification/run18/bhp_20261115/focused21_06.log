@@ -1,0 +1,52 @@
+'NSP14.Lex.profileDominates_antisymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericMonomialStep_prefixCard_of_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericMonomialStep_prefixCard_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericFieldDegreeMatrix_minor_det_ne_zero_of_specialize' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Lex.elementaryDistraction_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericMonomialStep_prefix_strict_of_raise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericMonomialStep_fixed_stronglyStable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericIdealTower_profile_stabilizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.exists_stronglyStable_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericMonomialStep_prefixCard_of_minor : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (n : ℕ) (v : NSP14.Lex.PolynomialDegreeIndex q n) {ι : Type} [inst_1 : Fintype ι]
+  [inst_2 : DecidableEq ι] (r c : ι ↪ NSP14.Lex.PolynomialDegreeIndex q n),
+  (∀ (b : ι), (MvPolynomial.monomial ↑(c b)) 1 ∈ I) →
+    (∀ (b : ι), MonomialOrder.degLex.toSyn ↑v ≤ MonomialOrder.degLex.toSyn ↑(r b)) →
+      ((NSP14.Lex.genericFieldDegreeMatrix k q n).submatrix ⇑r ⇑c).det ≠ 0 →
+        Fintype.card ι ≤
+          NSP14.Lex.monomialPrefixCard (NSP14.Lex.GenericDistractionField k q) q (NSP14.Lex.genericMonomialStep k q I) n
+            v
+NSP14.Lex.genericMonomialStep_fixed_stronglyStable : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsMonomial k q I →
+    (∀ (v : Fin q →₀ ℕ),
+        (MvPolynomial.monomial v) 1 ∈ NSP14.Lex.genericMonomialStep k q I ↔ (MvPolynomial.monomial v) 1 ∈ I) →
+      NSP14.Lex.IsStronglyStable k q I
+NSP14.Lex.genericIdealTower_profile_stabilizes : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I →
+    ∃ N,
+      ∀ (n : ℕ),
+        N ≤ n →
+          NSP14.Lex.monomialIdealProfile (NSP14.Lex.genericTowerField k q n) q (NSP14.Lex.genericIdealTower k q I n) =
+            NSP14.Lex.monomialIdealProfile (NSP14.Lex.genericTowerField k q N) q (NSP14.Lex.genericIdealTower k q I N)
+NSP14.Lex.genericIdealTower_lex_comparison : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I L : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (hL : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) L),
+  NSP14.Lex.IsLex k q L →
+    (∀ (d : ℕ), NSP14.Lex.quotientHilbert k q I hI d = NSP14.Lex.quotientHilbert k q L hL d) →
+      ∀ (n : ℕ),
+        NSP14.Lex.IsLex (NSP14.Lex.genericTowerField k q n) q (NSP14.Lex.genericIdealTower k q I n) →
+          ∀ (i : ℕ) (t : ℤ), NSP14.Lex.quotientGradedBetti k q I hI i t ≤ NSP14.Lex.quotientGradedBetti k q L hL i t
+NSP14.Lex.exists_stronglyStable_comparison : ∀ (k : Type) [inst : Field k] (q : ℕ) (I : Ideal (MvPolynomial (Fin q) k))
+  (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I),
+  ∃ L fieldL x J,
+    ∃ (hJ : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) L) J),
+      NSP14.Lex.IsMonomial L q J ∧
+        (∀ (v : Fin q →₀ ℕ),
+            (MvPolynomial.monomial v) 1 ∈ J →
+              ∀ (a b : Fin q), 0 < v b → a < b → (MvPolynomial.monomial (NSP14.Lex.raisedExponent q v a b)) 1 ∈ J) ∧
+          (∀ (n : ℕ), NSP14.Lex.quotientHilbert k q I hI n = NSP14.Lex.quotientHilbert L q J hJ n) ∧
+            ∀ (i : ℕ) (t : ℤ), NSP14.Lex.quotientGradedBetti k q I hI i t ≤ NSP14.Lex.quotientGradedBetti L q J hJ i t

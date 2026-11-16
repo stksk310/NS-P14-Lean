@@ -1,0 +1,5 @@
+⚠ [5476/5477] Built NSP14.Width.DenseHeight (1.7s)
+warning: NSP14/Width/DenseHeight.lean:86:8: Unused tactic linter: `change D.coreOffset (D.coreWord (w.take i.val)) % D.u ∈ D.a` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (5477 jobs).

@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/FiveClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 3.3185170169999765,
+    "log": "verification/run18/antipodal_20261114/focused01_FiveClosedGoals.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AntipodalActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AntipodalActual.olean"
+    ],
+    "exit_code": 1,
+    "seconds": 1.9717552110014367,
+    "log": "verification/run18/antipodal_20261114/focused01_AntipodalActual.log"
+  }
+]

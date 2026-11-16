@@ -1,0 +1,139 @@
+{
+  "schema": "SHORTER_N4_SEARCH_V1",
+  "offset_count": 196,
+  "finite_widths": [
+    3,
+    12
+  ],
+  "multiplicities_enumerated": 0,
+  "higher_row_finite_points": 0,
+  "higher_row_tail_certificates": 0,
+  "exceptions": [
+    [
+      3,
+      1,
+      2
+    ],
+    [
+      4,
+      1,
+      3
+    ]
+  ],
+  "by_width": [
+    {
+      "w": 3,
+      "count": 1,
+      "min_slack": -2,
+      "worst": [
+        1,
+        2
+      ]
+    },
+    {
+      "w": 4,
+      "count": 3,
+      "min_slack": -1,
+      "worst": [
+        1,
+        3
+      ]
+    },
+    {
+      "w": 5,
+      "count": 6,
+      "min_slack": 1,
+      "worst": [
+        1,
+        4
+      ]
+    },
+    {
+      "w": 6,
+      "count": 9,
+      "min_slack": 0,
+      "worst": [
+        1,
+        5
+      ]
+    },
+    {
+      "w": 7,
+      "count": 15,
+      "min_slack": 2,
+      "worst": [
+        1,
+        6
+      ]
+    },
+    {
+      "w": 8,
+      "count": 18,
+      "min_slack": 4,
+      "worst": [
+        1,
+        5
+      ]
+    },
+    {
+      "w": 9,
+      "count": 27,
+      "min_slack": 7,
+      "worst": [
+        1,
+        8
+      ]
+    },
+    {
+      "w": 10,
+      "count": 30,
+      "min_slack": 8,
+      "worst": [
+        1,
+        6
+      ]
+    },
+    {
+      "w": 11,
+      "count": 45,
+      "min_slack": 14,
+      "worst": [
+        1,
+        10
+      ]
+    },
+    {
+      "w": 12,
+      "count": 42,
+      "min_slack": 12,
+      "worst": [
+        1,
+        7
+      ]
+    }
+  ],
+  "polynomial_coefficients": {
+    "12*(F2_lower-U2_upper), w=6+z": [
+      108,
+      152,
+      45,
+      4
+    ],
+    "8*(F3_lower-U3_upper), w=5+z": [
+      88,
+      134,
+      67,
+      14,
+      1
+    ],
+    "60*(F4_lower-U4_upper), w=5+z": [
+      105,
+      458,
+      435,
+      170,
+      30,
+      2
+    ]
+  },
+  "qualification": "Exact finite evaluation of a proved all-m bound; universal arguments are in manuscript section 14."
+}

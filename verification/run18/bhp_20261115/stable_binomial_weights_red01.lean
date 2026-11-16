@@ -1,0 +1,3 @@
+module
+import NSP14.Lex.StrongStableRestriction
+#check NSP14.Lex.IsStronglyStable.binomial_degree_sum_le_lex_of_hilbert

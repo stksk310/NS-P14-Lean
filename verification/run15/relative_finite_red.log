@@ -1,0 +1,13 @@
+tests/RelativePresentation.lean:10:23: error(lean.invalidField): Invalid field `relativeToG`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeToG`, so it is not possible to project the field `relativeToG` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:11:4: error(lean.invalidField): Invalid field `relativeToG_X_none`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeToG_X_none`, so it is not possible to project the field `relativeToG_X_none` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:16:49: error(lean.invalidField): Invalid field `RelativeRing`: The environment does not contain `NSP14.Ordinary.ActualWitness.RelativeRing`, so it is not possible to project the field `RelativeRing` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:16:64: error(lean.invalidField): Invalid field `relativeG`: The environment does not contain `NSP14.Ordinary.ActualWitness.relativeG`, so it is not possible to project the field `relativeG` from an expression
+  W
+of type `ActualWitness k`
+tests/RelativePresentation.lean:16:77: error(lean.unknownIdentifier): Unknown identifier `W.relativeG_finite`

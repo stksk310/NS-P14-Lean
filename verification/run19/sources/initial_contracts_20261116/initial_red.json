@@ -1,0 +1,142 @@
+[
+  {
+    "goal": "N_DISTANCE",
+    "export": "NSP14.Run19.distance_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_DISTANCE.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_WORDS",
+    "export": "NSP14.Run19.words_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WORDS.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_HIGH",
+    "export": "NSP14.Run19.high_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_HIGH.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_FIRST",
+    "export": "NSP14.Run19.first_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_FIRST.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_SMALL",
+    "export": "NSP14.Run19.small_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_SMALL.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_WIDTH4",
+    "export": "NSP14.Run19.width4_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WIDTH4.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "N_CLOSE",
+    "export": "NSP14.Run19.narrow_four_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_CLOSE.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "I_BASE",
+    "export": "NSP14.Run19.base_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_BASE.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "X_LTV",
+    "export": "NSP14.Run19.ltv_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/X_LTV.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  },
+  {
+    "goal": "I_THREE",
+    "export": "NSP14.Run19.three_closed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_THREE.lean"
+    ],
+    "exit_code": 1,
+    "expected_only_missing_export": true
+  }
+]

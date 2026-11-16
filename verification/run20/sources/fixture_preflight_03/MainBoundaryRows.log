@@ -1,0 +1,9 @@
+tests/MainBoundaryRows.lean:38:0: warning: Definition `ordinary_target_fifth_char2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tests/MainBoundaryRows.lean:39:0: warning: Definition `ordinary_target_fifth_char3` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tests/MainBoundaryRows.lean:40:0: warning: Definition `ordinary_target_fifth_Q` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

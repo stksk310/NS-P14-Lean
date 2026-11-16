@@ -1,0 +1,20 @@
+{
+  "status": "RUN19_MATHEMATICS_CLOSED_VALIDATION_PENDING",
+  "run19_complete": false,
+  "base_commit": "04906ede0e9e3a04b9c07c791c1e1c49834dd3e1",
+  "closed_ids": [
+    "N_DISTANCE",
+    "N_WORDS",
+    "N_HIGH",
+    "N_FIRST",
+    "N_SMALL",
+    "N_WIDTH4",
+    "N_CLOSE",
+    "I_BASE",
+    "X_LTV",
+    "I_THREE"
+  ],
+  "unproved_ids": [],
+  "prior_v06_alignment_complete": true,
+  "proof_snapshot_commit": null
+}

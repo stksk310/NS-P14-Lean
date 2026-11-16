@@ -1,0 +1,12 @@
+tests/TangentAlgebra.lean:5:9: error(lean.invalidField): Invalid field `TangentAlgebra`: The environment does not contain `NSP14.NumericalSemigroup.TangentAlgebra`, so it is not possible to project the field `TangentAlgebra` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/TangentAlgebra.lean:6:9: error(lean.invalidField): Invalid field `tangentCoordinates`: The environment does not contain `NSP14.NumericalSemigroup.tangentCoordinates`, so it is not possible to project the field `tangentCoordinates` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/TangentAlgebra.lean:7:9: error(lean.invalidField): Invalid field `xKernelEquiv`: The environment does not contain `NSP14.NumericalSemigroup.xKernelEquiv`, so it is not possible to project the field `xKernelEquiv` from an expression
+  S
+of type `NSP14.NumericalSemigroup`
+tests/TangentAlgebra.lean:8:9: error(lean.invalidField): Invalid field `headQuotientEquiv`: The environment does not contain `NSP14.NumericalSemigroup.headQuotientEquiv`, so it is not possible to project the field `headQuotientEquiv` from an expression
+  S
+of type `NSP14.NumericalSemigroup`

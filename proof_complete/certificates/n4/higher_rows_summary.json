@@ -1,0 +1,98 @@
+{
+  "certificate_sha256": "795765ab65bc28e1d2f087d4bb7cbcb0e97b6c37fca28bbd74c308ec3bd255f5",
+  "code_sha256": "7c13303fd7c62f27df8abb00e4234e94f7fc97341047f89d24732dc2e25eb378",
+  "external_input": "Actual interval formula (T), verified separately by parent against GSS arXiv1108.3203 Theorem4.1 and Herzog-Stamate arXiv1308.4644v3 Proposition2.5",
+  "finding": "No defect found in primitive higher-row proof; explicit exhaustive finite proof, not a proof-assistant kernel result.",
+  "finite_points": 4824,
+  "mathematical_payload_sha256": "44dae4892039cec415b1edcfba6367d97d655e37f3ae559ad1f5e3842b9c16e5",
+  "scope": {
+    "field": "arbitrary",
+    "indices": "all i>=2",
+    "offsets": "0<a<b<w<m, gcd(a,b,w)=1",
+    "requested_subscope": "w<=m-2"
+  },
+  "stable_tail_families": 108,
+  "status": "PASS",
+  "summary": [
+    {
+      "finite_points": 9,
+      "max_U2": 12,
+      "min_target_second": 12,
+      "primitive_pairs": 3,
+      "slack": 0,
+      "true_narrow_finite_points": 6,
+      "w": 4
+    },
+    {
+      "finite_points": 54,
+      "max_U2": 16,
+      "min_target_second": 25,
+      "primitive_pairs": 6,
+      "slack": 9,
+      "true_narrow_finite_points": 48,
+      "w": 5
+    },
+    {
+      "finite_points": 153,
+      "max_U2": 20,
+      "min_target_second": 46,
+      "primitive_pairs": 9,
+      "slack": 26,
+      "true_narrow_finite_points": 144,
+      "w": 6
+    },
+    {
+      "finite_points": 405,
+      "max_U2": 24,
+      "min_target_second": 77,
+      "primitive_pairs": 15,
+      "slack": 53,
+      "true_narrow_finite_points": 390,
+      "w": 7
+    },
+    {
+      "finite_points": 702,
+      "max_U2": 30,
+      "min_target_second": 120,
+      "primitive_pairs": 18,
+      "slack": 90,
+      "true_narrow_finite_points": 684,
+      "w": 8
+    },
+    {
+      "finite_points": 1431,
+      "max_U2": 35,
+      "min_target_second": 177,
+      "primitive_pairs": 27,
+      "slack": 142,
+      "true_narrow_finite_points": 1404,
+      "w": 9
+    },
+    {
+      "finite_points": 2070,
+      "max_U2": 41,
+      "min_target_second": 250,
+      "primitive_pairs": 30,
+      "slack": 209,
+      "true_narrow_finite_points": 2040,
+      "w": 10
+    }
+  ],
+  "theory_checked": [
+    "actual C-to-G monomial kernel and competition ideal",
+    "all minimal internal words have length <=w-2",
+    "P<=binomial(w,2), sigma<=w-1",
+    "R<=max(w-4,0)+(w-1)max(w-5,0)",
+    "general Koszul double-complex high-row bounds; no R25 dependency",
+    "m>=w(w-2) implies R=0 and Q=core",
+    "all target-capacity inequalities including positive coefficient identities"
+  ],
+  "true_narrow_finite_points": 4716,
+  "verification": {
+    "all_finite_and_tail_invariants_match_historical_independent_certificate": true,
+    "historical_checker_imported": false,
+    "nonCM_controls_retained": true,
+    "normal_optimized_payload_identical": true,
+    "source_rank_specialization_used": false
+  }
+}

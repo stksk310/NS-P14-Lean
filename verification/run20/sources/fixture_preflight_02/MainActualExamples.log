@@ -1,0 +1,222 @@
+tests/MainActualExamples.lean:59:20: error(lean.invalidField): Invalid field `width`: The environment does not contain `NSP14.ArithmeticSequence.Data.width`, so it is not possible to project the field `width` from an expression
+  threeNarrow
+of type `ArithmeticSequence.Data`
+tests/MainActualExamples.lean:77:48: error(lean.inferDefTypeFailed): Failed to infer type of theorem `naturals`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:79:29: error(lean.inferDefTypeFailed): Failed to infer type of theorem `naturals_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:80:33: error(lean.inferDefTypeFailed): Failed to infer type of theorem `naturals_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:81:33: error(lean.inferDefTypeFailed): Failed to infer type of theorem `naturals_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:82:49: error(lean.inferDefTypeFailed): Failed to infer type of theorem `two_three`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:84:30: error(lean.inferDefTypeFailed): Failed to infer type of theorem `two_three_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:85:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `two_three_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:86:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `two_three_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:87:50: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_five`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:89:31: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_five_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:90:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_five_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:91:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_five_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:92:52: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_narrow`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:94:33: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_narrow_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:95:37: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_narrow_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:96:37: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_narrow_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:97:50: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_wide`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:99:31: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_wide_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:100:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_wide_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:101:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `three_wide_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:102:51: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_narrow`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:104:32: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_narrow_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:105:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_narrow_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:106:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_narrow_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:107:53: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_ordinary`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:109:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_ordinary_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:110:38: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_ordinary_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:111:38: error(lean.inferDefTypeFailed): Failed to infer type of theorem `four_ordinary_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:112:50: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_four`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:114:31: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_four_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:115:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_four_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:116:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_four_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:117:51: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_AP`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:119:32: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_AP_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:120:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_AP_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:121:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_AP_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:122:53: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_hole`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:124:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_hole_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:125:38: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_hole_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:126:38: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_hole_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:127:55: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:129:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense2_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:130:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense2_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:131:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense2_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:132:55: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:134:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense3_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:135:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense3_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:136:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense3_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:137:55: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense4`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:139:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense4_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:140:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense4_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:141:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_dense4_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:142:55: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_sparse`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:144:36: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_sparse_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:145:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_sparse_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:146:40: error(lean.inferDefTypeFailed): Failed to infer type of theorem `physical_sparse_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:147:49: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_six`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:149:30: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_six_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:150:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_six_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:151:34: error(lean.inferDefTypeFailed): Failed to infer type of theorem `nonCM_six_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:152:50: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_small`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:154:31: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_small_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:155:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_small_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:156:35: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_small_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:157:52: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_nonunit`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:159:33: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_nonunit_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:160:37: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_nonunit_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:161:37: error(lean.inferDefTypeFailed): Failed to infer type of theorem `five_nonunit_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:162:60: error(lean.inferDefTypeFailed): Failed to infer type of theorem `dense_equal_boundary`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:164:41: error(lean.inferDefTypeFailed): Failed to infer type of theorem `dense_equal_boundary_Q`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:165:45: error(lean.inferDefTypeFailed): Failed to infer type of theorem `dense_equal_boundary_char2`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:166:45: error(lean.inferDefTypeFailed): Failed to infer type of theorem `dense_equal_boundary_char3`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tests/MainActualExamples.lean:167:80: error(lean.inferDefTypeFailed): Failed to infer type of theorem `width_four_residues`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be

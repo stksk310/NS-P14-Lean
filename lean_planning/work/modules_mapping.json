@@ -1,0 +1,1007 @@
+{
+  "schema": "ns-p14-lean-module-plan-v1",
+  "date": "2026-11-09",
+  "status": "planning_only_no_lean_implementation_or_certification",
+  "source_registry": "proof_structure_v3/lemma_registry.json",
+  "source_registry_sha256": "bc0c33189b28ad2ec0f27da023df52f22ea0ad816474e1103d907ee6ddfecd8b",
+  "scope": "18 modules; all 50 registry IDs assigned exactly once; foundational extras are explicit; published inputs require proofs.",
+  "effort_assumptions": [
+    "Experienced Lean mathematician with AI assistance and a shared pinned mathlib base.",
+    "Person-days of work, not elapsed calendar duration.",
+    "10 person-days = two working weeks.",
+    "Each module estimate includes formal proofs and semantic connections; downstream estimates exclude predecessor work.",
+    "No whole-project calendar estimate before library audit.",
+    "Existing proof-source audits and checker passes do not replace Lean proofs."
+  ],
+  "modules": [
+    {
+      "id": "M01",
+      "title": "数値半群・有限組合せ基盤",
+      "primary_registry_ids": [],
+      "effort_person_days": {
+        "lower": 35,
+        "upper": 90
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M02",
+      "title": "actual tangent cone・最小表示",
+      "primary_registry_ids": [],
+      "effort_person_days": {
+        "lower": 50,
+        "upper": 140
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M03",
+      "title": "graded Koszul/Tor・必要な同調代数",
+      "primary_registry_ids": [
+        "X_BASIC",
+        "I_FIELD"
+      ],
+      "effort_person_days": {
+        "lower": 100,
+        "upper": 280
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M04"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M04",
+      "title": "初期加群・Gröbner・標準単項式",
+      "primary_registry_ids": [],
+      "effort_person_days": {
+        "lower": 50,
+        "upper": 150
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M05",
+      "title": "算術列の全証明・actual target",
+      "primary_registry_ids": [
+        "X_AP_BETTI",
+        "X_AP_CONE",
+        "I_TARGET"
+      ],
+      "effort_person_days": {
+        "lower": 80,
+        "upper": 220
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M06",
+      "title": "三生成元の公刊比較",
+      "primary_registry_ids": [
+        "X_LTV",
+        "I_THREE"
+      ],
+      "effort_person_days": {
+        "lower": 60,
+        "upper": 180
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M07",
+      "title": "Kneser・長零和自由列",
+      "primary_registry_ids": [
+        "X_KNESER",
+        "X_SC"
+      ],
+      "effort_person_days": {
+        "lower": 70,
+        "upper": 200
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M08",
+      "title": "Green・Hilbert restriction",
+      "primary_registry_ids": [
+        "X_GREEN"
+      ],
+      "effort_person_days": {
+        "lower": 70,
+        "upper": 220
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M03",
+        "M04"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M09",
+      "title": "BHP/Pardue・Eliahou–Kervaire",
+      "primary_registry_ids": [
+        "X_BHP_EK"
+      ],
+      "effort_person_days": {
+        "lower": 100,
+        "upper": 300
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M03",
+        "M04",
+        "M08"
+      ],
+      "registry_derived_prerequisites": []
+    },
+    {
+      "id": "M10",
+      "title": "ordinary の actual 座標・一つの cut・塔",
+      "primary_registry_ids": [
+        "O_COORD",
+        "O_CUT",
+        "O_VOLUME",
+        "O_TOWER",
+        "O_SIDON"
+      ],
+      "effort_person_days": {
+        "lower": 55,
+        "upper": 140
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M02",
+        "M03",
+        "M08"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M08"
+      ]
+    },
+    {
+      "id": "M11",
+      "title": "harmonic rank・Tor 鎖・target 係数",
+      "primary_registry_ids": [
+        "O_HARMONIC",
+        "O_TOR",
+        "O_TARGET"
+      ],
+      "effort_person_days": {
+        "lower": 50,
+        "upper": 140
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M03",
+        "M04",
+        "M05",
+        "M10"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M05",
+        "M10"
+      ]
+    },
+    {
+      "id": "M12",
+      "title": "ordinary の scalar と全域閉鎖",
+      "primary_registry_ids": [
+        "O_LOW",
+        "O_SCALAR",
+        "O_SMALL",
+        "O_LARGE",
+        "O_CLOSE"
+      ],
+      "effort_person_days": {
+        "lower": 25,
+        "upper": 65
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M03",
+        "M05",
+        "M10",
+        "M11"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M05",
+        "M10",
+        "M11"
+      ]
+    },
+    {
+      "id": "M13",
+      "title": "狭幅正規化・端点 core から actual 核",
+      "primary_registry_ids": [
+        "I_NORMALIZE",
+        "E_CORE",
+        "E_COORD",
+        "E_KERNEL",
+        "E_STOP",
+        "E_BOUNDS"
+      ],
+      "effort_person_days": {
+        "lower": 45,
+        "upper": 120
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "registry_derived_prerequisites": [
+        "M03"
+      ]
+    },
+    {
+      "id": "M14",
+      "title": "Artin/Koszul 計数と actual Betti 移行",
+      "primary_registry_ids": [
+        "E_ARTIN",
+        "E_HOMOLOGY",
+        "E_TRANSFER",
+        "E_ROW",
+        "E_TWO"
+      ],
+      "effort_person_days": {
+        "lower": 25,
+        "upper": 70
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M03",
+        "M04",
+        "M13"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M13"
+      ]
+    },
+    {
+      "id": "M15",
+      "title": "五生成元以上の全幅",
+      "primary_registry_ids": [
+        "W_EDGE",
+        "W_DENSE",
+        "W_SPARSE",
+        "W_FIVE",
+        "W_CLOSE"
+      ],
+      "effort_person_days": {
+        "lower": 45,
+        "upper": 130
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M05",
+        "M07",
+        "M09",
+        "M13",
+        "M14"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M05",
+        "M07",
+        "M09",
+        "M13",
+        "M14"
+      ]
+    },
+    {
+      "id": "M16",
+      "title": "N4 の距離・標準語・第一行・高次行",
+      "primary_registry_ids": [
+        "N_DISTANCE",
+        "N_WORDS",
+        "N_HIGH",
+        "N_FIRST",
+        "N_SMALL"
+      ],
+      "effort_person_days": {
+        "lower": 30,
+        "upper": 85
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M05",
+        "M07",
+        "M13",
+        "M14"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M05",
+        "M07",
+        "M13",
+        "M14"
+      ]
+    },
+    {
+      "id": "M17",
+      "title": "幅4の全 m と N4 閉鎖",
+      "primary_registry_ids": [
+        "N_WIDTH4",
+        "N_CLOSE"
+      ],
+      "effort_person_days": {
+        "lower": 20,
+        "upper": 65
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M13",
+        "M16"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M05",
+        "M13",
+        "M16"
+      ]
+    },
+    {
+      "id": "M18",
+      "title": "小生成元・分割・主定理",
+      "primary_registry_ids": [
+        "I_BASE",
+        "I_PARTITION",
+        "I_MAIN"
+      ],
+      "effort_person_days": {
+        "lower": 8,
+        "upper": 25
+      },
+      "additional_effort_condition": "All predecessor export theorems and interfaces are completed; their cost is counted in their own modules.",
+      "planned_prerequisites": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M12",
+        "M13",
+        "M15",
+        "M17"
+      ],
+      "registry_derived_prerequisites": [
+        "M03",
+        "M06",
+        "M12",
+        "M13",
+        "M15",
+        "M17"
+      ]
+    }
+  ],
+  "registry_id_to_module": {
+    "E_ARTIN": "M14",
+    "E_BOUNDS": "M13",
+    "E_COORD": "M13",
+    "E_CORE": "M13",
+    "E_HOMOLOGY": "M14",
+    "E_KERNEL": "M13",
+    "E_ROW": "M14",
+    "E_STOP": "M13",
+    "E_TRANSFER": "M14",
+    "E_TWO": "M14",
+    "I_BASE": "M18",
+    "I_FIELD": "M03",
+    "I_MAIN": "M18",
+    "I_NORMALIZE": "M13",
+    "I_PARTITION": "M18",
+    "I_TARGET": "M05",
+    "I_THREE": "M06",
+    "N_CLOSE": "M17",
+    "N_DISTANCE": "M16",
+    "N_FIRST": "M16",
+    "N_HIGH": "M16",
+    "N_SMALL": "M16",
+    "N_WIDTH4": "M17",
+    "N_WORDS": "M16",
+    "O_CLOSE": "M12",
+    "O_COORD": "M10",
+    "O_CUT": "M10",
+    "O_HARMONIC": "M11",
+    "O_LARGE": "M12",
+    "O_LOW": "M12",
+    "O_SCALAR": "M12",
+    "O_SIDON": "M10",
+    "O_SMALL": "M12",
+    "O_TARGET": "M11",
+    "O_TOR": "M11",
+    "O_TOWER": "M10",
+    "O_VOLUME": "M10",
+    "W_CLOSE": "M15",
+    "W_DENSE": "M15",
+    "W_EDGE": "M15",
+    "W_FIVE": "M15",
+    "W_SPARSE": "M15",
+    "X_AP_BETTI": "M05",
+    "X_AP_CONE": "M05",
+    "X_BASIC": "M03",
+    "X_BHP_EK": "M09",
+    "X_GREEN": "M08",
+    "X_KNESER": "M07",
+    "X_LTV": "M06",
+    "X_SC": "M07"
+  },
+  "published_inputs": [
+    {
+      "registry_id": "X_LTV",
+      "module": "M06",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_GREEN",
+      "module": "M08",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_AP_BETTI",
+      "module": "M05",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_AP_CONE",
+      "module": "M05",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_BHP_EK",
+      "module": "M09",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_KNESER",
+      "module": "M07",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    },
+    {
+      "registry_id": "X_SC",
+      "module": "M07",
+      "proof_required": true,
+      "axiom_wrapper_is_completion": false
+    }
+  ],
+  "edge_direction": "dependent module -> prerequisite module",
+  "registry_quotient_edges": [
+    {
+      "dependent": "M10",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M10",
+      "prerequisite": "M08"
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M05"
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M10"
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M05"
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M10"
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M11"
+    },
+    {
+      "dependent": "M13",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M14",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M14",
+      "prerequisite": "M13"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M05"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M07"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M09"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M13"
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M14"
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M05"
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M07"
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M13"
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M14"
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M05"
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M13"
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M16"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M03"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M06"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M12"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M13"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M15"
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M17"
+    }
+  ],
+  "planned_interface_edges": [
+    {
+      "dependent": "M02",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M03",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M03",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M04",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M05",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M05",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M05",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M05",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M06",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M06",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M06",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M06",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M06",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M07",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M08",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M08",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M09",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M09",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M09",
+      "prerequisite": "M08",
+      "note": "M09->M08 uses only a separable Hilbert/Macaulay helper API, not Green as a mathematical premise."
+    },
+    {
+      "dependent": "M10",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M10",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M10",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M10",
+      "prerequisite": "M08",
+      "note": ""
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M11",
+      "prerequisite": "M10",
+      "note": ""
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M10",
+      "note": ""
+    },
+    {
+      "dependent": "M12",
+      "prerequisite": "M11",
+      "note": ""
+    },
+    {
+      "dependent": "M13",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M13",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M13",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M13",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M14",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M14",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M14",
+      "prerequisite": "M13",
+      "note": ""
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M07",
+      "note": ""
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M09",
+      "note": ""
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M13",
+      "note": ""
+    },
+    {
+      "dependent": "M15",
+      "prerequisite": "M14",
+      "note": ""
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M07",
+      "note": ""
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M13",
+      "note": ""
+    },
+    {
+      "dependent": "M16",
+      "prerequisite": "M14",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M13",
+      "note": ""
+    },
+    {
+      "dependent": "M17",
+      "prerequisite": "M16",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M01",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M02",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M03",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M04",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M05",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M06",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M12",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M13",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M15",
+      "note": ""
+    },
+    {
+      "dependent": "M18",
+      "prerequisite": "M17",
+      "note": ""
+    }
+  ],
+  "topological_order_prerequisites_first": [
+    "M01",
+    "M02",
+    "M04",
+    "M03",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M17",
+    "M18"
+  ],
+  "validation": {
+    "registry_count": 50,
+    "assigned_id_count": 50,
+    "duplicates": [],
+    "unassigned_ids": [],
+    "unknown_ids": [],
+    "published_inputs_count": 7,
+    "registry_quotient_acyclic": true,
+    "combined_interface_graph_acyclic": true,
+    "lean_proofs_checked": false
+  },
+  "notes": [
+    "M01, M02 and M04 contain necessary foundations outside the 50-ID list.",
+    "M03 is the primary owner of X_BASIC but M04 supplies its Groebner component; X_BASIC is decomposed into actual proved theorems, not a bundled mathematical axiom.",
+    "I_NORMALIZE is assigned to M13, preserving I_NORMALIZE -> X_BASIC while avoiding an artificial foundation cycle.",
+    "M02 requires a proved equivalence to the actual completed-semigroup-ring tangent cone.",
+    "The e=2 vertical slice is a calibration milestone, not a first-week completion promise."
+  ]
+}

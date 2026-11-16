@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/IdealAdjoining.lean",
+    "exit_code": 0,
+    "seconds": 1.783,
+    "warning_free": true
+  },
+  {
+    "file": "tests/KoszulVariableFactor.lean",
+    "exit_code": 0,
+    "seconds": 1.634,
+    "warning_free": true
+  },
+  {
+    "file": "tests/LexLinearQuotients.lean",
+    "exit_code": 0,
+    "seconds": 1.883,
+    "warning_free": true
+  }
+]

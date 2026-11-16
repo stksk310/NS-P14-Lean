@@ -1,0 +1,7 @@
+tests/MainPartition.lean:6:44: error: unexpected token ':='; expected ':'
+tests/MainPartition.lean:16:75: error: unexpected token ':='; expected ':'
+tests/MainPartition.lean:20:2: error: failed to synthesize
+  Decidable (cutRegime 2 ∧ cutRegime 3 ∧ cutRegime 4 ∧ cutRegime 8 ∧ cutRegime 9)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+tests/MainPartition.lean:25:37: error: unexpected token ':='; expected ':'

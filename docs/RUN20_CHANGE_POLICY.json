@@ -1,0 +1,59 @@
+{
+  "base": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "modified_files": [],
+  "append_only": [
+    "NSP14.lean",
+    "LEAN_PROGRESS.md",
+    "docs/LEAN_PAPER_ALIGNMENT_JA.md"
+  ],
+  "new_production": [
+    "NSP14/Main/IntervalTarget.lean",
+    "NSP14/Main/Partition.lean",
+    "NSP14/Main/Branches.lean",
+    "NSP14/Main.lean"
+  ],
+  "new_fixtures": [
+    "tests/Run20Contracts.lean",
+    "tests/MainPartition.lean",
+    "tests/MainTargetTransport.lean",
+    "tests/MainBranchConsumers.lean",
+    "tests/MainPublicAPI.lean",
+    "tests/MainActualExamples.lean",
+    "tests/MainBoundaryRows.lean"
+  ],
+  "new_audits": [
+    "audit/run20/RequestedGoals.lean",
+    "audit/run20/PartitionClosed.lean",
+    "audit/run20/ClosedGoals.lean",
+    "audit/run20/acceptance/I_PARTITION.lean",
+    "audit/run20/acceptance/I_MAIN.lean"
+  ],
+  "new_infrastructure": [
+    "scripts/verify_run20.py",
+    "scripts/check_run20_guards.py",
+    "scripts/check_run20_partition.py",
+    "scripts/check_run20_routes.py",
+    "scripts/replay_run20_inherited.py",
+    "scripts/package_run20_audit.py",
+    "docs/RUN20_INPUT_INVENTORY_JA.md",
+    "docs/RUN20_CHANGE_POLICY.json",
+    "docs/RUN20_CLOSURE_STATUS.json",
+    "docs/RUN20_DEPENDENCY_COVERAGE.json",
+    "docs/RUN20_UNPROVED_DECLARATIONS.md",
+    "docs/RUN20_EXECUTION_LEDGER_JA.md",
+    "docs/RUN20_PAPER_CORRESPONDENCE_JA.md",
+    "docs/RUN20_HANDOFF_JA.md",
+    "docs/RUN20_FINAL_REVIEW_JA.md"
+  ],
+  "new_evidence_prefixes": [
+    "verification/run20/"
+  ],
+  "new_archive_prefix": "artifacts/NS_P14_LEAN_RUN20_",
+  "source_bound_provenance_directories": [
+    "verification/run19/sources/",
+    "verification/run20/sources/"
+  ],
+  "prior_run19_proof": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "prior_run19_evidence": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "notes": "Finite preimplementation allowlist; preserve all inherited files except three append-only prefixes. Main uses production exports only. All project production/fixtures/audits receive private-view normal/explicit type and axiom audit."
+}

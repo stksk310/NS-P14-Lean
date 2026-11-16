@@ -1,0 +1,21 @@
+{
+  "title": "NS-P14-Lean",
+  "upload_type": "software",
+  "description": "A Lean formalization of the comparison of total Betti numbers of tangent cones of numerical semigroup rings with their literal interval completions. The unconditional theorem holds for every numerical semigroup, every field, and every homological degree, with each tangent cone presented over its own minimal polynomial ring. Run20 and its final independent audit are complete. The repository includes Lean proofs, Japanese mathematical manuscripts, verification scripts, and immutable audit evidence. Publication packaging preserves the audited source; no new Lean verification run is claimed for the publication documents. Original software is licensed under Apache-2.0; original manuscripts and explanatory documentation are licensed under CC-BY-4.0. See LICENSE_SCOPE.md for scope and third-party exceptions.",
+  "creators": [
+    {
+      "name": "Sato, Keisuke",
+      "orcid": "0009-0005-4230-0268"
+    }
+  ],
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Lean",
+    "formal verification",
+    "numerical semigroups",
+    "tangent cones",
+    "Betti numbers"
+  ],
+  "version": "1.0.0"
+}

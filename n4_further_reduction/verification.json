@@ -1,0 +1,55 @@
+{
+  "date_utc": "2026-11-09",
+  "status": "PAPER_REPLACEMENT_WITH_NO_REQUIRED_N4_OFFSET_CERTIFICATE",
+  "mathematical_scope": "N4 first row, arbitrary field, all integer d>=1 and m>=du+2, using existing V02 endpoint, SC, Kneser, interval target and width-four proof",
+  "previous_required_offset_rows": 196,
+  "new_required_offset_rows": 0,
+  "retained_paper_cases": [
+    "u=6 height dichotomy",
+    "u=7 exceptional gap3",
+    "u=8 exceptional gaps4,3,2",
+    "u=3 identity/d>=2 capacity",
+    "u=4 nonboundary square and retained symbolic all-m boundary patch"
+  ],
+  "other_P14_finite_lemmas_unchanged": {
+    "small_ordinary_profiles": 83,
+    "row_comparisons": 665,
+    "infinite_tails": 5
+  },
+  "new_external_theorems": [],
+  "V02_manifest_unchanged": true,
+  "root_observed_command": "python3 -B n4_further_reduction/small_width/verify_structural_bounds.py",
+  "exit_code": 0,
+  "regression_result": {
+    "primitive_oriented_pairs_checked": 997,
+    "widths": [
+      3,
+      20
+    ],
+    "historical_rows_agree": 196,
+    "small_width_pairs_checked": 48,
+    "additional_circuits_checked": 17,
+    "conjecture_counterexamples": [
+      {
+        "u": 10,
+        "a": 1,
+        "b": 6,
+        "P_C": 18,
+        "proposed": 17
+      },
+      {
+        "u": 12,
+        "a": 1,
+        "b": 7,
+        "P_C": 25,
+        "proposed": 21
+      }
+    ]
+  },
+  "regression_role": "Optional arithmetic/transcription checks only. Universal claims follow from the paper proof, not the finite 997 pairs.",
+  "independent_review": "ZERO_CERTIFICATE_REFEREE.md, including Japanese text review",
+  "translation_fix": "Restored explicit integer parameters and d>=1; no unresolved further finding",
+  "paper_sha256": "467cd0776e09d95e037281c9b40fcaf972b1d0910154b7d5eb87c07c889537a6",
+  "full_V03_integrated_manuscript_created": false,
+  "lean_status": "NOT_KERNEL_VERIFIED"
+}

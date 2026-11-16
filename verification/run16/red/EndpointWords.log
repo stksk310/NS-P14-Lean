@@ -1,0 +1,6 @@
+tests/EndpointWords.lean:7:78: error(lean.invalidField): Invalid field `coreWord`: The environment does not contain `NSP14.Endpoint.Data.coreWord`, so it is not possible to project the field `coreWord` from an expression
+  D
+of type `Endpoint.Data`
+tests/EndpointWords.lean:8:4: error(lean.invalidField): Invalid field `exists_coreWord`: The environment does not contain `NSP14.Endpoint.Data.exists_coreWord`, so it is not possible to project the field `exists_coreWord` from an expression
+  D
+of type `Endpoint.Data`

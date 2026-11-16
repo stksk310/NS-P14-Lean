@@ -1,0 +1,50 @@
+[
+  {
+    "file": "tests/ArtinGradedMaps.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.091
+  },
+  {
+    "file": "tests/ArtinGradedZero.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.542
+  },
+  {
+    "file": "tests/GradedIdealAdjoining.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.687
+  },
+  {
+    "file": "tests/VariableIdealGraded.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.559
+  },
+  {
+    "file": "tests/LexGradedStep.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.87
+  },
+  {
+    "file": "tests/LexLinearQuotientExamples.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 3.685
+  },
+  {
+    "file": "tests/LexEK.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.812
+  },
+  {
+    "file": "verification/run18/graded_ek_20261115/Axioms02.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.721
+  }
+]

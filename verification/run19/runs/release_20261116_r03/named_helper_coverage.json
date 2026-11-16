@@ -1,0 +1,51 @@
+{
+  "required": {
+    "tests.N4StandardWords": [
+      "NSP14.Tests.Run19Words.collective",
+      "NSP14.Tests.Run19Words.ca",
+      "NSP14.Tests.Run19Words.cb",
+      "NSP14.Tests.Run19Words.collective_pair",
+      "NSP14.Tests.Run19Words.neither_unit",
+      "NSP14.Tests.Run19Words.collective_triangle",
+      "NSP14.Tests.Run19Words.mixed_both_orders",
+      "NSP14.Tests.Run19Words.small_height_and_socle"
+    ],
+    "tests.N4Higher": [
+      "NSP14.Tests.Run19Higher.heTwo",
+      "NSP14.Tests.Run19Higher.all_fields"
+    ],
+    "tests.N4Small": [
+      "NSP14.Tests.Run19Small.six",
+      "NSP14.Tests.Run19Small.seven",
+      "NSP14.Tests.Run19Small.eight"
+    ],
+    "tests.N4WidthFour": [
+      "NSP14.Tests.Run19WidthFour.data"
+    ],
+    "tests.N4ActualClosure": [
+      "NSP14.Tests.Run19N4NonCM.D",
+      "NSP14.Tests.Run19N4NonCM.cap"
+    ],
+    "tests.SmallEmbeddingBase": [
+      "NSP14.Tests.Run19Base.naturals",
+      "NSP14.Tests.Run19Base.naturals_atoms",
+      "NSP14.Tests.Run19Base.naturals_embedding",
+      "NSP14.Tests.Run19Base.naturals_width_zero",
+      "NSP14.Tests.Run19Base.twoThree",
+      "NSP14.Tests.Run19Base.threeFive"
+    ],
+    "tests.LTVActual": [
+      "NSP14.Tests.Run19Three.narrowNonCM",
+      "NSP14.Tests.Run19Three.cm",
+      "NSP14.Tests.Run19Three.boundaryWide",
+      "NSP14.Tests.Run19Three.nonCM_embedding"
+    ],
+    "tests.SmallEmbeddingThree": [
+      "NSP14.Tests.Run19ThreeFullAP.unitStep",
+      "NSP14.Tests.Run19ThreeFullAP.nonunitStep"
+    ]
+  },
+  "count": 28,
+  "all_present_with_normal_explicit_types_and_axioms": true,
+  "generated_support_declarations_also_enumerated_by_environment_audit": true
+}

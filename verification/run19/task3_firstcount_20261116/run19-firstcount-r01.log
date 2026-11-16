@@ -1,0 +1,81 @@
+NSP14/NarrowFour/FirstCount.lean:15:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c ≥ 0
+where
+ a := ↑n
+ b := ↑p.1
+ c := ↑p.2
+NSP14/NarrowFour/FirstCount.lean:14:48: warning: This simp argument is unused:
+  Finset.mem_product
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [exponentTriangle, Finset.mem_filter, Finset.mem_range]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/FirstCount.lean:14:67: warning: This simp argument is unused:
+  Finset.mem_range
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [exponentTriangle, Finset.mem_filter, Finset.mem_product]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/FirstCount.lean:35:52: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - c ≥ 0
+  a - d ≥ 0
+where
+ a := ↑n
+ b := ↑(↑p).1
+ c := ↑(↑p).2
+ d := ↑↑⟨(↑p).1 + (↑p).2, ⋯⟩
+NSP14/NarrowFour/FirstCount.lean:86:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Eq.refl` does not have explicit fields, but 2 were provided
+NSP14/NarrowFour/FirstCount.lean:87:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Eq.refl` does not have explicit fields, but 2 were provided
+NSP14/NarrowFour/FirstCount.lean:82:69: warning: This simp argument is unused:
+  Prod.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [axes, Finset.mem_union, Finset.mem_image, Finset.mem_range]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+NSP14/NarrowFour/FirstCount.lean:141:46: warning: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+NSP14/NarrowFour/FirstCount.lean:202:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 0
+  l ≥ 0
+  j ≥ 0
+  j - m ≥ 0
+  j + l ≥ -1
+  i ≥ 1
+  g - i - j ≥ 1
+  f ≥ 0
+  0 ≤ f - 2*g + i ≤ 1
+  f - g + i + j ≥ 1
+  f + i ≥ 3
+  2*f - g + 2*i + j ≥ 1
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d - e + 2*f - g + 2*i + j ≥ 1
+where
+ c := ↑((D.u / 2).choose 2)
+ d := ↑(D.coreP k)
+ e := ↑(if D.u - ↑b + ↑a ≤ D.u / 2 then (D.u / 2 - (D.u - ↑b + ↑a) + 2).choose 2 else 0)
+ f := ↑↑b
+ g := ↑D.u / 2
+ i := ↑(D.u - ↑b)
+ j := ↑(D.u / 2 - (D.u - ↑b + ↑a))
+ l := ↑((D.u / 2 - (D.u - ↑b + ↑a) + 1).choose (Nat.succ 1))
+ m := ↑((D.u / 2 - (D.u - ↑b + ↑a) + 2).choose 2)

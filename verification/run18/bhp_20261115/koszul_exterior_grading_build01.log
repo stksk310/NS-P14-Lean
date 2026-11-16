@@ -1,0 +1,8 @@
+⚠ [4954/4955] Built NSP14.Homological.KoszulExteriorGrading (1.6s)
+warning: NSP14/Homological/KoszulExteriorGrading.lean:30:0: automatically included section variable(s) unused in theorem `NSP14.Homological.homogeneousBasisMap_degree`:
+  [Fintype σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (4955 jobs).

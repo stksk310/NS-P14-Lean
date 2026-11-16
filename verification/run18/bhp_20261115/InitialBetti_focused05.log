@@ -1,0 +1,7 @@
+tests/InitialBetti.lean:22:63: error: unexpected token '('; expected '⟩'
+tests/InitialBetti.lean:21:14: error: Type mismatch: After simplification, term
+  MvPolynomial.IsHomogeneous.add (MvPolynomial.IsHomogeneous.pow (MvPolynomial.isHomogeneous_X k 0) 2)
+ has type
+  MvPolynomial.IsHomogeneous ?m.59 (1 * 2) → (MvPolynomial.X 0 ^ 2 + ?m.59).IsHomogeneous (1 * 2)
+but is expected to have type
+  MvPolynomial.X 0 ^ 2 + MvPolynomial.X 1 ^ 2 ∈ MvPolynomial.homogeneousSubmodule (Fin 2) k 2

@@ -1,0 +1,104 @@
+{
+  "date_utc": "2026-11-09",
+  "status": "INTEGRATED_PROOF_CANDIDATE_PASS",
+  "manuscript": "NS_P14_INTEGRATED_PROOF_JA.md",
+  "manuscript_sha256": "37489ff37efa3de703a78990b294d956d07581082e70d60bae323901b4accef9",
+  "metrics": {
+    "old_lines": 3501,
+    "new_lines": 2180,
+    "removed_lines": 1321,
+    "line_reduction_percent": 37.73,
+    "old_bytes": 146391,
+    "new_bytes": 104268
+  },
+  "old_proof_packages_preserved": true,
+  "required_finite_lemmas": {
+    "n4_offset_pairs": 196,
+    "n4_multiplicities_enumerated": 0,
+    "n4_higher_row_finite_points": 0,
+    "n4_higher_tail_certificates": 0,
+    "ordinary_profiles": 83,
+    "ordinary_comparisons": 665,
+    "ordinary_infinite_tails": 5
+  },
+  "fresh_commands": [
+    {
+      "command": "python3 -B checks/n4/check_shorter_n4.py > audits/n4_run.json",
+      "result": "196 oriented pairs, two explicit exceptions",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B checks/n4/referee_core_audit.py > audits/independent_n4_run.json",
+      "result": "196/493 pair audits agree",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B checks/verify_scalar.py > certificates/scalar_arithmetic.json",
+      "result": "coefficient identity, six rank seeds, new anchor, 351 diagnostics",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B checks/verify_width.py > certificates/width_arithmetic.json",
+      "result": "all sparse polynomial coefficients and capacity tables match",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B checks/verify_small_ordinary.py > audits/small_ordinary_run.json",
+      "result": "83 profiles, 665 comparisons, five tail anchors",
+      "exit_code": 0
+    }
+  ],
+  "additional_historical_comparison": {
+    "historical_pairs_checked": 13921,
+    "exact_new_old_overlap_checked": 196,
+    "maximum_core_length": 288,
+    "coarse_first_row_exceptions": [
+      [
+        3,
+        1,
+        2
+      ],
+      [
+        4,
+        1,
+        3
+      ]
+    ],
+    "result": "PASS"
+  },
+  "mathematical_functions_ast_preserved": true,
+  "exact_certificate_match_to_audited_search": true,
+  "document_structure": {
+    "manuscript": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md",
+    "sha256": "37489ff37efa3de703a78990b294d956d07581082e70d60bae323901b4accef9",
+    "line_count": 2180,
+    "equation_tags": 156,
+    "explicit_equation_references": 121,
+    "section_headings": 48,
+    "duplicate_tags": {},
+    "missing_equation_references": [],
+    "missing_section_references": [],
+    "missing_package_paths": [],
+    "historical_dependencies": [],
+    "residual_unbound_scalar_dV": [],
+    "note": "Structural references only; universal mathematics and finite certificate contents require separate review."
+  },
+  "independent_reviews": {
+    "mathematical": "audits/FINAL_MATHEMATICAL_REVIEW.md",
+    "coverage": "audits/COVERAGE_REVIEW.md",
+    "unresolved_internal_findings": []
+  },
+  "scope": {
+    "coverage": "all genuine numerical semigroups, all total Betti rows, arbitrary field, using named published inputs and required finite lemmas",
+    "publication_peer_review": "NOT_CLAIMED",
+    "lean_kernel_verification": "NOT_PERFORMED",
+    "new_solution_announcement": "NOT_THE_PURPOSE; integrated proof candidate of the existing argument"
+  },
+  "delivery": {
+    "all_json_parsed": true,
+    "all_python_parsed": true,
+    "math_delimiters_balanced": true,
+    "no_control_characters": true,
+    "local_markdown_links_verified": 12
+  }
+}

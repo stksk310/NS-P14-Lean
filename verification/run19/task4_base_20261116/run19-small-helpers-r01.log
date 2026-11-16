@@ -1,0 +1,15 @@
+NSP14/NarrowFour/SmallWidths.lean:25:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  (gcd (↑a) (normalize ↑b)).gcd D.u = 1
+but is expected to have type
+  ((↑a).gcd ↑b).gcd D.u = 1
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.gcd ↦ 12
+NSP14/NarrowFour/SmallWidths.lean:70:30: warning: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

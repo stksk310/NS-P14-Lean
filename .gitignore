@@ -9,3 +9,16 @@ build/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Original uploaded archive and full extracted research history
+attachments/
+source_material/
+reduction_input/
+reduction_work/
+n4_work/
+integration_input/
+integration_work/
+
+# Python interpreter caches
+__pycache__/
+*.py[cod]

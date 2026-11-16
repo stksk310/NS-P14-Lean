@@ -1,0 +1,15 @@
+'NSP14.Lex.distractionMonomial_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.distractionMonomial_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericRawMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericRawDegreeMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.distractionMonomial_step : ∀ (R : Type) [inst : CommRing R] (q : ℕ) (L : Fin q → ℕ → MvPolynomial (Fin q) R)
+  (a : Fin q →₀ ℕ) (i : Fin q),
+  NSP14.Lex.distractionMonomial R q L (a + Finsupp.single i 1) = L i (a i) * NSP14.Lex.distractionMonomial R q L a
+NSP14.Lex.distractionMonomial_homogeneous : ∀ (R : Type) [inst : CommRing R] (q : ℕ)
+  (L : Fin q → ℕ → MvPolynomial (Fin q) R),
+  (∀ (i : Fin q) (j : ℕ), (L i j).IsHomogeneous 1) →
+    ∀ (a : Fin q →₀ ℕ), (NSP14.Lex.distractionMonomial R q L a).IsHomogeneous (Finsupp.degree a)
+NSP14.Lex.genericRawMatrix_det_ne_zero : ∀ (k : Type) [inst : CommRing k] (q : ℕ) [Nontrivial k] (a : Fin q →₀ ℕ),
+  (NSP14.Lex.genericRawMatrix k q a).det ≠ 0
+NSP14.Lex.genericRawDegreeMatrix_det_ne_zero : ∀ (k : Type) [inst : CommRing k] (q : ℕ) [Nontrivial k] (n : ℕ),
+  (NSP14.Lex.genericRawDegreeMatrix k q n).det ≠ 0

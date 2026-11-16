@@ -1,0 +1,8 @@
+tests/AntipodalActual.lean:27:2: error: Type mismatch: After simplification, term
+  actual_resources FiveHigher.antipodal_nonunit k 5 2 rfl (of_decide_eq_true (id (Eq.refl true)))
+    (of_decide_eq_true (id (Eq.refl true))) (of_decide_eq_true (id (Eq.refl true)))
+    (of_decide_eq_true (id (Eq.refl true))) rfl
+ has type
+  And (FiveHigher.antipodal_nonunit.coreP k = Nat.choose 6 2 + 1) (FiveHigher.antipodal_nonunit.wordVolume = 22)
+but is expected to have type
+  And (FiveHigher.antipodal_nonunit.coreP k = 16) (FiveHigher.antipodal_nonunit.wordVolume = 22)

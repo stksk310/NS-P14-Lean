@@ -1,0 +1,8 @@
+⚠ [5582/5583] Built NSP14.Width.AntipodalIdeal (2.2s)
+warning: NSP14/Width/AntipodalIdeal.lean:30:35: Variable name `hh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (5583 jobs).

@@ -1,0 +1,40 @@
+✖ [5562/5563] Building NSP14.Width.AntipodalCore (4.0s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/AntipodalCore.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/AntipodalCore.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/AntipodalCore.setup.json --json
+warning: NSP14/Width/AntipodalCore.lean:18:23: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [antipodalPoint, map_nsmul, coreDegree, coreGeneratorPoint, internalVariable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/AntipodalCore.lean:18:31: This simp argument is unused:
+  map_nsmul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [antipodalPoint, map_add, coreDegree, coreGeneratorPoint, internalVariable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/AntipodalCore.lean:22:23: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [antipodalPoint, map_nsmul, coreOffset, coreGeneratorPoint, internalVariable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NSP14/Width/AntipodalCore.lean:22:31: This simp argument is unused:
+  map_nsmul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [antipodalPoint, map_add, coreOffset, coreGeneratorPoint, internalVariable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: NSP14/Width/AntipodalCore.lean:42:25: Function expected at
+  List.mem_cons_self
+but this term has type
+  ?m.119 ∈ ?m.119 :: ?m.120
+
+Note: Expected a function because this term is being applied to the argument
+  b
+Some required targets logged failures:
+- NSP14.Width.AntipodalCore
+error: build failed

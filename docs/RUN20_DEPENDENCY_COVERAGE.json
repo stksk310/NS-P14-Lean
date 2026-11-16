@@ -1,0 +1,3306 @@
+{
+  "registry_sha256": "bc0c33189b28ad2ec0f27da023df52f22ea0ad816474e1103d907ee6ddfecd8b",
+  "scope": "V03 original statements mapped individually to actual exports and V06 usage; not proof by DAG",
+  "entries": [
+    {
+      "id": "X_BASIC",
+      "original_statement": "Koszul複体は多項式環上のTorを計算する。短完全列のTor長完全列、有界二重複体のスペクトル系列、Hilbert syzygy、分数体上のEuler式、同次Gröbner除法を使う。",
+      "original_quantifiers": "本稿で指定する各体k、有限生成次数付き加群、有界Koszul二重複体。",
+      "status": "PROVED_NEEDED_GROUP",
+      "exports": [
+        {
+          "module": "NSP14.Homological.KoszulTor",
+          "source": "NSP14/Homological/KoszulTor.lean",
+          "declarations": [
+            "koszulMapFunctorIso",
+            "tensorKoszulIso",
+            "torKoszulIso"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.KoszulAnnihilation",
+          "source": "NSP14/Homological/KoszulAnnihilation.lean",
+          "declarations": [
+            "residueField_variable",
+            "polynomialVariableHomotopy",
+            "koszulVariableHomotopy",
+            "complex_homologyMap_smul",
+            "koszul_homology_variable_annihilates",
+            "koszulHomologyK",
+            "koszul_homology_action_reduction",
+            "koszul_homology_finite"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.GradedBetti",
+          "source": "NSP14/Homological/GradedBetti.lean",
+          "declarations": [
+            "finiteDirectSumDimensions",
+            "gradedBetti",
+            "ordinaryTorGradedSumIso",
+            "gradedBetti_total",
+            "gradedBetti_eq_zero_of_gt"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.KoszulLongExact",
+          "source": "NSP14/Homological/KoszulLongExact.lean",
+          "declarations": [
+            "ordinaryTorFunctor",
+            "ordinaryTorKoszulNatIso",
+            "torConnecting",
+            "tor_exact_middle",
+            "torConnecting_comp",
+            "comp_torConnecting",
+            "tor_exact_connecting_left",
+            "tor_exact_connecting_right"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.ComplexEuler",
+          "source": "NSP14/Homological/ComplexEuler.lean",
+          "declarations": [
+            "complexEuler",
+            "complexEuler_zero",
+            "complexEuler_succ",
+            "complexEuler_congr",
+            "complexEuler_iso",
+            "complexConnectingRank",
+            "complexEuler_shortExact",
+            "complexEuler_middle_le"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.NativeKoszulExact",
+          "source": "NSP14/Homological/NativeKoszulExact.lean",
+          "declarations": [
+            "actionKoszulFunctor_shortExact",
+            "actionCoefficientFunctor",
+            "actionCoefficientFunctor_shortExact",
+            "actionCoefficientConsIso"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.StandardMonomials",
+          "source": "NSP14/Homological/StandardMonomials.lean",
+          "declarations": [
+            "StandardExponent",
+            "normalSpace",
+            "normal_form_exists",
+            "normal_in_ideal_eq_zero",
+            "normalQuotientMap",
+            "normalQuotientMap_injective",
+            "normalQuotientMap_surjective",
+            "standardMonomialQuotientEquiv",
+            "normalCoordinates",
+            "standardMonomialBasis",
+            "standardMonomialBasis_apply"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.InitialModule",
+          "source": "NSP14/Homological/InitialModule.lean",
+          "declarations": [
+            "ModuleTerm",
+            "moduleTermVector",
+            "moduleTermShift",
+            "moduleTermShift_strictMono",
+            "moduleTermVector_shift",
+            "moduleTermVector_span",
+            "ModuleStandard",
+            "moduleStandardBasis",
+            "moduleStandardBasis_apply",
+            "moduleStandard_divisor",
+            "moduleStandardBasis_shift_coeff_zero",
+            "moduleStandard_finite"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.MinorRank",
+          "source": "NSP14/Homological/MinorRank.lean",
+          "declarations": [
+            "signed_unit_determinant_ne_zero",
+            "nonzero_minor_rank_lower_bound",
+            "signed_integer_minor_rank_lower_bound",
+            "triangular_signed_minor_rank_lower_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.KoszulStandardMinor",
+          "source": "NSP14/Homological/KoszulStandardMinor.lean",
+          "declarations": [
+            "StandardKoszulTarget",
+            "standardKoszulTerm",
+            "PivotKoszulTarget",
+            "pivotKoszulDivisor",
+            "pivotKoszulPartner",
+            "pivotKoszulPartner_wedge",
+            "pivotKoszulPartner_arrow",
+            "pivotKoszulColumn",
+            "pivotKoszulRow",
+            "pivotKoszulEntry",
+            "pivotKoszul_divisor_shift",
+            "pivotKoszul_divisor_action",
+            "pivotKoszulEntry_diag",
+            "pivotKoszulArrow_term",
+            "pivotKoszulEntry_zero_of_lt",
+            "pivotKoszulArrow_same_term",
+            "pivotKoszulEntry_zero_of_same",
+            "pivotKoszulTarget_rank"
+          ]
+        }
+      ],
+      "v06_usage": "BRIDGE / ordinary Tor / E-TOR",
+      "actual_consumers": [
+        "NSP14.Ordinary.ActualTorRow",
+        "NSP14.Endpoint.FullTransfer"
+      ],
+      "interpretation": "実Koszul→通常Tor同型、有限性・長完全列・rank Euler・有界二重Koszul比較・実Gröbner標準基底を列挙する。一般スペクトル系列/Hilbert syzygyの百科事典的全形式を別の公理として置かず、必要な有界比較とKoszul上次数消滅を実証明で用いる。"
+    },
+    {
+      "id": "I_NORMALIZE",
+      "original_statement": "e≥4かつw≤m−2ならd=gcd(g2−m,...,ge−m),u=w/d,q=e−2として端点模型E1の仮定とm≥du+2を満たす。",
+      "original_quantifiers": "全真正なe≥4数値半群、整数幅w≤m−2。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.WidthNormalization",
+          "source": "NSP14/Semigroup/WidthNormalization.lean",
+          "declarations": [
+            "atoms_gcd_one",
+            "atomOffsets",
+            "offsetGcd",
+            "width_mem_atomOffsets",
+            "atomOffset_le_width",
+            "offsetGcd_dvd",
+            "offsetGcd_pos",
+            "offsetGcd_coprime",
+            "atomOffsets_card",
+            "normalizedOffsets",
+            "normalizedWidth",
+            "internalOffsets",
+            "width_factor",
+            "normalizedWidth_mem",
+            "normalizedOffset_factor",
+            "normalizedOffset_le",
+            "normalizedWidth_pos",
+            "normalizedOffsets_gcd_one",
+            "normalizedOffsets_card",
+            "internalOffsets_card",
+            "internalOffsets_pos",
+            "internalOffsets_lt",
+            "internalOffsets_coprime",
+            "offsets_reconstruct",
+            "endpointData",
+            "endpointData_m",
+            "endpointData_embedding",
+            "endpointData_narrow",
+            "endpointData_generators",
+            "endpointData_carrier"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.CarrierTransport",
+          "source": "NSP14/Semigroup/CarrierTransport.lean",
+          "declarations": [
+            "carrier_order",
+            "carrierExponentEquiv",
+            "carrierPieceEquiv",
+            "carrierTangentEquiv",
+            "carrierTangentEquiv_of",
+            "carrierTangentEquiv_initial",
+            "carrierCompletedEquiv",
+            "carrier_totalBetti"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Normalization",
+          "source": "NSP14/Endpoint/Normalization.lean",
+          "declarations": [
+            "endpointData_gradedEquiv",
+            "endpointData_completedEquiv",
+            "endpointData_totalBetti"
+          ]
+        }
+      ],
+      "v06_usage": "BRIDGE",
+      "actual_consumers": [
+        "NSP14.Main.Partition",
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "I_PARTITION",
+      "original_statement": "e≤3を先に処理し、e≥4では整数幅によりw≤m−2又はw≥m−1。狭幅はe=4とe≥5、ordinaryはr=2,3/4..8/≥9へ分ける。",
+      "original_quantifiers": "全真正な数値半群、任意体。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Main.Partition",
+          "source": "NSP14/Main/Partition.lean",
+          "declarations": [
+            "parameterRegion",
+            "cutRegime",
+            "cutParameters",
+            "narrowRegime",
+            "narrowParameters",
+            "parameter_partition",
+            "cut_parameters",
+            "narrow_parameters"
+          ]
+        }
+      ],
+      "v06_usage": "§6.1–6.2",
+      "actual_consumers": [
+        "NSP14.Main"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "I_BASE",
+      "original_statement": "e=1ならΓ=Nでsource=target。e=2ならG=k[x,y]/(y^m)、Betti列(1,1)でactual targetが支払う。",
+      "original_quantifiers": "真正な数値半群、任意体、e=1又は2、全i≥0。",
+      "status": "SUFFICIENT_ACTUAL_PROOF",
+      "exports": [
+        {
+          "module": "NSP14.SmallEmbedding.Base",
+          "source": "NSP14/SmallEmbedding/Base.lean",
+          "declarations": [
+            "one_atom",
+            "one_literal_carrier",
+            "one_order",
+            "one_x_regular",
+            "one_completed_betti",
+            "two_atoms",
+            "twoAP",
+            "twoAP_carrier",
+            "two_completed_betti",
+            "base_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.IntervalCompletionAll",
+          "source": "NSP14/Semigroup/IntervalCompletionAll.lean",
+          "declarations": [
+            "le_literal_interval",
+            "intervalCompletionAll",
+            "intervalCompletionAll_carrier_eq"
+          ]
+        }
+      ],
+      "v06_usage": "§6.1 / BRIDGE",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "e1のliteral carrierと全行、e2のactual AP解消による(1,1,0,...)を使う。旧文面のy^mという具体的表示式そのものを新たな完了義務としない。"
+    },
+    {
+      "id": "X_LTV",
+      "original_statement": "三生成元数値半群の接錐Betti数はactual interval completionの対応Betti数以下。",
+      "original_quantifiers": "真正な三生成元数値半群、任意体、全total Betti行。",
+      "status": "SUFFICIENT_ACTUAL_PROOF",
+      "exports": [
+        {
+          "module": "NSP14.SmallEmbedding.ThreePresentation",
+          "source": "NSP14/SmallEmbedding/ThreePresentation.lean",
+          "declarations": [
+            "q",
+            "offsets",
+            "generators",
+            "u_pos",
+            "m_pos",
+            "offset_le",
+            "offsets_card",
+            "generator_injective",
+            "generator_mem",
+            "generators_setGcd",
+            "cofinite_closure",
+            "source",
+            "source_generator",
+            "representation",
+            "representation_length_pos",
+            "multiplicity",
+            "generator_atom",
+            "atoms",
+            "embeddingDimension",
+            "maxAtom",
+            "width",
+            "Variables",
+            "atomVariable",
+            "atomVariableEquiv",
+            "variables_card",
+            "FullRing",
+            "EndpointRing",
+            "InternalRing",
+            "xVariable",
+            "vVariable",
+            "internalVariable",
+            "endpointVariable",
+            "endpointVariable_injective",
+            "internalVariable_injective",
+            "fullPolynomialEquiv",
+            "fullToG",
+            "endpointToFull",
+            "internalToFull",
+            "endpointToG",
+            "internalToG",
+            "fullToG_X",
+            "endpointToFull_injective",
+            "internalToFull_injective",
+            "fullG",
+            "fullG_totalBetti",
+            "corePoints",
+            "coreGeneratorPoint",
+            "corePoint_mem",
+            "coreValue",
+            "coreDegree",
+            "coreOffset",
+            "corePoint_bound",
+            "corePoint_length",
+            "coreDegree_le_order",
+            "Core",
+            "coreMonomial",
+            "coreInitial",
+            "coreInitial_zero",
+            "coreInitial_add",
+            "coreInitialHom",
+            "coreToG",
+            "coreToG_monomial",
+            "coreToG_monomial_zero_iff",
+            "coreAtomPoint",
+            "coreAtomPoint_degree",
+            "coreGeneratorPoint_value",
+            "coreAtomPoint_value",
+            "exists_corePoint",
+            "exists_coreInitial",
+            "coreToG_surjective",
+            "fullToCore",
+            "coreInitial_generator",
+            "coreToG_fullToCore",
+            "liveValue_injective",
+            "coreInitial_live",
+            "coreToG_live_coefficient",
+            "coreToG_kernel_span",
+            "epsilon",
+            "Coordinate",
+            "decodeCoordinate",
+            "residue",
+            "coordinate_budget",
+            "coreCoordinates",
+            "decode_coreCoordinates",
+            "decodeCoordinate_injective",
+            "CoordinatePoint",
+            "coreCoordinateEquiv",
+            "longer_core_pair",
+            "core_dead_iff_competitor",
+            "coreFiber",
+            "coreEndpointPoint",
+            "coreEndpointPoint_coe",
+            "coreFiber_add",
+            "coreFiber_upward",
+            "coreFiber_zero",
+            "coreFiberExponents",
+            "coreFiberIdeal",
+            "coreFiberIdeal_mem",
+            "coreFiberIdeal_zero",
+            "shiftedResidue",
+            "carry",
+            "carry_eq",
+            "carry_pos",
+            "epsilon_le_one",
+            "carry_epsilon_lower",
+            "forbiddenStart",
+            "forbiddenStart_first_le",
+            "forbiddenStart_le",
+            "floor_jm_ge",
+            "forbiddenStart_height",
+            "competitorFiber",
+            "actualDeadFiber",
+            "competitorFiber_upward",
+            "actual_dead_iff_forbidden",
+            "actualDeadFiber_eq_inter",
+            "actualDeadFiber_upward",
+            "competitorIdeal",
+            "actualKernelIdeal",
+            "actualKernelIdeal_eq_inf",
+            "actualKernelIdeal_mem",
+            "coreFiberCoefficients",
+            "coreFiberCoefficients_apply",
+            "FiberPoint",
+            "fiberExponentEquiv",
+            "coordinateFiberEquiv",
+            "coreFiberPairCoefficients",
+            "coreFiberBasis",
+            "coreFiberBasis_val",
+            "endpointToCore",
+            "endpointToCore_X",
+            "coreToG_endpointToCore",
+            "coreEndpointModule",
+            "actualEndpointModule",
+            "coreEndpointCoefficients",
+            "actualEndpointCoefficients",
+            "coreToGEndpoint",
+            "coreToGEndpoint_surjective",
+            "coreEndpoint_variable",
+            "FiberBasisIndex",
+            "fiberPolynomialIndexEquiv",
+            "fiberPolynomialPoint",
+            "fiberPolynomialIndexEquiv_apply",
+            "coreSumBasis",
+            "coreSumBasis_apply",
+            "coreFiberLinearAssembly",
+            "coreFiberLinearAssembly_basis",
+            "fiberExponentStep",
+            "fiberIndexStep",
+            "fiberPolynomialPoint_step",
+            "coreFiberBasis_X",
+            "coreSumBasis_X",
+            "coreMonomial_mul",
+            "coreFiberAssembly_variable",
+            "fiberSumModule",
+            "coreFiberCoefficientEquiv",
+            "coreFiberCoefficient_variable",
+            "coreFiberAssembly",
+            "coreFiberModuleEquiv",
+            "endpointElements",
+            "endpointComplex",
+            "endpointPolynomialIso",
+            "endpointHomologyIso",
+            "endpointHomology_betti",
+            "endpointHomology_above",
+            "QCore",
+            "QActual",
+            "actualH0QuotientEquiv",
+            "actualP",
+            "coreP",
+            "actualR",
+            "actualH0_dimension",
+            "endpoint_xElement",
+            "xNativeComplex",
+            "xComplex",
+            "xNativeH0Equiv",
+            "headNativeCoefficients",
+            "headCoefficientEquiv",
+            "xH0Equiv",
+            "xNativeKernel",
+            "xNativeKernelCoefficients",
+            "xKernelCoefficientEquiv",
+            "xH1Equiv",
+            "xHomology_above",
+            "vOnXComplex",
+            "endpointConeIso",
+            "endpointHomology_balance",
+            "core_endpointIdeal_le",
+            "QCoreToActual",
+            "QCoreToActual_surjective",
+            "internalToCore",
+            "internalToQCore",
+            "internalToQActual",
+            "QCoreModule",
+            "QActualModule",
+            "QCoreToActual_internal",
+            "QCoreToActualModule",
+            "actualH1_dimension",
+            "internalVariableList",
+            "fullVariableList",
+            "internalVariableList_length",
+            "fullVariableList_mem",
+            "fullVariableList_nodup",
+            "fullVariableList_actions",
+            "endpointH0Module",
+            "endpointH0ModuleIso",
+            "endpointH0Internal_finite",
+            "endpointH0Internal_betti",
+            "fullRegularIso",
+            "endpointExtendedComplex",
+            "endpointExtended_betti",
+            "endpointRemainder",
+            "endpoint_binomial_correction",
+            "actual_native_endpoint_bound",
+            "fiberPolynomialPoint_injective",
+            "coreFiberLinearAssembly_coeff",
+            "coreToG_zero_iff",
+            "assembled_kernel_iff",
+            "actualKernelSubmodule",
+            "FiberQuotient",
+            "fiberQuotientModule",
+            "fiberToG",
+            "fiberToG_apply",
+            "fiberToG_surjective",
+            "fiberQuotientMap",
+            "fiberQuotientMap_surjective",
+            "fiberToG_kernel",
+            "fiberToGQuotientEquiv",
+            "fiberKernelQuotientEquiv",
+            "fiberQuotientAssemblyEquiv",
+            "actualFiberModuleEquiv",
+            "actualFiberModuleEquiv_apply",
+            "coreWord",
+            "coreWord_cons",
+            "coreWord_append",
+            "coreWord_degree",
+            "coreWord_offset",
+            "exists_coreWord",
+            "coreCoordinates_add_endpoint",
+            "exists_minimalFiber_le",
+            "coordinate_mem_fiber",
+            "minimal_endpoint_factor",
+            "minimal_word_zero_segment",
+            "minimal_prefix_eq",
+            "corePrefixResidue",
+            "minimal_word_prefix_injective",
+            "minimal_word_length_lt",
+            "q_add_one_le_u",
+            "internalOffset",
+            "internalOffset_strictMono",
+            "internalOffset_mem",
+            "internalOffset_pos",
+            "internalOffset_lt",
+            "coreCoordinates_decode",
+            "minimalFiber_degree_lt",
+            "minimalFiber_zero",
+            "minimalFiber_budget",
+            "minimalFiber_finite",
+            "minimal_word_internal",
+            "exists_minimal_internal_word",
+            "offsets_setGcd",
+            "offsetClosure_core",
+            "coreFiber_nonempty",
+            "exists_residueDegree",
+            "shortestDegree",
+            "shortestPoint",
+            "shortestPoint_mem",
+            "shortestPoint_degree",
+            "shortestDegree_le",
+            "shortestPoint_minimal",
+            "shortestDegree_lt",
+            "shortestDegree_zero",
+            "minimalPoints",
+            "coreHeight",
+            "minimalPoint_height",
+            "coreHeight_le",
+            "coreFiberIdeal_minimal_generators",
+            "coreFiberIdeal_ne_bot",
+            "minimalPoints_card_eq",
+            "minimalPoints_card_le",
+            "minimalPoints_card_zero",
+            "minimalPoints_shortest_bound",
+            "wordVolume",
+            "minimalCount",
+            "minimalCount_volume",
+            "shiftedResidue_one_injective",
+            "shiftOneEquiv",
+            "carry_sum_one",
+            "residueCeiling",
+            "residueCeiling_shift",
+            "residueCeiling_sum",
+            "epsilon_sum_add_one",
+            "wordVolume_coordinates",
+            "shiftedResidue_u",
+            "competitorFiber_nonempty",
+            "competitorFloor_exists",
+            "competitorFloor",
+            "competitorFloor_le",
+            "competitorMin_finite",
+            "competitorZ",
+            "competitorMin_card",
+            "competitorZ_point_bound",
+            "competitorMin_height",
+            "competitorZ_height",
+            "competitor_point_volume",
+            "competitorFloor_ceiling",
+            "competitorFloor_sum",
+            "competitorZ_shortest",
+            "competitorZ_sum_bound",
+            "CompetitorQuotient",
+            "fiberToCompetitor",
+            "fiberToCompetitor_kernel",
+            "fiberCompetitorInjection",
+            "fiberCompetitorInjection_injective",
+            "fiberCompetitorProductMap",
+            "fiberCompetitorProductMap_injective",
+            "actualCompetitorProductInjection",
+            "actualCompetitorProductInjection_injective",
+            "endpointMultiply",
+            "actualSocle",
+            "nativeSocle",
+            "nativeSocleCoefficients",
+            "socleCoefficientEquiv",
+            "actualH2SocleEquiv",
+            "actualR_socle_dimension",
+            "actualSocle_endpoint_zero",
+            "actualSocle_competitor_member",
+            "actualSocleProductMap",
+            "actualSocleProductMap_injective",
+            "QKernelModule",
+            "QKernelInclusion",
+            "QKernelCoefficientInclusion",
+            "QKernelCoefficientInclusion_injective",
+            "QKernelSequence",
+            "QKernelSequence_shortExact",
+            "QCoreCoefficientEquiv",
+            "QActualCoefficientEquiv",
+            "QKernel_dimension_add",
+            "QKernel_dimension",
+            "actualP_le_coreP",
+            "actual_kernel_compensation",
+            "coreRemainder",
+            "compensation_merge",
+            "actual_core_endpoint_bound",
+            "completed_core_endpoint_bound",
+            "actual_endpoint_top",
+            "actual_endpoint_above",
+            "actual_endpoint_zero",
+            "competitorSocle_dimension",
+            "actualR_le_sum_z",
+            "actualR_le_volume",
+            "actualR_le_height",
+            "Rhat",
+            "wordVolume_ge_u",
+            "actualR_le_Rhat",
+            "coreRhatRemainder",
+            "coreRemainder_le_Rhat",
+            "actual_core_Rhat_bound",
+            "completed_core_Rhat_bound",
+            "actual_endpoint_top_Rhat",
+            "minimalFiber_iff_predecessors",
+            "CoreMinimal",
+            "core_not_minimal_iff_factor",
+            "coreEndpointIdeal_generators",
+            "coreEndpointIdeal_mem",
+            "coreEndpointIdeal_coeff_zero",
+            "CoreMinimalIndex",
+            "coreMinimalIndexEquiv",
+            "coreMinimalNormal",
+            "coreMinimalNormal_coeff",
+            "QCoreNormalMap",
+            "QCoreNormalMap_injective",
+            "QCoreNormalMap_surjective",
+            "QCoreCoordinates",
+            "QCoreBasis",
+            "QCoreBasis_apply",
+            "coreP_minimalCount",
+            "coreP_le_wordVolume",
+            "internalToCore_X",
+            "QCore_class_monomial",
+            "QCore_internal_basis",
+            "coreMinimal_degree_lt",
+            "wordPolynomial",
+            "fullToCore_wordPolynomial",
+            "fullToCore_surjective",
+            "removeEndpoints",
+            "QCore_endpoint_zero",
+            "removeEndpoints_QCore",
+            "internalToQCore_surjective",
+            "fullToG_augmentation_X",
+            "actual_endpointIdeal_augmentation",
+            "QActualAugmentation",
+            "QCoreAugmentation",
+            "QCore_augmentation_polynomial",
+            "QCore_betti_zero",
+            "fullAP_offsets",
+            "fullAP",
+            "fullAP_carrier"
+          ]
+        },
+        {
+          "module": "NSP14.SmallEmbedding.LanTuVu",
+          "source": "NSP14/SmallEmbedding/LanTuVu.lean",
+          "declarations": [
+            "one_letter_exists",
+            "one_minimal_pure",
+            "minimalDegreeIndex",
+            "minimalDegreeIndex_injective",
+            "one_coreP_bound",
+            "QCore_one_betti_one",
+            "QCore_one_betti_above",
+            "actual_one_rows",
+            "coreCost",
+            "BudgetIndex",
+            "CompetitorMinimalIndex",
+            "budgetImage",
+            "positive_minimal_witness",
+            "minimalEncoding",
+            "minimalEncoding_injective",
+            "competitor_sum_refined",
+            "actualR_refined",
+            "coreCost_degree",
+            "sum_truncated_degree",
+            "actualR_one_bound"
+          ]
+        },
+        {
+          "module": "NSP14.SmallEmbedding.ThreeComparison",
+          "source": "NSP14/SmallEmbedding/ThreeComparison.lean",
+          "declarations": [
+            "threeEndpointData",
+            "threeEndpointData_embedding",
+            "threeEndpointData_narrow",
+            "threeEndpointData_generators",
+            "threeEndpointData_carrier",
+            "threeEndpointData_completed_totalBetti",
+            "three_physical_capacity",
+            "three_wide_comparison",
+            "three_narrow_fullAP_comparison",
+            "one_first_payment",
+            "one_second_payment",
+            "one_actual_profile",
+            "three_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "§6.1 e=3",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "全幅・全行比較を一内部文字のactual endpoint/rank資源から別証明した。原典の追加の三つの強い線形上界は主依存に不要で、形式化済みとは主張しない。"
+    },
+    {
+      "id": "I_THREE",
+      "original_statement": "e=3のP14比較。ordinaryはO_CLOSEでも処理できるが、全域合成では公刊三生成元定理を使って一度だけ処理する。",
+      "original_quantifiers": "真正な三生成元数値半群、任意体、全i≥0。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.SmallEmbedding.ThreeComparison",
+          "source": "NSP14/SmallEmbedding/ThreeComparison.lean",
+          "declarations": [
+            "threeEndpointData",
+            "threeEndpointData_embedding",
+            "threeEndpointData_narrow",
+            "threeEndpointData_generators",
+            "threeEndpointData_carrier",
+            "threeEndpointData_completed_totalBetti",
+            "three_physical_capacity",
+            "three_wide_comparison",
+            "three_narrow_fullAP_comparison",
+            "one_first_payment",
+            "one_second_payment",
+            "one_actual_profile",
+            "three_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "§6.1 e=3",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_COORD",
+      "original_statement": "x=[m], A=G/xG, T=(0:_G x), N⊂A を非 Apéry head の S0-斉次イデアルとする。actual Q=A/N は Apéry 基底を持ち length Q=m, q0=1,q1=e−1,Σ_{s≥2}q_s=δ, A2=Q2, ν≤δ+1。terminal τ↦τ+m は基底全単射。2≤d(τ)≤ν。同 jump のみ gr_s^D(T)≅F_sN/F_{s−1}N（次数差 s）。",
+      "original_quantifiers": "任意体 k、真正な最小生成系 Γ=<m=g1<…<ge>, e≥2。各 s、全生きた非 x 作用。Part II の cut 以後は e≥3。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.AperyDimensions",
+          "source": "NSP14/Semigroup/AperyDimensions.lean",
+          "declarations": [
+            "aperyExponentEquivSet",
+            "aperyExponent_card",
+            "aperyDegreeEquivSet",
+            "aperyDegreeExponent_card",
+            "aperyAlgebra_finrank",
+            "qDegree_finrank",
+            "qDegree_zero_finrank",
+            "qDegree_one_finrank",
+            "qDegree_two_finrank_le",
+            "qDegree_eq_bot_of_gt",
+            "qDegree_high_sum",
+            "headDegree_low_finrank",
+            "headDegree_two_finrank_le"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.JumpFiltration",
+          "source": "NSP14/Semigroup/JumpFiltration.lean",
+          "declarations": [
+            "jumpGSpace",
+            "initial_mem_jumpGSpace",
+            "tangent_expansion",
+            "terminal_add_of_live",
+            "initial_mul_mem_jumpGSpace",
+            "jumpGSpace_mul",
+            "descendingJump",
+            "mem_descendingJump",
+            "descendingJump_antitone",
+            "jumpASpace",
+            "head_mem_jumpASpace",
+            "head_mul_mem_jumpASpace",
+            "jumpASpace_mul",
+            "ascendingJump",
+            "mem_ascendingJump",
+            "ascendingJump_monotone"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TerminalCoordinates",
+          "source": "NSP14/Semigroup/TerminalCoordinates.lean",
+          "declarations": [
+            "terminalHeadExponentEquiv",
+            "terminalHeadVectorEquiv",
+            "terminal_head_degree_shift",
+            "terminal_head_degree_shift_of_jump",
+            "xKernel_eq_bot_of_deficit_zero",
+            "nonAperyIdeal_eq_bot_of_deficit_zero"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TowerCoordinates",
+          "source": "NSP14/Semigroup/TowerCoordinates.lean",
+          "declarations": [
+            "StageAlive",
+            "StageExponent",
+            "StageDegreeExponent",
+            "stageProjection",
+            "stageProjection_ker",
+            "stageProjection_surjective",
+            "stageCoordinates",
+            "stageCoordinates_monomial",
+            "stageCoordinates_symm_single",
+            "towerStageDegree_coordinates",
+            "stageDegreeCoordinates",
+            "stageDegreeBasis",
+            "towerStageDegree_finrank"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary coordinates / jump",
+      "actual_consumers": [
+        "NSP14.Ordinary.JumpEuler",
+        "NSP14.Ordinary.TowerEuler"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_GREEN",
+      "original_statement": "標準次数付き代数の一般超平面切断の次数2 Hilbert関数をMacaulay下降で上から評価できる。反復によりr=max(2,p(a))本で二次以上を消せる。",
+      "original_quantifiers": "無限体k上の標準次数付き代数、一般一次形式、a=dim A2。",
+      "status": "PROVED_NEEDED_SPECIALIZATION",
+      "exports": [
+        {
+          "module": "NSP14.Green.HyperplaneStep",
+          "source": "NSP14/Green/HyperplaneStep.lean",
+          "declarations": [
+            "green_decrement_arithmetic",
+            "exists_hyperplane_step",
+            "hyperplaneProduct",
+            "hyperplaneProduct_symmetric",
+            "hyperplaneProduct_spans"
+          ]
+        },
+        {
+          "module": "NSP14.Green.HyperplaneFlag",
+          "source": "NSP14/Green/HyperplaneFlag.lean",
+          "declarations": [
+            "exists_hyperplane_flag",
+            "exists_quadratic_zero_cut"
+          ]
+        },
+        {
+          "module": "NSP14.Green.QuadraticRank",
+          "source": "NSP14/Green/QuadraticRank.lean",
+          "declarations": [
+            "quadratic_rank_bound_at",
+            "exists_quadratic_rank_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.ActualGreen",
+          "source": "NSP14/Semigroup/ActualGreen.lean",
+          "declarations": [
+            "linearCutIdeal",
+            "linearCutDegree",
+            "flagSpan_mem_cutIdeal",
+            "quadraticCutImage_mem_cutIdeal",
+            "linearCutPieceMap",
+            "quadraticCutToActual",
+            "quadraticCutToActual_surjective",
+            "actual_green_flag"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary degree-two Green",
+      "actual_consumers": [
+        "NSP14.Semigroup.SquareZeroCut"
+      ],
+      "interpretation": "必要な次数2版と反復flagを任意無限体で証明。同標数無限拡大と元の体へのBetti下降を別に実証明する。一般の全次数Green定理を主張しない。"
+    },
+    {
+      "id": "I_FIELD",
+      "original_statement": "多項式環上のgraded/total Betti数は体拡大で不変。有限体から無限な純超越拡大へ移り、一般cutを選んだ後に元の体へ戻せる。",
+      "original_quantifiers": "任意体k、体拡大K/k、本稿の有限生成次数付き代数G。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Homological.FieldExtension",
+          "source": "NSP14/Homological/FieldExtension.lean",
+          "declarations": [
+            "fieldExtension",
+            "fieldExtension_exact",
+            "fieldExtensionHomologyIso",
+            "fieldExtension_finite",
+            "fieldExtension_finrank",
+            "polynomialFieldExtension",
+            "fieldExtension_homology_finrank"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.ActualCoefficientBaseChange",
+          "source": "NSP14/Homological/ActualCoefficientBaseChange.lean",
+          "declarations": [
+            "fullG_variable_matrix",
+            "A_variable_matrix_restrict",
+            "T_variable_matrix_restrict",
+            "N_variable_matrix_restrict",
+            "Q_variable_matrix_restrict",
+            "fullG_variable_matrix_baseChange",
+            "fullG_baseChangeIso",
+            "actualT_baseChangeIso",
+            "actualA_baseChangeIso",
+            "actualN_baseChangeIso",
+            "actualQ_baseChangeIso",
+            "actualG_totalBetti_baseChange",
+            "actualT_totalBetti_baseChange",
+            "actualA_totalBetti_baseChange",
+            "actualN_totalBetti_baseChange",
+            "actualQ_totalBetti_baseChange"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.InfiniteScalarField",
+          "source": "NSP14/Homological/InfiniteScalarField.lean",
+          "declarations": [
+            "InfiniteScalarField",
+            "infiniteScalarField_charP"
+          ]
+        }
+      ],
+      "v06_usage": "BRIDGE arbitrary original field",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalBettiClosure",
+        "NSP14.ArithmeticSequence.BettiFormula"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_CUT",
+      "original_statement": "a=q2、p(a)=max{p≥0:C(p+1,2)≤a}、r=max(2,p(a)) と置く。2≤r≤e−1 で、独立な非 x 一次形式 E=(λ1,…,λr) を一度固定して (A/EA)_{≥2}=0 とできる。P=k[E] に全 strata と完全列を制限する。",
+      "original_quantifiers": "任意体 k、e≥3、actual a。有限体は同標数の純超越拡大後に一般形式を選ぶ。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.SquareZeroCut",
+          "source": "NSP14/Semigroup/SquareZeroCut.lean",
+          "declarations": [
+            "highDegree_mem_of_degree_two",
+            "LinearCutData.quadratic_mem",
+            "LinearCutData.high_mem",
+            "linearCutData_nonempty",
+            "fixedLinearCut"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.FixedTower",
+          "source": "NSP14/Semigroup/FixedTower.lean",
+          "declarations": [
+            "cutKInclusion",
+            "cutTowerStep",
+            "cutTower_exact",
+            "positiveSpace_mem_iff",
+            "cutTower_generated",
+            "sameJumpCutIso_degree"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.ActualResources",
+          "source": "NSP14/Semigroup/ActualResources.lean",
+          "declarations": [
+            "actualNumericalDataWithCut",
+            "actualNumericalData",
+            "actual_all_rows"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary single cut",
+      "actual_consumers": [
+        "NSP14.Ordinary.ActualWitness"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_VOLUME",
+      "original_statement": "bρ は剰余 ρ の最小正 offset 和、lρ はその最短語長、sρ=ord(ωρ), Lρ=(ωρ−bρ)/m。非零剰余では 1≤sρ≤Lρ≤lρ。bρ 昇順 ρ_k について Lρ_k−1≤min(δ,k−1)、Σ_{ρ≠0}(Lρ−1)≤δV。Σ_{τ≡ρ}(d(τ)−1)=Lρ−sρ。order は q≥lρ−Lρ で ord(ωρ+qm)=Lρ+q に安定する。",
+      "original_quantifiers": "任意真正な Γ、各非零剰余 ρ、1≤k≤m−1、各整数 q≥lρ−Lρ。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.OffsetVolume",
+          "source": "NSP14/Semigroup/OffsetVolume.lean",
+          "declarations": [
+            "leastOffsetLength_le_rank",
+            "offsetLevel_path_bound",
+            "offset_volume_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TerminalResidues",
+          "source": "NSP14/Semigroup/TerminalResidues.lean",
+          "declarations": [
+            "residueAperyEquiv",
+            "residueTerminalEquiv",
+            "terminal_excess_sum"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.OffsetVolumeArithmetic",
+          "source": "NSP14/Ordinary/OffsetVolumeArithmetic.lean",
+          "declarations": [
+            "rational_sum_range",
+            "min_staircase_sum"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary offset volume",
+      "actual_consumers": [
+        "NSP14.Semigroup.TowerIntervals",
+        "NSP14.Semigroup.ActualResources"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_TOWER",
+      "original_statement": "F_s は jump≤s の head ideal、U_s=A/F_{s−1},X_s=(U_s)_{≥s},M_s=(U_s)_{≥s+1},K_s=F_s/F_{s−1}。0→K_s→M_s→X_{s+1}→0、X_{ν+1}=0。X_s,M_s はそれぞれ次数 s,s+1 のみで生成。H_t=Σ_s dim(X_s)_{s+t} は有限台、H0=δ,0≤H_t≤M,S=ΣH_t=Σ_{ρ≠0}(Lρ−1)≤δV,H1=δ−a+ℓ≤M−a,H1≤rδ。r≥3 なら a≥a_r=C(r+1,2) なので H1≤M−a_r。",
+      "original_quantifiers": "一つの Γ・体・cut を固定し、2≤s≤ν、全 t≥0。δ=0 は空塔と零資源列。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.TowerExact",
+          "source": "NSP14/Semigroup/TowerExact.lean",
+          "declarations": [
+            "towerStep",
+            "towerKIdeal",
+            "TowerK",
+            "towerStep_zero_iff",
+            "towerK_le_high",
+            "towerKInclusion",
+            "towerTruncStep",
+            "towerTruncStep_surjective",
+            "tower_exact"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TowerResources",
+          "source": "NSP14/Semigroup/TowerResources.lean",
+          "declarations": [
+            "headTopDegree",
+            "head_order_le_top",
+            "headDegree_eq_bot_of_headTop_lt",
+            "towerStageDegree_eq_bot_of_headTop_lt",
+            "towerResource",
+            "towerResource_zero",
+            "towerResource_vanish",
+            "towerResourceSupport",
+            "towerResource_outside_support",
+            "towerResource_eq_zero_of_deficit_zero"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TowerIntervals",
+          "source": "NSP14/Semigroup/TowerIntervals.lean",
+          "declarations": [
+            "TowerIndex",
+            "HeadContributes",
+            "ContributingHead",
+            "towerIndexHeadEquiv",
+            "towerResource_card",
+            "towerResource_field_independent",
+            "headContributes_apery",
+            "headContributes_nonapery"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.TowerStratum",
+          "source": "NSP14/Semigroup/TowerStratum.lean",
+          "declarations": [
+            "ascendingToTowerK",
+            "ascendingToTowerK_ker",
+            "ascendingToTowerK_surjective",
+            "towerStratumEquiv",
+            "cutK",
+            "towerStratumCutIso"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.FixedTower",
+          "source": "NSP14/Semigroup/FixedTower.lean",
+          "declarations": [
+            "cutKInclusion",
+            "cutTowerStep",
+            "cutTower_exact",
+            "positiveSpace_mem_iff",
+            "cutTower_generated",
+            "sameJumpCutIso_degree"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary same H_t",
+      "actual_consumers": [
+        "NSP14.Ordinary.TowerCombined",
+        "NSP14.Ordinary.TowerHarmonic"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_HARMONIC",
+      "original_statement": "P=k[x1,…,xr]、単一次数 b のみで極小生成される有限長 Z、h_t=dim Z_{b+t} に対し c_j^P(Z)≤C(r−1,j)Σ_{t≥0} j h_t/(t+j) (1≤j<r)。c0=μ_P(Z),c_r=0。",
+      "original_quantifiers": "任意体、r≥2、全有限長の単一次数生成 P-加群 Z、1≤j<r。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Homological.Harmonic",
+          "source": "NSP14/Homological/Harmonic.lean",
+          "declarations": [
+            "generated_harmonic_bound",
+            "harmonic_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Homological.StandardHarmonic",
+          "source": "NSP14/Homological/StandardHarmonic.lean",
+          "declarations": [
+            "standard_harmonic_bound"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary harmonic rank",
+      "actual_consumers": [
+        "NSP14.Ordinary.TowerHarmonic"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_TOR",
+      "original_statement": "R=k[x,E]。c_j^R(G)=c_j^P(A)+c_{j−1}^P(T)−ρ_{j+1}。B=A/X2、L_j=(e−1)C(r−1,j)−C(r−1,j+1)。c_j(G)≤L_j+Σ_t W_j(t)H_t (1≤j≤r)。W1(0)=r−1,W1(1)=(r+1)/2,W1(t)=(r−1)/(t+1) (t≥2)。j≥2: W_j(0)=C(r−1,j), W_j(t)=jC(r−1,j)/(t+j)+(j−1)C(r−1,j−1)/(t+j−2) (t≥1)。",
+      "original_quantifiers": "同じ Γ、k、P、全 1≤j≤r（top rank 含む）。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.ActualTorRow",
+          "source": "NSP14/Ordinary/ActualTorRow.lean",
+          "declarations": [
+            "cutAEuler_le_X2_B",
+            "actualTor_resource_row",
+            "actualTor_target_row"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.TowerCombined",
+          "source": "NSP14/Ordinary/TowerCombined.lean",
+          "declarations": [
+            "cutHighEuler_shift_sum",
+            "cutTower_combined"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.TowerH0",
+          "source": "NSP14/Ordinary/TowerH0.lean",
+          "declarations": [
+            "cutHigh_variables",
+            "cutHighH0Equiv",
+            "cutHighEuler_zero"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.RelativeRowsAll",
+          "source": "NSP14/Ordinary/RelativeRowsAll.lean",
+          "declarations": [
+            "relativeBetti_zero",
+            "relative_Euler_above",
+            "actualTor_target_row_all"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.RelativeXComparison",
+          "source": "NSP14/Ordinary/RelativeXComparison.lean",
+          "declarations": [
+            "someKoszulT_Euler",
+            "someKoszulA_Euler",
+            "relative_Euler_le"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary Tor / H0",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalBettiClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_AP_BETTI",
+      "original_statement": "真正な最小算術列生成系の半群環に対し、Gimenez–Sengupta–Srinivasan Theorem4.1のBetti公式を使用する。",
+      "original_quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系である算術列数値半群。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.ArithmeticSequence.BettiFormula",
+          "source": "NSP14/ArithmeticSequence/BettiFormula.lean",
+          "declarations": [
+            "positiveBettiProfile",
+            "positiveBettiProfile_v_one",
+            "cone_totalBetti_pos",
+            "semigroup_totalBetti_pos",
+            "semigroup_totalBetti_zero",
+            "bettiProfile",
+            "cone_totalBetti",
+            "semigroup_totalBetti",
+            "completed_AP_totalBetti"
+          ]
+        },
+        {
+          "module": "NSP14.ArithmeticSequence.ModelTorClosure",
+          "source": "NSP14/ArithmeticSequence/ModelTorClosure.lean",
+          "declarations": [
+            "modelKernelFull_homology_zero",
+            "modelHeadFull_betti_add",
+            "apCone_betti_infinite"
+          ]
+        }
+      ],
+      "v06_usage": "CAP / AP formula",
+      "actual_consumers": [
+        "NSP14.Target.IntervalAPBetti"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_AP_CONE",
+      "original_statement": "算術列生成系では定義理想とその接錐理想のBetti数が一致する。",
+      "original_quantifiers": "任意体k、正整数m≥2,d≥1,v≥1、gcd(m,d)=1、Γ_AP=<m,m+d,...,m+vd>が真正な最小生成系。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.ArithmeticSequence.ConeBetti",
+          "source": "NSP14/ArithmeticSequence/ConeBetti.lean",
+          "declarations": [
+            "semigroupHeadAlgEquiv",
+            "semigroupHeadAlgEquiv_mk",
+            "semigroupToHead_polynomial",
+            "semigroupHeadPolynomialIso",
+            "semigroup_cone_totalBetti"
+          ]
+        },
+        {
+          "module": "NSP14.ArithmeticSequence.BettiFormula",
+          "source": "NSP14/ArithmeticSequence/BettiFormula.lean",
+          "declarations": [
+            "positiveBettiProfile",
+            "positiveBettiProfile_v_one",
+            "cone_totalBetti_pos",
+            "semigroup_totalBetti_pos",
+            "semigroup_totalBetti_zero",
+            "bettiProfile",
+            "cone_totalBetti",
+            "semigroup_totalBetti",
+            "completed_AP_totalBetti"
+          ]
+        }
+      ],
+      "v06_usage": "BRIDGE / AP cone",
+      "actual_consumers": [
+        "NSP14.Target.IntervalAPBetti",
+        "NSP14.SmallEmbedding.Base"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "I_TARGET",
+      "original_statement": "v=min(w,m−1)のactual completionのBetti数はTAR。剰余別最小値TMINはvについて非減少。ordinaryではFi=iC(m,i+1)。",
+      "original_quantifiers": "m≥2、w≥1、全i≥1。第0行1、i>vは0。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Target.IntervalAPBetti",
+          "source": "NSP14/Target/IntervalAPBetti.lean",
+          "declarations": [
+            "interval_betti_profile",
+            "interval_completed_betti_profile",
+            "interval_completed_betti_zero",
+            "interval_completed_betti_lower"
+          ]
+        },
+        {
+          "module": "NSP14.Target.APLowerRows",
+          "source": "NSP14/Target/APLowerRows.lean",
+          "declarations": [
+            "apLowerProfile_TLOW_one",
+            "apLowerProfile_TLOW_two",
+            "apLowerProfile_TLOW_three",
+            "apLowerProfile_TLOW_four",
+            "positiveBettiProfile_TLOW_one",
+            "positiveBettiProfile_TLOW_two",
+            "positiveBettiProfile_TLOW_three",
+            "positiveBettiProfile_TLOW_four",
+            "interval_completed_TLOW"
+          ]
+        },
+        {
+          "module": "NSP14.Target.IntervalBetti",
+          "source": "NSP14/Target/IntervalBetti.lean",
+          "declarations": [
+            "ordinary_interval_betti_zero",
+            "ordinary_interval_betti",
+            "ordinary_interval_completed_betti_zero",
+            "ordinary_interval_completed_betti"
+          ]
+        },
+        {
+          "module": "NSP14.ArithmeticSequence.ProfileBounds",
+          "source": "NSP14/ArithmeticSequence/ProfileBounds.lean",
+          "declarations": [
+            "apLowerProfile",
+            "apLowerProfile_monotone",
+            "blockResidue",
+            "blockResidue_pos",
+            "blockResidue_le",
+            "multiplicity_blocks",
+            "residueDefect_eq_blockResidue",
+            "positiveBettiProfile_lower",
+            "positiveBettiProfile_above",
+            "semigroup_totalBetti_above"
+          ]
+        },
+        {
+          "module": "NSP14.Main.IntervalTarget",
+          "source": "NSP14/Main/IntervalTarget.lean",
+          "declarations": [
+            "carrier_completed_totalBetti",
+            "intervalCompletionAll_completed_totalBetti",
+            "intervalCompletionAll_one"
+          ]
+        }
+      ],
+      "v06_usage": "CAP / MINCAP",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_TARGET",
+      "original_statement": "ordinary target T_m=1+Σ_{i≥1}iC(m,i+1)z^i。f=e−r−1,C(z)=Σ_{j=1}^r c_j(G)z^j に対し B_G≼T_{f+1}+(1+z)^f[B_G^R−(f+1)]=T_{e−r+1}+(1+z)^{e−r}C(z)。q=e−r,N*=δ+r−1 とすると T_m−T_{q+1}=(1+z)^qΣ_{j=1}^{N*}R_j z^j、R_j=(q+j)C(N*,j)+jC(N*,j+1)。全 j≤r の c_j≤R_j が全 Betti 行に十分。また R_j−L_j≥δ(V+1)C(r−1,j−1)。",
+      "original_quantifiers": "actual ordinary completion を持つ source、同体、全1≤j≤r、全 Betti i≥0。δ=0 も含む。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.TargetMargin",
+          "source": "NSP14/Ordinary/TargetMargin.lean",
+          "declarations": [
+            "target",
+            "lower",
+            "choose_succ_cast",
+            "target_zero",
+            "target_step",
+            "capacity_step",
+            "target_margin"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.IntrinsicFullTransfer",
+          "source": "NSP14/Ordinary/IntrinsicFullTransfer.lean",
+          "declarations": [
+            "nativeExtended_intrinsic_betti",
+            "correctedFullTransfer_nat",
+            "correctedFullTransfer"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.NativeFullTransfer",
+          "source": "NSP14/Ordinary/NativeFullTransfer.lean",
+          "declarations": [
+            "nativeComplementVariables",
+            "nativeExtendedCutComplex",
+            "nativeExtendedCoefficientComplex",
+            "nativeH0ComplementComplex",
+            "nativeH0ComplementIso",
+            "nativeH0Complement_finite",
+            "nativeH0Complement_betti",
+            "nativeFull_corrected_bound"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary target transfer / H0 correction",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalBettiClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_LOW",
+      "original_statement": "r=2,3 の全 actual ordinary source で c_j(G)≤R_j (1≤j≤r)。r=2: c1−L1≤min(3S/2−δ/2,5δ/2+S/2)≤δ(V+1),c2≤S−δ。r=3: c1−L1≤4δ/3+4H1/3+2S/3,c2−L2≤3δ+3S/2,c3≤S−δ。",
+      "original_quantifiers": "同一資源列の actual cut r∈{2,3}、全e≥r+1、全δ（r=3ではδ≥6）。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.LowRank",
+          "source": "NSP14/Ordinary/LowRank.lean",
+          "declarations": [
+            "weight",
+            "mass",
+            "row",
+            "tail_sum_nonneg",
+            "row_le",
+            "rank_two_first_le_mass",
+            "rank_two_first_le_linear",
+            "rank_two_top_le",
+            "rank_two_bounds",
+            "rank_three_first_le",
+            "rank_three_second_le",
+            "rank_three_top_le",
+            "rank_three_margin_pos",
+            "rank_three_bounds",
+            "toLayers",
+            "row_one_eq_scalar",
+            "rank_three_bounds"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary r=2,3",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_SCALAR",
+      "original_statement": "r≥4 で F_r=(r−1)δ+(r+1)H1/2+Σ_{t≥2}(r−1)H_t/(t+1)。全1≤j≤rで c_j(G)≤L_j+C(r−1,j−1)F_r。従って F_r≤δ(V+1) は全 Betti 行の十分条件。",
+      "original_quantifiers": "任意 actual cut r≥4、同一H_t、全相対1≤j≤r。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.Scalarization",
+          "source": "NSP14/Ordinary/Scalarization.lean",
+          "declarations": [
+            "factor",
+            "choose_balance",
+            "binomial_balance",
+            "factor_nonneg",
+            "factor_pos",
+            "head_weight_eq",
+            "tail_weight_eq",
+            "second_tail_identity",
+            "normalized_tail_le",
+            "weight_zero_le",
+            "weight_head_le",
+            "weight_tail_le",
+            "row_le_scalar"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.HarmonicWeights",
+          "source": "NSP14/Ordinary/HarmonicWeights.lean",
+          "declarations": [
+            "harmonicWeight",
+            "harmonicWeight_zero",
+            "harmonicWeight_step",
+            "harmonicWeight_sum"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary scalar all rows",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_SIDON",
+      "original_statement": "actual Q の q2=C(e,2) なら m≥e(e−1)+1, δ≥(e−1)^2。actual cut が r=e−1 かつ r≥3 の場合は q2=C(e,2) が強制されるので、e=r+1,δ=a_r は不可能。特に r=6,7,8 の負基点 (e,δ)=(7,21),(8,28),(9,36) は actual source を持たない。",
+      "original_quantifiers": "任意体、真正な最小生成系 e≥2。cut の系は r=e−1 かつ r≥3 のときのみ。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Semigroup.ActualSidon",
+          "source": "NSP14/Semigroup/ActualSidon.lean",
+          "declarations": [
+            "quadraticWeight",
+            "degree_two_pair_exists",
+            "degreeTwoPair",
+            "degreeTwoPair_weight",
+            "degreeTwoPair_injective",
+            "quadratic_pair_card",
+            "degree_two_card_le_quadratic",
+            "degreeTwoPair_bijective",
+            "maximal_quadratic_weight_mem",
+            "maximal_quadratic_weight_injective",
+            "maximal_pair_order",
+            "lowSet_nonzero_atom",
+            "maximal_low_pair_min",
+            "low_sum_ne_atom",
+            "maximal_low_pair_unique",
+            "lowValueEquiv",
+            "actualAperyPairData",
+            "maximalQDegreeAperyPairData",
+            "maximal_qDegree_multiplicity_bound",
+            "maximal_qDegree_deficit_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Semigroup.ActualCutRank",
+          "source": "NSP14/Semigroup/ActualCutRank.lean",
+          "declarations": [
+            "actualCutRank",
+            "actualCutRank_two_le",
+            "actualCutRank_le",
+            "actualCutRank_triangular",
+            "actualCutRank_maximal",
+            "actualNumericalBoundary",
+            "actualCutRank_qDegree"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary actual Sidon",
+      "actual_consumers": [
+        "NSP14.Semigroup.ActualResources",
+        "NSP14.Ordinary.NumericalClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_SMALL",
+      "original_statement": "4≤r≤8、actual e≥r+1,δ≥a_r に対し F_r<δ(V+1)。固定整数 n≥r、α=(r−1)/(n+1),c=(r+1)/2−α による U=αδV+(r−1−α)δ+c(M−a)+MΣ_{j=2}^{n−1}((r−1)/(j+1)−α)、G=δ(V+1)−U とする。e=r+1+s,δ=a+t に対し G=g+sA+tb+(1−α)(C(t,2)+st)、A=a−1−(r−1)(H_n−2+(a+2)/(n+1)),b=A+2−α(r−1)。",
+      "original_quantifiers": "r∈{4,5,6,7,8}、整数s,t≥0、actual同一資源列。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.SmallScalar",
+          "source": "NSP14/Ordinary/SmallScalar.lean",
+          "declarations": [
+            "triangular",
+            "volume",
+            "alpha",
+            "tailWeight",
+            "upper",
+            "gap",
+            "seed",
+            "eSlope",
+            "dStep",
+            "gap_shift",
+            "dStep_eq",
+            "row4",
+            "row5",
+            "row6",
+            "row7",
+            "row8",
+            "Paid",
+            "paid4",
+            "paid5",
+            "paid6",
+            "paid7",
+            "paid8",
+            "nat_quadratic_nonneg",
+            "gap_pos_of_paid",
+            "cutoff",
+            "cutoff_admissible",
+            "small_gap_pos",
+            "scalar_lt_of_upper"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary r=4..8 fixed cutoff",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_LARGE",
+      "original_statement": "actual cut r≥9 はe≥r+1≥10,δ≥a=r(r+1)/2 を満たし F_r<δ(V+1)。D=floor(a/2)+1、α=(r−1)/(D+1) を固定。G_r(e,δ)=G_r(10,δ)+(e−10)A_r(δ)。g0=G_r(10,a)>0,A0=A_r(a)>0,b0=A0+11−r−8α>1/4。整数t=δ−a≥0 で A_r(a+t)=A0+(1−α)t、G_r(10,a+t)=g0+t b0+(1−α)C(t,2)>0。",
+      "original_quantifiers": "r≥9,e≥10,整数δ≥a_r（actual適用はe≥r+1）。同一資源列。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.LargeSeed",
+          "source": "NSP14/Ordinary/LargeSeed.lean",
+          "declarations": [
+            "triangularNat",
+            "largeCutoff",
+            "harmonic",
+            "barrier",
+            "triangularNat_cast",
+            "triangularNat_succ",
+            "triangular_nonneg",
+            "cutoff_bounds",
+            "cutoff_admissible",
+            "cutoff_step",
+            "harmonic_add",
+            "harmonic_add_le",
+            "harmonic_cutoff_step",
+            "barrier_step_identity",
+            "barrier_step_gt",
+            "harmonic_base",
+            "harmonic_lt_barrier",
+            "threshold",
+            "thresholdLower",
+            "threshold_gap_identity",
+            "barrier_lt_thresholdLower",
+            "thresholdLower_le_threshold",
+            "harmonic_lt_threshold",
+            "harmonic_tail",
+            "tailWeight_eq",
+            "seed_eq_threshold",
+            "rank_nine_seed",
+            "large_seed_pos"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.LargeScalar",
+          "source": "NSP14/Ordinary/LargeScalar.lean",
+          "declarations": [
+            "baseSlope",
+            "baseStep",
+            "correction",
+            "stepLower",
+            "floorStep",
+            "triangular_large",
+            "alpha_bounds",
+            "seed_slope_identity",
+            "step_identity",
+            "correction_neg",
+            "baseSlope_lower",
+            "baseSlope_pos",
+            "floor_comparison_identity",
+            "floorStep_le_stepLower",
+            "floorStep_gt",
+            "baseStep_gt",
+            "quadrant_identity",
+            "gap_pos_shift",
+            "large_gap_pos",
+            "scalar_lt_large"
+          ]
+        }
+      ],
+      "v06_usage": "ordinary r>=9 fixed cutoff",
+      "actual_consumers": [
+        "NSP14.Ordinary.NumericalClosure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "O_CLOSE",
+      "original_statement": "任意体 k、真正な e≥3 source、w≥m−1 なら β0(G)=1、全i≥1で β_i(G;k)≤iC(m,i+1)=β_i(G_actual completion;k)。",
+      "original_quantifiers": "全任意体、全真正な数値半群 e≥3,w≥m−1、全Betti行i≥0。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Ordinary.NumericalBettiClosure",
+          "source": "NSP14/Ordinary/NumericalBettiClosure.lean",
+          "declarations": [
+            "ordinary_betti_bound_extension",
+            "ordinary_betti_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Ordinary.Closure",
+          "source": "NSP14/Ordinary/Closure.lean",
+          "declarations": [
+            "ordinary_source_betti_zero_le_one",
+            "ordinary_actual_completion_betti_le"
+          ]
+        }
+      ],
+      "v06_usage": "§6 ordinary",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_CORE",
+      "original_statement": "表示された生成元は最小で Γ は数値半群。C=k[s,st^{a₁},…,st^{a_q},st^u] から G へ、sⁿtᴮ↦(t^{nm+dB})*（ν(nm+dB)>n なら 0）の次数付き環全射 φ があり、ker φ は C の単項式基底の一部で張られる。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "C の全単項式 sⁿtᴮ、n≥0"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.Core",
+          "source": "NSP14/Endpoint/Core.lean",
+          "declarations": [
+            "corePoints",
+            "coreGeneratorPoint",
+            "corePoint_mem",
+            "coreValue",
+            "coreDegree",
+            "coreOffset",
+            "corePoint_bound",
+            "corePoint_length",
+            "coreDegree_le_order",
+            "Core",
+            "coreMonomial",
+            "coreInitial",
+            "coreInitial_zero",
+            "coreInitial_add",
+            "coreInitialHom",
+            "coreToG",
+            "coreToG_monomial",
+            "coreToG_monomial_zero_iff"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.CoreMap",
+          "source": "NSP14/Endpoint/CoreMap.lean",
+          "declarations": [
+            "coreAtomPoint",
+            "coreAtomPoint_degree",
+            "coreGeneratorPoint_value",
+            "coreAtomPoint_value",
+            "exists_corePoint",
+            "exists_coreInitial",
+            "coreToG_surjective",
+            "fullToCore",
+            "coreInitial_generator",
+            "coreToG_fullToCore"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.CoreKernel",
+          "source": "NSP14/Endpoint/CoreKernel.lean",
+          "declarations": [
+            "liveValue_injective",
+            "coreInitial_live",
+            "coreToG_live_coefficient",
+            "coreToG_kernel_span"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.CoreWords",
+          "source": "NSP14/Endpoint/CoreWords.lean",
+          "declarations": [
+            "coreWord",
+            "coreWord_cons",
+            "coreWord_append",
+            "coreWord_degree",
+            "coreWord_offset",
+            "exists_coreWord"
+          ]
+        }
+      ],
+      "v06_usage": "E-CORE",
+      "actual_consumers": [
+        "NSP14.Endpoint.FiberModule",
+        "NSP14.Endpoint.FullTransfer"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_COORD",
+      "original_statement": "B=r+uK、n=L+K+ε_r の一意座標で C≅⊕_{r=0}^{u−1}M_r[ε_r,r]。M_r は |α|≤u−1 の内部語からの有限単項式リストで生成され、全 M_r≠0、M₀=E、H_x≤u−2。この分解は E-加群同型である。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "0≤r<u",
+        "α∈ℕ^q、|α|≤u−1"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.Fibers",
+          "source": "NSP14/Endpoint/Fibers.lean",
+          "declarations": [
+            "coreFiber",
+            "coreEndpointPoint",
+            "coreEndpointPoint_coe",
+            "coreFiber_add",
+            "coreFiber_upward",
+            "coreFiber_zero",
+            "coreFiberExponents",
+            "coreFiberIdeal",
+            "coreFiberIdeal_mem",
+            "coreFiberIdeal_zero"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.IdealCoordinates",
+          "source": "NSP14/Endpoint/IdealCoordinates.lean",
+          "declarations": [
+            "coordinateIdeal_restrictScalars",
+            "coordinateIdealCoefficients",
+            "coordinateIdealCoefficients_apply",
+            "coreFiberCoefficients",
+            "coreFiberCoefficients_apply"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.FiberModule",
+          "source": "NSP14/Endpoint/FiberModule.lean",
+          "declarations": [
+            "fiberSumModule",
+            "coreFiberCoefficientEquiv",
+            "coreFiberCoefficient_variable",
+            "coreFiberAssembly",
+            "coreFiberModuleEquiv"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Quotient",
+          "source": "NSP14/Endpoint/Quotient.lean",
+          "declarations": [
+            "actualKernelSubmodule",
+            "FiberQuotient",
+            "fiberQuotientModule",
+            "fiberToG",
+            "fiberToG_apply",
+            "fiberToG_surjective",
+            "fiberQuotientMap",
+            "fiberQuotientMap_surjective",
+            "fiberToG_kernel",
+            "fiberToGQuotientEquiv",
+            "fiberKernelQuotientEquiv",
+            "fiberQuotientAssemblyEquiv",
+            "actualFiberModuleEquiv",
+            "actualFiberModuleEquiv_apply"
+          ]
+        }
+      ],
+      "v06_usage": "E-COORD",
+      "actual_consumers": [
+        "NSP14.Endpoint.FullTransfer"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_KERNEL",
+      "original_statement": "長い表示は (n,B)↦(n+jd,B−jm)、j≥1 に尽くされる。r+jm=s+cu の下で Min M_r の点 (L,K) からの禁止領域の始点は (max{0,L−jd−c+ε_r−ε_s},K+c)。全競合で生成する T_s に対して actual 核は N_s=M_s∩T_s であり、G≅⊕_s M_s/N_s[ε_s,s] は E-加群同型。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "j≥1、0≤r,s<u、(L,K)∈Min M_r"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.Competitors",
+          "source": "NSP14/Endpoint/Competitors.lean",
+          "declarations": [
+            "longer_core_pair",
+            "core_dead_iff_competitor"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Carry",
+          "source": "NSP14/Endpoint/Carry.lean",
+          "declarations": [
+            "shiftedResidue",
+            "carry",
+            "carry_eq",
+            "carry_pos",
+            "epsilon_le_one",
+            "carry_epsilon_lower",
+            "forbiddenStart",
+            "forbiddenStart_first_le",
+            "forbiddenStart_le",
+            "floor_jm_ge",
+            "forbiddenStart_height"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.ActualKernel",
+          "source": "NSP14/Endpoint/ActualKernel.lean",
+          "declarations": [
+            "competitorFiber",
+            "actualDeadFiber",
+            "competitorFiber_upward",
+            "actual_dead_iff_forbidden",
+            "actualDeadFiber_eq_inter"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.AssembledKernel",
+          "source": "NSP14/Endpoint/AssembledKernel.lean",
+          "declarations": [
+            "coreToG_zero_iff",
+            "assembled_kernel_iff"
+          ]
+        }
+      ],
+      "v06_usage": "E-KERNEL / all j",
+      "actual_consumers": [
+        "NSP14.Endpoint.SocleBounds",
+        "NSP14.Endpoint.Compensation"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_STOP",
+      "original_statement": "c−ε_r+ε_s≥⌊jm/u⌋、競合始点の第一座標≤max{0,H_x−2j}。J₀=⌊(u−2)/2⌋、p=u/gcd(m,u) なら T_s=Σ_{j=1}^{J₀+p}T_{s,j}。G は有限生成 E-加群で、v^m=0、rank_E G=0。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全 s と全 j≥1"
+      ],
+      "status": "HISTORICAL_PROVED_OUTSIDE_MAIN",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.Stopping",
+          "source": "NSP14/Endpoint/Stopping.lean",
+          "declarations": [
+            "carryPeriod",
+            "carryStep",
+            "stoppingStart",
+            "carryPeriod_pos",
+            "carryPeriod_identity",
+            "shiftedResidue_period",
+            "carry_period",
+            "forbiddenStart_mono",
+            "forbiddenStart_tail_zero",
+            "forbiddenStart_stopping",
+            "competitorFiber_stopping"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.MinimalWords",
+          "source": "NSP14/Endpoint/MinimalWords.lean",
+          "declarations": [
+            "minimal_word_zero_segment",
+            "minimal_prefix_eq",
+            "corePrefixResidue",
+            "minimal_word_prefix_injective",
+            "minimal_word_length_lt"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.MinimalBounds",
+          "source": "NSP14/Endpoint/MinimalBounds.lean",
+          "declarations": [
+            "coreCoordinates_decode",
+            "minimalFiber_degree_lt",
+            "minimalFiber_zero",
+            "minimalFiber_budget",
+            "minimalFiber_finite",
+            "minimal_word_internal",
+            "exists_minimal_internal_word"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Residues",
+          "source": "NSP14/Endpoint/Residues.lean",
+          "declarations": [
+            "offsets_setGcd",
+            "offsetClosure_core",
+            "coreFiber_nonempty",
+            "exists_residueDegree",
+            "shortestDegree",
+            "shortestPoint",
+            "shortestPoint_mem",
+            "shortestPoint_degree",
+            "shortestDegree_le",
+            "shortestPoint_minimal",
+            "shortestDegree_lt",
+            "shortestDegree_zero"
+          ]
+        }
+      ],
+      "v06_usage": "historical E-STOP; absent main",
+      "actual_consumers": [
+        "NSP14.Endpoint.FiniteCompetitors"
+      ],
+      "interpretation": "明示周期停止の既存実定理は保持。V06主経路は全j核と直接高さを用い、StoppingをMainのimport閉包へ戻さない。"
+    },
+    {
+      "id": "E_BOUNDS",
+      "original_statement": "内部ステップの mod u 最短語長を ℓ_r、ℓ₀=0、W=1+Σ_rℓ_r とすると、P_C≤W、R≤R̂=min{W−u,u max(H_x−2,0)}。これは m,d に一様で、gcd(m,u)=1 や Cohen–Macaulay 性を要求しない。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "同じ向きの core の全剰余 r,s"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.CompetitorBounds",
+          "source": "NSP14/Endpoint/CompetitorBounds.lean",
+          "declarations": [
+            "shiftedResidue_u",
+            "competitorFiber_nonempty",
+            "competitorFloor_exists",
+            "competitorFloor",
+            "competitorFloor_le",
+            "competitorMin_finite",
+            "competitorZ",
+            "competitorMin_card",
+            "competitorZ_point_bound",
+            "competitorMin_height",
+            "competitorZ_height",
+            "competitor_point_volume",
+            "competitorFloor_ceiling",
+            "competitorFloor_sum",
+            "competitorZ_shortest",
+            "competitorZ_sum_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.SocleInjection",
+          "source": "NSP14/Endpoint/SocleInjection.lean",
+          "declarations": [
+            "actualSocle_endpoint_zero",
+            "actualSocle_competitor_member",
+            "actualSocleProductMap",
+            "actualSocleProductMap_injective"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.SocleBounds",
+          "source": "NSP14/Endpoint/SocleBounds.lean",
+          "declarations": [
+            "competitorSocle_dimension",
+            "actualR_le_sum_z",
+            "actualR_le_volume",
+            "actualR_le_height",
+            "Rhat",
+            "wordVolume_ge_u",
+            "actualR_le_Rhat",
+            "coreRhatRemainder",
+            "coreRemainder_le_Rhat",
+            "actual_core_Rhat_bound",
+            "completed_core_Rhat_bound",
+            "actual_endpoint_top_Rhat",
+            "narrow_endpoint_core_Rhat_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.FiniteSocleBounds",
+          "source": "NSP14/Endpoint/FiniteSocleBounds.lean",
+          "declarations": [
+            "carry_u",
+            "competitor_zero_column",
+            "fiberSocle_competitor_corner",
+            "fiberSocle_horizontal",
+            "fiberSocle_rectangle"
+          ]
+        }
+      ],
+      "v06_usage": "E-HEIGHT / E-BOUNDS",
+      "actual_consumers": [
+        "NSP14.Endpoint.RowPackage"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_HOMOLOGY",
+      "original_statement": "Q_C=C/(x,v)C は (Q_C)₁≅k^q、(Q_C)_n=0 (n≥u) の Artin T-商。P_C=dim Q_C、P_G=dim G/(x,v)G、R=dim(0:_G(x,v)) とすると、dim H_•(x,v;G)=(P_G,P_G+R,R)。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "端点 homology の次数 0,1,2"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.HomologyFinite",
+          "source": "NSP14/Endpoint/HomologyFinite.lean",
+          "declarations": [
+            "endpointElements",
+            "endpointComplex",
+            "endpointPolynomialIso",
+            "endpointHomologyIso",
+            "endpointHomology_betti",
+            "endpointHomology_above"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.HomologyBalance",
+          "source": "NSP14/Endpoint/HomologyBalance.lean",
+          "declarations": [
+            "vOnXComplex",
+            "endpointConeIso",
+            "endpointHomology_balance"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.ArtinQuotient",
+          "source": "NSP14/Endpoint/ArtinQuotient.lean",
+          "declarations": [
+            "endpointIdeal",
+            "EndpointQuotient",
+            "quotientCoefficientEquiv",
+            "endpointH0QuotientEquiv",
+            "QCore",
+            "QActual",
+            "actualH0QuotientEquiv",
+            "actualP",
+            "coreP",
+            "actualR",
+            "actualH0_dimension"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Socle",
+          "source": "NSP14/Endpoint/Socle.lean",
+          "declarations": [
+            "endpointMultiply",
+            "actualSocle",
+            "nativeSocle",
+            "nativeSocleCoefficients",
+            "socleCoefficientEquiv",
+            "actualH2SocleEquiv",
+            "actualR_socle_dimension"
+          ]
+        }
+      ],
+      "v06_usage": "E-HOMOLOGY",
+      "actual_consumers": [
+        "NSP14.Endpoint.FullTransfer"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_TRANSFER",
+      "original_statement": "全 i≥0 に対し β_i^S(G)≤b_i^T(Q_C)+P_C binom(q,i−1)+R binom(q+1,i−1)。R は R̂ に置換できる。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全 i≥0（範囲外二項係数・負添字 Betti 数は 0）"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.VariableOrder",
+          "source": "NSP14/Endpoint/VariableOrder.lean",
+          "declarations": [
+            "internalVariableList",
+            "fullVariableList",
+            "internalVariableList_length",
+            "fullVariableList_mem",
+            "fullVariableList_nodup",
+            "fullVariableList_actions"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.NativeTransfer",
+          "source": "NSP14/Endpoint/NativeTransfer.lean",
+          "declarations": [
+            "fullRegularIso",
+            "endpointExtendedComplex",
+            "endpointExtended_betti",
+            "endpointRemainder",
+            "endpoint_binomial_correction",
+            "actual_native_endpoint_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.Compensation",
+          "source": "NSP14/Endpoint/Compensation.lean",
+          "declarations": [
+            "QKernelModule",
+            "QKernelInclusion",
+            "QKernelCoefficientInclusion",
+            "QKernelCoefficientInclusion_injective",
+            "QKernelSequence",
+            "QKernelSequence_shortExact",
+            "QCoreCoefficientEquiv",
+            "QActualCoefficientEquiv",
+            "QKernel_dimension_add",
+            "QKernel_dimension",
+            "actualP_le_coreP",
+            "actual_kernel_compensation"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.FullTransfer",
+          "source": "NSP14/Endpoint/FullTransfer.lean",
+          "declarations": [
+            "coreRemainder",
+            "compensation_merge",
+            "actual_core_endpoint_bound",
+            "completed_core_endpoint_bound",
+            "actual_endpoint_top",
+            "actual_endpoint_above",
+            "actual_endpoint_zero",
+            "narrow_endpoint_core_bound"
+          ]
+        }
+      ],
+      "v06_usage": "E-TOR",
+      "actual_consumers": [
+        "NSP14.Endpoint.RowPackage",
+        "NSP14.Width.DenseComparison"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "W_EDGE",
+      "original_statement": "For e=q+2>=5 and u=q+1 or q+2, beta_i(G;k)<=F_i(m,du) for every i>=0. For u=q+2, internal and edge missing offsets are both included; the edge formula retains the indicators at i=q and i=q+1.",
+      "original_quantifiers": "All k,e,q,d,m and ordered primitive offsets in scopeW, with u in {q+1,q+2}; all i>=0.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Width.EdgeAP",
+          "source": "NSP14/Width/EdgeAP.lean",
+          "declarations": [
+            "positiveBettiProfile_upper",
+            "fullAP_offsets",
+            "fullAP",
+            "fullAP_carrier",
+            "narrow_fullAP_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.EdgeHoleComparison",
+          "source": "NSP14/Width/EdgeHoleComparison.lean",
+          "declarations": [
+            "actual_upper_add",
+            "actual_positive",
+            "narrow_oneHole_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.EdgeHoleGeometry",
+          "source": "NSP14/Width/EdgeHoleGeometry.lean",
+          "declarations": [
+            "one_missing_offset",
+            "one_missing_degree",
+            "one_missing_degree_two_offset"
+          ]
+        }
+      ],
+      "v06_usage": "W-EDGE",
+      "actual_consumers": [
+        "NSP14.Width.Closure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_BHP_EK",
+      "original_statement": "同じHilbert関数を持つlex商のgraded Betti数が一般商を支配する。lex理想の生成元vは商のi行へC(max(v)-1,i-1)を寄与する。",
+      "original_quantifiers": "任意体k、同じ標準次数付き多項式環上の斉次商、全graded Betti行i≥1。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Lex.BettiComparison",
+          "source": "NSP14/Lex/BettiComparison.lean",
+          "declarations": [
+            "quotientGradedBetti_le_lex"
+          ]
+        },
+        {
+          "module": "NSP14.Lex.TotalBettiComparison",
+          "source": "NSP14/Lex/TotalBettiComparison.lean",
+          "declarations": [
+            "quotientTotalBetti_le_lex"
+          ]
+        },
+        {
+          "module": "NSP14.Lex.LexExistence",
+          "source": "NSP14/Lex/LexExistence.lean",
+          "declarations": [
+            "lexProfileSupport",
+            "lexProfileSupport_degree_mem",
+            "IsStronglyStable.lexProfileSupport_next",
+            "exponent_predicate_add",
+            "lexProfileIdeal",
+            "lexProfileIdeal_isMonomial",
+            "lexProfileIdeal_homogeneous",
+            "IsStronglyStable.lexProfileIdeal_monomial_mem",
+            "IsStronglyStable.lexProfileIdeal_degree_mem",
+            "IsStronglyStable.lexProfileIdeal_degreeCard",
+            "IsStronglyStable.lexProfileIdeal_isLex",
+            "IsStronglyStable.lexProfileIdeal_sameHilbert",
+            "exists_lex_sameHilbert"
+          ]
+        },
+        {
+          "module": "NSP14.Lex.StrongStableEK",
+          "source": "NSP14/Lex/StrongStableEK.lean",
+          "declarations": [
+            "reversedPrefix_le_of_head_bounds",
+            "IsStronglyStable.mem_of_head_bounds",
+            "IsStronglyStable.raise",
+            "IsStronglyStable.predecessor_divisor",
+            "IsStronglyStable.predecessor_colon_monomial",
+            "IsStronglyStable.predecessor_colon",
+            "IsStronglyStable.predecessor_factor_colon",
+            "IsStronglyStable.predecessor_colon_eq_before",
+            "IsStronglyStable.predecessor_colon_homogeneous",
+            "IsStronglyStable.predecessor_graded_step",
+            "IsStronglyStable.predecessor_graded_binomial",
+            "IsStronglyStable.graded_ek_accum",
+            "IsStronglyStable.graded_ek"
+          ]
+        }
+      ],
+      "v06_usage": "dense whole Hilbert lex / EK",
+      "actual_consumers": [
+        "NSP14.Width.DenseLexResources"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "W_DENSE",
+      "original_statement": "Resource clause: for q>=3 and 0<=t=u-1-q<=q, W=q+1+2t, P_C<=q+1+2t, R<=t, and t<=2 implies R=0. Closure clause: for q>=4 and 2<=t<=q, every positive source row is at most the target's first term i*C(u,i+1), hence actual P14 holds.",
+      "original_quantifiers": "All parameters in scopeW. The resource clause allows q>=3 and 0<=t<=q; the closure clause requires q>=4 and 2<=t<=q; every 1<=i<=q+2, with i>q+2 zero.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Width.DenseResources",
+          "source": "NSP14/Width/DenseResources.lean",
+          "declarations": [
+            "dense_resources"
+          ]
+        },
+        {
+          "module": "NSP14.Width.DenseLexResources",
+          "source": "NSP14/Width/DenseLexResources.lean",
+          "declarations": [
+            "coreHilbert_high_sum",
+            "dense_lex_correction_bound",
+            "dense_core_lex_bound_two_branch",
+            "dense_core_lex_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Width.DensePayment",
+          "source": "NSP14/Width/DensePayment.lean",
+          "declarations": [
+            "choose_add_one_term",
+            "choose_add_two_terms",
+            "dense_gamma_nonneg",
+            "dense_coeff_ge_three",
+            "dense_large_coeff",
+            "dense_two_coeff",
+            "dense_payment_ge_three",
+            "dense_payment_two",
+            "dense_payment"
+          ]
+        },
+        {
+          "module": "NSP14.Width.DenseComparison",
+          "source": "NSP14/Width/DenseComparison.lean",
+          "declarations": [
+            "actual_dense_firstterm",
+            "narrow_dense_firstterm",
+            "narrow_dense_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "W-DENSE t2 / t>=3",
+      "actual_consumers": [
+        "NSP14.Width.Closure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_KNESER",
+      "original_statement": "有限非空A,BとH=stab(A+B)に対し|A+B|≥|A+H|+|B+H|-|H|。反復版も用いる。",
+      "original_quantifiers": "有限巡回群。素数位数に限定しない。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Additive.Kneser",
+          "source": "NSP14/Additive/Kneser.lean",
+          "declarations": [
+            "stabilizer_toFinset",
+            "stabilizer_card",
+            "kneser"
+          ]
+        },
+        {
+          "module": "NSP14.Additive.KneserCore",
+          "source": "NSP14/Additive/KneserCore.lean",
+          "declarations": [
+            "mulStab_mul_ssubset_mulStab",
+            "mulStab_union",
+            "mul_aux1",
+            "disjoint_smul_mulStab",
+            "disjoint_mul_sub_card_le",
+            "inter_mul_sub_card_le",
+            "mul_kneser",
+            "mul_strict_kneser"
+          ]
+        },
+        {
+          "module": "NSP14.Additive.ThreePointGrowth",
+          "source": "NSP14/Additive/ThreePointGrowth.lean",
+          "declarations": [
+            "threePoint_growth",
+            "threePoint_coprime_growth"
+          ]
+        },
+        {
+          "module": "NSP14.Additive.FourPointGrowth",
+          "source": "NSP14/Additive/FourPointGrowth.lean",
+          "declarations": [
+            "TwoCosetException",
+            "fourPoint_small_growth"
+          ]
+        }
+      ],
+      "v06_usage": "distance / growth",
+      "actual_consumers": [
+        "NSP14.Width.SparseVolume",
+        "NSP14.NarrowFour.Distance"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_ARTIN",
+      "original_statement": "I₁=0 の標準次数付き Artin 商 A=T/I、h_n=dim A_n、P=Σh_n に対し、b₁≤q+Σ_{n≥1}(q−1)h_n/(n+1)≤(q−1)P/3+(q+1)(q+2)/6。h₂ を保持した E26 と q=5 の b₁−P≤14 が成立し、全 i≥1 で b_i≤P binom(q,i)−binom(q+1,i+1)。",
+      "original_quantifiers": [
+        "任意の体 k、任意の整数 q≥2",
+        "すべての標準次数付き Artin 商 A=T/I、I₁=0",
+        "全 i≥1"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.StandardArtinRows",
+          "source": "NSP14/Endpoint/StandardArtinRows.lean",
+          "declarations": [
+            "artinHilbert_tail_sum",
+            "artin_first_harmonic",
+            "artin_first_third",
+            "artin_first_fourth",
+            "artin_first_signed",
+            "artin_positive_rows",
+            "artin_first_five"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.ArtinRank",
+          "source": "NSP14/Endpoint/ArtinRank.lean",
+          "declarations": [
+            "positive_artin_rank_sum",
+            "positive_artin_rank_bound",
+            "QCoreUnit",
+            "QCoreLinearFunctional",
+            "internalToQCore_X_basis",
+            "QCore_linear_functionals",
+            "QCore_positive_betti_add",
+            "QCore_positive_betti_bound"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.FirstHarmonic",
+          "source": "NSP14/Endpoint/FirstHarmonic.lean",
+          "declarations": [
+            "cyclic_first_harmonic",
+            "QCore_first_harmonic"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.ArtinWeights",
+          "source": "NSP14/Endpoint/ArtinWeights.lean",
+          "declarations": [
+            "weightedFirst",
+            "weightedFirst_third",
+            "weightedFirst_fourth",
+            "weightedFirst_signed",
+            "weightedFirst_five"
+          ]
+        }
+      ],
+      "v06_usage": "E-ARTIN",
+      "actual_consumers": [
+        "NSP14.Endpoint.FirstRow",
+        "NSP14.Width.DenseLexResources"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_ROW",
+      "original_statement": "h_n=dim(Q_C)_n とすると β₁(G)≤P_C+floor(q+Σ_{n≥1}(q−1)h_n/(n+1))+R̂。2≤i≤q+2 では β_i(G)≤P_C binom(q+1,i)+R̂ binom(q+1,i−1)−binom(q+1,i+1)。β₀=1、i>q+2 で β_i=0、上端 β_{q+2}≤R̂。",
+      "original_quantifiers": [
+        "(EH) の全パラメータ",
+        "全行 i≥0、特に 2≤i≤q+2"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.FirstRow",
+          "source": "NSP14/Endpoint/FirstRow.lean",
+          "declarations": [
+            "coreFirstBound",
+            "QCore_first_floor",
+            "actual_first_row",
+            "completed_first_row"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.PositiveRows",
+          "source": "NSP14/Endpoint/PositiveRows.lean",
+          "declarations": [
+            "actual_positive_rows_add",
+            "actual_positive_rows",
+            "completed_positive_rows"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.RowPackage",
+          "source": "NSP14/Endpoint/RowPackage.lean",
+          "declarations": [
+            "endpointRowBound",
+            "actual_endpoint_rows",
+            "completed_endpoint_rows",
+            "narrow_endpoint_rows",
+            "narrow_endpoint_two_rows"
+          ]
+        }
+      ],
+      "v06_usage": "E-ROW",
+      "actual_consumers": [
+        "NSP14.Width.FirstResources",
+        "NSP14.NarrowFour.HigherRows"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "W_SPARSE",
+      "original_statement": "For e>=6 and u>=2e-2, beta_i(G;k)<=F_i(m,du) for every i>=0. The comparison includes i=e and all first-row subranges e=6,7,8,9 and e>=10.",
+      "original_quantifiers": "All parameters in scopeW with e>=6,u>=2e-2; every i>=0.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Width.SparseFirst",
+          "source": "NSP14/Width/SparseFirst.lean",
+          "declarations": [
+            "actual_first_sparse",
+            "narrow_sparse_first_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.SparseSecond",
+          "source": "NSP14/Width/SparseSecond.lean",
+          "declarations": [
+            "choose_three_rat",
+            "sparse_second_payment"
+          ]
+        },
+        {
+          "module": "NSP14.Width.HigherFromSecond",
+          "source": "NSP14/Width/HigherFromSecond.lean",
+          "declarations": [
+            "higher_capacity_from_second",
+            "actual_resource_envelope_add",
+            "actual_higher_from_second"
+          ]
+        },
+        {
+          "module": "NSP14.Width.SparseHigher",
+          "source": "NSP14/Width/SparseHigher.lean",
+          "declarations": [
+            "actual_sparse_resource_add",
+            "actual_sparse_higher"
+          ]
+        },
+        {
+          "module": "NSP14.Width.SparseComparison",
+          "source": "NSP14/Width/SparseComparison.lean",
+          "declarations": [
+            "narrow_sparse_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "W-SPARSE",
+      "actual_consumers": [
+        "NSP14.Width.Closure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "W_FIVE",
+      "original_statement": "For e=5,q=3 and all u>=4, beta_i(G;k)<=F_i(m,du) for every i>=0. At u=7, the integral improvement b1<=9 is asserted only when R>0.",
+      "original_quantifiers": "All parameters in scopeW with e=5,q=3,u>=4; all i>=0. Subbranches u=4,5; u=6; u=7 with R=0 or R>0; u>=8 with antipodal or non-antipodal A.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Width.FiveSmall",
+          "source": "NSP14/Width/FiveSmall.lean",
+          "declarations": [
+            "coreHilbert_two_add_five_le_P_of_R_pos",
+            "QCore_five_seven_first",
+            "actual_five_small_first",
+            "actual_five_small_positive",
+            "narrow_five_small_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.FiveHigher",
+          "source": "NSP14/Width/FiveHigher.lean",
+          "declarations": [
+            "choose_quadratic_step",
+            "choose_quadratic_from_eight",
+            "five_wordVolume_eight",
+            "actual_five_higher"
+          ]
+        },
+        {
+          "module": "NSP14.Width.FiveNonAntipodal",
+          "source": "NSP14/Width/FiveNonAntipodal.lean",
+          "declarations": [
+            "five_nonAntipodal_volume",
+            "five_nonAntipodal_volume_remainder",
+            "actual_five_nonAntipodal_first",
+            "narrow_five_nonAntipodal_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.AntipodalComparison",
+          "source": "NSP14/Width/AntipodalComparison.lean",
+          "declarations": [
+            "positive_residue_mem_iff",
+            "antipodal_offsets",
+            "actual_antipodal_first",
+            "narrow_five_large_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.FiveComparison",
+          "source": "NSP14/Width/FiveComparison.lean",
+          "declarations": [
+            "narrow_five_comparison"
+          ]
+        },
+        {
+          "module": "NSP14.Width.IntegerPayment",
+          "source": "NSP14/Width/IntegerPayment.lean",
+          "declarations": [
+            "antipodal_integer_payment",
+            "nonAntipodal_integer_payment"
+          ]
+        }
+      ],
+      "v06_usage": "W-FIVE / APD",
+      "actual_consumers": [
+        "NSP14.Width.Closure"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "W_CLOSE",
+      "original_statement": "For every numerical semigroup in the normalized physical narrow scope with e>=5, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0.",
+      "original_quantifiers": "All fields k; all integers e=q+2>=5,d>=1,u>=q+1,m>=du+2 and all primitive ordered q-tuples of internal offsets; all i>=0.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Width.Closure",
+          "source": "NSP14/Width/Closure.lean",
+          "declarations": [
+            "narrow_width_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "§6 e>=5 narrow",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "E_TWO",
+      "original_statement": "q=2 のとき Q_C は k[y,z] の単項式 Artin 商。σ_C=dim(0:_{Q_C}(y,z)) なら b^T(Q_C)=(1,σ_C+1,σ_C)。β₁≤P_C+σ_C+1+R、β₂≤2P_C+σ_C+3R、β₃≤P_C+3R、β₄≤R、β₀=1、i>4 で β_i=0。",
+      "original_quantifiers": [
+        "(EH) のうち q=2、a₁=a、a₂=b の全パラメータ",
+        "全 Betti 行 i≥0"
+      ],
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Endpoint.TwoMonomial",
+          "source": "NSP14/Endpoint/TwoMonomial.lean",
+          "declarations": [
+            "internalToCore_monomial",
+            "QCore_internal_monomial_zero",
+            "two_internal_monomial_kernel",
+            "two_internal_kernel_ideal"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.TwoInternal",
+          "source": "NSP14/Endpoint/TwoInternal.lean",
+          "declarations": [
+            "twoInternalEquiv",
+            "twoInternalList",
+            "twoInternalList_mem",
+            "twoInternalList_nodup",
+            "internalSocle",
+            "internalSigma",
+            "QCoreTwoSocleEquiv",
+            "QCore_two_betti_two",
+            "QCore_two_betti_one",
+            "QCore_two_betti_above"
+          ]
+        },
+        {
+          "module": "NSP14.Endpoint.TwoRows",
+          "source": "NSP14/Endpoint/TwoRows.lean",
+          "declarations": [
+            "actual_two_row_one",
+            "actual_two_row_two",
+            "actual_two_row_three",
+            "actual_two_row_four",
+            "actual_two_row_one_Rhat",
+            "actual_two_row_two_Rhat",
+            "actual_two_row_three_Rhat",
+            "actual_two_row_four_Rhat",
+            "twoRowBound",
+            "actual_two_all_rows",
+            "completed_two_all_rows"
+          ]
+        }
+      ],
+      "v06_usage": "N4 / two internal variables",
+      "actual_consumers": [
+        "NSP14.NarrowFour.HigherRows",
+        "NSP14.NarrowFour.FirstLarge"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "N_DISTANCE",
+      "original_statement": "For q=2, |n{0,a,b}|>=min(u,2n+1) for n>=0, W<=1+floor(u^2/4), C(sigma+1,2)<=P<=W and sigma<=u-1. Moreover every degree sigma-1 monomial and its divisors are standard in Q_C.",
+      "original_quantifiers": "All parameters in scopeN and every n>=0; the core inequalities themselves are independent of m,d.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.CoreWords",
+          "source": "NSP14/NarrowFour/CoreWords.lean",
+          "declarations": [
+            "OrderedPair",
+            "word",
+            "Standard",
+            "standardWords",
+            "ordered_pair_exists",
+            "word_coe",
+            "word_degree",
+            "word_offset",
+            "word_succ_fst",
+            "word_succ_snd",
+            "word_add",
+            "word_injective",
+            "minimal_add_left",
+            "standard_downward",
+            "minimal_representation",
+            "standard_degree_lt",
+            "standardWordEquiv",
+            "coreP_card"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.SocleTriangle",
+          "source": "NSP14/NarrowFour/SocleTriangle.lean",
+          "declarations": [
+            "IsSocleWord",
+            "socleWords",
+            "socle_condition_iff",
+            "socle_word_iff",
+            "socleWordEquiv",
+            "sigma_card",
+            "socle_fst_injective",
+            "socle_snd_injective",
+            "socle_triangle",
+            "triangle_indices_card",
+            "socle_triangle_card",
+            "standard_zero",
+            "standard_of_degree_lt_sigma"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.Distance",
+          "source": "NSP14/NarrowFour/Distance.lean",
+          "declarations": [
+            "distance_volume_floor",
+            "distance_volume_four",
+            "distance_volume_four_add",
+            "sigma_le_width"
+          ]
+        }
+      ],
+      "v06_usage": "N2",
+      "actual_consumers": [
+        "NSP14.NarrowFour.HigherRows",
+        "NSP14.NarrowFour.FirstCount"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "X_SC",
+      "original_statement": "位数uの巡回群の零和自由列の長さがu/2を超えるなら、あるunitで移した正の代表値の総和をu未満にできる。",
+      "original_quantifiers": "有限巡回群Z/u、長さ>u/2の零和自由列。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Additive.SavchevChen",
+          "source": "NSP14/Additive/SavchevChen.lean",
+          "declarations": [
+            "savchevChen",
+            "savchevChen_positive"
+          ]
+        },
+        {
+          "module": "NSP14.Additive.TwoValueSequence",
+          "source": "NSP14/Additive/TwoValueSequence.lean",
+          "declarations": [
+            "twoValueSequence",
+            "twoValue_representativeSum",
+            "normalized_modular_relation",
+            "savchevChen_twoValue"
+          ]
+        },
+        {
+          "module": "NSP14.Additive.StandardWordSequence",
+          "source": "NSP14/Additive/StandardWordSequence.lean",
+          "declarations": [
+            "indexedInternalWord",
+            "internalWordSequence",
+            "internal_selected_degree",
+            "internal_selected_offset",
+            "internal_zero_selection_factor",
+            "minimal_internal_word_zeroSumFree",
+            "surviving_internal_word_zeroSumFree",
+            "surviving_internal_word_SC",
+            "surviving_twoValue_SC"
+          ]
+        }
+      ],
+      "v06_usage": "N3 SC return",
+      "actual_consumers": [
+        "NSP14.NarrowFour.StandardWords"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "N_WORDS",
+      "original_statement": "For all standard words y^s z^t in Q_C, s+t<=u-2; if st>0 then s+t<=floor(u/2). Hence P<=2u-3+C(floor(u/2),2), H_x<=u-3, and u=3,4 implies the original actual R=0.",
+      "original_quantifiers": "All parameters in scopeN and all (s,t) in the core standard-word downset D.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.StandardWords",
+          "source": "NSP14/NarrowFour/StandardWords.lean",
+          "declarations": [
+            "word_swap",
+            "standard_swap",
+            "word_sequence",
+            "standard_zeroSumFree",
+            "power_relation_forbidden",
+            "standard_power_relation_bound",
+            "twoValue_budget",
+            "standard_mixed_bound",
+            "standard_pure_bound",
+            "standard_length_bound",
+            "coreHeight_two_bound",
+            "actualR_zero_small"
+          ]
+        }
+      ],
+      "v06_usage": "N3",
+      "actual_consumers": [
+        "NSP14.NarrowFour.FirstCount",
+        "NSP14.NarrowFour.SmallWidths"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "N_HIGH",
+      "original_statement": "For every q=2 physical narrow source and all 2<=i<=4, beta_i(G;k)<=F_i(m,du). All widths u=3,4,5 and u>=6 are covered, including top rank i=4.",
+      "original_quantifiers": "All parameters in scopeN; all i=2,3,4.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.CubicPayment",
+          "source": "NSP14/NarrowFour/CubicPayment.lean",
+          "declarations": [
+            "U2",
+            "U3",
+            "U4",
+            "T",
+            "choose_four_rat",
+            "choose_five_rat",
+            "cubic_gap",
+            "second_payment",
+            "envelope_three",
+            "envelope_four",
+            "ratio_three",
+            "ratio_four",
+            "second_le_third",
+            "second_le_five_fourth",
+            "third_payment",
+            "fourth_payment"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.HigherRows",
+          "source": "NSP14/NarrowFour/HigherRows.lean",
+          "declarations": [
+            "actual_higher_envelopes",
+            "actual_large_higher",
+            "actual_small_higher",
+            "actual_width_four_higher",
+            "narrow_four_fullAP_comparison",
+            "physical_capacity",
+            "narrow_four_higher"
+          ]
+        }
+      ],
+      "v06_usage": "N4a–c new cubic",
+      "actual_consumers": [
+        "NSP14.NarrowFour.Comparison"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "N_FIRST",
+      "original_statement": "For every q=2 core, with h=floor(u/2),k0=u-b+a and E_h(k0)=C(h-k0+2,2) if k0<=h and 0 otherwise, P<=2u-k0-1+C(h,2)-E_h(k0)<=2u-h-2+C(h,2), sigma<=min(h+1,k0). These bounds close beta1(G)<=F1(m,du) for u=5 and every u>=9.",
+      "original_quantifiers": "Universal core estimates: all parameters in scopeN, 2<=k0<=u-1. First-row closure: u=5 or u>=9 only; all m,d in scopeN.",
+      "status": "PROVED_V06_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.Relations",
+          "source": "NSP14/NarrowFour/Relations.lean",
+          "declarations": [
+            "relation_forbidden",
+            "first_pure_relation",
+            "second_pure_relation",
+            "mixed_rectangle_relation",
+            "standard_relations_bound",
+            "sigma_first_bounds"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.FirstCount",
+          "source": "NSP14/NarrowFour/FirstCount.lean",
+          "declarations": [
+            "exponentTriangle",
+            "mem_exponentTriangle",
+            "exponentTriangle_card",
+            "positiveTriangle",
+            "mem_positiveTriangle",
+            "positiveTriangle_card",
+            "axes",
+            "mem_axes",
+            "axes_card",
+            "removedTriangle",
+            "removedTriangle_card",
+            "mem_removedTriangle",
+            "coreP_count_add",
+            "first_count"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.FirstLarge",
+          "source": "NSP14/NarrowFour/FirstLarge.lean",
+          "declarations": [
+            "actual_first_envelope",
+            "first_large_payment",
+            "actual_first_large",
+            "actual_first_five",
+            "narrow_four_first_large"
+          ]
+        }
+      ],
+      "v06_usage": "N5",
+      "actual_consumers": [
+        "NSP14.NarrowFour.Comparison"
+      ],
+      "interpretation": "R19凍結FirstCountのguard付き除去三角形と全u>=9/u5比較を採用。元のregistry省略条件を無条件へ拡張しない。"
+    },
+    {
+      "id": "N_SMALL",
+      "original_statement": "The first-row actual target comparison holds for u=6,7,8, for all u=3, and for u=4 except the family d=1,(a,b)=(1,3). Width 3 or 4 with d>=2 is paid by physical target width, never by replacing it with u.",
+      "original_quantifiers": "All scopeN parameters with u in {3,4,6,7,8}, except u=4,d=1,(a,b)=(1,3). Explicit branches: u=6 H_x<=2 or H_x=3; u=7 k0=2,3,4 or >=5; u=8 k0=2,3,4,5,6 or >=7.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.SmallWidths",
+          "source": "NSP14/NarrowFour/SmallWidths.lean",
+          "declarations": [
+            "pair_gcd",
+            "sigma_le_forbidden",
+            "boundedWords",
+            "coreP_boundedWords",
+            "actualR_add_volume",
+            "coreHeight_of_length",
+            "strip_6_1_5",
+            "strip_7_1_4",
+            "strip_7_2_5",
+            "strip_7_3_6",
+            "strip_8_1_5",
+            "strip_8_3_7",
+            "strip_8_1_4",
+            "strip_8_2_5",
+            "strip_8_3_6",
+            "strip_8_4_7",
+            "strip_8_1_3",
+            "strip_8_3_5",
+            "strip_8_5_7",
+            "actual_first_7",
+            "actual_first_8",
+            "height_six_nonexception",
+            "actual_first_six",
+            "box_two_joint",
+            "ordered_pair_finset",
+            "ordinary_four_first",
+            "actual_first_four_coarse",
+            "narrow_four_small"
+          ]
+        }
+      ],
+      "v06_usage": "N6",
+      "actual_consumers": [
+        "NSP14.NarrowFour.Comparison"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "N_WIDTH4",
+      "original_statement": "For d=1,u=4,(a,b)=(1,3), every m>=6 and every field, in(I_G)=J0+(b*v^theta_n:b=1,y,y^2,z,z^2), where J0=(y^3,yz,xz^2,z^3), (c,n) is the base degree/offset and theta_n=max(ceil((m-n)/4),0). Consequently beta1(G)<=F1(m,4) for all m>=6.",
+      "original_quantifiers": "All fields k and all integers m>=6, including m=6 and every residue class m=4Q+rho>6, rho=0,1,2,3.",
+      "status": "SUFFICIENT_ACTUAL_PROOF",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.WidthFourCore",
+          "source": "NSP14/NarrowFour/WidthFourCore.lean",
+          "declarations": [
+            "anchorC",
+            "anchorN",
+            "anchorY",
+            "anchorZ",
+            "anchor_degree",
+            "anchor_offset",
+            "anchor_bound",
+            "Column.degree",
+            "Column.offset",
+            "column_injective",
+            "Admissible",
+            "column_exists",
+            "y",
+            "z",
+            "columnPoint",
+            "columnPoint_coe",
+            "columnPoint_injective",
+            "corePoint_admissible",
+            "columnPoint_surjective",
+            "columnEquiv",
+            "columnBasis",
+            "columnBasis_apply"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.WidthFourCompetitors",
+          "source": "NSP14/NarrowFour/WidthFourCompetitors.lean",
+          "declarations": [
+            "residue",
+            "kappa",
+            "lambda",
+            "residue_cast",
+            "kappa_eq",
+            "kappa_ceil",
+            "lambda_bound",
+            "delta",
+            "delta_identity",
+            "delta_neg",
+            "kappa_monotone",
+            "free_coordinates",
+            "free_exists_iff",
+            "theta",
+            "anchorN_le_six",
+            "kappa_one_nonneg",
+            "theta_cast",
+            "all_j_threshold",
+            "freeColumn",
+            "freeColumn_degree",
+            "freeColumn_offset",
+            "anchorC_free",
+            "anchorN_free",
+            "column_slack",
+            "restricted_long_impossible",
+            "columnPoint_degree",
+            "columnPoint_offset",
+            "column_dead_iff",
+            "column_zero_iff",
+            "LiveColumn",
+            "liveImage",
+            "live_degree",
+            "live_images_independent"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.WidthFourInitial",
+          "source": "NSP14/NarrowFour/WidthFourInitial.lean",
+          "declarations": [
+            "evalWord",
+            "reduce_y3",
+            "reduce_yz",
+            "reduce_z3",
+            "reduce_xz2",
+            "evalColumn",
+            "reduced_column",
+            "liveSpan",
+            "evalColumn_mem",
+            "evalWord_mem",
+            "P",
+            "wordPolynomial",
+            "columnPolynomial",
+            "coreRelation",
+            "tailRelation",
+            "relation",
+            "candidateIdeal",
+            "Candidate",
+            "candidateMap",
+            "candidateVariable",
+            "monomial_factor",
+            "map_wordPolynomial",
+            "candidate_relation_zero",
+            "candidate_core_relations",
+            "candidate_tail_relations",
+            "candidate_spanned",
+            "label",
+            "routedVariable",
+            "routedVariable_injective",
+            "routedVariable_surjective",
+            "variableEquiv",
+            "renameVariables",
+            "toCore",
+            "toActual",
+            "toCore_surjective",
+            "toActual_surjective",
+            "toActual_full",
+            "toCore_X",
+            "wordPoint",
+            "wordPoint_coe",
+            "toCore_wordPolynomial",
+            "toCore_words_eq",
+            "toCore_coreRelation_zero",
+            "toActual_tailRelation_zero",
+            "candidate_le_kernel",
+            "candidateLift",
+            "candidateLift_map",
+            "candidateMap_columnPolynomial",
+            "toCore_columnPolynomial",
+            "candidateLift_live",
+            "candidateLift_injective",
+            "actual_kernel_eq",
+            "actualPresentation",
+            "toActual_augmentation",
+            "candidate_augmentation",
+            "firstIdealIso",
+            "first_generator_number",
+            "first_le_generators"
+          ]
+        },
+        {
+          "module": "NSP14.NarrowFour.WidthFourComparison",
+          "source": "NSP14/NarrowFour/WidthFourComparison.lean",
+          "declarations": [
+            "theta_six",
+            "theta_four_zero",
+            "theta_four_one",
+            "theta_four_two",
+            "theta_four_three",
+            "target_first",
+            "actualModule",
+            "renamedModule",
+            "actualRenamedIso",
+            "actualModule_totalBetti",
+            "actualModule_completed",
+            "actual_first_le_family",
+            "selectedFamily",
+            "selectedIdeal",
+            "core_mem_selected",
+            "tail_mem_selected",
+            "selected_le_candidate",
+            "candidate_eq_selected",
+            "tail_mem_of_le",
+            "four_cases",
+            "five_cases",
+            "candidate_reduced_zero",
+            "candidate_reduced_one",
+            "candidate_reduced_two",
+            "candidate_reduced_three",
+            "candidate_reduced_six",
+            "first_le_selected",
+            "generatorBound",
+            "actual_first_bound",
+            "generatorBound_payment",
+            "width_four_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "N7 all m / all j",
+      "actual_consumers": [
+        "NSP14.NarrowFour.Comparison"
+      ],
+      "interpretation": "全m>=6・全jの両座標閾値、実kernelの9生成元/標準像の独立性からactual第一Bettiを6/8/8/6で支払う。任意初期idealの一般等式やgeneric Groebner定理を追加で証明したとはしない。"
+    },
+    {
+      "id": "N_CLOSE",
+      "original_statement": "For every four-generator numerical semigroup in physical narrow scope, beta_i(G_Gamma;k)<=beta_i(G_actual_interval_completion;k) for every i>=0, without a required finite offset-core certificate.",
+      "original_quantifiers": "All parameters in scopeN; every i>=0.",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.NarrowFour.Comparison",
+          "source": "NSP14/NarrowFour/Comparison.lean",
+          "declarations": [
+            "completed_carrier_betti",
+            "interval_carrier_betti",
+            "narrow_four_comparison"
+          ]
+        }
+      ],
+      "v06_usage": "N8 / §6 e4 narrow",
+      "actual_consumers": [
+        "NSP14.Main.Branches"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    },
+    {
+      "id": "I_MAIN",
+      "original_statement": "β_i(GΓ;k)≤β_i(G_completion;k) が全i≥0、全真正な数値半群、任意体で成立するという証明経路を組む。",
+      "original_quantifiers": "任意体k、全真正な数値半群Γ、全total Betti行i≥0。",
+      "status": "PROVED_NEEDED_CONTRACT",
+      "exports": [
+        {
+          "module": "NSP14.Main",
+          "source": "NSP14/Main.lean",
+          "declarations": [
+            "p14_totalBetti_le_intervalCompletion",
+            "p14_totalBetti_le_intervalCompletion_compat"
+          ]
+        },
+        {
+          "module": "NSP14.Main.Branches",
+          "source": "NSP14/Main/Branches.lean",
+          "declarations": [
+            "IntervalComparison",
+            "intervalComparison_base",
+            "intervalComparison_three",
+            "intervalComparison_ordinary",
+            "intervalComparison_narrow_four",
+            "intervalComparison_narrow_many"
+          ]
+        },
+        {
+          "module": "NSP14.Main.IntervalTarget",
+          "source": "NSP14/Main/IntervalTarget.lean",
+          "declarations": [
+            "carrier_completed_totalBetti",
+            "intervalCompletionAll_completed_totalBetti",
+            "intervalCompletionAll_one"
+          ]
+        }
+      ],
+      "v06_usage": "§6.3",
+      "actual_consumers": [
+        "NSP14.Main"
+      ],
+      "interpretation": "元の量化のうちV06のconsumerに必要な契約を同じactual source/元の体へ接続。下記の証明群と最終監査の通常/explicit型を参照。"
+    }
+  ],
+  "required_unproved_inputs": [],
+  "unused_stronger_results_not_claimed": [
+    "general all-degree Green beyond degree two",
+    "extra LTV three linear bounds",
+    "generic initial-ideal equality for arbitrary presentations",
+    "original N4 quartic/quintic payment route",
+    "exact antipodal first Betti h+4 as a universal theorem"
+  ],
+  "method": "50 original statements and quantifiers retained verbatim; production declaration groups and actual consumer modules, not wrapper counting; full environment audit validates listed names"
+}

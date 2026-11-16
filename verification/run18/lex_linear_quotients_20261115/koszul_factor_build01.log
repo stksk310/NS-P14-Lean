@@ -1,0 +1,30 @@
+✖ [4568/4569] Building NSP14.Homological.IdealAdjoiningKoszul (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/IdealAdjoiningKoszul.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/IdealAdjoiningKoszul.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/IdealAdjoiningKoszul.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/IdealAdjoiningKoszul.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/IdealAdjoiningKoszul.setup.json --json
+error: NSP14/Homological/IdealAdjoiningKoszul.lean:20:101: unsolved goals
+k σ : Type u
+inst✝¹ : Field k
+inst✝ : Fintype σ
+M N : ModuleCat (VariableRing k σ)
+f : M ⟶ N
+x : σ
+i : ℕ
+F : ModuleCat (VariableRing k σ) ⥤ ChainComplex (ModuleCat (VariableRing k σ)) ℕ := koszulFunctor k σ (variableList k σ)
+⊢ MvPolynomial.X x • F.map f = MvPolynomial.X x • F.map f ≫ 𝟙 (koszulList k σ (variableList k σ) N)
+error: NSP14/Homological/IdealAdjoiningKoszul.lean:27:2: Type mismatch: After simplification, term
+  hc
+ has type
+  homologyMap
+      (((ModuleCat.restrictScalars (algebraMap k (VariableRing k σ))).mapHomologicalComplex (ComplexShape.down ℕ)).map
+        (F.map (MvPolynomial.X x • f)))
+      i =
+    homologyMap 0 i
+but is expected to have type
+  homologyMap ((coefficientKoszulFunctor k σ).map (MvPolynomial.X x • f)) i = 0
+error: NSP14/Homological/IdealAdjoiningKoszul.lean:37:8: failed to synthesize instance of type class
+  Module.Finite (VariableRing k σ) ↑(idealAdjoinSequence (VariableRing k σ) J g).X₁
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: NSP14/Homological/IdealAdjoiningKoszul.lean:39:8: No goals to be solved
+Some required targets logged failures:
+- NSP14.Homological.IdealAdjoiningKoszul
+error: build failed

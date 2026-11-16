@@ -1,0 +1,42 @@
+{
+  "status": "PASS_V06_ACTUAL_CLI_REJECTIONS",
+  "selected_output_bytes_unchanged": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "scripts/verify_v06_alignment.py",
+        "--fresh-project-cache",
+        "--output-dir",
+        "verification/run18/runs/v06_alignment_20261115T152000Z_r01"
+      ],
+      "exit_code": 1,
+      "output": "output already exists; evidence is immutable\n",
+      "passed": true
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_v06_alignment.py",
+        "--fresh-project-cache",
+        "--output-dir",
+        "verification/run18/runs/release_candidate_20261115_r16"
+      ],
+      "exit_code": 1,
+      "output": "a unique verification/run18/runs/v06_alignment_* directory is required\n",
+      "passed": true
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_v06_alignment.py",
+        "--fresh-project-cache",
+        "--output-dir",
+        "/tmp/v06_forbidden_output"
+      ],
+      "exit_code": 1,
+      "output": "unsafe relative path: /tmp/v06_forbidden_output\n",
+      "passed": true
+    }
+  ]
+}

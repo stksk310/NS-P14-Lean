@@ -1,0 +1,15 @@
+'NSP14.Lex.genericMonomialStep_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericMonomialStep_gradedBetti_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericHomogeneousStep_sameHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericHomogeneousStep_gradedBetti_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericHomogeneousStep_sameHilbert : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (n : ℕ),
+  NSP14.Lex.quotientHilbert k q I hI n =
+    NSP14.Lex.quotientHilbert (NSP14.Lex.GenericDistractionField k q) q (NSP14.Lex.genericHomogeneousStep k q I) ⋯ n
+NSP14.Lex.genericHomogeneousStep_gradedBetti_le : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)) (hI : Ideal.IsHomogeneous (MvPolynomial.homogeneousSubmodule (Fin q) k) I)
+  (i : ℕ) (t : ℤ),
+  NSP14.Lex.quotientGradedBetti k q I hI i t ≤
+    NSP14.Lex.quotientGradedBetti (NSP14.Lex.GenericDistractionField k q) q (NSP14.Lex.genericHomogeneousStep k q I) ⋯ i
+      t

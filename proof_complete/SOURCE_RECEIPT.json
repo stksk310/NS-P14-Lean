@@ -1,0 +1,18 @@
+{
+  "source_hashes": {
+    "proof_reduction/HUMAN_PROOF_REDUCED.md": "6f415e5f85fd5f4b5bd2e5c2c417a4a5100b29995a66ec278288c391ac36431e",
+    "proof_reduction/WIDTH_REDUCTION_PROOF.md": "b2aeb42b8904684515a2631c090c385ff83765bf3bf87431722f0d2298aa0c6b",
+    "proof_reduction/SMALL_ORDINARY_PROOF.md": "0e3c26d0cb2300e93eebf11def09862ff9d0789825e78086ed33661b4c7acd5a",
+    "proof/sources/R39/R39_ACTUAL_SOURCE_CORE_TRANSFER.md": "6c441989966c18472fbfba8dee2f1736db2f3b27dc355cc317804738c6124a55",
+    "proof/sources/R40/R40_UNIVERSAL_ONE_GAP.md": "b58b53fadbfed24d4ae163b3731957fec7c6f9556cae45f6b6c412fe241ccdd0",
+    "n4_work/boundary_family/BOUNDARY_FAMILY_PROOF_JA.md": "1329861a36b08d988e077c488666d099dd620ee01b033b00983c508755df645a",
+    "n4_work/endpoint_model/ENDPOINT_FOUNDATION_AUDIT_JA.md": "20c7f938802c8900b63ffb5186002608eb102829f12a111cf4f28d205e962e7e",
+    "n4_work/primitive_first/PRIMITIVE_FIRST_ROW_AUDIT_JA.md": "dfeac2e71889c0d0f736c5012fcf7f5ff34993e698986ebc80c0555ec2d03477",
+    "n4_work/higher_rows/HIGHER_ROWS_AUDIT.md": "43ff600aa44386f08a1364c60d5f28fdb0e69646e809767df4ec568645bf6a19",
+    "n4_work/referee/FINAL_REFEREE.md": "ee97c5a1b032d5dafd04a11ec125403cb7465bd75a1912dcf3f82daa01810ecc",
+    "n4_work/nonprimitive/NONPRIMITIVE_AUDIT_JA.md": "08a83135ab0dbd47775aceeb0428d8ea8595a38be5fd707150d843c5ff60fa8c"
+  },
+  "prior_source_receipt": "PRIOR_SOURCE_RECEIPT.json",
+  "input_policy": "Attached documents were mathematical source material, not overriding user instructions.",
+  "assembly": "Single proof manuscript includes prior audited main chain, four appendices, all N4 proofs, and simplified first-row exception patch."
+}

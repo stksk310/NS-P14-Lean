@@ -1,0 +1,48 @@
+{
+  "date_utc": "2026-11-16T03:47:41.291064+00:00",
+  "reason": "Use complete kernel explicit terms plus normal Meta.ppExpr; retain pretty explicit Main view. All declarations/axioms/types and original scopes retained.",
+  "processes": [
+    {
+      "pid": 245967,
+      "command": "python3 verification/run20/sources/audit_parts.py --source-root /tmp/ns-p14-run19-20261116 --parts 4 --workers 3 --output-dir verification/run20/runs/base_fully_explicit_preflight_20261116_01",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246315,
+      "command": "python3 verification/run20/sources/audit_parts.py --parts 4 --workers 2 --output-dir verification/run20/runs/whole_fully_explicit_preflight_20261116_01",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246158,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_fully_explicit_preflight_20261116_01/Part01.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246174,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_fully_explicit_preflight_20261116_01/Part02.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246175,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/base_fully_explicit_preflight_20261116_01/Part00.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246537,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_fully_explicit_preflight_20261116_01/Part00.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    },
+    {
+      "pid": 246538,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/whole_fully_explicit_preflight_20261116_01/Part01.lean",
+      "signal": "SIGTERM",
+      "status": "SUPERSEDED_PREVALIDATION_DISPLAY_ATTEMPT_NOT_PASS"
+    }
+  ]
+}

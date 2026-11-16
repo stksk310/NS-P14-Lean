@@ -1,0 +1,5 @@
+tests/MainBranchConsumers.lean:7:44: error: unexpected token ':='; expected ':'
+tests/MainBranchConsumers.lean:8:43: error: unexpected token ':='; expected ':'
+tests/MainBranchConsumers.lean:9:82: error: unexpected token ':='; expected ':'
+tests/MainBranchConsumers.lean:11:76: error: unexpected token ':='; expected ':'
+tests/MainBranchConsumers.lean:13:78: error: unexpected token ':='; expected ':'

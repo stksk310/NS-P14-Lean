@@ -1,0 +1,17 @@
+tests/SmallEmbeddingThree.lean:4:20: error: invalid binder annotation, type is not a class instance
+  ?m.2
+
+Note: Use the command `set_option checkBinderAnnotations false` to disable the check
+tests/SmallEmbeddingThree.lean:6:20: error: invalid binder annotation, type is not a class instance
+  ?m.2
+
+Note: Use the command `set_option checkBinderAnnotations false` to disable the check
+tests/SmallEmbeddingThree.lean:8:20: error: invalid binder annotation, type is not a class instance
+  ?m.2
+
+Note: Use the command `set_option checkBinderAnnotations false` to disable the check
+tests/SmallEmbeddingThree.lean:10:11: error(lean.unknownIdentifier): Unknown identifier `SmallEmbedding.three_comparison`
+tests/SmallEmbeddingThree.lean:11:11: error(lean.unknownIdentifier): Unknown identifier `SmallEmbedding.three_comparison`
+tests/SmallEmbeddingThree.lean:12:11: error(lean.unknownIdentifier): Unknown identifier `SmallEmbedding.three_comparison`
+tests/SmallEmbeddingThree.lean:13:11: error(lean.unknownIdentifier): Unknown identifier `SmallEmbedding.three_comparison`
+tests/SmallEmbeddingThree.lean:14:11: error(lean.unknownIdentifier): Unknown identifier `SmallEmbedding.three_comparison`

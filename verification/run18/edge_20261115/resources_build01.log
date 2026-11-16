@@ -1,0 +1,31 @@
+✖ [5620/5621] Building NSP14.Width.EdgeHoleResources (1.7s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleResources.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleResources.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleResources.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleResources.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleResources.setup.json --json
+error: NSP14/Width/EdgeHoleResources.lean:33:30: Invalid field `block`: The environment does not contain `NSP14.Endpoint.Data.OneHole.block`, so it is not possible to project the field `block` from an expression
+  H
+of type `D.OneHole`
+error: NSP14/Width/EdgeHoleResources.lean:34:15: Invalid field `block`: The environment does not contain `NSP14.Endpoint.Data.OneHole.block`, so it is not possible to project the field `block` from an expression
+  H
+of type `D.OneHole`
+error: NSP14/Width/EdgeHoleResources.lean:46:35: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+error: NSP14/Width/EdgeHoleResources.lean:51:29: Invalid field `block`: The environment does not contain `NSP14.Endpoint.Data.OneHole.block`, so it is not possible to project the field `block` from an expression
+  H
+of type `D.OneHole`
+error: NSP14/Width/EdgeHoleResources.lean:52:15: Invalid field `block`: The environment does not contain `NSP14.Endpoint.Data.OneHole.block`, so it is not possible to project the field `block` from an expression
+  H
+of type `D.OneHole`
+error: NSP14/Width/EdgeHoleResources.lean:63:35: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+error: NSP14/Width/EdgeHoleResources.lean:70:81: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 2
+where
+ b := ↑D.a.card
+error: NSP14/Width/EdgeHoleResources.lean:106:44: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 2
+  0 ≤ b ≤ 1
+where
+ b := ↑(D.coreHilbert k 2)
+ c := ↑D.a.card
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleResources
+error: build failed

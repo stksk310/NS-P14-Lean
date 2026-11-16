@@ -1,0 +1,15 @@
+tests/ActualGradedBaseChange.lean:17:11: error(lean.invalidField): Invalid field `actualG_gradedBetti_baseChange`: The environment does not contain `NSP14.NumericalSemigroup.actualG_gradedBetti_baseChange`, so it is not possible to project the field `actualG_gradedBetti_baseChange` from an expression
+  changing
+of type `NSP14.NumericalSemigroup`
+tests/ActualGradedBaseChange.lean:22:11: error(lean.invalidField): Invalid field `actualT_gradedBetti_baseChange`: The environment does not contain `NSP14.NumericalSemigroup.actualT_gradedBetti_baseChange`, so it is not possible to project the field `actualT_gradedBetti_baseChange` from an expression
+  changing
+of type `NSP14.NumericalSemigroup`
+tests/ActualGradedBaseChange.lean:27:11: error(lean.invalidField): Invalid field `actualA_gradedBetti_baseChange`: The environment does not contain `NSP14.NumericalSemigroup.actualA_gradedBetti_baseChange`, so it is not possible to project the field `actualA_gradedBetti_baseChange` from an expression
+  changing
+of type `NSP14.NumericalSemigroup`
+tests/ActualGradedBaseChange.lean:32:11: error(lean.invalidField): Invalid field `actualN_gradedBetti_baseChange`: The environment does not contain `NSP14.NumericalSemigroup.actualN_gradedBetti_baseChange`, so it is not possible to project the field `actualN_gradedBetti_baseChange` from an expression
+  changing
+of type `NSP14.NumericalSemigroup`
+tests/ActualGradedBaseChange.lean:37:11: error(lean.invalidField): Invalid field `actualQ_gradedBetti_baseChange`: The environment does not contain `NSP14.NumericalSemigroup.actualQ_gradedBetti_baseChange`, so it is not possible to project the field `actualQ_gradedBetti_baseChange` from an expression
+  changing
+of type `NSP14.NumericalSemigroup`

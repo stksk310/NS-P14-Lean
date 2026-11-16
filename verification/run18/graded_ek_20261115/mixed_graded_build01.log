@@ -1,0 +1,7 @@
+tests/LexLinearQuotientExamples.lean:168:35: error: Type mismatch: After simplification, term
+  hne
+ has type
+  ¬Finsupp.single 0 1 = Finsupp.single 1 2
+but is expected to have type
+  ?m.62 ∉ ?m.61
+tests/LexLinearQuotientExamples.lean:168:2: error: `simp` made no progress

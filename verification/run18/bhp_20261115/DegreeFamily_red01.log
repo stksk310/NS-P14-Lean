@@ -1,0 +1,1 @@
+tests/DegreeFamily.lean:14:2: error(lean.unknownIdentifier): Unknown constant `Lex.monomialDegreeCard_add_hilbert`

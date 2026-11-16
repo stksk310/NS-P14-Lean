@@ -1,0 +1,5452 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "lake",
+      "build",
+      "NSP14",
+      "Mathlib.Algebra.Field.ZMod"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 850.919
+  },
+  {
+    "name": "fixture_000_SmallScalar",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallScalar.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.75
+  },
+  {
+    "name": "fixture_001_Sidon",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Sidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Sidon.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.621
+  },
+  {
+    "name": "fixture_002_Resources",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Resources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Resources.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.219
+  },
+  {
+    "name": "fixture_003_LowRank",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LowRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LowRank.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.296
+  },
+  {
+    "name": "fixture_004_LargeSeed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeSeed.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeSeed.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.011
+  },
+  {
+    "name": "fixture_005_LargeScalar",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LargeScalar.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LargeScalar.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.125
+  },
+  {
+    "name": "fixture_006_OrdinaryNumerical",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryNumerical.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryNumerical.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.0
+  },
+  {
+    "name": "fixture_007_SemigroupFoundations",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupFoundations.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.458
+  },
+  {
+    "name": "fixture_008_SemigroupRing",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupRing.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupRing.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.319
+  },
+  {
+    "name": "fixture_009_TangentAlgebra",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TangentAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TangentAlgebra.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.415
+  },
+  {
+    "name": "fixture_010_AperyQuotient",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AperyQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AperyQuotient.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 7.463
+  },
+  {
+    "name": "fixture_011_Run12BasicExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12BasicExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12BasicExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 5.679
+  },
+  {
+    "name": "fixture_012_Run12Fixtures",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Fixtures.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.369
+  },
+  {
+    "name": "fixture_013_JumpBounds",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpBounds.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.736
+  },
+  {
+    "name": "fixture_014_PolynomialAction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialAction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.48
+  },
+  {
+    "name": "fixture_015_JumpStrata",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpStrata.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpStrata.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.663
+  },
+  {
+    "name": "fixture_016_CompletedComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CompletedComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CompletedComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.692
+  },
+  {
+    "name": "fixture_017_Run12Axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run12Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run12Axioms.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.046
+  },
+  {
+    "name": "fixture_018_Run13Fixtures",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Fixtures.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.875
+  },
+  {
+    "name": "fixture_019_ActualGradedBaseChange",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualGradedBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualGradedBaseChange.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.829
+  },
+  {
+    "name": "fixture_020_BettiBaseChange",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiBaseChange.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.775
+  },
+  {
+    "name": "fixture_021_FilteredHomology",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FilteredHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FilteredHomology.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.507
+  },
+  {
+    "name": "fixture_022_GradedKoszul",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszul.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszul.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.746
+  },
+  {
+    "name": "fixture_023_KoszulActual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulActual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 7.275
+  },
+  {
+    "name": "fixture_024_KoszulComplex",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulComplex.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulComplex.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.056
+  },
+  {
+    "name": "fixture_025_KoszulExactness",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExactness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExactness.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.821
+  },
+  {
+    "name": "fixture_026_KoszulFiniteModules",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulFiniteModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulFiniteModules.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.696
+  },
+  {
+    "name": "fixture_027_KoszulPresentation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulPresentation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.776
+  },
+  {
+    "name": "fixture_028_KoszulTor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulTor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.765
+  },
+  {
+    "name": "fixture_029_MinimalResolution",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MinimalResolution.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MinimalResolution.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.871
+  },
+  {
+    "name": "fixture_030_PolynomialBaseChange",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PolynomialBaseChange.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PolynomialBaseChange.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.092
+  },
+  {
+    "name": "fixture_031_RankEuler",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RankEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RankEuler.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.582
+  },
+  {
+    "name": "fixture_032_Run13ClosureFixtures",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13ClosureFixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13ClosureFixtures.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.912
+  },
+  {
+    "name": "fixture_033_StandardMonomials",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardMonomials.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardMonomials.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.829
+  },
+  {
+    "name": "fixture_034_TorNaturality",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TorNaturality.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TorNaturality.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.723
+  },
+  {
+    "name": "fixture_035_DomainChecks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/DomainChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/DomainChecks.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.962
+  },
+  {
+    "name": "fixture_036_AssumptionChecks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/block02/AssumptionChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/block02/AssumptionChecks.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.298
+  },
+  {
+    "name": "fixture_037_Run14Fixtures",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Fixtures.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Fixtures.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 10.92
+  },
+  {
+    "name": "fixture_038_ActualSidon",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualSidon.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualSidon.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.379
+  },
+  {
+    "name": "fixture_039_OffsetStabilization",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OffsetStabilization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OffsetStabilization.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.478
+  },
+  {
+    "name": "fixture_040_Run14Acceptance",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Acceptance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Acceptance.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.987
+  },
+  {
+    "name": "fixture_041_RemainingGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14/RemainingGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.498
+  },
+  {
+    "name": "fixture_042_GreenLinearAlgebra",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GreenLinearAlgebra.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GreenLinearAlgebra.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.754
+  },
+  {
+    "name": "fixture_043_Run14Closure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Closure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Closure.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 13.917
+  },
+  {
+    "name": "fixture_044_Run14Volume",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run14Volume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run14Volume.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.892
+  },
+  {
+    "name": "fixture_045_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run14_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run14_continuation/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.912
+  },
+  {
+    "name": "fixture_046_ArithmeticSequenceMaximalBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceMaximalBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceMaximalBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.883
+  },
+  {
+    "name": "fixture_047_ArithmeticSequenceConeBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceConeBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceConeBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.315
+  },
+  {
+    "name": "fixture_048_APKernelWindow",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APKernelWindow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APKernelWindow.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 9.8
+  },
+  {
+    "name": "fixture_049_APLowerRows",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APLowerRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APLowerRows.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.808
+  },
+  {
+    "name": "fixture_050_APResolutionFoundations",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/APResolutionFoundations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/APResolutionFoundations.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.686
+  },
+  {
+    "name": "fixture_051_ActualTorRow",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ActualTorRow.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ActualTorRow.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.927
+  },
+  {
+    "name": "fixture_052_ArithmeticSequence",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequence.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.684
+  },
+  {
+    "name": "fixture_053_ArithmeticSequenceApery",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceApery.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceApery.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.783
+  },
+  {
+    "name": "fixture_054_ArithmeticSequenceBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.535
+  },
+  {
+    "name": "fixture_055_ArithmeticSequenceKernelTor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceKernelTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceKernelTor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.303
+  },
+  {
+    "name": "fixture_056_ArithmeticSequenceOrder",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArithmeticSequenceOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArithmeticSequenceOrder.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.679
+  },
+  {
+    "name": "fixture_057_BettiEuler",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BettiEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BettiEuler.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.791
+  },
+  {
+    "name": "fixture_058_ChangingOrdinaryClosure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ChangingOrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ChangingOrdinaryClosure.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.228
+  },
+  {
+    "name": "fixture_059_CoefficientComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CoefficientComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CoefficientComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.922
+  },
+  {
+    "name": "fixture_060_CutBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.831
+  },
+  {
+    "name": "fixture_061_CutFinite",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutFinite.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutFinite.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.428
+  },
+  {
+    "name": "fixture_062_CutPolynomialInjection",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutPolynomialInjection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutPolynomialInjection.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.928
+  },
+  {
+    "name": "fixture_063_TowerHarmonic",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TowerHarmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TowerHarmonic.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.977
+  },
+  {
+    "name": "fixture_064_CutResidual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CutResidual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CutResidual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.595
+  },
+  {
+    "name": "fixture_065_FiniteKoszulEuler",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteKoszulEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteKoszulEuler.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.006
+  },
+  {
+    "name": "fixture_066_FunctionalMinor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FunctionalMinor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FunctionalMinor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.762
+  },
+  {
+    "name": "fixture_067_GradedBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.773
+  },
+  {
+    "name": "fixture_068_Harmonic",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Harmonic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Harmonic.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.841
+  },
+  {
+    "name": "fixture_069_HeadFirstOrder",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HeadFirstOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HeadFirstOrder.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.923
+  },
+  {
+    "name": "fixture_070_IntervalAPBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalAPBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalAPBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.931
+  },
+  {
+    "name": "fixture_071_IntervalCompletion",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntervalCompletion.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntervalCompletion.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.78
+  },
+  {
+    "name": "fixture_072_IntrinsicFullTransfer",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IntrinsicFullTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IntrinsicFullTransfer.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.778
+  },
+  {
+    "name": "fixture_073_JumpEuler",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/JumpEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/JumpEuler.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.998
+  },
+  {
+    "name": "fixture_074_KoszulSlots",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlots.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlots.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.668
+  },
+  {
+    "name": "fixture_075_LinearVariableBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariableBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariableBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.823
+  },
+  {
+    "name": "fixture_076_LinearVariables",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LinearVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LinearVariables.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.595
+  },
+  {
+    "name": "fixture_077_NativeCutH0",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NativeCutH0.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NativeCutH0.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.765
+  },
+  {
+    "name": "fixture_078_OrderedQuotientBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrderedQuotientBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrderedQuotientBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.737
+  },
+  {
+    "name": "fixture_079_OrdinaryClosure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryClosure.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.343
+  },
+  {
+    "name": "fixture_080_OrdinaryTor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/OrdinaryTor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/OrdinaryTor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.692
+  },
+  {
+    "name": "fixture_081_RelativePresentation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativePresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativePresentation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.79
+  },
+  {
+    "name": "fixture_082_RelativeXComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/RelativeXComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/RelativeXComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.776
+  },
+  {
+    "name": "fixture_083_Run13Axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run13Axioms.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run13Axioms.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.744
+  },
+  {
+    "name": "fixture_084_Run15Actual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run15Actual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run15Actual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.981
+  },
+  {
+    "name": "fixture_085_SemigroupAlgebraPresentation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SemigroupAlgebraPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SemigroupAlgebraPresentation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.968
+  },
+  {
+    "name": "fixture_086_SquareZeroEuler",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SquareZeroEuler.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SquareZeroEuler.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.77
+  },
+  {
+    "name": "fixture_087_TwoStepActual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TwoStepActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TwoStepActual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.919
+  },
+  {
+    "name": "fixture_088_RemainingGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15/RemainingGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15/RemainingGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.384
+  },
+  {
+    "name": "fixture_089_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_continuation/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_continuation/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.745
+  },
+  {
+    "name": "fixture_090_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_xclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_xclosure/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.725
+  },
+  {
+    "name": "fixture_091_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_bclosure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_bclosure/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.692
+  },
+  {
+    "name": "fixture_092_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_h0closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_h0closure/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.707
+  },
+  {
+    "name": "fixture_093_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_fulltransfer/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_fulltransfer/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.683
+  },
+  {
+    "name": "fixture_094_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_ordinary/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_ordinary/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.448
+  },
+  {
+    "name": "fixture_095_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apcone/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apcone/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.883
+  },
+  {
+    "name": "fixture_096_Scope",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_apfoundations/Scope.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_apfoundations/Scope.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.84
+  },
+  {
+    "name": "fixture_097_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run15_closure/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run15_closure/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.761
+  },
+  {
+    "name": "fixture_098_CarrierTransport",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/CarrierTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/CarrierTransport.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.852
+  },
+  {
+    "name": "fixture_099_EndpointActualKernel",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointActualKernel.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointActualKernel.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.779
+  },
+  {
+    "name": "fixture_100_EndpointArtinRank",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRank.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.646
+  },
+  {
+    "name": "fixture_101_EndpointArtinRefinements",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointArtinRefinements.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointArtinRefinements.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.66
+  },
+  {
+    "name": "fixture_102_EndpointBoundaryExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointBoundaryExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointBoundaryExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 7.81
+  },
+  {
+    "name": "fixture_103_EndpointCarry",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCarry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCarry.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.754
+  },
+  {
+    "name": "fixture_104_EndpointCompensation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompensation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompensation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.519
+  },
+  {
+    "name": "fixture_105_EndpointCompetitorBounds",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitorBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitorBounds.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.562
+  },
+  {
+    "name": "fixture_106_EndpointCompetitors",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCompetitors.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCompetitors.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.849
+  },
+  {
+    "name": "fixture_107_EndpointComputedExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointComputedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointComputedExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 98.215
+  },
+  {
+    "name": "fixture_108_EndpointConeBalance",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointConeBalance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointConeBalance.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.172
+  },
+  {
+    "name": "fixture_109_EndpointCoordinates",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoordinates.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.142
+  },
+  {
+    "name": "fixture_110_EndpointCore",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCore.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCore.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.047
+  },
+  {
+    "name": "fixture_111_EndpointCoreArtin",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreArtin.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.79
+  },
+  {
+    "name": "fixture_112_EndpointCoreGrading",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointCoreGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointCoreGrading.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.757
+  },
+  {
+    "name": "fixture_113_EndpointData",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointData.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.262
+  },
+  {
+    "name": "fixture_114_EndpointFiberModule",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFiberModule.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFiberModule.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.568
+  },
+  {
+    "name": "fixture_115_EndpointFibers",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFibers.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFibers.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.777
+  },
+  {
+    "name": "fixture_116_EndpointFirstBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointFirstBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointFirstBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.923
+  },
+  {
+    "name": "fixture_117_EndpointHomology",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointHomology.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointHomology.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.763
+  },
+  {
+    "name": "fixture_118_EndpointIdealGenerators",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointIdealGenerators.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointIdealGenerators.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.593
+  },
+  {
+    "name": "fixture_119_EndpointInternalCoordinates",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalCoordinates.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalCoordinates.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.666
+  },
+  {
+    "name": "fixture_120_EndpointInternalSocle",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointInternalSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointInternalSocle.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.064
+  },
+  {
+    "name": "fixture_121_EndpointMinimal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.913
+  },
+  {
+    "name": "fixture_122_EndpointMinimalBounds",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointMinimalBounds.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointMinimalBounds.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.571
+  },
+  {
+    "name": "fixture_123_EndpointModules",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointModules.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointModules.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.858
+  },
+  {
+    "name": "fixture_124_EndpointNativeTransfer",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNativeTransfer.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNativeTransfer.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.96
+  },
+  {
+    "name": "fixture_125_EndpointNilpotence",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNilpotence.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNilpotence.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.635
+  },
+  {
+    "name": "fixture_126_EndpointNonmonomial",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNonmonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNonmonomial.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 8.129
+  },
+  {
+    "name": "fixture_127_EndpointNormalization",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointNormalization.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointNormalization.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.042
+  },
+  {
+    "name": "fixture_128_EndpointOrientation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointOrientation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointOrientation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 27.615
+  },
+  {
+    "name": "fixture_129_EndpointPresentation",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointPresentation.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointPresentation.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.43
+  },
+  {
+    "name": "fixture_130_EndpointQuadratic",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuadratic.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuadratic.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.781
+  },
+  {
+    "name": "fixture_131_EndpointQuotient",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointQuotient.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.905
+  },
+  {
+    "name": "fixture_132_EndpointResidues",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointResidues.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointResidues.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.537
+  },
+  {
+    "name": "fixture_133_EndpointRhat",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRhat.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRhat.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.025
+  },
+  {
+    "name": "fixture_134_EndpointRowPackage",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRowPackage.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRowPackage.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.16
+  },
+  {
+    "name": "fixture_135_EndpointRows",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointRows.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.722
+  },
+  {
+    "name": "fixture_136_EndpointSocle",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSocle.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSocle.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.878
+  },
+  {
+    "name": "fixture_137_EndpointSoclePoints",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSoclePoints.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSoclePoints.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.858
+  },
+  {
+    "name": "fixture_138_EndpointStandardArtin",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStandardArtin.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStandardArtin.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.012
+  },
+  {
+    "name": "fixture_139_EndpointStopping",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointStopping.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointStopping.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.919
+  },
+  {
+    "name": "fixture_140_EndpointSurvivingBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointSurvivingBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointSurvivingBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.605
+  },
+  {
+    "name": "fixture_141_EndpointTwoMonomial",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoMonomial.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.805
+  },
+  {
+    "name": "fixture_142_EndpointTwoVariables",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointTwoVariables.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointTwoVariables.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.838
+  },
+  {
+    "name": "fixture_143_EndpointVolume",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointVolume.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointVolume.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.142
+  },
+  {
+    "name": "fixture_144_EndpointWords",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointWords.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.22
+  },
+  {
+    "name": "fixture_145_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run16/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run16/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.068
+  },
+  {
+    "name": "fixture_146_EndpointAdditive",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/EndpointAdditive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/EndpointAdditive.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.636
+  },
+  {
+    "name": "fixture_147_KneserActual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KneserActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KneserActual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.351
+  },
+  {
+    "name": "fixture_148_Run17Definitions",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Definitions.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Definitions.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.439
+  },
+  {
+    "name": "fixture_149_Run17Growth",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17Growth.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17Growth.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.33
+  },
+  {
+    "name": "fixture_150_Run17SequenceExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run17SequenceExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run17SequenceExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.659
+  },
+  {
+    "name": "fixture_151_SavchevChen",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SavchevChen.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SavchevChen.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.266
+  },
+  {
+    "name": "fixture_152_RequestedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/RequestedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.317
+  },
+  {
+    "name": "fixture_153_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run17/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run17/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.487
+  },
+  {
+    "name": "fixture_154_RequestedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/RequestedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.69
+  },
+  {
+    "name": "fixture_155_BHPEKClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/BHPEKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/BHPEKClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.783
+  },
+  {
+    "name": "fixture_156_EdgeClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EdgeClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EdgeClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.218
+  },
+  {
+    "name": "fixture_157_DenseResourcesClosed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseResourcesClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseResourcesClosed.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.72
+  },
+  {
+    "name": "fixture_158_DenseClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/DenseClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/DenseClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.261
+  },
+  {
+    "name": "fixture_159_PartialClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/PartialClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/PartialClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.447
+  },
+  {
+    "name": "fixture_160_FiveClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/FiveClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/FiveClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.289
+  },
+  {
+    "name": "fixture_161_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.639
+  },
+  {
+    "name": "fixture_162_EKClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EKClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EKClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.774
+  },
+  {
+    "name": "fixture_163_BHPEK",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/BHPEK.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/BHPEK.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.763
+  },
+  {
+    "name": "fixture_164_W_CLOSE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_CLOSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_CLOSE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.038
+  },
+  {
+    "name": "fixture_165_W_DENSE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_DENSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_DENSE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.922
+  },
+  {
+    "name": "fixture_166_W_EDGE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_EDGE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_EDGE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.696
+  },
+  {
+    "name": "fixture_167_W_FIVE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/acceptance/W_FIVE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/acceptance/W_FIVE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.778
+  },
+  {
+    "name": "fixture_168_WidthFiveHigher",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveHigher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveHigher.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.108
+  },
+  {
+    "name": "fixture_169_AntipodalActual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/AntipodalActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/AntipodalActual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.733
+  },
+  {
+    "name": "fixture_170_ArtinGradedChain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedChain.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.642
+  },
+  {
+    "name": "fixture_171_ArtinGradedMaps",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedMaps.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedMaps.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.777
+  },
+  {
+    "name": "fixture_172_ArtinGradedZero",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ArtinGradedZero.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ArtinGradedZero.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.55
+  },
+  {
+    "name": "fixture_173_BasisBlocks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisBlocks.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisBlocks.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.609
+  },
+  {
+    "name": "fixture_174_BasisGradedScalarComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasisGradedScalarComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasisGradedScalarComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.658
+  },
+  {
+    "name": "fixture_175_BasiswiseTensor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/BasiswiseTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/BasiswiseTensor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.354
+  },
+  {
+    "name": "fixture_176_ColexRestriction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ColexRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ColexRestriction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.256
+  },
+  {
+    "name": "fixture_177_DegreeFamily",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeFamily.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeFamily.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.821
+  },
+  {
+    "name": "fixture_178_DegreeSeparator",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DegreeSeparator.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DegreeSeparator.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.689
+  },
+  {
+    "name": "fixture_179_DensePayment",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DensePayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DensePayment.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.733
+  },
+  {
+    "name": "fixture_180_DirectSumSplit",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DirectSumSplit.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DirectSumSplit.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.578
+  },
+  {
+    "name": "fixture_181_DistractionChain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionChain.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionChain.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.295
+  },
+  {
+    "name": "fixture_182_DistractionGraded",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGraded.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.781
+  },
+  {
+    "name": "fixture_183_LexLinearQuotientExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotientExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotientExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.965
+  },
+  {
+    "name": "fixture_184_DistractionGradedExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionGradedExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionGradedExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.892
+  },
+  {
+    "name": "fixture_185_DistractionHilbert",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionHilbert.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.83
+  },
+  {
+    "name": "fixture_186_DistractionIdeal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionIdeal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.751
+  },
+  {
+    "name": "fixture_187_DistractionLinearEquiv",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionLinearEquiv.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionLinearEquiv.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.649
+  },
+  {
+    "name": "fixture_188_DistractionMonomial",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionMonomial.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionMonomial.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.851
+  },
+  {
+    "name": "fixture_189_DistractionTensor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/DistractionTensor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/DistractionTensor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.357
+  },
+  {
+    "name": "fixture_190_ElementaryDistraction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ElementaryDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ElementaryDistraction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.912
+  },
+  {
+    "name": "fixture_191_ExteriorContraction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/ExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/ExteriorContraction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.538
+  },
+  {
+    "name": "fixture_192_FiniteHilbertProfiles",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/FiniteHilbertProfiles.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/FiniteHilbertProfiles.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.717
+  },
+  {
+    "name": "fixture_193_GenericDistraction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistraction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.46
+  },
+  {
+    "name": "fixture_194_GenericDistractionBoundary",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionBoundary.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.172
+  },
+  {
+    "name": "fixture_195_GenericDistractionExterior",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionExterior.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.208
+  },
+  {
+    "name": "fixture_196_GenericDistractionField",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionField.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionField.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.603
+  },
+  {
+    "name": "fixture_197_GenericDistractionIteration",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionIteration.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionIteration.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.8
+  },
+  {
+    "name": "fixture_198_GenericDistractionPrincipal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionPrincipal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionPrincipal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.481
+  },
+  {
+    "name": "fixture_199_GenericDistractionProgress",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionProgress.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionProgress.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.884
+  },
+  {
+    "name": "fixture_200_GenericDistractionStable",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStable.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.67
+  },
+  {
+    "name": "fixture_201_GenericDistractionStep",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GenericDistractionStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GenericDistractionStep.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.851
+  },
+  {
+    "name": "fixture_202_GradedIdealAdjoining",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedIdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedIdealAdjoining.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.776
+  },
+  {
+    "name": "fixture_203_GradedKoszulBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.638
+  },
+  {
+    "name": "fixture_204_GradedKoszulExact",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulExact.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulExact.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.7
+  },
+  {
+    "name": "fixture_205_GradedKoszulRestriction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/GradedKoszulRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/GradedKoszulRestriction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.824
+  },
+  {
+    "name": "fixture_206_HomogeneousBasisPieces",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/HomogeneousBasisPieces.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/HomogeneousBasisPieces.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.641
+  },
+  {
+    "name": "fixture_207_IdealAdjoining",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealAdjoining.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealAdjoining.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.71
+  },
+  {
+    "name": "fixture_208_IdealScalarQuotient",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/IdealScalarQuotient.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/IdealScalarQuotient.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.733
+  },
+  {
+    "name": "fixture_209_InitialAction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialAction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialAction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.853
+  },
+  {
+    "name": "fixture_210_InitialBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.912
+  },
+  {
+    "name": "fixture_211_InitialBoundary",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialBoundary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialBoundary.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.661
+  },
+  {
+    "name": "fixture_212_InitialIdeal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialIdeal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.619
+  },
+  {
+    "name": "fixture_213_InitialTransport",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/InitialTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/InitialTransport.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.732
+  },
+  {
+    "name": "fixture_214_KoszulExterior",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExterior.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExterior.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.823
+  },
+  {
+    "name": "fixture_215_KoszulExteriorBasis",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorBasis.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorBasis.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.635
+  },
+  {
+    "name": "fixture_216_KoszulExteriorContraction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorContraction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorContraction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.813
+  },
+  {
+    "name": "fixture_217_KoszulExteriorGrading",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorGrading.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.845
+  },
+  {
+    "name": "fixture_218_KoszulExteriorMap",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulExteriorMap.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulExteriorMap.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.213
+  },
+  {
+    "name": "fixture_219_KoszulSlotGrading",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulSlotGrading.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulSlotGrading.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.691
+  },
+  {
+    "name": "fixture_220_KoszulVariableFactor",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/KoszulVariableFactor.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/KoszulVariableFactor.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.592
+  },
+  {
+    "name": "fixture_221_LexBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.696
+  },
+  {
+    "name": "fixture_222_LexCompatibleDegrees",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexCompatibleDegrees.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexCompatibleDegrees.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.869
+  },
+  {
+    "name": "fixture_223_LexDegreeIdeal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexDegreeIdeal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexDegreeIdeal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.826
+  },
+  {
+    "name": "fixture_224_LexEK",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEK.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.785
+  },
+  {
+    "name": "fixture_225_LexEKOrdinary",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexEKOrdinary.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexEKOrdinary.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.815
+  },
+  {
+    "name": "fixture_226_LexGeneratorOrder",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGeneratorOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGeneratorOrder.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.678
+  },
+  {
+    "name": "fixture_227_LexGradedStep",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexGradedStep.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexGradedStep.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.697
+  },
+  {
+    "name": "fixture_228_LexHilbert",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbert.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbert.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.875
+  },
+  {
+    "name": "fixture_229_LexHilbertExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexHilbertExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexHilbertExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.05
+  },
+  {
+    "name": "fixture_230_LexLinearQuotients",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexLinearQuotients.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexLinearQuotients.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.444
+  },
+  {
+    "name": "fixture_231_LexStable",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexStable.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexStable.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.583
+  },
+  {
+    "name": "fixture_232_LexTailCorrection",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailCorrection.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.741
+  },
+  {
+    "name": "fixture_233_LexTailSupport",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexTailSupport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexTailSupport.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.133
+  },
+  {
+    "name": "fixture_234_LexUniqueness",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LexUniqueness.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LexUniqueness.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.083
+  },
+  {
+    "name": "fixture_235_MonomialExtension",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtension.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtension.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.05
+  },
+  {
+    "name": "fixture_236_MonomialExtensionGraded",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialExtensionGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialExtensionGraded.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.774
+  },
+  {
+    "name": "fixture_237_MonomialScalarExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MonomialScalarExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MonomialScalarExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.034
+  },
+  {
+    "name": "fixture_238_NormalTriangular",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/NormalTriangular.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/NormalTriangular.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.581
+  },
+  {
+    "name": "fixture_239_PrefixDominance",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixDominance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixDominance.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.894
+  },
+  {
+    "name": "fixture_240_PrefixGeneratorCorrection",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixGeneratorCorrection.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixGeneratorCorrection.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.959
+  },
+  {
+    "name": "fixture_241_PrefixOrder",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixOrder.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixOrder.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.668
+  },
+  {
+    "name": "fixture_242_PrefixVariableRestriction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/PrefixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/PrefixVariableRestriction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.571
+  },
+  {
+    "name": "fixture_243_SmallVariableComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallVariableComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallVariableComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.86
+  },
+  {
+    "name": "fixture_244_StableBettiComparison",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBettiComparison.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBettiComparison.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.691
+  },
+  {
+    "name": "fixture_245_StableBinomialWeights",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableBinomialWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableBinomialWeights.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.754
+  },
+  {
+    "name": "fixture_246_StableDegreeDecomposition",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StableDegreeDecomposition.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StableDegreeDecomposition.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.858
+  },
+  {
+    "name": "fixture_247_StandardBettiWeights",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StandardBettiWeights.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StandardBettiWeights.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.317
+  },
+  {
+    "name": "fixture_248_StrongStableEK",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableEK.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableEK.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.105
+  },
+  {
+    "name": "fixture_249_StrongStableOperations",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableOperations.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableOperations.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.927
+  },
+  {
+    "name": "fixture_250_StrongStableRestriction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/StrongStableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/StrongStableRestriction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.878
+  },
+  {
+    "name": "fixture_251_SuffixVariableRestriction",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SuffixVariableRestriction.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SuffixVariableRestriction.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.828
+  },
+  {
+    "name": "fixture_252_TotalLexBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TotalLexBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TotalLexBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.892
+  },
+  {
+    "name": "fixture_253_TriangularBlockRank",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/TriangularBlockRank.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/TriangularBlockRank.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.573
+  },
+  {
+    "name": "fixture_254_VariableIdealBetti",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealBetti.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealBetti.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.65
+  },
+  {
+    "name": "fixture_255_VariableIdealGraded",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/VariableIdealGraded.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/VariableIdealGraded.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.826
+  },
+  {
+    "name": "fixture_256_WidthDenseResources",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDenseResources.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDenseResources.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.26
+  },
+  {
+    "name": "fixture_257_WidthSparseData",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseData.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseData.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.969
+  },
+  {
+    "name": "fixture_258_WidthSparseCache",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparseCache.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparseCache.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.788
+  },
+  {
+    "name": "fixture_259_WidthSparse",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthSparse.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthSparse.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 57.179
+  },
+  {
+    "name": "fixture_260_WidthEdgeGeneral",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeneral.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeneral.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.456
+  },
+  {
+    "name": "fixture_261_WidthActualClosure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthActualClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthActualClosure.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.285
+  },
+  {
+    "name": "fixture_262_WidthDense",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthDense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthDense.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.899
+  },
+  {
+    "name": "fixture_263_WidthEdgeAP",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeAP.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeAP.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 10.299
+  },
+  {
+    "name": "fixture_264_WidthEdgeGeometry",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeometry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeometry.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.712
+  },
+  {
+    "name": "fixture_265_WidthFive",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFive.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFive.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.797
+  },
+  {
+    "name": "fixture_266_WidthFiveNonAntipodal",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveNonAntipodal.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveNonAntipodal.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 10.19
+  },
+  {
+    "name": "fixture_267_WidthFiveSmall",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthFiveSmall.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthFiveSmall.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 10.037
+  },
+  {
+    "name": "v06_fixture_268_RouteChecks",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/v06_alignment/RouteChecks.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/v06_alignment/RouteChecks.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.275
+  },
+  {
+    "name": "v06_fixture_269_V06Dense",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Dense.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Dense.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.269
+  },
+  {
+    "name": "v06_fixture_270_V06Endpoint",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06Endpoint.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06Endpoint.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.808
+  },
+  {
+    "name": "v06_fixture_271_V06HigherFromSecond",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06HigherFromSecond.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06HigherFromSecond.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.891
+  },
+  {
+    "name": "v06_fixture_272_V06IntegerPayment",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/V06IntegerPayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/V06IntegerPayment.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.85
+  },
+  {
+    "name": "run19_fixture_273_RequestedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/RequestedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.75
+  },
+  {
+    "name": "run19_fixture_274_ClosedN4Goals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/ClosedN4Goals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/ClosedN4Goals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 6.875
+  },
+  {
+    "name": "run19_fixture_275_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.693
+  },
+  {
+    "name": "run19_fixture_276_I_BASE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_BASE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/I_BASE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.839
+  },
+  {
+    "name": "run19_fixture_277_I_THREE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/I_THREE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/I_THREE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.637
+  },
+  {
+    "name": "run19_fixture_278_N_CLOSE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_CLOSE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_CLOSE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.776
+  },
+  {
+    "name": "run19_fixture_279_N_DISTANCE",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_DISTANCE.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_DISTANCE.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.714
+  },
+  {
+    "name": "run19_fixture_280_N_FIRST",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_FIRST.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_FIRST.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.706
+  },
+  {
+    "name": "run19_fixture_281_N_HIGH",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_HIGH.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_HIGH.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.009
+  },
+  {
+    "name": "run19_fixture_282_N_SMALL",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_SMALL.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_SMALL.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.7
+  },
+  {
+    "name": "run19_fixture_283_N_WIDTH4",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WIDTH4.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_WIDTH4.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.602
+  },
+  {
+    "name": "run19_fixture_284_N_WORDS",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/N_WORDS.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/N_WORDS.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.606
+  },
+  {
+    "name": "run19_fixture_285_X_LTV",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run19/acceptance/X_LTV.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run19/acceptance/X_LTV.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.554
+  },
+  {
+    "name": "run19_fixture_286_LTVActual",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/LTVActual.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/LTVActual.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.793
+  },
+  {
+    "name": "run19_fixture_287_N4ActualClosure",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4ActualClosure.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4ActualClosure.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 59.324
+  },
+  {
+    "name": "run19_fixture_288_N4CoreWords",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4CoreWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CoreWords.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.91
+  },
+  {
+    "name": "run19_fixture_289_N4CubicPayment",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4CubicPayment.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4CubicPayment.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.941
+  },
+  {
+    "name": "run19_fixture_290_N4Distance",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Distance.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Distance.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.742
+  },
+  {
+    "name": "run19_fixture_291_N4First",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4First.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4First.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.731
+  },
+  {
+    "name": "run19_fixture_292_N4Higher",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Higher.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Higher.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.995
+  },
+  {
+    "name": "run19_fixture_293_N4Small",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4Small.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Small.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.822
+  },
+  {
+    "name": "run19_fixture_294_N4StandardWords",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4StandardWords.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4StandardWords.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.949
+  },
+  {
+    "name": "run19_fixture_295_N4WidthFour",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/N4WidthFour.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/N4WidthFour.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.991
+  },
+  {
+    "name": "run19_fixture_296_Run19Contracts",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run19Contracts.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run19Contracts.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.57
+  },
+  {
+    "name": "run19_fixture_297_SmallEmbeddingBase",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallEmbeddingBase.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingBase.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.219
+  },
+  {
+    "name": "run19_fixture_298_SmallEmbeddingThree",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/SmallEmbeddingThree.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingThree.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.253
+  },
+  {
+    "name": "run20_fixture_299_RequestedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/RequestedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.391
+  },
+  {
+    "name": "run20_fixture_300_PartitionClosed",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/PartitionClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/PartitionClosed.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.655
+  },
+  {
+    "name": "run20_fixture_301_ClosedGoals",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/ClosedGoals.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.738
+  },
+  {
+    "name": "run20_fixture_302_I_MAIN",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/acceptance/I_MAIN.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/acceptance/I_MAIN.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.854
+  },
+  {
+    "name": "run20_fixture_303_I_PARTITION",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/acceptance/I_PARTITION.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/acceptance/I_PARTITION.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.378
+  },
+  {
+    "name": "run20_fixture_304_MainActualExamples",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainActualExamples.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainActualExamples.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.733
+  },
+  {
+    "name": "run20_fixture_305_MainBoundaryRows",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainBoundaryRows.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainBoundaryRows.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.378
+  },
+  {
+    "name": "run20_fixture_306_MainBranchConsumers",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainBranchConsumers.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainBranchConsumers.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.297
+  },
+  {
+    "name": "run20_fixture_307_MainPartition",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainPartition.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainPartition.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.0
+  },
+  {
+    "name": "run20_fixture_308_MainPublicAPI",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainPublicAPI.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainPublicAPI.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.441
+  },
+  {
+    "name": "run20_fixture_309_MainTargetTransport",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/MainTargetTransport.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/MainTargetTransport.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 10.245
+  },
+  {
+    "name": "run20_fixture_310_Run20Contracts",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run20Contracts.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run20Contracts.olean"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.961
+  },
+  {
+    "name": "width_model",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "width_model",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_width_model"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 18.073
+  },
+  {
+    "name": "dense_model",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "dense_model",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_dense_model"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 20.814
+  },
+  {
+    "name": "continuation_model",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "continuation_model",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_continuation_model"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 18.02
+  },
+  {
+    "name": "five_model",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "five_model",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_five_model"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 19.113
+  },
+  {
+    "name": "edge_model",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "edge_model",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_edge_model"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 19.916
+  },
+  {
+    "name": "publication_guards",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "publication_guards",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_publication_guards"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 19.205
+  },
+  {
+    "name": "axiom_policy_controls",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "axiom_policy_controls",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_axiom_policy_controls"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 24.186
+  },
+  {
+    "name": "inherited_schedule",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "inherited_schedule",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_inherited_schedule"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 17.922
+  },
+  {
+    "name": "inherited_coordinates",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "inherited_coordinates",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_inherited_coordinates"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 18.324
+  },
+  {
+    "name": "inherited_additive",
+    "command": [
+      "python3",
+      "scripts/replay_run20_inherited.py",
+      "--name",
+      "inherited_additive",
+      "--output-dir",
+      "verification/run20/runs/release_20261116_r02/replay_inherited_additive"
+    ],
+    "cwd": "/tmp/ns-p14-run20-20261116",
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 17.933
+  }
+]

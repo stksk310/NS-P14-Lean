@@ -1,0 +1,25 @@
+✖ [4564/4565] Building NSP14.Homological.IdealAdjoining (1.4s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/IdealAdjoining.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/IdealAdjoining.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/IdealAdjoining.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/IdealAdjoining.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/IdealAdjoining.setup.json --json
+error: NSP14/Homological/IdealAdjoining.lean:22:10: Function expected at
+  le_sup_left
+but this term has type
+  ?m.60 ≤ ?m.60 ⊔ ?m.61
+
+Note: Expected a function because this term is being applied to the argument
+  hx
+error: NSP14/Homological/IdealAdjoining.lean:31:2: Tactic `apply` failed: could not unify the conclusion of `@le_sup_right`
+  ∀ {a b : ?α}, b ≤ a ⊔ b
+with the goal
+  g * x ∈ J ⊔ Ideal.span {g}
+
+Note: The full type of `@le_sup_right` is
+  ∀ {α : Type ?u.44} [inst : SemilatticeSup α] {a b : α}, b ≤ a ⊔ b
+
+R : Type u
+inst✝ : CommRing R
+J : Ideal R
+g x : R
+⊢ g * x ∈ J ⊔ Ideal.span {g}
+Some required targets logged failures:
+- NSP14.Homological.IdealAdjoining
+error: build failed

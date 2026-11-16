@@ -1,0 +1,28 @@
+✔ [5620/5623] Built NSP14.Width.EdgeHoleCounting (1.5s)
+✖ [5622/5623] Building NSP14.Width.EdgeHoleMinor (1.9s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/EdgeHoleMinor.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleMinor.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/EdgeHoleMinor.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleMinor.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/EdgeHoleMinor.setup.json --json
+error: NSP14/Width/EdgeHoleMinor.lean:50:2: Type mismatch: After simplification, term
+  he
+ has type
+  koszulSlotWedge (variableList k ↥D.a) (j + 1) (H.insertion k a).1 =
+    @insert (↥D.a) (Finset ↥D.a) (@Finset.instInsert ↥D.a fun a b => Classical.propDecidable (a = b)) (H.selected a)
+      ↑(↑a).2
+but is expected to have type
+  koszulSlotWedge (variableList k ↥D.a) (j + 1) (H.insertion k a).1 =
+    @insert (↥D.a) (Finset ↥D.a) (@Finset.instInsert ↥D.a fun a b => a.instDecidableEq b) (H.selected a) ↑(↑a).2
+error: NSP14/Width/EdgeHoleMinor.lean:99:70: Application type mismatch: The argument
+  Finset.erase_insert hn
+has type
+  (@insert (↥D.a) (Finset ↥D.a) (@Finset.instInsert ↥D.a fun a b => a.instDecidableEq b) (H.selected b) ↑(↑a).2).erase
+      (H.selected b) =
+    ↑(↑a).2
+but is expected to have type
+  (@insert (↥D.a) (Finset ↥D.a) (@Finset.instInsert ↥D.a fun a b => Classical.propDecidable (a = b)) (H.selected b)
+          ↑(↑a).2).erase
+      (H.selected b) =
+    ↑(↑a).2
+in the application
+  Eq.trans he (Finset.erase_insert hn)
+Some required targets logged failures:
+- NSP14.Width.EdgeHoleMinor
+error: build failed

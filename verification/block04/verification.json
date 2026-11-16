@@ -1,0 +1,122 @@
+{
+  "status": "PASS_COMPILED_BLOCK04",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.201
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Ordinary/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.832
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.807
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.715
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.103
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.955
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.659
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.743
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 13,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7
+  },
+  "block04_theorems": [
+    "NSP14.Ordinary.LowRank.Layers.rank_three_bounds",
+    "NSP14.Ordinary.LowRank.Layers.rank_three_first_le",
+    "NSP14.Ordinary.LowRank.Layers.rank_three_second_le",
+    "NSP14.Ordinary.LowRank.Layers.rank_three_top_le",
+    "NSP14.Ordinary.LowRank.Layers.rank_two_bounds",
+    "NSP14.Ordinary.LowRank.Layers.rank_two_first_le_linear",
+    "NSP14.Ordinary.LowRank.Layers.rank_two_first_le_mass",
+    "NSP14.Ordinary.LowRank.Layers.rank_two_top_le",
+    "NSP14.Ordinary.LowRank.Layers.row_le",
+    "NSP14.Ordinary.LowRank.Layers.tail_sum_nonneg",
+    "NSP14.Ordinary.LowRank.rank_three_margin_pos",
+    "NSP14.Ordinary.SmallScalar.Resources.rank_three_bounds",
+    "NSP14.Ordinary.SmallScalar.Resources.row_one_eq_scalar"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block03": true,
+  "source": "NSP14/Ordinary/LowRank.lean",
+  "paper_source": "proof_integrated_v2/NS_P14_INTEGRATED_PROOF_JA.md, sections 7 and 9; V03 III.1 O_LOW",
+  "scope": "All rank-two and rank-three finite weighted numerical rows; zero deficit in rank two; adapter from Block03 resources with explicit linear head cap.",
+  "remaining": [
+    "actual common tower and its linear head cap",
+    "Koszul/Tor derivation of row upper bounds (7.3)",
+    "actual target margin (8.4) and Betti transfer",
+    "rank >=9 scalar closure",
+    "full M12 and full P14"
+  ]
+}

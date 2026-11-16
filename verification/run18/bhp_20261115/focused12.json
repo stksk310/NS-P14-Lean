@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tests/KoszulExteriorMap.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.319
+  },
+  {
+    "file": "tests/GenericDistractionExterior.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.02
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms11.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.468
+  }
+]

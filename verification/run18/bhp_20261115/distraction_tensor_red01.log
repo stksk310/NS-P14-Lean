@@ -1,0 +1,2 @@
+tests/DistractionTensor.lean:23:3: error(lean.unknownIdentifier): Unknown constant `Lex.genericDistractionTensorEquiv`
+tests/DistractionTensor.lean:24:4: error(lean.unknownIdentifier): Unknown constant `Lex.genericDistractionTensorEquiv_monomial`

@@ -1,0 +1,7 @@
+NSP14/NarrowFour/WidthFourCompetitors.lean:145:81: error: unsolved goals
+case «4»
+hi : ↑((fun i => i) ⟨4, ⋯⟩) < 4
+⊢ False
+NSP14/NarrowFour/WidthFourCompetitors.lean:223:8: warning: Unused tactic linter: `push_cast` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

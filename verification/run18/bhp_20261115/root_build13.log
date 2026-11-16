@@ -1,0 +1,11 @@
+✖ [6242/6246] Building NSP14.Lex.GenericDistractionExterior (2.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/GenericDistractionExterior.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GenericDistractionExterior.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/GenericDistractionExterior.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GenericDistractionExterior.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/GenericDistractionExterior.setup.json --json
+error: NSP14/Lex/GenericDistractionExterior.lean:45:2: 'change' tactic failed, pattern
+  (genericFieldLinearEquiv k q a) (Pi.single r 1) =
+    (genericFieldLinearEquiv k q (a + Finsupp.single i 1)) (Pi.single r 1)
+is not definitionally equal to target
+  ↑(genericFieldLinearEquiv k q a) (Pi.single r 1) =
+    ↑(genericFieldLinearEquiv k q (a + Finsupp.single i 1)) (Pi.single r 1)
+Some required targets logged failures:
+- NSP14.Lex.GenericDistractionExterior
+error: build failed

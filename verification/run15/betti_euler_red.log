@@ -1,0 +1,56 @@
+tests/BettiEuler.lean:12:4: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:12:28: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:12:52: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:14:2: error(lean.unknownIdentifier): Unknown identifier `bettiEuler_shortExact`
+tests/BettiEuler.lean:17:4: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:17:28: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:17:52: error: Function expected at
+  bettiEuler
+but this term has type
+  ?m.26
+
+Note: Expected a function because this term is being applied to the argument
+  k
+
+Hint: The identifier `bettiEuler` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tests/BettiEuler.lean:18:2: error(lean.unknownIdentifier): Unknown identifier `bettiEuler_kernel_le`

@@ -1,0 +1,21 @@
+✖ [4610/4611] Building NSP14.Homological.HomogeneousBasisPieces (1.1s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Homological/HomogeneousBasisPieces.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/HomogeneousBasisPieces.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Homological/HomogeneousBasisPieces.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/HomogeneousBasisPieces.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Homological/HomogeneousBasisPieces.setup.json --json
+error: NSP14/Homological/HomogeneousBasisPieces.lean:35:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  G.degreeSpace ?q
+in the target expression
+  Submodule.span k (Set.range (⇑b ∘ Subtype.val)) = (G.inclusion q).range
+
+k σ : Type
+inst✝ : Field k
+J : Type
+M : ModuleCat (VariableRing k σ)
+G : GradedPolynomialModule k σ M
+b : Module.Basis J k ↑(coefficientModule k σ M)
+deg : J → ℤ
+hb : ∀ (a : J), b a ∈ G.degreeSpace (deg a)
+q : ℤ
+a : { a // deg a = q }
+⊢ Submodule.span k (Set.range (⇑b ∘ Subtype.val)) = (G.inclusion q).range
+Some required targets logged failures:
+- NSP14.Homological.HomogeneousBasisPieces
+error: build failed

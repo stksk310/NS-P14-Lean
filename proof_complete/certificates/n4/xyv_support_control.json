@@ -1,0 +1,28 @@
+{
+  "generators": [
+    229,
+    230,
+    309,
+    387
+  ],
+  "monomial": [
+    1,
+    1,
+    0,
+    6
+  ],
+  "degree": 8,
+  "weight": 2781,
+  "order": 9,
+  "divisor_orders": [
+    7,
+    7,
+    7
+  ],
+  "longer_representation": [
+    0,
+    0,
+    9,
+    0
+  ]
+}

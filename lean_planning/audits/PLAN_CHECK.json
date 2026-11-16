@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PLAN_COVERAGE_AND_ACCOUNTING",
+  "paper_ids": 50,
+  "modules": 18,
+  "published_inputs": 7,
+  "quotient_edges": 33,
+  "combined_interface_edges": 65,
+  "acyclic": true,
+  "mapping_duplicates": [],
+  "unassigned_ids": [],
+  "module_effort_person_days": [
+    918,
+    2620
+  ],
+  "including_setup_person_days": [
+    920,
+    2625
+  ],
+  "public_main_module_rows_checked": 18,
+  "preserved_V03_members": 24,
+  "public_document_local_links_checked": 10,
+  "diagram_files_present": true,
+  "Lean_compilation": "NOT_ATTEMPTED",
+  "scope": "Plan declarations, coverage, arithmetic, source identity and document links. No validation of effort forecasts or formal proof truth."
+}

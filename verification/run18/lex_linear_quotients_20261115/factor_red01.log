@@ -1,0 +1,2 @@
+tests/IdealAdjoining.lean:12:10: error(lean.unknownIdentifier): Unknown identifier `Homological.idealAdjoinFactor`
+tests/IdealAdjoining.lean:13:2: error(lean.unknownIdentifier): Unknown identifier `Homological.idealAdjoinLeft_factor`

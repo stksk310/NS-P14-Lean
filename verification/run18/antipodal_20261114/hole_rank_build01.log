@@ -1,0 +1,158 @@
+✖ [5612/5613] Building NSP14.Width.FiveHoleTopRank (7.6s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Width/FiveHoleTopRank.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleTopRank.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Width/FiveHoleTopRank.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleTopRank.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Width/FiveHoleTopRank.setup.json --json
+error: NSP14/Width/FiveHoleTopRank.lean:17:2: unsolved goals
+case pos
+D : Data
+k : Type
+inst✝ : Field k
+p : ↥D.corePoints
+j : D.CoreMinimalIndex
+hm : D.CoreMinimal p
+h✝ : p = ↑j
+⊢ (if ↑p = ↑↑j then 1 else 0) = 1
+error: NSP14/Width/FiveHoleTopRank.lean:19:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?f 0
+in the target expression
+  ((D.QCoreCoordinates k) ((D.QCoreBasis k) ⟨p, hm⟩)) j = 0
+
+case neg
+D : Data
+k : Type
+inst✝ : Field k
+p : ↥D.corePoints
+j : D.CoreMinimalIndex
+hm : D.CoreMinimal p
+h✝ : ¬p = ↑j
+⊢ ((D.QCoreCoordinates k) ((D.QCoreBasis k) ⟨p, hm⟩)) j = 0
+error: NSP14/Width/FiveHoleTopRank.lean:14:34: unsolved goals
+case pos
+D : Data
+k : Type
+inst✝ : Field k
+p : ↥D.corePoints
+j : D.CoreMinimalIndex
+hm : ¬D.CoreMinimal p
+h✝ : p = ↑j
+⊢ ((D.QCoreCoordinates k) 0) j = 1
+
+case neg
+D : Data
+k : Type
+inst✝ : Field k
+p : ↥D.corePoints
+j : D.CoreMinimalIndex
+hm : ¬D.CoreMinimal p
+h✝ : ¬p = ↑j
+⊢ ((D.QCoreCoordinates k) 0) j = 0
+error: NSP14/Width/FiveHoleTopRank.lean:73:8: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (if _a then 1 else 0) = if r = c then 1 else 0
+Error: Application type mismatch: The argument
+  (D.coreGeneratorPoint (D.internalVariable (vs r)) + ps c).instDecidableEq ↑(js r)
+has type
+  Decidable (D.coreGeneratorPoint (D.internalVariable (vs r)) + ps c = ↑(js r))
+but is expected to have type
+  Decidable _a
+in the application
+  @ite k _a ((D.coreGeneratorPoint (D.internalVariable (vs r)) + ps c).instDecidableEq ↑(js r))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+hu : D.u = 5
+flip : Bool
+v : Fin 3 ≃ ↥D.a
+hv : ∀ (i : Fin 3), ↑(v i) = fiveHoleValues flip i
+M : ModuleCat (D.InternalRing k) := D.QCoreModule k
+xs : List ↥D.a := variableList k ↥D.a
+hslot : Nonempty (KoszulSlot xs.length 3)
+s : KoszulSlot xs.length 3 := Classical.choice hslot
+hw : koszulSlotWedge xs 3 s = Finset.univ
+hdelete :
+  ∀ (b : ↥D.a),
+    ∃ t b_1,
+      koszulSlotWedge (variableList k ↥D.a) 2 t = (koszulSlotWedge (variableList k ↥D.a) (2 + 1) s).erase b ∧
+        koszulSlotArrow (variableList k ↥D.a) 2 s t = some (b, b_1)
+ds : ↥D.a → KoszulSlot xs.length 2 × Bool := fun b => (⋯.choose, ⋯.choose)
+harrow : ∀ (b : ↥D.a), koszulSlotArrow xs 2 s (ds b).1 = some (b, (ds b).2)
+vs : Fin 3 → ↥D.a := ![v 0, v 0, v 2]
+ps : Fin 3 → ↥D.corePoints :=
+  ![0, D.coreGeneratorPoint (D.internalVariable (v 0)), D.coreGeneratorPoint (D.internalVariable (v 1))]
+js : Fin 3 → D.CoreMinimalIndex :=
+  ![D.internalMinimalIndex (v 0), ⟨D.triplePoint v 2 0 0, ⋯⟩, ⟨D.triplePoint v 0 1 1, ⋯⟩]
+r c : Fin 3
+hcond : D.coreGeneratorPoint (D.internalVariable (vs r)) + ps c = ↑(js r) ↔ r = c
+⊢ (if D.coreGeneratorPoint (D.internalVariable (vs r)) + ps c = ↑(js r) then 1 else 0) = if r = c then 1 else 0
+error: NSP14/Width/FiveHoleTopRank.lean:84:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (coefficientSlotOut ?k ?σ ?M ?xs ?j ?t)
+    ((ConcreteCategory.hom (((coefficientKoszulListFunctor ?k ?σ ?xs).obj ?M).d (?j + 1) ?j))
+      ((coefficientSlotIn ?k ?σ ?M ?xs (?j + 1) ?s) ?a))
+in the target expression
+  (D.coreRow k (js r))
+      ((coefficientSlotOut k (↥D.a) M xs 2 (ds (vs r)).1)
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) M).d 3 2))
+          ((coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))))) =
+    sign r * if r = c then 1 else 0
+
+D : Data
+k : Type
+inst✝ : Field k
+hq : D.q = 3
+hu : D.u = 5
+flip : Bool
+v : Fin 3 ≃ ↥D.a
+hv : ∀ (i : Fin 3), ↑(v i) = fiveHoleValues flip i
+M : ModuleCat (D.InternalRing k) := D.QCoreModule k
+xs : List ↥D.a := variableList k ↥D.a
+hslot : Nonempty (KoszulSlot xs.length 3)
+s : KoszulSlot xs.length 3 := Classical.choice hslot
+hw : koszulSlotWedge xs 3 s = Finset.univ
+hdelete :
+  ∀ (b : ↥D.a),
+    ∃ t b_1,
+      koszulSlotWedge (variableList k ↥D.a) 2 t = (koszulSlotWedge (variableList k ↥D.a) (2 + 1) s).erase b ∧
+        koszulSlotArrow (variableList k ↥D.a) 2 s t = some (b, b_1)
+ds : ↥D.a → KoszulSlot xs.length 2 × Bool := fun b => (⋯.choose, ⋯.choose)
+harrow : ∀ (b : ↥D.a), koszulSlotArrow xs 2 s (ds b).1 = some (b, (ds b).2)
+vs : Fin 3 → ↥D.a := ![v 0, v 0, v 2]
+ps : Fin 3 → ↥D.corePoints :=
+  ![0, D.coreGeneratorPoint (D.internalVariable (v 0)), D.coreGeneratorPoint (D.internalVariable (v 1))]
+js : Fin 3 → D.CoreMinimalIndex :=
+  ![D.internalMinimalIndex (v 0), ⟨D.triplePoint v 2 0 0, ⋯⟩, ⟨D.triplePoint v 0 1 1, ⋯⟩]
+heval : ∀ (r c : Fin 3), (D.coreRow k (js r)) (MvPolynomial.X (vs r) • D.coreColumn k (ps c)) = if r = c then 1 else 0
+columns : Fin 3 → ↑((coefficientKoszulComplex k (↥D.a) M).X 3) :=
+  fun c => (coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))
+rows : Fin 3 → ↑((coefficientKoszulComplex k (↥D.a) M).X 2) →ₗ[k] k :=
+  fun r => D.coreRow k (js r) ∘ₗ coefficientSlotOut k (↥D.a) M xs 2 (ds (vs r)).1
+sign : Fin 3 → k := fun r => if (ds (vs r)).2 = true then -1 else 1
+r c : Fin 3
+⊢ (D.coreRow k (js r))
+      ((coefficientSlotOut k (↥D.a) M xs 2 (ds (vs r)).1)
+        ((ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) M).d 3 2))
+          ((coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))))) =
+    sign r * if r = c then 1 else 0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c))
+  has type
+    ↑(((coefficientKoszulListFunctor k (↥D.a) xs).obj M).X 3)
+  but is expected to have type
+    ↑((coefficientKoszulComplex k (↥D.a) M).X 3)
+  in the application
+    (ModuleCat.Hom.hom ((coefficientKoszulComplex k (↥D.a) M).d 3 2))
+      ((coefficientSlotIn k (↥D.a) M xs 3 s) (D.coreColumn k (ps c)))
+error: NSP14/Width/FiveHoleTopRank.lean:114:2: 'change' tactic failed, pattern
+  ?m.52 = D.coreP k * D.q.choose 3
+is not definitionally equal to target
+  totalBetti k (↥D.a) (D.QCoreModule k) 3 + koszulBoundaryRank k (↥D.a) (D.QCoreModule k) 3 +
+      koszulBoundaryRank k (↥D.a) (D.QCoreModule k) (3 + 1) =
+    Module.finrank k ↑(coefficientModule k (↥D.a) (D.QCoreModule k)) * D.a.card.choose 3
+Some required targets logged failures:
+- NSP14.Width.FiveHoleTopRank
+error: build failed

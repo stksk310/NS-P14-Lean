@@ -1,0 +1,9 @@
+{
+  "mode": "empty_project_test_cache_and_all_new_production_lib_and_ir",
+  "test_backup": "/tmp/nsp14-run17-testcache-vyzk36n3/tests",
+  "production_backup": "/tmp/nsp14-run17-production-pxgwy_fa",
+  "removed_new_production_paths": [
+    ".lake/build/lib/lean/NSP14/Additive",
+    ".lake/build/ir/NSP14/Additive"
+  ]
+}

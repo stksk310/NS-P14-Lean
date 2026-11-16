@@ -1,0 +1,47 @@
+[
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeometry.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeometry.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.8584569550002925,
+    "log": "verification/run18/edge_20261115/focused01_WidthEdgeGeometry.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run18/EdgeClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run18/EdgeClosedGoals.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.518602875000397,
+    "log": "verification/run18/edge_20261115/focused01_EdgeClosedGoals.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/WidthEdgeGeneral.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/WidthEdgeGeneral.olean"
+    ],
+    "exit_code": 1,
+    "seconds": 3.092877846999727,
+    "log": "verification/run18/edge_20261115/focused01_WidthEdgeGeneral.log"
+  }
+]

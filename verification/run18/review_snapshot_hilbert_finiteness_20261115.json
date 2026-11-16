@@ -1,0 +1,24 @@
+{
+  "status": "PASS_REVIEW_FOR_ORIGINAL_FIELD_COMPARISON_AND_HILBERT_FINITENESS",
+  "run18_complete": false,
+  "proof_snapshot_commit": "013f7fb02d109d0a3fda657e51c25b05cb98c8cc",
+  "reviewed_source_commit": "013f7fb02d109d0a3fda657e51c25b05cb98c8cc",
+  "verification": "verification/run18/runs/release_candidate_20261115_r11/verification.json",
+  "verification_sha256": "5c404a5461d10886fc9b9c22fc29511a72c709e9b7bf3c2cb6aa90c3b25beb8d",
+  "report": "verification/run18/hilbert_finiteness_review_20261115.md",
+  "report_sha256": "7603d4f121df3660ae46c95ada2f7df517d8f2bcda9a7555e752c666b24bea7a",
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "pending": [],
+  "declined": [],
+  "remaining": [
+    "lex-reaching iteration and terminal lex proof",
+    "common-whole-Hilbert lex existence",
+    "general BHP",
+    "W_DENSE closure",
+    "W_CLOSE"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "inherited_schedule",
+  "old_command": [
+    "python3",
+    "scripts/replay_run17_inherited.py",
+    "schedule",
+    "--output",
+    "verification/run18/runs/v06_alignment_20261115T152000Z_r01/inherited_schedule.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/replay_run17_inherited.py",
+    "schedule",
+    "--output",
+    "verification/run18/runs/v06_alignment_run19_disposable/inherited_schedule.json"
+  ],
+  "source_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-8yr4qy6w",
+  "old_evidence_written": false
+}

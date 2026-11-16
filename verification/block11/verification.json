@@ -1,0 +1,791 @@
+{
+  "status": "PASS_COMPILED_BLOCK11",
+  "date_jst": "2026-11-10",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.082
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/HeadMonomials.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.057
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/NonAperyIdeal.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.464
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyQuotient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.559
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyDegree.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.735
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/HeadDegree.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.838
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/LowDegreeQuotient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.274
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyDimensions.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.646
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.795
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyStandard.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.761
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyGradedAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.031
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/HeadGradedAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.012
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "NSP14/Semigroup/AperyTopDegree.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.587
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/AperyQuotient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.632
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SmallScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.515
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Sidon.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.437
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/Resources.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.67
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LowRank.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.653
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeSeed.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.602
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/LargeScalar.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.124
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/OrdinaryNumerical.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.775
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupFoundations.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.104
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/SemigroupRing.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.663
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "tests/TangentAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.206
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/DomainChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.511
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "audit/block02/AssumptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.574
+    }
+  ],
+  "axiom_report_counts": {
+    "tests_and_axioms": 120,
+    "block01_regression": 10,
+    "block02_regression": 14,
+    "block03_regression": 7,
+    "block04_regression": 13,
+    "block05_regression": 22,
+    "block06_regression": 15,
+    "block07_regression": 25,
+    "block08_regression": 86,
+    "block09_regression": 60,
+    "block10_regression": 71
+  },
+  "block11_declarations": [
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headMonomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_coordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_eq_basis"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_zero_of_not_head"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_mul_live"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_mul_dead"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headBasis_repr"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.head_expansion"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.apery_head"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonapery_add"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonAperySpace"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_nonAperySpace"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_mem_nonAperySpace"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headBasis_mul_mem_nonAperySpace"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperySpace_mul"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdeal_restrictScalars"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.NonAperyHeadExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdealEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdealBasis"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.AperyExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyHeadEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyProjection"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyProjection_apply"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyProjection_ker"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyProjection_surjective"
+    },
+    {
+      "kind": "abbrev",
+      "name": "NSP14.NumericalSemigroup.AperyAlgebra"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyQuotientEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyQuotientBasis"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qMonomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyQuotientEquiv_mk"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_coordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyQuotientEquiv_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyQuotientBasis_eq_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_zero_of_nonapery"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_mul_live"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_mul_dead"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.toAperyAlgebra"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.toAperyAlgebra_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.toAperyAlgebra_coordinates"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qDegreeMap"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qDegree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_mem_degree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_qDegree_coordinates"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.AperyDegreeExponent"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qDegreeEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qDegreeBasis"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_mul_mem"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.toHeadAlgebra"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headDegreeMap"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headDegree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headMonomial_mem_degree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.mem_headDegree_coordinates"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headGradeProject"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_coordinates"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_mem_degree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_mem_nonAperyIdeal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.tangentCoordinates_of_ne"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_component"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyHead_degree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_to_qDegree"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.headToQDegree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headToQDegree_surjective"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.lowDegree_nonApery_eq_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headToQDegree_injective"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.lowDegreeQuotientEquiv"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyExponentEquivSet"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.aperyExponentFintype"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyExponent_card"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyDegreeEquivSet"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.aperyDegreeExponentFintype"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyDegreeExponent_card"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.aperyAlgebraFinite"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyAlgebra_finrank"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.qDegreeFinite"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_finrank"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_zero_finrank"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_one_finrank"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_two_finrank_le"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_eq_bot_of_gt"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_high_sum"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_low_finrank"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_two_finrank_le"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.nonAperyMonomial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdealEquiv_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdealBasis_eq_initial"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_ne_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_mul_nonapery"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_mul_ne_zero_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.initialMonomial_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qMonomial_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.apery_atomic_split"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.aperyAtomSubalgebra"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.aperyMonomial_mem_atomSubalgebra"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.apery_atom_adjoin_top"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.apery_atom_generator_degree"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.aperyAlgebraArtinian"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_iSup_eq_top"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_iSupIndep"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_isInternal"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.qDegreeGradedMonoid"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.aperyGradedAlgebra"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_iSup_eq_top"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_iSupIndep"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_isInternal"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headDegree_mul_mem"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.headDegreeGradedMonoid"
+    },
+    {
+      "kind": "instance",
+      "name": "NSP14.NumericalSemigroup.headGradedAlgebra"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_self"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_other"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.headGradeProject_eq_proj"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.nonAperyIdeal_isHomogeneous"
+    },
+    {
+      "kind": "def",
+      "name": "NSP14.NumericalSemigroup.qTopDegree"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qTopDegree_realized"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.apery_order_le_top"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qTopDegree_le_deficit"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_eq_bot_of_top_lt"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_ne_bot_iff"
+    },
+    {
+      "kind": "theorem",
+      "name": "NSP14.NumericalSemigroup.qDegree_top_ne_bot"
+    }
+  ],
+  "block11_theorem_count": 81,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_mathematical_axioms": [],
+  "predecessor_sources_tests_and_fixed_environment_match_block10": true,
+  "predecessor_hash_count": 42,
+  "sources": [
+    "NSP14/Semigroup/HeadMonomials.lean",
+    "NSP14/Semigroup/NonAperyIdeal.lean",
+    "NSP14/Semigroup/AperyQuotient.lean",
+    "NSP14/Semigroup/AperyDegree.lean",
+    "NSP14/Semigroup/HeadDegree.lean",
+    "NSP14/Semigroup/LowDegreeQuotient.lean",
+    "NSP14/Semigroup/AperyDimensions.lean",
+    "NSP14/Semigroup/AperyProducts.lean",
+    "NSP14/Semigroup/AperyStandard.lean",
+    "NSP14/Semigroup/AperyGradedAlgebra.lean",
+    "NSP14/Semigroup/HeadGradedAlgebra.lean",
+    "NSP14/Semigroup/AperyTopDegree.lean"
+  ],
+  "paper_source": "V02 section2; V03 O_COORD, algebraic semigroup-ring coordinate step",
+  "scope": "N is an actual homogeneous ideal of A=G/xG. The actual quotient Q=A/N has the Apery monomial basis, inherited registered grading, finite field dimension m, Hilbert counts and top degree. A_n maps isomorphically to Q_n for n<=2. Actual atom classes of degree one generate Q; it is Artinian over every field.",
+  "paper_alignment_ledger": "docs/LEAN_PAPER_ALIGNMENT_JA.md, A18-A22",
+  "remaining": [
+    "completion and algebraic/completed associated-graded comparison",
+    "same-jump module isomorphisms and jump upper bound",
+    "actual offset-volume/cut/tower resources; maximal Q2 to pair data",
+    "Koszul/Tor, target Betti input and full P14"
+  ]
+}

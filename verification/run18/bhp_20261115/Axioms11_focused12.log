@@ -1,0 +1,26 @@
+'NSP14.Homological.koszulExteriorContraction_naturality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.koszulExteriorMap_coordinate_contraction_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NSP14.Homological.koszulExteriorContraction_decompose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericDistractionWedge_step_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Homological.koszulExteriorMap_coordinate_contraction_eq : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ]
+  (j : ℕ) (f g : (σ → k) →ₗ[k] σ → k) (x : σ),
+  (∀ (y : σ), y ≠ x → f (Pi.single y 1) = g (Pi.single y 1)) →
+    ∀ (w : ↥(⋀[k]^(j + 1) (σ → k))),
+      (exteriorPower.map j f) ((NSP14.Homological.koszulExteriorContraction k σ j (LinearMap.proj x)) w) =
+        (exteriorPower.map j g) ((NSP14.Homological.koszulExteriorContraction k σ j (LinearMap.proj x)) w)
+NSP14.Homological.koszulExteriorContraction_decompose : ∀ (k σ : Type) [inst : Field k] [inst_1 : Fintype σ] (j : ℕ)
+  (φ : Module.Dual k (σ → k)) (w : ↥(⋀[k]^(j + 1) (σ → k))),
+  (NSP14.Homological.koszulExteriorContraction k σ j φ) w =
+    ∑ x, φ (Pi.single x 1) • (NSP14.Homological.koszulExteriorContraction k σ j (LinearMap.proj x)) w
+NSP14.Lex.genericDistractionWedge_step_contraction : ∀ (k : Type) [inst : Field k] (q j : ℕ) (a : Fin q →₀ ℕ)
+  (i : Fin q) (w : ↥(⋀[NSP14.Lex.GenericDistractionField k q]^(j + 1) (Fin q → NSP14.Lex.GenericDistractionField k q))),
+  (NSP14.Lex.genericDistractionWedgeEquiv k q j a)
+      ((NSP14.Homological.koszulExteriorContraction (NSP14.Lex.GenericDistractionField k q) (Fin q) j
+          (LinearMap.proj i))
+        w) =
+    (NSP14.Lex.genericDistractionWedgeEquiv k q j (a + Finsupp.single i 1))
+      ((NSP14.Homological.koszulExteriorContraction (NSP14.Lex.GenericDistractionField k q) (Fin q) j
+          (LinearMap.proj i))
+        w)

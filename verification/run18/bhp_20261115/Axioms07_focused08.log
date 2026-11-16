@@ -1,0 +1,27 @@
+'NSP14.Lex.genericFieldMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericFieldDegreeMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericPolynomialEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericPolynomialEquiv_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.genericPolynomialEquiv_homogeneous_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.genericFieldLinearEquiv : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      (Fin q →₀ ℕ) →
+        (Fin q → NSP14.Lex.GenericDistractionField k q) ≃ₗ[NSP14.Lex.GenericDistractionField k q]
+          Fin q → NSP14.Lex.GenericDistractionField k q
+NSP14.Lex.genericFieldPieceEquiv : (k : Type) →
+  [inst : Field k] →
+    (q n : ℕ) →
+      ↥(MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q)
+            n) ≃ₗ[NSP14.Lex.GenericDistractionField k q]
+        ↥(MvPolynomial.homogeneousSubmodule (Fin q) (NSP14.Lex.GenericDistractionField k q) n)
+NSP14.Lex.genericPolynomialEquiv : (k : Type) →
+  [inst : Field k] →
+    (q : ℕ) →
+      MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q) ≃ₗ[NSP14.Lex.GenericDistractionField k q]
+        MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)
+NSP14.Lex.genericPolynomialEquiv_monomial : ∀ (k : Type) [inst : Field k] (q : ℕ) (a : Fin q →₀ ℕ),
+  (NSP14.Lex.genericPolynomialEquiv k q) ((MvPolynomial.monomial a) 1) = NSP14.Lex.genericFieldDistraction k q a
+NSP14.Lex.genericPolynomialEquiv_homogeneous_iff : ∀ (k : Type) [inst : Field k] (q n : ℕ)
+  (f : MvPolynomial (Fin q) (NSP14.Lex.GenericDistractionField k q)),
+  ((NSP14.Lex.genericPolynomialEquiv k q) f).IsHomogeneous n ↔ f.IsHomogeneous n

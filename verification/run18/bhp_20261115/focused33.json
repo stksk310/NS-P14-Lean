@@ -1,0 +1,56 @@
+[
+  {
+    "file": "tests/DensePayment.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.062
+  },
+  {
+    "file": "tests/WidthDense.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.774
+  },
+  {
+    "file": "tests/WidthActualClosure.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 5.458
+  },
+  {
+    "file": "tests/PrefixGeneratorCorrection.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.915
+  },
+  {
+    "file": "audit/run18/DenseClosedGoals.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.572
+  },
+  {
+    "file": "audit/run18/ClosedGoals.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 2.593
+  },
+  {
+    "file": "audit/run18/acceptance/W_DENSE.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.764
+  },
+  {
+    "file": "audit/run18/acceptance/W_CLOSE.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.742
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms29.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.822
+  }
+]

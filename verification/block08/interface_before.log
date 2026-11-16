@@ -1,0 +1,15 @@
+tests/SemigroupFoundations.lean:7:39: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `NumericalSemigroup` which does not have the necessary form.
+tests/SemigroupFoundations.lean:7:57: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `NumericalSemigroup` which does not have the necessary form.
+tests/SemigroupFoundations.lean:8:35: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `NumericalSemigroup` which does not have the necessary form.
+tests/SemigroupFoundations.lean:8:53: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `NumericalSemigroup` which does not have the necessary form.
+tests/SemigroupFoundations.lean:8:71: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `NumericalSemigroup` which does not have the necessary form.

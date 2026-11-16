@@ -1,0 +1,12 @@
+import NSP14
+#check NSP14.Endpoint.Data.shortestDegree
+#check NSP14.Endpoint.Data.shortestDegree_lt
+#check NSP14.Endpoint.Data.shortestDegree_le
+#check NSP14.Endpoint.Data.shortestPoint_degree
+#check NSP14.Endpoint.Data.wordVolume
+#check NSP14.Endpoint.Data.exists_coreWord
+#check NSP14.Endpoint.Data.internalPoint
+#check NSP14.Endpoint.Data.internalPoint_degree
+#check NSP14.Endpoint.Data.internalPoint_offset
+#check NSP14.Endpoint.Data.QCore_class_monomial
+#check NSP14.Endpoint.Data.coreMinimal_degree_lt

@@ -1,0 +1,24 @@
+{
+  "status": "RESOLVED",
+  "finding": "RUN13-P2-VERIFY-ORDER",
+  "baseline_commit": "d8556dc615b1e1633379f4567e9e795b3f1c8ae3",
+  "cold_project_test_build": true,
+  "exact_production_script_executed": "scripts/verify_run13_continuation.py",
+  "passed_commands": 40,
+  "first_new_acceptance": "Run13Fixtures",
+  "environment_declarations": 1284,
+  "declaration_types_and_axioms_byte_identical_to_baseline": true,
+  "library_sources_and_fixed_environment_unchanged": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "additional_mathematical_axioms": [],
+  "original_release_records_preserved": true,
+  "run13_tested_commit": "f230884dfbaa431a88cacc39eeeeb7c17f07e79b",
+  "integrated_Run14_commit": "8040c90138bf1aa76cc99d9a5e7df7b2c1a8a206",
+  "integrated_Run14_sources_tests_and_evidence_unchanged": true,
+  "integration_acceptance_files_passed": 21,
+  "integration_library_build_exit_code": 0
+}

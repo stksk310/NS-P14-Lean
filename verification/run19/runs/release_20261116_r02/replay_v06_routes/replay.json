@@ -1,0 +1,22 @@
+{
+  "name": "v06_routes",
+  "old_command": [
+    "python3",
+    "scripts/check_v06_routes.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_20261115T152000Z_r01/routes.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_v06_routes.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_run19_disposable/routes.json"
+  ],
+  "source_commit": "56857d82596e3e29a26a44ac774113fa2d907edf",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-x5s6u4gn",
+  "old_evidence_written": false
+}

@@ -1,0 +1,37 @@
+{
+  "small_embedding": {
+    "e=1,2": "I_BASE",
+    "e=3": "I_THREE"
+  },
+  "ordinary": {
+    "scope": "e>=4,w>=m-1",
+    "rank2,3": "O_LOW",
+    "rank4..8": "O_SMALL",
+    "rank>=9": "O_LARGE",
+    "delta=0": "O_LOW (empty tower)",
+    "top_relative_rank": "O_TOR,O_SCALAR,O_TARGET"
+  },
+  "narrow": {
+    "scope": "e>=4,w<=m-2,m>=du+2",
+    "e=4": {
+      "u=3,4": "N_SMALL,N_WIDTH4",
+      "u=5": "N_FIRST",
+      "u=6,7,8": "N_SMALL",
+      "u>=9": "N_FIRST",
+      "rows2..4": "N_HIGH"
+    },
+    "e=5": {
+      "u=4,5": "W_EDGE",
+      "u=6,7,u>=8": "W_FIVE"
+    },
+    "e>=6": {
+      "u=e-1,e": "W_EDGE",
+      "e+1<=u<=2e-3": "W_DENSE",
+      "u>=2e-2": "W_SPARSE"
+    }
+  },
+  "boundary_w=m-1": "ordinary",
+  "all_fields": "I_FIELD for ordinary cut; each narrow lemma over the given field",
+  "all_rows": "row0=1; retained top rows; i>e source0",
+  "verification_scope": "This records the mathematical coverage argument; no finite parameter sweep proves universal coverage."
+}

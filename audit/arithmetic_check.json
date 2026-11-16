@@ -1,0 +1,57 @@
+[
+  {
+    "rank": 4,
+    "cutoff": 7,
+    "seed": "349/40",
+    "eSlope": "381/140",
+    "dStep": "1007/280",
+    "seed_plus_eSlope": "641/56",
+    "seed_plus_dStep": "345/28",
+    "beta": "5/8",
+    "exact_match": true
+  },
+  {
+    "rank": 5,
+    "cutoff": 10,
+    "seed": "358/63",
+    "eSlope": "28429/6930",
+    "dStep": "32209/6930",
+    "seed_plus_eSlope": "3229/330",
+    "seed_plus_dStep": "3409/330",
+    "beta": "7/11",
+    "exact_match": true
+  },
+  {
+    "rank": 6,
+    "cutoff": 13,
+    "seed": "-831/8008",
+    "eSlope": "424147/72072",
+    "dStep": "439591/72072",
+    "seed_plus_eSlope": "14881/2574",
+    "seed_plus_dStep": "54014/9009",
+    "beta": "9/14",
+    "exact_match": true
+  },
+  {
+    "rank": 7,
+    "cutoff": 17,
+    "seed": "-116157/19448",
+    "eSlope": "17076937/2042040",
+    "dStep": "17076937/2042040",
+    "seed_plus_eSlope": "1220113/510510",
+    "seed_plus_dStep": "1220113/510510",
+    "beta": "2/3",
+    "exact_match": true
+  },
+  {
+    "rank": 8,
+    "cutoff": 21,
+    "seed": "-1267683/184756",
+    "eSlope": "8418651/739024",
+    "dStep": "8250691/739024",
+    "seed_plus_eSlope": "3347919/739024",
+    "seed_plus_dStep": "3179959/739024",
+    "beta": "15/22",
+    "exact_match": true
+  }
+]

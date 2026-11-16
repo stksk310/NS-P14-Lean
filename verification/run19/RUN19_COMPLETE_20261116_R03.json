@@ -1,0 +1,78 @@
+{
+  "status": "RUN19_COMPLETE",
+  "run19_complete": true,
+  "all_P14_complete": false,
+  "closed_ids": [
+    "I_BASE",
+    "I_THREE",
+    "N_CLOSE",
+    "N_DISTANCE",
+    "N_FIRST",
+    "N_HIGH",
+    "N_SMALL",
+    "N_WIDTH4",
+    "N_WORDS",
+    "X_LTV"
+  ],
+  "unproved_ids": [],
+  "base_commit": "04906ede0e9e3a04b9c07c791c1e1c49834dd3e1",
+  "v06_n4_chapter_sha256": "cd6236f6b16d5de7998064e66d566f5c6522c8a943d040ec6242a18dde2194c5",
+  "proof_snapshot_commit": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "evidence_commit": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "review_commit": "1533762c276df346350a382ba452d73a5ae219ad",
+  "evidence_directory": "verification/run19/runs/release_20261116_r03",
+  "verification_summary_sha256": "99f9f78aa2ae0090fecead20bd1796340b1156217ca42f32970c37015462c451",
+  "verification_manifest_sha256": "92c44adfae21a591d6d751cc9fe058c8ff7b176edb0681c8a1e6674b44d377bd",
+  "checks": 318,
+  "fixtures": 299,
+  "declarations": 12792,
+  "typed_modules": 48,
+  "normal_explicit_typed_declarations": 2201,
+  "typed_private_declarations": 842,
+  "canonical_named_helpers": 28,
+  "source_manifest_entries": 1581,
+  "bound_provenance_helpers_inputs": 21,
+  "preserved_evidence_artifact_files": 8754,
+  "inherited_checks": 289,
+  "inherited_fixtures": 273,
+  "new_controls": 34,
+  "historical_v06_controls": 24,
+  "fresh_whole_project_lib_ir_tests_audits": true,
+  "mathlib_cache_retained": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "review_verdict": "PASS",
+  "unresolved_review_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "review_report": "verification/run19/review/final_20261116_r03.md",
+  "review_report_sha256": "d97467aa557f0cc8912f0469f8c5b85808d11f9bcb2ea5335b345fbde72cec20",
+  "archive": "artifacts/NS_P14_LEAN_RUN19_COMPLETE_20261116_R03.zip",
+  "archive_sha256": "e14c8616cb0379a4f0063da6f329580fd13cca6f0644f637bca0f7ace890a6bc",
+  "archive_entries": 1959,
+  "archive_CRC_all_payload_hashes_actual_review_body_verified": true,
+  "archive_Git_bytes_verified_at_package_commit": true,
+  "normal_push": {
+    "pushed_package_commit": "f92d484dbeceadd833deb6fb047814d5c1c58e28",
+    "observed_remote_work_sha": "f92d484dbeceadd833deb6fb047814d5c1c58e28",
+    "clean_checkout_after_push": true
+  },
+  "remote": "https://github.com/stksk310/NS-P14-Lean.git",
+  "remote_branch": "work",
+  "recorded_at_utc": "2026-11-16T02:12:19.872936+00:00",
+  "remaining": [
+    "Run20 I_PARTITION / I_MAIN and whole-P14 final composition"
+  ],
+  "not_claimed": [
+    "stronger published LTV linear estimates",
+    "generic initial-ideal theorem",
+    "complete offline checkout",
+    "cold mathlib rebuild"
+  ],
+  "status_note": "The source-frozen docs record their prepublication phase. This post-push receipt records the measured completed Run19 publication; its own descendant commit is intentionally not self-referenced."
+}

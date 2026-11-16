@@ -1,0 +1,9 @@
+tests/WidthFiveSmall.lean:12:7: error: failed to synthesize
+  Module ((S.intervalCompletion ?m.29).FullPolynomialRing k) ((S.intervalCompletion ?m.32).FormalTangentAlgebra k)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

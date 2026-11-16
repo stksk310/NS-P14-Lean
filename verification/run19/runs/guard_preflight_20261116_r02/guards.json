@@ -1,0 +1,163 @@
+{
+  "status": "PASS_RUN19_NEGATIVE_CONTROLS",
+  "count": 32,
+  "controls": [
+    {
+      "control": "unaltered_source",
+      "passed": true
+    },
+    {
+      "control": "unsafe_output_/tmp/run19-escape",
+      "passed": true,
+      "rejection": "unsafe relative path: /tmp/run19-escape"
+    },
+    {
+      "control": "unsafe_output_verification/run19/runs/../escape",
+      "passed": true,
+      "rejection": "unsafe relative path: verification/run19/runs/../escape"
+    },
+    {
+      "control": "unsafe_output_verification/run18/runs/old",
+      "passed": true,
+      "rejection": "unique verification/run19/runs/<id> required"
+    },
+    {
+      "control": "existing_output",
+      "passed": true,
+      "rejection": "output already exists"
+    },
+    {
+      "control": "symlink_output",
+      "passed": true,
+      "rejection": "symlink path is forbidden: verification/run19/runs/alias"
+    },
+    {
+      "control": "replay_symlink_output",
+      "passed": true
+    },
+    {
+      "control": "inherited_source",
+      "passed": true,
+      "rejection": "forbidden inherited edit: NSP14/Endpoint/CompetitorBounds.lean"
+    },
+    {
+      "control": "inherited_evidence",
+      "passed": true,
+      "rejection": "forbidden inherited edit: verification/run18/runs/v06_alignment_20261115T152000Z_r01/verification.json"
+    },
+    {
+      "control": "unlisted_source",
+      "passed": true,
+      "rejection": "files outside finite allowlist: ['NSP14/UnlistedRun19Control.lean']"
+    },
+    {
+      "control": "source_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "auxiliary_checker_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "evidence_substitution",
+      "passed": true,
+      "rejection": "evidence manifest content or fileset changed"
+    },
+    {
+      "control": "changed_old_module_omitted",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_explicit_type",
+      "passed": true,
+      "rejection": "modified/new module type coverage missing: ['NSP14.Endpoint.CompetitorBounds']"
+    },
+    {
+      "control": "old_declaration_missing_axioms",
+      "passed": true,
+      "rejection": "axiom audit coverage missing: Control.old"
+    },
+    {
+      "control": "old_public_type_changed",
+      "passed": true,
+      "rejection": "base export type changed: Control.old (explicit_type)"
+    },
+    {
+      "control": "additional_axiom",
+      "passed": true,
+      "rejection": "unapproved or self axiom dependency: Control.new"
+    },
+    {
+      "control": "helper_omitted",
+      "passed": true,
+      "rejection": "environment declaration fileset coverage differs"
+    },
+    {
+      "control": "empty_import_missing",
+      "passed": true,
+      "rejection": "environment imported-module coverage missing"
+    },
+    {
+      "control": "inherited_fixture_omitted",
+      "passed": true,
+      "rejection": "inherited fixture coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_v06_routes",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_environment_axioms",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "inherited_check_omitted_base_environment_types",
+      "passed": true,
+      "rejection": "inherited check coverage missing"
+    },
+    {
+      "control": "valid_synthetic_publication_binding",
+      "passed": true
+    },
+    {
+      "control": "packager_auxiliary_checker_substitution",
+      "passed": true,
+      "rejection": "source manifest content or fileset changed"
+    },
+    {
+      "control": "review_mismatch_source_snapshot_commit",
+      "passed": true,
+      "rejection": "review snapshot/scope mismatch"
+    },
+    {
+      "control": "review_mismatch_verification_summary_sha256",
+      "passed": true,
+      "rejection": "review evidence mismatch"
+    },
+    {
+      "control": "review_mismatch_review_report_sha256",
+      "passed": true,
+      "rejection": "review body mismatch"
+    },
+    {
+      "control": "review_mismatch_minor",
+      "passed": true,
+      "rejection": "review gate failed"
+    },
+    {
+      "control": "existing_zip",
+      "passed": true,
+      "rejection": "archive already exists"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+'NSP14.Lex.IsLex.predecessor_colon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.idealAdjoinSequence_shortExact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Homological.coefficientKoszul_variable_smul_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsLex.predecessor_betti_step' depends on axioms: [propext, Classical.choice, Quot.sound]

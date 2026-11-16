@@ -1,0 +1,77 @@
+[
+  {
+    "source": "tests/N4Higher.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Higher.olean",
+      "tests/N4Higher.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.29
+  },
+  {
+    "source": "tests/N4Small.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4Small.olean",
+      "tests/N4Small.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.091
+  },
+  {
+    "source": "tests/N4WidthFour.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4WidthFour.olean",
+      "tests/N4WidthFour.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.264
+  },
+  {
+    "source": "tests/SmallEmbeddingThree.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/SmallEmbeddingThree.olean",
+      "tests/SmallEmbeddingThree.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.725
+  },
+  {
+    "source": "tests/N4ActualClosure.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "-o",
+      ".lake/build/lib/lean/tests/N4ActualClosure.olean",
+      "tests/N4ActualClosure.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 61.393
+  }
+]

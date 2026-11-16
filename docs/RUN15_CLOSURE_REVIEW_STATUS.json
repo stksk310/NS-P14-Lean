@@ -1,0 +1,17 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 1,
+  "resolved_important": 2,
+  "reviewed_base": "20aadbf7011692eb3bfffef49029e2c5e416ef3d",
+  "reviewed_head": "c3f703286104217ade035c2ba5d2d91016de6788",
+  "subsequent_reviewed_fixes": [
+    "NSP14/Target/APLowerRows.lean",
+    "tests/APLowerRows.lean",
+    "scripts/verify_run15_closure.py",
+    "scripts/package_run15_closure_audit.py"
+  ],
+  "report": "docs/RUN15_CLOSURE_REVIEW_JA.md",
+  "scope": "source review; final fresh-cache verification, package and publication performed separately by primary"
+}

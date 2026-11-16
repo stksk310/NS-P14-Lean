@@ -1,0 +1,15 @@
+✖ [4638/4639] Building NSP14.Lex.LinearQuotients (1.5s)
+trace: .> LEAN_PATH=/workspace/audit-block01/.lake/packages/Cli/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/batteries/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/Qq/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/aesop/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/plausible/.lake/build/lib/lean:/workspace/audit-block01/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/NS-P14-Lean-run18/.lake/build/lib/lean /workspace/audit-tools/lean-4.36.0-rc2-linux/bin/lean /workspace/NS-P14-Lean-run18/NSP14/Lex/LinearQuotients.lean -o /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/LinearQuotients.olean -i /workspace/NS-P14-Lean-run18/.lake/build/lib/lean/NSP14/Lex/LinearQuotients.ilean -c /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/LinearQuotients.c --setup /workspace/NS-P14-Lean-run18/.lake/build/ir/NSP14/Lex/LinearQuotients.setup.json --json
+error: NSP14/Lex/LinearQuotients.lean:76:17: Type mismatch: After simplification, term
+  hr
+ has type
+  0 < w r
+but is expected to have type
+  1 ≤ w r
+warning: NSP14/Lex/LinearQuotients.lean:115:6: `MvPolynomial.monomial_mul` has been deprecated: Use `MvPolynomial.monomial_mul_monomial` instead
+
+Hint: Replace the deprecated name:
+  MvPolynomial.monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
+Some required targets logged failures:
+- NSP14.Lex.LinearQuotients
+error: build failed

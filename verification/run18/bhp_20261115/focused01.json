@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/InitialIdeal.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.786
+  },
+  {
+    "file": "tests/TriangularBlockRank.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.463
+  },
+  {
+    "file": "tests/NormalTriangular.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.338
+  },
+  {
+    "file": "tests/InitialAction.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.536
+  },
+  {
+    "file": "verification/run18/bhp_20261115/Axioms01.lean",
+    "exit_code": 0,
+    "warning_free": true,
+    "seconds": 1.483
+  }
+]

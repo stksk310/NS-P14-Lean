@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/ns-p14-run20-20261116/scripts/check_run20_guards.py", line 212, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/ns-p14-run20-20261116/scripts/check_run20_guards.py", line 38, in main
+    if v.preserve_evidence(r,excluded)!=before:raise ValueError('untracked runtime bytecode changed retained evidence')
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: untracked runtime bytecode changed retained evidence

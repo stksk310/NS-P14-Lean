@@ -1,0 +1,1 @@
+verification/run18/bhp_20261115/stable_betti_comparison_red01.lean:3:7: error(lean.unknownIdentifier): Unknown constant `NSP14.Lex.IsStronglyStable.graded_betti_le_lex`

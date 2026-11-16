@@ -1,0 +1,13 @@
+{
+  "archive": "proof_sharp_v6/NS_P14_SHARP_V06.zip",
+  "sha256": "788e4c75c572af8a09fc14de5327417b584b7d3b5725d6496bb9445e2c331f4d",
+  "entries": 52,
+  "payload_hashes": 51,
+  "crc": "PASS",
+  "all_payload_hashes": "PASS",
+  "previous_version_files_preserved": {
+    "V05": 55,
+    "V04": 49
+  },
+  "published_to_remote": false
+}

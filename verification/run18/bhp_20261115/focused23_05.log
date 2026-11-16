@@ -1,0 +1,31 @@
+'NSP14.Lex.degreeSeparatorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.degreeSeparator_colex_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.colex_zeroLink_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.IsStronglyStable.regressive_substitution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.degreeIdealFamily_isInitSeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NSP14.Lex.degreeIdealFamily_card_add_hilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+NSP14.Lex.degreeSeparatorEquiv : (q d : ℕ) → NSP14.Lex.PolynomialDegreeIndex (q + 1) d ≃ { B // B.card = q }
+NSP14.Lex.degreeSeparator_colex_le_iff : ∀ (q d : ℕ) (α β : NSP14.Lex.PolynomialDegreeIndex (q + 1) d),
+  toColex (NSP14.Lex.degreeSeparator q d α) ≤ toColex (NSP14.Lex.degreeSeparator q d β) ↔
+    MonomialOrder.lex.toSyn ↑β ≤ MonomialOrder.lex.toSyn ↑α
+@NSP14.Lex.colex_zeroLink_card_le : ∀ {n r : ℕ} (F L : Finset (Finset (Fin (n + 1)))),
+  1 ≤ r →
+    Set.Sized r ↑F →
+      Finset.Colex.IsInitSeg L r →
+        L.card ≤ F.card →
+          (∀ A ∈ F, 0 ∉ A → ∀ x ∈ A, insert 0 (A.erase x) ∈ F) →
+            (NSP14.Lex.zeroLinkFamily L).card ≤ (NSP14.Lex.zeroLinkFamily F).card
+NSP14.Lex.IsStronglyStable.regressive_substitution : ∀ (k : Type) [inst : Field k] (q : ℕ)
+  (I : Ideal (MvPolynomial (Fin q) k)),
+  NSP14.Lex.IsStronglyStable k q I →
+    ∀ (f : Fin q → Fin q),
+      (∀ (i : Fin q), f i ≤ i) →
+        ∀ (α γ : Fin q →₀ ℕ),
+          (MvPolynomial.monomial (γ + α)) 1 ∈ I → (MvPolynomial.monomial (γ + Finsupp.mapDomain f α)) 1 ∈ I
+NSP14.Lex.degreeIdealFamily_isInitSeg : ∀ (k : Type) [inst : Field k] (q d : ℕ)
+  (I : Ideal (MvPolynomial (Fin (q + 1)) k)),
+  NSP14.Lex.IsLex k (q + 1) I → Finset.Colex.IsInitSeg (NSP14.Lex.degreeIdealFamily k q d I) q
+NSP14.Lex.degreeIdealFamily_zeroLink_card : ∀ (k : Type) [inst : Field k] (q d : ℕ)
+  (I : Ideal (MvPolynomial (Fin (q + 2)) k)),
+  (NSP14.Lex.zeroLinkFamily (NSP14.Lex.degreeIdealFamily k (q + 1) d I)).card =
+    {α | (MvPolynomial.monomial ↑α) 1 ∈ I ∧ ↑α (Fin.last (q + 1)) = 0}.card

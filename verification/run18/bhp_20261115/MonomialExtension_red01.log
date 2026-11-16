@@ -1,0 +1,3 @@
+tests/MonomialExtension.lean:11:3: error(lean.unknownIdentifier): Unknown constant `Lex.monomialExtension`
+tests/MonomialExtension.lean:11:33: error(lean.unknownIdentifier): Unknown constant `Lex.monomialExtension_mem_iff`
+tests/MonomialExtension.lean:12:4: error(lean.unknownIdentifier): Unknown constant `Lex.monomialExtension_eq_map`
