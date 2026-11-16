@@ -145,6 +145,12 @@ def validate_coverage(prior,records,fixtures):
     if set(prior['fixture_order'])-set(fixtures):raise ValueError('inherited fixture coverage missing')
     if len({r['name'] for r in records})!=len(records):raise ValueError('duplicate command identity')
 
+def validate_command_map(prior,records,mapping):
+    old={r['name']:r for r in prior['checks']};now={r['name']:r for r in records};mapped={r['name']:r for r in mapping}
+    if len(mapped)!=len(mapping) or set(mapped)!=set(now) or not set(old)<=set(mapped):raise ValueError('command map coverage missing/duplicate')
+    for name,r in now.items():
+        if mapped[name]['new_command']!=r['command'] or mapped[name]['old_command']!=(old[name]['command'] if name in old else None):raise ValueError('command map binding differs: '+name)
+
 def validate_main_type(root,rows):
     expected=json.loads((root/'verification/run20/sources/main_type_fully_explicit.json').read_text())
     actual={r['name']:r for r in rows}
@@ -277,6 +283,13 @@ def main():
         validate_coverage(prior,records,fixtures);invariant();validate_changes(ROOT)
         if dependency_snapshot(ROOT)!=snapshot['dependency_sources']:raise ValueError('dependency sources changed during validation')
         if v06.preserve_evidence(ROOT,out)!=retained:raise ValueError('inherited evidence bytes/fileset changed')
+        # Derive the complete map from the commands that actually executed,
+        # including both base checks and all newly added certification checks.
+        prior_by_name={r['name']:r for r in prior['checks']}
+        mapping=[{'name':r['name'],'old_command':prior_by_name[r['name']]['command'] if r['name'] in prior_by_name else None,
+          'new_command':r['command'],'new_cwd':r['cwd'],
+          'reason':'current all-project cold check / unique output remap; historical policy scope is recorded by nested replay receipts; Run20 baseline is complete Run19'} for r in records]
+        validate_command_map(prior,records,mapping)
         write_json(out/'COMMAND_MAP.json',mapping)
         summary={'status':'PASS_RUN20_COMPLETE_VALIDATION','mathematical_contracts_closed':True,'run20_complete':False,'all_P14_complete':False,
           'completion_pending':['fresh_independent_review','audit_package','normal_push'],'closed_ids':sorted(FULL_IDS),'unproved_ids':[],

@@ -104,6 +104,11 @@ def main():
         reject('inherited_fixture_omitted',lambda:v.validate_coverage(prior,prior['checks'],prior['fixture_order'][1:]),'fixture coverage')
         for name in ['v06_routes','environment_axioms','base_environment_types','run19_routes','run19_negative_controls']:
             reject('inherited_check_omitted_'+name,lambda name=name:v.validate_coverage(prior,[c for c in prior['checks'] if c['name']!=name],prior['fixture_order']),'check coverage')
+        cmap=[{'name':row['name'],'old_command':row['command'],'new_command':row['command']} for row in prior['checks']]
+        v.validate_command_map(prior,prior['checks'],cmap)
+        reject('command_mapping_omitted',lambda:v.validate_command_map(prior,prior['checks'],cmap[1:]),'command map coverage')
+        badmap=copy.deepcopy(cmap);badmap[0]['new_command']=['false']
+        reject('command_mapping_substituted',lambda:v.validate_command_map(prior,prior['checks'],badmap),'command map binding')
         table=r/'docs/RUN20_DEPENDENCY_COVERAGE.json';table_bytes=table.read_bytes();coverage=json.loads(table_bytes)
         mapped=[{'module':g['module'],'name':g['module']+'.'+n} for entry in coverage['entries'] for g in entry['exports'] for n in g['declarations']]
         v.validate_dependency_map(r,mapped)
