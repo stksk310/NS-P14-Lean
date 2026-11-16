@@ -82,10 +82,31 @@ def audit_source(modules,selected=None):
     text=re.sub(r' let typed : Array String := #[^\n]*',
       ' let typed : Array String := #["'+'","'.join(sorted(selected))+'"]\n let typedSet := Std.HashSet.ofArray typed',text,count=1)
     text=text.replace('typed.contains modName','typedSet.contains modName')
-    # pp.all is Lean's fully explicit mode: it shows coercions, universes,
-    # qualified names and proof arguments, and avoids costly attempts to hide
-    # them using notation/structure recovery. The normal view stays unchanged.
-    text=text.replace('opts.setBool `pp.explicit true','opts.setBool `pp.all true |>.setBool `pp.tagAppFns false')
+    # Full kernel rendering retains every argument and universe without the
+    # pretty-printer's deep-term/proof elisions. Alpha-normalize binder names
+    # for reproducible base comparison; all binder kinds and constants remain.
+    canonical='''namespace Run20TypeEncoding
+partial def canonical (depth : Nat) : Lean.Expr → Lean.Expr
+ | .forallE _ d b bi => .forallE (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth d) (canonical (depth+1) b) bi
+ | .lam _ d b bi => .lam (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth d) (canonical (depth+1) b) bi
+ | .letE _ t v b nd => .letE (.str .anonymous ("__run20_binder_"++toString depth)) (canonical depth t) (canonical depth v) (canonical (depth+1) b) nd
+ | .app f a => .app (canonical depth f) (canonical depth a)
+ | .proj n i e => .proj n i (canonical depth e)
+ | .mdata d e => .mdata d (canonical depth e)
+ | e => e
+end Run20TypeEncoding
+'''
+    text=text.replace('open Lean\n','open Lean\n'+canonical,1)
+    text=text.replace('let explicitType ← withOptions (fun opts => opts.setBool `pp.explicit true) (Lean.Meta.ppExpr ci.type)',
+      'let canonicalType := Run20TypeEncoding.canonical 0 ci.type\n    unless canonicalType == ci.type do throwError "kernel type alpha roundtrip failed: {n}"\n    if ci.type.getUsedConstants.any (fun c => c.toString.startsWith "__run20_binder_") then throwError "kernel binder namespace collision: {n}"\n    let explicitType := toString canonicalType')
+    text=text.replace('toJson explicitType.pretty','toJson explicitType')
+    text=text.replace('("explicit_type",toJson explicitType)]',
+      '("explicit_type",toJson explicitType),("kernel_type",toJson (toString ci.type)),("kernel_alpha_roundtrip",toJson true),("universe_parameters",toJson (ci.levelParams.map Name.toString))]')
+    text=text.replace('   IO.println ((Json.mkObj fields).compress)',
+      '''   if #["NSP14.NumericalSemigroup.p14_totalBetti_le_intervalCompletion","NSP14.Run20.partition_closed","NSP14.Run20.main_closed"].contains n.toString then
+    let pretty ← withOptions (fun o => o.setBool `pp.all true |>.setBool `pp.tagAppFns false) (Lean.Meta.ppExpr ci.type)
+    fields := fields ++ [("pretty_explicit_type",toJson pretty.pretty)]
+   IO.println ((Json.mkObj fields).compress)''',1)
     text=text.replace('modName == "NSP14" || modName.startsWith "NSP14." || modName == "tests" || modName.startsWith "tests." || modName.startsWith "audit."','typedSet.contains modName')
     # An independently emitted environment inventory detects a dropped row even
     # when its module still has thousands of other declarations.
@@ -115,6 +136,7 @@ def validate_full_audit(rows,meta,modules,base_rows=None,expected_names=None):
     if {r['module'] for r in rows}-modules:raise ValueError('unrequested project declaration module')
     for r in rows:
         if not {'type','explicit_type','axioms'}<=r.keys():raise ValueError('full declaration type/axiom coverage missing')
+        if base_rows is not None and (not r.get('kernel_alpha_roundtrip') or 'kernel_type' not in r):raise ValueError('full kernel explicit type coverage missing')
     old.validate_named_helpers(rows)
 
 def validate_coverage(prior,records,fixtures):
@@ -127,7 +149,7 @@ def validate_main_type(root,rows):
     expected=json.loads((root/'verification/run20/sources/main_type_fully_explicit.json').read_text())
     actual={r['name']:r for r in rows}
     for name,types in expected.items():
-        if name not in actual or any(actual[name].get(k)!=value for k,value in types.items()):raise ValueError('main universal scope/type differs: '+name)
+        if name not in actual or any(actual[name].get('pretty_explicit_type' if k=='explicit_type' else k)!=value for k,value in types.items()):raise ValueError('main universal scope/type differs: '+name)
 
 def validate_dependency_map(root,rows):
     path=root/'docs/RUN20_DEPENDENCY_COVERAGE.json';data=json.loads(path.read_text())
@@ -246,8 +268,9 @@ def main():
         for r in rows:r['source_sha256']=initial[r['module'].replace('.','/')+'.lean']
         (out/'declarations.json.gz').write_bytes(gzip.compress(json.dumps(rows,ensure_ascii=False).encode(),mtime=0))
         write_json(out/'environment_import_coverage.json',meta)
-        write_json(out/'audit_coverage.json',{'modules':sorted(modules),'declarations':len(rows),'typed_declarations':len(rows),'base_public_types_preserved':True,'private_and_generated_support_included':True,'direct_import_all_for_every_project_module':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS)})
+        write_json(out/'audit_coverage.json',{'modules':sorted(modules),'declarations':len(rows),'typed_declarations':len(rows),'base_public_types_preserved':True,'private_and_generated_support_included':True,'direct_import_all_for_every_project_module':True,'allowed_axioms':sorted(v06.ALLOWED_AXIOMS),'normal_type':'Lean.Meta.ppExpr default','explicit_type':'complete Lean.Expr.dbgToString; uniquely alpha-normalized binder names, all binder kinds/arguments/universes retained','kernel_alpha_roundtrips':sum(r.get('kernel_alpha_roundtrip') is True for r in rows),'original_kernel_type_also_recorded':True,'Main_standard_pretty_explicit_also_recorded':True})
         run('run20_inputs',['python3','verification/run20/sources/check_prior_run19.py'])
+        run('run20_kernel_encoding_controls',['python3','verification/run20/sources/check_kernel_type_encoding.py','--output-dir',str(Path(rel)/'kernel_encoding_controls')])
         run('run20_routes',['python3','scripts/check_run20_routes.py','--output',str(Path(rel)/'routes.json')])
         run('run20_exact_models',['python3','scripts/check_run20_partition.py','--output',str(Path(rel)/'models.json')])
         run('run20_negative_controls',['python3','scripts/check_run20_guards.py','--output',str(Path(rel)/'guards.json')])

@@ -16,3 +16,6 @@ PATH=/path/to/pinned/lean/bin:$PATH python3 scripts/verify_run20.py --fresh-proj
 固定Lean/mathlibとGit履歴が必要。project lib/IR/tests/auditsはcold、mathlib package cacheは保持。任意 `--baseline-cache <base checkout>/.lake/build` は元sourceの同一性を検査して隔離先へコピーする。依存cacheを含まない監査bundleを完全offline checkoutとは呼ばない。
 
 最終独立レビューは全差分・Main意味・Run19/V06必要入力・全private宣言・verifier/guards/packager・全raw証跡を対象とする。修正後は必要な再検証と新snapshotに戻る。source-bound台帳は凍結後変更しない。最終status/review/Pushは別Git bytesに束縛する。
+
+
+型監査のexplicit欄は、全argument/universeを含むLeanの完全kernel表示（binder名のみ一意にalpha正規化）である。元kernel型と通常Meta.ppExpr型も全宣言に併記し、各宣言でalpha同値を検査する。Main三出口は標準pretty-explicitも保持する。九つの実Lean encoding controlsと、固定15,774名の被覆/全private importにより表示負荷を数学的被覆の削減へ置き換えない。

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Parallelize serialization only; every part imports all every project module.
 
-Each constant still receives Lean's actual collectAxioms and both ppExpr modes.
+Each constant receives actual collectAxioms, normal Meta.ppExpr, and a complete
+explicit kernel term with checked alpha-equivalent binder normalization.
+The public Main also retains standard fully explicit pretty output.
 No declaration, body, private view, or mathematical check is sampled or omitted.
 """
 from pathlib import Path

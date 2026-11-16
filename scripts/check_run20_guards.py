@@ -75,6 +75,12 @@ def main():
         reject('single_private_name_omitted_with_module_remaining',lambda:v.validate_full_audit(all_rows[1:],meta,modules),'fileset coverage')
         reduced=copy.deepcopy(meta);reduced['declaration_inventory']=reduced['declaration_inventory'][1:]
         reject('private_name_omitted_from_both_rows_and_metadata',lambda:v.validate_full_audit(all_rows[1:],reduced,modules,expected_names=meta['declaration_inventory']),'frozen declaration-name coverage')
+        kernel_rows=[{**r,'kernel_type':'Sort 0','kernel_alpha_roundtrip':True} for r in all_rows]
+        v.validate_full_audit(kernel_rows,meta,modules,base_rows=[])
+        bad=copy.deepcopy(kernel_rows);del bad[0]['kernel_type']
+        reject('complete_kernel_type_omitted',lambda:v.validate_full_audit(bad,meta,modules,base_rows=[]),'kernel explicit type coverage')
+        bad=copy.deepcopy(kernel_rows);bad[0]['kernel_alpha_roundtrip']=False
+        reject('kernel_alpha_roundtrip_failed',lambda:v.validate_full_audit(bad,meta,modules,base_rows=[]),'kernel explicit type coverage')
         batch=load('run20_guard_parts',ROOT/'verification/run20/sources/audit_parts.py')
         pair=[{'selected_modules':[x['module']],'rows':[x],'metadata':{'imported_modules':sorted(required),'declaration_inventory':[x['name']]}} for x in rows]
         batch.validate_parts(pair,required)
@@ -85,7 +91,7 @@ def main():
         wrong=copy.deepcopy(meta);wrong['imported_modules']=wrong['imported_modules'][1:]
         reject('whole_project_import_omitted',lambda:v.validate_full_audit(all_rows,wrong,modules),'imported-module coverage')
         main=json.loads((r/'verification/run20/sources/main_type_fully_explicit.json').read_text())
-        scope_rows=[{'name':n,**types} for n,types in main.items()]
+        scope_rows=[{'name':n,'type':types['type'],'pretty_explicit_type':types['explicit_type']} for n,types in main.items()]
         v.validate_main_type(r,scope_rows)
         scope_rows[0]['type']='forall S k, i <= S.embeddingDimension -> True'
         reject('main_scope_shrunk',lambda:v.validate_main_type(r,scope_rows),'universal scope/type')

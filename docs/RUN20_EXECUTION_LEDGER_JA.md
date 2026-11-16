@@ -38,3 +38,11 @@ The final source snapshot must be committed before cold verification. Validation
 標準pp.explicitの二つのprivate補題は表示だけに約19秒/11秒（CPU競合下では40秒/19秒）を要した。実collectAxiomsは0–1ms。notationだけ・proof表示だけの変更は十分でなかった。Lean標準のpp.allをexplicit側へ採用し、coercion・universe・完全修飾名・proof引数まで表示する。通常型は従来のMeta.ppExprを保持。これは型/premise/行/宣言被覆の縮小ではなく、よりexplicitな表示形式である。Mainの旧標準explicit記録も保持し、新しいfully-explicit期待型を別ファイルへ保存した。実証明と凍結契約は不変。
 
 表示処理の旧preflightは `audit_display_transition_20261116_01/cancelled_processes.json` にSIGTERM/実commandを保存し、検証成功へ数えない。旧sourceと部分ログは保持。新preflight/最終cold検証は同一の完全explicitモードでbaseと現sourceの全公開型を比較する。part間のmodule/宣言重複・欠落、独立15,774名、同じ全private import環境を検査する。
+
+### 最終の全型記録方式（前項pp.allだけの方式を置換）
+
+pp.allでも複雑な型の表示に秒単位を要したため、全宣言のexplicit欄はLean標準Expr.dbgToStringによる完全なkernel型へ切り替えた。通常欄はMeta.ppExpr、元のkernel型も別欄、Main三出口は標準pp.allのpretty-explicitも併記する。測定例は163217文字を22msで出力し、表示省略は0。宣言/argument/universe/instance/proof項を減らさない。
+
+再現比較用のbinder名は深さごとに一意の名前へalpha正規化し、各元型との実Expr.eqvを全宣言で検査する。binderInfo・変数index・定数・universe・metadataを保持する。予約binder名と実定数の衝突も拒否。変数の入替え/implicit種別/universe/200段の項/metadataを含む9実Lean controlsをPASSした。初回のmetadata削除は実roundtrip検査で拒否され、正確に保持する実装へ修正した。初期smokeのtoString記法・controlの予約語も診断どおり修正し、失敗ログを保持する。
+
+重いpretty専用preflightは二つのdisplay_transition receiptにSIGTERMと実commandを記録して置換し、成功checkに数えない。最終coldは全型を同じ完全kernel形式で採用baseと比較する。これは数学的証明や契約の変更ではなく、従来pretty出力のproof/depth省略を補う、検査可能な完全型記録である。
