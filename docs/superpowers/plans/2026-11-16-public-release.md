@@ -33,5 +33,5 @@
 - [x] Update README, CFF, Zenodo metadata, release notes, and frozen release manifest for completed Run20.
 - [x] User chose code and existing materials first; exclude the separate English manuscript from this release.
 - [x] Verify existing receipts/manifests/archive hashes and run the new publication tests; request read-only review.
-- [ ] Push the release branch, reviewable PR, and main update; tag v1.0.0 to execute publication.
-- [ ] Observe Release, workflow, and Zenodo output; record verified DOI and URLs without moving the tag.
+- [x] Push the release branch, reviewable PR, and main update; tag v1.0.0 to execute publication.
+- [x] Observe Release, workflow, and Zenodo output; record verified DOI and URLs without moving the tag.

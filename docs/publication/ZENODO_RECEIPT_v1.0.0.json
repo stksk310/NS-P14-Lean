@@ -1,0 +1,14 @@
+{
+  "record_id": 24280890,
+  "version_doi": "10.5281/zenodo.24280890",
+  "concept_doi": "10.5281/zenodo.24280889",
+  "record_url": "https://zenodo.org/records/24280890",
+  "source_file": "stksk310/NS-P14-Lean-v1.0.0.zip",
+  "source_zip_sha256": "607faf15f00dc2fc9c0b0a67e862f8700aae39b848a6797a780038c75d43064e",
+  "tagged_files_verified": 12843,
+  "tag": "v1.0.0",
+  "tag_commit": "894288aadedad1710845626f3f6731c7a87cd64e",
+  "audited_commit": "e72713965716d7f93f672034c6332a79b59b1c53",
+  "github_release": "https://github.com/stksk310/NS-P14-Lean/releases/tag/v1.0.0",
+  "scope": "Saved audit provenance and exact Zenodo/tag archive byte comparison; no new Lean run."
+}

@@ -3,6 +3,20 @@
 2026-11-16 JST。著者Keisuke Sato、ORCID [0009-0005-4230-0268](https://orcid.org/0009-0005-4230-0268)。
 コードApache-2.0、原稿・説明文CC-BY-4.0。
 
+## 公開結果
+
+- [GitHub Release v1.0.0](https://github.com/stksk310/NS-P14-Lean/releases/tag/v1.0.0)
+- [Zenodo版DOI 10.5281/zenodo.24280890](https://doi.org/10.5281/zenodo.24280890)
+- [concept DOI 10.5281/zenodo.24280889](https://doi.org/10.5281/zenodo.24280889)
+- [保存内容の照合receipt](ZENODO_RECEIPT_v1.0.0.json)
+- [実行結果：成功](https://github.com/stksk310/NS-P14-Lean/actions/runs/43869836644)
+
+Zenodoの実ZIP全12,843ファイルのパスと内容が、固定タグ
+`894288aadedad1710845626f3f6731c7a87cd64e`のGit treeと一致した。
+ZIPのSHA-256は`607faf15f00dc2fc9c0b0a67e862f8700aae39b848a6797a780038c75d43064e`。
+本receiptはRelease添付版と同じbytesを保存している。
+DOIを追記した現在のmainと、公開済みタグのsnapshotは区別する。
+
 ## 公開対象と根拠
 
 ユーザーはGitHub Releaseの公開と、既存Zenodo連携による保存・DOI発行を明示的に指示した。
@@ -43,7 +57,7 @@ GitHubが発行する当該jobのrepository tokenを使う。外部サービス�
 成功したかどうかは実際のRelease、workflow結果、公開recordで確認する。
 途中失敗のときは自動で別recordを作ったり、タグを付け替えたりしない。
 公開済みReleaseの同名assetは同一hashなら再利用し、不一致なら上書きを拒否する。
-Zenodoの反映待ちで停止した場合は、既存workflowの再実行で同じ版の確認を継続できる。
+再確認には、現行mainの`verify-zenodo.yml` workflowを手動で実行する。
 recordのZIP照合完了までは、保存・DOIの確認済みとは報告しない。
 
 公開後の追加確認は`.github/workflows/verify-zenodo.yml`を使える。
@@ -64,3 +78,11 @@ Releaseのtag snapshotにDOIが未記載でも、公開後のmainに別commitで
 Run19時点の未完成表示、公開前のlicense候補・初期mainの調査結果は
 準備commit `b3c37dde24e808a21e4313a58337b34718528a8f` の文書に残っている。
 それらを完成後の公開状態として扱わない。
+
+## 公開時のAPI互換対応
+
+最初の確認処理は、未認証検索のsize=100が現行APIの上限25を超え、HTTP 400となった。
+別の読取専用確認で公開recordと実DOIを取得し、検索sizeを10へ変更した。
+現行recordの`links.self_html`にも対応した上で、元の確認processを停止し、
+固定タグを対象とする追加確認runで上記ZIP照合を完了した。
+GitHub Release・Zenodo recordは再作成せず、タグも移動していない。
