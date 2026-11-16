@@ -71,6 +71,8 @@ def main():
         meta={'imported_modules':sorted(modules),'declaration_inventory':[x['name'] for x in all_rows]}
         v.validate_full_audit(all_rows,meta,modules)
         reject('single_private_name_omitted_with_module_remaining',lambda:v.validate_full_audit(all_rows[1:],meta,modules),'fileset coverage')
+        reduced=copy.deepcopy(meta);reduced['declaration_inventory']=reduced['declaration_inventory'][1:]
+        reject('private_name_omitted_from_both_rows_and_metadata',lambda:v.validate_full_audit(all_rows[1:],reduced,modules,expected_names=meta['declaration_inventory']),'frozen declaration-name coverage')
         changed=copy.deepcopy(all_rows);del changed[0]['explicit_type']
         reject('private_explicit_type_omitted',lambda:v.validate_full_audit(changed,meta,modules),'coverage')
         wrong=copy.deepcopy(meta);wrong['imported_modules']=wrong['imported_modules'][1:]

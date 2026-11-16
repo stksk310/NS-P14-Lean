@@ -65,6 +65,16 @@ def project_modules(root):
     files={'NSP14.lean'}|{str(p.relative_to(root)) for folder in ['NSP14','tests','audit'] for p in (root/folder).rglob('*.lean')}
     return {n[:-5].replace('/','.') for n in files}
 
+def dependency_snapshot(root):
+    result={}
+    for item in json.loads((root/'lake-manifest.json').read_text())['packages']:
+        package=root/'.lake/packages'/item['name'];head=git(package,'rev-parse','HEAD').decode().strip()
+        dirty=git(package,'status','--porcelain','--untracked-files=no').decode().strip()
+        extra=[n for n in git(package,'ls-files','--others','--exclude-standard').decode().splitlines() if n.endswith('.lean')]
+        if head!=item['rev'] or dirty or extra:raise ValueError('fixed dependency source mismatch: '+item['name'])
+        result[item['name']]={'commit':head,'tracked_clean':True,'untracked_Lean_sources':[]}
+    return result
+
 def audit_source(modules):
     text=old.audit_source(modules,modules)
     # An independently emitted environment inventory detects a dropped row even
@@ -85,9 +95,13 @@ def parse_audit(raw):
     raw='\n'.join(s for s in lines if not (s.startswith('{') and '"declaration_inventory"' in s))
     rows,meta=v06.parse_audit(raw);meta['declaration_inventory']=inventories[0]['declaration_inventory'];return rows,meta
 
-def validate_full_audit(rows,meta,modules,base_rows=None):
+def validate_full_audit(rows,meta,modules,base_rows=None,expected_names=None):
     v06.validate_import_coverage(meta,modules)
     v06.validate_audit(rows,{r['module'] for r in rows},base_rows,set(meta['declaration_inventory']))
+    if expected_names is not None and (set(meta['declaration_inventory'])!=set(expected_names) or {r['name'] for r in rows}!=set(expected_names)):
+        raise ValueError('independent frozen declaration-name coverage differs')
+    if base_rows is not None and {r['name'] for r in base_rows}-{r['name'] for r in rows}:
+        raise ValueError('inherited private/public declaration-name coverage missing')
     if {r['module'] for r in rows}-modules:raise ValueError('unrequested project declaration module')
     for r in rows:
         if not {'type','explicit_type','axioms'}<=r.keys():raise ValueError('full declaration type/axiom coverage missing')
@@ -137,6 +151,7 @@ def main():
         out.mkdir(parents=True,exist_ok=False);created=True;records=[]
         write_json(out/'SOURCE_SHA256.json',initial);write_json(out/'INHERITED_EVIDENCE_SHA256.json',retained)
         snapshot={'proof_snapshot_commit':proof,'base':BASE,'lean':subprocess.check_output(['lean','--version'],text=True).strip(),'mathlib':git(ROOT/'.lake/packages/mathlib','rev-parse','HEAD').decode().strip()}
+        snapshot['dependency_sources']=dependency_snapshot(ROOT)
         if 'version 4.36.0-rc2,' not in snapshot['lean'] or snapshot['mathlib']!=v06.MATHLIB:raise ValueError('pin mismatch')
         write_json(out/'snapshot.json',snapshot)
         def invariant():
@@ -207,10 +222,12 @@ def main():
             raw=run('base_environment_types',['lake','env','lean','-j1','-M12288','BaseEnvironmentAudit.lean'],cwd=base,compressed=True)
             base_rows,base_meta=v06.parse_audit(raw)
             golden=json.loads(gzip.decompress((ROOT/'verification/run20/sources/base_declarations.json.gz').read_bytes()))
-            if base_rows!=golden:raise ValueError('full base audit replay differs')
+            if sorted(base_rows,key=lambda r:r['name'])!=sorted(golden,key=lambda r:r['name']):raise ValueError('full base audit replay differs')
             write_json(out/'base_environment.json',base_meta)
         finally:shutil.rmtree(base)
-        rows,meta=parse_audit(raw_environment);validate_full_audit(rows,meta,modules,base_rows);validate_main_type(ROOT,rows)
+        rows,meta=parse_audit(raw_environment)
+        expected_names=json.loads(gzip.decompress((ROOT/'verification/run20/sources/expected_declarations.json.gz').read_bytes()))
+        validate_full_audit(rows,meta,modules,base_rows,expected_names);validate_main_type(ROOT,rows)
         write_json(out/'dependency_coverage.json',validate_dependency_map(ROOT,rows))
         for r in rows:r['source_sha256']=initial[r['module'].replace('.','/')+'.lean']
         (out/'declarations.json.gz').write_bytes(gzip.compress(json.dumps(rows,ensure_ascii=False).encode(),mtime=0))
@@ -221,6 +238,7 @@ def main():
         run('run20_exact_models',['python3','scripts/check_run20_partition.py','--output',str(Path(rel)/'models.json')])
         run('run20_negative_controls',['python3','scripts/check_run20_guards.py','--output',str(Path(rel)/'guards.json')])
         validate_coverage(prior,records,fixtures);invariant();validate_changes(ROOT)
+        if dependency_snapshot(ROOT)!=snapshot['dependency_sources']:raise ValueError('dependency sources changed during validation')
         if v06.preserve_evidence(ROOT,out)!=retained:raise ValueError('inherited evidence bytes/fileset changed')
         write_json(out/'COMMAND_MAP.json',mapping)
         summary={'status':'PASS_RUN20_COMPLETE_VALIDATION','mathematical_contracts_closed':True,'run20_complete':False,'all_P14_complete':False,

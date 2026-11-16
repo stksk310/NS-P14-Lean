@@ -28,3 +28,5 @@ I_PARTITION includes six regions, actual cut facts (the stronger all-e≥4 scope
 Full current and immutable-base audits import all every production/test/audit module directly. An independent environment name inventory detects even one dropped private declaration. All Run19 318 checks/299 fixtures remain, historical policy guards replay at their own immutable snapshots, while mathematics and new Main tests use current source. Normal/explicit types and collectAxioms cover every project declaration; allowed axioms are exactly propext/Classical.choice/Quot.sound.
 
 The final source snapshot must be committed before cold verification. Validation is not publication completion. Review, package, normal Push, actual remote SHA and clean status are separately observed and bound as post-validation Git bytes. Source-bound docs stay unchanged after verification.
+
+事前検査: root build 6706 jobs成功、全新規fixture/必要依存はexit0・警告0まで再実行。整数分割81640ケース・AP profile41552行、Mainからの10個別根とV06/Run19根を検査。新guardは実Lean axiom injectionを含む45controlsでPASS。初回symlink拒否の診断形式不備を修正し、失敗ログはpreflight_20261116_01に保持した。全型監査のimportだけを切り離したprobeもPASSし、実行時間の主因は通常/explicit型と全宣言公理列挙である。

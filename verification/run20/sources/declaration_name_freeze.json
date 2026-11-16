@@ -1,0 +1,7 @@
+{
+  "scope": "all 1019 production/root/test/audit modules, each imported all directly",
+  "count": 15774,
+  "sha256": "5ceefdcfcfa5a27122584258fad5336b57fb0cfe578021b3aeedf684f97975ee",
+  "source": "DeclarationNames.lean",
+  "normal_explicit_axiom_results_pending": true
+}
