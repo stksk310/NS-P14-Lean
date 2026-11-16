@@ -1,0 +1,27 @@
+{
+  "status": "PASS_RUN19_INDEPENDENT_AUDIT_NORMAL_PUSH",
+  "audit_commit": "41f60f845b1330170752665eb70714a6cdef59fc",
+  "remote": "https://github.com/stksk310/NS-P14-Lean.git",
+  "ordinary_atomic_push": true,
+  "observed_remote_refs": {
+    "refs/heads/audit/run19-20261116": "41f60f845b1330170752665eb70714a6cdef59fc",
+    "refs/heads/work": "41f60f845b1330170752665eb70714a6cdef59fc"
+  },
+  "clean_checkout_after_audit_push": true,
+  "recorded_at_jst": "2026-11-16T12:07:50.509335+09:00",
+  "audit_report": "verification/run19/independent_audit_20261116_r01/AUDIT_JA.md",
+  "audit_report_sha256": "1040f13bf8a213c319fcbf67a2575db2ab34a779cafaefcfe75acbc0e57e307f",
+  "audit_manifest_sha256": "d4c9ba9d014f6d0989274f6434b9f0c1f30defda270aed557af02408b23f9b91",
+  "open_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "cold_proof_snapshot": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "cold_checks": 318,
+  "cold_fixtures": 299,
+  "cold_declarations": 12792,
+  "python_guard_controls_after_fix": 35,
+  "all_P14_complete": false,
+  "note": "This descendant receipt records the observed audit push; it intentionally does not self-reference its own commit."
+}

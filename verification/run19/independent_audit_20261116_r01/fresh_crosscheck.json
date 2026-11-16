@@ -1,0 +1,23 @@
+{
+  "status": "PASS_INDEPENDENT_COLD_EVIDENCE_CROSSCHECK",
+  "proof_snapshot_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "checks": 318,
+  "fixtures": 299,
+  "declarations": 12792,
+  "typed_declarations": 2201,
+  "typed_modules": 48,
+  "import_only_modules": 15,
+  "canonical_helpers": 28,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_entries": 1581,
+  "evidence_entries": 373,
+  "retained_entries": 9134,
+  "verification_sha256": "88aa07900ba22b7caec5e7b745bf712a93cf5739eb214b02e78c5ad78131074a",
+  "manifest_sha256": "407a0b1b552bcc05e5e50a66d4cf3226c01b8816eb0bca4ba03c1c495d3581af",
+  "source_manifest_sha256": "ee0565126ac9881343ce799b080b93b4fa4f634b849a778bbc5cc779a829cfeb",
+  "fresh_whole_project_cache": true
+}

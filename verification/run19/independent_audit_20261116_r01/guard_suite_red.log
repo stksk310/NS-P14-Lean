@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/NS-P14-Lean-run18/scripts/check_run19_guards.py", line 116, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/NS-P14-Lean-run18/scripts/check_run19_guards.py", line 113, in main
+    reject('reviewed_source_git_substitution',lambda:pkg.checked_payload(r,rel,review),'reviewed source Git bytes mismatch')
+  File "/workspace/NS-P14-Lean-run18/scripts/check_run19_guards.py", line 20, in reject
+    else:raise ValueError(name+': invalid input accepted')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: reviewed_source_git_substitution: invalid input accepted

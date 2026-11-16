@@ -1,0 +1,22 @@
+{
+  "name": "continuation_model",
+  "old_command": [
+    "python3",
+    "scripts/check_run18_continuation.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_20261115T152000Z_r01/continuation_checks.json"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run18_continuation.py",
+    "--output",
+    "verification/run18/runs/v06_alignment_run19_disposable/continuation_checks.json"
+  ],
+  "source_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "independent_git_object_store": true,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-7r9gpdck",
+  "old_evidence_written": false
+}

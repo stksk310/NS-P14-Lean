@@ -103,6 +103,14 @@ def main():
         (r/'artifacts').mkdir();archive='artifacts/NS_P14_LEAN_RUN19_guard.zip'
         pkg.package(r,rel,review,archive)
         reject('existing_zip',lambda:pkg.package(r,rel,review,archive),'archive already exists')
+        # A review of different source bytes cannot certify the restored proof source.
+        original_source=(r/'src.lean').read_bytes()
+        (r/'src.lean').write_bytes(original_source+b'-- different reviewed source\n')
+        different_source_commit=commit('different reviewed source')
+        (r/'src.lean').write_bytes(original_source);commit('restore certified source')
+        bad=dict(receipt);bad['reviewed_commit']=different_source_commit
+        write(review,json.dumps(bad));commit('review different source')
+        reject('reviewed_source_git_substitution',lambda:pkg.checked_payload(r,rel,review),'reviewed source Git bytes mismatch')
     with output.open('x') as stream:json.dump({'status':'PASS_RUN19_NEGATIVE_CONTROLS','count':len(results),'controls':results},stream,indent=2);stream.write('\n')
     print('PASS_RUN19_NEGATIVE_CONTROLS',len(results))
 if __name__=='__main__':main()

@@ -1,0 +1,101 @@
+{
+  "status": "PASS_STRUCTURAL_PLAN_CHECK_ONLY",
+  "registry_ids_covered_once": 50,
+  "registry_dependency_edges_checked": 128,
+  "published_inputs_with_owners": {
+    "X_GREEN": 14,
+    "X_AP_BETTI": 15,
+    "X_AP_CONE": 15,
+    "X_KNESER": 17,
+    "X_SC": 17,
+    "X_BHP_EK": 18,
+    "X_LTV": 19
+  },
+  "coarse_dependency_refinements_requiring_actual_proofs": [
+    {
+      "consumer": "O_COORD",
+      "bundled_dependency": "X_BASIC",
+      "required_export": "coordinate_linear_algebra_and_polynomial_presentation",
+      "provider_run": 12,
+      "aggregate_closure_run": 13,
+      "reason": "X_BASIC bundles coordinate prerequisites with unrelated Koszul/Tor and Groebner theory. Run12 must prove or cite actual compiled Lean prerequisites used by O_COORD; it cannot assume X_BASIC as a proposition. If a missing Run13 export is really needed, reorder that task or leave O_COORD explicitly open."
+    }
+  ],
+  "within_run_topological_order": {
+    "11": [],
+    "12": [
+      "O_COORD"
+    ],
+    "13": [
+      "X_BASIC",
+      "I_FIELD"
+    ],
+    "14": [
+      "X_GREEN",
+      "O_CUT",
+      "O_VOLUME",
+      "O_SIDON",
+      "O_TOWER"
+    ],
+    "15": [
+      "X_AP_BETTI",
+      "X_AP_CONE",
+      "I_TARGET",
+      "O_HARMONIC",
+      "O_TOR",
+      "O_TARGET",
+      "O_LOW",
+      "O_SCALAR",
+      "O_LARGE",
+      "O_SMALL",
+      "O_CLOSE"
+    ],
+    "16": [
+      "E_ARTIN",
+      "E_CORE",
+      "I_NORMALIZE",
+      "E_COORD",
+      "E_KERNEL",
+      "E_STOP",
+      "E_BOUNDS",
+      "E_HOMOLOGY",
+      "E_TRANSFER",
+      "E_ROW",
+      "E_TWO"
+    ],
+    "17": [
+      "X_KNESER",
+      "X_SC"
+    ],
+    "18": [
+      "X_BHP_EK",
+      "W_DENSE",
+      "W_EDGE",
+      "W_FIVE",
+      "W_SPARSE",
+      "W_CLOSE"
+    ],
+    "19": [
+      "X_LTV",
+      "I_BASE",
+      "I_THREE",
+      "N_WIDTH4",
+      "N_DISTANCE",
+      "N_WORDS",
+      "N_FIRST",
+      "N_HIGH",
+      "N_SMALL",
+      "N_CLOSE"
+    ],
+    "20": [
+      "I_PARTITION",
+      "I_MAIN"
+    ]
+  },
+  "not_certified": [
+    "Mathematical correctness",
+    "20-run feasibility",
+    "Implementation or proof completion",
+    "Sufficiency of the scoped X_BASIC export"
+  ]
+}

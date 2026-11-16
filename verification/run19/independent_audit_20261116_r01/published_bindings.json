@@ -1,0 +1,21 @@
+{
+  "status": "PASS_PUBLISHED_PROOF_EVIDENCE_REVIEW_AND_ZIP_ACTUAL_BINDINGS",
+  "proof_snapshot": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "reviewed_commit": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "source_entries": 1581,
+  "evidence_entries": 373,
+  "reviewed_commit_source_entries_all_match": true,
+  "commands": 318,
+  "fixtures": 299,
+  "declarations": 12792,
+  "typed_declarations": 2201,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "zip_entries": 1959,
+  "zip_sha256": "e14c8616cb0379a4f0063da6f329580fd13cca6f0644f637bca0f7ace890a6bc",
+  "source_review_guard_gap_affects_this_published_bundle": false,
+  "completion_receipt_status": "RUN19_COMPLETE"
+}
