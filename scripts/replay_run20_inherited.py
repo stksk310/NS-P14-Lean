@@ -14,7 +14,8 @@ v=load('run20_replay_verify',ROOT/'scripts/verify_run20.py')
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--name',required=True);p.add_argument('--output-dir',required=True);a=p.parse_args()
-    out=v.safe(ROOT,a.output_dir)
+    try:out=v.safe(ROOT,a.output_dir)
+    except ValueError as exc:p.error('symlink/escaping replay output forbidden: '+str(exc))
     if out.exists() or Path(a.output_dir).parts[:3]!=('verification','run20','runs'):p.error('new Run20 replay output required')
     prior=json.loads((ROOT/v.PRIOR/'verification.json').read_text())
     row=next(r for r in prior['checks'] if r['name']==a.name)
