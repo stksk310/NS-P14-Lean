@@ -1,0 +1,28 @@
+NS-P14-Lean
+Copyright (c) 2026 Keisuke Sato, except where other authors are identified.
+
+Original software: Apache License 2.0 (LICENSE).
+Original manuscripts and explanatory documentation: Creative Commons
+Attribution 4.0 International (LICENSES/CC-BY-4.0.txt).
+See LICENSE_SCOPE.md for the scope of these grants.
+
+Third-party Kneser proof source retained in this repository:
+
+  NSP14/Additive/KneserCore.lean
+  NSP14/Additive/KneserFinsetStabilizer.lean
+
+  Copyright (c) 2023 Mantas Bakšys, Yaël Dillies.
+  Released under the Apache License 2.0, retained at
+  NSP14/Additive/Kneser_SOURCE_LICENSE.
+
+  Source: https://github.com/YaelDillies/MiscYD
+  Source commit: f2f1d413b681dfd7a0f0e8481aee3ab7e0bae7ba
+  Original files: MiscYD/AddCombi/Kneser/Kneser.lean and MulStab.lean.
+  Recorded adaptations: renamed local import, exposed public section,
+  and changed the local license filename reference; no proof-body change.
+  Provenance: verification/run17/sources/provenance.json and
+  docs/RUN17_PAPER_CORRESPONDENCE_JA.md.
+
+External dependencies retain their own licenses. The pinned dependency
+revisions are recorded in lake-manifest.json. This notice does not grant
+rights in cited publications or other third-party material.

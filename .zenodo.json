@@ -1,0 +1,20 @@
+{
+  "title": "NS-P14-Lean",
+  "upload_type": "software",
+  "description": "A Lean formalization project for NS-P14, concerning a comparison of total Betti numbers of tangent cones of numerical semigroup rings with their interval completions over arbitrary fields. The repository includes Lean proofs, Japanese mathematical manuscripts, verification scripts, and audit evidence. The whole-P14 formalization is not yet complete. Original software is licensed under Apache-2.0; original manuscripts and explanatory documentation are licensed under CC-BY-4.0. See LICENSE_SCOPE.md for scope and third-party exceptions.",
+  "creators": [
+    {
+      "name": "Sato, Keisuke",
+      "orcid": "0009-0005-4230-0268"
+    }
+  ],
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Lean",
+    "formal verification",
+    "numerical semigroups",
+    "tangent cones",
+    "Betti numbers"
+  ]
+}
