@@ -1,0 +1,39 @@
+name: Verify published v1.0.0 Zenodo archive
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-zenodo.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: verify-published-v1.0.0
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'stksk310/NS-P14-Lean'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Stop the superseded verification process without changing its release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          state=$(gh api repos/stksk310/NS-P14-Lean/actions/runs/43868148889 --jq .status)
+          if [ "$state" != completed ]; then
+            gh api --method POST repos/stksk310/NS-P14-Lean/actions/runs/43868148889/cancel
+          fi
+      - name: Check out the compatibility fix and full fixed-tag history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Test the API compatibility and publication guards
+        run: python3 -m unittest discover -s docs/publication -p 'test_publish_release.py' -v
+      - name: Verify the exact published tag archive and record its DOI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 docs/publication/publish_release.py --verify-published

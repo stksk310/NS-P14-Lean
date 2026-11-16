@@ -46,6 +46,12 @@ GitHubが発行する当該jobのrepository tokenを使う。外部サービス�
 Zenodoの反映待ちで停止した場合は、既存workflowの再実行で同じ版の確認を継続できる。
 recordのZIP照合完了までは、保存・DOIの確認済みとは報告しない。
 
+公開後の追加確認は`.github/workflows/verify-zenodo.yml`を使える。
+これはmain上の現行API対応コードで**既存のv1.0.0タグ**を検証する。
+現行Zenodo APIのlanding-page欄`self_html`にも対応する。
+Release・DOIを新たに作らず、タグのファイル一覧・bytesを比較対象に固定する。
+公開済みタグの内容は変更しない。
+
 ## DOIの扱い
 
 版DOIは特定のv1.0.0の引用に、concept DOIは版をまたぐ継続リンクに使う。

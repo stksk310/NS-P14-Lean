@@ -4,6 +4,7 @@ message: >-
   release. Consult the README for the theorem and audit provenance.
 type: software
 version: 1.0.0
+doi: 10.5281/zenodo.24280890
 date-released: "2026-11-16"
 title: NS-P14-Lean
 authors:

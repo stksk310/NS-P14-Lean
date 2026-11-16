@@ -165,7 +165,7 @@ def upload_receipt(path):
 
 
 def verify_zenodo(expected, timeout):
-    query = urllib.parse.urlencode({'q': '"NS-P14-Lean"', 'size': 100, 'sort': 'mostrecent'})
+    query = urllib.parse.urlencode({'q': '"NS-P14-Lean"', 'size': 10, 'sort': 'mostrecent'})
     deadline = time.monotonic() + timeout
     while True:
         try:
@@ -183,11 +183,16 @@ def verify_zenodo(expected, timeout):
                 file = zips[0]; url = file['links']['self']; parsed = urllib.parse.urlsplit(url)
                 if parsed.scheme != 'https' or parsed.hostname != 'zenodo.org':
                     raise ValueError('unexpected archive download origin')
-                with urllib.request.urlopen(url, timeout=180) as response:
+                print('Verifying Zenodo source file: ' + file['key'], flush=True)
+                request = urllib.request.Request(url, headers={'User-Agent': 'NS-P14-Lean-release-verification/1.0'})
+                with urllib.request.urlopen(request, timeout=180) as response:
                     data = response.read()
                 count = verify_zip(data, expected)
+                record_url = record['links'].get('self_html') or record['links'].get('html')
+                if not record_url:
+                    raise ValueError('Zenodo record has no public landing-page link')
                 return {'record_id': record['id'], 'version_doi': record.get('doi') or record['metadata']['doi'],
-                        'concept_doi': record.get('conceptdoi'), 'record_url': record['links']['html'],
+                        'concept_doi': record.get('conceptdoi'), 'record_url': record_url,
                         'source_file': file['key'], 'source_zip_sha256': hashlib.sha256(data).hexdigest(),
                         'tagged_files_verified': count}
         except (urllib.error.URLError, TimeoutError) as error:
@@ -200,15 +205,24 @@ def verify_zenodo(expected, timeout):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--publish', action='store_true')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--publish', action='store_true')
+    mode.add_argument('--verify-published', action='store_true', help='Verify the existing fixed tag without creating another release')
     parser.add_argument('--zenodo-timeout', type=int, default=1200)
     args = parser.parse_args()
     manifest, expected = validate()
-    if not args.publish:
+    if not (args.publish or args.verify_published):
         return
-    release = publish(manifest)
+    if args.publish:
+        release = publish(manifest)
+    else:
+        release = release_state()
+        if release is None or release['draft']:
+            raise ValueError('fixed release is not already published')
+        expected = git_tree(TAG)
+        check_baseline(git_tree(manifest['audited_commit']), expected)
     receipt = verify_zenodo(expected, args.zenodo_timeout)
-    receipt.update({'tag': TAG, 'tag_commit': run('git', 'rev-parse', 'HEAD'),
+    receipt.update({'tag': TAG, 'tag_commit': run('git', 'rev-parse', f'{TAG}^{{commit}}'),
                     'audited_commit': manifest['audited_commit'], 'github_release': release['html_url'],
                     'scope': 'Saved audit provenance and exact Zenodo/tag archive byte comparison; no new Lean run.'})
     with tempfile.TemporaryDirectory() as dest:

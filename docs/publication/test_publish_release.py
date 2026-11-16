@@ -111,6 +111,34 @@ class PublicationTests(unittest.TestCase):
                     else:
                         self.release.upload_receipt(path)
 
+    def test_current_zenodo_self_html_record_link(self):
+        record = self.record()
+        record.update({'id': 123, 'links': {'self_html': 'https://zenodo.org/records/123'}})
+        data = self.archive([('repo/NSP14/Main.lean', b'proof')])
+        with patch.object(self.release, 'fetch_json', side_effect=[{'hits': {'hits': [record]}}, record]), \
+             patch.object(self.release.urllib.request, 'urlopen', return_value=io.BytesIO(data)):
+            result = self.release.verify_zenodo({'NSP14/Main.lean': self.release.blob_oid(b'proof')}, 0)
+        self.assertEqual(result['record_url'], record['links']['self_html'])
+
+    def test_postpublication_verification_binds_tag_instead_of_updated_main(self):
+        tag_tree = {'NSP14/Main.lean': 'proof', 'old-publication.py': 'old'}
+        new_tree = {'NSP14/Main.lean': 'proof', 'new-publication.py': 'new'}
+        manifest = {'audited_commit': 'audit'}
+        release = {'draft': False, 'html_url': 'https://github.com/stksk310/NS-P14-Lean/releases/tag/v1.0.0'}
+        receipts = []
+        def tree(revision): return tag_tree if revision == 'v1.0.0' else {'NSP14/Main.lean': 'proof'}
+        def receipt(path): receipts.append(json.loads(path.read_text()))
+        with patch('sys.argv', ['publish_release.py', '--verify-published']), \
+             patch.object(self.release, 'validate', return_value=(manifest, new_tree)), \
+             patch.object(self.release, 'release_state', return_value=release), \
+             patch.object(self.release, 'git_tree', side_effect=tree), \
+             patch.object(self.release, 'verify_zenodo', return_value={'version_doi': '10.5281/zenodo.123'}) as verify, \
+             patch.object(self.release, 'upload_receipt', side_effect=receipt), \
+             patch.object(self.release, 'run', return_value='fixed-tag-commit'):
+            self.release.main()
+        self.assertEqual(verify.call_args.args[0], tag_tree)
+        self.assertEqual(receipts[0]['tag_commit'], 'fixed-tag-commit')
+
 
 if __name__ == '__main__':
     unittest.main()
