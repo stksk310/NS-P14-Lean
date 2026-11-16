@@ -44,6 +44,8 @@ def main():
         reject('source_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');source.write_bytes(old)
         helper=r/'verification/run20/sources/check_prior_run19.py';old=helper.read_bytes();helper.write_bytes(old+b'\n')
         reject('auxiliary_checker_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
+        helper=r/'verification/run20/sources/audit_parts.py';old=helper.read_bytes();helper.write_bytes(old+b'\n')
+        reject('parallel_audit_helper_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
         ev=r/existing;(ev/'sample').write_text('bound');em=v.evidence_manifest(r,ev);(ev/'sample').write_text('changed')
         reject('evidence_substitution',lambda:v.check_evidence_manifest(r,ev,em),'evidence manifest')
         endpoint='NSP14.Endpoint.CompetitorBounds';fresh='NSP14.SmallEmbedding.LanTuVu'
@@ -73,6 +75,11 @@ def main():
         reject('single_private_name_omitted_with_module_remaining',lambda:v.validate_full_audit(all_rows[1:],meta,modules),'fileset coverage')
         reduced=copy.deepcopy(meta);reduced['declaration_inventory']=reduced['declaration_inventory'][1:]
         reject('private_name_omitted_from_both_rows_and_metadata',lambda:v.validate_full_audit(all_rows[1:],reduced,modules,expected_names=meta['declaration_inventory']),'frozen declaration-name coverage')
+        batch=load('run20_guard_parts',ROOT/'verification/run20/sources/audit_parts.py')
+        pair=[{'selected_modules':[x['module']],'rows':[x],'metadata':{'imported_modules':sorted(required),'declaration_inventory':[x['name']]}} for x in rows]
+        batch.validate_parts(pair,required)
+        reject('audit_part_omitted',lambda:batch.validate_parts(pair[:1],required),'part module coverage')
+        reject('audit_part_duplicated',lambda:batch.validate_parts(pair+pair[:1],required),'duplicate part module coverage')
         changed=copy.deepcopy(all_rows);del changed[0]['explicit_type']
         reject('private_explicit_type_omitted',lambda:v.validate_full_audit(changed,meta,modules),'coverage')
         wrong=copy.deepcopy(meta);wrong['imported_modules']=wrong['imported_modules'][1:]

@@ -30,3 +30,5 @@ Full current and immutable-base audits import all every production/test/audit mo
 The final source snapshot must be committed before cold verification. Validation is not publication completion. Review, package, normal Push, actual remote SHA and clean status are separately observed and bound as post-validation Git bytes. Source-bound docs stay unchanged after verification.
 
 事前検査: root build 6706 jobs成功、全新規fixture/必要依存はexit0・警告0まで再実行。整数分割81640ケース・AP profile41552行、Mainからの10個別根とV06/Run19根を検査。新guardは実Lean axiom injectionを含む45controlsでPASS。初回symlink拒否の診断形式不備を修正し、失敗ログはpreflight_20261116_01に保持した。全型監査のimportだけを切り離したprobeもPASSし、実行時間の主因は通常/explicit型と全宣言公理列挙である。
+
+全宣言名の独立一覧は15774件。Array走査版とHashSet版の実Lean出力が完全一致し、HashSet版は28.406秒で完了した。型/公理列挙を4分割・最大3workerへ並列化する。各partも全project moduleを直接import allし、実collectAxioms/normal/explicitを宣言ごとに行う。partのmodule集合と宣言名の和集合・重複を検査し、独立固定一覧と再照合する。対象を減らす高速化ではない。

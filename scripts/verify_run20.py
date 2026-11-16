@@ -75,8 +75,14 @@ def dependency_snapshot(root):
         result[item['name']]={'commit':head,'tracked_clean':True,'untracked_Lean_sources':[]}
     return result
 
-def audit_source(modules):
+def audit_source(modules,selected=None):
     text=old.audit_source(modules,modules)
+    selected=set(modules) if selected is None else set(selected)
+    if not selected<=set(modules):raise ValueError('audited modules outside full imports')
+    text=re.sub(r' let typed : Array String := #[^\n]*',
+      ' let typed : Array String := #["'+'","'.join(sorted(selected))+'"]\n let typedSet := Std.HashSet.ofArray typed',text,count=1)
+    text=text.replace('typed.contains modName','typedSet.contains modName')
+    text=text.replace('modName == "NSP14" || modName.startsWith "NSP14." || modName == "tests" || modName.startsWith "tests." || modName.startsWith "audit."','typedSet.contains modName')
     # An independently emitted environment inventory detects a dropped row even
     # when its module still has thousands of other declarations.
     marker=' for (n,ci) in env.constants.toList do'
@@ -84,7 +90,7 @@ def audit_source(modules):
  for (n,_) in env.constants.toList do
   let some idx := env.getModuleIdxFor? n | continue
   let modName := env.header.moduleNames[idx.toNat]!.toString
-  if typed.contains modName then inventory := inventory.push n.toString
+  if typedSet.contains modName then inventory := inventory.push n.toString
  IO.println ((Json.mkObj [("declaration_inventory",toJson inventory)]).compress)
 '''
     return text.replace(marker,inventory+marker,1)
@@ -188,7 +194,10 @@ def main():
                     fc=['lake','env','lean','-j1','-M12288',f,'-o',str(dest)];run(label,fc)
                     mapping.append({'name':label,'old_command':previous['command'] if previous else None,'new_command':fc})
             elif name=='environment_axioms':
-                cmd=['lake','env','lean','-j1','-M12288',str(Path(rel)/'EnvironmentAudit.lean')];raw_environment=run(name,cmd,compressed=True)
+                cmd=['python3','verification/run20/sources/audit_parts.py','--output-dir',str(Path(rel)/'environment_parts')]
+                run(name,cmd)
+                raw_environment=(json.loads(gzip.decompress((out/'environment_parts/declarations.json.gz').read_bytes())),
+                  json.loads((out/'environment_parts/metadata.json').read_text()))
             elif name in {'base_build','base_environment_types'}:continue
             else:
                 cmd=['python3','scripts/replay_run20_inherited.py','--name',name,'--output-dir',str(Path(rel)/('replay_'+name))];run(name,cmd)
@@ -218,14 +227,15 @@ def main():
                     dest=Path('.lake/build/lib/lean')/Path(f).with_suffix('.olean');(base/dest).parent.mkdir(parents=True,exist_ok=True)
                     run('base_fixture_'+str(ix).zfill(3),['lake','env','lean','-j1','-M12288',f,'-o',str(dest)],cwd=base)
             # Full base audit, not the historical eleven-module V06 subset.
-            src=ROOT/'verification/run20/sources/BaseEnvironmentAudit.lean';shutil.copyfile(src,base/'BaseEnvironmentAudit.lean')
-            raw=run('base_environment_types',['lake','env','lean','-j1','-M12288','BaseEnvironmentAudit.lean'],cwd=base,compressed=True)
-            base_rows,base_meta=v06.parse_audit(raw)
+            run('base_environment_types',['python3','verification/run20/sources/audit_parts.py','--source-root',str(base),
+              '--output-dir',str(Path(rel)/'base_environment_parts')])
+            base_rows=json.loads(gzip.decompress((out/'base_environment_parts/declarations.json.gz').read_bytes()))
+            base_meta=json.loads((out/'base_environment_parts/metadata.json').read_text())
             golden=json.loads(gzip.decompress((ROOT/'verification/run20/sources/base_declarations.json.gz').read_bytes()))
             if sorted(base_rows,key=lambda r:r['name'])!=sorted(golden,key=lambda r:r['name']):raise ValueError('full base audit replay differs')
             write_json(out/'base_environment.json',base_meta)
         finally:shutil.rmtree(base)
-        rows,meta=parse_audit(raw_environment)
+        rows,meta=raw_environment
         expected_names=json.loads(gzip.decompress((ROOT/'verification/run20/sources/expected_declarations.json.gz').read_bytes()))
         validate_full_audit(rows,meta,modules,base_rows,expected_names);validate_main_type(ROOT,rows)
         write_json(out/'dependency_coverage.json',validate_dependency_map(ROOT,rows))
