@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "pending": [],
+  "declined": [],
+  "closed_ids": [
+    "I_BASE",
+    "I_THREE",
+    "N_CLOSE",
+    "N_DISTANCE",
+    "N_FIRST",
+    "N_HIGH",
+    "N_SMALL",
+    "N_WIDTH4",
+    "N_WORDS",
+    "X_LTV"
+  ],
+  "source_snapshot_commit": "7c6821ee0f43869b2a9b5d9b1b72b8d7a045b4a7",
+  "reviewed_commit": "c12fbfa66fb7585af013b8bcc4da4fa7ca34fdbe",
+  "review_report": "verification/run19/review/final_20261116_r03.md",
+  "review_report_sha256": "d97467aa557f0cc8912f0469f8c5b85808d11f9bcb2ea5335b345fbde72cec20",
+  "verification_summary_sha256": "99f9f78aa2ae0090fecead20bd1796340b1156217ca42f32970c37015462c451",
+  "verification_manifest_sha256": "92c44adfae21a591d6d751cc9fe058c8ff7b176edb0681c8a1e6674b44d377bd",
+  "reviewer": "/root/run19_final_review",
+  "resolved_findings": [
+    "private/generated fixture helper coverage"
+  ],
+  "publication_pending": true,
+  "not_claimed": [
+    "Run20 global synthesis",
+    "stronger LTV linear estimates",
+    "generic initial-ideal theorem"
+  ]
+}
