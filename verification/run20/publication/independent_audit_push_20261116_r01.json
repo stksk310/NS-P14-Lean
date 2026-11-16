@@ -1,0 +1,35 @@
+{
+  "status": "PASS_RUN20_FINAL_INDEPENDENT_AUDIT_NORMAL_PUSH",
+  "run20_complete": true,
+  "all_P14_complete": true,
+  "recorded_at_UTC": "2026-11-16T08:26:04.486324+00:00",
+  "audit_commit": "a9777e297df8a440b94eeb7930dadde08ca58c70",
+  "remote": "https://github.com/stksk310/NS-P14-Lean.git",
+  "ordinary_atomic_push": true,
+  "force_push": false,
+  "observed_remote_refs": {
+    "refs/heads/audit/run20-20261116": "a9777e297df8a440b94eeb7930dadde08ca58c70",
+    "refs/heads/work": "a9777e297df8a440b94eeb7930dadde08ca58c70"
+  },
+  "clean_checkout_after_audit_push": true,
+  "audit_report": "verification/run20/independent_audit_20261116_r01/AUDIT_JA.md",
+  "audit_report_sha256": "d95342eb9eb73504482b4294c45c48d75dbe96430e4591f956fcd806ac8e743e",
+  "audit_manifest_sha256": "fe0e7f85ff6d6dae82c707d2fff6db1b0d81d94708eef932cb643d9231a0aaa9",
+  "cold_proof_snapshot": "a5e122a4d09536b1609c5faa8d419f8faf81671f",
+  "cold_checks": 335,
+  "cold_fixtures": 311,
+  "cold_declarations": 15774,
+  "private_declarations": 3679,
+  "whole_project_module_coverage": 1019,
+  "preserved_public_type_and_universe_pairs": 11928,
+  "negative_controls": 61,
+  "actual_Lean_codec_controls": 13,
+  "open_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "mathematical_source_tests_verifiers_paper_pins_and_original_ZIP_unchanged": true,
+  "remaining_required_work": [],
+  "note": "This descendant receipt records the observed audit push; it intentionally does not self-reference its own commit."
+}
