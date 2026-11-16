@@ -1,0 +1,17 @@
+{
+  "name": "publication_guards",
+  "old_command": [
+    "python3",
+    "scripts/check_run18_guards.py"
+  ],
+  "new_command": [
+    "python3",
+    "scripts/check_run18_guards.py"
+  ],
+  "source_commit": "c002983bf657b07200c5d50f1d653c95f1682c7e",
+  "current_mathematical_source": true,
+  "policy_control_at_its_original_snapshot": false,
+  "exit_code": 0,
+  "scratch": "/tmp/nsp14-run19-replay-sisgctxj",
+  "old_evidence_written": false
+}

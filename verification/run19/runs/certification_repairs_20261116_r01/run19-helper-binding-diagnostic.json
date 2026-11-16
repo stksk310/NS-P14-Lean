@@ -1,0 +1,8 @@
+{
+  "issue": "auxiliary checker under verification/run19/sources excluded by inherited source_manifest helper",
+  "path": "verification/run19/sources/replay_three_port.py",
+  "included_in_source_manifest": false,
+  "actual_bytes_equal_proof_commit": true,
+  "sha256": "9e5323044f43dbf110fed16fe4fe6112e6ac9dff8022779f55d1124fa008dd1a",
+  "action": "bind all source receipts/helpers explicitly in final source manifest; add new negative control before final certification"
+}

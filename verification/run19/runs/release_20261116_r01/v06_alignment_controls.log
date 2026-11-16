@@ -1,0 +1,3 @@
+error: /tmp/ns-p14-run18-implementation-audit-20261115/.git/objects: ignoring alternate object stores, nesting too deep
+fatal: unable to read tree (58103bc29c0bab23bdbdf31c6db127ed1e964f44)
+Command '['git', 'read-tree', 'HEAD']' returned non-zero exit status 128.

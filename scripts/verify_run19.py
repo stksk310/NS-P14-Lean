@@ -16,9 +16,24 @@ FULL_IDS={'N_DISTANCE','N_WORDS','N_HIGH','N_FIRST','N_SMALL','N_WIDTH4','N_CLOS
 spec=importlib.util.spec_from_file_location('v06_helpers',ROOT/'scripts/verify_v06_alignment.py')
 v06=importlib.util.module_from_spec(spec);spec.loader.exec_module(v06)
 sha=v06.sha;git=v06.git;safe=v06.safe;write_json=v06.write_json
-source_manifest=v06.source_manifest;check_source_manifest=v06.check_source_manifest
 evidence_manifest=v06.evidence_manifest;check_evidence_manifest=v06.check_evidence_manifest
 validate_audit=v06.validate_audit;validate_import_coverage=v06.validate_import_coverage
+
+def source_manifest(root):
+    # These are executable checker code and frozen input receipts, despite their
+    # provenance-directory location. Bind them to Git exactly like scripts/.
+    result=v06.source_manifest(root)
+    for path in (root/'verification/run19/sources').rglob('*'):
+        if path.is_file() and '__pycache__' not in path.parts and path.suffix!='.pyc':
+            result[str(path.relative_to(root))]=sha(path.read_bytes())
+    return dict(sorted(result.items()))
+
+def check_source_manifest(root,manifest,proof_commit=None):
+    if source_manifest(root)!=manifest:raise ValueError('source manifest content or fileset changed')
+    if proof_commit:
+        for name,digest in manifest.items():
+            if sha(git(root,'show',proof_commit+':'+name))!=digest:
+                raise ValueError('source is not committed in proof snapshot: '+name)
 
 def validate_output(root,name):
     path=safe(root,name);p=Path(name)

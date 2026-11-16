@@ -14,8 +14,11 @@ V06_PROOF = 'd446fc2f18f7a8603d1eedd446e93810dc44d01c'
 
 def prepare(root, commit, packages, build):
     scratch = Path(tempfile.mkdtemp(prefix='nsp14-run19-replay-'))
-    subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(root), str(scratch)],
+    subprocess.run(['git', 'clone', '--shared', '--dissociate', '--no-checkout', str(root), str(scratch)],
                    check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    alternates=scratch/'.git/objects/info/alternates'
+    if alternates.exists() and alternates.read_text().strip():
+        raise ValueError('isolated replay still borrows a nested object store')
     subprocess.run(['git', 'update-ref', '--no-deref', 'HEAD', commit], cwd=scratch, check=True)
     subprocess.run(['git', 'read-tree', commit], cwd=scratch, check=True)
     archive = subprocess.check_output(['git', 'archive', commit], cwd=root)
@@ -34,6 +37,9 @@ def main():
     rel=Path(a.output_dir)
     if rel.is_absolute() or '..' in rel.parts or rel.parts[:3]!=('verification','run19','runs') or out.exists():
         p.error('new exclusive Run19 output required')
+    if (not out.resolve().is_relative_to(ROOT.resolve()) or
+        any(part.is_symlink() for part in [out,*out.parents] if part.is_relative_to(ROOT))):
+        p.error('symlink/escaping replay output forbidden')
     prior=json.loads((ROOT/PRIOR/'verification.json').read_text())
     row=next(r for r in prior['checks'] if r['name']==a.name)
     proof=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -50,6 +56,7 @@ def main():
         receipt={'name':a.name,'old_command':row['command'],'new_command':command,
           'source_commit':commit,'current_mathematical_source':commit==proof,
           'policy_control_at_its_original_snapshot':a.name=='v06_alignment_controls',
+          'independent_git_object_store':True,
           'exit_code':result.returncode,'scratch':str(scratch),'old_evidence_written':False}
         (out/'replay.json').write_text(json.dumps(receipt,indent=2)+'\n')
         print(result.stdout,end='')

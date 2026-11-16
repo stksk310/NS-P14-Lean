@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "expected": "AssertionError: auxiliary checker missing from source freeze",
+  "passed_red": true
+}

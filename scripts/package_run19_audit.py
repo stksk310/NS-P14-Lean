@@ -39,7 +39,8 @@ def checked_payload(root,evidence,review):
     for n in [review,str(report.relative_to(root))]:payload[n]=safe(root,n).read_bytes()
     # Initial RED/frozen contracts, port provenance and prior V06 receipts are part of the bundle.
     for p in (root/'verification/run19/sources').rglob('*'):
-        if p.is_file():payload[str(p.relative_to(root))]=p.read_bytes()
+        if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc':
+            payload[str(p.relative_to(root))]=p.read_bytes()
     binding={'proof_snapshot_commit':proof,'reviewed_evidence_commit':reviewed,'review_commit':head,
       'evidence':evidence,'review':review,'review_report':r['review_report'],'complete_offline_checkout':False,
       'scope':'Run19 ten contracts; Run20 whole-P14 composition remains'}

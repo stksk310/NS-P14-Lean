@@ -20,7 +20,7 @@ def main():
         else:raise ValueError(name+': invalid input accepted')
     with tempfile.TemporaryDirectory(prefix='run19-controls-') as tmp:
         r=Path(tmp)/'repo'
-        subprocess.run(['git','clone','--shared','--no-checkout',str(ROOT),str(r)],check=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        subprocess.run(['git','clone','--shared','--dissociate','--no-checkout',str(ROOT),str(r)],check=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         subprocess.run(['git','read-tree','HEAD'],cwd=r,check=True)
         data=v.git(ROOT,'archive','HEAD')
         with tarfile.open(fileobj=io.BytesIO(data)) as stream:stream.extractall(r,filter='data')
@@ -30,7 +30,11 @@ def main():
         existing='verification/run19/runs/existing';(r/existing).mkdir(parents=True)
         reject('existing_output',lambda:v.validate_output(r,existing),'already exists')
         alias=r/'verification/run19/runs/alias';alias.symlink_to(r/existing,target_is_directory=True)
-        reject('symlink_output',lambda:v.validate_output(r,str(alias.relative_to(r))),'symlink path');alias.unlink()
+        reject('symlink_output',lambda:v.validate_output(r,str(alias.relative_to(r))),'symlink path')
+        probe=subprocess.run(['python3',str(r/'scripts/replay_run19_inherited.py'),'--name','width_model',
+            '--output-dir','verification/run19/runs/alias/escape'],cwd=r,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        if probe.returncode!=2 or 'symlink/escaping' not in probe.stdout:raise ValueError('replay symlink output was not rejected')
+        results.append({'control':'replay_symlink_output','passed':True});alias.unlink()
         for name,label in [('NSP14/Endpoint/CompetitorBounds.lean','inherited_source'),('verification/run18/runs/v06_alignment_20261115T152000Z_r01/verification.json','inherited_evidence')]:
             path=r/name;old=path.read_bytes();path.write_bytes(old+b'\n')
             reject(label,lambda:v.validate_changes(r),'forbidden inherited edit');path.write_bytes(old)
@@ -38,6 +42,8 @@ def main():
         reject('unlisted_source',lambda:v.validate_changes(r),'finite allowlist');extra.unlink()
         manifest=v.source_manifest(r);source=r/'scripts/verify_run19.py';old=source.read_bytes();source.write_bytes(old+b'\n')
         reject('source_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');source.write_bytes(old)
+        helper=r/'verification/run19/sources/replay_three_port.py';old=helper.read_bytes();helper.write_bytes(old+b'\n')
+        reject('auxiliary_checker_substitution',lambda:v.check_source_manifest(r,manifest),'source manifest');helper.write_bytes(old)
         ev=r/existing;(ev/'sample').write_text('bound');em=v.evidence_manifest(r,ev);(ev/'sample').write_text('changed')
         reject('evidence_substitution',lambda:v.check_evidence_manifest(r,ev,em),'evidence manifest')
         endpoint='NSP14.Endpoint.CompetitorBounds';fresh='NSP14.SmallEmbedding.LanTuVu'
@@ -67,11 +73,12 @@ def main():
             path=r/n;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(data)
         def commit(message):
             git('add','-A');git('-c','user.name=Run19 Guard','-c','user.email=guard@example.invalid','commit','-qm',message);return git('rev-parse','HEAD')
-        git('init','-q');write('src.lean','-- synthetic publication guard fixture\n');proof=commit('source')
+        git('init','-q');write('src.lean','-- synthetic publication guard fixture\n')
+        helper='verification/run19/sources/probe.py';write(helper,"print('synthetic helper')\n");proof=commit('source')
         rel='verification/run19/runs/fixture';out=r/rel;out.mkdir(parents=True)
         summary={'status':'PASS_RUN19_COMPLETE_VALIDATION','unproved_ids':[],'closed_ids':sorted(v.FULL_IDS),'fresh_whole_project_cache':True,
                  'proof_snapshot_commit':proof,'checks':[{'passed':True}]}
-        write(rel+'/verification.json',json.dumps(summary));write(rel+'/SOURCE_SHA256.json',json.dumps({'src.lean':v.sha((r/'src.lean').read_bytes())}))
+        write(rel+'/verification.json',json.dumps(summary));write(rel+'/SOURCE_SHA256.json',json.dumps(v.source_manifest(r)))
         write(rel+'/MANIFEST_SHA256.json',json.dumps(v.evidence_manifest(r,out)));evidence_commit=commit('evidence')
         report='verification/run19/review/body.md';review='verification/run19/review/review.json'
         write(report,'Synthetic guard body; not a mathematical review.\n')
@@ -80,6 +87,8 @@ def main():
           'verification_summary_sha256':v.sha((out/'verification.json').read_bytes()),'verification_manifest_sha256':v.sha((out/'MANIFEST_SHA256.json').read_bytes())}
         write(review,json.dumps(receipt));commit('review');pkg.checked_payload(r,rel,review)
         results.append({'control':'valid_synthetic_publication_binding','passed':True})
+        original=(r/helper).read_bytes();(r/helper).write_bytes(original+b'\n')
+        reject('packager_auxiliary_checker_substitution',lambda:pkg.checked_payload(r,rel,review),'source manifest');(r/helper).write_bytes(original)
         for key,value,fragment in [('source_snapshot_commit','0'*40,'review snapshot'),('verification_summary_sha256','0'*64,'review evidence'),('review_report_sha256','0'*64,'review body'),('minor',1,'review gate')]:
             bad=dict(receipt);bad[key]=value;write(review,json.dumps(bad))
             reject('review_mismatch_'+key,lambda:pkg.checked_payload(r,rel,review),fragment)
