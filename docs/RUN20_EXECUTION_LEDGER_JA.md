@@ -32,3 +32,9 @@ The final source snapshot must be committed before cold verification. Validation
 事前検査: root build 6706 jobs成功、全新規fixture/必要依存はexit0・警告0まで再実行。整数分割81640ケース・AP profile41552行、Mainからの10個別根とV06/Run19根を検査。新guardは実Lean axiom injectionを含む45controlsでPASS。初回symlink拒否の診断形式不備を修正し、失敗ログはpreflight_20261116_01に保持した。全型監査のimportだけを切り離したprobeもPASSし、実行時間の主因は通常/explicit型と全宣言公理列挙である。
 
 全宣言名の独立一覧は15774件。Array走査版とHashSet版の実Lean出力が完全一致し、HashSet版は28.406秒で完了した。型/公理列挙を4分割・最大3workerへ並列化する。各partも全project moduleを直接import allし、実collectAxioms/normal/explicitを宣言ごとに行う。partのmodule集合と宣言名の和集合・重複を検査し、独立固定一覧と再照合する。対象を減らす高速化ではない。
+
+### 型表示の計測と採用形式
+
+標準pp.explicitの二つのprivate補題は表示だけに約19秒/11秒（CPU競合下では40秒/19秒）を要した。実collectAxiomsは0–1ms。notationだけ・proof表示だけの変更は十分でなかった。Lean標準のpp.allをexplicit側へ採用し、coercion・universe・完全修飾名・proof引数まで表示する。通常型は従来のMeta.ppExprを保持。これは型/premise/行/宣言被覆の縮小ではなく、よりexplicitな表示形式である。Mainの旧標準explicit記録も保持し、新しいfully-explicit期待型を別ファイルへ保存した。実証明と凍結契約は不変。
+
+表示処理の旧preflightは `audit_display_transition_20261116_01/cancelled_processes.json` にSIGTERM/実commandを保存し、検証成功へ数えない。旧sourceと部分ログは保持。新preflight/最終cold検証は同一の完全explicitモードでbaseと現sourceの全公開型を比較する。part間のmodule/宣言重複・欠落、独立15,774名、同じ全private import環境を検査する。

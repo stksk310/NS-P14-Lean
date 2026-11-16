@@ -82,6 +82,10 @@ def audit_source(modules,selected=None):
     text=re.sub(r' let typed : Array String := #[^\n]*',
       ' let typed : Array String := #["'+'","'.join(sorted(selected))+'"]\n let typedSet := Std.HashSet.ofArray typed',text,count=1)
     text=text.replace('typed.contains modName','typedSet.contains modName')
+    # pp.all is Lean's fully explicit mode: it shows coercions, universes,
+    # qualified names and proof arguments, and avoids costly attempts to hide
+    # them using notation/structure recovery. The normal view stays unchanged.
+    text=text.replace('opts.setBool `pp.explicit true','opts.setBool `pp.all true |>.setBool `pp.tagAppFns false')
     text=text.replace('modName == "NSP14" || modName.startsWith "NSP14." || modName == "tests" || modName.startsWith "tests." || modName.startsWith "audit."','typedSet.contains modName')
     # An independently emitted environment inventory detects a dropped row even
     # when its module still has thousands of other declarations.
@@ -120,7 +124,7 @@ def validate_coverage(prior,records,fixtures):
     if len({r['name'] for r in records})!=len(records):raise ValueError('duplicate command identity')
 
 def validate_main_type(root,rows):
-    expected=json.loads((root/'verification/run20/sources/main_type.json').read_text())
+    expected=json.loads((root/'verification/run20/sources/main_type_fully_explicit.json').read_text())
     actual={r['name']:r for r in rows}
     for name,types in expected.items():
         if name not in actual or any(actual[name].get(k)!=value for k,value in types.items()):raise ValueError('main universal scope/type differs: '+name)

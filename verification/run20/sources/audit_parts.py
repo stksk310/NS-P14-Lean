@@ -41,7 +41,15 @@ def main():
       'modules':ordered,'parts':a.parts,'workers':a.workers,'direct_import_all_for_every_module_in_every_part':True}
     v.write_json(out/'snapshot.json',snapshot)
     def worker(pair):
-        index,selection=pair;source=out/('Part'+str(index).zfill(2)+'.lean');source.write_text(v.audit_source(modules,selection))
+        index,selection=pair;source=out/('Part'+str(index).zfill(2)+'.lean')
+        code=v.audit_source(modules,selection)
+        code=code.replace(' for (n,ci) in env.constants.toList do',
+          ' let started ← IO.monoMsNow\n let mut completedCount : Nat := 0\n for (n,ci) in env.constants.toList do',1)
+        progress=json.dumps(str(out/(source.stem+'.progress.json')))
+        code=code.replace('   IO.println ((Json.mkObj fields).compress)',
+          '   IO.println ((Json.mkObj fields).compress)\n   completedCount := completedCount+1\n   if completedCount%100==0 then\n'+
+          '    let elapsed ← IO.monoMsNow\n    IO.FS.writeFile '+progress+' ((Json.mkObj [("completed_declarations",toJson completedCount),("last_name",toJson n.toString),("elapsed_ms",toJson (elapsed-started))]).compress)',1)
+        source.write_text(code)
         command=['lake','env','lean','-j1','-M12288',str(source)];start=time.monotonic()
         q=subprocess.run(command,cwd=root,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         (out/(source.stem+'.log.gz')).write_bytes(gzip.compress(q.stdout.encode(),mtime=0))

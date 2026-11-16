@@ -84,7 +84,7 @@ def main():
         reject('private_explicit_type_omitted',lambda:v.validate_full_audit(changed,meta,modules),'coverage')
         wrong=copy.deepcopy(meta);wrong['imported_modules']=wrong['imported_modules'][1:]
         reject('whole_project_import_omitted',lambda:v.validate_full_audit(all_rows,wrong,modules),'imported-module coverage')
-        main=json.loads((r/'verification/run20/sources/main_type.json').read_text())
+        main=json.loads((r/'verification/run20/sources/main_type_fully_explicit.json').read_text())
         scope_rows=[{'name':n,**types} for n,types in main.items()]
         v.validate_main_type(r,scope_rows)
         scope_rows[0]['type']='forall S k, i <= S.embeddingDimension -> True'
