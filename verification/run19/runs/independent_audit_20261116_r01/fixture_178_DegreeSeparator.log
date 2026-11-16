@@ -1,0 +1,4 @@
+Lex.degreeSeparatorEquiv : (q d : ℕ) → Lex.PolynomialDegreeIndex (q + 1) d ≃ { B // B.card = q }
+Lex.degreeSeparator_colex_lt_iff : ∀ (q d : ℕ) (α β : Lex.PolynomialDegreeIndex (q + 1) d),
+  toColex (Lex.degreeSeparator q d α) < toColex (Lex.degreeSeparator q d β) ↔
+    MonomialOrder.lex.toSyn ↑β < MonomialOrder.lex.toSyn ↑α

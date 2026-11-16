@@ -28,6 +28,9 @@ def checked_payload(root,evidence,review):
     if sha(report.read_bytes())!=r['review_report_sha256']:raise ValueError('review body mismatch')
     reviewed=r['reviewed_commit'];head=git(root,'rev-parse','HEAD').decode().strip()
     subprocess.run(['git','merge-base','--is-ancestor',reviewed,head],cwd=root,check=True)
+    # The reviewer must have seen the same certified source bytes.
+    for name,digest in source.items():
+        if sha(git(root,'show',reviewed+':'+name))!=digest:raise ValueError('reviewed source Git bytes mismatch: '+name)
     # Every evidence entry is in the exact reviewed commit, including manifest.
     for name in list(manifest)+[str((out/'MANIFEST_SHA256.json').relative_to(root))]:
         if git(root,'show',reviewed+':'+name)!=safe(root,name).read_bytes():raise ValueError('reviewed evidence Git bytes mismatch')

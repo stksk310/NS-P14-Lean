@@ -1,0 +1,17 @@
+{
+  "verification/run19/independent_audit_20261116_r01/N4_MATH_REVIEW.md": "59f82b7c5a45b96335faf19385188d4328c7f017426ccc63515b788470ad3167",
+  "verification/run19/independent_audit_20261116_r01/binding_substitution_red.log": "edede3bb1467d9b47c8d840387419dd149a43c907cb3c2f49843da3f67cd51ae",
+  "verification/run19/independent_audit_20261116_r01/audit.json": "370c129ae6d41ab874692f99a135263aa6766f7840cddecdc16dbc2ea78fc59d",
+  "verification/run19/independent_audit_20261116_r01/SMALL_EMBEDDING_MATH_REVIEW.md": "8170c24f4c62026a07a9f10baee836725b24c4664c621e78a32e4f98c668069c",
+  "verification/run19/independent_audit_20261116_r01/fresh_validation_check.py": "ad8a1697f1f8269a660d6483941705ed302ca66f9095088c518a14c3fa02ef89",
+  "verification/run19/independent_audit_20261116_r01/published_bindings.json": "775830ce84879a41f95e827d147136b612331562eef78614886eb8ad2011d164",
+  "verification/run19/independent_audit_20261116_r01/guard_suite_green.log": "948c5d29bb9171f3ed07ad855af312d1bc846a8bc91ec98b3c3b0058c65d15d1",
+  "verification/run19/independent_audit_20261116_r01/GUARD_FIX_REVIEW.md": "ba308409947c847a051552cad24d01cde72055c5101ad55d46670b83048fd889",
+  "verification/run19/independent_audit_20261116_r01/guard_suite_red.log": "ff221af6e92cf7e19954609aeb1ec81cddd98ca07232de1f74bedebe2c526945",
+  "verification/run19/independent_audit_20261116_r01/fresh_crosscheck.json": "59eb7c6c3dbe93230ed316a5f1005e13c92e4590b17dadb18aae43af5db934f4",
+  "verification/run19/independent_audit_20261116_r01/AUDIT_JA.md": "1040f13bf8a213c319fcbf67a2575db2ab34a779cafaefcfe75acbc0e57e307f",
+  "verification/run19/independent_audit_20261116_r01/binding_substitution_red.json": "bcd4619c9096db298b9a625fe1360a0e82b226f2d76af3fa6d3bb7b9448015a0",
+  "verification/run19/independent_audit_20261116_r01/published_binding_check.py": "34d70a9360a08d67b82e71727f444f564e5ca270e014ce2ef8c35e044c1a7a54",
+  "verification/run19/independent_audit_20261116_r01/cold_validation_stdout.log": "359777266c3bbd765c72e765d7a88ab0a50cc2506644c7e78ad1aeae1f0afa03",
+  "verification/run19/independent_audit_20261116_r01/binding_substitution_test.py": "6af59220459c9a73e06cfec3b5afa8dd87c5ad5f99ba4ba45f9825a32314e344"
+}

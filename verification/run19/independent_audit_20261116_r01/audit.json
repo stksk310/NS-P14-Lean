@@ -1,0 +1,83 @@
+{
+  "status": "PASS_RUN19_INDEPENDENT_AUDIT_WITH_GUARD_FIX",
+  "audited_head": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "recorded_at_jst": "2026-11-16T12:05:51.945291+09:00",
+  "closed_ids": [
+    "I_BASE",
+    "I_THREE",
+    "N_CLOSE",
+    "N_DISTANCE",
+    "N_FIRST",
+    "N_HIGH",
+    "N_SMALL",
+    "N_WIDTH4",
+    "N_WORDS",
+    "X_LTV"
+  ],
+  "unproved_ids": [],
+  "open_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "findings": [
+    {
+      "id": "R19-AUDIT-01",
+      "severity": "Important",
+      "status": "RESOLVED",
+      "file": "scripts/package_run19_audit.py",
+      "issue": "Certified source entries were not bound to Git bytes in reviewed_commit.",
+      "fix": "Require every certified source digest to match reviewed_commit Git bytes.",
+      "published_R03_affected": false,
+      "reproduced_before_fix": true,
+      "regression_control": "reviewed_source_git_substitution"
+    }
+  ],
+  "fresh_validation": {
+    "status": "PASS_INDEPENDENT_COLD_EVIDENCE_CROSSCHECK",
+    "proof_snapshot_commit": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+    "checks": 318,
+    "fixtures": 299,
+    "declarations": 12792,
+    "typed_declarations": 2201,
+    "typed_modules": 48,
+    "import_only_modules": 15,
+    "canonical_helpers": 28,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source_entries": 1581,
+    "evidence_entries": 373,
+    "retained_entries": 9134,
+    "verification_sha256": "88aa07900ba22b7caec5e7b745bf712a93cf5739eb214b02e78c5ad78131074a",
+    "manifest_sha256": "407a0b1b552bcc05e5e50a66d4cf3226c01b8816eb0bca4ba03c1c495d3581af",
+    "source_manifest_sha256": "ee0565126ac9881343ce799b080b93b4fa4f634b849a778bbc5cc779a829cfeb",
+    "fresh_whole_project_cache": true
+  },
+  "cold_source_manifest_equals_published_R03": true,
+  "mathematical_Lean_sources_tests_contracts_unchanged_after_cold_audit": true,
+  "guard_fix": {
+    "source_sha256": {
+      "scripts/package_run19_audit.py": "d3052ee904fc5336172b5b1fd7cbf71382faad17e33e70756eb8494516b99f90",
+      "scripts/check_run19_guards.py": "4f4e10d7ec884a24469a299a337ea8dcde46207ac40d30913a61972d8c5c5e72"
+    },
+    "red_exit_code": 1,
+    "red_reason": "reviewed_source_git_substitution: invalid input accepted",
+    "green_exit_code": 0,
+    "green_controls": 35,
+    "green_receipt": "verification/run19/runs/independent_guard_fix_20261116_green.json",
+    "preflight_exit_code": 0,
+    "independent_static_review": "GUARD_FIX_REVIEW.md",
+    "whole_project_cold_validation_on_patched_infrastructure": false,
+    "validation_scope": "Cold verification at 07fe1ed; subsequent Python-only publication guard patch verified by real positive/negative packaging controls. No new proof bundle certification."
+  },
+  "published_R03_archive_unchanged": true,
+  "all_P14_complete": false,
+  "remaining": [
+    "Run20 I_PARTITION / I_MAIN final composition"
+  ],
+  "provenance_note": "Crosscheck and standalone RED scripts are historical audit probes with fixed workspace paths; run on the specified frozen checkout. The maintained regression is in scripts/check_run19_guards.py.",
+  "push_note": "Normal push is performed after this audit commit; a post-push receipt records the observed remote commit without self-reference."
+}

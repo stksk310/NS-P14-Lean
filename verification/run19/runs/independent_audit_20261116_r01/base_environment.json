@@ -1,0 +1,8 @@
+{
+  "base_commit": "a7504eea25f02728d1be6cd0082e8484d639dbe2",
+  "isolated_workspace": "/tmp/nsp14-v06-base-u1r40crc",
+  "cache_donor": null,
+  "shared_packages": "/workspace/audit-block01/.lake/packages",
+  "source_identity_checked": true,
+  "declarations": 70
+}
