@@ -54,3 +54,5 @@ pp.allでも複雑な型の表示に秒単位を要したため、全宣言のex
 通常型はMeta.ppExpr + fresh cache、Mainは標準pretty-explicitも併記。出力は逐次JSONLへ保存し、完全なbytesをgzipへ移す（未圧縮SHAも記録）。一つの監査は8part/最大2workerとする。DAG版は約5GiBで複数partがPASSし、全プロジェクトのscopeは保持した。旧失敗出力を変更せず、新一意出力先で最終coldへ進む。
 
 基準07fe1edの全1003 module・15542宣言が、通常型/完全explicit DAG/実collectAxiomsでPASSした。source SHAはGit base bytesへ全件再照合。golden recordをsource provenanceへ固定し、最終coldでは隔離base再実行との一致も検査する。Rootの全708 production moduleがumbrellaから到達することも確認した。現在は新Mainを含む全1019 moduleの同じ監査へ進む。
+
+最終preflightは全1019 module・15774宣言がPASSし、全base公開型/private名・Main三出口・旧50 ID/1650実export対応も一致した。最新workの到着監査342fbddを明示fetch/merge。旧証拠を改変せず、exact upstream差分だけのpolicy追補を固定する。公開ガードのreviewed-source不足はRun20でも実Git REDで再現し、同source manifestをreviewed commitにも全件照合する修正を追加した。数学source・凍結契約・全型記録は不変。

@@ -11,3 +11,5 @@ Run19: proof `7c6821e`、evidence `c12fbfa`、review `1533762`、bundle `f92d484
 I_PARTITION/I_MAINは本runで閉じるまで未完。Run18 COMPLETE/V06_ALIGNMENT_COMPLETE/Run19 COMPLETEと全P14完成を区別する。
 
 実照合結果: `verification/run20/sources/adopted_run19_v06.json` はPASS。10出口と通常/explicit/展開型、公理はInputTypes記録に保存。Main追加後にも同checkerを再実行してPASSし、旧bytesの三つのappend-only prefixを保持している。I_PARTITION/I_MAINの新実証明とGREEN受入は本runの別成果であり、Run19証跡に後付けしない。
+
+最終freeze前に最新workを再fetchし、到着監査 `342fbdda072fc5d6aa5e8f2d8968456cc54c12a6` をmergeした。数学Lean差分は0、公開ガード2scriptの補強と独立監査証拠394ファイル。元のpolicy/baseは書き換えず、このcommitの差分全件をexact Git bytesで許可・保持する追補とした。Run20にもreviewed-source差替えの実Git RED→GREENを追加し、最新Run19の35 controlsを同commitの隔離checkoutで継承する。追補一覧は `verification/run20/sources/arrived_run19_audit_20261116.json`。

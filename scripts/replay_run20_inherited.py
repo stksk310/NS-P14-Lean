@@ -19,7 +19,7 @@ def main():
     if out.exists() or Path(a.output_dir).parts[:3]!=('verification','run20','runs'):p.error('new Run20 replay output required')
     prior=json.loads((ROOT/v.PRIOR/'verification.json').read_text())
     row=next(r for r in prior['checks'] if r['name']==a.name)
-    policy={'v06_alignment_controls':old.V06_PROOF,'run19_negative_controls':v.RUN19_PROOF}
+    policy={'v06_alignment_controls':old.V06_PROOF,'run19_negative_controls':v.UPSTREAM_AUDIT}
     proof=v.git(ROOT,'rev-parse','HEAD').decode().strip();commit=policy.get(a.name,proof)
     scratch=old.prepare(ROOT,commit,ROOT/'.lake/packages',ROOT/'.lake/build')
     try:

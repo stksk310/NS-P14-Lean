@@ -25,6 +25,8 @@ def main():
         data=v.git(ROOT,'archive','HEAD')
         with tarfile.open(fileobj=io.BytesIO(data)) as stream:stream.extractall(r,filter='data')
         v.validate_changes(r);results.append({'control':'unaltered_source','passed':True})
+        arrived=r/'scripts/package_run19_audit.py';original=arrived.read_bytes();arrived.write_bytes(original+b'\n')
+        reject('arrived_audit_source_substitution',lambda:v.validate_changes(r),'arrived audit Git bytes differ');arrived.write_bytes(original)
         for name in ['/tmp/run20-escape','verification/run20/runs/../escape','verification/run19/runs/old']:
             reject('unsafe_output_'+name,lambda name=name:v.validate_output(r,name),'unsafe relative path' if name.startswith('/') or '..' in name else 'unique verification')
         existing='verification/run20/runs/existing';(r/existing).mkdir(parents=True)
