@@ -93,7 +93,10 @@ project lib/IR/tests/auditsはcold再構築し、固定mathlib cacheは保持す
 ## Citation and licenses / 引用・ライセンス
 
 公開版はv1.0.0です。[CITATION.cff](CITATION.cff)に著者・ORCID・版番号を記載しています。
-Zenodo DOIは登録の実測結果を確認してから追記します。
+Zenodo版DOI：**[10.5281/zenodo.24280890](https://doi.org/10.5281/zenodo.24280890)**。
+全版の継続リンク：[concept DOI 10.5281/zenodo.24280889](https://doi.org/10.5281/zenodo.24280889)。
+この版の引用には版DOIを使ってください。
+[GitHub Release v1.0.0](https://github.com/stksk310/NS-P14-Lean/releases/tag/v1.0.0)も参照できます。
 
 - オリジナルのコード・検証スクリプト：**[Apache-2.0](LICENSE)**
 - オリジナルの論文・説明文：**[CC-BY-4.0](LICENSES/CC-BY-4.0.txt)**
