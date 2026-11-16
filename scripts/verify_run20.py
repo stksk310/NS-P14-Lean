@@ -18,6 +18,7 @@ def load(name,path):
 old=load('run20_helpers',ROOT/'scripts/verify_run19.py');v06=old.v06
 sha=old.sha;git=old.git;safe=old.safe;write_json=old.write_json
 evidence_manifest=old.evidence_manifest;check_evidence_manifest=old.check_evidence_manifest
+preserve_evidence=v06.preserve_evidence
 
 def source_manifest(root):
     result=v06.source_manifest(root)

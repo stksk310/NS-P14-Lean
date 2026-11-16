@@ -1,0 +1,53 @@
+{
+  "proof_snapshot_commit": "2676df2f060b1832c69c1aae115ad9ad5ba749b1",
+  "base": "07fe1ed952ae31ce01255ce53df538bf0a76d5cc",
+  "lean": "Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "mathlib": "139105d28c7685a154cb3093f79edb2e16708099",
+  "dependency_sources": {
+    "mathlib": {
+      "commit": "139105d28c7685a154cb3093f79edb2e16708099",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "plausible": {
+      "commit": "129d1ba9a16bc0660f46c79e9fb041ef5d5d80de",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "LeanSearchClient": {
+      "commit": "c61286b7b63cbfd563b28e11e81d0a18233a044a",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "importGraph": {
+      "commit": "e5d5639bedc7feecfbcb98e30b3bf26463d9f722",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "proofwidgets": {
+      "commit": "16259c0d07d61ee37d999d05b5cf96338b8daa11",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "aesop": {
+      "commit": "7d11bfa88558f8d3d90afdf6bd877ed70001498d",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "Qq": {
+      "commit": "b0256621cb88178e9ad932a53633077b3029e621",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "batteries": {
+      "commit": "4af7237d146261353907b06a01b6f3fc06cfa067",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    },
+    "Cli": {
+      "commit": "c09cb1e4f1e6e1c231a1175a12b681b075054a1b",
+      "tracked_clean": true,
+      "untracked_Lean_sources": []
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "SUPERSEDED_PREPUBLICATION_ATTEMPT_NOT_CERTIFICATION",
+  "reason": "Confirmed independent review F2: incidental untracked Python bytecode must not change retained immutable evidence fileset in clean clone reproduction",
+  "source_proof": "2676df2f060b1832c69c1aae115ad9ad5ba749b1",
+  "attempt": "verification/run20/runs/release_20261116_r02",
+  "observed_root_build_and_all_311_fixtures_pass": true,
+  "signal": "SIGTERM",
+  "processes": [
+    {
+      "pid": 280592,
+      "ppid": 280591,
+      "command": "python3 scripts/verify_run20.py --fresh-project-cache --output-dir verification/run20/runs/release_20261116_r02 "
+    },
+    {
+      "pid": 313102,
+      "ppid": 280592,
+      "command": "python3 verification/run20/sources/audit_parts.py --output-dir verification/run20/runs/release_20261116_r02/environment_parts "
+    },
+    {
+      "pid": 313106,
+      "ppid": 313102,
+      "command": "lake env lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/release_20261116_r02/environment_parts/Part01.lean "
+    },
+    {
+      "pid": 313107,
+      "ppid": 313102,
+      "command": "lake env lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/release_20261116_r02/environment_parts/Part00.lean "
+    },
+    {
+      "pid": 313267,
+      "ppid": 313107,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/release_20261116_r02/environment_parts/Part00.lean "
+    },
+    {
+      "pid": 313268,
+      "ppid": 313106,
+      "command": "lean -j1 -M12288 /tmp/ns-p14-run20-20261116/verification/run20/runs/release_20261116_r02/environment_parts/Part01.lean "
+    }
+  ],
+  "time": "2026-11-16T05:49:11.091330+00:00"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "original": "verification/run20/runs/release_20261116_r02/environment_parts/Part01.rows.jsonl",
+    "gzip": "verification/run20/runs/release_20261116_r02/environment_parts/Part01.rows.jsonl.gz",
+    "uncompressed_sha256": "6894690f2ec35b4cd318b223415447e9e1255b8d2183e95224734761a7dc57b4",
+    "uncompressed_bytes": 12756822,
+    "scope": "exact partial stream, interrupted, no PASS credit"
+  },
+  {
+    "original": "verification/run20/runs/release_20261116_r02/environment_parts/Part00.rows.jsonl",
+    "gzip": "verification/run20/runs/release_20261116_r02/environment_parts/Part00.rows.jsonl.gz",
+    "uncompressed_sha256": "3caa6e0f6db74e716bfc3d0d815371f7bef6af9a69e266b0aa4701a1bdc619b1",
+    "uncompressed_bytes": 11807398,
+    "scope": "exact partial stream, interrupted, no PASS credit"
+  }
+]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run20's own negative controls, in disposable roots. No production axiom is added."""
 from pathlib import Path
-import argparse, copy, importlib.util, io, json, subprocess, tarfile, tempfile
+import argparse, copy, importlib.util, io, json, subprocess, sys, tarfile, tempfile
 ROOT=Path(__file__).resolve().parents[1]
 def load(name,path):
     spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
@@ -25,6 +25,26 @@ def main():
         data=v.git(ROOT,'archive','HEAD')
         with tarfile.open(fileobj=io.BytesIO(data)) as stream:stream.extractall(r,filter='data')
         v.validate_changes(r);results.append({'control':'unaltered_source','passed':True})
+        # A real clean-clone import creates an incidental, untracked .pyc.
+        # It must not enter the immutable evidence inventory. Tracked bytes do.
+        excluded=r/'verification/run20/runs/current_runtime_probe'
+        before=v.preserve_evidence(r,excluded)
+        helper=r/'verification/run20/sources/audit_parts.py'
+        command=[sys.executable,'-c','import importlib.util,sys; s=importlib.util.spec_from_file_location("run20_runtime_bytecode_probe",sys.argv[1]); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)',str(helper)]
+        probe=subprocess.run(command,cwd=r,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        if probe.returncode:raise ValueError('real bytecode import failed: '+probe.stdout)
+        cache=Path(importlib.util.cache_from_source(str(helper)))
+        if not cache.is_file():raise ValueError('real import did not create bytecode')
+        if v.preserve_evidence(r,excluded)!=before:raise ValueError('untracked runtime bytecode changed retained evidence')
+        results.append({'control':'real_clean_import_bytecode_inventory_stable','passed':True,'command':command,'exit_code':probe.returncode,'stdout':probe.stdout})
+        cache_name=str(cache.relative_to(r));subprocess.run(['git','add','-f',cache_name],cwd=r,check=True)
+        bound=v.preserve_evidence(r,excluded)
+        if cache_name not in bound:raise ValueError('tracked bytecode was excluded')
+        cache.write_bytes(cache.read_bytes()+b'changed tracked bytes')
+        def check_retained():
+            if v.preserve_evidence(r,excluded)!=bound:raise ValueError('retained evidence bytes/fileset changed')
+        reject('tracked_bytecode_tamper_still_rejected',check_retained,'retained evidence bytes/fileset changed')
+        subprocess.run(['git','reset','-q','HEAD','--',cache_name],cwd=r,check=True);cache.unlink()
         arrived=r/'scripts/package_run19_audit.py';original=arrived.read_bytes();arrived.write_bytes(original+b'\n')
         reject('arrived_audit_source_substitution',lambda:v.validate_changes(r),'arrived audit Git bytes differ');arrived.write_bytes(original)
         partition=r/'NSP14/Main/Partition.lean';original_partition=partition.read_text()

@@ -1,0 +1,22 @@
+{
+  "status": "CONFIRMED_F2_REPRODUCTION",
+  "method": "actual unchanged v06.preserve_evidence before/after real isolated Python import",
+  "active_repository_read_only": true,
+  "probe_exit_code": 0,
+  "before_paths": [
+    "verification/old.json",
+    "verification/run20/sources/probe.py"
+  ],
+  "after_added_paths": [
+    "verification/run20/sources/__pycache__/probe.cpython-312.pyc"
+  ],
+  "retained_map_changed": true,
+  "legacy_helper_source_sha256": "5dae7e58e4250d89c991ecc9a33afaf7a87ada2e21c352a80ca58021a77e0761",
+  "command": [
+    "python3",
+    "-c",
+    "import importlib.util; s=importlib.util.spec_from_file_location(\"actual_bytecode_probe\",'/tmp/run20-review-f2-q95bipgq/verification/run20/sources/probe.py'); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)"
+  ],
+  "stdout": "",
+  "stderr": ""
+}
