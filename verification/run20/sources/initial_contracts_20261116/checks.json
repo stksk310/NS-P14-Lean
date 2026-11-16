@@ -1,0 +1,114 @@
+[
+  {
+    "file": "NSP14/Main/IntervalTarget.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "NSP14/Main/IntervalTarget.lean",
+      "-o",
+      ".lake/build/lib/lean/NSP14/Main/IntervalTarget.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "NSP14/Main/Partition.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "NSP14/Main/Partition.lean",
+      "-o",
+      ".lake/build/lib/lean/NSP14/Main/Partition.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "audit/run20/RequestedGoals.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/RequestedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/RequestedGoals.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "audit/run20/PartitionClosed.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/PartitionClosed.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/PartitionClosed.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "audit/run20/ClosedGoals.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/ClosedGoals.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/ClosedGoals.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "tests/Run20Contracts.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "tests/Run20Contracts.lean",
+      "-o",
+      ".lake/build/lib/lean/tests/Run20Contracts.olean"
+    ],
+    "exit": 0
+  },
+  {
+    "file": "audit/run20/acceptance/I_PARTITION.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/acceptance/I_PARTITION.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/acceptance/I_PARTITION.olean"
+    ],
+    "exit": 1
+  },
+  {
+    "file": "audit/run20/acceptance/I_MAIN.lean",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M12288",
+      "audit/run20/acceptance/I_MAIN.lean",
+      "-o",
+      ".lake/build/lib/lean/audit/run20/acceptance/I_MAIN.olean"
+    ],
+    "exit": 1
+  }
+]

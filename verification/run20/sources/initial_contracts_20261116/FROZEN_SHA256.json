@@ -1,0 +1,6 @@
+{
+  "audit/run20/RequestedGoals.lean": "91ca8957ebee52788f4a81622f2a35add511cf93bd91d2d109ba2d93405c8b2e",
+  "audit/run20/acceptance/I_PARTITION.lean": "73b7123643717c2ae378ce8a74138ab61ce55987744fa60d5bbf16a75cb8cc24",
+  "audit/run20/acceptance/I_MAIN.lean": "1a7e4e6dea907dbe8c067fe665624014af7e19c86a385c46b30c85bb30647a44",
+  "tests/Run20Contracts.lean": "0ba788a2053713845e75ccde25cec736f51fe4763597fe43e572e3c48f7468d9"
+}

@@ -1,0 +1,1 @@
+audit/run20/acceptance/I_MAIN.lean:4:42: error(lean.unknownIdentifier): Unknown identifier `NSP14.Run20.main_closed`
