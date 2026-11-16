@@ -1,8 +1,12 @@
 import hashlib
 import importlib.util
 import io
+import json
 from pathlib import Path
+import subprocess
+import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 
@@ -62,6 +66,50 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(self.release.asset_action(True, True), 'reuse')
         with self.assertRaises(ValueError):
             self.release.asset_action(True, False)
+
+    def exercise_publish(self, interrupted_draft):
+        state = {'exists': interrupted_draft, 'draft': True, 'commands': []}
+        def api(args, **kwargs):
+            endpoint = args[2]
+            release = {'tag_name': 'v1.0.0', 'draft': state['draft'], 'assets': [], 'html_url': 'https://github.com/stksk310/NS-P14-Lean/releases/tag/v1.0.0'}
+            if endpoint.endswith('/releases'):
+                return subprocess.CompletedProcess(args, 0, json.dumps([[release] if state['exists'] else []]), '')
+            if '/releases/tags/' in endpoint and (not state['exists'] or state['draft']):
+                return subprocess.CompletedProcess(args, 1, '', 'HTTP 404')
+            return subprocess.CompletedProcess(args, 0, json.dumps(release), '')
+        def command(*args):
+            if args[0] == 'git': return 'fixed-commit'
+            state['commands'].append(args)
+            if args[2] == 'create': state['exists'] = True
+            if args[2] == 'edit': state['draft'] = False
+            return ''
+        with patch.object(self.release.subprocess, 'run', side_effect=api), patch.object(self.release, 'run', side_effect=command):
+            result = self.release.publish({'assets': {'LICENSE': 'unused-for-new-upload'}})
+        self.assertFalse(result['draft'])
+        self.assertEqual(sum(c[2] == 'create' for c in state['commands']), 0 if interrupted_draft else 1)
+        self.assertEqual([c[2] for c in state['commands']][-2:], ['upload', 'edit'])
+
+    def test_first_publish_can_find_the_new_draft(self):
+        self.exercise_publish(False)
+
+    def test_interrupted_draft_is_reused_without_duplicate_release(self):
+        self.exercise_publish(True)
+
+    def test_existing_doi_receipt_must_match_bytes(self):
+        self.assertTrue(hasattr(self.release, 'upload_receipt'))
+        with tempfile.TemporaryDirectory() as dest:
+            path = Path(dest) / 'ZENODO_RECEIPT_v1.0.0.json'; path.write_bytes(b'correct receipt')
+            state = {'assets': [{'name': path.name}]}
+            for data in (b'correct receipt', b'wrong receipt'):
+                def command(*args):
+                    if args[2] == 'download':
+                        (Path(args[args.index('--dir') + 1]) / path.name).write_bytes(data)
+                    return ''
+                with patch.object(self.release, 'release_state', return_value=state), patch.object(self.release, 'run', side_effect=command):
+                    if data.startswith(b'wrong'):
+                        with self.assertRaises(ValueError): self.release.upload_receipt(path)
+                    else:
+                        self.release.upload_receipt(path)
 
 
 if __name__ == '__main__':

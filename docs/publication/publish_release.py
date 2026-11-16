@@ -107,13 +107,16 @@ def validate():
 
 
 def release_state():
-    result = subprocess.run(['gh', 'api', f'repos/{REPO}/releases/tags/{TAG}'], cwd=ROOT,
+    # The by-tag REST endpoint excludes drafts. Authenticated listing includes
+    # them, so first publication and retries can retrieve their own draft.
+    result = subprocess.run(['gh', 'api', f'repos/{REPO}/releases', '--paginate', '--slurp'], cwd=ROOT,
                             text=True, capture_output=True)
-    if result.returncode == 0:
-        return json.loads(result.stdout)
-    if 'HTTP 404' in result.stderr:
-        return None
-    raise RuntimeError('GitHub release lookup failed: ' + result.stderr)
+    if result.returncode != 0:
+        raise RuntimeError('GitHub release lookup failed: ' + result.stderr)
+    matches = [release for page in json.loads(result.stdout) for release in page if release['tag_name'] == TAG]
+    if len(matches) > 1:
+        raise ValueError('multiple releases with the same tag')
+    return matches[0] if matches else None
 
 
 def publish(manifest):
@@ -147,6 +150,18 @@ def fetch_json(url):
     request = urllib.request.Request(url, headers={'User-Agent': 'NS-P14-Lean-release-verification/1.0'})
     with urllib.request.urlopen(request, timeout=60) as response:
         return json.load(response)
+
+
+def upload_receipt(path):
+    release = release_state()
+    exists = any(a['name'] == path.name for a in release['assets'])
+    identical = True
+    if exists:
+        with tempfile.TemporaryDirectory() as dest:
+            run('gh', 'release', 'download', TAG, '--repo', REPO, '--pattern', path.name, '--dir', dest)
+            identical = (Path(dest) / path.name).read_bytes() == path.read_bytes()
+    if asset_action(exists, identical) == 'upload':
+        run('gh', 'release', 'upload', TAG, str(path), '--repo', REPO)
 
 
 def verify_zenodo(expected, timeout):
@@ -199,9 +214,7 @@ def main():
     with tempfile.TemporaryDirectory() as dest:
         receipt_path = Path(dest) / 'ZENODO_RECEIPT_v1.0.0.json'
         receipt_path.write_text(json.dumps(receipt, indent=2) + '\n')
-        existing = release_state()
-        if not any(a['name'] == receipt_path.name for a in existing['assets']):
-            run('gh', 'release', 'upload', TAG, str(receipt_path), '--repo', REPO)
+        upload_receipt(receipt_path)
         notes = Path(dest) / 'release-notes.md'
         notes.write_text(NOTES.read_text() + '\n\nZenodo version DOI: https://doi.org/' + receipt['version_doi'] + '\n')
         run('gh', 'release', 'edit', TAG, '--repo', REPO, '--notes-file', str(notes))

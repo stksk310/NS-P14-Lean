@@ -28,10 +28,10 @@
 
 ## Tasks
 
-- [ ] Write and run failing tests for baseline preservation, asset hashes, record identity, and archived bytes.
-- [ ] Implement the release helper and tag-triggered workflow; validate locally without publishing.
-- [ ] Update README, CFF, Zenodo metadata, release notes, and frozen release manifest for completed Run20.
-- [ ] Incorporate the supplied final manuscript without claiming its additional corollary is a Lean theorem.
-- [ ] Verify existing receipts/manifests/archive hashes and run the new publication tests; request read-only review.
+- [x] Write and run failing tests for baseline preservation, asset hashes, record identity, and archived bytes.
+- [x] Implement the release helper and tag-triggered workflow; validate locally without publishing.
+- [x] Update README, CFF, Zenodo metadata, release notes, and frozen release manifest for completed Run20.
+- [x] User chose code and existing materials first; exclude the separate English manuscript from this release.
+- [x] Verify existing receipts/manifests/archive hashes and run the new publication tests; request read-only review.
 - [ ] Push the release branch, reviewable PR, and main update; tag v1.0.0 to execute publication.
 - [ ] Observe Release, workflow, and Zenodo output; record verified DOI and URLs without moving the tag.
